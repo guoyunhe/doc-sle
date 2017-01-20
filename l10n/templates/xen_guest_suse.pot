@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: xen_guest_suse.xml:35
+#, no-c-format
+msgid "SUSE Linux Virtual Machines"
+msgstr ""
+
+#. Tag: title
+#: xen_guest_suse.xml:69
+#, no-c-format
+msgid "Installing Extensions and Third Party Add-Ons from Removable Media"
+msgstr ""
+
+#. Tag: para
+#: xen_guest_suse.xml:72
+#, no-c-format
+msgid ""
+"The installation dialog for installing add-ons and extensions from removable "
+"media during the &productname; system installation or at <menuchoice> "
+"<guimenu>&yast;</guimenu> <guimenu>Software</guimenu> <guimenu>Add-On "
+"Products</guimenu> </menuchoice> after the installation. It allows you to "
+"install additional parts or products from different sources, among them "
+"removable media, such as a CDROM or DVD."
+msgstr ""
+
+#. Tag: para
+#: xen_guest_suse.xml:82
+#, no-c-format
+msgid ""
+"Because paravirtual machines present removable media, such as a CD inserted "
+"in the CD reader, as a non-removable disk device, the &yast; Add-On Product "
+"module does not recognize inserted CDs as valid add-on product sources."
+msgstr ""
+
+#. Tag: para
+#: xen_guest_suse.xml:89
+#, no-c-format
+msgid ""
+"To install Add-Ons on a paravirtual machine, you must set up the add-on "
+"product media as a network installation source or copy the ISO image file to "
+"the virtual machine's file system. Fully virtualized machines do not come "
+"with this limitation."
+msgstr ""
+
+#. Tag: title
+#: xen_guest_suse.xml:97
+#, no-c-format
+msgid "Updating a Network Installation Source"
+msgstr ""
+
+#. Tag: para
+#: xen_guest_suse.xml:99
+#, no-c-format
+msgid ""
+"The installation of &productname; 9 is only supported from a network "
+"installation source. To have the right device names supported in &xen;, you "
+"must update the <literal>kernel</literal> and <literal>initrd</literal> that "
+"are used to install the system. Furthermore, the updated kernel must be "
+"available in the installation source. In the following example, the network "
+"installation source is found at <filename>/srv/ftp</filename>. Create this "
+"directory manually, if it does not exist already."
+msgstr ""
+
+#. Tag: para
+#: xen_guest_suse.xml:112
+#, no-c-format
+msgid "Get the latest kernel package for your system from the &ncc;."
+msgstr ""
+
+#. Tag: para
+#: xen_guest_suse.xml:117
+#, no-c-format
+msgid ""
+"Create a directory for executables in your home directory: <command>mkdir -p "
+"$HOME/bin</command>"
+msgstr ""
+
+#. Tag: para
+#: xen_guest_suse.xml:123
+#, no-c-format
+msgid ""
+"Copy the script <command>create_update_source.sh</command> from "
+"<filename>http://www.suse.de/~ug/tools/create_update_source.sh</filename> to "
+"the <filename>bin/</filename> directory and make it executable."
+msgstr ""
+
+#. Tag: screen
+#: xen_guest_suse.xml:130
+#, no-c-format
+msgid ""
+"cd $HOME/bin\n"
+"wget http://www.suse.de/~ug/tools/create_update_source.sh\n"
+"chmod 755 create_update_source.sh"
+msgstr ""
+
+#. Tag: para
+#: xen_guest_suse.xml:133
+#, no-c-format
+msgid ""
+"Install the package <literal>inst-source-utils</literal>. Then, change your "
+"working directory to your network installation source."
+msgstr ""
+
+#. Tag: para
+#: xen_guest_suse.xml:139
+#, no-c-format
+msgid ""
+"Run the command <command>$HOME/bin/create_update_source.sh /srv/ftp</"
+"command>."
+msgstr ""
+
+#. Tag: para
+#: xen_guest_suse.xml:145
+#, no-c-format
+msgid ""
+"Copy all updated packages to the directory <filename>/srv/ftp/updates/suse/"
+"&lt;arch&gt;/</filename>."
+msgstr ""
+
+#. Tag: para
+#: xen_guest_suse.xml:151
+#, no-c-format
+msgid ""
+"Run the following commands to make all the new packages known to the "
+"installation source:"
+msgstr ""
+
+#. Tag: screen
+#: xen_guest_suse.xml:155
+#, no-c-format
+msgid ""
+"cd /srv/ftp/updates/suse;\n"
+"perl /usr/bin/create_package_descr -x setup/descr/EXTRA_PROV"
+msgstr ""
+
+#. Tag: para
+#: xen_guest_suse.xml:158
+#, no-c-format
+msgid ""
+"Create the checksums needed for the installation process with the commands:"
+msgstr ""
+
+#. Tag: screen
+#: xen_guest_suse.xml:162
+#, no-c-format
+msgid ""
+"cd /srv/ftp/updates/suse/setup/descr\n"
+"for i in *; do echo -n \"META SHA1 \"; \\\n"
+"sha1sum $i|awk '{ORS=\"\"; print $1}'; \\\n"
+"echo -n \" \"; basename $i; done &gt;&gt; /srv/ftp/updates/content"
+msgstr ""
+
+#. Tag: para
+#: xen_guest_suse.xml:166
+#, no-c-format
+msgid ""
+"After this procedure, the packages that are copied to the updates directory "
+"are available during the installation. However, they will only be used if "
+"they are newer than the packages provided by the installation itself."
+msgstr ""
+
+#. Tag: para
+#: xen_guest_suse.xml:173
+#, no-c-format
+msgid ""
+"Note, that you also need to create an appropriate <literal>installation "
+"initrd</literal> as it is found in <filename>/srv/ftp/boot/</filename> to "
+"use a new kernel during the installation."
+msgstr ""

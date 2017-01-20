@@ -1,0 +1,705 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: help_admin.xml:9
+#, no-c-format
+msgid "Help and Documentation"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: help_admin.xml:11
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: help_admin.xml:16 help_admin.xml:50 help_admin.xml:80 help_admin.xml:104
+#: help_admin.xml:136 help_admin.xml:254 help_admin.xml:419 help_admin.xml:443
+#, no-c-format
+msgid "<primary>help</primary>"
+msgstr ""
+
+#. Tag: primary
+#: help_admin.xml:17
+#, no-c-format
+msgid "documentation"
+msgstr ""
+
+#. Tag: see
+#: help_admin.xml:18
+#, no-c-format
+msgid "<see>help</see>"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:19
+#, no-c-format
+msgid ""
+"&productnamereg; comes with various sources of information and "
+"documentation, many of which are already integrated into your installed "
+"system."
+msgstr ""
+
+#. Tag: term
+#: help_admin.xml:25
+#, no-c-format
+msgid "Documentation in <filename>/usr/share/doc</filename>"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:28
+#, no-c-format
+msgid ""
+"This traditional help directory holds various documentation files and "
+"release notes for your system. It contains also information of installed "
+"packages in the subdirectory <filename>packages</filename>. Find more "
+"detailed information in <xref linkend=\"sec.help.onboard.docdir\"/>."
+msgstr ""
+
+#. Tag: term
+#: help_admin.xml:37
+#, no-c-format
+msgid "Man Pages and Info Pages for Shell Commands"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:39
+#, no-c-format
+msgid ""
+"When working with the shell, you do not need to know the options of the "
+"commands by heart. Traditionally, the shell provides integrated help by "
+"means of man pages and info pages. Read more in <xref linkend=\"sec.help."
+"onboard.manpages\"/> and <xref linkend=\"sec.help.onboard.infopages\"/>."
+msgstr ""
+
+#. Tag: term
+#: help_admin.xml:49
+#, no-c-format
+msgid "Desktop Help Center"
+msgstr ""
+
+#. Tag: secondary
+#: help_admin.xml:51
+#, no-c-format
+msgid "help center"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:54
+#, no-c-format
+msgid ""
+"The help center of the &gnome; desktop (&yelp;) provides central access to "
+"the most important documentation resources on your system in searchable "
+"form. These resources include online help for installed applications, man "
+"pages, info pages, and the &suse; manuals delivered with your product."
+msgstr ""
+
+#. Tag: term
+#: help_admin.xml:63
+#, no-c-format
+msgid "Separate Help Packages for Some Applications"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:65
+#, no-c-format
+msgid ""
+"When installing new software with &yast;, the software documentation is "
+"usually installed automatically and appears in the help center of your "
+"desktop. However, some applications, such as GIMP, may have different online "
+"help packages that can be installed separately with &yast; and do not "
+"integrate into the help centers."
+msgstr ""
+
+#. Tag: title
+#: help_admin.xml:76
+#, no-c-format
+msgid "Documentation Directory"
+msgstr ""
+
+#. Tag: secondary
+#: help_admin.xml:81
+#, no-c-format
+msgid "/usr/share/doc"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:82
+#, no-c-format
+msgid ""
+"The traditional directory to find documentation on your installed Linux "
+"system is <filename>/usr/share/doc</filename>. Usually, the directory "
+"contains information about the packages installed on your system, plus "
+"release notes, manuals, and more."
+msgstr ""
+
+#. Tag: title
+#: help_admin.xml:89
+#, no-c-format
+msgid "Contents Depends on Installed Packages"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:90
+#, no-c-format
+msgid ""
+"In the Linux world, many manuals and other kinds of documentation are "
+"available in the form of packages, like software. How much and which "
+"information you find in <filename>/usr/share/docs</filename> also depends on "
+"the (documentation) packages installed. If you cannot find the "
+"subdirectories mentioned here, check if the respective packages are "
+"installed on your system and add them with &yast;, if needed."
+msgstr ""
+
+#. Tag: title
+#: help_admin.xml:101
+#, no-c-format
+msgid "&suse; Manuals"
+msgstr ""
+
+#. Tag: secondary
+#: help_admin.xml:105
+#, no-c-format
+msgid "<secondary>&suse; manuals</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: help_admin.xml:107
+#, no-c-format
+msgid "<primary>&suse; manuals</primary>"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:107
+#, no-c-format
+msgid ""
+"We provide HTML and PDF versions of our books in different languages. In the "
+"<filename>manual</filename> subdirectory, find HTML versions of most of the "
+"&suse; manuals available for your product. For an overview of all "
+"documentation available for your product refer to the preface of the manuals."
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:114
+#, no-c-format
+msgid ""
+"If more than one language is installed, <filename>/usr/share/doc/manual</"
+"filename> may contain different language versions of the manuals. The HTML "
+"versions of the &suse; manuals are also available in the help center of both "
+"desktops. For information on where to find the PDF and HTML versions of the "
+"books on your installation media, refer to the &productname; Release Notes. "
+"They are available on your installed system under <filename>/usr/share/doc/"
+"release-notes/</filename> or online at your product-specific Web page at "
+"<link os=\"sles;sled\" xlink:href=\"http://www.suse.com/doc/\"></link><link "
+"os=\"osuse\" xlink:href=\"https://doc.opensuse.org/\"></link>."
+msgstr ""
+
+#. Tag: title
+#: help_admin.xml:133
+#, no-c-format
+msgid "Package Documentation"
+msgstr ""
+
+#. Tag: secondary
+#: help_admin.xml:137
+#, no-c-format
+msgid "package documentation"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:138
+#, no-c-format
+msgid ""
+"Under <filename>packages</filename>, find the documentation that is included "
+"in the software packages installed on your system. For every package, a "
+"subdirectory <filename>/usr/share/doc/packages/<replaceable>packagename</"
+"replaceable></filename> is created. It often contains README files for the "
+"package and sometimes examples, configuration files, or additional scripts. "
+"The following list introduces typical files to be found under <filename>/usr/"
+"share/doc/packages</filename>. None of these entries are mandatory and many "
+"packages might only include a few of them."
+msgstr ""
+
+#. Tag: filename
+#: help_admin.xml:150
+#, no-c-format
+msgid "AUTHORS"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:153
+#, no-c-format
+msgid "List of the main developers."
+msgstr ""
+
+#. Tag: filename
+#: help_admin.xml:159
+#, no-c-format
+msgid "BUGS"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:162
+#, no-c-format
+msgid ""
+"Known bugs or malfunctions. Might also contain a link to a Bugzilla Web page "
+"where you can search all bugs."
+msgstr ""
+
+#. Tag: filename
+#: help_admin.xml:169
+#, no-c-format
+msgid "CHANGES"
+msgstr ""
+
+#. Tag: filename
+#: help_admin.xml:171
+#, no-c-format
+msgid "ChangeLog"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:174
+#, no-c-format
+msgid ""
+"Summary of changes from version to version. Usually interesting for "
+"developers, because it is very detailed."
+msgstr ""
+
+#. Tag: filename
+#: help_admin.xml:181
+#, no-c-format
+msgid "COPYING"
+msgstr ""
+
+#. Tag: filename
+#: help_admin.xml:183
+#, no-c-format
+msgid "LICENSE"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:186
+#, no-c-format
+msgid "Licensing information."
+msgstr ""
+
+#. Tag: filename
+#: help_admin.xml:192
+#, no-c-format
+msgid "<filename>FAQ</filename>"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:195
+#, no-c-format
+msgid "Question and answers collected from mailing lists or newsgroups."
+msgstr ""
+
+#. Tag: filename
+#: help_admin.xml:201
+#, no-c-format
+msgid "INSTALL"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:204
+#, no-c-format
+msgid ""
+"How to install this package on your system. As the package is already "
+"installed by the time you get to read this file, you can safely ignore the "
+"contents of this file."
+msgstr ""
+
+#. Tag: term
+#: help_admin.xml:212
+#, no-c-format
+msgid "<filename>README</filename>, <filename>README.*</filename>"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:215
+#, no-c-format
+msgid ""
+"General information on the software. For example, for what purpose and how "
+"to use it."
+msgstr ""
+
+#. Tag: filename
+#: help_admin.xml:222
+#, no-c-format
+msgid "TODO"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:225
+#, no-c-format
+msgid ""
+"Things that are not implemented yet, but probably will be in the future."
+msgstr ""
+
+#. Tag: filename
+#: help_admin.xml:231
+#, no-c-format
+msgid "MANIFEST"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:234
+#, no-c-format
+msgid "List of files with a brief summary."
+msgstr ""
+
+#. Tag: filename
+#: help_admin.xml:240
+#, no-c-format
+msgid "NEWS"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:243
+#, no-c-format
+msgid "Description of what is new in this version."
+msgstr ""
+
+#. Tag: title
+#: help_admin.xml:252
+#, no-c-format
+msgid "Man Pages"
+msgstr ""
+
+#. Tag: secondary
+#: help_admin.xml:256
+#, no-c-format
+msgid "man pages"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:258
+#, no-c-format
+msgid ""
+"Man pages are an essential part of any Linux system. They explain the usage "
+"of a command and all available options and parameters. Man pages can be "
+"accessed with <command>man</command> followed by the name of the command, "
+"for example, <command>man&nbsp;ls</command>."
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:265
+#, no-c-format
+msgid ""
+"Man pages are displayed directly in the shell. To navigate them, move up and "
+"down with <keycap function=\"pageup\"></keycap> and <keycap function="
+"\"pagedown\"></keycap>. Move between the beginning and the end of a document "
+"with <keycap function=\"home\"></keycap> and <keycap function=\"end\"></"
+"keycap>. End this viewing mode by pressing <keycap>Q</keycap>. Learn more "
+"about the <command>man</command> command itself with <command>man man</"
+"command>. Man pages are sorted in categories as shown in <xref linkend=\"tab."
+"help.mancategory\"/> (taken from the man page for man itself)."
+msgstr ""
+
+#. Tag: title
+#: help_admin.xml:278
+#, no-c-format
+msgid "Man Pages&mdash;Categories and Descriptions"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:283
+#, no-c-format
+msgid "Number"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:288
+#, no-c-format
+msgid "Description"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:297
+#, no-c-format
+msgid "<para>1</para>"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:302
+#, no-c-format
+msgid "Executable programs or shell commands"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:309
+#, no-c-format
+msgid "<para>2</para>"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:314
+#, no-c-format
+msgid "System calls (functions provided by the Kernel)"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:321
+#, no-c-format
+msgid "<para>3</para>"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:326
+#, no-c-format
+msgid "Library calls (functions within program libraries)"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:333
+#, no-c-format
+msgid "<para>4</para>"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:338
+#, no-c-format
+msgid "Special files (usually found in <filename>/dev</filename>)"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:345
+#, no-c-format
+msgid "<para>5</para>"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:350
+#, no-c-format
+msgid "File formats and conventions (<filename>/etc/fstab</filename>)"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:357
+#, no-c-format
+msgid "<para>6</para>"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:362
+#, no-c-format
+msgid "Games"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:369
+#, no-c-format
+msgid "<para>7</para>"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:374
+#, no-c-format
+msgid ""
+"Miscellaneous (including macro packages and conventions), for example, "
+"man(7), groff(7)"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:382
+#, no-c-format
+msgid "<para>8</para>"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:387
+#, no-c-format
+msgid "System administration commands (usually only for &rootuser;)"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:394
+#, no-c-format
+msgid "<para>9</para>"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:399
+#, no-c-format
+msgid "Kernel routines (nonstandard)"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:408
+#, no-c-format
+msgid ""
+"Each man page consists of several parts labeled <citetitle>NAME</"
+"citetitle> , <citetitle>SYNOPSIS</citetitle> , <citetitle>DESCRIPTION</"
+"citetitle> , <citetitle>SEE ALSO</citetitle> , <citetitle>LICENSING</"
+"citetitle> , and <citetitle>AUTHOR</citetitle> . There may be additional "
+"sections available depending on the type of command."
+msgstr ""
+
+#. Tag: title
+#: help_admin.xml:417
+#, no-c-format
+msgid "Info Pages"
+msgstr ""
+
+#. Tag: secondary
+#: help_admin.xml:421
+#, no-c-format
+msgid "info pages"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:423
+#, no-c-format
+msgid ""
+"Info pages are another important source of information on your system. "
+"Usually, they are more detailed than man pages. They consist of more than "
+"command line options and contain sometimes whole tutorials or reference "
+"documentation. To view the info page for a certain command, enter "
+"<command>info</command> followed by the name of the command, for example, "
+"<command>info ls</command>. You can browse an info page with a viewer "
+"directly in the shell and display the different sections, called "
+"<quote>nodes</quote>. Use <keycap function=\"space\"></keycap> to move "
+"forward and <keycap function=\"backspace\"></keycap> to move backward. "
+"Within a node, you can also browse with <keycap function=\"pageup\"></"
+"keycap> and <keycap function=\"pagedown\"></keycap> but only <keycap "
+"function=\"space\"></keycap> and <keycap function=\"backspace\"></keycap> "
+"will take you also to the previous or subsequent node. Press <keycap>Q</"
+"keycap> to end the viewing mode. Not every command comes with an info page "
+"and vice versa."
+msgstr ""
+
+#. Tag: title
+#: help_admin.xml:441
+#, no-c-format
+msgid "Online Resources"
+msgstr ""
+
+#. Tag: secondary
+#: help_admin.xml:445
+#, no-c-format
+msgid "online documentation"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:447
+#, no-c-format
+msgid ""
+"In addition to the online versions of the &suse; manuals installed under "
+"<filename>/usr/share/doc</filename>, you can also access the product-"
+"specific manuals and documentation on the Web. For an overview of all "
+"documentation available for &productname; check out your product-specific "
+"documentation Web page at <link xlink:href=\"http://www.suse.com/doc/\"></"
+"link>."
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:456
+#, no-c-format
+msgid ""
+"If you are searching for additional product-related information, you can "
+"also refer to the following Web sites:"
+msgstr ""
+
+#. Tag: term
+#: help_admin.xml:463
+#, no-c-format
+msgid "&suse; Technical Support"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:465
+#, no-c-format
+msgid ""
+"The &suse; Technical Support can be found at <link xlink:href=\"http://www."
+"suse.com/support/\"></link> if you have questions or need solutions for "
+"technical problems."
+msgstr ""
+
+#. Tag: term
+#: help_admin.xml:473
+#, no-c-format
+msgid "&suse; Forums"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:475
+#, no-c-format
+msgid ""
+"There are several forums where you can dive in on discussions about &suse; "
+"products. See <link xlink:href=\"http://forums.suse.com/\"></link> for a "
+"list."
+msgstr ""
+
+#. Tag: term
+#: help_admin.xml:483
+#, no-c-format
+msgid "&suse; Conversations"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:485
+#, no-c-format
+msgid ""
+"An online community, which offers articles, tips, Q and A, and free tools to "
+"download: <link xlink:href=\"http://www.suse.com/communities/conversations/"
+"\"></link>"
+msgstr ""
+
+#. Tag: term
+#: help_admin.xml:493
+#, no-c-format
+msgid "&gnome; Documentation"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:495
+#, no-c-format
+msgid ""
+"Documentation for &gnome; users, administrators and developers is available "
+"at <link xlink:href=\"http://library.gnome.org/\"></link>."
+msgstr ""
+
+#. Tag: term
+#: help_admin.xml:502
+#, no-c-format
+msgid "The Linux Documentation Project"
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:504
+#, no-c-format
+msgid ""
+"The Linux Documentation Project (TLDP) is run by a team of volunteers who "
+"write Linux-related documentation (see <link xlink:href=\"http://www.tldp.org"
+"\"></link>). It is probably the most comprehensive documentation resource "
+"for Linux. The set of documents contains tutorials for beginners, but is "
+"mainly focused on experienced users and professional system administrators. "
+"TLDP publishes HOWTOs, FAQs, and guides (handbooks) under a free license. "
+"Parts of the documentation from TLDP are also available on &productname;."
+msgstr ""
+
+#. Tag: para
+#: help_admin.xml:518
+#, no-c-format
+msgid ""
+"You can also try general-purpose search engines. For example, use the search "
+"terms <literal>Linux CD-RW help</literal> or <literal>OpenOffice file "
+"conversion problem</literal> if you have trouble with burning CDs or &libo; "
+"file conversion."
+msgstr ""

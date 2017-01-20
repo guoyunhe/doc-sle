@@ -1,0 +1,1579 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: MAIN.SLERT.xml:17
+#, no-c-format
+msgid "Quick Start"
+msgstr ""
+
+#. Tag: subtitle
+#: MAIN.SLERT.xml:18
+#, no-c-format
+msgid "&productname; &productnumber;"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:23
+#, no-c-format
+msgid ""
+"&slerte; is an add-on to &slereg; that allows you to run tasks which require "
+"deterministic real-time processing, in a &sle; environment. &slerte; meets "
+"this requirement by offering several different options for CPU and I/O "
+"scheduling, CPU shielding and setting CPU affinities to processes."
+msgstr ""
+
+#. Tag: remark
+#: MAIN.SLERT.xml:40
+#, no-c-format
+msgid ""
+"dgollub: Keep this installation section ONLY if this PDF makes it on the /"
+"docs directoy on the media!"
+msgstr ""
+
+#. Tag: title
+#: MAIN.SLERT.xml:42
+#, no-c-format
+msgid "Installing &slerte;"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:44
+#, no-c-format
+msgid ""
+"To install &slerte; 11 SP1, start a regular &sls; 11 SP1 installation and "
+"select &slerte; 11 SP1 as an Add-On product during the installation. "
+"Alternately, if &sls; is already installed, you can start the Add-On Product "
+"installation from YaST. However, you need to select the -rt kernel flavor as "
+"the default using the YaST Boot Loader configurator, as in this alternate "
+"case, that is not done automatically."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:53
+#, no-c-format
+msgid ""
+"&slerte; always needs a &sls; SP1 base, it cannot be installed in stand-"
+"alone mode. Refer to the &sls; &admin; manual, Section <quote>Installing Add-"
+"On Products</quote> at <link xlink:href=\"http://www.suse.com/doc/sles11/"
+"book_sle_deployment/?page=/documentation/sles11/book_sle_deployment/data/"
+"cha_add-ons.html\"></link> to learn more about installing add-on products."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:61
+#, no-c-format
+msgid ""
+"The following sections provide a brief introduction to the tools and "
+"possibilities of &slerte;."
+msgstr ""
+
+#. Tag: title
+#: MAIN.SLERT.xml:67
+#, no-c-format
+msgid "Managing CPU Sets with <command>cset</command>"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:69
+#, no-c-format
+msgid ""
+"In some circumstances, it is beneficial to be able to run specific tasks "
+"only on defined CPUs. For this reason, the Linux kernel provides a feature "
+"called cpuset. The feature cpuset provides the means to do a so called "
+"<quote>soft partitioning</quote> of the system. Dedicated CPUs, together "
+"with some predefined memory, work on several tasks."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:77
+#, no-c-format
+msgid ""
+"The command <command>cset</command> provides the high level functionality to "
+"set up and manipulate CPU Sets."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:82
+#, no-c-format
+msgid ""
+"<command>cset</command> consists of one super command called "
+"<literal>shield</literal> and the regular commands <literal>set</literal> "
+"and <literal>proc</literal>. The purpose of the super command "
+"<literal>shield</literal> is to create a common CPU shielding setup within "
+"one step by combining regular commands. An example for setting up a CPU "
+"shield is:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:93
+#, no-c-format
+msgid "cset shield --cpu=3"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:95
+#, no-c-format
+msgid ""
+"This will shield CPU3 and keep on a 4-way machine CPU0-CPU2 unshielded. The "
+"argument of the <option>--cpu</option> parameter accepts comma separated "
+"lists of CPUs including range specifications:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:101
+#, no-c-format
+msgid "cset --cpu=1,3,5-7"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:103
+#, no-c-format
+msgid ""
+"On a 8-way machine this command will shield CPU1, CPU3, CPU5, CPU6 and CPU7. "
+"CPU0, CPU2 and CPU4 will remain unshielded. Already existing CPU shields "
+"could be extended by the same command. For example adding CPU4 to the "
+"mentioned CPU set can be done in the following way:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:110
+#, no-c-format
+msgid "cset --cpu=1,3-7"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:112
+#, no-c-format
+msgid ""
+"CPU1, CPU3, CPU5 to CPU6 were already shielded and only CPU4 will "
+"additionally be shielded. Technically the command is updating the current "
+"CPU shield schema. If the number of shielded CPUs should be reduced and CPU1 "
+"should be unshielded this is done by calling:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:119
+#, no-c-format
+msgid "cset --cpu=3-7"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:121
+#, no-c-format
+msgid ""
+"Now only CPU3, CPU4, CPU5, CPU6 and CPU7 are shielded and CPU0, CPU1 and "
+"CPU2 are available for system usage."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:128
+#, no-c-format
+msgid ""
+"Once the CPU shielding is set up you can display the current configuration "
+"by running <command>cset shield</command> without additional parameters:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:136
+#, no-c-format
+msgid ""
+"cset shield\n"
+"cset: --&gt; shielding system active with\n"
+"cset: \"system\" cpuset of: 0-2 cpu, with: 47\n"
+"cset: \"user\" cpuset of:  3-7 cpu,  with: 0"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:138
+#, no-c-format
+msgid "By default, CPU shielding consists at least of three cpusets:"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:144
+#, no-c-format
+msgid "<literal>root</literal> exists always and contains all available CPUs."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:149
+#, no-c-format
+msgid "<literal>system</literal> is the cpuset of unshielded CPUs."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:154
+#, no-c-format
+msgid "<literal>user</literal> is the cpuset of shielded CPUs"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:162
+#, no-c-format
+msgid ""
+"Certain processes or groups of processes can be assigned to a shielded "
+"cpuset, once the CPU set is created. To start a new process in the shielded "
+"CPU set use the <command>--exec</command> parameter:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:168
+#, no-c-format
+msgid "cset --exec &lt;application&gt;"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:170
+#, no-c-format
+msgid ""
+"To move already running processes to the shielded CPU set use the <command>--"
+"shield</command> parameter which accepts a comma separated list and range "
+"specifications of PIDs:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:176
+#, no-c-format
+msgid "cset --shield=1,2,600-700"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:178
+#, no-c-format
+msgid ""
+"This moves processes with PID 1, 2 and from 600 to 700 to the shielded CPU "
+"set. If there is a gap in the range from 600 to 700, then only those "
+"available process will be moved to the shield without warning. "
+"<command>cset</command> handles threads like processes and will also "
+"interpret TIDs and assign them to the required CPU set."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:191
+#, no-c-format
+msgid ""
+"Note that there is no checking of the processes you request to move into the "
+"shield with the <command>--shield</command> command. This means that the "
+"tool will happily move any process, even kernel threads, that are bound to "
+"specific CPUs with this command. You can cause a complete system lockup by "
+"indiscriminately specifying arbitrary PIDs to the <option>--shield</option> "
+"command."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:203
+#, no-c-format
+msgid ""
+"The number of currently shielded processes are shown with the same command "
+"that is used to show the current CPU shield setup. Additionally adding the "
+"<command>--verbose</command> parameter lists shielded and unshielded "
+"processes:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:210
+#, no-c-format
+msgid ""
+"cset shield --verbose\n"
+"cset: --&gt; shielding system active with\n"
+"cset: \"system\" cpuset of: 0-2,4-15 cpu, with:\n"
+"   USER       PID  PPID S TASK NAME\n"
+"      -------- ----- ----- - ---------\n"
+"         root         1     0 S init [3]\n"
+"[...]\n"
+"\n"
+"cset: \"user\" cpuset of:    3 cpu, with: 1\n"
+"   USER       PID  PPID S TASK NAME\n"
+"      -------- ----- ----- - ---------\n"
+"         root     10202 10170 S application"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:214
+#, no-c-format
+msgid ""
+"To remove a process (or group of processes) from the CPU shield use the "
+"<command>--unshield</command> parameter. The argument for the <command>--"
+"unshield</command> is similar to the <command>--shield</command> parameter, "
+"which accepts a comma separated list of PIDs/TIDs and range specifications:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:222
+#, no-c-format
+msgid "cset --unshield=2,650-655"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:224
+#, no-c-format
+msgid ""
+"This will unshield the process with the PID 2 and the processes in range of "
+"650 and 655."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:231
+#, no-c-format
+msgid ""
+"Deleting CPU sets is done with the <command>cset</command> parameter "
+"<option>--reset</option>. This will unshield all CPUs and migrate dedicated "
+"processes to all available CPUs again."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:239
+#, no-c-format
+msgid ""
+"For more detailed information about options and parameters of the subcommand "
+"<command>shield</command>, consult the help of <command>cset</command> by "
+"running:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:245
+#, no-c-format
+msgid "cset help shield"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:249
+#, no-c-format
+msgid ""
+"More detailed configuration of cpusets can be done with the <command>cset</"
+"command> commands <option>set</option> and <option>proc</option>."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:257
+#, no-c-format
+msgid ""
+"The subcommand <option>set</option> is used to create, modify and destroy "
+"cpusets. Compared to the supercommand <option>shield</option>, the "
+"<option>set</option> subcommand is additionally able to assign memory nodes "
+"for NUMA machines."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:264
+#, no-c-format
+msgid ""
+"Besides assigning memory nodes, the subcommand <command>set</command> can be "
+"used to create cpusets in a tree-like structure, rooted at the "
+"<literal>root</literal> cpuset."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:272
+#, no-c-format
+msgid ""
+"To create a cpuset with the subcommand <command>set</command> you only need "
+"to specify the CPUs which should be used by a comma separated list or a "
+"range specification:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:278
+#, no-c-format
+msgid "cset set --cpu=1-7 \"/one\""
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:280
+#, no-c-format
+msgid ""
+"This command will create a cpuset called <quote>one</quote> with assigned "
+"CPUs from CPU1 to CPU7. To specify a new cpuset called <quote>two</quote> "
+"and that is a subset of <quote>one</quote>, proceed as follows:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:286
+#, no-c-format
+msgid "cset set --cpu=6 \"/one/two\""
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:292
+#, no-c-format
+msgid ""
+"Cpusets follow certain rules. Children can only include CPUs that the "
+"parents already have. If you try to specify a different cpuset, the kernel "
+"cpuset subsystem will not let you create that cpuset. For example, if you "
+"create a cpuset that contains CPU3, and then attempt to create a child of "
+"that cpuset with a CPU other than 3, you will get an error, and the cpuset "
+"will not be created. The resulting error is somewhat cryptic and is usually "
+"<quote>Permission denied</quote>."
+msgstr ""
+
+#. Tag: remark
+#: MAIN.SLERT.xml:305
+#, no-c-format
+msgid "mdejmek: complete sentence here"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:305
+#, no-c-format
+msgid ""
+"To list a table containing useful information like cpu list and memory list "
+"use the <option>-r</option> parameter. The <quote>-X</quote> column shows "
+"the exclusive state of CPU or memory. The <quote>path</quote> column shows "
+"the real path in the virtual file system <literal>cpuset</literal>."
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:313
+#, no-c-format
+msgid "cpuset set -r"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:317
+#, no-c-format
+msgid ""
+"On NUMA machines memory nodes can be assigned to a cpuset similar to CPUs. "
+"The <command>--mem</command> parameter of the subcommand <command>set</"
+"command> allows a comma separated and inclusive range specification of "
+"memory nodes. This example will assign MEM1, MEM3, MEM4, MEM5 and MEM6 to "
+"the cpuset <quote>new_set</quote>:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:325
+#, no-c-format
+msgid "cset set --mem=1,3-6 new_set"
+msgstr ""
+
+#. Tag: remark
+#: MAIN.SLERT.xml:328
+#, no-c-format
+msgid "mdejmek: are these two parameters or one+argument?"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:328
+#, no-c-format
+msgid ""
+"Additionally, with the <option>--cpu_exclusive</option> and <option>--"
+"mem_exclusive</option> parameters (without any additional arguments) set the "
+"CPUs or memory nodes exclusive to a cpuset:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:334
+#, no-c-format
+msgid "cset set --cpu_exclusive \"/one\""
+msgstr ""
+
+#. Tag: remark
+#: MAIN.SLERT.xml:337
+#, no-c-format
+msgid ""
+"dgollub: Hit tiny bug while writing this - bnc#380819 - hide this if not "
+"fixed?!"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:338
+#, no-c-format
+msgid ""
+"The status of exclusive state of CPU or memory is shown in the \"-X\" column "
+"when running:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:343
+#, no-c-format
+msgid "cset set -r"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:347
+#, no-c-format
+msgid ""
+"For more detailed information about options and parameters of the subcommand "
+"<option>set</option>, consult the help of <command>cset</command> by running:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:353
+#, no-c-format
+msgid "cset help set"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:357
+#, no-c-format
+msgid ""
+"Once the cpuset is initialized, the subcommand <option>proc</option> can "
+"start processes on certain cpusets with the <option>--exec</option> "
+"parameter. The following will start the application <literal>fastapp</"
+"literal> within the cpuset <literal>new_set</literal>:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:364
+#, no-c-format
+msgid "cset proc --exec --set new_set fastapp"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:368
+#, no-c-format
+msgid ""
+"To move an already running process inside an already existing cpuset use the "
+"parameter <command>--move</command>, which accepts a comma separated list "
+"and range specifications of PIDs. The following command will move processes "
+"with PID 2442 and within range of 3000 to 3200 into the cpuset "
+"<literal>new_set</literal>:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:376
+#, no-c-format
+msgid "cset proc --move 2442,3000-3200 new_set"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:380
+#, no-c-format
+msgid ""
+"Listing processes running within a specific cpuset can be done by using the "
+"parameter <option>--list</option>."
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:385
+#, no-c-format
+msgid "cset proc --list new_set"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:389
+#, no-c-format
+msgid ""
+"The subcommand <option>proc</option> is also able to move the entire list of "
+"processes within one cpuset to another cpuset by using the parameters "
+"<option>--fromset</option> and <option>--toset</option>. This will move all "
+"process assigned to <literal>old_set</literal> and assign them to "
+"<literal>new_set</literal>:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:397
+#, no-c-format
+msgid ""
+"cset proc --move --fromset old_set \\\n"
+"   --toset new_set"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:401
+#, no-c-format
+msgid ""
+"For more detailed information about options and parameters of the subcommand "
+"<command>proc</command>, consult the help of <command>cset</command> by "
+"running:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:407
+#, no-c-format
+msgid "cset help proc"
+msgstr ""
+
+#. Tag: title
+#: MAIN.SLERT.xml:411
+#, no-c-format
+msgid "Set real-time attributes of a process with <command>chrt</command>"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:413
+#, no-c-format
+msgid ""
+"The <command>chrt</command> command allows to manipulate the real-time "
+"attributes, like scheduling policy and priority, of an already running "
+"process or to execute a new process with specified real-time attributes."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:419
+#, no-c-format
+msgid ""
+"It is highly recommend for applications which should experience the full "
+"advantages of real-time and do not use real-time specific attributes by "
+"their own. To get these full real-time experiences, this application should "
+"be called with the <command>chrt</command> command and the right set of "
+"scheduler policy and priority parameters."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:427
+#, no-c-format
+msgid ""
+"With the following command line all running processes with their real-time "
+"specific attributes are shown. <literal>class</literal> shows the current "
+"scheduler policy and <literal>rtprio</literal> the real-time priority:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:434
+#, no-c-format
+msgid ""
+"ps -eo pid,tid,class,rtprio,comm\n"
+"...\n"
+" 1437  1437 FF      40  fastapp"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:436
+#, no-c-format
+msgid ""
+"The above truncated example shows the <literal>fastapp</literal> process "
+"with PID 1437 running and with scheduler policy <literal>SCHED_FIFO</"
+"literal> and priority 40. Scheduler policy abbreviations are:"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:445
+#, no-c-format
+msgid "TS - SCHED_OTHER"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:450
+#, no-c-format
+msgid "FF - SCHED_FIFO"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:455
+#, no-c-format
+msgid "RR - SCHED_RR"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:461
+#, no-c-format
+msgid ""
+"It is also possible to get the current scheduler policy and priority of "
+"single processes by passing to <command>chrt</command> the PID of the "
+"process with the parameter <command>-p</command>:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:467
+#, no-c-format
+msgid "chrt -p 1437"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:469
+#, no-c-format
+msgid ""
+"Scheduler policies have different minimum and maximum priority values. "
+"Minimum and maximum values for each available scheduler policy can be "
+"retrieved with <command>chrt</command>:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:475
+#, no-c-format
+msgid "chrt -m"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:477
+#, no-c-format
+msgid ""
+"To change the scheduler policy and the priority of a running process, "
+"<command>chrt</command> provides parameter <command>--fifo</command> for "
+"<literal>SCHED_FIFO</literal>, <command>--rr</command> for "
+"<literal>SCHED_RR</literal> and <command>--other</command> for "
+"<literal>SCHED_OTHER</literal>. This example will change the scheduler "
+"policy to <literal>SCHED_FIFO</literal> with priority 42 for PID 1437:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:486
+#, no-c-format
+msgid "chrt --fifo -p 42 1437"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:489
+#, no-c-format
+msgid ""
+"Handle changing of real-time attributes of processes with care. Increasing "
+"the priority of certain processes can harm the entire system, depending on "
+"the behavior of the process. In some cases, this could lead to a complete "
+"system lockup or bad influence on certain devices."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:499
+#, no-c-format
+msgid "For more information about chrt, consult the manual page of chrt:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:503
+#, no-c-format
+msgid "man 1 chrt"
+msgstr ""
+
+#. Tag: title
+#: MAIN.SLERT.xml:1104
+#, no-c-format
+msgid "Specifying a CPU Affinity with <command>taskset</command>"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1106
+#, no-c-format
+msgid ""
+"The default behavior of the kernel, is to keep a process running on the same "
+"CPU, if the system load is balanced over the available CPUs. Otherwise, the "
+"kernel tries to improve the load balancing by moving processes to an idling "
+"CPU. In some situations, however, it is desirable to set a CPU affinity for "
+"a given process. In this case, the kernel will not move the process away "
+"from the selected CPUs. For example, if you use shielding, the shielded CPUs "
+"will not run any process that does not have an affinity to the shielded "
+"CPUs. Another possibility is to run all low priority tasks on a selected CPU "
+"to remove load from the other CPUs."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1118
+#, no-c-format
+msgid ""
+"Note, that if a task is running inside a specific cpuset, the affinity mask "
+"must match at least one of the CPUs available in this set. The "
+"<command>taskset</command> command will not move a process outside the "
+"cpuset it is running in."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1125
+#, no-c-format
+msgid ""
+"To set or retrieve the CPU affinity of a task, a bitmask is used, that is "
+"represented by a hexadecimal number. If you count the bits of this bitmask, "
+"the lowest bit represents the first logical CPU as they are found in "
+"<filename>/proc/cpuinfo</filename>. For example:"
+msgstr ""
+
+#. Tag: literal
+#: MAIN.SLERT.xml:1134
+#, no-c-format
+msgid "0x00000001"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1137
+#, no-c-format
+msgid "is processor #0."
+msgstr ""
+
+#. Tag: literal
+#: MAIN.SLERT.xml:1143
+#, no-c-format
+msgid "0x00000002"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1146
+#, no-c-format
+msgid "is processor #1."
+msgstr ""
+
+#. Tag: literal
+#: MAIN.SLERT.xml:1152
+#, no-c-format
+msgid "0x00000003"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1155
+#, no-c-format
+msgid "is processor #0 and processor #1."
+msgstr ""
+
+#. Tag: literal
+#: MAIN.SLERT.xml:1161
+#, no-c-format
+msgid "0xFFFFFFFE"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1164
+#, no-c-format
+msgid "all but the first CPU."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1171
+#, no-c-format
+msgid ""
+"If a given mask does not contain any valid CPU on the system, an error is "
+"returned. If taskset returns without an error, the given program has been "
+"scheduled to the specified list of CPUs."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1177
+#, no-c-format
+msgid ""
+"The command <command>taskset</command> can either be used to start a new "
+"process with a given CPU affinity, or to redefine the CPU affinity of a "
+"already running process."
+msgstr ""
+
+#. Tag: title
+#: MAIN.SLERT.xml:1184 MAIN.SLERT.xml:1295
+#, no-c-format
+msgid "Examples"
+msgstr ""
+
+#. Tag: option
+#: MAIN.SLERT.xml:1186
+#, no-c-format
+msgid "taskset -p <replaceable>pid</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1189
+#, no-c-format
+msgid ""
+"Retrieves the current CPU affinity of the process with PID <literal>pid</"
+"literal>."
+msgstr ""
+
+#. Tag: option
+#: MAIN.SLERT.xml:1196
+#, no-c-format
+msgid ""
+"taskset -p <replaceable>mask</replaceable><replaceable>pid</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1199
+#, no-c-format
+msgid ""
+"Sets the CPU affinity of the process with PID <literal>pid</literal> to "
+"<literal>mask</literal>."
+msgstr ""
+
+#. Tag: option
+#: MAIN.SLERT.xml:1206
+#, no-c-format
+msgid ""
+"taskset <replaceable>mask</replaceable><replaceable>command</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1209
+#, no-c-format
+msgid ""
+"Runs <literal>command</literal> with a CPU affinity of <literal>mask</"
+"literal>."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1217
+#, no-c-format
+msgid ""
+"For more detailed information about <command>taskset</command>, consult the "
+"manual page. <command>man 1 taskset</command>"
+msgstr ""
+
+#. Tag: title
+#: MAIN.SLERT.xml:1223
+#, no-c-format
+msgid "Changing I/O Priorities with <command>ionice</command>"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1225
+#, no-c-format
+msgid ""
+"Handling I/O is one of the critical issues for all high-performance systems. "
+"If a task has lots of CPU power available, but must wait for the disk, it "
+"will not work as efficiently as it could. The Linux kernel provides three "
+"different scheduling classes to determine the I/O handling for a process. "
+"All of these classes can be fine-tuned with a nice level."
+msgstr ""
+
+#. Tag: term
+#: MAIN.SLERT.xml:1235
+#, no-c-format
+msgid "The <emphasis>Best Effort</emphasis> Scheduler"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1237
+#, no-c-format
+msgid ""
+"The <emphasis>Best Effort</emphasis> scheduler is the default I/O scheduler, "
+"and is used for all processes that do not specify a different I/O scheduler "
+"class. By default, this scheduler sets its nice level according to the nice "
+"value of the running process."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1243
+#, no-c-format
+msgid ""
+"There are eight different nice levels available for this scheduler. The "
+"lowest priority is represented by a nice level of seven, the highest "
+"priority is zero."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1248
+#, no-c-format
+msgid "This scheduler has the scheduling class number <literal>2</literal>."
+msgstr ""
+
+#. Tag: term
+#: MAIN.SLERT.xml:1254
+#, no-c-format
+msgid "The <emphasis>Real Time</emphasis> Scheduler"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1256
+#, no-c-format
+msgid ""
+"The real-time I/O class always gets the highest priority for disk access. "
+"The other schedulers will only be served, if no real-time request is "
+"present. This scheduling class may easily lock up the system if not "
+"implemented with care."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1262
+#, no-c-format
+msgid ""
+"The real-time scheduler defines nice levels just like the <emphasis>Best "
+"Effort</emphasis> scheduler."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1266
+#, no-c-format
+msgid "This scheduler has the scheduling class number <literal>1</literal>."
+msgstr ""
+
+#. Tag: term
+#: MAIN.SLERT.xml:1272
+#, no-c-format
+msgid "The <emphasis>Idle</emphasis> Scheduler"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1274
+#, no-c-format
+msgid ""
+"The <emphasis>Idle</emphasis> scheduler does not define any nice levels. I/O "
+"is only done in this class, if no other scheduler runs an I/O request. This "
+"scheduler has the lowest available priority and can be used for processes "
+"that are not time-critical."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1280
+#, no-c-format
+msgid "This scheduler has the scheduling class number <literal>3</literal>."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1287
+#, no-c-format
+msgid ""
+"To change I/O schedulers and nice values, use the <command>ionice</command> "
+"command. This provides a means to tune the scheduler of already running "
+"processes, or to start new processes with specific I/O settings."
+msgstr ""
+
+#. Tag: command
+#: MAIN.SLERT.xml:1297
+#, no-c-format
+msgid "ionice -c3 -p$$"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1300
+#, no-c-format
+msgid "Sets the scheduler of the current shell to <literal>Idle</literal>."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1309
+#, no-c-format
+msgid ""
+"Without additional parameters, this prints the I/O scheduler settings of the "
+"current shell."
+msgstr ""
+
+#. Tag: command
+#: MAIN.SLERT.xml:1316
+#, no-c-format
+msgid "ionice -c1 -p42 -n2"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1319
+#, no-c-format
+msgid ""
+"Sets the scheduler of the process with process id <literal>42</literal> to "
+"<literal>Real Time</literal>, and its nice value to <literal>2</literal>."
+msgstr ""
+
+#. Tag: command
+#: MAIN.SLERT.xml:1327
+#, no-c-format
+msgid "ionice -c3 /bin/bash"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1330
+#, no-c-format
+msgid "Starts the Bash shell with the <literal>Idle</literal> I/O scheduler."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1337
+#, no-c-format
+msgid ""
+"For more detailed information about <command>ionice</command>, consult the "
+"manual page. <command>man 1 ionice</command>"
+msgstr ""
+
+#. Tag: title
+#: MAIN.SLERT.xml:1343
+#, no-c-format
+msgid "Changing the I/O Scheduler for Block Devices"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1345
+#, no-c-format
+msgid ""
+"The Linux kernel provides several block device schedulers that can be "
+"selected individually for each block device. All but the <literal>noop</"
+"literal> scheduler perform a kind of ordering of requested blocks to reduce "
+"head movements on the hard disk. If you use an external storage system that "
+"has its own scheduler, you should disable the Linux internal reordering by "
+"selecting the <literal>noop</literal> scheduler."
+msgstr ""
+
+#. Tag: title
+#: MAIN.SLERT.xml:1356
+#, no-c-format
+msgid "The Linux I/O Schedulers"
+msgstr ""
+
+#. Tag: term
+#: MAIN.SLERT.xml:1358
+#, no-c-format
+msgid "noop"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1360
+#, no-c-format
+msgid ""
+"The <emphasis>noop</emphasis> scheduler is a very simple scheduler, that "
+"performs basic merging and sorting on I/O requests. This scheduler is mainly "
+"used for specialized environments that run their own schedulers optimized "
+"for the used hardware, such as storage systems or hardware RAID controllers."
+msgstr ""
+
+#. Tag: term
+#: MAIN.SLERT.xml:1371
+#, no-c-format
+msgid "anticipatory"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1373
+#, no-c-format
+msgid ""
+"The main principle of <emphasis>anticipatory</emphasis> scheduling is, that "
+"after a read, the scheduler simply expects further reads from userspace. For "
+"this reason, after a read completes, the anticipatory scheduler will do "
+"nothing for a few milliseconds, giving userspace the possibility to ask for "
+"another read. If such a read is requested, it will be performed immediately. "
+"Otherwise, the scheduler continues with doing writes after a short timeout."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1382
+#, no-c-format
+msgid ""
+"The advantage of this procedure is a major reduction of seeks and thus, a "
+"decreased read latency. This also increases read and write bandwidth."
+msgstr ""
+
+#. Tag: term
+#: MAIN.SLERT.xml:1391
+#, no-c-format
+msgid "deadline"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1393
+#, no-c-format
+msgid ""
+"The main point of <emphasis>deadline</emphasis> scheduling is to try hard to "
+"answer a request before a given deadline. This results in very good I/O for "
+"a random single I/O in real-time environments."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1398
+#, no-c-format
+msgid ""
+"In principle, the <emphasis>deadline</emphasis> uses two lists with all "
+"requests. One is sorted by block sequences to reduce seeking latencies, the "
+"other is sorted by expire times for each request. Normally, requests are "
+"served according to the block sequence, but if a request reaches its "
+"deadline, the scheduler starts to work on this request."
+msgstr ""
+
+#. Tag: term
+#: MAIN.SLERT.xml:1412
+#, no-c-format
+msgid "<term>cfq</term>"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1414
+#, no-c-format
+msgid ""
+"The <emphasis>Completely Fair Queuing</emphasis> scheduler uses a separate I/"
+"O queue for each process. All of these queues get a similar time slice for "
+"disk access. With this procedure, the <emphasis>CFQ</emphasis> tries to "
+"divide the bandwidth evenly between all requesting processes. This scheduler "
+"has a similar throughput as the <emphasis>anticipatory</emphasis> scheduler, "
+"but the maximum latency is much shorter."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1423
+#, no-c-format
+msgid ""
+"For the average system, this scheduler yields the best results, and thus, is "
+"the default I/O scheduler on &sle; systems."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1433
+#, no-c-format
+msgid ""
+"To print the current scheduler of a block device like <filename>/dev/sda</"
+"filename>, use the following command:"
+msgstr ""
+
+#. Tag: screen
+#: MAIN.SLERT.xml:1438
+#, no-c-format
+msgid ""
+"cat /sys/block/sda/queue/scheduler\n"
+"noop anticipatory deadline [cfq]"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1440
+#, no-c-format
+msgid ""
+"In this case, the scheduler for <filename>/dev/sda</filename> is set to "
+"<literal>cfq</literal>, the <literal>Completely Fair Queuing</literal> "
+"scheduler. This is the default scheduler on &slerte;."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1446
+#, no-c-format
+msgid ""
+"To change the schedulers, echo one of the names <literal>noop</literal>, "
+"<literal>anticipatory</literal>, <literal>deadline</literal>, or "
+"<literal>cfq</literal> into <filename>/sys/block/&lt;device&gt;/scheduler</"
+"filename>. For example, if you want to set the I/O scheduler of the device "
+"<filename>/dev/sda</filename> to <literal>noop</literal>, use the command "
+"<command>echo \"noop\" &gt; /sys/block/sda/scheduler</command>. To set other "
+"variables in the <filename>/sys</filename> file system, use a similar "
+"approach."
+msgstr ""
+
+#. Tag: title
+#: MAIN.SLERT.xml:1459
+#, no-c-format
+msgid "Tuning the Block Device I/O Scheduler"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1461
+#, no-c-format
+msgid ""
+"All schedulers, except for the <emphasis>noop</emphasis> scheduler, have "
+"several common parameters that may be tuned for each block device. You can "
+"access these parameters with <filename>sysfs</filename> in the <filename>/"
+"sys/block/&lt;device&gt;/queue/iosched/</filename> directory. The following "
+"parameters are tuneable for the respective scheduler:"
+msgstr ""
+
+#. Tag: term
+#: MAIN.SLERT.xml:1476
+#, no-c-format
+msgid "Anticipatory Scheduler"
+msgstr ""
+
+#. Tag: option
+#: MAIN.SLERT.xml:1480
+#, no-c-format
+msgid "antic_expire"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1483
+#, no-c-format
+msgid ""
+"Time in milliseconds that the <emphasis>anticipatory</emphasis> scheduler "
+"waits for another read request close to the last read request performed. The "
+"<emphasis>anticipatory</emphasis> scheduler will not wait for upcoming read "
+"requests, if this value is set to zero."
+msgstr ""
+
+#. Tag: option
+#: MAIN.SLERT.xml:1493 MAIN.SLERT.xml:1542
+#, no-c-format
+msgid "read_expire"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1496
+#, no-c-format
+msgid ""
+"Deadline of a read request in milliseconds. This scheduler also controls the "
+"interval between expired requests. By default, read_expire is set to 125 "
+"milliseconds. Thus, it can take up to 250 milliseconds until the next read "
+"request on the list is served."
+msgstr ""
+
+#. Tag: option
+#: MAIN.SLERT.xml:1505 MAIN.SLERT.xml:1554
+#, no-c-format
+msgid "write_expire"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1508 MAIN.SLERT.xml:1557
+#, no-c-format
+msgid "Similar to <option>read_expire</option> for write requests."
+msgstr ""
+
+#. Tag: option
+#: MAIN.SLERT.xml:1514
+#, no-c-format
+msgid "read_batch_expire"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1517
+#, no-c-format
+msgid ""
+"If write requests are scheduled, this is the time in milliseconds that reads "
+"are served before pending writes get a time slice. If writes are more "
+"important than reads, set this value lower than <option>read_expire</option>."
+msgstr ""
+
+#. Tag: option
+#: MAIN.SLERT.xml:1526
+#, no-c-format
+msgid "write_batch_expire"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1529
+#, no-c-format
+msgid "Similar to <option>read_batch_expire</option> for write requests."
+msgstr ""
+
+#. Tag: term
+#: MAIN.SLERT.xml:1538
+#, no-c-format
+msgid "Deadline Scheduler"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1545
+#, no-c-format
+msgid ""
+"The main focus of this scheduler is to limit the start latency for a request "
+"to a given time. Therefore, for each request, a deadline is calculated from "
+"the current time plus the value of <option>read_expire</option> in "
+"milliseconds."
+msgstr ""
+
+#. Tag: option
+#: MAIN.SLERT.xml:1563
+#, no-c-format
+msgid "fifo_batch"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1566
+#, no-c-format
+msgid ""
+"If a request hits its deadline, it is necessary to move the request from the "
+"sorted I/O scheduler list to the dispatch queue. The variable "
+"<option>fifo_batch</option> controls how many requests are moved, depending "
+"on the cost of each request."
+msgstr ""
+
+#. Tag: option
+#: MAIN.SLERT.xml:1575
+#, no-c-format
+msgid "front_merges"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1578
+#, no-c-format
+msgid ""
+"The scheduler normally tries to find contiguous I/O requests and merges "
+"them. There are two kinds of merges: The new I/O request may be in front of "
+"the existing I/O request (front merge), or it may follow behind the existing "
+"request (back merge). Most merges are back merges. Therefore, you can "
+"disable the front merge functionality by setting <option>front_merges</"
+"option> to <literal>0</literal>."
+msgstr ""
+
+#. Tag: option
+#: MAIN.SLERT.xml:1590
+#, no-c-format
+msgid "write_starved"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1593
+#, no-c-format
+msgid ""
+"In case some read or write requests hit their deadline, the scheduler "
+"prefers the read requests by default. To prevent write requests from being "
+"postponed forever, the variable <option>write_starved</option> controls how "
+"often read requests are preferred until write requests are preferred over "
+"read requests."
+msgstr ""
+
+#. Tag: term
+#: MAIN.SLERT.xml:1613
+#, no-c-format
+msgid "CFQ Scheduler"
+msgstr ""
+
+#. Tag: term
+#: MAIN.SLERT.xml:1617
+#, no-c-format
+msgid "<option>back_seek_max</option> and <option>back_seek_penalty</option>"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1621
+#, no-c-format
+msgid ""
+"The <emphasis>CFQ</emphasis> scheduler normally uses a strict ascending "
+"elevator. When needed, it also allows small backward seeks, but it puts some "
+"penalty on them. The maximum backward sector seek is defined with "
+"<option>back_seek_max</option>, and the multiplier for the penalty is set by "
+"<option>back_seek_penalty</option>."
+msgstr ""
+
+#. Tag: term
+#: MAIN.SLERT.xml:1632
+#, no-c-format
+msgid ""
+"<option>fifo_expire_async</option> and <option>fifo_expire_sync</option>"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1636
+#, no-c-format
+msgid ""
+"The <option>fifo_expire_*</option> variables define the timeout in "
+"milliseconds for asynchronous and synchronous I/O requests. Typically, "
+"<option>fifo_expire_async</option> affects write and "
+"<option>fifo_expire_sync</option> affects both, read and write operations."
+msgstr ""
+
+#. Tag: option
+#: MAIN.SLERT.xml:1646
+#, no-c-format
+msgid "quantum"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1649
+#, no-c-format
+msgid ""
+"Defines the number of I/O requests to dispatch when the block device is idle."
+msgstr ""
+
+#. Tag: term
+#: MAIN.SLERT.xml:1656
+#, no-c-format
+msgid ""
+"<option>slice_async</option>, <option>slice_async_rq</option>, "
+"<option>slice_sync</option>, and <option>slice_idle</option>"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1660
+#, no-c-format
+msgid ""
+"These variables define the time slices a block device gets for synchronous "
+"or asynchronous operations."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1666
+#, no-c-format
+msgid ""
+"<option>slice_async</option> and <option>slice_sync</option> represent the "
+"length of an asynchronous or synchronous disk slice in milliseconds."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1673
+#, no-c-format
+msgid ""
+"<option>slice_async_rq</option> defines for how many requests an "
+"asynchronous disk slice lasts."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1679
+#, no-c-format
+msgid "<option>slice_idle</option> defines how long a sync slice may idle."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1700
+#, no-c-format
+msgid ""
+"The system default Block Device I/O Scheduler could be also set by the "
+"kernel parameter <literal>elevator=</literal>,for example "
+"<literal>elevator=deadline</literal> to change the I/O Scheduler to "
+"<literal>deadline</literal>."
+msgstr ""
+
+#. Tag: title
+#: MAIN.SLERT.xml:1721
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1723
+#, no-c-format
+msgid ""
+"A lot of information about real-time implementations and administration can "
+"be found on the Internet. The following list contains several selected links:"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1737
+#, no-c-format
+msgid ""
+"More detailed information about the Real-Time Linux Development and an "
+"introduction how to write a Real-Time application can be found in the Real-"
+"Time Linux Community Wiki. <link xlink:href=\"http://rt.wiki.kernel.org\"></"
+"link>, <link xlink:href=\"http://rt.wiki.kernel.org/index.php/HOWTO:"
+"_Build_an_RT-application\"></link>"
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1746
+#, no-c-format
+msgid ""
+"The cpuset feature of the kernel is explained in <filename>/usr/src/linux/"
+"Documentation/cpusets.txt</filename>. More detailed documentation is "
+"available from <link xlink:href=\"http://techpubs.sgi.com/library/tpl/cgi-"
+"bin/getdoc.cgi/linux/bks/SGI_Admin/books/LX_Resource_AG/sgi_html/ch04.html"
+"\"></link>, <link xlink:href=\"http://www.bullopensource.org/cpuset/\"></"
+"link>, and <link xlink:href=\"http://lwn.net/Articles/127936/\"></link>."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1756
+#, no-c-format
+msgid ""
+"An overview of CPU and I/O schedulers available in Linux can be found at "
+"<link xlink:href=\"http://aplawrence.com/Linux/linux26_features.html\"></"
+"link>."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1763
+#, no-c-format
+msgid ""
+"Detailed information about the anticipatory I/O scheduler is available at "
+"<link xlink:href=\"http://www.cs.rice.edu/~ssiyer/r/antsched/antio.html\"></"
+"link> and <link xlink:href=\"http://www.cs.rice.edu/~ssiyer/r/antsched/\"></"
+"link>."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1771
+#, no-c-format
+msgid ""
+"For more information about the deadline I/O scheduler, refer to <link xlink:"
+"href=\"http://lwn.net/2002/0110/a/io-scheduler.php3\"></link>, or <link "
+"xlink:href=\"http://kerneltrap.org/node/431\"></link>. In your installed "
+"system, find further information in <filename>/usr/src/linux/Documentation/"
+"block/deadline-iosched.txt</filename>."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1780
+#, no-c-format
+msgid ""
+"The CFQ I/O scheduler is covered in detail in <link xlink:href=\"http://en."
+"wikipedia.org/wiki/CFQ\"></link>."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1786
+#, no-c-format
+msgid ""
+"General information about I/O scheduling in Linux is available at <link "
+"xlink:href=\"http://lwn.net/Articles/101029/\"></link>, <link xlink:href="
+"\"http://lwn.net/Articles/114273/\"></link>, and <link xlink:href=\"http://"
+"donami.com/118\"></link>."
+msgstr ""
+
+#. Tag: para
+#: MAIN.SLERT.xml:1797
+#, no-c-format
+msgid ""
+"A lot of information about real-time can be found at <link xlink:href="
+"\"http://linuxdevices.com/articles/AT6476691775.html\"></link>."
+msgstr ""

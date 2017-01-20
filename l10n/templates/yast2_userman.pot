@@ -1,0 +1,1466 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: yast2_userman.xml:12
+#, no-c-format
+msgid "Managing Users with &yast;"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: yast2_userman.xml:14
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:19
+#, no-c-format
+msgid ""
+"During installation, you could have created a local user for your system. "
+"With the &yast; module <guimenu>User and Group Management</guimenu> you can "
+"add more users or edit existing ones. It also lets you configure your system "
+"to authenticate users with a network server."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:26
+#, no-c-format
+msgid "User and Group Administration Dialog"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:28
+#, no-c-format
+msgid ""
+"To administer users or groups, start &yast; and click <menuchoice> "
+"<guimenu>Security and Users</guimenu> <guimenu>User and Group Management</"
+"guimenu> </menuchoice>. Alternatively, start the <guimenu>User and Group "
+"Administration</guimenu> dialog directly by running <command>sudo yast2 "
+"users &amp;</command> from a command line."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:37
+#, no-c-format
+msgid "&yast; User and Group Administration"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:49
+#, no-c-format
+msgid ""
+"Every user is assigned a system-wide user ID (UID). Apart from the users "
+"which can log in to your machine, there are also several <emphasis>system "
+"users</emphasis> for internal use only. Each user is assigned to one or more "
+"groups. Similar to <emphasis>system users</emphasis>, there are also "
+"<emphasis>system groups</emphasis> for internal use."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:57
+#, no-c-format
+msgid ""
+"Depending on the set of users you choose to view and modify with, the dialog "
+"(local users, network users, system users), the main window shows several "
+"tabs. These allow you to execute the following tasks:"
+msgstr ""
+
+#. Tag: term
+#: yast2_userman.xml:65
+#, no-c-format
+msgid "<term>Managing User Accounts</term>"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:67
+#, no-c-format
+msgid ""
+"From the <guimenu>Users</guimenu> tab create, modify, delete or temporarily "
+"disable user accounts as described in <xref linkend=\"sec.y2.userman.users\"/"
+">. Learn about advanced options like enforcing password policies, using "
+"encrypted home directories, or managing disk quotas in <xref linkend=\"sec."
+"y2.userman.adv\"/>."
+msgstr ""
+
+#. Tag: term
+#: yast2_userman.xml:77
+#, no-c-format
+msgid "Changing Default Settings"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:79
+#, no-c-format
+msgid ""
+"Local users accounts are created according to the settings defined on the "
+"<guimenu>Defaults for New Users</guimenu> tab. Learn how to change the "
+"default group assignment, or the default path and access permissions for "
+"home directories in <xref linkend=\"sec.y2.userman.defaults\"/>."
+msgstr ""
+
+#. Tag: term
+#: yast2_userman.xml:88
+#, no-c-format
+msgid "<term>Assigning Users to Groups</term>"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:90
+#, no-c-format
+msgid ""
+"Learn how to change the group assignment for individual users in <xref "
+"linkend=\"sec.y2.userman.assign\"/>."
+msgstr ""
+
+#. Tag: term
+#: yast2_userman.xml:97
+#, no-c-format
+msgid "<term>Managing Groups</term>"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:99
+#, no-c-format
+msgid ""
+"From the <guimenu>Groups</guimenu> tab, you can add, modify or delete "
+"existing groups. Refer to <xref linkend=\"sec.y2.userman.groups\"/> for "
+"information on how to do this."
+msgstr ""
+
+#. Tag: term
+#: yast2_userman.xml:107
+#, no-c-format
+msgid "<term>Changing the User Authentication Method</term>"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:109
+#, no-c-format
+msgid ""
+"When your machine is connected to a network that provides user "
+"authentication methods like NIS or LDAP, you can choose between several "
+"authentication methods on the <guimenu>Authentication Settings</guimenu> "
+"tab. For more information, refer to <xref linkend=\"cha.y2.userman.authent\"/"
+">."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:120
+#, no-c-format
+msgid ""
+"For user and group management, the dialog provides similar functionality. "
+"You can easily switch between the user and group administration view by "
+"choosing the appropriate tab at the top of the dialog."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:126
+#, no-c-format
+msgid ""
+"Filter options allow you to define the set of users or groups you want to "
+"modify: On the <guimenu>Users</guimenu> or <guimenu>Group</guimenu> tab, "
+"click <guimenu>Set Filter</guimenu> to view and edit users or groups "
+"according to certain categories, such as <guimenu>Local Users</guimenu> or "
+"<guimenu>LDAP Users</guimenu>, for example (if you are part of a network "
+"which uses LDAP). With <menuchoice> <guimenu>Set Filter</guimenu> "
+"<guimenu>Customize Filter</guimenu> </menuchoice> you can also set up and "
+"use a custom filter."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:137
+#, no-c-format
+msgid ""
+"Depending on the filter you choose, not all of the following options and "
+"functions will be available from the dialog."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:143
+#, no-c-format
+msgid "<title>Managing User Accounts</title>"
+msgstr ""
+
+#. Tag: primary
+#: yast2_userman.xml:147 yast2_userman.xml:150 yast2_userman.xml:278
+#: yast2_userman.xml:280 yast2_userman.xml:357 yast2_userman.xml:430
+#: yast2_userman.xml:581 yast2_userman.xml:801 yast2_userman.xml:866
+#: yast2_userman.xml:1028
+#, no-c-format
+msgid "users"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:148
+#, no-c-format
+msgid "creating accounts"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:151
+#, no-c-format
+msgid "modifying accounts"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:152
+#, no-c-format
+msgid ""
+"&yast; offers to create, modify, delete or temporarily disable user "
+"accounts. Do not modify user accounts unless you are an experienced user or "
+"administrator."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:158
+#, no-c-format
+msgid "Changing User IDs of Existing Users"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:159
+#, no-c-format
+msgid ""
+"File ownership is bound to the user ID, not to the user name. After a user "
+"ID change, the files in the user's home directory are automatically adjusted "
+"to reflect this change. However, after an ID change, the user no longer owns "
+"the files he created elsewhere in the file system unless the file ownership "
+"for those files are manually modified."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:168
+#, no-c-format
+msgid ""
+"In the following, learn how to set up default user accounts. For some "
+"further options, such as auto login, login without password, setting up "
+"encrypted home directories or managing quotas for users and groups, refer to "
+"<xref linkend=\"sec.y2.userman.adv\"/>."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:176
+#, no-c-format
+msgid "Adding or Modifying User Accounts"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:178 yast2_userman.xml:283
+#, no-c-format
+msgid ""
+"Open the &yast; <guimenu>User and Group Administration</guimenu> dialog and "
+"click the <guimenu>Users</guimenu> tab."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:184
+#, no-c-format
+msgid ""
+"With <guimenu>Set Filter</guimenu> define the set of users you want to "
+"manage. The dialog lists users in the system and the groups the users belong "
+"to."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:191
+#, no-c-format
+msgid ""
+"To modify options for an existing user, select an entry and click "
+"<guimenu>Edit</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:195
+#, no-c-format
+msgid "To create a new user account, click <guimenu>Add</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:200
+#, no-c-format
+msgid ""
+"Enter the appropriate user data on the first tab, such as <guimenu>Username "
+"</guimenu> (which is used for login) and <guimenu>Password</guimenu>. This "
+"data is sufficient to create a new user. If you click <guimenu>OK</guimenu> "
+"now, the system will automatically assign a user ID and set all other values "
+"according to the default."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:210
+#, no-c-format
+msgid ""
+"Activate <guimenu>Receive System Mail</guimenu> if you want any kind of "
+"system notifications to be delivered to this user's mailbox. This creates a "
+"mail alias for &rootuser; and the user can read the system mail without "
+"having to first log in as &rootuser;."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:216
+#, no-c-format
+msgid ""
+"The mails sent by system services are stored in the local mailbox <filename>/"
+"var/spool/mail/</filename><replaceable>username</replaceable>, where "
+"<replaceable>username</replaceable> is the login name of the selected user. "
+"To read e-mails, you can use the <command>mail</command> command."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:225
+#, no-c-format
+msgid ""
+"If you want to adjust further details such as the user ID or the path to the "
+"user's home directory, do so on the <guimenu>Details</guimenu> tab."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:229
+#, no-c-format
+msgid ""
+"If you need to relocate the home directory of an existing user, enter the "
+"path to the new home directory there and move the contents of the current "
+"home directory with <guimenu>Move to New Location</guimenu>. Otherwise, a "
+"new home directory is created without any of the existing data."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:237
+#, no-c-format
+msgid ""
+"To force users to regularly change their password or set other password "
+"options, switch to <guimenu>Password Settings</guimenu> and adjust the "
+"options. For more details, refer to <xref linkend=\"sec.y2.userman.adv.passw"
+"\"/>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:245
+#, no-c-format
+msgid ""
+"If all options are set according to your wishes, click <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:251
+#, no-c-format
+msgid ""
+"Click <guimenu>OK</guimenu> to close the administration dialog and to save "
+"the changes. A newly added user can now log in to the system using the login "
+"name and password you created."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:256 yast2_userman.xml:517 yast2_userman.xml:569
+#: yast2_userman.xml:777 yast2_userman.xml:913 yast2_userman.xml:1006
+#, no-c-format
+msgid ""
+"Alternatively, if you want to save all changes without exiting the "
+"<guimenu>User and Group Administration</guimenu> dialog, click <menuchoice> "
+"<guimenu>Expert Options</guimenu> <guimenu>Write Changes Now</guimenu> </"
+"menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:266
+#, no-c-format
+msgid "Matching User IDs"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:267
+#, no-c-format
+msgid ""
+"For a new (local) user on a laptop which also needs to integrate into a "
+"network environment where this user already has a user ID, it is useful to "
+"match the (local) user ID to the ID in the network. This ensures that the "
+"file ownership of the files the user creates <quote>offline</quote> is the "
+"same as if he had created them directly on the network."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:277
+#, no-c-format
+msgid "Disabling or Deleting User Accounts"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:279
+#, no-c-format
+msgid "disabling accounts"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:281
+#, no-c-format
+msgid "deleting accounts"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:289
+#, no-c-format
+msgid ""
+"To temporarily disable a user account without deleting it, select the user "
+"from the list and click <guimenu>Edit</guimenu>. Activate <guimenu>Disable "
+"User Login</guimenu>. The user cannot log in to your machine until you "
+"enable the account again."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:297
+#, no-c-format
+msgid ""
+"To delete a user account, select the user from the list and click "
+"<guimenu>Delete</guimenu>. Choose if you also want to delete the user's home "
+"directory or if you want to retain the data."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:306
+#, no-c-format
+msgid "Additional Options for User Accounts"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:308
+#, no-c-format
+msgid ""
+"In addition to the settings for a default user account, &productnamereg; "
+"offers further options, such as options to enforce password policies, use "
+"encrypted home directories or define disk quotas for users and groups."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:315
+#, no-c-format
+msgid "Automatic Login and Passwordless Login"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:316
+#, no-c-format
+msgid ""
+"If you use the &gnome; desktop environment you can configure <emphasis>Auto "
+"Login</emphasis> for a certain user and <emphasis>Passwordless Login</"
+"emphasis> for all users. Auto login causes a user to become automatically "
+"logged in to the desktop environment on boot. This functionality can only be "
+"activated for one user at a time. Login without password allows all users to "
+"log in to the system after they have entered their user name in the login "
+"manager."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:326
+#, no-c-format
+msgid "Security Risk"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:327
+#, no-c-format
+msgid ""
+"Enabling <emphasis>Auto Login</emphasis> or <emphasis>Passwordless Login</"
+"emphasis> on a machine that can be accessed by more than one person is a "
+"security risk. Without the need to authenticate, any user can gain access to "
+"your system and your data. If your system contains confidential data, do not "
+"use this functionality."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:335
+#, no-c-format
+msgid ""
+"If you want to activate auto login or login without password, access these "
+"functions in the &yast; <guimenu>User and Group Administration</guimenu> "
+"with <menuchoice> <guimenu>Expert Options</guimenu> <guimenu>Login Settings</"
+"guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:344
+#, no-c-format
+msgid "Enforcing Password Policies"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:345
+#, no-c-format
+msgid ""
+"On any system with multiple users, it is a good idea to enforce at least "
+"basic password security policies. Users should change their passwords "
+"regularly and use strong passwords that cannot easily be exploited. For "
+"local users, proceed as follows:"
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:356
+#, no-c-format
+msgid "Configuring Password Settings"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:358
+#, no-c-format
+msgid "password settings"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:360
+#, no-c-format
+msgid ""
+"Open the &yast; <guimenu>User and Group Administration</guimenu> dialog and "
+"select the <guimenu>Users</guimenu> tab."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:366
+#, no-c-format
+msgid ""
+"Select the user for which to change the password options and click "
+"<guimenu>Edit</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:372
+#, no-c-format
+msgid ""
+"Switch to the <guimenu>Password Settings</guimenu> tab. The user's last "
+"password change is displayed on the tab."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:378
+#, no-c-format
+msgid ""
+"To make the user change his password at next login, activate <guimenu>Force "
+"Password Change</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:384
+#, no-c-format
+msgid ""
+"To enforce password rotation, set a <guimenu>Maximum Number of Days for the "
+"Same Password</guimenu> and a <guimenu>Minimum Number of Days for the Same "
+"Password</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:391
+#, no-c-format
+msgid ""
+"To remind the user to change his password before it expires, set the number "
+"of <guimenu>Days before Password Expiration to Issue Warning</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:398
+#, no-c-format
+msgid ""
+"To restrict the period of time the user can log in after his password has "
+"expired, change the value in <guimenu>Days after Password Expires with "
+"Usable Login</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:405
+#, no-c-format
+msgid ""
+"You can also specify a certain expiration date for the complete account. "
+"Enter the <guimenu>Expiration Date</guimenu> in <replaceable>YYYY-MM-DD</"
+"replaceable> format. Note that this setting is not password-related but "
+"rather applies to the account itself."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:413
+#, no-c-format
+msgid ""
+"For more information about the options and about the default values, click "
+"<guimenu>Help</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:419 yast2_userman.xml:855
+#, no-c-format
+msgid "Apply your changes with <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:427
+#, no-c-format
+msgid "Managing Encrypted Home Directories"
+msgstr ""
+
+#. Tag: primary
+#: yast2_userman.xml:428
+#, no-c-format
+msgid "home directories"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:429
+#, no-c-format
+msgid "encrypting"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:431
+#, no-c-format
+msgid "encrypted home directories"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:432
+#, no-c-format
+msgid ""
+"To protect data in home directories against theft and hard disk removal, you "
+"can create encrypted home directories for users. These are encrypted with "
+"LUKS (Linux Unified Key Setup), which results in an image and an image key "
+"being generated for the user. The image key is protected with the user's "
+"login password. When the user logs in to the system, the encrypted home "
+"directory is mounted and the contents are made available to the user."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:440
+#, no-c-format
+msgid ""
+"With &yast;, you can create encrypted home directories for new or existing "
+"users. To encrypt or modify encrypted home directories of already existing "
+"users, you need to know the user's current login password. By default, all "
+"existing user data is copied to the new encrypted home directory, but it is "
+"not deleted from the unencrypted directory."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:448
+#, no-c-format
+msgid "Security Restrictions"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:449
+#, no-c-format
+msgid ""
+"Encrypting a user's home directory does not provide strong security from "
+"other users. If strong security is required, the system should not be "
+"physically shared."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:455
+#, no-c-format
+msgid ""
+"Find background information about encrypted home directories and which "
+"actions to take for stronger security in <xref linkend=\"sec.security."
+"cryptofs.y2.homes\"/>."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:461
+#, no-c-format
+msgid "Creating Encrypted Home Directories"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:463
+#, no-c-format
+msgid ""
+"Open the &yast; <guimenu>User and Group Management</guimenu> dialog and "
+"click the <guimenu>Users</guimenu> tab."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:469
+#, no-c-format
+msgid ""
+"To encrypt the home directory of an existing user, select the user and click "
+"<guimenu>Edit</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:473
+#, no-c-format
+msgid ""
+"Otherwise, click <guimenu>Add</guimenu> to create a new user account and "
+"enter the appropriate user data on the first tab."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:479
+#, no-c-format
+msgid ""
+"In the <guimenu>Details</guimenu> tab, activate <guimenu>Use Encrypted Home "
+"Directory</guimenu>. With <guimenu>Directory Size in MB</guimenu>, specify "
+"the size of the encrypted image file to be created for this user."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:502 yast2_userman.xml:554
+#, no-c-format
+msgid "Apply your settings with <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:507 yast2_userman.xml:559
+#, no-c-format
+msgid ""
+"Enter the user's current login password to proceed if &yast; prompts for it."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:513 yast2_userman.xml:565 yast2_userman.xml:773
+#: yast2_userman.xml:909 yast2_userman.xml:1002
+#, no-c-format
+msgid ""
+"Click <guimenu>OK</guimenu> to close the administration dialog and save the "
+"changes."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:526
+#, no-c-format
+msgid "Modifying or Disabling Encrypted Home Directories"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:527
+#, no-c-format
+msgid ""
+"Of course, you can also disable the encryption of a home directory or change "
+"the size of the image file at any time."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:532
+#, no-c-format
+msgid ""
+"Open the &yast; <guimenu>User and Group Administration</guimenu> dialog in "
+"the <guimenu>Users</guimenu> view."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:538
+#, no-c-format
+msgid "Select a user from the list and click <guimenu>Edit</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:543
+#, no-c-format
+msgid ""
+"If you want to disable the encryption, switch to the <guimenu>Details</"
+"guimenu> tab and disable <guimenu>Use Encrypted Home Directory</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:548
+#, no-c-format
+msgid ""
+"If you need to enlarge or reduce the size of the encrypted image file for "
+"this user, change the <guimenu>Directory Size in MB</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:580
+#, no-c-format
+msgid "Managing Quotas"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:582
+#, no-c-format
+msgid "<secondary>quotas</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: yast2_userman.xml:583
+#, no-c-format
+msgid "<primary>quotas</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:584
+#, no-c-format
+msgid "users, groups"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:585
+#, no-c-format
+msgid ""
+"To prevent system capacities from being exhausted without notification, "
+"system administrators can set up quotas for users or groups. Quotas can be "
+"defined for one or more file systems and restrict the amount of disk space "
+"that can be used and the number of inodes (index nodes) that can be created "
+"there. Inodes are data structures on a file system that store basic "
+"information about a regular file, directory, or other file system object. "
+"They store all attributes of a file system object (like user and group "
+"ownership, read, write, or execute permissions), except file name and "
+"contents."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:596
+#, no-c-format
+msgid ""
+"&productname; allows usage of <literal>soft</literal> and <literal>hard</"
+"literal> quotas. Additionally, grace intervals can be defined that allow "
+"users or groups to temporarily violate their quotas by certain amounts."
+msgstr ""
+
+#. Tag: term
+#: yast2_userman.xml:604
+#, no-c-format
+msgid "Soft Quota"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:606
+#, no-c-format
+msgid ""
+"Defines a warning level at which users are informed that they are nearing "
+"their limit. Administrators will urge the users to clean up and reduce their "
+"data on the partition. The soft quota limit is usually lower than the hard "
+"quota limit."
+msgstr ""
+
+#. Tag: term
+#: yast2_userman.xml:615
+#, no-c-format
+msgid "Hard Quota"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:617
+#, no-c-format
+msgid ""
+"Defines the limit at which write requests are denied. When the hard quota is "
+"reached, no more data can be stored and applications may crash."
+msgstr ""
+
+#. Tag: term
+#: yast2_userman.xml:624
+#, no-c-format
+msgid "Grace Period"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:626
+#, no-c-format
+msgid ""
+"Defines the time between the overflow of the soft quota and a warning being "
+"issued. Usually set to a rather low value of one or several hours."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:634
+#, no-c-format
+msgid "Enabling Quota Support for a Partition"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:635
+#, no-c-format
+msgid ""
+"To configure quotas for certain users and groups, you need to enable quota "
+"support for the respective partition in the &yast; Expert Partitioner first."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:641
+#, no-c-format
+msgid "Quotas Btrfs Partitions"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:642
+#, no-c-format
+msgid ""
+"Quotas for Btrfs partitions are handled differently. For more information, "
+"see <xref linkend=\"sec.filesystems.major.btrfs.quota\"/>."
+msgstr ""
+
+#. Tag: remark
+#: yast2_userman.xml:652
+#, no-c-format
+msgid ""
+"taroth 2014-06-04: todo - after btrfs quotas have been covered in the "
+"manuals (Storage Guide?), add link - taroth 2014-12-29: done"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:657
+#, no-c-format
+msgid ""
+"In &yast;, select <menuchoice> <guimenu>System</guimenu> "
+"<guimenu>Partitioner</guimenu> </menuchoice> and click <guimenu>Yes</"
+"guimenu> to proceed."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:664
+#, no-c-format
+msgid ""
+"In the <guimenu>Expert Partitioner</guimenu>, select the partition for which "
+"to enable quotas and click <guimenu>Edit</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:670
+#, no-c-format
+msgid ""
+"Click <guimenu>Fstab Options</guimenu> and activate <guimenu>Enable Quota "
+"Support</guimenu>. If the <systemitem>quota</systemitem> package is not "
+"already installed, it will be installed once you confirm the respective "
+"message with <guimenu>Yes</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:685
+#, no-c-format
+msgid ""
+"Confirm your changes and leave the <guimenu>Expert Partitioner</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:690
+#, no-c-format
+msgid ""
+"Make sure the service <systemitem class=\"service\">quotaon</systemitem> is "
+"running by entering the following command:"
+msgstr ""
+
+#. Tag: screen
+#: yast2_userman.xml:694
+#, no-c-format
+msgid "systemctl status quotaon"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:695
+#, no-c-format
+msgid ""
+"It should be marked as being <literal>active</literal>. If this is not the "
+"case, start it with the command <command>systemctl start quotaon</command>."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:703
+#, no-c-format
+msgid "Setting Up Quotas for Users or Groups"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:704
+#, no-c-format
+msgid ""
+"Now you can define soft or hard quotas for specific users or groups and set "
+"time periods as grace intervals."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:709
+#, no-c-format
+msgid ""
+"In the &yast; <guimenu>User and Group Administration</guimenu>, select the "
+"user or the group you want to set the quotas for and click <guimenu>Edit</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:716
+#, no-c-format
+msgid ""
+"On the <guimenu>Plug-Ins</guimenu> tab, select the <guimenu>Manage User "
+"Quota</guimenu> entry and click <guimenu>Launch</guimenu> to open the "
+"<guimenu>Quota Configuration</guimenu> dialog."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:723
+#, no-c-format
+msgid ""
+"From <guimenu>File System</guimenu>, select the partition to which the quota "
+"should apply."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:745
+#, no-c-format
+msgid ""
+"Below <guimenu>Size Limits</guimenu>, restrict the amount of disk space. "
+"Enter the number of 1 KB blocks the user or group may have on this "
+"partition. Specify a <guimenu>Soft Limit</guimenu> and a <guimenu>Hard "
+"Limit</guimenu> value."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:753
+#, no-c-format
+msgid ""
+"Additionally, you can restrict the number of inodes the user or group may "
+"have on the partition. Below <guimenu>Inodes Limits</guimenu>, enter a "
+"<guimenu>Soft Limit</guimenu> and <guimenu>Hard Limit</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:760
+#, no-c-format
+msgid ""
+"You can only define grace intervals if the user or group has already "
+"exceeded the soft limit specified for size or inodes. Otherwise, the time-"
+"related text boxes are not activated. Specify the time period for which the "
+"user or group is allowed to exceed the limits set above."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:768
+#, no-c-format
+msgid "Confirm your settings with <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:785
+#, no-c-format
+msgid ""
+"&productname; also ships command line tools like <literal>repquota</literal> "
+"or <literal>warnquota</literal> with which system administrators can control "
+"the disk usage or send e-mail notifications to users exceeding their quota. "
+"With <command>quota_nld</command>, administrators can also forward kernel "
+"messages about exceeded quotas to D-BUS. For more information, refer to the "
+"<systemitem>repquota</systemitem>, the <systemitem>warnquota</systemitem> "
+"and the <command>quota_nld</command> man page."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:799
+#, no-c-format
+msgid "Changing Default Settings for Local Users"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:803
+#, no-c-format
+msgid "default settings"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:805
+#, no-c-format
+msgid ""
+"When creating new local users, several default settings are used by &yast;. "
+"These include, for example, the primary group and the secondary groups the "
+"user belongs to, or the access permissions of the user's home directory. You "
+"can change these default settings to meet your requirements:"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:814
+#, no-c-format
+msgid ""
+"Open the &yast; <guimenu>User and Group Administration</guimenu> dialog and "
+"select the <guimenu>Defaults for New Users</guimenu> tab."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:820
+#, no-c-format
+msgid ""
+"To change the primary group the new users should automatically belong to, "
+"select another group from <guimenu>Default Group</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:826
+#, no-c-format
+msgid ""
+"To modify the secondary groups for new users, add or change groups in "
+"<guimenu>Secondary Groups</guimenu>. The group names must be separated by "
+"commas."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:833
+#, no-c-format
+msgid ""
+"If you do not want to use <filename>/home/<replaceable>username</"
+"replaceable></filename> as default path for new users' home directories, "
+"modify the <guimenu>Path Prefix for Home Directory</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:841
+#, no-c-format
+msgid ""
+"To change the default permission modes for newly created home directories, "
+"adjust the umask value in <guimenu>Umask for Home Directory</guimenu>. For "
+"more information about umask, refer to <xref linkend=\"cha.security.acls\"/> "
+"and to the <command>umask</command> man page."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:849
+#, no-c-format
+msgid ""
+"For information about the individual options, click <guimenu>Help</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:862
+#, no-c-format
+msgid "<title>Assigning Users to Groups</title>"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:867
+#, no-c-format
+msgid "group assignment"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:868
+#, no-c-format
+msgid ""
+"Local users are assigned to several groups according to the default settings "
+"which you can access from the <guimenu>User and Group Administration</"
+"guimenu> dialog on the <guimenu>Defaults for New Users</guimenu> tab. In the "
+"following, learn how to modify an individual user's group assignment. If you "
+"need to change the default group assignments for new users, refer to <xref "
+"linkend=\"sec.y2.userman.defaults\"/>."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:877
+#, no-c-format
+msgid "Changing a User's Group Assignment"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:879
+#, no-c-format
+msgid ""
+"Open the &yast; <guimenu>User and Group Administration</guimenu> dialog and "
+"click the <guimenu>Users</guimenu> tab. It lists users and the groups the "
+"users belong to."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:886
+#, no-c-format
+msgid ""
+"Click <guimenu>Edit</guimenu> and switch to the <guimenu>Details</guimenu> "
+"tab."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:892
+#, no-c-format
+msgid ""
+"To change the primary group the user belongs to, click <guimenu>Default "
+"Group</guimenu> and select the group from the list."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:898
+#, no-c-format
+msgid ""
+"To assign the user additional secondary groups, activate the corresponding "
+"check boxes in the <guimenu>Additional Groups</guimenu> list."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:904 yast2_userman.xml:997
+#, no-c-format
+msgid "Click <guimenu>OK</guimenu> to apply your changes."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:923
+#, no-c-format
+msgid "<title>Managing Groups</title>"
+msgstr ""
+
+#. Tag: primary
+#: yast2_userman.xml:925
+#, no-c-format
+msgid "<primary>groups</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:927
+#, no-c-format
+msgid "managing"
+msgstr ""
+
+#. Tag: primary
+#: yast2_userman.xml:929
+#, no-c-format
+msgid "YaST"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:931
+#, no-c-format
+msgid "group management"
+msgstr ""
+
+#. Tag: primary
+#: yast2_userman.xml:933
+#, no-c-format
+msgid "configuring"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:935
+#, no-c-format
+msgid "<secondary>groups</secondary>"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:937
+#, no-c-format
+msgid "With &yast; you can also easily add, modify or delete groups."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:942
+#, no-c-format
+msgid "Creating and Modifying Groups"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:944
+#, no-c-format
+msgid ""
+"Open the &yast; <guimenu>User and Group Management</guimenu> dialog and "
+"click the <guimenu>Groups</guimenu> tab."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:950
+#, no-c-format
+msgid ""
+"With <guimenu>Set Filter</guimenu> define the set of groups you want to "
+"manage. The dialog lists groups in the system."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:956
+#, no-c-format
+msgid "To create a new group, click <guimenu>Add</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:961
+#, no-c-format
+msgid ""
+"To modify an existing group, select the group and click <guimenu>Edit</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:967
+#, no-c-format
+msgid ""
+"In the following dialog, enter or change the data. The list on the right "
+"shows an overview of all available users and system users which can be "
+"members of the group."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:990
+#, no-c-format
+msgid ""
+"To add existing users to a new group select them from the list of possible "
+"<guimenu>Group Members</guimenu> by checking the corresponding box. To "
+"remove them from the group deactivate the box."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:1015
+#, no-c-format
+msgid ""
+"To delete a group, it must not contain any group members. To delete a group, "
+"select it from the list and click <guimenu>Delete</guimenu>. Click "
+"<guimenu>OK</guimenu> to close the administration dialog and save the "
+"changes. Alternatively, if you want to save all changes without exiting the "
+"<guimenu>User and Group Administration</guimenu> dialog, click <menuchoice> "
+"<guimenu>Expert Options</guimenu> <guimenu>Write Changes Now</guimenu> </"
+"menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:1026
+#, no-c-format
+msgid "<title>Changing the User Authentication Method</title>"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_userman.xml:1030
+#, no-c-format
+msgid "authentication"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:1032
+#, no-c-format
+msgid ""
+"When your machine is connected to a network, you can change the "
+"authentication method. The following options are available:"
+msgstr ""
+
+#. Tag: term
+#: yast2_userman.xml:1039
+#, no-c-format
+msgid "<term>NIS</term>"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:1041
+#, no-c-format
+msgid ""
+"Users are administered centrally on a NIS server for all systems in the "
+"network. For details, see <xref linkend=\"cha.nis\"/>."
+msgstr ""
+
+#. Tag: term
+#: yast2_userman.xml:1048
+#, no-c-format
+msgid "LDAP"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:1050
+#, no-c-format
+msgid ""
+"Users are administered centrally on an LDAP server for all systems in the "
+"network. For details about LDAP, see <xref linkend=\"cha.security.ldap\"/>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:1054
+#, no-c-format
+msgid ""
+"You can manage LDAP users with the &yast; user module. All other LDAP "
+"settings, including the default settings for LDAP users, need to be defined "
+"with the &yast; LDAP client module as described in <phrase os=\"sles;osuse"
+"\"><xref linkend=\"sec.security.auth.yast.client\"/></phrase><phrase os="
+"\"sled\"><xref linkend=\"sec.security.auth.yast-sled\"/></phrase>."
+msgstr ""
+
+#. Tag: term
+#: yast2_userman.xml:1066
+#, no-c-format
+msgid "Kerberos"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:1068
+#, no-c-format
+msgid ""
+"With Kerberos, a user registers once and then is trusted in the entire "
+"network for the rest of the session."
+msgstr ""
+
+#. Tag: term
+#: yast2_userman.xml:1075
+#, no-c-format
+msgid "Samba"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:1077
+#, no-c-format
+msgid ""
+"SMB authentication is often used in mixed Linux and Windows networks. For "
+"details, see <xref linkend=\"cha.samba\"/><phrase os=\"sled;osuse\"> and "
+"<xref linkend=\"cha.security.ad\"/></phrase>."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:1086
+#, no-c-format
+msgid "To change the authentication method, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:1092
+#, no-c-format
+msgid ""
+"Open the <guimenu>User and Group Administration</guimenu> dialog in &yast;."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:1098
+#, no-c-format
+msgid ""
+"Click the <guimenu>Authentication Settings</guimenu> tab to show an overview "
+"of the available authentication methods and the current settings."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:1104
+#, no-c-format
+msgid ""
+"To change the authentication method, click <guimenu>Configure</guimenu> and "
+"select the authentication method you want to modify. This takes you directly "
+"to the client configuration modules in &yast;. For information about the "
+"configuration of the appropriate client, refer to the following sections:"
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:1112
+#, no-c-format
+msgid "NIS:"
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:1118
+#, no-c-format
+msgid "LDAP:"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:1119
+#, no-c-format
+msgid ""
+"<phrase os=\"sles;osuse\"><xref linkend=\"sec.security.auth.yast.client\"/></"
+"phrase><phrase os=\"sled\"><xref linkend=\"sec.security.auth.yast-sled\"/></"
+"phrase>"
+msgstr ""
+
+#. Tag: title
+#: yast2_userman.xml:1125
+#, no-c-format
+msgid "Samba:"
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:1140
+#, no-c-format
+msgid ""
+"After accepting the configuration, return to the <guimenu>User and Group "
+"Administration</guimenu> overview."
+msgstr ""
+
+#. Tag: para
+#: yast2_userman.xml:1146
+#, no-c-format
+msgid "Click <guimenu>OK</guimenu> to close the administration dialog."
+msgstr ""

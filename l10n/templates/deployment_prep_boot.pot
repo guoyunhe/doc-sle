@@ -1,0 +1,1167 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: deployment_prep_boot.xml:12
+#, no-c-format
+msgid "Preparing the Boot of the Target System"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: deployment_prep_boot.xml:14
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:19
+#, no-c-format
+msgid ""
+"&productnamereg; can be installed in different ways. Apart from the usual "
+"media installation covered in <xref linkend=\"cha.inst\"/>, you can choose "
+"from various network-based approaches or even take a completely hands-off "
+"approach to the installation of &productname;."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:25
+#, no-c-format
+msgid ""
+"Each method is introduced by means of two short checklists: one listing the "
+"prerequisites for this method and the other illustrating the basic "
+"procedure. More detail is then provided for all the techniques used in these "
+"installation scenarios."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:32
+#, no-c-format
+msgid "Terminology"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:33
+#, no-c-format
+msgid ""
+"In the following sections, the system to hold your new &productname; "
+"installation is called <emphasis>target system</emphasis> or "
+"<emphasis>installation target</emphasis>. The term <emphasis>repository</"
+"emphasis> (previously called <quote>installation source</quote>) is used for "
+"all sources of installation data. This includes physical media, such as CD "
+"and DVD, and network servers distributing the installation data in your "
+"network."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:43
+#, no-c-format
+msgid ""
+"This section covers the configuration tasks needed in complex boot "
+"scenarios. It contains ready-to-apply configuration examples for DHCP, PXE "
+"boot, TFTP, and Wake on LAN."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:49
+#, no-c-format
+msgid "Setting Up a DHCP Server"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:51
+#, no-c-format
+msgid ""
+"There are two ways to set up a DHCP server. For &productname;, &yast; "
+"provides a graphical interface to the process. Users can also manually edit "
+"the configuration files.<phrase os=\"sles\"> For more information about DHCP "
+"servers, see also <xref linkend=\"cha.dhcp\"/>.</phrase>"
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:59
+#, no-c-format
+msgid "Setting Up a DHCP Server with &yast;"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:60
+#, no-c-format
+msgid ""
+"To announce the TFTP server's location to the network clients and specify "
+"the boot image file the installation target should use, add two declarations "
+"to your DHCP server configuration."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:67 deployment_prep_boot.xml:141
+#, no-c-format
+msgid "Log in as &rootuser; to the machine hosting the DHCP server."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:72
+#, no-c-format
+msgid ""
+"Start <menuchoice> <guimenu>&yast;</guimenu> <guimenu>Network Services</"
+"guimenu> <guimenu>DHCP Server</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:78
+#, no-c-format
+msgid "Complete the setup wizard for basic DHCP server setup."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:83
+#, no-c-format
+msgid ""
+"Select <guimenu>Expert Settings</guimenu> and select <guimenu>Yes</guimenu> "
+"when warned about leaving the start-up dialog."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:89
+#, no-c-format
+msgid ""
+"In the <guimenu>Configured Declarations</guimenu> dialog, select the subnet "
+"in which the new system should be located and click <guimenu>Edit</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:96
+#, no-c-format
+msgid ""
+"In the <guimenu>Subnet Configuration</guimenu> dialog select <guimenu>Add</"
+"guimenu> to add a new option to the subnet's configuration."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:102
+#, no-c-format
+msgid ""
+"Select <option>filename</option> and enter <literal>pxelinux.0</literal> as "
+"the value."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:108
+#, no-c-format
+msgid ""
+"Add another option (<option>next-server</option>) and set its value to the "
+"address of the TFTP server."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:114
+#, no-c-format
+msgid ""
+"Select <guimenu>OK</guimenu> and <guimenu>Finish</guimenu> to complete the "
+"DHCP server configuration."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:120
+#, no-c-format
+msgid ""
+"To configure DHCP to provide a static IP address to a specific host, enter "
+"the <guimenu>Expert Settings</guimenu> of the DHCP server configuration "
+"module (<xref linkend=\"st.deployment.prep_boot.dhcp.yast.expert\" xrefstyle="
+"\"StepOnPage\"/>) and add a new declaration of the host type. Add the "
+"options <option>hardware</option> and <option>fixed-address</option> to this "
+"host declaration and provide the appropriate values."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:132
+#, no-c-format
+msgid "Setting Up a DHCP Server Manually"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:133
+#, no-c-format
+msgid ""
+"All the DHCP server needs to do, apart from providing automatic address "
+"allocation to your network clients, is to announce the IP address of the "
+"TFTP server and the file that needs to be pulled in by the installation "
+"routines on the target machine."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:146
+#, no-c-format
+msgid ""
+"Append the following lines to a subnet configuration of your DHCP server's "
+"configuration file located under <filename>/etc/dhcpd.conf</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: deployment_prep_boot.xml:151
+#, no-c-format
+msgid ""
+"<!--adjust to standard network example-->subnet 192.168.1.0 netmask "
+"255.255.255.0 {\n"
+"  range dynamic-bootp 192.168.1.200 192.168.1.228;\n"
+"  # PXE related settings\n"
+"  #\n"
+"  # \"next-server\" defines the TFTP server that will be used\n"
+"  next-server <replaceable>ip_tftp_server</replaceable>;\n"
+"  #\n"
+"  # \"filename\" specifies the pxelinux image on the TFTP server\n"
+"  # the server runs in chroot under /srv/tftpboot\n"
+"  filename  \"pxelinux.0\";\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:152
+#, no-c-format
+msgid ""
+"Replace <replaceable>ip_of_the_tftp_server</replaceable> with the actual IP "
+"address of the TFTP server. For more information about the options available "
+"in <filename>dhcpd.conf</filename>, refer to the <systemitem>dhcpd.conf</"
+"systemitem> manual page."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:162
+#, no-c-format
+msgid ""
+"Restart the DHCP server by executing <command>systemctl restart dhcpd</"
+"command>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:168
+#, no-c-format
+msgid ""
+"If you plan on using SSH for the remote control of a PXE and Wake on LAN "
+"installation, explicitly specify the IP address DHCP should provide to the "
+"installation target. To achieve this, modify the above mentioned DHCP "
+"configuration according to the following example:"
+msgstr ""
+
+#. Tag: screen
+#: deployment_prep_boot.xml:174
+#, no-c-format
+msgid ""
+"group {\n"
+"  # PXE related settings\n"
+"  #\n"
+"  # \"next-server\" defines the TFTP server that will be used\n"
+"  next-server <replaceable>ip_tftp_server</replaceable>:\n"
+"  #\n"
+"  # \"filename\" specifies the pxelinux image on the TFTP server\n"
+"  # the server runs in chroot under /srv/tftpboot\n"
+"  filename \"pxelinux.0\";\n"
+"  host test {\n"
+"    hardware ethernet <replaceable>mac_address</replaceable>;\n"
+"    fixed-address <replaceable>some_ip_address</replaceable>;\n"
+"    }\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:175
+#, no-c-format
+msgid ""
+"The host statement introduces the host name of the installation target. To "
+"bind the host name and IP address to a specific host, you must know and "
+"specify the system's hardware (MAC) address. Replace all the variables used "
+"in this example with the actual values that match your environment."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:181
+#, no-c-format
+msgid ""
+"After restarting the DHCP server, it provides a static IP to the host "
+"specified, enabling you to connect to the system via SSH."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:188
+#, no-c-format
+msgid "Setting Up a TFTP Server"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:190
+#, no-c-format
+msgid ""
+"If using a &suse; based installation, you may use &yast; to set up a TFTP "
+"Server. Alternatively, set it up manually. The TFTP server delivers the boot "
+"image to the target system after it boots and sends a request for it."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:197
+#, no-c-format
+msgid "Setting Up a TFTP Server Using &yast;"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:200 deployment_prep_boot.xml:789
+#, no-c-format
+msgid "Log in as &rootuser;."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:205
+#, no-c-format
+msgid ""
+"Start <menuchoice> <guimenu>&yast;</guimenu> <guimenu>Network Services</"
+"guimenu> <guimenu>TFTP Server</guimenu></menuchoice> and install the "
+"requested package."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:212
+#, no-c-format
+msgid ""
+"Click <guimenu>Enable</guimenu> to make sure that the server is started and "
+"included in the boot routines. No further action from your side is required "
+"to secure this. xinetd starts tftpd at boot time."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:219
+#, no-c-format
+msgid ""
+"Click <guimenu>Open Port in Firewall</guimenu> to open the appropriate port "
+"in the firewall running on your machine. If there is no firewall running on "
+"your server, this option is not available."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:226
+#, no-c-format
+msgid ""
+"Click <guimenu>Browse</guimenu> to browse for the boot image directory. The "
+"default directory <filename>/tftpboot</filename> is created and selected "
+"automatically."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:233
+#, no-c-format
+msgid ""
+"Click <guimenu>Finish</guimenu> to apply your settings and start the server."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:242
+#, no-c-format
+msgid "Setting Up a TFTP Server Manually"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:245
+#, no-c-format
+msgid ""
+"Log in as &rootuser; and install the packages <systemitem>tftp</systemitem> "
+"and <systemitem>xinetd</systemitem>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:251
+#, no-c-format
+msgid ""
+"If unavailable, create <filename>/srv/tftpboot</filename> and <filename>/srv/"
+"tftpboot/pxelinux.cfg</filename> directories."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:257
+#, no-c-format
+msgid ""
+"Add the appropriate files needed for the boot image as described in <xref "
+"linkend=\"sec.deployment.prep_boot.pxe\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:263
+#, no-c-format
+msgid ""
+"Modify the configuration of xinetd located under <filename>/etc/xinetd.d</"
+"filename> to make sure that the TFTP server is started on boot:"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:270
+#, no-c-format
+msgid ""
+"If it does not exist, create a file called <filename>tftp</filename> under "
+"this directory with <command>touch tftp</command>. Then run <command>chmod "
+"755 tftp</command>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:277
+#, no-c-format
+msgid "Open the file <filename>tftp</filename> and add the following lines:"
+msgstr ""
+
+#. Tag: screen
+#: deployment_prep_boot.xml:280
+#, no-c-format
+msgid ""
+"service tftp\n"
+"{\n"
+"        socket_type            = dgram\n"
+"        protocol               = udp\n"
+"        wait                   = yes\n"
+"        user                   = root\n"
+"        server                 = /usr/sbin/in.tftpd\n"
+"        server_args            = -s /srv/tftpboot\n"
+"        disable                = no\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:283
+#, no-c-format
+msgid ""
+"Save the file and restart xinetd with <command>systemctl restart xinetd</"
+"command>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:294
+#, no-c-format
+msgid "Using PXE Boot"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:296
+#, no-c-format
+msgid ""
+"Some technical background information and PXE's complete specifications are "
+"available in the Preboot Execution Environment (PXE) Specification (<link "
+"xlink:href=\"http://www.pix.net/software/pxeboot/archive/pxespec.pdf\"></"
+"link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:304
+#, no-c-format
+msgid ""
+"Change to the directory <filename>boot/&lt;architecture&gt;/loader</"
+"filename> of your installation repository and copy the <filename>linux</"
+"filename>, <filename>initrd</filename>, <filename>message</filename>, "
+"<filename>biostest</filename>, and <filename>memtest</filename> files to the "
+"<filename>/srv/tftpboot</filename> directory by entering the following:"
+msgstr ""
+
+#. Tag: screen
+#: deployment_prep_boot.xml:313
+#, no-c-format
+msgid "cp -a linux initrd message biostest memtest /srv/tftpboot"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:316
+#, no-c-format
+msgid ""
+"Install the <systemitem>syslinux</systemitem> package directly from your "
+"installation DVDs with &yast;."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:322
+#, no-c-format
+msgid ""
+"Copy the <filename>/usr/share/syslinux/pxelinux.0</filename> file to the "
+"<filename>/srv/tftpboot</filename> directory by entering the following:"
+msgstr ""
+
+#. Tag: screen
+#: deployment_prep_boot.xml:326
+#, no-c-format
+msgid "cp -a /usr/share/syslinux/pxelinux.0 /srv/tftpboot"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:329
+#, no-c-format
+msgid ""
+"Change to the directory of your installation repository and copy the "
+"<filename>isolinux.cfg</filename> file to <filename> /srv/tftpboot/pxelinux."
+"cfg/default</filename> by entering the following:"
+msgstr ""
+
+#. Tag: screen
+#: deployment_prep_boot.xml:334
+#, no-c-format
+msgid ""
+"cp -a boot/&lt;architecture&gt;/loader/isolinux.cfg /srv/tftpboot/pxelinux."
+"cfg/default"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:337
+#, no-c-format
+msgid ""
+"Edit the <filename>/srv/tftpboot/pxelinux.cfg/default</filename> file and "
+"remove the lines beginning with <literal>readinfo</literal> and "
+"<literal>framebuffer</literal>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:344
+#, no-c-format
+msgid ""
+"Insert the following entries in the append lines of the default "
+"<option>failsafe</option> and <option>apic</option> labels:"
+msgstr ""
+
+#. Tag: option
+#: deployment_prep_boot.xml:351
+#, no-c-format
+msgid "insmod=<replaceable>kernel module</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:354
+#, no-c-format
+msgid ""
+"By means of this entry, enter the network Kernel module needed to support "
+"network installation on the PXE client. Replace <replaceable>kernel module</"
+"replaceable> with the appropriate module name for your network device."
+msgstr ""
+
+#. Tag: option
+#: deployment_prep_boot.xml:363
+#, no-c-format
+msgid "netdevice=<replaceable>interface</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:366
+#, no-c-format
+msgid ""
+"This entry defines the client's network interface that must be used for the "
+"network installation. It is only necessary if the client is equipped with "
+"several network cards and must be adapted accordingly. In case of a single "
+"network card, this entry can be omitted."
+msgstr ""
+
+#. Tag: option
+#: deployment_prep_boot.xml:376
+#, no-c-format
+msgid ""
+"install=nfs://<replaceable>ip_instserver</replaceable>/"
+"<replaceable>path_to_repository</replaceable>/DVD1"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:379
+#, no-c-format
+msgid ""
+"This entry defines the NFS server and the repository for the client "
+"installation. Replace <replaceable>ip_instserver</replaceable> with the "
+"actual IP address of your installation server. "
+"<replaceable>path_to_repository</replaceable> should be replaced with the "
+"actual path to the repository. HTTP, FTP, or SMB repositories are addressed "
+"in a similar manner, except for the protocol prefix, which should read "
+"<literal>http</literal>, <literal>ftp</literal>, or <literal>smb</literal>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:391
+#, no-c-format
+msgid "Adding Boot Options"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:392
+#, no-c-format
+msgid ""
+"If you need to pass other boot options to the installation routines, such as "
+"SSH or VNC boot parameters, append them to the <option>install</option> "
+"entry. An overview of parameters and some examples are given in <xref "
+"linkend=\"sec.deployment.remoteinst.bootinst\"/>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:404
+#, no-c-format
+msgid "Changing Kernel and initrd File Names"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:405
+#, no-c-format
+msgid ""
+"It is possible to use different file names for Kernel and initrd images. "
+"This is useful if you want to provide different operating systems from the "
+"same boot server. However, you should be aware that only one dot is "
+"permitted in the file names that are provided by TFTP for the PXE boot."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:412
+#, no-c-format
+msgid ""
+"An example <option>/srv/tftpboot/pxelinux.cfg/default</option> file follows. "
+"Adjust the protocol prefix for the repository to match your network setup "
+"and specify your preferred method of connecting to the installer by adding "
+"the <literal>vnc</literal> and <literal>VNCPassword</literal> or the "
+"<literal>ssh</literal> and <literal>ssh.password</literal> options to the "
+"<literal>install</literal> entry. The lines separated by <literal>\\</"
+"literal> must be entered as one continuous line without a line break and "
+"without the <literal>\\</literal>."
+msgstr ""
+
+#. Tag: screen
+#: deployment_prep_boot.xml:422
+#, no-c-format
+msgid ""
+"default harddisk\n"
+"\n"
+"# default\n"
+"label linux\n"
+"  kernel linux\n"
+"  append initrd=initrd ramdisk_size=65536 \\\n"
+"     install=nfs://<replaceable>ip_instserver</replaceable>/"
+"<replaceable>path_to_repository</replaceable>/<replaceable>product</"
+"replaceable>/DVD1\n"
+"\n"
+"# repair\n"
+"label repair\n"
+"  kernel linux\n"
+"  append initrd=initrd splash=silent repair=1 showopts\n"
+"\n"
+"# rescue\n"
+"label rescue\n"
+"  kernel linux\n"
+"  append initrd=initrd ramdisk_size=65536 rescue=1\n"
+"\n"
+"# bios test\n"
+"label firmware\n"
+"  kernel linux\n"
+"  append initrd=biostest,initrd splash=silent install=exec:/bin/run_biostest "
+"showopts\n"
+"\n"
+"#  memory test\n"
+"label memtest\n"
+"  kernel memtest\n"
+"\n"
+"#  hard disk\n"
+"label harddisk\n"
+"  localboot 0\n"
+"\n"
+"implicit     0\n"
+"display      message\n"
+"prompt       1\n"
+"timeout      100"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:425
+#, no-c-format
+msgid ""
+"Replace <replaceable>ip_instserver</replaceable> and "
+"<replaceable>path_to_repository</replaceable> with the values used in your "
+"setup."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:432
+#, no-c-format
+msgid ""
+"The following section serves as a short reference to the PXELINUX options "
+"used in this setup. Find more information about the options available in the "
+"documentation of the <systemitem>syslinux</systemitem> package located under "
+"<filename>/usr/share/doc/packages/syslinux/</filename>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:442
+#, no-c-format
+msgid "PXELINUX Configuration Options"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:444
+#, no-c-format
+msgid ""
+"The options listed here are a subset of all the options available for the "
+"PXELINUX configuration file."
+msgstr ""
+
+#. Tag: option
+#: deployment_prep_boot.xml:451
+#, no-c-format
+msgid "APPEND <replaceable>options... </replaceable>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:454
+#, no-c-format
+msgid ""
+"Add one or more options to the Kernel command line. These are added for both "
+"automatic and manual boots. The options are added at the very beginning of "
+"the Kernel command line, usually permitting explicitly entered Kernel "
+"options to override them."
+msgstr ""
+
+#. Tag: option
+#: deployment_prep_boot.xml:463
+#, no-c-format
+msgid "APPEND -"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:466
+#, no-c-format
+msgid ""
+"Append nothing. <option>APPEND</option> with a single hyphen as argument in "
+"a <option>LABEL</option> section can be used to override a global "
+"<option>APPEND</option>."
+msgstr ""
+
+#. Tag: option
+#: deployment_prep_boot.xml:474
+#, no-c-format
+msgid "DEFAULT <replaceable>kernel options</replaceable>..."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:477
+#, no-c-format
+msgid ""
+"Sets the default Kernel command line. If PXELINUX boots automatically, it "
+"acts as if the entries after DEFAULT had been typed in at the boot prompt, "
+"except the auto option is automatically added, indicating an automatic boot."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:483
+#, no-c-format
+msgid ""
+"If no configuration file exists or no DEFAULT entry is defined in the "
+"configuration file, the default is the Kernel name <quote>linux</quote> with "
+"no options."
+msgstr ""
+
+#. Tag: option
+#: deployment_prep_boot.xml:492
+#, no-c-format
+msgid "IFAPPEND <replaceable>FLAG</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:495
+#, no-c-format
+msgid ""
+"Adds a specific option to the kernel command line depending on the "
+"<replaceable>FLAG</replaceable> value. The <option>IFAPPEND</option> option "
+"is available only on PXELINUX. <replaceable>FLAG</replaceable> expects a "
+"value, described in <xref linkend=\"tab.deployment.boot.pxeopts.ifappend\"/>:"
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:503
+#, no-c-format
+msgid ""
+"Generated and Added Kernel Command Line Options from <option>IFAPPEND</"
+"option>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:510 deployment_prep_boot.xml:635
+#, no-c-format
+msgid "Argument"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:515
+#, no-c-format
+msgid "Generated Kernel Command Line / Description"
+msgstr ""
+
+#. Tag: option
+#: deployment_prep_boot.xml:525
+#, no-c-format
+msgid "<option>1</option>"
+msgstr ""
+
+#. Tag: screen
+#: deployment_prep_boot.xml:529
+#, no-c-format
+msgid ""
+"ip=<replaceable>CLIENT_IP</replaceable>:<replaceable>BOOT_SERVER_IP</"
+"replaceable>:<replaceable>GW_IP</replaceable>:<replaceable>NETMASK</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:530
+#, no-c-format
+msgid ""
+"The placeholders are replaced based on the input from the DHCP/BOOTP or PXE "
+"boot server."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:534
+#, no-c-format
+msgid ""
+"Note, this option is not a substitute for running a DHCP client in the "
+"booted system. Without regular renewals, the lease acquired by the PXE BIOS "
+"will expire, making the IP address available for reuse by the DHCP server."
+msgstr ""
+
+#. Tag: option
+#: deployment_prep_boot.xml:545
+#, no-c-format
+msgid "<option>2</option>"
+msgstr ""
+
+#. Tag: screen
+#: deployment_prep_boot.xml:549
+#, no-c-format
+msgid "BOOTIF=<replaceable>MAC_ADDRESS_OF_BOOT_INTERFACE</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:550
+#, no-c-format
+msgid ""
+"This option is useful if you want to avoid timeouts when the installation "
+"server probes one LAN interface after the other until it gets a reply from a "
+"DHCP server. Using this option allows an initrd program to determine from "
+"which interface the system has been booted. linuxrc reads this option and "
+"uses this network interface."
+msgstr ""
+
+#. Tag: option
+#: deployment_prep_boot.xml:562
+#, no-c-format
+msgid "<option>4</option>"
+msgstr ""
+
+#. Tag: screen
+#: deployment_prep_boot.xml:566
+#, no-c-format
+msgid "SYSUUID=<replaceable>SYSTEM_UUID</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:567
+#, no-c-format
+msgid ""
+"Adds UUIDs in lowercase hexadecimals, see <filename>/usr/share/doc/packages/"
+"syslinux/pxelinux.txt</filename>"
+msgstr ""
+
+#. Tag: option
+#: deployment_prep_boot.xml:579
+#, no-c-format
+msgid ""
+"LABEL <replaceable>label</replaceable> KERNEL <replaceable>image</"
+"replaceable> APPEND <replaceable>options</replaceable>..."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:583
+#, no-c-format
+msgid ""
+"Indicates that if <replaceable>label</replaceable> is entered as the Kernel "
+"to boot, PXELINUX should instead boot <replaceable>image</replaceable> and "
+"the specified <option>APPEND</option> options should be used instead of the "
+"ones specified in the global section of the file (before the first "
+"<option>LABEL</option> command). The default for <replaceable>image</"
+"replaceable> is the same as <replaceable>label</replaceable> and, if no "
+"<option>APPEND</option> is given, the default is to use the global entry (if "
+"any). Up to 128 <option>LABEL</option> entries are permitted."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:603
+#, no-c-format
+msgid "PXELINUX uses the following syntax:"
+msgstr ""
+
+#. Tag: screen
+#: deployment_prep_boot.xml:606
+#, no-c-format
+msgid ""
+"label <replaceable>mylabel</replaceable>\n"
+"  kernel <replaceable>mykernel</replaceable>\n"
+"  append <replaceable>myoptions</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:607
+#, no-c-format
+msgid ""
+"Labels are mangled as if they were file names and they must be unique after "
+"mangling. For example, the two labels <quote>v2.6.30</quote> and "
+"<quote>v2.6.31</quote> would not be distinguishable under PXELINUX because "
+"both mangle to the same DOS file name."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:613
+#, no-c-format
+msgid ""
+"The Kernel does not need to be a Linux Kernel; it can be a boot sector or a "
+"COMBOOT file."
+msgstr ""
+
+#. Tag: option
+#: deployment_prep_boot.xml:620
+#, no-c-format
+msgid "LOCALBOOT <replaceable>type</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:623
+#, no-c-format
+msgid ""
+"On PXELINUX, specifying <option>LOCALBOOT 0</option> instead of a "
+"<option>KERNEL</option> option means invoking this particular label and "
+"causes a local disk boot instead of a Kernel boot."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:640
+#, no-c-format
+msgid "Description"
+msgstr ""
+
+#. Tag: literal
+#: deployment_prep_boot.xml:650
+#, no-c-format
+msgid "<literal>0</literal>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:654
+#, no-c-format
+msgid "Perform a normal boot"
+msgstr ""
+
+#. Tag: literal
+#: deployment_prep_boot.xml:662
+#, no-c-format
+msgid "<literal>4</literal>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:666
+#, no-c-format
+msgid ""
+"Perform a local boot with the Universal Network Driver Interface (UNDI) "
+"driver still resident in memory"
+msgstr ""
+
+#. Tag: literal
+#: deployment_prep_boot.xml:675
+#, no-c-format
+msgid "<literal>5</literal>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:679
+#, no-c-format
+msgid ""
+"Perform a local boot with the entire PXE stack, including the UNDI driver, "
+"still resident in memory"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:688
+#, no-c-format
+msgid ""
+"All other values are undefined. If you do not know what the UNDI or PXE "
+"stacks are, specify <literal>0</literal>."
+msgstr ""
+
+#. Tag: option
+#: deployment_prep_boot.xml:695
+#, no-c-format
+msgid "TIMEOUT <replaceable>time-out</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:698
+#, no-c-format
+msgid ""
+"Indicates how long to wait at the boot prompt until booting automatically, "
+"in units of 1/10 second. The time-out is canceled when the user types "
+"anything on the keyboard, assuming the user will complete the command begun. "
+"A time-out of zero disables the time-out completely (this is also the "
+"default). The maximum possible time-out value is 35996 (just less than one "
+"hour)."
+msgstr ""
+
+#. Tag: option
+#: deployment_prep_boot.xml:709
+#, no-c-format
+msgid "PROMPT<replaceable> flag_val</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:712
+#, no-c-format
+msgid ""
+"If <option>flag_val</option> is 0, displays the boot prompt only if <keycap "
+"function=\"shift\"></keycap> or <keycap function=\"alt\"></keycap> is "
+"pressed or <keycap>Caps Lock</keycap> or <keycap>Scroll Lock</keycap> is set "
+"(this is the default). If <option>flag_val</option> is 1, always displays "
+"the boot prompt."
+msgstr ""
+
+#. Tag: screen
+#: deployment_prep_boot.xml:719
+#, no-c-format
+msgid ""
+"F2  <replaceable>filename</replaceable>\n"
+"F1  <replaceable>filename</replaceable>\n"
+"..etc...\n"
+"F9  <replaceable>filename</replaceable>\n"
+"F10 <replaceable>filename</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:720
+#, no-c-format
+msgid ""
+"Displays the indicated file on the screen when a function key is pressed at "
+"the boot prompt. This can be used to implement preboot online help "
+"(presumably for the Kernel command line options). For backward compatibility "
+"with earlier releases, <keycap>F10</keycap> can be also entered as "
+"<literal>F0</literal>. Note that there is currently no way to bind file "
+"names to <keycap>F11</keycap> and <keycap>F12</keycap>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:733
+#, no-c-format
+msgid "Preparing the Target System for PXE Boot"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:735
+#, no-c-format
+msgid ""
+"Prepare the system's BIOS for PXE boot by including the PXE option in the "
+"BIOS boot order."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:741
+#, no-c-format
+msgid "BIOS Boot Order"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:742
+#, no-c-format
+msgid ""
+"Do not place the PXE option ahead of the hard disk boot option in the BIOS. "
+"Otherwise this system would try to re-install itself every time you boot it."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:750
+#, no-c-format
+msgid "Preparing the Target System for Wake on LAN"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:752
+#, no-c-format
+msgid ""
+"Wake on LAN (WOL) requires the appropriate BIOS option to be enabled prior "
+"to the installation. Also, note down the MAC address of the target system. "
+"This data is needed to initiate Wake on LAN."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:759
+#, no-c-format
+msgid "Wake on LAN"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:761
+#, no-c-format
+msgid ""
+"Wake on LAN allows a machine to be turned on by a special network packet "
+"containing the machine's MAC address. Because every machine in the world has "
+"a unique MAC identifier, you do not need to worry about accidentally turning "
+"on the wrong machine."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:769
+#, no-c-format
+msgid "Wake on LAN across Different Network Segments"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:770
+#, no-c-format
+msgid ""
+"If the controlling machine is not located in the same network segment as the "
+"installation target that should be awakened, either configure the WOL "
+"requests to be sent as multicasts or remotely control a machine on that "
+"network segment to act as the sender of these requests."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:778
+#, no-c-format
+msgid ""
+"Users of &sls; can use a &yast; module called WOL to easily configure Wake "
+"on LAN. Users of other versions of &suselinux;-based operating systems can "
+"use a command line tool."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_boot.xml:785
+#, no-c-format
+msgid "Wake on LAN with &yast;"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:794
+#, no-c-format
+msgid ""
+"Start <menuchoice> <guimenu>&yast;</guimenu> <guimenu>Network Services</"
+"guimenu> <guimenu>WOL</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:800
+#, no-c-format
+msgid ""
+"Click <guimenu>Add</guimenu> and enter the host name and MAC address of the "
+"target system."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_boot.xml:806
+#, no-c-format
+msgid ""
+"To turn on this machine, select the appropriate entry and click "
+"<guimenu>Wake up</guimenu>."
+msgstr ""

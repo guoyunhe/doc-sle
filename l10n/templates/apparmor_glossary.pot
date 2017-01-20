@@ -1,0 +1,298 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: apparmor_glossary.xml:9
+#, no-c-format
+msgid "&aa; Glossary"
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:16
+#, no-c-format
+msgid "Abstraction"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:18
+#, no-c-format
+msgid "See <emphasis>profile foundation classes</emphasis> below."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:24
+#, no-c-format
+msgid "Apache"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:26
+#, no-c-format
+msgid ""
+"Apache is a freely-available Unix-based Web server. It is currently the most "
+"commonly used Web server on the Internet. Find more information about Apache "
+"at the Apache Web site at <link xlink:href=\"http://www.apache.org\"></link>."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:35
+#, no-c-format
+msgid "application fire-walling"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:37
+#, no-c-format
+msgid ""
+"&aa; confines applications and limits the actions they are permitted to "
+"take. It uses privilege confinement to prevent attackers from using "
+"malicious programs on the protected server and even using trusted "
+"applications in unintended ways."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:46
+#, no-c-format
+msgid "attack signature"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:48
+#, no-c-format
+msgid ""
+"Pattern in system or network activity that alerts of a possible virus or "
+"hacker attack. Intrusion detection systems might use attack signatures to "
+"distinguish between legitimate and potentially malicious activity."
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:54
+#, no-c-format
+msgid ""
+"By not relying on attack signatures, &aa; provides \"proactive\" instead of "
+"\"reactive\" defense from attacks. This is better because there is no window "
+"of vulnerability where the attack signature must be defined for &aa; as it "
+"does for products using attack signatures."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:63
+#, no-c-format
+msgid "<term>GUI</term>"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:65
+#, no-c-format
+msgid ""
+"Graphical user interface. Refers to a software front-end meant to provide an "
+"attractive and easy-to-use interface between a computer user and "
+"application. Its elements include windows, icons, buttons, cursors, and "
+"scrollbars."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:74
+#, no-c-format
+msgid "globbing"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:76
+#, no-c-format
+msgid ""
+"File name substitution. Instead of specifying explicit file name paths, you "
+"can use helper characters <literal>*</literal> (substitutes any number of "
+"characters except special ones such as <literal>/</literal> or <literal>?</"
+"literal>) and <literal>?</literal> (substitutes exactly one character) to "
+"address multiple files/directories at once. <literal>**</literal> is a "
+"special substitution that matches any file or directory below the current "
+"directory."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:88
+#, no-c-format
+msgid "<term>HIP</term>"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:90
+#, no-c-format
+msgid ""
+"Host intrusion prevention. Works with the operating system kernel to block "
+"abnormal application behavior in the expectation that the abnormal behavior "
+"represents an unknown attack. Blocks malicious packets on the host at the "
+"network level before they can <quote>hurt</quote> the application they "
+"target."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:100
+#, no-c-format
+msgid "mandatory access control"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:102
+#, no-c-format
+msgid ""
+"A means of restricting access to objects that is based on fixed security "
+"attributes assigned to users, files, and other objects. The controls are "
+"mandatory in the sense that they cannot be modified by users or their "
+"programs."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:111
+#, no-c-format
+msgid "profile"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:113
+#, no-c-format
+msgid ""
+"&aa; profile completely defines what system resources an individual "
+"application can access, and with what privileges."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:120
+#, no-c-format
+msgid "profile foundation classes"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:122
+#, no-c-format
+msgid ""
+"Profile building blocks needed for common application activities, such as "
+"DNS lookup and user authentication."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:129
+#, no-c-format
+msgid "<term>RPM</term>"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:131
+#, no-c-format
+msgid ""
+"The RPM Package Manager. An open packaging system available for anyone to "
+"use. It works on Red Hat Linux, &productname;, and other Linux and Unix "
+"systems. It is capable of installing, uninstalling, verifying, querying, and "
+"updating computer software packages. See <link xlink:href=\"http://www.rpm."
+"org/\"></link> for more information."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:141
+#, no-c-format
+msgid "<term>SSH</term>"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:143
+#, no-c-format
+msgid ""
+"Secure Shell. A service that allows you to access your server from a remote "
+"computer and issue text commands through a secure connection."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:150
+#, no-c-format
+msgid "streamlined access control"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:152
+#, no-c-format
+msgid ""
+"&aa; provides streamlined access control for network services by specifying "
+"which files each program is allowed to read, write, and execute. This "
+"ensures that each program does what it is supposed to do and nothing else."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:161
+#, no-c-format
+msgid "<term>URI</term>"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:163
+#, no-c-format
+msgid ""
+"Universal resource identifier. The generic term for all types of names and "
+"addresses that refer to objects on the World Wide Web. A URL is one kind of "
+"URI."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:171
+#, no-c-format
+msgid "<term>URL</term>"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:173
+#, no-c-format
+msgid ""
+"Uniform Resource Locator. The global address of documents and other "
+"resources on the Web."
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:177
+#, no-c-format
+msgid ""
+"The first part of the address indicates what protocol to use and the second "
+"part specifies the IP address or the domain name where the resource is "
+"located."
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:182
+#, no-c-format
+msgid ""
+"For example, when you visit <phrase os=\"sles;sled\"><literal>http://www."
+"suse.com</literal></phrase><phrase os=\"osuse\"><literal>http://www.opensuse."
+"org</literal></phrase>, you are using the HTTP protocol, as the beginning of "
+"the URL indicates."
+msgstr ""
+
+#. Tag: term
+#: apparmor_glossary.xml:191
+#, no-c-format
+msgid "vulnerabilities"
+msgstr ""
+
+#. Tag: para
+#: apparmor_glossary.xml:193
+#, no-c-format
+msgid ""
+"An aspect of a system or network that leaves it open to attack. "
+"Characteristics of computer systems that allow an individual to keep it from "
+"correctly operating or that allows unauthorized users to take control of the "
+"system. Design, administrative, or implementation weaknesses or flaws in "
+"hardware, firmware, or software. If exploited, a vulnerability could lead to "
+"an unacceptable impact in the form of unauthorized access to information or "
+"the disruption of critical processing."
+msgstr ""

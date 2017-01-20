@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: security_intro.xml:12
+#, no-c-format
+msgid "About This Guide"
+msgstr ""
+
+#. Tag: para
+#: security_intro.xml:19
+#, no-c-format
+msgid ""
+"This manual introduces the basic concepts of system security on "
+"&productname;. It covers extensive documentation about the authentication "
+"mechanisms available on Linux, such as NIS or LDAP. It deals with aspects of "
+"local security like access control lists, encryption and intrusion "
+"detection. In the network security part you learn how to secure computers "
+"with firewalls and masquerading, and how to set up virtual private networks "
+"(VPN). This manual shows how to use security software like &aa; (which lets "
+"you specify per program which files the program may read, write, and "
+"execute) or the auditing system that collects information about security-"
+"relevant events."
+msgstr ""
+
+#. Tag: para
+#: security_intro.xml:31
+#, no-c-format
+msgid ""
+"Many chapters in this manual contain links to additional documentation "
+"resources. These include additional documentation that is available on the "
+"system, and documentation available on the Internet."
+msgstr ""
+
+#. Tag: para
+#: security_intro.xml:36
+#, no-c-format
+msgid ""
+"For an overview of the documentation available for your product and the "
+"latest documentation updates, refer to <link os=\"sles;sled\" xlink:href="
+"\"http://www.suse.com/doc\"></link><link os=\"osuse\" xlink:href=\"https://"
+"doc.opensuse.org/\"></link> or to the following section."
+msgstr ""

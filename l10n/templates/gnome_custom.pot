@@ -1,0 +1,1154 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: gnome_custom.xml:8
+#, no-c-format
+msgid "Customizing Your Settings"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: gnome_custom.xml:10
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:15
+#, no-c-format
+msgid ""
+"You can change the way the &gnome; desktop looks and behaves to suit your "
+"own personal tastes and needs. Some possible changes of settings are:"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:21
+#, no-c-format
+msgid ""
+"Keyboard and mouse configuration, as described in <xref linkend=\"sec.gnome."
+"settings.hardware.keyboard\"/> and <xref linkend=\"sec.gnome.settings."
+"hardware.mouse\"/>"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:28
+#, no-c-format
+msgid ""
+"Desktop background, as described in <xref linkend=\"sec.gnome.settings.look."
+"deskback\"/>"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:34
+#, no-c-format
+msgid ""
+"Sounds, as described in <xref linkend=\"sec.gnome.settings.hardware.audio\"/>"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:39
+#, no-c-format
+msgid ""
+"These settings and others can be changed in the <guimenu>All Settings</"
+"guimenu> dialog."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:44
+#, no-c-format
+msgid "The &gnome; Settings Dialog"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:46
+#, no-c-format
+msgid ""
+"Whereas &yast; is a desktop-independent system-wide tool to configure most "
+"aspects of your product installation, the settings dialog is a &gnome; "
+"configuration tool. It focuses on look and feel, personal settings and "
+"preferences of your &gnome; desktop."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:53
+#, no-c-format
+msgid ""
+"To access the GNOME settings dialog, click <menuchoice> "
+"<guimenu>Applications</guimenu> <guimenu>System Tools</guimenu> "
+"<guimenu>Settings</guimenu> </menuchoice>. The dialog is divided into the "
+"following three categories:"
+msgstr ""
+
+#. Tag: guimenu
+#: gnome_custom.xml:62
+#, no-c-format
+msgid "<guimenu>Personal</guimenu>"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:65
+#, no-c-format
+msgid ""
+"From here, you can change the background of your desktop or of the lock "
+"screen, and configure language settings. For more information, see <xref "
+"linkend=\"sec.gnome.settings.personal\"/>."
+msgstr ""
+
+#. Tag: guimenu
+#: gnome_custom.xml:73
+#, no-c-format
+msgid "<guimenu>Hardware</guimenu>"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:76
+#, no-c-format
+msgid ""
+"Allows you to configure hardware components such as monitors, printers, "
+"mouses/touchpads, network adapters and sound devices. You can also change "
+"key combination settings and set up power-saving features. For more "
+"information, see <xref linkend=\"sec.gnome.settings.hardware\"/>."
+msgstr ""
+
+#. Tag: guimenu
+#: gnome_custom.xml:85
+#, no-c-format
+msgid "<guimenu>System</guimenu>"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:88
+#, no-c-format
+msgid ""
+"Lets you configure system settings such as date and time, whether to start "
+"software when inserting flash disks or whether you want to share your screen "
+"with others. You can also set up user accounts. If you want, you can also "
+"start &yast; from this screen, though it is also available separately from "
+"within the menu. For more information, see <xref linkend=\"sec.gnome."
+"settings.system\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:101
+#, no-c-format
+msgid "&gnome; Settings Dialog"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:112
+#, no-c-format
+msgid ""
+"To change some system-wide settings, the control center will prompt you for "
+"the <systemitem>root</systemitem> password and start &yast;. This is mostly "
+"the case for administrator settings (including most of the hardware, the "
+"graphical user interface, Internet access, security settings, user "
+"administration, software installation and system updates and information). "
+"Follow the instructions in &yast; to configure these settings. For "
+"information about using &yast;, refer to the integrated &yast; help texts or "
+"to the <phrase os=\"sles;sled\"><xref linkend=\"book.sle.deployment\"/></"
+"phrase><phrase os=\"osuse\"><xref linkend=\"book.opensuse.startup\"/></"
+"phrase>."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:126
+#, no-c-format
+msgid ""
+"This chapter focuses on individual settings you can change directly in the "
+"&gnome; settings dialog, without having to use &yast;."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:132
+#, no-c-format
+msgid "<title>Personal</title>"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:134
+#, no-c-format
+msgid ""
+"The following sections introduce examples of how to configure some personal "
+"aspects of your &gnome; desktop, like your languages used or desktop "
+"backgrounds."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:141
+#, no-c-format
+msgid "Changing the Desktop Background"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:142
+#, no-c-format
+msgid ""
+"The desktop background is the image or color that is applied to your "
+"desktop. You can also customize the image shown when the screen is locked."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:146
+#, no-c-format
+msgid "To change the desktop background or the lock screen:"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:151
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Applications</guimenu> <guimenu>System Tools</"
+"guimenu> <guimenu>Settings</guimenu> <guimenu>Background</guimenu> </"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:170
+#, no-c-format
+msgid "Click <guimenu>Background</guimenu> or <guimenu>Lock Screen</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:175
+#, no-c-format
+msgid ""
+"Click <guimenu>Wallpapers</guimenu>, <guimenu>Pictures</guimenu>, or "
+"<guimenu>Colors</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:179
+#, no-c-format
+msgid ""
+"Wallpapers are preconfigured images distributed with your system. Pictures "
+"are your own images from your <filename>Pictures</filename> directory "
+"(<filename>~/Pictures</filename>). Colors are predefined colors chosen by "
+"&gnome; developers."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:187
+#, no-c-format
+msgid "Choose an option from the list."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:192
+#, no-c-format
+msgid ""
+"When you are satisfied with your choice, click <guimenu>Select</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:200
+#, no-c-format
+msgid "Configuring Language Settings"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:201
+#, no-c-format
+msgid ""
+"&productname; can be configured to use any of several languages. The "
+"language setting determines the language of dialogs and menus and can also "
+"determine the keyboard and clock layout."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:206
+#, no-c-format
+msgid ""
+"To configure your language settings click <menuchoice> "
+"<guimenu>Applications</guimenu> <guimenu>System Tools</guimenu> "
+"<guimenu>Settings</guimenu> <guimenu>Region and Language</guimenu> </"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:212
+#, no-c-format
+msgid "Here you can choose:"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:217
+#, no-c-format
+msgid "Interface language."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:222
+#, no-c-format
+msgid "Date and number formats, currency and related options."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:227
+#, no-c-format
+msgid ""
+"Input sources (keyboard layout). For non-alphabetic languages there can be "
+"additional settings."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:236
+#, no-c-format
+msgid "<title>Hardware</title>"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:238
+#, no-c-format
+msgid ""
+"In the following sections you will find examples of how to configure some "
+"hardware aspects of your &gnome; desktop, including keyboard or mouse "
+"preferences, handling of removable drives (and other media) or screen "
+"resolution."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:246
+#, no-c-format
+msgid "Configuring Bluetooth Settings"
+msgstr ""
+
+#. Tag: remark
+#: gnome_custom.xml:248
+#, no-c-format
+msgid "taroth 2016-05-25: FIXME - need to check this on a laptop"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:248
+#, no-c-format
+msgid ""
+"The Bluetooth module lets you set the visibility of your machine over "
+"Bluetooth and connect to available Bluetooth devices. To configure Bluetooth "
+"connectivity, follow these steps:"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:255
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Applications</guimenu> <guimenu>System Tools</"
+"guimenu> <guimenu>Settings</guimenu> <guimenu>Bluetooth</guimenu> </"
+"menuchoice> to open the Bluetooth settings module."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:262
+#, no-c-format
+msgid "To use Bluetooth, turn the <guimenu>Bluetooth</guimenu> switch on."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:267
+#, no-c-format
+msgid ""
+"To make your computer visible over Bluetooth, turn the <guimenu>Visibility</"
+"guimenu> switch on. The computer will start searching for other visible "
+"Bluetooth devices in the vicinity and display any found devices in the "
+"<guimenu>Devices</guimenu> list. At first, the list may be empty."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:275
+#, no-c-format
+msgid "Temporary Visibility"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:276
+#, no-c-format
+msgid ""
+"The <guimenu>Visibility</guimenu> switch is meant to be used only "
+"temporarily. You only need to turn it on for the initial setup of a "
+"connection to a Bluetooth device. After the connection has been established, "
+"turn off the switch."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:285
+#, no-c-format
+msgid ""
+"On the device you want to connect, turn on Bluetooth connectivity and "
+"visibility, too."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:291
+#, no-c-format
+msgid ""
+"If the desired device has been found and is shown in the list, click it to "
+"establish a connection to it."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:295
+#, no-c-format
+msgid "You will be asked whether the PINs of the two devices match."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:300
+#, no-c-format
+msgid ""
+"If the PINs match, confirm this on <emphasis>both</emphasis> your computer "
+"and the device."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:304
+#, no-c-format
+msgid ""
+"Both are now paired. On your computer, the device in the list is shown as "
+"<guimenu>Connected</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:320
+#, no-c-format
+msgid ""
+"Depending on the device type, you can now either see it as a storage device "
+"in &nautilus;, set a volume for it in the Sound settings or other things."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:327
+#, no-c-format
+msgid ""
+"To connect to a paired Bluetooth device, select the device in the list. In "
+"the dialog that appears, turn the <guimenu>Connection</guimenu> switch on. "
+"You can send files to the connected device by using the <guimenu>Send Files</"
+"guimenu> button. If you are connected to a device such as a mobile phone, "
+"you can use it as a network device by activating the appropriate option."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:335
+#, no-c-format
+msgid ""
+"To remove a connected device from the list on your computer, click "
+"<guimenu>Remove Device</guimenu> and confirm your choice. To completely "
+"remove the pairing, you also need to do so on your device."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:343
+#, no-c-format
+msgid "Configuring Power Settings"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:346
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Applications</guimenu> <guimenu>System Tools</"
+"guimenu> <guimenu>Settings</guimenu> <guimenu>Power</guimenu> </menuchoice> "
+"to open the Power settings module."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:353
+#, no-c-format
+msgid ""
+"In the upper part of the dialog, you can see the current state of the "
+"battery."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:359
+#, no-c-format
+msgid ""
+"In the <guimenu>Power Saving</guimenu> section of the dialog, set the "
+"<guimenu>Screen Brightness</guimenu> to conserve power. You can also set "
+"whether to dim the screen after a period of inactivity and set the time "
+"interval. You can also set whether to turn off wireless networking after the "
+"period of inactivity."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:368
+#, no-c-format
+msgid ""
+"In the <guimenu>Suspend and Power Button</guimenu> section of the dialog, "
+"set the <guimenu>Automatic Suspend</guimenu>. When you click it, a separate "
+"dialog opens."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:373
+#, no-c-format
+msgid ""
+"In it, you can turn on automatic suspending and associated time intervals. "
+"If you are using a computer with a battery, you can set these separately for "
+"computer running on battery power or plugged in."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:378
+#, no-c-format
+msgid ""
+"You can also set the action performed when the power button is pressed. "
+"Choose <guimenu>Hibernate</guimenu> to use a mode where the computer turns "
+"off completely but saves your running session to the hard disk. "
+"Alternatively, choose <guimenu>Suspend</guimenu> or <guimenu>Nothing</"
+"guimenu>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:390
+#, no-c-format
+msgid "Modifying Keyboard Shortcuts"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:391
+#, no-c-format
+msgid ""
+"To modify keyboard shortcuts click <menuchoice> <guimenu>Applications</"
+"guimenu> <guimenu>System Tools</guimenu> <guimenu>Settings</guimenu> "
+"<guimenu>Keyboard</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:404
+#, no-c-format
+msgid "Keyboard Dialog"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:414
+#, no-c-format
+msgid ""
+"The <guimenu>Keyboard</guimenu> dialog shows the keyboard shortcuts that are "
+"configured for your system. Click the categories on the right to view the "
+"current shortcuts."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:419
+#, no-c-format
+msgid ""
+"To edit a key combination, first click the row. To set a new key "
+"combination, press the keys. To disable a shortcut, press <keycap function="
+"\"backspace\"></keycap> instead."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:443
+#, no-c-format
+msgid ""
+"To configure keyboard accessibility options, refer to <xref linkend=\"sec."
+"general.accessibility.mobility\"/>. To configure your keyboard layout, refer "
+"to <xref linkend=\"sec.gnome.settings.lang\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:451
+#, no-c-format
+msgid "Configuring the Mouse and Touchpad"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:452
+#, no-c-format
+msgid ""
+"To modify mouse and touchpad options, click <menuchoice> "
+"<guimenu>Applications</guimenu> <guimenu>System Tools</guimenu> "
+"<guimenu>Settings</guimenu> <guimenu>Mouse and Touchpad</guimenu> </"
+"menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:459
+#, no-c-format
+msgid "Mouse and Touchpad Settings Dialog"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:471
+#, no-c-format
+msgid ""
+"In the <guimenu>General</guimenu> section of the dialog, you can set the "
+"<guimenu>Primary button</guimenu> orientation (left or right)."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:479
+#, no-c-format
+msgid ""
+"In the <guimenu>Mouse</guimenu> section of the dialog, use <guimenu>Mouse "
+"Speed</guimenu> to adjust the sensitivity of the mouse pointer."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:485
+#, no-c-format
+msgid ""
+"In the <guimenu>Touchpad</guimenu> section of the dialog, you can turn the "
+"touchpad on and off. Use <guimenu>Touchpad Speed</guimenu> to adjust the "
+"sensitivity of the touchpad pointer. You can also disable the touchpad while "
+"typing and enable clicks by tapping the touchpad."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:493
+#, no-c-format
+msgid ""
+"To test your settings, click <guimenu>Test Your Settings</guimenu> and try "
+"the pointing device."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:500
+#, no-c-format
+msgid ""
+"For configuration of mouse accessibility options, refer to the <xref linkend="
+"\"sec.general.accessibility.mobility\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:507
+#, no-c-format
+msgid "Installing and Configuring Printers"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:508
+#, no-c-format
+msgid ""
+"The <guimenu>Printers</guimenu> module lets you connect to any available "
+"local or remote CUPS server and configure printers."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:512
+#, no-c-format
+msgid ""
+"To start the Printers module, click <menuchoice> <guimenu>Applications</"
+"guimenu> <guimenu>System Tools</guimenu> <guimenu>Settings</guimenu> "
+"<guimenu>Printers</guimenu> </menuchoice>. For detailed information, refer "
+"to <xref linkend=\"cha.gnome.print\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:521
+#, no-c-format
+msgid "Configuring Screens"
+msgstr ""
+
+#. Tag: remark
+#: gnome_custom.xml:523 gnome_custom.xml:674
+#, no-c-format
+msgid ""
+"taroth 2016-05-25: FIXME - would need to check this on bare metal, not on a "
+"VM"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:524
+#, no-c-format
+msgid ""
+"To specify resolution and orientation for your screen or to configure "
+"multiple screens, click <menuchoice> <guimenu>Applications</guimenu> "
+"<guimenu>System Tools</guimenu> <guimenu>Settings</guimenu> "
+"<guimenu>Displays</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:531
+#, no-c-format
+msgid "Changing the Settings for a Monitor"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:533
+#, no-c-format
+msgid ""
+"To find the right monitor, look for the numbers displayed in the upper left "
+"corner of all monitors after you have opened the <guimenu>Display</guimenu> "
+"dialog. To set options for a monitor, click the list item of the monitor. A "
+"new dialog appears."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:541
+#, no-c-format
+msgid ""
+"If multiple monitors are attached to the computer, the left part of the "
+"dialog will allow you to choose how to use the monitor. You can choose "
+"between:"
+msgstr ""
+
+#. Tag: guimenu
+#: gnome_custom.xml:548
+#, no-c-format
+msgid "Primary"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:551
+#, no-c-format
+msgid "The screen that shows the panel and important messages."
+msgstr ""
+
+#. Tag: guimenu
+#: gnome_custom.xml:557
+#, no-c-format
+msgid "Secondary Display"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:562
+#, no-c-format
+msgid "A monitor that expands the desktop of the primary monitor."
+msgstr ""
+
+#. Tag: guimenu
+#: gnome_custom.xml:568
+#, no-c-format
+msgid "Mirror"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:571
+#, no-c-format
+msgid ""
+"A monitor that mirrors the image on the primary monitor. In terms of "
+"resolution, the lowest common denominator will be used."
+msgstr ""
+
+#. Tag: guimenu
+#: gnome_custom.xml:578
+#, no-c-format
+msgid "Turn Off"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:581
+#, no-c-format
+msgid "A screen that is not used."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:587
+#, no-c-format
+msgid ""
+"To rotate the displayed image, use the buttons with the arrows pointing left "
+"and right. To mirror the displayed image, use the button with the double "
+"arrow icon."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:592
+#, no-c-format
+msgid ""
+"You can set a different resolution by changing the value next to "
+"<guimenu>Resolution</guimenu>. Not all resolutions provide a sharp and "
+"unstretched image. To find the best resolution for your monitor, refer to "
+"its manual."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:600 gnome_custom.xml:653
+#, no-c-format
+msgid "When you are done, click <guimenu>Apply</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:603
+#, no-c-format
+msgid ""
+"The monitors will now readjust. This can take multiple seconds during which "
+"the screen can be black or distorted."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:607
+#, no-c-format
+msgid "Afterward, a confirmation dialog will appear."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:612 gnome_custom.xml:658
+#, no-c-format
+msgid ""
+"If the configuration looks correct, click <guimenu>Keep Changes</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:616 gnome_custom.xml:662
+#, no-c-format
+msgid ""
+"If the configuration is not what you hoped for, click <guimenu>Revert "
+"Settings</guimenu> or wait for 20 seconds. The changes will then be reverted."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:624
+#, no-c-format
+msgid "Monitor Resolution Settings Dialog"
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:635
+#, no-c-format
+msgid "Changing the Arrangement of Multiple Monitors"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:636
+#, no-c-format
+msgid ""
+"If you are using multiple screens, set up how they are arranged, so you can "
+"use the mouse pointer properly across monitors."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:641
+#, no-c-format
+msgid "Click <guimenu>Arrange Combined Displays</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:646
+#, no-c-format
+msgid ""
+"To find the right monitor, look for the numbers displayed in the upper left "
+"corner of all monitors. Click and drag the monitor image around to move it."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:672 gnome_custom.xml:686
+#, no-c-format
+msgid "Configuring Sound Settings"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:675
+#, no-c-format
+msgid ""
+"The <guimenu>Sound</guimenu> tool lets you manage sound devices and set the "
+"sound effects. In the top part of the dialog, you can select the general "
+"output volume or turn the sound off completely."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:680
+#, no-c-format
+msgid ""
+"To open the sound settings, click <menuchoice><guimenu>Applications</"
+"guimenu><guimenu>System Tools</guimenu> <guimenu>Settings</"
+"guimenu><guimenu>Sound</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:697
+#, no-c-format
+msgid "Configuring Sound Devices"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:698
+#, no-c-format
+msgid ""
+"Use the <guimenu>Output</guimenu> tab to select the device for sound output. "
+"Below the list, choose the sound device setting you prefer, for example "
+"balance."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:703
+#, no-c-format
+msgid ""
+"Use the <guimenu>Input</guimenu> tab to set the input device volume or to "
+"mute the input temporarily. If you have more than one sound device, you can "
+"also select a default device for audio input in the <guimenu>Choose a device "
+"for sound input</guimenu> list."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:711
+#, no-c-format
+msgid "Configuring Sound Effects"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:712
+#, no-c-format
+msgid ""
+"Use the <guimenu>Sound Effects</guimenu> tab to configure whether and how "
+"you want sound to be played when message boxes appear."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:716
+#, no-c-format
+msgid ""
+"Specify the volume at which the sound effects will be played under "
+"<guimenu>Alert volume</guimenu>. You can also turn the effects on and off."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:720
+#, no-c-format
+msgid "Select the <guimenu>Alert Sound</guimenu> to use."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:727
+#, no-c-format
+msgid "Networking"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:728
+#, no-c-format
+msgid ""
+"To set up networking options, click <menuchoice><guimenu>Applications</"
+"guimenu><guimenu>System Tools</guimenu> <guimenu>Settings</"
+"guimenu><guimenu>Network</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:733
+#, no-c-format
+msgid ""
+"In the appearing dialog, you can configure wired or wireless connections and "
+"proxies and VPNs. <phrase os=\"sled\">If you are unsure which network "
+"parameters to use, refer to your system administrator.</phrase>"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:738
+#, no-c-format
+msgid ""
+"To learn more about setting up network connections, see <xref linkend=\"cha."
+"nm\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:745
+#, no-c-format
+msgid "<title>System</title>"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:747
+#, no-c-format
+msgid ""
+"In the following sections, you will find examples of how to configure some "
+"system aspects of your &gnome; desktop. These include preferred "
+"applications, changing your user password, and session sharing preferences."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:753
+#, no-c-format
+msgid ""
+"To learn more about configuring assistive technologies, see <xref linkend="
+"\"cha.gnome.accessibility\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:759
+#, no-c-format
+msgid "Changing Your Password"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:760
+#, no-c-format
+msgid ""
+"For security reasons, it is a good idea to change your login password from "
+"time to time. To change your password:"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:766
+#, no-c-format
+msgid ""
+"Click <menuchoice><guimenu>Applications</guimenu><guimenu>System Tools</"
+"guimenu> <guimenu>Settings</guimenu><guimenu>Users</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:773
+#, no-c-format
+msgid "Click the button labeled with dots next to <guimenu>Password</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:778
+#, no-c-format
+msgid "In the first text box, type your current password."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:783
+#, no-c-format
+msgid "In the next text box, type a new password."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:786
+#, no-c-format
+msgid ""
+"You can also click the cog wheel icon at the end of the text box to generate "
+"a random password."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:792
+#, no-c-format
+msgid "Confirm your new password by typing it again in the last text box."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:797
+#, no-c-format
+msgid "Click <guimenu>Change</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:805
+#, no-c-format
+msgid "Setting Preferred Applications"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:808
+#, no-c-format
+msgid ""
+"To change the default application for various common tasks such as browsing "
+"the Internet, sending mails or playing multimedia files, click <menuchoice> "
+"<guimenu>Applications</guimenu> <guimenu>System Tools</guimenu> "
+"<guimenu>Settings</guimenu><guimenu>Details</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:816
+#, no-c-format
+msgid "Preferred Applications"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:828
+#, no-c-format
+msgid "Click <guimenu>Default Applications</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:833
+#, no-c-format
+msgid ""
+"Select one of the available applications from the drop-down box. You can "
+"choose an application to handle Web, mail, calendar, music, videos or "
+"photographs."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:843
+#, no-c-format
+msgid "Setting Session Sharing Preferences"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:844
+#, no-c-format
+msgid ""
+"To open a configuration dialog for sharing a &gnome; desktop session between "
+"multiple users and set session-sharing preferences, click "
+"<menuchoice><guimenu>Applications</guimenu><guimenu>System Tools</guimenu> "
+"<guimenu>Settings</guimenu> <guimenu>Sharing</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:851
+#, no-c-format
+msgid "Sharing Desktop Sessions Affects System Security"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:852
+#, no-c-format
+msgid ""
+"Sharing desktop sessions can be a security risk. Use the restriction options "
+"available."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:857
+#, no-c-format
+msgid ""
+"Before you can share anything, you need to turn on the switch in the upper "
+"part of the dialog. The switch also helps you if you quickly need to disable "
+"all sharing options."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:864
+#, no-c-format
+msgid ""
+"To share your public directory over the network, click <guimenu>Personal "
+"File Sharing</guimenu> and turn on <guimenu>Share Public Folder On This "
+"Network</guimenu>. You can also set a password."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:871
+#, no-c-format
+msgid ""
+"To share your desktop session with other users, click <guimenu>Screen "
+"Sharing</guimenu> and activate <guimenu>Allow Remote Control</guimenu>. To "
+"allow other users to control your screen, activate also <guimenu>Remote "
+"Control</guimenu>. You can also set a password."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:879
+#, no-c-format
+msgid "To enable logging in via SSH, click <guimenu>Remote Login</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:884
+#, no-c-format
+msgid ""
+"All the sharing screens contain an address which you can give to other "
+"users, so they can reach you. To copy a sharing address, click it and select "
+"<guimenu>Copy</guimenu>. You can then paste it into an e-mail or messaging "
+"software."
+msgstr ""
+
+#. Tag: title
+#: gnome_custom.xml:918
+#, no-c-format
+msgid "Configuring Administrative Settings with &yast;"
+msgstr ""
+
+#. Tag: para
+#: gnome_custom.xml:919
+#, no-c-format
+msgid ""
+"For your convenience, &yast; is available from the GNOME Settings as well as "
+"from the Applications menu. For information about using &yast;, refer to "
+"<phrase os=\"sles;sled\"><xref linkend=\"book.sle.deployment\"/></"
+"phrase><phrase os=\"osuse\"><xref linkend=\"book.opensuse.startup\"/></"
+"phrase>."
+msgstr ""

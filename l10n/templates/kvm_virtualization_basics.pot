@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: kvm_virtualization_basics.xml:9
+#, no-c-format
+msgid "Introduction to &kvm; Virtualization"
+msgstr ""
+
+#. Tag: title
+#: kvm_virtualization_basics.xml:18
+#, no-c-format
+msgid "Basic Components"
+msgstr ""
+
+#. Tag: para
+#: kvm_virtualization_basics.xml:20
+#, no-c-format
+msgid ""
+"&kvm; is a full virtualization solution for the &x86-64; and the &zseries; "
+"architectures supporting hardware virtualization."
+msgstr ""
+
+#. Tag: para
+#: kvm_virtualization_basics.xml:25
+#, no-c-format
+msgid ""
+"&vmguest;s (virtual machines), virtual storage, and virtual networks can be "
+"managed with &qemu; tools directly, or with the &libvirt;-based stack. The "
+"&qemu; tools include <command>qemu-system-ARCH</command>, the &qemu; "
+"monitor, <command>qemu-img</command>, and <command>qemu-ndb</command>. A "
+"&libvirt;-based stack includes &libvirt; itself, along with &libvirt;-based "
+"applications such as <command>virsh</command>, <command>virt-manager</"
+"command>, <command>virt-install</command>, and <command>virt-viewer</"
+"command>."
+msgstr ""
+
+#. Tag: title
+#: kvm_virtualization_basics.xml:38 kvm_virtualization_basics.xml:68
+#, no-c-format
+msgid "&kvm; Virtualization Architecture"
+msgstr ""
+
+#. Tag: para
+#: kvm_virtualization_basics.xml:40
+#, no-c-format
+msgid "This full virtualization solution consists of two main components:"
+msgstr ""
+
+#. Tag: para
+#: kvm_virtualization_basics.xml:45
+#, no-c-format
+msgid ""
+"A set of Kernel modules<phrase condition=\"kvm4x86\"> (<systemitem>kvm.ko</"
+"systemitem>, <systemitem>kvm-intel.ko</systemitem>, and <systemitem>kvm-amd."
+"ko</systemitem>)</phrase> that provides the core virtualization "
+"infrastructure and processor-specific drivers."
+msgstr ""
+
+#. Tag: para
+#: kvm_virtualization_basics.xml:53
+#, no-c-format
+msgid ""
+"A user space program (<systemitem class=\"resource\">qemu-system-ARCH</"
+"systemitem>) that provides emulation for virtual devices and control "
+"mechanisms to manage &vmguest;s (virtual machines)."
+msgstr ""
+
+#. Tag: para
+#: kvm_virtualization_basics.xml:61
+#, no-c-format
+msgid ""
+"The term &kvm; more properly refers to the Kernel level virtualization "
+"functionality, but is in practice more commonly used to refer to the user "
+"space component."
+msgstr ""
+
+#. Tag: title
+#: kvm_virtualization_basics.xml:80
+#, no-c-format
+msgid "Hyper-V Emulation Support"
+msgstr ""
+
+#. Tag: para
+#: kvm_virtualization_basics.xml:81
+#, no-c-format
+msgid ""
+"QEMU can provide certain Hyper-V hypercalls for Windows* guests to partly "
+"emulate a Hyper-V environment. This can be used to achieve better behavior "
+"for Windows* guests that are Hyper-V enabled."
+msgstr ""

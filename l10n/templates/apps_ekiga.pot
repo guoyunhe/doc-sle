@@ -1,0 +1,758 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: apps_ekiga.xml:11
+#, no-c-format
+msgid "Ekiga: Using Voice over IP"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:14
+#, no-c-format
+msgid ""
+"Ekiga is an application you can use for making phone calls via Voice over IP "
+"(VoIP), for video conferencing and for instant messaging."
+msgstr ""
+
+#. Tag: dm:docmanager
+#: apps_ekiga.xml:19
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: apps_ekiga.xml:24
+#, no-c-format
+msgid "voice over IP"
+msgstr ""
+
+#. Tag: primary
+#: apps_ekiga.xml:25
+#, no-c-format
+msgid "applications"
+msgstr ""
+
+#. Tag: secondary
+#: apps_ekiga.xml:26
+#, no-c-format
+msgid "network"
+msgstr ""
+
+#. Tag: tertiary
+#: apps_ekiga.xml:27
+#, no-c-format
+msgid "<tertiary>Ekiga</tertiary>"
+msgstr ""
+
+#. Tag: primary
+#: apps_ekiga.xml:28 apps_ekiga.xml:438
+#, no-c-format
+msgid "<primary>Ekiga</primary>"
+msgstr ""
+
+#. Tag: title
+#: apps_ekiga.xml:30
+#, no-c-format
+msgid "Ekiga May Not Be Installed"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:31
+#, no-c-format
+msgid ""
+"Before proceeding, make sure that the package <package>ekiga</package> is "
+"installed."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:37
+#, no-c-format
+msgid "Before starting, make sure that the following requirements are met:"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:42
+#, no-c-format
+msgid "Your sound card is properly configured."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:47
+#, no-c-format
+msgid "A headset or a microphone and speakers are connected to your computer."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:52
+#, no-c-format
+msgid ""
+"For dialing in to regular phone networks, a SIP account is required. SIP "
+"(<emphasis>Signaling protocol for Internet Telephony</emphasis>) is the "
+"protocol used to establish sessions for audio and video conferencing or call "
+"forwarding."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:58
+#, no-c-format
+msgid ""
+"There are many VoIP providers all over the world. One provider is the Ekiga "
+"project itself, go to <link xlink:href=\"https://ekiga.im\"></link> to learn "
+"more."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:64
+#, no-c-format
+msgid "For video conferencing: A Web cam is connected to your computer."
+msgstr ""
+
+#. Tag: title
+#: apps_ekiga.xml:70
+#, no-c-format
+msgid "Starting Ekiga"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:72
+#, no-c-format
+msgid ""
+"Start Ekiga by clicking <menuchoice><guimenu>Applications</guimenu> "
+"<guimenu>Internet</guimenu> <guimenu>Ekiga Softphone</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: apps_ekiga.xml:78
+#, no-c-format
+msgid "Configuring Ekiga"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:80
+#, no-c-format
+msgid ""
+"On first start, Ekiga opens a configuration assistant that requests all data "
+"needed to configure Ekiga. Proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:87
+#, no-c-format
+msgid "Click <guimenu>Forward</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:92
+#, no-c-format
+msgid ""
+"Enter your full name (name and surname). Click <guimenu>Forward</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:97
+#, no-c-format
+msgid ""
+"Enter your <literal>ekiga.net</literal> account data or choose not to "
+"register with <link xlink:href=\"http://www.ekiga.net\"></link>. Click "
+"<guimenu>Forward</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:104
+#, no-c-format
+msgid ""
+"Enter your Ekiga Call Out Account data or choose not to register with <link "
+"xlink:href=\"http://www.ekiga.net\"></link>. Click <guimenu>Forward</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:111
+#, no-c-format
+msgid "Set your connection type and speed. Click <guimenu>Forward</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:123
+#, no-c-format
+msgid ""
+"Configure the audio devices to use by choosing the audio ringing, output and "
+"input device driver. In general, you can keep the <guimenu>Default</guimenu> "
+"setting. Click <guimenu>Forward</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:130
+#, no-c-format
+msgid ""
+"Choose a video input device, if available. Click <guimenu>Forward</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:136
+#, no-c-format
+msgid "Check the summary of your settings and apply them."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:141
+#, no-c-format
+msgid ""
+"If registration fails after making changes to your configuration, restart "
+"Ekiga."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:148
+#, no-c-format
+msgid ""
+"Ekiga allows you to maintain multiple accounts. To configure an additional "
+"account, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:155
+#, no-c-format
+msgid ""
+"Open <menuchoice> <guimenu>Edit</guimenu> <guimenu>Accounts</guimenu></"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:161
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Accounts</guimenu> <guimenu>Add &lt;account "
+"type&gt;</guimenu></menuchoice>. If you are unsure, select <guimenu>Add a "
+"SIP Account</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:168
+#, no-c-format
+msgid ""
+"Enter the <guimenu>Registrar</guimenu> to which you have registered. This is "
+"usually an IP address or a host name that will be given to you by your "
+"Internet Telephony Service Provider. Enter <guimenu>User</guimenu>, and "
+"<guimenu>Password</guimenu> according to the data provided by your provider."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:177
+#, no-c-format
+msgid ""
+"Make sure <guimenu>Enable account</guimenu> is activated and leave the "
+"configuration dialog with <guimenu>OK</guimenu>. The account is displayed in "
+"the Ekiga main window, including its <guimenu>Status</guimenu>, which should "
+"change to <literal>Registered</literal>."
+msgstr ""
+
+#. Tag: title
+#: apps_ekiga.xml:187
+#, no-c-format
+msgid "The Ekiga User Interface"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:189
+#, no-c-format
+msgid ""
+"The user interface has different modes. To switch between views, use the "
+"toolbar. The first mode is <guimenu>Contacts</guimenu>, the second is "
+"<guimenu>Dialpad</guimenu> and the last one is <guimenu>Call History</"
+"guimenu>. Click the camera icon to open the <guimenu>Call Window</guimenu>. "
+"It displays images from your local Web cam (or from a remote Web cam during "
+"a call)."
+msgstr ""
+
+#. Tag: title
+#: apps_ekiga.xml:199
+#, no-c-format
+msgid "Ekiga User Interface"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:210
+#, no-c-format
+msgid ""
+"By default, Ekiga opens in the <guimenu>Contacts</guimenu> mode. This view "
+"shows you a local address book which lets you quickly open connections to "
+"often-used numbers."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:216
+#, no-c-format
+msgid ""
+"Many of the functions of Ekiga are available with key combinations. <xref "
+"linkend=\"tab.ekiga.shortcut\"/> summarizes the most important ones."
+msgstr ""
+
+#. Tag: title
+#: apps_ekiga.xml:222
+#, no-c-format
+msgid "Key Combinations for Ekiga"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:227
+#, no-c-format
+msgid "Key Combination"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:232
+#, no-c-format
+msgid "Description"
+msgstr ""
+
+#. Tag: keycombo
+#: apps_ekiga.xml:242
+#, no-c-format
+msgid "<keycap function=\"control\"></keycap><keycap>O</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:246
+#, no-c-format
+msgid "Initiate a call with the current number."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:258
+#, no-c-format
+msgid "Hang up."
+msgstr ""
+
+#. Tag: keycombo
+#: apps_ekiga.xml:266
+#, no-c-format
+msgid "<keycap function=\"control\"></keycap><keycap>N</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:270
+#, no-c-format
+msgid "Add a contact to your address book."
+msgstr ""
+
+#. Tag: keycombo
+#: apps_ekiga.xml:278
+#, no-c-format
+msgid "<keycap function=\"control\"></keycap><keycap>B</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:282
+#, no-c-format
+msgid "Open the <guimenu>Address Book</guimenu> dialog."
+msgstr ""
+
+#. Tag: keycap
+#: apps_ekiga.xml:290
+#, no-c-format
+msgid "<keycap>H</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:294
+#, no-c-format
+msgid "Hold the current call."
+msgstr ""
+
+#. Tag: keycap
+#: apps_ekiga.xml:302
+#, no-c-format
+msgid "<keycap>T</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:306
+#, no-c-format
+msgid "Transfer the current call to another party."
+msgstr ""
+
+#. Tag: keycap
+#: apps_ekiga.xml:314
+#, no-c-format
+msgid "<keycap>M</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:318
+#, no-c-format
+msgid "Suspend the audio stream of the current call."
+msgstr ""
+
+#. Tag: keycap
+#: apps_ekiga.xml:326
+#, no-c-format
+msgid "<keycap>P</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:330
+#, no-c-format
+msgid "Suspend the video stream of the current call."
+msgstr ""
+
+#. Tag: keycombo
+#: apps_ekiga.xml:338
+#, no-c-format
+msgid "<keycap function=\"control\"></keycap><keycap>W</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:342
+#, no-c-format
+msgid "Close the Ekiga user interface."
+msgstr ""
+
+#. Tag: keycombo
+#: apps_ekiga.xml:350
+#, no-c-format
+msgid "<keycap function=\"control\"></keycap><keycap>Q</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:354
+#, no-c-format
+msgid "Quit Ekiga."
+msgstr ""
+
+#. Tag: keycombo
+#: apps_ekiga.xml:362
+#, no-c-format
+msgid "<keycap function=\"control\"></keycap><keycap>E</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:366
+#, no-c-format
+msgid "Start the account manager."
+msgstr ""
+
+#. Tag: keycombo
+#: apps_ekiga.xml:374
+#, no-c-format
+msgid "<keycap function=\"control\"></keycap><keycap>J</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:378
+#, no-c-format
+msgid "Activate <guimenu>Call Panel</guimenu> on the main user interface."
+msgstr ""
+
+#. Tag: keycombo
+#: apps_ekiga.xml:386
+#, no-c-format
+msgid "<keycap function=\"control\"></keycap><keycap>+</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:390
+#, no-c-format
+msgid "Zoom in to the picture from the Web cam."
+msgstr ""
+
+#. Tag: keycombo
+#: apps_ekiga.xml:398
+#, no-c-format
+msgid "<keycap function=\"control\"></keycap><keycap>-</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:402
+#, no-c-format
+msgid "Zoom out on the picture from the Web cam."
+msgstr ""
+
+#. Tag: keycombo
+#: apps_ekiga.xml:410
+#, no-c-format
+msgid "<keycap function=\"control\"></keycap><keycap>0</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:414
+#, no-c-format
+msgid "Return to the normal size of the Web cam display."
+msgstr ""
+
+#. Tag: keycap
+#: apps_ekiga.xml:422
+#, no-c-format
+msgid "<keycap>F11</keycap>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:426
+#, no-c-format
+msgid "Use full screen for the Web cam."
+msgstr ""
+
+#. Tag: title
+#: apps_ekiga.xml:436
+#, no-c-format
+msgid "Making a Call"
+msgstr ""
+
+#. Tag: secondary
+#: apps_ekiga.xml:440
+#, no-c-format
+msgid "calling"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:442
+#, no-c-format
+msgid "After Ekiga is properly configured, making a call is easy."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:448
+#, no-c-format
+msgid "Switch to the <guimenu>Dialpad</guimenu> mode."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:453
+#, no-c-format
+msgid ""
+"Enter the SIP address of the party to call at the bottom of the window. The "
+"address should look like:"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:459
+#, no-c-format
+msgid ""
+"for direct local calls: <literal>sip:username@domainname</literal> or "
+"<literal>username@hostname</literal>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:465
+#, no-c-format
+msgid ""
+"<literal>sip:username@domainname</literal> or <literal>userid@sipserver</"
+"literal>"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:479
+#, no-c-format
+msgid ""
+"Click <guimenu>Call</guimenu> or press <keycombo><keycap function=\"control"
+"\"></keycap><keycap>O</keycap></keycombo> and wait for the other party to "
+"pick up the phone."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:486
+#, no-c-format
+msgid ""
+"To end the call, click <guimenu>Hang up</guimenu> or press <keycap function="
+"\"escape\"></keycap>."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:493
+#, no-c-format
+msgid ""
+"If you need to tweak the sound parameters, click <menuchoice><guimenu>Edit</"
+"guimenu><guimenu>Preferences</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: apps_ekiga.xml:500
+#, no-c-format
+msgid "Answering a Call"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:502
+#, no-c-format
+msgid ""
+"Ekiga can receive calls in two different ways. First, it can be called "
+"directly with <literal>sip:user@host</literal>, or via SIP provider. Most "
+"SIP providers enable you to receive calls from a normal land-line to your "
+"VoIP account. Depending on the mode in which you use Ekiga, there are "
+"several ways in which you are alerted to an incoming call:"
+msgstr ""
+
+#. Tag: term
+#: apps_ekiga.xml:512
+#, no-c-format
+msgid "Normal Application"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:514
+#, no-c-format
+msgid ""
+"Incoming calls can only be received and answered if Ekiga is already "
+"started. You can hear the ring sound on your headset or your speakers. If "
+"Ekiga is not started, the call cannot be received."
+msgstr ""
+
+#. Tag: term
+#: apps_ekiga.xml:522
+#, no-c-format
+msgid "Panel Applet"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:524
+#, no-c-format
+msgid ""
+"Normally, the Ekiga panel applet runs silently without giving any notice of "
+"its existence. This changes when a call comes in. The main window of Ekiga "
+"opens and you hear a ringing sound on your headset or speakers."
+msgstr ""
+
+#. Tag: remark
+#: apps_ekiga.xml:529
+#, no-c-format
+msgid ""
+"Is this really still true? I see absolutely no trace of a panel icon in "
+"GNOME Shell. (Haven't tried receiving a call, though.) However, when closing "
+"the window, Ekiga still seems to be running. - sknorr, 2015-09-23"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:538
+#, no-c-format
+msgid ""
+"Once you have noticed an incoming call, click <guimenu>Accept</guimenu> to "
+"answer the call then start talking. If you do not want to accept this call, "
+"click <guimenu>Reject</guimenu>. It is also possible to transfer the call to "
+"another SIP address."
+msgstr ""
+
+#. Tag: title
+#: apps_ekiga.xml:546
+#, no-c-format
+msgid "Using the Address Book"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:548
+#, no-c-format
+msgid ""
+"Ekiga can manage your SIP contacts. All of the contacts are displayed in the "
+"<guimenu>Contacts</guimenu> tab, shown in the main window after start-up. To "
+"add a contact or a new contact group, select <menuchoice><guimenu>Chat</"
+"guimenu><guimenu>Add Contact</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:556
+#, no-c-format
+msgid ""
+"If you want to add a new group, enter the group name into the bottom text "
+"box and click <guimenu>Add</guimenu>. The new group is then added to the "
+"group list and preselected."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:562
+#, no-c-format
+msgid "The following entries are required for a valid contact:"
+msgstr ""
+
+#. Tag: term
+#: apps_ekiga.xml:568
+#, no-c-format
+msgid "Name"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:570
+#, no-c-format
+msgid ""
+"Enter the name of your contact. This may be a full name, but you can also "
+"use a nickname here."
+msgstr ""
+
+#. Tag: term
+#: apps_ekiga.xml:577
+#, no-c-format
+msgid "Address"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:579
+#, no-c-format
+msgid "Enter a valid SIP address for your contact."
+msgstr ""
+
+#. Tag: term
+#: apps_ekiga.xml:585
+#, no-c-format
+msgid "Groups"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:587
+#, no-c-format
+msgid "If you have many contacts, add your own groups."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:594
+#, no-c-format
+msgid ""
+"To call a contact from the address book, double-click the contact. The call "
+"is initiated immediately."
+msgstr ""
+
+#. Tag: title
+#: apps_ekiga.xml:600
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:602
+#, no-c-format
+msgid ""
+"The official home page of Ekiga is <link xlink:href=\"http://www.ekiga.org/"
+"\"></link>. This site offers answers to frequently asked questions and more "
+"detailed documentation."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:608
+#, no-c-format
+msgid ""
+"For information about the support of the <literal>H323</literal> "
+"teleconferencing protocol in Linux, see <link xlink:href=\"http://www.voip-"
+"info.org/wiki/view/H.323\"></link>. This is also a good starting point when "
+"searching for projects supporting VoIP."
+msgstr ""
+
+#. Tag: para
+#: apps_ekiga.xml:615
+#, no-c-format
+msgid ""
+"To set up a private telephone network, you might be interested in the "
+"<literal>PBX</literal> software Asterisk <link xlink:href=\"http://www."
+"asterisk.org/\"></link>. Find information about it at <link xlink:href="
+"\"http://www.voip-info.org/wiki-Asterisk\"></link>."
+msgstr ""

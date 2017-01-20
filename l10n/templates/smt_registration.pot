@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: smt_registration.xml:9
+#, no-c-format
+msgid "Managing Client Machines with &smt;"
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:10
+#, no-c-format
+msgid ""
+"&smt; lets you register and manage client machines on &scc;. Client machines "
+"must be configured to use &smt;. For information about configuring clients "
+"to use &smt;, see <xref linkend=\"smt.client\"/>."
+msgstr ""
+
+#. Tag: title
+#: smt_registration.xml:16
+#, no-c-format
+msgid "Listing Registered Clients"
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:18
+#, no-c-format
+msgid ""
+"To list &smt;-registered client machines, use the <command>smt-list-"
+"registrations</command> command. The following information is listed for "
+"each client: its <guimenu>Unique ID</guimenu>, <guimenu>Hostname</guimenu>, "
+"date and time of <guimenu>Last Contact</guimenu> with the &smt; server, and "
+"the Software <guimenu>Product</guimenu> the client uses."
+msgstr ""
+
+#. Tag: title
+#: smt_registration.xml:28
+#, no-c-format
+msgid "Deleting Registrations"
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:30
+#, no-c-format
+msgid ""
+"To delete a registration from &smt; and &scc;, use the following command. To "
+"delete multiple registrations, the option <option>-g</option> can be used "
+"several times."
+msgstr ""
+
+#. Tag: screen
+#: smt_registration.xml:36
+#, no-c-format
+msgid "smt-delete-registration -g <replaceable>Client_ID</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:38
+#, no-c-format
+msgid ""
+"The ID of the client machine to be deleted can be determined from the output "
+"of the <command>smt-list-registrations</command> command."
+msgstr ""
+
+#. Tag: title
+#: smt_registration.xml:44
+#, no-c-format
+msgid "Manual Registration of Clients at &scc;"
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:46
+#, no-c-format
+msgid ""
+"The <command>smt-register</command> command registers clients at &scc;. All "
+"clients that are currently not registered or whose data has changed since "
+"the last registration are registered."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:52
+#, no-c-format
+msgid ""
+"To register clients whose registration has failed, use the <option>--"
+"reseterror</option> option. This option resets the SCC registration error "
+"flag and tries to submit failed registrations again."
+msgstr ""
+
+#. Tag: title
+#: smt_registration.xml:59
+#, no-c-format
+msgid "Scheduling Periodic Registrations of Clients at &scc;"
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:61
+#, no-c-format
+msgid ""
+"&smt; module allows for the easy scheduling of client registrations. In the "
+"default configuration, registrations are scheduled to repeat every 15 "
+"minutes. To create or modify a new registration schedule, follow these steps:"
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:70
+#, no-c-format
+msgid ""
+"Start &yast; <guimenu>&smt; Configuration</guimenu> module (<command>yast2 "
+"smt-server</command>)."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:76
+#, no-c-format
+msgid "Go to the <guimenu>Scheduled &smt; Job</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:81
+#, no-c-format
+msgid ""
+"Select any <guimenu>SCC Registration</guimenu> job and click <guimenu>Edit</"
+"guimenu> if you want to change its schedule."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:85
+#, no-c-format
+msgid ""
+"To create a new registration schedule, click <guimenu>Add</guimenu> and "
+"select <guimenu>SCC Registration</guimenu> as <guimenu>Job to Run</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:92
+#, no-c-format
+msgid ""
+"Choose the <guimenu>Frequency</guimenu> of the scheduled &smt; job. You can "
+"perform jobs <guimenu>Daily</guimenu>, <guimenu>Weekly</guimenu>, "
+"<guimenu>Monthly</guimenu>, or <guimenu>Periodically</guimenu> (every n-th "
+"hour or every m-th minute)."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:98
+#, no-c-format
+msgid ""
+"Set the <guimenu>Job Start Time</guimenu> by entering the <guimenu>Hour</"
+"guimenu> and <guimenu>Minute</guimenu> or, in case of periodic frequency, "
+"the relevant periods. For weekly and monthly schedules, select the "
+"<guimenu>Day of the Week</guimenu> or the <guimenu>Day of the Month</"
+"guimenu> the mirroring should occur."
+msgstr ""
+
+#. Tag: title
+#: smt_registration.xml:106
+#, no-c-format
+msgid "Lowest Registration Frequency"
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:107
+#, no-c-format
+msgid ""
+"Do not set the frequency lower than 10 minutes, because the maximum value of "
+"the <literal>rndRegister</literal> is 450 (7.5 minutes). If the frequency is "
+"lower, it may occur that the started process is still sleeping when the next "
+"process starts. In this case, the second request will exit."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:117
+#, no-c-format
+msgid ""
+"Click either <guimenu>OK</guimenu> or <guimenu>Add</guimenu> and "
+"<guimenu>Finish</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:124
+#, no-c-format
+msgid ""
+"Scheduling of &smt; jobs in general is covered in <xref linkend=\"smt.yast."
+"scheduling\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:129
+#, no-c-format
+msgid ""
+"&yast; uses <command>cron</command> to schedule &scc; registrations and "
+"other &smt; jobs. If you do not want to use &yast;, use <command>cron</"
+"command> directly."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:135
+#, no-c-format
+msgid ""
+"To disable automatic registration, change the <option>forwardRegistration</"
+"option> value in the <literal>[LOCAL]</literal> section of the <filename>/"
+"etc/smt.conf</filename> configuration file to <literal>false</literal>."
+msgstr ""
+
+#. Tag: title
+#: smt_registration.xml:143
+#, no-c-format
+msgid "Compliance Monitoring"
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:145
+#, no-c-format
+msgid ""
+"To assist customers in monitoring their license compliance, &smt; generates "
+"a weekly report based on data from &smt; and &scc;. This report contains "
+"information about statistics of the registered machines, products used, and "
+"of the active, expiring or missing license subscriptions. If subscriptions "
+"are about to expire and/or more &sle; machines are registered than you have "
+"purchased licenses for, the report contains relevant warnings."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:154
+#, no-c-format
+msgid ""
+"In order to calculate the compliance, the <command>smt-report</command> tool "
+"by default downloads information about the subscriptions and registrations "
+"(can be disabled)."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:160
+#, no-c-format
+msgid ""
+"You can configure the recipient addresses for the reports on the "
+"<guimenu>Database and Reporting</guimenu> tab of the &yast; "
+"<guimenu>Subscription Management Tool</guimenu> configuration module. All of "
+"the e-mail configuration options are located in the <literal>[REPORT]</"
+"literal> section of <filename>/etc/smt.conf</filename> and explained in "
+"<xref linkend=\"smt.config.smtconf.report\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:169
+#, no-c-format
+msgid ""
+"The scheduling of the reports is configured in <filename>/etc/cron.d/novell."
+"com-smt</filename> while the parameters to use with the cron jobs are in the "
+"<literal>REPORT_PARAMS</literal> section of <filename>/etc/smt.d/smt-cron."
+"conf</filename>."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:176
+#, no-c-format
+msgid ""
+"To describe the content of the reports is beyond the scope of this section, "
+"but a set of reports can be split into five individual parts. By default, "
+"these reports are attached as individual files to the mail on the weekly "
+"report run. The alerts report is a normal text file while the others are in "
+"CSV format. The reports can also be created in PDF or XML by specifying "
+"<option>--pdf</option> or <option>--xml</option> as output format."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:185
+#, no-c-format
+msgid ""
+"To generate a set of reports in CSV files based on local data and to display "
+"them in the standard output, run the following command:"
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:190
+#, no-c-format
+msgid ""
+"The example stores the reports in the <filename>/root</filename> directory. "
+"You can change it to any other safe and writable directory."
+msgstr ""
+
+#. Tag: screen
+#: smt_registration.xml:196
+#, no-c-format
+msgid "smt-report --local --csv --file /root/smt-local-rep"
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:198
+#, no-c-format
+msgid "The command generates the following files:"
+msgstr ""
+
+#. Tag: screen
+#: smt_registration.xml:202
+#, no-c-format
+msgid ""
+"/root/smt-local-rep-product_subscription_active.csv\n"
+"/root/smt-local-rep-product_subscription_alerts.txt\n"
+"/root/smt-local-rep-product_subscription_expired.csv\n"
+"/root/smt-local-rep-product_subscription_expiresoon.csv\n"
+"/root/smt-local-rep-product_subscription_summary.csv"
+msgstr ""
+
+#. Tag: title
+#: smt_registration.xml:205
+#, no-c-format
+msgid "Multiple &smt; Servers"
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:206
+#, no-c-format
+msgid ""
+"If you have multiple &smt; servers deployed in your environment, the reports "
+"may not represent all of the &smt; servers or machines in your environment. "
+"For the complete statistics of all your registered machines, refer to the "
+"information provided by &scc;."
+msgstr ""
+
+#. Tag: para
+#: smt_registration.xml:214
+#, no-c-format
+msgid ""
+"For more information about types of reports, output formats, and targets "
+"refer to <xref linkend=\"smt.reporting\"/>."
+msgstr ""

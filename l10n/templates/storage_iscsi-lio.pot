@@ -1,0 +1,1795 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: storage_iscsi-lio.xml:9
+#, no-c-format
+msgid "Mass Storage over IP Networks: iSCSI LIO Target Server"
+msgstr ""
+
+#. Tag: remark
+#: storage_iscsi-lio.xml:17
+#, no-c-format
+msgid "Fate 312231"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:17
+#, no-c-format
+msgid ""
+"LIO (linux-iscsi.org) is the standard open source multiprotocol SCSI target "
+"for Linux. LIO replaced the STGT (SCSI Target) framework as the standard "
+"unified storage target in Linux with Linux kernel version 2.6.38 and later. "
+"&yast; supports the iSCSI LIO Target Server software in SUSE Linux "
+"Enterprise Server 11 SP3 and later."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:24
+#, no-c-format
+msgid ""
+"This section describes how to use &yast; to configure an iSCSI LIO Target "
+"Server and set up iSCSI LIO target devices. You can use any iSCSI initiator "
+"software to access the target devices."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:30
+#, no-c-format
+msgid "Installing the iSCSI LIO Target Server Software"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:32
+#, no-c-format
+msgid ""
+"Use the &yast; Software Management tool to install the iSCSI LIO Target "
+"Server software on the &productname; server where you want to create iSCSI "
+"LIO target devices."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:40 storage_iscsi-lio.xml:247 storage_iscsi-lio.xml:428
+#: storage_iscsi-lio.xml:531 storage_iscsi-lio.xml:709
+#: storage_iscsi-lio.xml:910 storage_iscsi-lio.xml:1407
+#: storage_iscsi-lio.xml:1527
+#, no-c-format
+msgid "Launch &yast; as the &rootuser; user."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:45
+#, no-c-format
+msgid ""
+"Select <guimenu>Software</guimenu><guimenu>Software Management.</guimenu>"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:51
+#, no-c-format
+msgid ""
+"Select the <guimenu>Search</guimenu> tab, type <literal>lio</literal>, then "
+"click <guimenu>Search</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:57
+#, no-c-format
+msgid "Select the iSCSI LIO Target Server packages:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:67
+#, no-c-format
+msgid "iSCSI LIO Target Server Packages"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:72
+#, no-c-format
+msgid "Description"
+msgstr ""
+
+#. Tag: filename
+#: storage_iscsi-lio.xml:82
+#, no-c-format
+msgid "yast2-iscsi-lio-server"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:86
+#, no-c-format
+msgid ""
+"Provides a GUI interface in &yast; for the configuration of iSCSI LIO target "
+"devices."
+msgstr ""
+
+#. Tag: filename
+#: storage_iscsi-lio.xml:95
+#, no-c-format
+msgid "lio-utils"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:99
+#, no-c-format
+msgid ""
+"Provides APIs for configuring and controlling iSCSI LIO target devices that "
+"are used by <filename>yast2-iscsi-lio-server</filename>."
+msgstr ""
+
+#. Tag: filename
+#: storage_iscsi-lio.xml:109
+#, no-c-format
+msgid "lio-mibs"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:113
+#, no-c-format
+msgid ""
+"Provides SNMP (Simple Network Management Protocol) monitoring of iSCSI LIO "
+"target devices by using the dynamic load module (<filename>dlmod</filename>) "
+"functionality of the Net-SNMP agent. It supports SNMP v1, v2c, and v3. The "
+"configuration file is <filename>/etc/snmp/snmpd.conf</filename>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:120
+#, no-c-format
+msgid ""
+"The <filename>lio-mibs</filename> software uses the <filename>perl-SNMP</"
+"filename> and <filename>net-snmp</filename> packages."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:125
+#, no-c-format
+msgid ""
+"For information about Net-SNMP, see the open source <link xlink:href="
+"\"http://www.net-snmp.org/\">Net-SNMP Project</link>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:134
+#, no-c-format
+msgid "<filename>lio</filename>-utils-debuginfo"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:139
+#, no-c-format
+msgid ""
+"Provides debug information for the <filename>lio-utils</filename> package. "
+"You can use this package when developing or debugging applications for "
+"<filename>lio-utils</filename>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:151
+#, no-c-format
+msgid ""
+"In the lower right corner of the dialog box, click <guimenu>Accept</guimenu> "
+"to install the selected packages."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:167
+#, no-c-format
+msgid ""
+"When you are prompted to approve the automatic changes, click "
+"<guimenu>Continue</guimenu> to accept the iSCSI LIO Target Server "
+"dependencies for the <filename>lio-utils</filename>, <filename>perl-SNMP</"
+"filename>, and <filename>net-snmp</filename> packages."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:186
+#, no-c-format
+msgid ""
+"Close and re-launch &yast;, then click <guimenu>Network Services</guimenu> "
+"and verify that the<guimenu> iSCSI LIO Target</guimenu> option is available "
+"in the menu."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:203
+#, no-c-format
+msgid ""
+"Continue with <xref linkend=\"sect_iscsi_lio_service\" xrefstyle="
+"\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:211
+#, no-c-format
+msgid "Starting the iSCSI LIO Target Service"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:213
+#, no-c-format
+msgid ""
+"The iSCSI LIO Target service is by default configured to be started "
+"manually. You can configure the service to start automatically on system "
+"restart. If you use a firewall on the server and you want the iSCSI LIO "
+"targets to be available to other computers, you must open a port in the "
+"firewall for each adapter that you want to use for target access. TCP port "
+"3260 is the port number for the iSCSI protocol, as defined by IANA (Internet "
+"Assigned Numbers Authority)."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:224
+#, no-c-format
+msgid "Configuring iSCSI LIO Startup Preferences"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:225
+#, no-c-format
+msgid "To configure the iSCSI LIO Target Server service settings:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:230 storage_iscsi-lio.xml:514
+#: storage_iscsi-lio.xml:893 storage_iscsi-lio.xml:1390
+#: storage_iscsi-lio.xml:1510
+#, no-c-format
+msgid ""
+"Log in to the iSCSI LIO target server as the &rootuser; user, then launch a "
+"terminal console."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:236 storage_iscsi-lio.xml:520
+#: storage_iscsi-lio.xml:899 storage_iscsi-lio.xml:1396
+#: storage_iscsi-lio.xml:1516
+#, no-c-format
+msgid ""
+"Ensure that the <filename>/etc/init.d/target</filename> daemon is running. "
+"At the command prompt, enter"
+msgstr ""
+
+#. Tag: screen
+#: storage_iscsi-lio.xml:240 storage_iscsi-lio.xml:415
+#: storage_iscsi-lio.xml:524 storage_iscsi-lio.xml:903
+#: storage_iscsi-lio.xml:1400 storage_iscsi-lio.xml:1520
+#: storage_iscsi-lio.xml:1631
+#, no-c-format
+msgid "systemctl start target"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:241 storage_iscsi-lio.xml:416
+#: storage_iscsi-lio.xml:525 storage_iscsi-lio.xml:904
+#: storage_iscsi-lio.xml:1401 storage_iscsi-lio.xml:1521
+#, no-c-format
+msgid ""
+"The command returns a message to confirm that the daemon is started, or that "
+"the daemon is already running."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:252 storage_iscsi-lio.xml:536
+#: storage_iscsi-lio.xml:915 storage_iscsi-lio.xml:1412
+#: storage_iscsi-lio.xml:1532
+#, no-c-format
+msgid ""
+"In the &yast; Control Center, select <guimenu>Network Services</guimenu>, "
+"then select <guimenu>iSCSI LIO Target</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:256 storage_iscsi-lio.xml:540
+#: storage_iscsi-lio.xml:919 storage_iscsi-lio.xml:1416
+#: storage_iscsi-lio.xml:1536
+#, no-c-format
+msgid ""
+"You can also search for <quote>lio</quote>, then select <guimenu>iSCSI LIO "
+"Target</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:272
+#, no-c-format
+msgid ""
+"In the iSCSI LIO Target Overview dialog box, select the <guimenu>Service</"
+"guimenu> tab."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:288
+#, no-c-format
+msgid ""
+"Under <guimenu>Service Start</guimenu>, specify how you want the iSCSI LIO "
+"target service to be started:"
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:295
+#, no-c-format
+msgid "When Booting:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:296
+#, no-c-format
+msgid "The service starts automatically on server restart."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:303
+#, no-c-format
+msgid "Manually:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:304
+#, no-c-format
+msgid ""
+"(Default) You must start the service manually after a server restart. The "
+"target devices are not available until you start the service."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:314
+#, no-c-format
+msgid ""
+"If you use a firewall on the server and you want the iSCSI LIO targets to be "
+"available to other computers, open a port in the firewall for each adapter "
+"interface that you want to use for target access."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:319
+#, no-c-format
+msgid ""
+"Firewall settings are disabled by default. They are not needed unless you "
+"deploy a firewall on the server. The default port number is 3260. If the "
+"port is closed for all of the network interfaces, the iSCSI LIO targets are "
+"not available to other computers."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:327
+#, no-c-format
+msgid ""
+"On the <guimenu>Services</guimenu> tab, select the <guimenu>Open Port in "
+"Firewall</guimenu> check box to enable the firewall settings."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:334
+#, no-c-format
+msgid ""
+"Click <guimenu>Firewall Details</guimenu> to view or configure the network "
+"interfaces to use."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:338
+#, no-c-format
+msgid ""
+"All available network interfaces are listed, and all are selected by default."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:354
+#, no-c-format
+msgid "For each interface, specify whether to open or close a port for it:"
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:360
+#, no-c-format
+msgid "Open:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:361
+#, no-c-format
+msgid ""
+"Select the interface’s check box to open the port. You can also click "
+"<guimenu>Select All</guimenu> to open a port on all of the interfaces."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:370
+#, no-c-format
+msgid "Close:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:371
+#, no-c-format
+msgid ""
+"Deselect the interface’s check box to close the port. You can also click "
+"<guimenu>Select None</guimenu> to close the port on all of the interfaces."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:381
+#, no-c-format
+msgid "Click <guimenu>OK</guimenu> to save and apply your changes."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:386
+#, no-c-format
+msgid ""
+"If you are prompted to confirm the settings, click <guimenu>Yes</guimenu> to "
+"continue, or click <guimenu>No</guimenu> to return to the dialog box and "
+"make the desired changes."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:395
+#, no-c-format
+msgid ""
+"Click <guimenu>Finish</guimenu> to save and apply the iSCSI LIO Target "
+"service settings."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:404
+#, no-c-format
+msgid "Manually Starting iSCSI LIO Target at the Command Line"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:407
+#, no-c-format
+msgid "Log in as the &rootuser; user, then launch a terminal console."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:412 storage_iscsi-lio.xml:1628
+#, no-c-format
+msgid "At the command prompt, enter"
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:425
+#, no-c-format
+msgid "Manually Starting iSCSI LIO Target in &yast;"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:433
+#, no-c-format
+msgid ""
+"In the &yast; Control Center, select <guimenu>System</guimenu>, then select "
+"<guimenu>&ycc_runlevel;</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:439
+#, no-c-format
+msgid ""
+"In the &yast; &ycc_runlevel; dialog box, select <guimenu>target</guimenu> "
+"(<guimenu>TCM/ConfigFS and LIO-Target</guimenu>) in the list of services."
+msgstr ""
+
+#. Tag: remark
+#: storage_iscsi-lio.xml:443
+#, no-c-format
+msgid ""
+"taroth 2014-02-27: FIXME systemd - screenshot (commented for now) needs "
+"update!"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:458
+#, no-c-format
+msgid ""
+"If the service is listed as <literal>inactive</literal>, click "
+"<guimenu>Start/Stop</guimenu> to change this."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:464
+#, no-c-format
+msgid "Click <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:472
+#, no-c-format
+msgid ""
+"Configuring Authentication for Discovery of iSCSI LIO Targets and Clients"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:474
+#, no-c-format
+msgid ""
+"The iSCSI LIO Target Server software supports the PPP-CHAP (Point-to-Point "
+"Protocol Challenge Handshake Authentication Protocol), a three-way "
+"authentication method defined in the <link xlink:href=\"http://www.ietf.org/"
+"rfc/rfc1994.txt\"><citetitle>Internet Engineering Task Force (IETF) RFC "
+"1994</citetitle></link>. iSCSI LIO Target Server uses this authentication "
+"method for the discovery of iSCSI LIO targets and clients, not for accessing "
+"files on the targets. If you do not want to restrict the access to the "
+"discovery, use <guimenu>No Authentication</guimenu>. The <guimenu>No "
+"Authentication</guimenu> option is enabled by default. If authentication for "
+"discovery is enabled, its settings apply to all iSCSI LIO target groups."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:489
+#, no-c-format
+msgid ""
+"We recommend that you use authentication for target and client discovery in "
+"production environments."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:495
+#, no-c-format
+msgid ""
+"If authentication is needed for a more secure configuration, you can use "
+"incoming authentication, outgoing authentication, or both. <guimenu>Incoming "
+"Authentication</guimenu> requires an iSCSI initiator to prove that it has "
+"the permissions to run a discovery on the iSCSI LIO target. The initiator "
+"must provide the incoming user name and password. <guimenu>Outgoing "
+"Authentication</guimenu> requires the iSCSI LIO target to prove to the "
+"initiator that it is the expected target. The iSCSI LIO target must provide "
+"the outgoing user name and password to the iSCSI initiator. The user name "
+"and password pair can be different for incoming and outgoing discovery."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:508
+#, no-c-format
+msgid "To configure authentication preferences for iSCSI LIO targets:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:556
+#, no-c-format
+msgid ""
+"In the iSCSI LIO Target Overview dialog box, select the <guimenu>Global</"
+"guimenu> tab to configure the authentication settings. Authentication "
+"settings are disabled by default."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:573
+#, no-c-format
+msgid "Specify whether to require authentication for iSCSI LIO targets:"
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:579
+#, no-c-format
+msgid "Disable authentication:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:580
+#, no-c-format
+msgid ""
+"(Default) Select the <guimenu>No Authentication</guimenu> check box to "
+"disable incoming and outgoing authentication for discovery on this server. "
+"All iSCSI LIO targets on this server can be discovered by any iSCSI "
+"initiator client on the same network. This server can discover any iSCSI "
+"initiator client on the same network that does not require authentication "
+"for discovery. Skip <xref linkend=\"b12r1015\" xrefstyle=\"StepXRef\"/> and "
+"continue with <xref linkend=\"b12gb2ux\" xrefstyle=\"StepXRef\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:594
+#, no-c-format
+msgid "Enable authentication:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:595
+#, no-c-format
+msgid ""
+"Deselect the <guimenu>No Authentication</guimenu> check box. The check boxes "
+"for both <guimenu>Incoming Authentication</guimenu> and <guimenu>Outgoing "
+"Authentication</guimenu> are automatically selected. Continue with <xref "
+"linkend=\"b12r1015\" xrefstyle=\"StepXRef\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:617
+#, no-c-format
+msgid ""
+"Configure the authentication credentials needed for incoming discovery, "
+"outgoing discovery, or both. The user name and password pair can be "
+"different for incoming and outgoing discovery."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:624
+#, no-c-format
+msgid "Configure incoming authentication by doing one of the following:"
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:630
+#, no-c-format
+msgid "Disable incoming authentication:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:631
+#, no-c-format
+msgid ""
+"Deselect the <guimenu>Incoming Authentication</guimenu> check box. All iSCSI "
+"LIO targets on this server can be discovered by any iSCSI initiator client "
+"on the same network."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:640
+#, no-c-format
+msgid "Enable incoming authentication:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:641
+#, no-c-format
+msgid ""
+"Select the <guimenu>Incoming Authentication</guimenu> check box, then "
+"specify an existing user name and password pair to use for incoming "
+"discovery of iSCSI LIO targets."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:651
+#, no-c-format
+msgid "Configure outgoing authentication by doing one of the following:"
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:657
+#, no-c-format
+msgid "Disable outgoing authentication:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:658
+#, no-c-format
+msgid ""
+"Deselect the <guimenu>Outgoing Authentication</guimenu> check box. This "
+"server can discover any iSCSI initiator client on the same network that does "
+"not require authentication for discovery."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:667
+#, no-c-format
+msgid "Enable outgoing authentication:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:668
+#, no-c-format
+msgid ""
+"Select the <guimenu>Outgoing Authentication</guimenu> check box, then "
+"specify an existing user name and password pair to use for outgoing "
+"discovery of iSCSI initiator clients."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:680 storage_iscsi-lio.xml:1336
+#: storage_iscsi-lio.xml:1490 storage_iscsi-lio.xml:1591
+#, no-c-format
+msgid "Click <guimenu>Finish</guimenu> to save and apply the settings."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:687
+#, no-c-format
+msgid "Preparing the Storage Space"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:689
+#, no-c-format
+msgid ""
+"The iSCSI LIO target configuration exports existing block devices to iSCSI "
+"initiators. You must prepare the storage space you want to use in the target "
+"devices by setting up unformatted partitions or devices on the server. iSCSI "
+"LIO targets can use unformatted partitions with Linux, Linux LVM, or Linux "
+"RAID file system IDs."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:698
+#, no-c-format
+msgid ""
+"After you set up a device or partition for use as an iSCSI target, you never "
+"access it directly via its local path. Do not specify a mount point for it "
+"when you create it."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:706
+#, no-c-format
+msgid "Partitioning Devices"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:714
+#, no-c-format
+msgid ""
+"In &yast;, select <guimenu>System</guimenu><guimenu>Partitioner</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:720
+#, no-c-format
+msgid ""
+"Click <guimenu>Yes</guimenu> to continue through the warning about using the "
+"Partitioner."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:726
+#, no-c-format
+msgid ""
+"At the bottom of the Partitions page, click <guimenu>Add</guimenu> to create "
+"a partition, but do not format it, and do not mount it."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:732
+#, no-c-format
+msgid ""
+"On the Expert Partitioner page, select <guimenu>Hard Disks</guimenu>, then "
+"select the leaf node name (such as <filename>sdc</filename>) of the disk you "
+"want to configure."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:739
+#, no-c-format
+msgid ""
+"Select <guimenu>Primary Partition</guimenu>, then click <guimenu>Next</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:745
+#, no-c-format
+msgid "Specify the amount of space to use, then click <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:751
+#, no-c-format
+msgid ""
+"Under <guimenu>Formatting Options</guimenu>, select <guimenu>Do not format</"
+"guimenu>, then select the file system ID type from the drop-down list."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:756
+#, no-c-format
+msgid ""
+"iSCSI LIO targets can use unformatted partitions with Linux (0x83), Linux "
+"LVM (0x8E), or Linux RAID (0xFD) file system IDs."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:772
+#, no-c-format
+msgid ""
+"Under <guimenu>Mounting Options</guimenu>, select <guimenu>Do not mount</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:778
+#, no-c-format
+msgid "Click <guimenu>Finish</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:785
+#, no-c-format
+msgid ""
+"Repeat <xref linkend=\"bj5f9hl\" xrefstyle=\"StepXRef\"/> to create an "
+"unformatted partition for each area that you want to use later as an iSCSI "
+"LIO target."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:802
+#, no-c-format
+msgid ""
+"Click <guimenu>Next</guimenu><guimenu>Finish</guimenu> to keep your changes, "
+"then close &yast;."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:811
+#, no-c-format
+msgid "Partitioning Devices in a Virtual Environment"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:812
+#, no-c-format
+msgid ""
+"You can use a virtual machine guest server as a iSCSI LIO Target Server. "
+"This section describes how to assign partitions to a &xen; virtual machine. "
+"You can also use other virtual environments that are supported by "
+"&productname; 11 SP2 or later."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:818
+#, no-c-format
+msgid ""
+"In a &xen; virtual environment, you must assign the storage space you want "
+"to use for the iSCSI LIO target devices to the guest virtual machine, then "
+"access the space as virtual disks within the guest environment. Each virtual "
+"disk can be a physical block device, such as an entire disk, partition, or "
+"volume, or it can be a file-backed disk image where the virtual disk is a "
+"single image file on a larger physical disk on the &xen; host server. For "
+"the best performance, create each virtual disk from a physical disk or a "
+"partition. After you set up the virtual disks for the guest virtual machine, "
+"start the guest server, then configure the new blank virtual disks as iSCSI "
+"target devices by following the same process as for a physical server."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:831
+#, no-c-format
+msgid ""
+"File-backed disk images are created on the &xen; host server, then assigned "
+"to the &xen; guest server. By default, &xen; stores file-backed disk images "
+"in the <filename>/var/lib/xen/images/<replaceable>vm_name</replaceable></"
+"filename> directory, where <filename><replaceable>vm_name</replaceable></"
+"filename> is the name of the virtual machine."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:839
+#, no-c-format
+msgid ""
+"For example, if you want to create the disk image <filename>/var/lib/xen/"
+"images/vm_one/xen-0</filename> with a size of 4 GB, first ensure that the "
+"directory is there, then create the image itself."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:847
+#, no-c-format
+msgid "Log in to the host server as the &rootuser; user."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:852
+#, no-c-format
+msgid "At a terminal console prompt, enter the following commands:"
+msgstr ""
+
+#. Tag: screen
+#: storage_iscsi-lio.xml:855
+#, no-c-format
+msgid ""
+"mkdir -p /var/lib/xen/images/vm_one\n"
+"dd if=/dev/zero of=/var/lib/xen/images/vm_one/xen-0 seek=1M bs=4096 count=1"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:858
+#, no-c-format
+msgid ""
+"Assign the file system image to the guest virtual machine in the &xen; "
+"configuration file."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:864
+#, no-c-format
+msgid ""
+"Log in as the &rootuser; user on the guest server, then use &yast; to set up "
+"the virtual block device by using the process in <xref linkend=\"b12jcw6s\" "
+"xrefstyle=\"HeadingOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:874
+#, no-c-format
+msgid "Setting Up an iSCSI LIO Target Group"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:876
+#, no-c-format
+msgid ""
+"You can use &yast; to configure iSCSI LIO target devices. &yast; uses APIs "
+"provided by the <command>lio-utils</command> software. iSCSI LIO targets can "
+"use unformatted partitions with Linux, Linux LVM, or Linux RAID file system "
+"IDs."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:884
+#, no-c-format
+msgid ""
+"Before you begin, create the unformatted partitions that you want to use as "
+"iSCSI LIO targets as described in <xref linkend=\"sect_iscsi_lio_storage\" "
+"xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:935
+#, no-c-format
+msgid ""
+"In the iSCSI LIO Target Overview dialog box, select the <guimenu>Targets</"
+"guimenu> tab to configure the targets."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:951
+#, no-c-format
+msgid ""
+"Click <guimenu>Add</guimenu>, then define a new iSCSI LIO target group and "
+"devices:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:955
+#, no-c-format
+msgid ""
+"The iSCSI LIO Target software automatically completes the <guimenu>Target</"
+"guimenu>, <guimenu>Identifier</guimenu>, <guimenu>Portal Group</guimenu>, "
+"<guimenu>IP Address</guimenu>, and <guimenu>Port Number</guimenu> fields. "
+"<guimenu>Use Authentication</guimenu> is selected by default."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:974
+#, no-c-format
+msgid ""
+"If you have multiple network interfaces, use the IP address drop-down list "
+"to select the IP address of the network interface to use for this target "
+"group."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:981
+#, no-c-format
+msgid ""
+"Select <guimenu>Use Authentication</guimenu> if you want to require client "
+"authentication for this target group."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:986
+#, no-c-format
+msgid "Requiring authentication is recommended in a production environment."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:992
+#, no-c-format
+msgid ""
+"Click <guimenu>Add</guimenu>, browse to select the device or partition, "
+"specify a name, then click <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:996
+#, no-c-format
+msgid ""
+"The LUN number is automatically generated, beginning with 0. A name is "
+"automatically generated if you leave the field empty."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1012
+#, no-c-format
+msgid ""
+"(Optional) Repeat <xref linkend=\"b12jdzge\" xrefstyle=\"StepXRef\"/> "
+"through <xref linkend=\"b12je5o1\" xrefstyle=\"StepXRef\"/> to add more "
+"targets to this target group."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1029
+#, no-c-format
+msgid ""
+"After all desired targets have been added to the group, click <guimenu>Next</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1037
+#, no-c-format
+msgid ""
+"On the Modify iSCSI Target Client Setup page, configure information for the "
+"clients that are permitted to access LUNs in the target group:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1051
+#, no-c-format
+msgid ""
+"After you specify at least one client for the target group, the "
+"<guimenu>Edit LUN</guimenu>, <guimenu>Edit Auth</guimenu>, <guimenu>Delete</"
+"guimenu>, and <guimenu>Copy</guimenu> buttons are enabled. You can use "
+"<guimenu>Add</guimenu> or <guimenu>Copy</guimenu> to add more clients for "
+"the target group."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:1071 storage_iscsi-lio.xml:1164
+#, no-c-format
+msgid "Add:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1072
+#, no-c-format
+msgid "Add a new client entry for the selected iSCSI LIO target group."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:1079
+#, no-c-format
+msgid "Edit LUN:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1080
+#, no-c-format
+msgid ""
+"Configure which LUNs in the iSCSI LIO target group to map to a selected "
+"client. You can map each of the allocated targets to a preferred client LUN."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:1089
+#, no-c-format
+msgid "Edit Auth:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1090
+#, no-c-format
+msgid ""
+"Configure the preferred authentication method for a selected client. You can "
+"specify no authentication, or you can configure incoming authentication, "
+"outgoing authentication, or both."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:1099 storage_iscsi-lio.xml:1184
+#, no-c-format
+msgid "Delete:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1100
+#, no-c-format
+msgid ""
+"Remove a selected client entry from the list of clients allocated to the "
+"target group."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:1108
+#, no-c-format
+msgid "Copy:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1109
+#, no-c-format
+msgid ""
+"Add a new client entry with the same LUN mappings and authentication "
+"settings as a selected client entry. This allows you to easily allocate the "
+"same shared LUNs, in turn, to each node in a cluster."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1119
+#, no-c-format
+msgid ""
+"Click <guimenu>Add</guimenu>, specify the client name, select or deselect "
+"the <guimenu>Import LUNs from TPG</guimenu> check box, then click "
+"<guimenu>OK</guimenu> to save the settings."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1136
+#, no-c-format
+msgid ""
+"Select a client entry, click <guimenu>Edit LUN</guimenu>, modify the LUN "
+"mappings to specify which LUNs in the iSCSI LIO target group to allocate to "
+"the selected client, then click <guimenu>OK</guimenu> to save the changes."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1142
+#, no-c-format
+msgid ""
+"If the iSCSI LIO target group consists of multiple LUNs, you can allocate "
+"one or multiple LUNs to the selected client. By default, each of the "
+"available LUNs in the group are assigned to a Client LUN."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1157
+#, no-c-format
+msgid ""
+"To modify the LUN allocation, perform one or more of the following actions:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1165
+#, no-c-format
+msgid ""
+"Click <guimenu>Add</guimenu> to create an new <guimenu>Client LUN</guimenu> "
+"entry, then use the <guimenu>Change</guimenu> drop-down list to map a Target "
+"LUN to it."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1185
+#, no-c-format
+msgid ""
+"Select the <guimenu>Client LUN</guimenu> entry, then click <guimenu>Delete</"
+"guimenu> to remove a Target LUN mapping."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:1203
+#, no-c-format
+msgid "Change:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1204
+#, no-c-format
+msgid ""
+"Select the <guimenu>Client LUN</guimenu> entry, then use the "
+"<guimenu>Change</guimenu> drop-down list to select which Target LUN to map "
+"to it."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1222
+#, no-c-format
+msgid "Typical allocation plans include the following:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1227
+#, no-c-format
+msgid ""
+"A single server is listed as a client. All of the LUNs in the target group "
+"are allocated to it."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1231
+#, no-c-format
+msgid ""
+"You can use this grouping strategy to logically group the iSCSI SAN storage "
+"for a given server."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1247
+#, no-c-format
+msgid ""
+"Multiple independent servers are listed as clients. One or multiple target "
+"LUNs are allocated to each server. Each LUN is allocated to only one server."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1252
+#, no-c-format
+msgid ""
+"You can use this grouping strategy to logically group the iSCSI SAN storage "
+"for a given department or service category in the data center."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1269
+#, no-c-format
+msgid ""
+"Each node of a cluster is listed as a client. All of the shared target LUNs "
+"are allocated to each node. All nodes are attached to the devices, but for "
+"most file systems, the cluster software locks a device for access and mounts "
+"it on only one node at a time. Shared file systems (such as OCFS2) make it "
+"possible for multiple nodes to concurrently mount the same file structure "
+"and to open the same files with read and write access."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1278
+#, no-c-format
+msgid ""
+"You can use this grouping strategy to logically group the iSCSI SAN storage "
+"for a given server cluster."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1296
+#, no-c-format
+msgid ""
+"Select a client entry, click <guimenu>Edit Auth</guimenu>, specify the "
+"authentication settings for the client, then click <guimenu>OK</guimenu> to "
+"save the settings."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1301
+#, no-c-format
+msgid ""
+"You can require <guimenu>No Authentication</guimenu>, or you can configure "
+"<guimenu>Incoming Authentication</guimenu>, <guimenu>Outgoing "
+"Authentication</guimenu>, or both. You can specify only one user name and "
+"password pair for each client. The credentials can be different for incoming "
+"and outgoing authentication for a client. The credentials can be different "
+"for each client."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1321
+#, no-c-format
+msgid ""
+"Repeat <xref linkend=\"b12mdr9g\" xrefstyle=\"StepXRef\"/> through <xref "
+"linkend=\"b12mdr9i\" xrefstyle=\"StepXRef\"/> for each iSCSI client that can "
+"access this target group."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1328
+#, no-c-format
+msgid ""
+"After the client assignments are configured, click <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:1353
+#, no-c-format
+msgid "Modifying an iSCSI LIO Target Group"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1355
+#, no-c-format
+msgid "You can modify an existing iSCSI LIO target group as follows:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1361
+#, no-c-format
+msgid "Add or remove target LUN devices from a target group"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1366
+#, no-c-format
+msgid "Add or remove clients for a target group"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1371
+#, no-c-format
+msgid ""
+"Modify the client LUN-to-target LUN mappings for a client of a target group"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1377
+#, no-c-format
+msgid ""
+"Modify the user name and password credentials for a client authentication "
+"(incoming, outgoing, or both)"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1384
+#, no-c-format
+msgid "To view or modify the settings for an iSCSI LIO target group:"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1432
+#, no-c-format
+msgid ""
+"In the iSCSI LIO Target Overview dialog box, select the <guimenu>Targets</"
+"guimenu> tab to view a list of target groups."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1448
+#, no-c-format
+msgid ""
+"Select the iSCSI LIO target group to be modified, then click <guimenu>Edit</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1464
+#, no-c-format
+msgid ""
+"On the Modify iSCSI Target LUN Setup page, add LUNs to the target group, "
+"edit the LUN assignments, or remove target LUNs from the group. After all "
+"desired changes have been made to the group, click <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1470
+#, no-c-format
+msgid ""
+"For option information, see <xref linkend=\"b12jdln1\" xrefstyle=\"StepXRef"
+"\"/> in <xref linkend=\"sect_iscsi_lio_targetgp\" xrefstyle=\"SectTitleOnPage"
+"\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1477
+#, no-c-format
+msgid ""
+"On the Modify iSCSI Target Client Setup page, configure information for the "
+"clients that are permitted to access LUNs in the target group. After all "
+"desired changes have been made to the group, click <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1483
+#, no-c-format
+msgid ""
+"For option information, see <xref linkend=\"b12jeipj\" xrefstyle=\"StepXRef"
+"\"/> in <xref linkend=\"sect_iscsi_lio_targetgp\" xrefstyle=\"SectTitleOnPage"
+"\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:1497
+#, no-c-format
+msgid "Deleting an iSCSI LIO Target Group"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1499
+#, no-c-format
+msgid ""
+"Deleting an iSCSI LIO target group removes the definition of the group, and "
+"the related setup for clients, including LUN mappings and authentication "
+"credentials. It does not destroy the data on the partitions. To give clients "
+"access again, you can allocate the target LUNs to a different or new target "
+"group, and configure the client access for them."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1552
+#, no-c-format
+msgid ""
+"In the iSCSI LIO Target Overview dialog box, select the <guimenu>Targets</"
+"guimenu> tab to view a list of configured target groups."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1569
+#, no-c-format
+msgid ""
+"Select the iSCSI LIO target group to be deleted, then click <guimenu>Delete</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1585
+#, no-c-format
+msgid ""
+"When you are prompted, click <guimenu>Continue</guimenu> to confirm the "
+"deletion, or click <guimenu>Cancel</guimenu> to cancel it."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:1598
+#, no-c-format
+msgid "Troubleshooting iSCSI LIO Target Server"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1600
+#, no-c-format
+msgid ""
+"This section describes some known issues and possible solutions for iSCSI "
+"LIO Target Server."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:1606
+#, no-c-format
+msgid "Portal Error When Setting Up Target LUNs"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1607
+#, no-c-format
+msgid "When adding or editing an iSCSI LIO target group, you get an error:"
+msgstr ""
+
+#. Tag: screen
+#: storage_iscsi-lio.xml:1610
+#, no-c-format
+msgid "Problem setting network portal &lt;ip_address&gt;:3260"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1611
+#, no-c-format
+msgid ""
+"The <filename>/var/log/YasT2/y2log</filename> log file contains the "
+"following error:"
+msgstr ""
+
+#. Tag: screen
+#: storage_iscsi-lio.xml:1615
+#, no-c-format
+msgid "find: `/sys/kernel/config/target/iscsi': No such file or directory"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1616
+#, no-c-format
+msgid ""
+"This problem occurs if the iSCSI LIO Target Server software is not currently "
+"running. To resolve this issue, exit &yast;, manually start iSCSI LIO at the "
+"command line, then try again."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1623
+#, no-c-format
+msgid "Open a terminal console as the &rootuser; user."
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1634
+#, no-c-format
+msgid ""
+"You can also enter the following to check if <command>configfs</command>, "
+"<command>iscsi_target_mod</command>, and <command>target_core_mod</command> "
+"are loaded. A sample response is shown."
+msgstr ""
+
+#. Tag: screen
+#: storage_iscsi-lio.xml:1640
+#, no-c-format
+msgid ""
+"<command>lsmod | grep iscsi</command>\n"
+"\n"
+"  iscsi_target_mod      295015  0\n"
+"  target_core_mod       346745  4\n"
+"  iscsi_target_mod,target_core_pscsi,target_core_iblock,target_core_file\n"
+"  configfs               35817  3 iscsi_target_mod,target_core_mod\n"
+"  scsi_mod              231620  16\n"
+"  iscsi_target_mod,target_core_pscsi,target_core_mod,sg,sr_mod,mptctl,"
+"sd_mod,\n"
+"  scsi_dh_rdac,scsi_dh_emc,scsi_dh_alua,scsi_dh_hp_sw,scsi_dh,libata,"
+"mptspi,\n"
+"  mptscsih,scsi_transport_spi"
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:1644
+#, no-c-format
+msgid "iSCSI LIO Targets Are Not Visible from Other Computers"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1645
+#, no-c-format
+msgid ""
+"If you use a firewall on the target server, you must open the iSCSI port "
+"that you are using to allow other computers to see the iSCSI LIO targets. "
+"For information, see <xref linkend=\"b12jaucl\" xrefstyle=\"StepXRef\"/> in "
+"<xref linkend=\"b12jbbfh\" xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_iscsi-lio.xml:1655
+#, no-c-format
+msgid "iSCSI LIO Target Terminology"
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1659
+#, no-c-format
+msgid "backstore"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1661
+#, no-c-format
+msgid ""
+"A physical storage object that provides the actual storage underlying an "
+"iSCSI endpoint."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1668
+#, no-c-format
+msgid "CDB (command descriptor block"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1670
+#, no-c-format
+msgid ""
+"The standard format for SCSI commands. CDBs are commonly 6, 10, or 12 bytes "
+"long, though they can be 16 bytes or of variable length."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1677
+#, no-c-format
+msgid "CHAP (Challenge Handshake Authentication Protocol)"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1679
+#, no-c-format
+msgid ""
+"A point-to-point protocol (PPP) authentication method used to confirm the "
+"identity of one computer to another. After the Link Control Protocol (LCP) "
+"connects the two computers, and the CHAP method is negotiated, the "
+"authenticator sends a random Challenge to the peer. The peer issues a "
+"cryptographically hashed Response that depends upon the Challenge and a "
+"secret key. The authenticator verifies the hashed Response against its own "
+"calculation of the expected hash value, and either acknowledges the "
+"authentication or terminates the connection. CHAP is defined in the <link "
+"xlink:href=\"http://www.ietf.org\">Internet Engineering Task Force (IETF)</"
+"link> RFC 1994."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1694
+#, no-c-format
+msgid "CID (connection identifier)"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1696
+#, no-c-format
+msgid ""
+"A 16‐bit number, generated by the initiator, that uniquely identifies a "
+"connection between two iSCSI devices. This number is presented during the "
+"login phase."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1704
+#, no-c-format
+msgid "endpoint"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1706
+#, no-c-format
+msgid "The combination of an iSCSI Target Name with an iSCSI TPG (IQN + Tag)."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1712
+#, no-c-format
+msgid "EUI (extended unique identifier)"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1714
+#, no-c-format
+msgid ""
+"A 64‐bit number that uniquely identifies every device in the world. The "
+"format consists of 24 bits that are unique to a given company, and 40 bits "
+"assigned by the company to each device it builds."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1722
+#, no-c-format
+msgid "initiator"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1724
+#, no-c-format
+msgid ""
+"The originating end of an SCSI session. Typically a controlling device such "
+"as a computer."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1731
+#, no-c-format
+msgid "IPS (Internet Protocol storage)"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1733
+#, no-c-format
+msgid ""
+"The class of protocols or devices that use the IP protocol to move data in a "
+"storage network. FCIP (Fibre Channel over Internet Protocol), iFCP (Internet "
+"Fibre Channel Protocol), and iSCSI (Internet SCSI) are all examples of IPS "
+"protocols."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1742
+#, no-c-format
+msgid "IQN (iSCSI qualified name)"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1744
+#, no-c-format
+msgid ""
+"A name format for iSCSI that uniquely identifies every device in the world "
+"(for example: <filename>iqn.5886.com.acme.tapedrive.sn‐a12345678</filename>)."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1752
+#, no-c-format
+msgid "ISID (initiator session identifier)"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1754
+#, no-c-format
+msgid ""
+"A 48‐bit number, generated by the initiator, that uniquely identifies a "
+"session between the initiator and the Target. This value is created during "
+"the login process, and is sent to the target with a Login PDU."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1763
+#, no-c-format
+msgid "MCS (multiple connections per session)"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1765
+#, no-c-format
+msgid ""
+"A part of the iSCSI specification that allows multiple TCP/IP connections "
+"between an initiator and a target."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1772
+#, no-c-format
+msgid "MPIO (multipath I/O)"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1774
+#, no-c-format
+msgid ""
+"A method by which data can take multiple redundant paths between a server "
+"and storage."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1781
+#, no-c-format
+msgid "network portal"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1783
+#, no-c-format
+msgid ""
+"The combination of an iSCSI Endpoint with an IP address plus a TCP "
+"(Transmission Control Protocol) port. TCP port 3260 is the port number for "
+"the iSCSI protocol, as defined by IANA (Internet Assigned Numbers Authority)."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1792
+#, no-c-format
+msgid "SAM (SCSI architectural model)"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1794
+#, no-c-format
+msgid ""
+"A document that describes the behavior of SCSI in general terms, allowing "
+"for different types of devices communicating over various media."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1802
+#, no-c-format
+msgid "target"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1804
+#, no-c-format
+msgid ""
+"The receiving end of an SCSI session, typically a device such as a disk "
+"drive, tape drive, or scanner."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1811
+#, no-c-format
+msgid "target group (TG)"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1813
+#, no-c-format
+msgid ""
+"A list of SCSI target ports that are all treated the same when creating "
+"views. Creating a view can help facilitate LUN (logical unit number) "
+"mapping. Each view entry specifies a target group, host group, and a LUN."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1822
+#, no-c-format
+msgid "target port"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1824
+#, no-c-format
+msgid "The combination of an iSCSI endpoint with one or more LUNs."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1830
+#, no-c-format
+msgid "target port group (TPG)"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1832
+#, no-c-format
+msgid ""
+"A list of IP addresses and TCP port numbers that determines which interfaces "
+"a specific iSCSI target will listen to."
+msgstr ""
+
+#. Tag: term
+#: storage_iscsi-lio.xml:1839
+#, no-c-format
+msgid "target session identifier (TSID)"
+msgstr ""
+
+#. Tag: para
+#: storage_iscsi-lio.xml:1841
+#, no-c-format
+msgid ""
+"A 16‐bit number, generated by the target, that uniquely identifies a session "
+"between the initiator and the target. This value is created during the login "
+"process, and is sent to the initiator with a Login Response PDU (protocol "
+"data units)."
+msgstr ""

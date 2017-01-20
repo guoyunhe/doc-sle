@@ -1,0 +1,503 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: yast2_ncurses.xml:10
+#, no-c-format
+msgid "&yast; in Text Mode"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: yast2_ncurses.xml:12
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: yast2_ncurses.xml:17 yast2_ncurses.xml:25 yast2_ncurses.xml:264
+#: yast2_ncurses.xml:277
+#, no-c-format
+msgid "&yast;"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_ncurses.xml:18 yast2_ncurses.xml:278
+#, no-c-format
+msgid "text mode"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:19
+#, no-c-format
+msgid ""
+"This section is intended for system administrators and experts who do not "
+"run an X server on their systems and depend on the text-based installation "
+"tool. It provides basic information about starting and operating &yast; in "
+"text mode."
+msgstr ""
+
+#. Tag: secondary
+#: yast2_ncurses.xml:26
+#, no-c-format
+msgid "ncurses"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:27
+#, no-c-format
+msgid ""
+"&yast; in text mode uses the ncurses library to provide an easy pseudo-"
+"graphical user interface. The ncurses library is installed by default. The "
+"minimum supported size of the terminal emulator in which to run &yast; is "
+"80x25 characters."
+msgstr ""
+
+#. Tag: title
+#: yast2_ncurses.xml:34
+#, no-c-format
+msgid "Main Window of &yast; in Text Mode"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:44
+#, no-c-format
+msgid ""
+"When you start &yast; in text mode, the &yast; control center appears (see "
+"<xref linkend=\"fig.yast2.ncurses\" xrefstyle=\"select:label nopage\"/>). "
+"The main window consists of three areas. The left frame features the "
+"categories to which the various modules belong. This frame is active when "
+"&yast; is started and therefore it is marked by a bold white border. The "
+"active category is selected. The right frame provides an overview of the "
+"modules available in the active category. The bottom frame contains the "
+"buttons for <guimenu>Help</guimenu> and <guimenu>Quit</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:54
+#, no-c-format
+msgid ""
+"When you start the &yast; control center, the category <guimenu>Software</"
+"guimenu> is selected automatically. Use <keycap function=\"down\"></keycap> "
+"and <keycap function=\"up\"></keycap> to change the category. To select a "
+"module from the category, activate the right frame with <keycap function="
+"\"right\"></keycap> and then use <keycap function=\"down\"></keycap> and "
+"<keycap function=\"up\"></keycap> to select the module. Keep the arrow keys "
+"pressed to scroll through the list of available modules. The selected module "
+"is highlighted. Press <keycap function=\"enter\"></keycap> to start the "
+"active module."
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:64
+#, no-c-format
+msgid ""
+"Various buttons or selection fields in the module contain a highlighted "
+"letter (yellow by default). Use <keycombo action=\"press\"><keycap function="
+"\"alt\"></keycap><keycap>highlighted_letter</keycap></keycombo> to select a "
+"button directly instead of navigating there with <keycap function=\"tab\"></"
+"keycap>. Exit the &yast; control center by pressing <keycombo action=\"press"
+"\"><keycap function=\"alt\"></keycap><keycap>Q</keycap></keycombo> or by "
+"selecting <guimenu>Quit</guimenu> and pressing <keycap function=\"enter\"></"
+"keycap>."
+msgstr ""
+
+#. Tag: title
+#: yast2_ncurses.xml:76
+#, no-c-format
+msgid "Refreshing &yast; Dialogs"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:77
+#, no-c-format
+msgid ""
+"If a &yast; dialog gets corrupted or distorted (for example, while resizing "
+"the window), press <keycombo action=\"press\"><keycap function=\"control\"></"
+"keycap><keycap>L</keycap></keycombo> to refresh and restore its contents."
+msgstr ""
+
+#. Tag: title
+#: yast2_ncurses.xml:86
+#, no-c-format
+msgid "Navigation in Modules"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:88
+#, no-c-format
+msgid ""
+"The following description of the control elements in the &yast; modules "
+"assumes that all function keys and <keycap function=\"alt\"></keycap> key "
+"combinations work and are not assigned to different global functions. Read "
+"<xref linkend=\"sec.yast.ncurses_tasten\"/> for information about possible "
+"exceptions."
+msgstr ""
+
+#. Tag: term
+#: yast2_ncurses.xml:98
+#, no-c-format
+msgid "Navigation among Buttons and Selection Lists"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:100
+#, no-c-format
+msgid ""
+"Use <keycap function=\"tab\"></keycap> to navigate among the buttons and "
+"frames containing selection lists. To navigate in reverse order, use "
+"<keycombo action=\"press\"> <keycap function=\"alt\"></keycap> <keycap "
+"function=\"tab\"></keycap> </keycombo> or <keycombo action=\"press\"> "
+"<keycap function=\"shift\"></keycap> <keycap function=\"tab\"></keycap> </"
+"keycombo> combinations."
+msgstr ""
+
+#. Tag: term
+#: yast2_ncurses.xml:111
+#, no-c-format
+msgid "Navigation in Selection Lists"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:113
+#, no-c-format
+msgid ""
+"Use the arrow keys (<keycap function=\"up\"></keycap> and <keycap function="
+"\"down\"></keycap>) to navigate among the individual elements in an active "
+"frame containing a selection list. If individual entries within a frame "
+"exceed its width, use <keycombo action=\"press\"><keycap function=\"shift"
+"\"></keycap> <keycap function=\"right\"></keycap></keycombo> or <keycombo "
+"action=\"press\"> <keycap function=\"shift\"></keycap> <keycap function="
+"\"left\"></keycap></keycombo> to scroll horizontally to the right and left. "
+"Alternatively, use <keycombo action=\"press\"> <keycap function=\"control"
+"\"></keycap> <keycap>E</keycap> </keycombo> or <keycombo action=\"press\"> "
+"<keycap function=\"control\"></keycap> <keycap>A</keycap> </keycombo>. This "
+"combination can also be used if using <keycap function=\"right\"></keycap> "
+"or <keycap function=\"left\"></keycap> results in changing the active frame "
+"or the current selection list, as in the control center."
+msgstr ""
+
+#. Tag: term
+#: yast2_ncurses.xml:132
+#, no-c-format
+msgid "Buttons, Radio Buttons, and Check Boxes"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:134
+#, no-c-format
+msgid ""
+"To select buttons with empty square brackets (check boxes) or empty "
+"parentheses (radio buttons), press <keycap function=\"space\"></keycap> or "
+"<keycap function=\"enter\"></keycap>. Alternatively, radio buttons and check "
+"boxes can be selected directly with <keycombo action=\"press\"> <keycap "
+"function=\"alt\"></keycap> <keycap>highlighted_letter</keycap></keycombo>. "
+"In this case, you do not need to confirm with <keycap function=\"enter\"></"
+"keycap>. If you navigate to an item with <keycap function=\"tab\"></keycap>, "
+"press <keycap function=\"enter\"></keycap> to execute the selected action or "
+"activate the respective menu item."
+msgstr ""
+
+#. Tag: term
+#: yast2_ncurses.xml:148
+#, no-c-format
+msgid "Function Keys"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:150
+#, no-c-format
+msgid ""
+"The F keys (<keycap>F1</keycap> through <keycap>F12</keycap>) enable quick "
+"access to the various buttons. Available function key combinations "
+"(<literal>F<replaceable>x</replaceable></literal>) are shown in the bottom "
+"line of the &yast; screen. Which function keys are actually mapped to which "
+"buttons depend on the active &yast; module, because the different modules "
+"offer different buttons (<guimenu>Details</guimenu>, <guimenu>Info</"
+"guimenu>, <guimenu>Add</guimenu>, <guimenu>Delete</guimenu>, etc.). Use "
+"<keycap>F10</keycap> for <guimenu>Accept</guimenu>, <guimenu>OK</guimenu>, "
+"<guimenu>Next</guimenu>, and <guimenu>Finish</guimenu>. Press <keycap>F1</"
+"keycap> to access the &yast; help."
+msgstr ""
+
+#. Tag: term
+#: yast2_ncurses.xml:166
+#, no-c-format
+msgid "Using Navigation Tree in ncurses Mode"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:168
+#, no-c-format
+msgid ""
+"Some &yast; modules use a navigation tree in the left part of the window to "
+"select configuration dialogs. Use the arrow keys (<keycap function=\"up\"></"
+"keycap> and <keycap function=\"down\"></keycap>) to navigate in the tree. "
+"Use <keycap function=\"space\"></keycap> to open or close tree items. In "
+"ncurses mode, <keycap function=\"enter\"></keycap> must be pressed after a "
+"selection in the navigation tree to show the selected dialog. This is an "
+"intentional behavior to save time consuming redraws when browsing through "
+"the navigation tree."
+msgstr ""
+
+#. Tag: term
+#: yast2_ncurses.xml:181
+#, no-c-format
+msgid "Selecting Software in the Software Installation Module"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:183
+#, no-c-format
+msgid ""
+"Use the filters on the left side to limit the amount of displayed packages. "
+"Installed packages are marked with the letter <literal>i</literal>. To "
+"change the status of a package, press <keycap function=\"space\"></keycap> "
+"or <keycap function=\"enter\"></keycap>. Alternatively, use the "
+"<guimenu>Actions</guimenu> menu to select the needed status change (install, "
+"delete, update, taboo or lock)."
+msgstr ""
+
+#. Tag: title
+#: yast2_ncurses.xml:196
+#, no-c-format
+msgid "The Software Installation Module"
+msgstr ""
+
+#. Tag: title
+#: yast2_ncurses.xml:208
+#, no-c-format
+msgid "Restriction of Key Combinations"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:210
+#, no-c-format
+msgid ""
+"If your window manager uses global <keycap function=\"alt\"></keycap> "
+"combinations, the <keycap function=\"alt\"></keycap> combinations in &yast; "
+"might not work. Keys like <keycap function=\"alt\"></keycap> or <keycap "
+"function=\"shift\"></keycap> can also be occupied by the settings of the "
+"terminal."
+msgstr ""
+
+#. Tag: term
+#: yast2_ncurses.xml:219
+#, no-c-format
+msgid ""
+"Replacing <keycap function=\"alt\"></keycap> with <keycap function=\"escape"
+"\"></keycap>"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:222
+#, no-c-format
+msgid ""
+"<keycap function=\"alt\"></keycap> shortcuts can be executed with <keycap "
+"function=\"escape\"></keycap> instead of <keycap function=\"alt\"></keycap>. "
+"For example, <keycombo action=\"seq\"> <keycap function=\"escape\"></"
+"keycap><keycap>H</keycap></keycombo> replaces <keycombo action=\"press\"> "
+"<keycap function=\"alt\"></keycap><keycap>H</keycap></keycombo>. (First "
+"press <keycap function=\"escape\"></keycap>, <emphasis>then</emphasis> press "
+"<keycap>H</keycap>.)"
+msgstr ""
+
+#. Tag: term
+#: yast2_ncurses.xml:235
+#, no-c-format
+msgid ""
+"Backward and Forward Navigation with <keycombo action=\"press\"><keycap "
+"function=\"control\"></keycap><keycap>F</keycap></keycombo> and <keycombo "
+"action=\"press\"><keycap function=\"control\"></keycap><keycap>B</keycap></"
+"keycombo>"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:238
+#, no-c-format
+msgid ""
+"If the <keycap function=\"alt\"></keycap> and <keycap function=\"shift\"></"
+"keycap> combinations are occupied by the window manager or the terminal, use "
+"the combinations <keycombo action=\"press\"> <keycap function=\"control\"></"
+"keycap> <keycap>F</keycap></keycombo> (forward) and <keycombo action=\"press"
+"\"> <keycap function=\"control\"></keycap><keycap>B</keycap></keycombo> "
+"(backward) instead."
+msgstr ""
+
+#. Tag: term
+#: yast2_ncurses.xml:249
+#, no-c-format
+msgid "Restriction of Function Keys"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:251
+#, no-c-format
+msgid ""
+"The F keys are also used for functions. Certain function keys might be "
+"occupied by the terminal and may not be available for &yast;. However, the "
+"<keycap function=\"alt\"></keycap> key combinations and function keys should "
+"always be fully available on a pure text console."
+msgstr ""
+
+#. Tag: title
+#: yast2_ncurses.xml:262
+#, no-c-format
+msgid "&yast; Command Line Options"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_ncurses.xml:266
+#, no-c-format
+msgid "command line"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:268
+#, no-c-format
+msgid ""
+"Besides the text mode interface, &yast; provides a pure command line "
+"interface. To get a list of &yast; command line options, enter:"
+msgstr ""
+
+#. Tag: screen
+#: yast2_ncurses.xml:273
+#, no-c-format
+msgid "yast -h"
+msgstr ""
+
+#. Tag: title
+#: yast2_ncurses.xml:276
+#, no-c-format
+msgid "Starting the Individual Modules"
+msgstr ""
+
+#. Tag: tertiary
+#: yast2_ncurses.xml:279
+#, no-c-format
+msgid "modules"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:280
+#, no-c-format
+msgid ""
+"To save time, the individual &yast; modules can be started directly. To "
+"start a module, enter:"
+msgstr ""
+
+#. Tag: screen
+#: yast2_ncurses.xml:284
+#, no-c-format
+msgid "yast &lt;module_name&gt;"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:285
+#, no-c-format
+msgid ""
+"View a list of all module names available on your system with <command>yast -"
+"l</command> or <command>yast --list</command>. Start the network module, for "
+"example, with <command>yast lan</command>."
+msgstr ""
+
+#. Tag: title
+#: yast2_ncurses.xml:293
+#, no-c-format
+msgid "Installing Packages from the Command Line"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:294
+#, no-c-format
+msgid ""
+"If you know a package name and the package is provided by any of your active "
+"installation repositories, you can use the command line option <option>-i</"
+"option> to install the package:"
+msgstr ""
+
+#. Tag: screen
+#: yast2_ncurses.xml:299
+#, no-c-format
+msgid "yast -i &lt;package_name&gt;"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:300
+#, no-c-format
+msgid "<para>or</para>"
+msgstr ""
+
+#. Tag: screen
+#: yast2_ncurses.xml:303
+#, no-c-format
+msgid "yast --install &lt;package_name&gt;"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:304
+#, no-c-format
+msgid ""
+"<replaceable>package_name</replaceable> can be a single short package name, "
+"for example <systemitem class=\"resource\">gvim</systemitem>, which is "
+"installed with dependency checking, or the full path to an RPM package, "
+"which is installed without dependency checking."
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:310
+#, no-c-format
+msgid ""
+"If you need a command line based software management utility with "
+"functionality beyond what &yast; provides, consider using Zypper. This "
+"utility uses the same software management library that is also the "
+"foundation for the &yast; package manager. The basic usage of Zypper is "
+"covered in <xref linkend=\"sec.zypper\"/>."
+msgstr ""
+
+#. Tag: title
+#: yast2_ncurses.xml:320
+#, no-c-format
+msgid "Command Line Parameters of the &yast; Modules"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:321
+#, no-c-format
+msgid ""
+"To use &yast; functionality in scripts, &yast; provides command line support "
+"for individual modules. Not all modules have command line support. To "
+"display the available options of a module, enter:"
+msgstr ""
+
+#. Tag: screen
+#: yast2_ncurses.xml:326
+#, no-c-format
+msgid "yast &lt;module_name&gt; help"
+msgstr ""
+
+#. Tag: para
+#: yast2_ncurses.xml:327
+#, no-c-format
+msgid ""
+"If a module does not provide command line support, the module is started in "
+"text mode and the following message appears:"
+msgstr ""
+
+#. Tag: screen
+#: yast2_ncurses.xml:331
+#, no-c-format
+msgid "This &yast; module does not support the command line interface."
+msgstr ""

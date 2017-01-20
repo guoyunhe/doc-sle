@@ -1,0 +1,627 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: apparmor_profiles_yast.xml:9
+#, no-c-format
+msgid "Building and Managing Profiles with &yast;"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:16
+#, no-c-format
+msgid ""
+"&yast; provides a basic way to build profiles and manage &aareg; profiles. "
+"It provides two interfaces: a graphical one and a text-based one. The text-"
+"based interface consumes less resources and bandwidth, making it a better "
+"choice for remote administration, or for times when a local graphical "
+"environment is inconvenient. Although the interfaces have differing "
+"appearances, they offer the same functionality in similar ways. Another "
+"alternative is to use &aa; commands, which can control &aa; from a terminal "
+"window or through remote connections. The command line tools are described "
+"in <xref linkend=\"cha.apparmor.commandline\"/>."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:27
+#, no-c-format
+msgid ""
+"Start &yast; from the main menu and enter your &rootuser; password when "
+"prompted for it. Alternatively, start &yast; by opening a terminal window, "
+"logging in as &rootuser;, and entering <command>yast2</command> for the "
+"graphical mode or <command>yast</command> for the text-based mode."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:33
+#, no-c-format
+msgid ""
+"In the <guimenu>Security and Users</guimenu> section, there is an "
+"<guimenu>&aa; Configuration</guimenu> icon. Click it to launch the &aa; "
+"&yast; module."
+msgstr ""
+
+#. Tag: title
+#: apparmor_profiles_yast.xml:39
+#, no-c-format
+msgid "Manually Adding a Profile"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:41
+#, no-c-format
+msgid ""
+"&aa; enables you to create an &aa; profile by manually adding entries into "
+"the profile. Select the application for which to create a profile, then add "
+"entries."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:49
+#, no-c-format
+msgid ""
+"Start &yast;, select <guimenu>&aa; Configuration</guimenu>, and click "
+"<guimenu>Manually Add Profile</guimenu> in the main window."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:55
+#, no-c-format
+msgid ""
+"Browse your system to find the application for which to create a profile."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:61
+#, no-c-format
+msgid ""
+"When you find the application, select it and click <guimenu>Open</guimenu>. "
+"A basic, empty profile appears in the <guimenu>&aa; Profile Dialog</guimenu> "
+"window."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:68
+#, no-c-format
+msgid ""
+"In <guimenu>&aa; Profile Dialog</guimenu>, add, edit, or delete &aa; profile "
+"entries by clicking the corresponding buttons and referring to <xref "
+"xrefstyle=\"HeadingOnPage\" linkend=\"sec.apparmor.yast.edit.add\"/>, <xref "
+"xrefstyle=\"HeadingOnPage\" linkend=\"sec.apparmor.yast.edit.edit\"/>, or "
+"<xref xrefstyle=\"HeadingOnPage\" linkend=\"sec.apparmor.yast.edit.del\"/>."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:79
+#, no-c-format
+msgid "When finished, click <guimenu>Done</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apparmor_profiles_yast.xml:86
+#, no-c-format
+msgid "Editing Profiles"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:89
+#, no-c-format
+msgid ""
+"&yast; offers basic manipulation for &aa; profiles, such as creating or "
+"editing. However, the most straightforward way to edit an &aa; profile is to "
+"use a text editor such as <command>vi</command>:"
+msgstr ""
+
+#. Tag: screen
+#: apparmor_profiles_yast.xml:95
+#, no-c-format
+msgid "&prompt.root;vi /etc/apparmor.d/usr.sbin.httpd2-prefork"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:99
+#, no-c-format
+msgid ""
+"The <command>vi</command> editor also includes syntax (error) highlighting "
+"and syntax error highlighting, which visually warns you when the syntax of "
+"the edited &aa; profile is wrong."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:106
+#, no-c-format
+msgid ""
+"&aa; enables you to edit &aa; profiles manually by adding, editing, or "
+"deleting entries. To edit a profile, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:113 apparmor_profiles_yast.xml:372
+#, no-c-format
+msgid ""
+"Start &yast;, select <guimenu>&aa; Configuration</guimenu>, and click "
+"<guimenu>Manage Existing Profiles</guimenu> in the main window."
+msgstr ""
+
+#. Tag: phrase
+#: apparmor_profiles_yast.xml:119
+#, no-c-format
+msgid "Choose the profile to edit"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:131
+#, no-c-format
+msgid "From the list of profiled applications, select the profile to edit."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:136
+#, no-c-format
+msgid ""
+"Click <guimenu>Edit</guimenu>. The <guimenu>&aa; Profile Dialog</guimenu> "
+"window displays the profile."
+msgstr ""
+
+#. Tag: phrase
+#: apparmor_profiles_yast.xml:142
+#, no-c-format
+msgid "&aa; profile dialog"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:154
+#, no-c-format
+msgid ""
+"In the <guimenu>&aa; Profile Dialog</guimenu> window, add, edit, or delete "
+"&aa; profile entries by clicking the corresponding buttons and referring to "
+"<xref xrefstyle=\"HeadingOnPage\" linkend=\"sec.apparmor.yast.edit.add\"/>, "
+"<xref xrefstyle=\"HeadingOnPage\" linkend=\"sec.apparmor.yast.edit.edit\"/>, "
+"or <xref xrefstyle=\"HeadingOnPage\" linkend=\"sec.apparmor.yast.edit.del\"/"
+">."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:165
+#, no-c-format
+msgid "When you are finished, click <guimenu>Done</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:170
+#, no-c-format
+msgid ""
+"In the pop-up that appears, click <guimenu>Yes</guimenu> to confirm your "
+"changes to the profile and reload the &aa; profile set."
+msgstr ""
+
+#. Tag: title
+#: apparmor_profiles_yast.xml:178
+#, no-c-format
+msgid "Syntax Checking in &aa;"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:179
+#, no-c-format
+msgid ""
+"&aa; contains a syntax check that notifies you of any syntax errors in "
+"profiles you are trying to process with the &yast; &aa; tools. If an error "
+"occurs, edit the profile manually as &rootuser; and reload the profile set "
+"with <command>systemctl reload apparmor</command>."
+msgstr ""
+
+#. Tag: title
+#: apparmor_profiles_yast.xml:189
+#, no-c-format
+msgid "Adding an Entry"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:190
+#, no-c-format
+msgid ""
+"The <guimenu>Add Entry</guimenu> button in the <guimenu>&aa; Profile Window</"
+"guimenu> lists types of entries you can add to the &aa; profile."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:195
+#, no-c-format
+msgid "From the list, select one of the following:"
+msgstr ""
+
+#. Tag: term
+#: apparmor_profiles_yast.xml:200
+#, no-c-format
+msgid "File"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:202
+#, no-c-format
+msgid ""
+"In the pop-up window, specify the absolute path of a file, including the "
+"type of access permitted. When finished, click <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:207
+#, no-c-format
+msgid ""
+"You can use globbing if necessary. For globbing information, refer to <xref "
+"xrefstyle=\"SectTitleOnPage\" linkend=\"sec.apparmor.profiles.glob\"/>. For "
+"file access permission information, refer to <xref xrefstyle="
+"\"SectTitleOnPage\" linkend=\"sec.apparmor.profiles.perm\"/>."
+msgstr ""
+
+#. Tag: phrase
+#: apparmor_profiles_yast.xml:215
+#, no-c-format
+msgid "Select a file to add"
+msgstr ""
+
+#. Tag: term
+#: apparmor_profiles_yast.xml:228
+#, no-c-format
+msgid "Directory"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:230
+#, no-c-format
+msgid ""
+"In the pop-up window, specify the absolute path of a directory, including "
+"the type of access permitted. You can use globbing if necessary. When "
+"finished, click <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:235
+#, no-c-format
+msgid ""
+"For globbing information, refer to <xref xrefstyle=\"SectTitleOnPage\" "
+"linkend=\"sec.apparmor.profiles.glob\"/>. For file access permission "
+"information, refer to <xref xrefstyle=\"SectTitleOnPage\" linkend=\"sec."
+"apparmor.profiles.perm\"/>."
+msgstr ""
+
+#. Tag: phrase
+#: apparmor_profiles_yast.xml:243
+#, no-c-format
+msgid "Select a directory to add"
+msgstr ""
+
+#. Tag: term
+#: apparmor_profiles_yast.xml:257
+#, no-c-format
+msgid "Network Rule"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:259
+#, no-c-format
+msgid ""
+"In the pop-up window, select the appropriate network family and the socket "
+"type. For more information, refer to <xref xrefstyle=\"SectTitleOnPage\" "
+"linkend=\"sec.apparmor.profiles.nac\"/>."
+msgstr ""
+
+#. Tag: phrase
+#: apparmor_profiles_yast.xml:266 apparmor_profiles_yast.xml:290
+#, no-c-format
+msgid "Select capabilities"
+msgstr ""
+
+#. Tag: term
+#: apparmor_profiles_yast.xml:279
+#, no-c-format
+msgid "Capability"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:281
+#, no-c-format
+msgid ""
+"In the pop-up window, select the appropriate capabilities. These are "
+"statements that enable each of the 32 POSIX.1e capabilities. Refer to <xref "
+"xrefstyle=\"SectTitleOnPage\" linkend=\"sec.apparmor.profiles.capabilities\"/"
+"> for more information about capabilities. When finished making your "
+"selections, click <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: term
+#: apparmor_profiles_yast.xml:303
+#, no-c-format
+msgid "Include File"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:305
+#, no-c-format
+msgid ""
+"In the pop-up window, browse to the files to use as includes. Includes are "
+"directives that pull in components of other &aa; profiles to simplify "
+"profiles. For more information, refer to <xref xrefstyle=\"SectTitleOnPage\" "
+"linkend=\"sec.apparmor.profiles.includes\"/>."
+msgstr ""
+
+#. Tag: term
+#: apparmor_profiles_yast.xml:314
+#, no-c-format
+msgid "<term>Hat</term>"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:316
+#, no-c-format
+msgid ""
+"In the pop-up window, specify the name of the subprofile (<emphasis>hat</"
+"emphasis>) to add to your current profile and click <guimenu>Create Hat</"
+"guimenu>. For more information, refer to <xref linkend=\"cha.apparmor.hat\"/"
+">."
+msgstr ""
+
+#. Tag: title
+#: apparmor_profiles_yast.xml:338
+#, no-c-format
+msgid "Editing an Entry"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:339
+#, no-c-format
+msgid ""
+"When you select <guimenu>Edit Entry</guimenu>, a pop-up window opens. From "
+"here, edit the selected entry."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:343
+#, no-c-format
+msgid ""
+"In the pop-up window, edit the entry you need to modify. You can use "
+"globbing if necessary. When finished, click <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:347
+#, no-c-format
+msgid ""
+"For globbing information, refer to <xref linkend=\"sec.apparmor.profiles.glob"
+"\"/>. For access permission information, refer to <xref linkend=\"sec."
+"apparmor.profiles.perm\"/>."
+msgstr ""
+
+#. Tag: title
+#: apparmor_profiles_yast.xml:355
+#, no-c-format
+msgid "Deleting an Entry"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:356
+#, no-c-format
+msgid ""
+"To delete an entry in a given profile, select <guimenu>Delete Entry</"
+"guimenu>. &aa; removes the selected profile entry."
+msgstr ""
+
+#. Tag: title
+#: apparmor_profiles_yast.xml:363
+#, no-c-format
+msgid "Deleting a Profile"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:365
+#, no-c-format
+msgid ""
+"&aa; enables you to delete an &aa; profile manually. Simply select the "
+"application for which to delete a profile then delete it as follows:"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:378
+#, no-c-format
+msgid "Select the profile to delete."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:383
+#, no-c-format
+msgid "Click <guimenu>Delete</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:388
+#, no-c-format
+msgid ""
+"In the pop-up that opens, click <guimenu>Yes</guimenu> to delete the profile "
+"and reload the &aa; profile set."
+msgstr ""
+
+#. Tag: title
+#: apparmor_profiles_yast.xml:396
+#, no-c-format
+msgid "Managing &aa;"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:398
+#, no-c-format
+msgid ""
+"You can change the status of &aa; by enabling or disabling it. Enabling &aa; "
+"protects your system from potential program exploitation. Disabling &aa;, "
+"even if your profiles have been set up, removes protection from your system. "
+"To change the status of &aa;, start &yast;, select <guimenu>&aa; "
+"Configuration</guimenu>, and click <guimenu>Settings</guimenu> in the main "
+"window."
+msgstr ""
+
+#. Tag: phrase
+#: apparmor_profiles_yast.xml:409
+#, no-c-format
+msgid "The &aa; control panel"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:421
+#, no-c-format
+msgid ""
+"To change the status of &aa;, continue as described in <xref xrefstyle="
+"\"HeadingOnPage\" linkend=\"sec.apparmor.yast.manage.status\"/>. To change "
+"the mode of individual profiles, continue as described in <xref linkend="
+"\"sec.apparmor.yast.manage.profmodes\"/>."
+msgstr ""
+
+#. Tag: title
+#: apparmor_profiles_yast.xml:429
+#, no-c-format
+msgid "Changing &aa; Status"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:430
+#, no-c-format
+msgid ""
+"When you change the status of &aa;, set it to enabled or disabled. When &aa; "
+"is enabled, it is installed, running, and enforcing the &aa; security "
+"policies."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:437 apparmor_profiles_yast.xml:493
+#, no-c-format
+msgid ""
+"Start &yast;, select <guimenu>&aa; Configuration</guimenu>, and click "
+"<guimenu>Settings</guimenu> in the main window."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:443
+#, no-c-format
+msgid ""
+"Enable &aa; by checking <guimenu>Enable &aa;</guimenu> or disable &aa; by "
+"deselecting it."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:449
+#, no-c-format
+msgid ""
+"Click <guimenu>Done</guimenu> in the <guimenu>&aa; Configuration</guimenu> "
+"window."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:456
+#, no-c-format
+msgid ""
+"You always need to restart running programs to apply the profiles to them."
+msgstr ""
+
+#. Tag: title
+#: apparmor_profiles_yast.xml:464
+#, no-c-format
+msgid "Changing the Mode of Individual Profiles"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:465
+#, no-c-format
+msgid ""
+"&aa; can apply profiles in two different modes. In <emphasis>complain</"
+"emphasis> mode, violations of &aa; profile rules, such as the profiled "
+"program accessing files not permitted by the profile, are detected. The "
+"violations are permitted, but also logged. This mode is convenient for "
+"developing profiles and is used by the &aa; tools for generating profiles. "
+"Loading a profile in <emphasis>enforce</emphasis> mode enforces the policy "
+"defined in the profile, and reports policy violation attempts to <systemitem "
+"class=\"daemon\">rsyslogd</systemitem> (or <systemitem class=\"daemon"
+"\">auditd</systemitem> or <systemitem class=\"daemon\">journalctl</"
+"systemitem>, depending on system configuration)."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:479
+#, no-c-format
+msgid ""
+"The <guimenu>Profile Mode Configuration</guimenu> dialog allows you to view "
+"and edit the mode of currently loaded &aa; profiles. This feature is useful "
+"for determining the status of your system during profile development. During "
+"systemic profiling (see <xref linkend=\"sec.apparmor.commandline.profiling."
+"systemic\"/>), you can use this tool to adjust and monitor the scope of the "
+"profiles for which you are learning behavior."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:488
+#, no-c-format
+msgid "To edit an application's profile mode, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:499
+#, no-c-format
+msgid ""
+"In the <guimenu>Configure Profile Modes</guimenu> section, select "
+"<guimenu>Configure</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:505
+#, no-c-format
+msgid "Select the profile for which to change the mode."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:510
+#, no-c-format
+msgid ""
+"Select <guimenu>Toggle Mode</guimenu> to set this profile to "
+"<emphasis>complain</emphasis> mode or to <emphasis>enforce</emphasis> mode."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:517
+#, no-c-format
+msgid "Apply your settings and leave &yast; with <guimenu>Done</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:522
+#, no-c-format
+msgid ""
+"To change the mode of all profiles, use <guimenu>Set All to Enforce</"
+"guimenu> or <guimenu>Set All to Complain</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apparmor_profiles_yast.xml:527
+#, no-c-format
+msgid "Listing the Profiles Available"
+msgstr ""
+
+#. Tag: para
+#: apparmor_profiles_yast.xml:528
+#, no-c-format
+msgid ""
+"By default, only active profiles are listed (any profile that has a matching "
+"application installed on your system). To set up a profile before installing "
+"the respective application, click <guimenu>Show All Profiles</guimenu> and "
+"select the profile to configure from the list that appears."
+msgstr ""

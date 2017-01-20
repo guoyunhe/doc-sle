@@ -1,0 +1,789 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: image_kiwi.xml:65
+#, no-c-format
+msgid "&kiwi;"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:68
+#, no-c-format
+msgid ""
+"&kiwi; is a system for creating operating system images. An image is a "
+"directory with a file containing the operating system, its applications and "
+"configurations, the file system structure of the OS, possible additional "
+"metadata, and (depending on the image type) also disk geometry and partition "
+"table data. With &kiwi; you can create LiveCDs and LiveDVDs, USB sticks, "
+"virtual disk to play in full virtual systems like VMware, &xen; images for "
+"paravirtualization in a hypervisor, and a PXE environment to boot from "
+"network."
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:146
+#, no-c-format
+msgid "Prerequisites for &kiwi;"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:148
+#, no-c-format
+msgid "To build images with &kiwi;, you need the following preconditions:"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:154
+#, no-c-format
+msgid "Free sufficient disk space for the operation."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:159
+#, no-c-format
+msgid ""
+"&kiwi; is split into several packages, targeted to different image types. In "
+"any case, you need the base package <systemitem class=\"resource\">kiwi</"
+"systemitem>. Depending on your target image, you need the following packages:"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:170
+#, no-c-format
+msgid "Image Type"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:175
+#, no-c-format
+msgid "Package Name"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:184
+#, no-c-format
+msgid "Installation Media"
+msgstr ""
+
+#. Tag: systemitem
+#: image_kiwi.xml:190
+#, no-c-format
+msgid "kiwi-desc-oemboot"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:196
+#, no-c-format
+msgid "Virtualization"
+msgstr ""
+
+#. Tag: systemitem
+#: image_kiwi.xml:202
+#, no-c-format
+msgid "kiwi-desc-xenboot"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:208
+#, no-c-format
+msgid "USB Sticks"
+msgstr ""
+
+#. Tag: systemitem
+#: image_kiwi.xml:214
+#, no-c-format
+msgid "kiwi-desc-usbboot"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:220
+#, no-c-format
+msgid "Network Client"
+msgstr ""
+
+#. Tag: systemitem
+#: image_kiwi.xml:226
+#, no-c-format
+msgid "kiwi-desc-netboot"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:235
+#, no-c-format
+msgid ""
+"Install the <systemitem class=\"resource\">kiwi-doc</systemitem> package. "
+"You can find some example configurations to get an idea about structure and "
+"content."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:242
+#, no-c-format
+msgid ""
+"Know the &kiwi; configuration file and its structure. It is based on a "
+"RELAX&nbsp;NG schema and documented in the <systemitem class=\"resource"
+"\">kiwi</systemitem> package under <filename>/usr/share/doc/packages/kiwi/"
+"kiwi.html</filename>. You need this document, if you want to create the "
+"configuration file from scratch or when you want to insert elements or "
+"attributes."
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:254
+#, no-c-format
+msgid "Knowing &kiwi;&rsquo;s Build Process"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:256
+#, no-c-format
+msgid "The building process of &kiwi; is separated into three steps:"
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:263
+#, no-c-format
+msgid "Physical Extend (Preparation)"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:264
+#, no-c-format
+msgid ""
+"This stage prepares the content of your new file system. During this step "
+"the root directory is created, you determine which packages are installed on "
+"your image and which user configuration files are included."
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:274
+#, no-c-format
+msgid "Logical Extend (Creation)"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:275
+#, no-c-format
+msgid ""
+"This stage requires a successful preparation step. The logical extend step "
+"creates the operating system image based on the first step."
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:283
+#, no-c-format
+msgid "Deployment"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:284
+#, no-c-format
+msgid ""
+"The resulting image type can be deployed with different methods like "
+"installed on a hard disk or played by a virtualization system (VMware, Qemu, "
+"VirtualBox)."
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:294
+#, no-c-format
+msgid "Image Description"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:296
+#, no-c-format
+msgid ""
+"&kiwi; needs an image description to build an image type. The image "
+"description is a directory which contains at least a file <filename>config."
+"xml</filename>, or alternatively with the extension <filename>*.kiwi</"
+"filename>."
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:304
+#, no-c-format
+msgid "Contents of Image Description"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:305
+#, no-c-format
+msgid ""
+"The following table contains additional optional information. However, most "
+"of this information is mandatory for the later functionality of the "
+"operating system:"
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:311
+#, no-c-format
+msgid "Additional Files and Directories For Image Description"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:316
+#, no-c-format
+msgid "File/Directory"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:321
+#, no-c-format
+msgid "Description"
+msgstr ""
+
+#. Tag: filename
+#: image_kiwi.xml:331
+#, no-c-format
+msgid "config/"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:335
+#, no-c-format
+msgid ""
+"optional subdirectory. Contains Bash scripts which are executed after the "
+"installation of all the image packages."
+msgstr ""
+
+#. Tag: filename
+#: image_kiwi.xml:344
+#, no-c-format
+msgid "config.sh"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:348
+#, no-c-format
+msgid "optional configuration script while creating the physical extend"
+msgstr ""
+
+#. Tag: filename
+#: image_kiwi.xml:356
+#, no-c-format
+msgid "config.xml"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:360
+#, no-c-format
+msgid ""
+"configuration file for each image description, explained in <xref linkend="
+"\"sec.kiwi.config.xml\" xrefstyle=\"select:label\"/>"
+msgstr ""
+
+#. Tag: filename
+#: image_kiwi.xml:369
+#, no-c-format
+msgid "config-cdroot.tgz"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:373
+#, no-c-format
+msgid "archive, only used for ISO images"
+msgstr ""
+
+#. Tag: filename
+#: image_kiwi.xml:381
+#, no-c-format
+msgid "config-cdroot.sh"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:385
+#, no-c-format
+msgid "manipulate extracted data from <filename>config-cdroot.tgz</filename>"
+msgstr ""
+
+#. Tag: filename
+#: image_kiwi.xml:394
+#, no-c-format
+msgid "config-yast-autoyast.xml"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:398
+#, no-c-format
+msgid "configuration file created by Auto&yast;"
+msgstr ""
+
+#. Tag: filename
+#: image_kiwi.xml:406
+#, no-c-format
+msgid "config-yast-firstboot.xml"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:410
+#, no-c-format
+msgid "configuration file for controlling the &yast; firstboot service"
+msgstr ""
+
+#. Tag: filename
+#: image_kiwi.xml:418
+#, no-c-format
+msgid "images.sh"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:422
+#, no-c-format
+msgid "optional configuration script while creating the preparation step"
+msgstr ""
+
+#. Tag: filename
+#: image_kiwi.xml:430
+#, no-c-format
+msgid "root/"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:434
+#, no-c-format
+msgid ""
+"contains other directories, special files, and scripts which are changed "
+"<emphasis>after</emphasis> the installation of all image packages"
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:447
+#, no-c-format
+msgid "The <filename>config.xml</filename> File"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:448
+#, no-c-format
+msgid ""
+"All information about an image description is stored in the central "
+"configuration XML file <filename>config.xml</filename>. Each time &kiwi; is "
+"executed, <filename>config.xml</filename> is validated against an RELAX&nbsp;"
+"NG schema (see <link xlink:href=\"http://www.relaxng.org\"></link> for more "
+"information about this schema language). Therefore, it is recommended to use "
+"an adequate XML editor with RELAX&nbsp;NG support or to use the "
+"documentation about the schema in the HTML file <filename>/usr/share/doc/"
+"packages/kiwi/schema/kiwi.xsd.html</filename>."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:459
+#, no-c-format
+msgid "The configuration file consists of several parts:"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:465
+#, no-c-format
+msgid ""
+"some description about the author, contact information, and a short "
+"explanation."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:472
+#, no-c-format
+msgid "preferences option needed for the logical extent stage."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:478
+#, no-c-format
+msgid ""
+"information about the users, their name, their home directories, and their "
+"passwords."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:485
+#, no-c-format
+msgid "links to repositories."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:491
+#, no-c-format
+msgid "a list of packages that are used for the definied image type."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:496
+#, no-c-format
+msgid ""
+"and other less important information which can be viewed in the above HTML "
+"file of the RELAX&nbsp;NG schema documentation."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:502
+#, no-c-format
+msgid "A skeleton of the file is shown in the following example:"
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:506
+#, no-c-format
+msgid "&kiwi; Configuration File"
+msgstr ""
+
+#. Tag: screen
+#: image_kiwi.xml:507
+#, no-c-format
+msgid ""
+"&lt;image schemeversion=\"2.0\" name=\"...\"&gt; <co xml:id=\"co.kiwi.config."
+"image\"/>\n"
+"  &lt;description type=\"system\"&gt; <co xml:id=\"co.kiwi.config.description"
+"\"/>\n"
+"    &lt;author&gt;...&lt;/author&gt;\n"
+"    &lt;contact&gt;...&lt;/contact&gt;\n"
+"    &lt;specification&gt;...&lt;/specification&gt;\n"
+"  &lt;/description&gt;<!--\n"
+"  &lt;profiles> <co id=\"co.kiwi.config.profiles\"/>\n"
+"    &lt;profile name=\"...\" description=\"...\"/>\n"
+"    &lt;&#x21;&#x2d;&#x2d; List of profiles reduced &#x2d;&#x2d;&gt;\n"
+"  &lt;/profiles>-->\n"
+"  &lt;preferences&gt; <co xml:id=\"co.kiwi.config.preferences\"/>\n"
+"    &lt;type primary=\"true\" boot=\"...\" flags=\"...\"&gt;iso&lt;/"
+"type&gt;\n"
+"    &lt;type boot=\"...\" filesystem=\"ext3\" format=\"vmdk\"&gt;vmx&lt;/"
+"type&gt;\n"
+"    &lt;type boot=\"...\" filesystem=\"ext3\"&gt;xen&lt;/type&gt;\n"
+"    &lt;type boot=\"...\" filesystem=\"squashfs\" flags=\"unified\"&gt;"
+"oem&lt;/type&gt;\n"
+"    &lt;version&gt;2.7.0&lt;/version&gt;\n"
+"    &lt;size unit=\"M\"&gt;780&lt;/size&gt;\n"
+"    &lt;packagemanager&gt;zypper&lt;/packagemanager&gt;\n"
+"    &lt;rpm-check-signatures&gt;False&lt;/rpm-check-signatures&gt;\n"
+"    &lt;rpm-force&gt;False&lt;/rpm-force&gt;\n"
+"    &lt;locale&gt;en_US.UTF-8&lt;/locale&gt;\n"
+"    &lt;oem-swap&gt;no&lt;/oem-swap&gt;\n"
+"    &lt;oem-boot-title&gt;USB&lt;/oem-boot-title&gt;\n"
+"  &lt;/preferences&gt;\n"
+"  &lt;users group=\"users\"&gt; <co xml:id=\"co.kiwi.config.users\"/>\n"
+"    &lt;user name=\"root\" pwd=\"\" home=\"/root\"/&gt;\n"
+"  &lt;/users&gt;\n"
+"  &lt;repository type=\"rpm-md\"&gt; <co xml:id=\"co.kiwi.config.repository"
+"\"/>\n"
+"    &lt;source path=\"/home/rpmdir\"/&gt;\n"
+"  &lt;/repository&gt;\n"
+"  &lt;packages type=\"image\" patternPackageType=\"onlyRequired\"&gt; <co "
+"xml:id=\"co.kiwi.config.packages\"/>\n"
+"    &lt;package name=\"yast2-live-installer\"/&gt;\n"
+"    &lt;package name=\"pam\"/&gt;\n"
+"    &lt;!-- List of packages reduced --&gt;\n"
+"  &lt;/packages&gt;<!--\n"
+"  &lt;split> <co id=\"co.kiwi.config.\"/>\n"
+"    &lt;temporary>\n"
+"      &lt;file name=\"/var\"/>\n"
+"      &lt;file name=\"/var/*\"/>\n"
+"      &lt;file name=\"/etc\"/>\n"
+"      &lt;file name=\"/etc/*\"/>\n"
+"    &lt;/temporary>\n"
+"  &lt;/split>-->"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:511
+#, no-c-format
+msgid ""
+"The root element of every &kiwi; configuration file. Each file requires the "
+"version number. An optional <literal>kiwirevision</literal> attribute can be "
+"used to specify an SVN revision of &kiwi;."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:519
+#, no-c-format
+msgid ""
+"Contains mandatory descriptions with information about the creator of this "
+"image descriptions, its contact address and a short explanation."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:528
+#, no-c-format
+msgid ""
+"Contains mandatory preferences with information about the version of this "
+"image, the used package manager, the supported image types, and other "
+"settings."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:535
+#, no-c-format
+msgid ""
+"The optional <literal>users</literal> element contains a list of all users "
+"which are added to the image. The <literal>user</literal> element contains "
+"the name, the path to its home directory, password, and the shell."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:543
+#, no-c-format
+msgid "Contains a mandatory list of repositories used by the package manager."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:548
+#, no-c-format
+msgid ""
+"Contains a mandatory list of packages which are included into the image."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:554
+#, no-c-format
+msgid ""
+"More details about the configuration file is shown in the HTML page above."
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:561
+#, no-c-format
+msgid "Creating Appliances with &kiwi;"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:563
+#, no-c-format
+msgid ""
+"This section describes how to create appliances with &kiwi;. An appliance is "
+"an especially-designed operating system for a specific task. For example, "
+"you can create an appliance with the focus on office programs."
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:571
+#, no-c-format
+msgid "Creating a Local Installation Source"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:572
+#, no-c-format
+msgid ""
+"All examples in <systemitem class=\"resource\">kiwi-doc</systemitem> "
+"packages need a valid installation source to create an image. Usually the "
+"examples connect to a network resource. The higher the network bandwidth, "
+"the faster the image creation. If you do not have a fast network or you do "
+"not want to use it, create a local installation resource. Proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:582
+#, no-c-format
+msgid "Collect your installation DVD."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:587 image_kiwi.xml:640 image_kiwi.xml:684
+#, no-c-format
+msgid ""
+"Open a shell and become <systemitem class=\"username\">root</systemitem>."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:593
+#, no-c-format
+msgid ""
+"Create the directory for your local installation directory. The examples use "
+"usually the path <filename>/image/CDs/full-<replaceable>VERSION</"
+"replaceable>-<replaceable>ARCH</replaceable></filename>. Replace the "
+"placeholders <replaceable>VERSION</replaceable> and <replaceable>ARCH</"
+"replaceable> with the respective values."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:602
+#, no-c-format
+msgid ""
+"Mount the medium. Replace the <replaceable>DRIVE</replaceable> placeholder "
+"with the respective device (usually <filename>dvd</filename>, "
+"<filename>cdrom</filename>, etc.):"
+msgstr ""
+
+#. Tag: screen
+#: image_kiwi.xml:607
+#, no-c-format
+msgid "mount -o loop /dev/<replaceable>DRIVE</replaceable> /mnt"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:610
+#, no-c-format
+msgid "Copy all the content of the medium into the installation directory:"
+msgstr ""
+
+#. Tag: screen
+#: image_kiwi.xml:613
+#, no-c-format
+msgid ""
+"cp -a /mnt/* /images/CDs/full-<replaceable>VERSION</replaceable>-"
+"<replaceable>ARCH</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:616
+#, no-c-format
+msgid ""
+"To use the local installation source, all you need to do is to enable it in "
+"the <literal>repository</literal> element:"
+msgstr ""
+
+#. Tag: screen
+#: image_kiwi.xml:620
+#, no-c-format
+msgid ""
+"&lt;repository type=\"...\"&gt;\n"
+"  &lt;!-- Remove the comment markers in the next line --&gt;\n"
+"  &lt;!-- &lt;source path=\"/image/CDs/full-<replaceable>VERSION</"
+"replaceable>-<replaceable>ARCH</replaceable>\" --&gt;\n"
+"  &lt;source path=\"opensuse://openSUSE:11.0/standard\"/&gt; \n"
+"&lt;/repository&gt;"
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:624
+#, no-c-format
+msgid "Creating an Image"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:625
+#, no-c-format
+msgid ""
+"An image is a virtual disk image containing all partitions, boot loader "
+"information, and packages as it resides on a real disk. To create an ISO "
+"image, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:633
+#, no-c-format
+msgid ""
+"Install the packages <systemitem class=\"resource\">kiwi</systemitem> and "
+"<systemitem class=\"resource\">kiwi-doc</systemitem> and resolve any "
+"dependencies."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:646
+#, no-c-format
+msgid ""
+"Copy the directory <filename>/usr/share/doc/packages/kiwi/examples/suse-11.0/"
+"suse-oem-preload</filename> to your current directory."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:653
+#, no-c-format
+msgid ""
+"Open the file <filename>config.xml</filename> and locate the element "
+"<literal>repository</literal>. If you want to use a local installation "
+"source, refer to <xref xrefstyle=\"select: label\" linkend=\"sec.kiwi.img."
+"createrepo\"/> for more information."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:662
+#, no-c-format
+msgid ""
+"Execute &kiwi; with the following command to prepare the first stage "
+"(<quote>physical extend</quote>):"
+msgstr ""
+
+#. Tag: screen
+#: image_kiwi.xml:666
+#, no-c-format
+msgid "kiwi --prepare suse-oem-preload --root oem"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:669
+#, no-c-format
+msgid "Build the ISO image:"
+msgstr ""
+
+#. Tag: screen
+#: image_kiwi.xml:672
+#, no-c-format
+msgid "kiwi --create oem --type iso --destdir /tmp/myoem"
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:678
+#, no-c-format
+msgid "Creating Preload Image with NFS"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:679
+#, no-c-format
+msgid "To create an image with NFS functionality, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:690
+#, no-c-format
+msgid ""
+"Copy the directory <filename>/usr/share/doc/packages/kiwi/examples/suse-11.1/"
+"suse-oem-preload</filename> to your current directory."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:697
+#, no-c-format
+msgid ""
+"Open the file <filename>suse-oem-preload/config.xml</filename> and locate "
+"the <literal>packages</literal> element with the attribute <literal>type="
+"\"image\"</literal>."
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:704
+#, no-c-format
+msgid ""
+"Insert the following line between <literal>&lt;packages type=\"image\"&gt;</"
+"literal> and <literal>&lt;/packages&gt;</literal> and save the file:"
+msgstr ""
+
+#. Tag: screen
+#: image_kiwi.xml:709
+#, no-c-format
+msgid "&lt;package name=\"nfs-client\"/&gt;"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:712
+#, no-c-format
+msgid "Rebuild the image as described in <xref linkend=\"st.kiwi.prep\"/>."
+msgstr ""
+
+#. Tag: title
+#: image_kiwi.xml:720
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: image_kiwi.xml:722
+#, no-c-format
+msgid ""
+"Find more information in the KIWI Wiki at <link xlink:href=\"https://"
+"opensuse.github.io/kiwi/\"></link>."
+msgstr ""

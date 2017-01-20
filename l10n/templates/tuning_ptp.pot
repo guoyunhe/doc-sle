@@ -1,0 +1,982 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: tuning_ptp.xml:8
+#, no-c-format
+msgid "&ptp;"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:14
+#, no-c-format
+msgid ""
+"For network environments, it is vital to keep the computer and other "
+"devices' clocks synchronized and accurate. There are several solutions to "
+"achieve this, for example the widely used &ntp; (NTP) described in <xref "
+"linkend=\"cha.netz.xntp\"/>."
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:20
+#, no-c-format
+msgid ""
+"The &ptp; (PTP) is a protocol capable of sub-microsecond accuracy, which is "
+"better than what NTP achieves. PTP support is divided between the kernel and "
+"user space. The kernel in &productname; includes support for PTP clocks, "
+"which are provided by network drivers."
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:27
+#, no-c-format
+msgid "Introduction to PTP"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:29
+#, no-c-format
+msgid ""
+"The clocks managed by PTP follow a master-slave hierarchy. The slaves are "
+"synchronized to their masters. The hierarchy is updated by the "
+"<emphasis>best master clock</emphasis> (BMC) algorithm, which runs on every "
+"clock. The clock with only one port can be either master or slave. Such a "
+"clock is called an <emphasis>ordinary clock</emphasis> (OC). A clock with "
+"multiple ports can be master on one port and slave on another. Such a clock "
+"is called a <emphasis>boundary clock</emphasis> (BC). The top-level master "
+"is called the <emphasis>grandmaster clock</emphasis>. The grandmaster clock "
+"can be synchronized with a Global Positioning System (GPS). This way "
+"disparate networks can be synchronized with a high degree of accuracy."
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:43
+#, no-c-format
+msgid ""
+"The hardware support is the main advantage of PTP. It is supported by "
+"various network switches and network interface controllers (NIC). While it "
+"is possible to use non-PTP enabled hardware within the network, having "
+"network components between all PTP clocks PTP hardware enabled achieves the "
+"best possible accuracy."
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:52
+#, no-c-format
+msgid "PTP Linux Implementation"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:53
+#, no-c-format
+msgid ""
+"On &sls;, the implementation of PTP is provided by the <systemitem>linuxptp</"
+"systemitem> package. Install it with <command>zypper install linuxptp</"
+"command>. It includes the <command>ptp4l</command> and <command>phc2sys</"
+"command> programs for clock synchronization. <command>ptp4l</command> "
+"implements the PTP boundary clock and ordinary clock. When hardware time "
+"stamping is enabled, <command>ptp4l</command> synchronizes the PTP hardware "
+"clock to the master clock. With software time stamping, it synchronizes the "
+"system clock to the master clock. <command>phc2sys</command> is needed only "
+"with hardware time stamping to synchronize the system clock to the PTP "
+"hardware clock on the network interface card (NIC)."
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:69
+#, no-c-format
+msgid "Using PTP"
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:74
+#, no-c-format
+msgid "Network Driver and Hardware Support"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:75
+#, no-c-format
+msgid ""
+"PTP requires that the used kernel network driver supports either software or "
+"hardware time stamping. Moreover, the NIC must support time stamping in the "
+"physical hardware. You can verify the driver and NIC time stamping "
+"capabilities with <command>ethtool</command>:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:81
+#, no-c-format
+msgid ""
+"ethtool -T eth0\n"
+"Time stamping parameters for eth0:\n"
+"Capabilities:\n"
+"hardware-transmit     (SOF_TIMESTAMPING_TX_HARDWARE)\n"
+"        software-transmit     (SOF_TIMESTAMPING_TX_SOFTWARE)\n"
+"        hardware-receive      (SOF_TIMESTAMPING_RX_HARDWARE)\n"
+"        software-receive      (SOF_TIMESTAMPING_RX_SOFTWARE)\n"
+"        software-system-clock (SOF_TIMESTAMPING_SOFTWARE)\n"
+"        hardware-raw-clock    (SOF_TIMESTAMPING_RAW_HARDWARE)\n"
+"PTP Hardware Clock: 0\n"
+"Hardware Transmit Timestamp Modes:\n"
+"        off                   (HWTSTAMP_TX_OFF)\n"
+"        on                    (HWTSTAMP_TX_ON)\n"
+"Hardware Receive Filter Modes:\n"
+"        none                  (HWTSTAMP_FILTER_NONE)\n"
+"        all                   (HWTSTAMP_FILTER_ALL)"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:82
+#, no-c-format
+msgid "Software time stamping requires the following parameters:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:85
+#, no-c-format
+msgid ""
+"SOF_TIMESTAMPING_SOFTWARE\n"
+"SOF_TIMESTAMPING_TX_SOFTWARE\n"
+"SOF_TIMESTAMPING_RX_SOFTWARE"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:86
+#, no-c-format
+msgid "Hardware time stamping requires the following parameters:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:89
+#, no-c-format
+msgid ""
+"SOF_TIMESTAMPING_RAW_HARDWARE\n"
+"SOF_TIMESTAMPING_TX_HARDWARE\n"
+"SOF_TIMESTAMPING_RX_HARDWARE"
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:93
+#, no-c-format
+msgid "Using <command>ptp4l</command>"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:94
+#, no-c-format
+msgid ""
+"<command>ptp4l</command> uses hardware time stamping by default. As "
+"&rootuser;, you need to specify the network interface capable of hardware "
+"time stamping with the <option>-i</option> option. The <option>-m</option> "
+"tells <command>ptp4l</command> to print its output to the standard output "
+"instead of the system's logging facility:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:101
+#, no-c-format
+msgid ""
+"ptp4l -m -i eth0\n"
+"selected eth0 as PTP clock\n"
+"port 1: INITIALIZING to LISTENING on INITIALIZE\n"
+"port 0: INITIALIZING to LISTENING on INITIALIZE\n"
+"port 1: new foreign master 00a152.fffe.0b334d-1\n"
+"selected best master clock 00a152.fffe.0b334d\n"
+"port 1: LISTENING to UNCALIBRATED on RS_SLAVE\n"
+"master offset -25937 s0 freq +0 path delay       12340\n"
+"master offset -27887 s0 freq +0 path delay       14232\n"
+"master offset -38802 s0 freq +0 path delay       13847\n"
+"master offset -36205 s1 freq +0 path delay       10623\n"
+"master offset  -6975 s2 freq -30575 path delay   10286\n"
+"port 1: UNCALIBRATED to SLAVE on MASTER_CLOCK_SELECTED\n"
+"master offset  -4284 s2 freq -30135 path delay    9892"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:102
+#, no-c-format
+msgid ""
+"The <literal>master offset</literal> value represents the measured offset "
+"from the master (in nanoseconds)."
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:106
+#, no-c-format
+msgid ""
+"The <literal>s0</literal>, <literal>s1</literal>, <literal>s2</literal> "
+"indicators show the different states of the clock servo: <literal>s0</"
+"literal> is unlocked, <literal>s1</literal> is clock step, and <literal>s2</"
+"literal> is locked. If the servo is in the locked state (<literal>s2</"
+"literal>), the clock will not be stepped (only slowly adjusted) if the "
+"<option>pi_offset_const</option> option is set to a negative value in the "
+"configuration file (see <command>man 8 ptp4l</command> for more information)."
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:117
+#, no-c-format
+msgid ""
+"The <literal>freq</literal> value represents the frequency adjustment of the "
+"clock (in parts per billion, ppb)."
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:121
+#, no-c-format
+msgid ""
+"The <literal>path delay</literal> value represents the estimated delay of "
+"the synchronization messages sent from the master (in nanoseconds)."
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:125
+#, no-c-format
+msgid ""
+"Port 0 is a Unix domain socket used for local PTP management. Port 1 is the "
+"<systemitem>eth0</systemitem> interface."
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:129
+#, no-c-format
+msgid ""
+"<literal>INITIALIZING</literal>, <literal>LISTENING</literal>, "
+"<literal>UNCALIBRATED</literal> and <literal>SLAVE</literal> are examples of "
+"port states which change on <literal>INITIALIZE</literal>, "
+"<literal>RS_SLAVE</literal>, and <literal>MASTER_CLOCK_SELECTED</literal> "
+"events. When the port state changes from <literal>UNCALIBRATED</literal> to "
+"<literal>SLAVE</literal>, the computer has successfully synchronized with a "
+"PTP master clock."
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:138
+#, no-c-format
+msgid ""
+"You can enable software time stamping with the <option>-S</option> option."
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:142
+#, no-c-format
+msgid "ptp4l -m -S -i eth3"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:143
+#, no-c-format
+msgid "You can also run <command>ptp4l</command> as a service:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:146
+#, no-c-format
+msgid "systemctl start ptp4l"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:147
+#, no-c-format
+msgid ""
+"In this case, <command>ptp4l</command> reads its options from the <filename>/"
+"etc/sysconfig/ptp4l</filename> file. By default, this file tells "
+"<command>ptp4l</command> to read the configuration options from <filename>/"
+"etc/ptp4l.conf</filename>. For more information on <command>ptp4l</command> "
+"options and the configuration file settings, see <command>man 8 ptp4l</"
+"command>."
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:155
+#, no-c-format
+msgid ""
+"To enable the <command>ptp4l</command> service permanently, run the "
+"following:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:159
+#, no-c-format
+msgid "systemctl enable ptp4l"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:160 tuning_ptp.xml:371
+#, no-c-format
+msgid "To disable it, run"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:163
+#, no-c-format
+msgid "systemctl disable ptp4l"
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:167
+#, no-c-format
+msgid "<command>ptp4l</command> Configuration File"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:168
+#, no-c-format
+msgid ""
+"<command>ptp4l</command> can read its configuration from an optional "
+"configuration file. As no configuration file is used by default, you need to "
+"specify it with <option>-f</option>."
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:173 tuning_ptp.xml:496
+#, no-c-format
+msgid "ptp4l -f /etc/ptp4l.conf"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:174
+#, no-c-format
+msgid ""
+"The configuration file is divided into sections. The global section "
+"(indicated as <literal>[global]</literal>) sets the program options, clock "
+"options and default port options. Other sections are port specific, and they "
+"override the default port options. The name of the section is the name of "
+"the configured port&mdash;for example, <literal>[eth0]</literal>. An empty "
+"port section can be used to replace the command line option."
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:183
+#, no-c-format
+msgid ""
+"[global]\n"
+"verbose               1\n"
+"time_stamping         software\n"
+"[eth0]"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:184
+#, no-c-format
+msgid ""
+"The example configuration file is an equivalent of the following command's "
+"options:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:188
+#, no-c-format
+msgid "ptp4l -i eth0 -m -S"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:189
+#, no-c-format
+msgid ""
+"For a complete list of <command>ptp4l</command> configuration options, see "
+"<command>man 8 ptp4l</command>."
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:196
+#, no-c-format
+msgid "Delay Measurement"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:197
+#, no-c-format
+msgid ""
+"<command>ptp4l</command> measures time delay in two different ways: "
+"<emphasis>peer-to-peer</emphasis> (P2P) or <emphasis>end-to-end</emphasis> "
+"(E2E)."
+msgstr ""
+
+#. Tag: term
+#: tuning_ptp.xml:204
+#, no-c-format
+msgid "<term>P2P</term>"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:206
+#, no-c-format
+msgid "This method is specified with <option>-P</option>."
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:209
+#, no-c-format
+msgid ""
+"It reacts to changes in the network environment faster and is more accurate "
+"in measuring the delay. It is only used in networks where each port "
+"exchanges PTP messages with one other port. P2P needs to be supported by all "
+"hardware on the communication path."
+msgstr ""
+
+#. Tag: term
+#: tuning_ptp.xml:218
+#, no-c-format
+msgid "<term>E2E</term>"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:220
+#, no-c-format
+msgid "This method is specified with <option>-E</option>. This is the default."
+msgstr ""
+
+#. Tag: term
+#: tuning_ptp.xml:227
+#, no-c-format
+msgid "Automatic method selection"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:229
+#, no-c-format
+msgid ""
+"This method is specified with <option>-A</option>. The automatic option "
+"starts <command>ptp4l</command> in E2E mode, and changes to P2P mode if a "
+"peer delay request is received."
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:238
+#, no-c-format
+msgid "Common Measurement Method"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:239
+#, no-c-format
+msgid ""
+"All clocks on a single PTP communication path must use the same method to "
+"measure the time delay. A warning will be printed if either a peer delay "
+"request is received on a port using the E2E mechanism, or an E2E delay "
+"request is received on a port using the P2P mechanism."
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:249
+#, no-c-format
+msgid "PTP Management Client: <command>pmc</command>"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:250
+#, no-c-format
+msgid ""
+"You can use the <command>pmc</command> client to obtain more detailed "
+"information about <command>ptp41</command>. It reads from the standard "
+"input&mdash;or from the command line&mdash;actions specified by name and "
+"management ID. Then it sends the actions over the selected transport, and "
+"prints any received replies. There are three actions supported: "
+"<command>GET</command> retrieves the specified information, <command>SET</"
+"command> updates the specified information, and <command>CMD</command> (or "
+"<command>COMMAND</command>) initiates the specified event."
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:261
+#, no-c-format
+msgid ""
+"By default, the management commands are addressed to all ports. The "
+"<command>TARGET</command> command can be used to select a particular clock "
+"and port for the subsequent messages. For a complete list of management IDs, "
+"run <command>pmc help</command>."
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:267
+#, no-c-format
+msgid ""
+"pmc -u -b 0 'GET TIME_STATUS_NP'\n"
+"sending: GET TIME_STATUS_NP\n"
+"        90f2ca.fffe.20d7e9-0 seq 0 RESPONSE MANAGMENT TIME_STATUS_NP\n"
+"                master_offset              283\n"
+"                ingress_time               1361569379345936841\n"
+"                cumulativeScaledRateOffset   +1.000000000\n"
+"                scaledLastGmPhaseChange    0\n"
+"                gmTimeBaseIndicator        0\n"
+"                lastGmPhaseChange          0x0000'0000000000000000.0000\n"
+"                gmPresent                  true\n"
+"                gmIdentity                 00b058.feef.0b448a"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:268
+#, no-c-format
+msgid ""
+"The <option>-b</option> option specifies the boundary hops value in sent "
+"messages. Setting it to zero limits the boundary to the local "
+"<command>ptp4l</command> instance. Increasing the value will retrieve the "
+"messages also from PTP nodes that are further from the local instance. The "
+"returned information may include:"
+msgstr ""
+
+#. Tag: term
+#: tuning_ptp.xml:277
+#, no-c-format
+msgid "stepsRemoved"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:279
+#, no-c-format
+msgid "The number of communication nodes to the grandmaster clock."
+msgstr ""
+
+#. Tag: term
+#: tuning_ptp.xml:285
+#, no-c-format
+msgid "offsetFromMaster, master_offset"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:287
+#, no-c-format
+msgid ""
+"The last measured offset of the clock from the master clock (nanoseconds)."
+msgstr ""
+
+#. Tag: term
+#: tuning_ptp.xml:294
+#, no-c-format
+msgid "meanPathDelay"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:296
+#, no-c-format
+msgid ""
+"The estimated delay of the synchronization messages sent from the master "
+"clock (nanoseconds)."
+msgstr ""
+
+#. Tag: term
+#: tuning_ptp.xml:303
+#, no-c-format
+msgid "gmPresent"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:305
+#, no-c-format
+msgid ""
+"If <literal>true</literal>, the PTP clock is synchronized to the master "
+"clock; the local clock is not the grandmaster clock."
+msgstr ""
+
+#. Tag: term
+#: tuning_ptp.xml:312
+#, no-c-format
+msgid "gmIdentity"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:314
+#, no-c-format
+msgid "This is the grandmaster's identity."
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:320
+#, no-c-format
+msgid ""
+"For a complete list of <command>pmc</command> command line options, see "
+"<command>man 8 pmc</command>."
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:327
+#, no-c-format
+msgid "Synchronizing the Clocks with <command>phc2sys</command>"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:329
+#, no-c-format
+msgid ""
+"Use <command>phc2sys</command> to synchronize the system clock to the PTP "
+"hardware clock (PHC) on the network card. The system clock is considered a "
+"<emphasis>slave</emphasis>, while the network card a <emphasis>master</"
+"emphasis>. PHC itself is synchronized with <command>ptp4l</command> (see "
+"<xref linkend=\"tuning.ptp.using\"/>). Use <option>-s</option> to specify "
+"the master clock by device or network interface. Use <option>-w</option> to "
+"wait until <command>ptp4l</command> is in a synchronized state."
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:340
+#, no-c-format
+msgid "phc2sys -s eth0 -w"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:342
+#, no-c-format
+msgid ""
+"PTP operates in <emphasis>International Atomic Time</emphasis> (TAI), while "
+"the system clock uses <emphasis>Coordinated Universal Time</emphasis> (UTC). "
+"If you do not specify <option>-w</option> to wait for <command>ptp4l</"
+"command> synchronization, you can specify the offset in seconds between TAI "
+"and UTC with <option>-O</option>:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:350
+#, no-c-format
+msgid "phc2sys -s eth0 -O -35"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:352
+#, no-c-format
+msgid "You can run <command>phc2sys</command> as a service as well:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:356
+#, no-c-format
+msgid "systemctl start phc2sys"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:358
+#, no-c-format
+msgid ""
+"In this case, <command>phc2sys</command> reads its options from the "
+"<filename>/etc/sysconfig/phc2sys</filename> file. For more information on "
+"<command>phc2sys</command> options, see <command>man 8 phc2sys</command>."
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:364
+#, no-c-format
+msgid ""
+"To enable the <command>phc2sys</command> service permanently, run the "
+"following:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:369
+#, no-c-format
+msgid "systemctl enable phc2sys"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:375
+#, no-c-format
+msgid "systemctl dosable phc2sys"
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:378
+#, no-c-format
+msgid "Verifying Time Synchronization"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:379
+#, no-c-format
+msgid ""
+"When PTP time synchronization is working properly and hardware time stamping "
+"is used, <command>ptp4l</command> and <command>phc2sys</command> output "
+"messages with time offsets and frequency adjustments periodically to the "
+"system log."
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:385
+#, no-c-format
+msgid "An example of the <command>ptp4l</command> output:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:388
+#, no-c-format
+msgid ""
+"ptp4l[351.358]: selected /dev/ptp0 as PTP clock\n"
+"ptp4l[352.361]: port 1: INITIALIZING to LISTENING on INITIALIZE\n"
+"ptp4l[352.361]: port 0: INITIALIZING to LISTENING on INITIALIZE\n"
+"ptp4l[353.210]: port 1: new foreign master 00a069.eefe.0b442d-1\n"
+"ptp4l[357.214]: selected best master clock 00a069.eefe.0b662d\n"
+"ptp4l[357.214]: port 1: LISTENING to UNCALIBRATED on RS_SLAVE\n"
+"ptp4l[359.224]: master offset       3304 s0 freq      +0 path delay      "
+"9202\n"
+"ptp4l[360.224]: master offset       3708 s1 freq  -28492 path delay      "
+"9202\n"
+"ptp4l[361.224]: master offset      -3145 s2 freq  -32637 path delay      "
+"9202\n"
+"ptp4l[361.224]: port 1: UNCALIBRATED to SLAVE on MASTER_CLOCK_SELECTED\n"
+"ptp4l[362.223]: master offset       -145 s2 freq  -30580 path delay      "
+"9202\n"
+"ptp4l[363.223]: master offset       1043 s2 freq  -28436 path delay      "
+"8972\n"
+"[...]\n"
+"ptp4l[371.235]: master offset        285 s2 freq  -28511 path delay      "
+"9199\n"
+"ptp4l[372.235]: master offset        -78 s2 freq  -28788 path delay      9204"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:389
+#, no-c-format
+msgid "An example of the <command>phc2sys</command> output:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:392
+#, no-c-format
+msgid ""
+"phc2sys[616.617]: Waiting for ptp4l...\n"
+"phc2sys[628.628]: phc offset     66341 s0 freq      +0 delay   2729\n"
+"phc2sys[629.628]: phc offset     64668 s1 freq  -37690 delay   2726\n"
+"[...]\n"
+"phc2sys[646.630]: phc offset      -333 s2 freq  -37426 delay   2747\n"
+"phc2sys[646.630]: phc offset       194 s2 freq  -36999 delay   2749"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:393
+#, no-c-format
+msgid ""
+"<command>ptp4l</command> normally writes messages very frequently. You can "
+"reduce the frequency with the <literal>summary_interval</literal> directive. "
+"Its value is an exponent of the 2^N expression. For example, to reduce the "
+"output to every 1024 (which is equal to 2^10) seconds, add the following "
+"line to the <filename>/etc/ptp4l.conf</filename> file:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:400
+#, no-c-format
+msgid "summary_interval 10"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:401
+#, no-c-format
+msgid ""
+"You can also reduce the frequency of the <command>phc2sys</command> "
+"command's updates with the <option>-u <replaceable>summary-updates</"
+"replaceable></option> option."
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:409
+#, no-c-format
+msgid "Examples of Configurations"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:411
+#, no-c-format
+msgid ""
+"This section includes several examples of <command>ptp4l</command> "
+"configuration. The examples are not full configuration files but rather a "
+"minimal list of changes to be made to the specific files. The string "
+"<replaceable>ethX</replaceable> stands for the actual network interface name "
+"in your setup."
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:420
+#, no-c-format
+msgid "Slave clock using software time stamping"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:421 tuning_ptp.xml:433 tuning_ptp.xml:449 tuning_ptp.xml:465
+#, no-c-format
+msgid "<filename>/etc/sysconfig/ptp4l</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:424 tuning_ptp.xml:436 tuning_ptp.xml:452 tuning_ptp.xml:468
+#, no-c-format
+msgid "OPTIONS=”-f /etc/ptp4l.conf -i ethX”"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:425 tuning_ptp.xml:441
+#, no-c-format
+msgid ""
+"No changes made to the distribution <filename>/etc/ptp4l.conf</filename>."
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:432
+#, no-c-format
+msgid "Slave clock using hardware time stamping"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:437 tuning_ptp.xml:453
+#, no-c-format
+msgid "<filename>/etc/sysconfig/phc2sys</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:440
+#, no-c-format
+msgid "OPTIONS=”-s ethX -w”"
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:448
+#, no-c-format
+msgid "Master clock using hardware time stamping"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:456
+#, no-c-format
+msgid "OPTIONS=”-s CLOCK_REALTIME -c ethX -w”"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:457 tuning_ptp.xml:469
+#, no-c-format
+msgid "<filename>/etc/ptp4l.conf</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:460 tuning_ptp.xml:472
+#, no-c-format
+msgid "priority1 127"
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:464
+#, no-c-format
+msgid "Master clock using software time stamping (not generally recommended)"
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:476
+#, no-c-format
+msgid "PTP and NTP"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:478
+#, no-c-format
+msgid ""
+"NTP and PTP time synchronization tools can coexist, synchronizing time from "
+"one to another in both directions."
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:484
+#, no-c-format
+msgid "NTP to PTP Synchronization"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:485
+#, no-c-format
+msgid ""
+"When <systemitem>ntpd</systemitem> is used to synchronize the local system "
+"clock, you can configure the <command>ptp4l</command> to be the grandmaster "
+"clock distributing the time from the local system clock via PTP. Include the "
+"<option>priority1</option> option in <filename>/etc/ptp4l.conf</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:492
+#, no-c-format
+msgid ""
+"[global]\n"
+"priority1 127\n"
+"[eth0]"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:493
+#, no-c-format
+msgid "Then run <command>ptp4l</command>:"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:497
+#, no-c-format
+msgid ""
+"When hardware time stamping is used, you need to synchronize the PTP "
+"hardware clock to the system clock with <command>phc2sys</command>:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:501
+#, no-c-format
+msgid "phc2sys -c eth0 -s CLOCK_REALTIME -w"
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:505
+#, no-c-format
+msgid "PTP to NTP Synchronization"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:506
+#, no-c-format
+msgid ""
+"You can configure <systemitem>ntpd</systemitem> to distribute the time from "
+"the system clock synchronized by <command>ptp4l</command> or "
+"<command>phc2sys</command> by using the <emphasis>local</emphasis> reference "
+"clock driver. Moreover, you need to stop <systemitem>ntpd</systemitem> from "
+"adjusting the system clock&mdash;do not specify any remote NTP servers in "
+"<filename>/etc/ntp.conf</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:515
+#, no-c-format
+msgid ""
+"server   127.127.1.0\n"
+"fudge    127.127.1.0 stratum 0"
+msgstr ""
+
+#. Tag: title
+#: tuning_ptp.xml:517
+#, no-c-format
+msgid "NTP and DHCP"
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:518
+#, no-c-format
+msgid ""
+"When the DHCP client command <command>dhclient</command> receives a list of "
+"NTP servers, it adds them to NTP configuration by default. To prevent this "
+"behavior, set"
+msgstr ""
+
+#. Tag: screen
+#: tuning_ptp.xml:523
+#, no-c-format
+msgid "NETCONFIG_NTP_POLICY=\"\""
+msgstr ""
+
+#. Tag: para
+#: tuning_ptp.xml:524
+#, no-c-format
+msgid "in the <filename>/etc/sysconfig/network/config</filename> file."
+msgstr ""

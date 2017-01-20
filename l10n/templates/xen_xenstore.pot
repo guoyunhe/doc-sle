@@ -1,0 +1,643 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: xen_xenstore.xml:9
+#, no-c-format
+msgid "&xenstore;: Configuration Database Shared between Domains"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:16
+#, no-c-format
+msgid ""
+"This section introduces basic information about &xenstore;, its role in the "
+"&xen; environment, the directory structure of files used by &xenstore;, and "
+"the description of &xenstore;'s commands."
+msgstr ""
+
+#. Tag: title
+#: xen_xenstore.xml:22
+#, no-c-format
+msgid "Introduction"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:24
+#, no-c-format
+msgid ""
+"&xenstore; is a database of configuration and status information shared "
+"between &vmguest;s and the management tools running in &dom0;. &vmguest;s "
+"and the management tools read and write to &xenstore; to convey "
+"configuration information, status updates, and state changes. The &xenstore; "
+"database is managed by &dom0; and supports simple operations such as reading "
+"and writing a key. &vmguest;s and management tools can be notified of any "
+"changes in &xenstore; by watching entries of interest. Note that the "
+"<systemitem>xenstored</systemitem> daemon is managed by the "
+"<systemitem>xencommons</systemitem> service."
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:37
+#, no-c-format
+msgid ""
+"&xenstore; is located on &dom0; in a single database file <filename>/var/lib/"
+"xenstored/tdb</filename> (<literal>tdb</literal> represents <emphasis>tree "
+"database</emphasis>)."
+msgstr ""
+
+#. Tag: title
+#: xen_xenstore.xml:44
+#, no-c-format
+msgid "File System Interface"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:46
+#, no-c-format
+msgid ""
+"&xenstore; database content is represented by a virtual file system similar "
+"to <filename>/proc</filename> (for more information on <filename>/proc</"
+"filename>, see <xref linkend=\"sec.util.proc\"/>). The tree has three main "
+"paths: <filename>/vm</filename>, <filename>/local/domain</filename>, and "
+"<filename>/tool</filename>."
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:56
+#, no-c-format
+msgid ""
+"<filename>/vm</filename> - stores information about the &vmguest; "
+"configuration."
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:62
+#, no-c-format
+msgid ""
+"<filename>/local/domain</filename> - stores information about &vmguest; on "
+"the local node."
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:68
+#, no-c-format
+msgid ""
+"<filename>/tool</filename> - stores general information about various tools."
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:76
+#, no-c-format
+msgid ""
+"Each &vmguest; has two different ID numbers. The <emphasis>universal unique "
+"identifier</emphasis> (UUID) remains the same even if the &vmguest; is "
+"migrated to another machine. The <emphasis>domain identifier</emphasis> "
+"(DOMID) is an identification number that represents a particular running "
+"instance. It typically changes when the &vmguest; is migrated to another "
+"machine."
+msgstr ""
+
+#. Tag: title
+#: xen_xenstore.xml:87
+#, no-c-format
+msgid "&xenstore; Commands"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:88
+#, no-c-format
+msgid ""
+"The file system structure of the &xenstore; database can be operated with "
+"the following commands:"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:97
+#, no-c-format
+msgid "Displays the full dump of the &xenstore; database."
+msgstr ""
+
+#. Tag: term
+#: xen_xenstore.xml:103
+#, no-c-format
+msgid "<command>xenstore-read</command><option>path_to_xenstore_entry</option>"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:106
+#, no-c-format
+msgid "Displays the value of the specified &xenstore; entry."
+msgstr ""
+
+#. Tag: term
+#: xen_xenstore.xml:112
+#, no-c-format
+msgid "<command>xenstore-exists</command><option>xenstore_path</option>"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:115
+#, no-c-format
+msgid "Reports whether the specified &xenstore; path exists."
+msgstr ""
+
+#. Tag: term
+#: xen_xenstore.xml:121
+#, no-c-format
+msgid "<command>xenstore-list</command><option>xenstore_path</option>"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:124
+#, no-c-format
+msgid "Displays all the children entries of the specified &xenstore; path."
+msgstr ""
+
+#. Tag: term
+#: xen_xenstore.xml:131
+#, no-c-format
+msgid ""
+"<command>xenstore-write</command><option>path_to_xenstore_entry</option>"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:134
+#, no-c-format
+msgid "Updates the value of the specified &xenstore; entry."
+msgstr ""
+
+#. Tag: term
+#: xen_xenstore.xml:140
+#, no-c-format
+msgid "<command>xenstore-rm</command><option>xenstore_path</option>"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:143
+#, no-c-format
+msgid "Removes the specified &xenstore; entry or directory."
+msgstr ""
+
+#. Tag: term
+#: xen_xenstore.xml:149
+#, no-c-format
+msgid ""
+"<command>xenstore-chmod</command><option>xenstore_path</option><option>mode</"
+"option>"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:152
+#, no-c-format
+msgid "Updates the read/write permission on the specified &xenstore; path."
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:162
+#, no-c-format
+msgid ""
+"Sends a command to the <systemitem>xenstored</systemitem> back-end, such as "
+"triggering an integrity check."
+msgstr ""
+
+#. Tag: filename
+#: xen_xenstore.xml:172
+#, no-c-format
+msgid "<filename>/vm</filename>"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:173
+#, no-c-format
+msgid ""
+"The <filename>/vm</filename> path is indexed by the UUID of each &vmguest;, "
+"and stores configuration information such as the number of virtual CPUs and "
+"the amount of allocated memory. There is a <filename>/vm/&lt;uuid&gt;</"
+"filename> directory for each &vmguest;. To list the directory content, use "
+"<command>xenstore-list</command>."
+msgstr ""
+
+#. Tag: screen
+#: xen_xenstore.xml:181
+#, no-c-format
+msgid ""
+"# xenstore-list /vm\n"
+"00000000-0000-0000-0000-000000000000\n"
+"9b30841b-43bc-2af9-2ed3-5a649f466d79-1"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:182
+#, no-c-format
+msgid ""
+"The first line of the output belongs to &dom0;, and the second one to a "
+"running &vmguest;. The following command lists all the entries related to "
+"the &vmguest;:"
+msgstr ""
+
+#. Tag: screen
+#: xen_xenstore.xml:187
+#, no-c-format
+msgid ""
+"# xenstore-list /vm/9b30841b-43bc-2af9-2ed3-5a649f466d79-1\n"
+"image\n"
+"rtc\n"
+"device\n"
+"pool_name\n"
+"shadow_memory\n"
+"uuid\n"
+"on_reboot\n"
+"start_time\n"
+"on_poweroff\n"
+"bootloader_args\n"
+"on_crash\n"
+"vcpus\n"
+"vcpu_avail\n"
+"bootloader\n"
+"name"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:188
+#, no-c-format
+msgid ""
+"To read a value of an entry, for example the number of virtual CPUs "
+"dedicated to the &vmguest;, use <command>xenstore-read</command>:"
+msgstr ""
+
+#. Tag: screen
+#: xen_xenstore.xml:192
+#, no-c-format
+msgid ""
+"# xenstore-read /vm/9b30841b-43bc-2af9-2ed3-5a649f466d79-1/vcpus\n"
+"1"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:193
+#, no-c-format
+msgid ""
+"A list of selected <filename>/vm/&lt;uuid&gt;</filename> entries follows:"
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:199
+#, no-c-format
+msgid "uuid"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:202
+#, no-c-format
+msgid "UUID of the &vmguest;. It does not change during the migration process."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:209
+#, no-c-format
+msgid "on_reboot"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:212
+#, no-c-format
+msgid ""
+"Specifies whether to destroy or restart the &vmguest; in response to a "
+"reboot request."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:219
+#, no-c-format
+msgid "on_poweroff"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:222
+#, no-c-format
+msgid ""
+"Specifies whether to destroy or restart the &vmguest; in response to a halt "
+"request."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:229
+#, no-c-format
+msgid "on_crash"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:232
+#, no-c-format
+msgid ""
+"Specifies whether to destroy or restart the &vmguest; in response to a crash."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:239
+#, no-c-format
+msgid "vcpus"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:242
+#, no-c-format
+msgid "Number of virtual CPUs allocated to the &vmguest;."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:248
+#, no-c-format
+msgid "vcpu_avail"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:251
+#, no-c-format
+msgid ""
+"Bitmask of active virtual CPUs for the &vmguest;. The bitmask has several "
+"bits equal to the value of <literal>vcpus</literal>, with a bit set for each "
+"online virtual CPU."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:259
+#, no-c-format
+msgid "name"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:262
+#, no-c-format
+msgid "The name of the &vmguest;."
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:268
+#, no-c-format
+msgid ""
+"Regular &vmguest;s (not &dom0;) use the <filename>/vm/&lt;uuid&gt;/image</"
+"filename> path:"
+msgstr ""
+
+#. Tag: screen
+#: xen_xenstore.xml:272
+#, no-c-format
+msgid ""
+"# xenstore-list /vm/9b30841b-43bc-2af9-2ed3-5a649f466d79-1/image\n"
+"ostype\n"
+"kernel\n"
+"cmdline\n"
+"ramdisk\n"
+"dmargs\n"
+"device-model\n"
+"display"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:273
+#, no-c-format
+msgid "An explanation of the used entries follows:"
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:278
+#, no-c-format
+msgid "ostype"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:281
+#, no-c-format
+msgid "The OS type of the &vmguest;."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:287
+#, no-c-format
+msgid "kernel"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:290
+#, no-c-format
+msgid "The path on &dom0; to the kernel for the &vmguest;."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:296
+#, no-c-format
+msgid "cmdline"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:299
+#, no-c-format
+msgid "The kernel command line for the &vmguest; used when booting."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:305
+#, no-c-format
+msgid "ramdisk"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:308
+#, no-c-format
+msgid "The path on &dom0; to the RAM disk for the &vmguest;."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:314
+#, no-c-format
+msgid "dmargs"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:317
+#, no-c-format
+msgid ""
+"Shows arguments passed to the &qemu; process. If you look at the &qemu; "
+"process with <command>ps</command>, you should see the same arguments as in "
+"<filename>/vm/&lt;uuid&gt;/image/dmargs</filename>."
+msgstr ""
+
+#. Tag: filename
+#: xen_xenstore.xml:329
+#, no-c-format
+msgid "/local/domain/&lt;domid&gt;"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:330
+#, no-c-format
+msgid ""
+"This path is indexed by the running domain (&vmguest;) ID, and contains "
+"information about the running &vmguest;. Remember that the domain ID changes "
+"during &vmguest; migration. The following entries are available:"
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:338
+#, no-c-format
+msgid "<literal>vm</literal>"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:341
+#, no-c-format
+msgid "The path of the <filename>/vm</filename> directory for this &vmguest;."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:348
+#, no-c-format
+msgid "on_reboot, on_poweroff, on_crash, name"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:351
+#, no-c-format
+msgid "See identical options in <xref linkend=\"xenstore.vm\"/>"
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:357
+#, no-c-format
+msgid "domid"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:360
+#, no-c-format
+msgid "Domain identifier for the &vmguest;."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:366
+#, no-c-format
+msgid "<literal>cpu</literal>"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:369
+#, no-c-format
+msgid "The current CPU to which the &vmguest; is pinned."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:375
+#, no-c-format
+msgid "cpu_weight"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:378
+#, no-c-format
+msgid ""
+"The weight assigned to the &vmguest; for scheduling purposes. Higher weights "
+"use the physical CPUs more often."
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:385
+#, no-c-format
+msgid ""
+"Apart from the individual entries described above, there are also several "
+"subdirectories under <filename>/local/domain/&lt;domid&gt;</filename>, "
+"containing specific entries. To see all entries available, refer to <link "
+"xlink:href=\"http://wiki.xen.org/wiki/XenStore_Reference\">&xenstore; "
+"Reference</link>."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:395
+#, no-c-format
+msgid "/local/domain/&lt;domid&gt;/memory"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:398
+#, no-c-format
+msgid ""
+"Contains memory information. <literal>/local/domain/&lt;domid&gt;/memory/"
+"target</literal> contains target memory size for the &vmguest; (in "
+"kilobytes)."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:406
+#, no-c-format
+msgid "/local/domain/&lt;domid&gt;/console"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:409
+#, no-c-format
+msgid "Contains information about a console used by the &vmguest;."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:415
+#, no-c-format
+msgid "/local/domain/&lt;domid&gt;/backend"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:418
+#, no-c-format
+msgid ""
+"Contains information about all back-end devices used by the &vmguest;. The "
+"path has subdirectories of its own."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:425
+#, no-c-format
+msgid "/local/domain/&lt;domid&gt;/device"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:428
+#, no-c-format
+msgid "Contains information about the front-end devices for the &vmguest;."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:435
+#, no-c-format
+msgid "/local/domain/&lt;domid&gt;/device-misc"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:438
+#, no-c-format
+msgid "Contains miscellaneous information about devices."
+msgstr ""
+
+#. Tag: literal
+#: xen_xenstore.xml:444
+#, no-c-format
+msgid "/local/domain/&lt;domid&gt;/store"
+msgstr ""
+
+#. Tag: para
+#: xen_xenstore.xml:447
+#, no-c-format
+msgid "Contains information about the &vmguest;'s store."
+msgstr ""

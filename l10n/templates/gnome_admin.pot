@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: gnome_admin.xml:33
+#, no-c-format
+msgid "&gnome; Configuration for Administrators"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: gnome_admin.xml:35
+#, no-c-format
+msgid "<dm:bugtracker> </dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: gnome_admin.xml:41
+#, no-c-format
+msgid ""
+"This chapter introduces &gnome; configuration options which administrators "
+"can use to adjust system-wide settings, such as customizing menus, "
+"installing themes, configuring fonts, changing preferred applications, and "
+"locking down capabilities."
+msgstr ""
+
+#. Tag: para
+#: gnome_admin.xml:47
+#, no-c-format
+msgid ""
+"These configuration options are stored in the GConf system. Access the GConf "
+"system with tools such as the <command>gconftool-2</command> command line "
+"interface or the <command>gconf-editor</command> GUI tool."
+msgstr ""
+
+#. Tag: title
+#: gnome_admin.xml:269
+#, no-c-format
+msgid "Starting Applications Automatically"
+msgstr ""
+
+#. Tag: para
+#: gnome_admin.xml:271
+#, no-c-format
+msgid ""
+"To automatically start applications in &gnome;, use one of the following "
+"methods:"
+msgstr ""
+
+#. Tag: title
+#: gnome_admin.xml:279
+#, no-c-format
+msgid "To run applications for each user:"
+msgstr ""
+
+#. Tag: para
+#: gnome_admin.xml:280
+#, no-c-format
+msgid ""
+"Put <filename>.desktop</filename> files in <filename>/usr/share/gnome/"
+"autostart</filename>."
+msgstr ""
+
+#. Tag: title
+#: gnome_admin.xml:288
+#, no-c-format
+msgid "To run applications for an individual user:"
+msgstr ""
+
+#. Tag: para
+#: gnome_admin.xml:289
+#, no-c-format
+msgid ""
+"Put <filename>.desktop</filename> files in <filename>~/.config/autostart</"
+"filename>."
+msgstr ""
+
+#. Tag: para
+#: gnome_admin.xml:297
+#, no-c-format
+msgid ""
+"To disable an application that starts automatically, add <literal>X-"
+"Autostart-enabled=false</literal> to the <filename>.desktop</filename> file."
+msgstr ""
+
+#. Tag: title
+#: gnome_admin.xml:304
+#, no-c-format
+msgid "Automounting and Managing Media Devices"
+msgstr ""
+
+#. Tag: para
+#: gnome_admin.xml:306
+#, no-c-format
+msgid ""
+"&nautilus; (<command>nautilus</command>) monitors volume-related events and "
+"responds with a user-specified policy. You can use &nautilus; to "
+"automatically mount hotplugged drives and inserted removable media, "
+"automatically run programs, and play audio CDs or video DVDs. &nautilus; can "
+"also automatically import photos from a digital camera."
+msgstr ""
+
+#. Tag: para
+#: gnome_admin.xml:314
+#, no-c-format
+msgid ""
+"System administrators can set system-wide defaults. For more information, "
+"see <xref linkend=\"sec.gnome.gconf.pref_app\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_admin.xml:320
+#, no-c-format
+msgid "Changing Preferred Applications"
+msgstr ""
+
+#. Tag: para
+#: gnome_admin.xml:322
+#, no-c-format
+msgid ""
+"To change users' preferred applications, edit <filename>/etc/gnome_defaults."
+"conf</filename>. Find further hints within this file."
+msgstr ""
+
+#. Tag: para
+#: gnome_admin.xml:328
+#, no-c-format
+msgid ""
+"For more information about MIME types, see <link xlink:href=\"http://www."
+"freedesktop.org/Standards/shared-mime-info-spec\"></link>."
+msgstr ""
+
+#. Tag: title
+#: gnome_admin.xml:581
+#, no-c-format
+msgid "Adding Document Templates"
+msgstr ""
+
+#. Tag: para
+#: gnome_admin.xml:583
+#, no-c-format
+msgid ""
+"To add document templates for users, fill in the <filename>Templates</"
+"filename> directory in a user's home directory. You can do this manually for "
+"each user by copying the files into <filename>~/Templates</filename>, or "
+"system-wide by adding a <filename>Templates</filename> directory with "
+"documents to <filename>/etc/skel</filename> before the user is created."
+msgstr ""
+
+#. Tag: para
+#: gnome_admin.xml:592
+#, no-c-format
+msgid ""
+"A user creates a new document from a template by right-clicking the desktop "
+"and selecting <guimenu>Create Document</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: gnome_admin.xml:652
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: gnome_admin.xml:654
+#, no-c-format
+msgid ""
+"For more information, see <link xlink:href=\"http://help.gnome.org/admin/"
+"\"></link>."
+msgstr ""

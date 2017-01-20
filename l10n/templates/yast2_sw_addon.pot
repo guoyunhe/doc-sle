@@ -1,0 +1,443 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: yast2_sw_addon.xml:11
+#, no-c-format
+msgid "Installing Modules, Extensions, and Third Party Add-On Products"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: yast2_sw_addon.xml:13
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:18
+#, no-c-format
+msgid ""
+"Modules and extensions add parts or functionality to the system. Modules are "
+"fully supported parts of &productname; with a different life cycle and "
+"update timeline. They are a set of packages, have a clearly defined scope "
+"and are delivered via online channel only."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:24
+#, no-c-format
+msgid ""
+"Extensions, such as the Workstation Extension or the High Availability "
+"Extension, add extra functionality to the system and require an own "
+"registration key that is liable for costs. Extensions are delivered via "
+"online channel or physical media. Registering at the &scc; or a local "
+"registration server is a prerequisite for being able to subscribe to the "
+"online channels."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:33
+#, no-c-format
+msgid ""
+"A list of modules and extensions for your product is available after having "
+"registered your system at &scc; or a local registration server. If you "
+"skipped the registration step during the installation, you can register your "
+"system at any time using the <guimenu>&scc; Configuration</guimenu> module "
+"in &yast;. <phrase os=\"sles;sled\">For details, refer to <xref linkend="
+"\"sec.update.registersystem\"/>.</phrase>"
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:42
+#, no-c-format
+msgid ""
+"Some add-on products are also provided by third parties, for example, binary-"
+"only drivers that are needed by certain hardware to function properly. If "
+"you have such hardware, refer to the release notes for more information "
+"about availability of binary drivers for your system. The release notes are "
+"available from <phrase os=\"sles;sled\"><link xlink:href=\"http://www.suse."
+"com/releasenotes/\"></link></phrase><phrase os=\"osuse\"><link xlink:href="
+"\"https://doc.opensuse.org/release-notes/\"></link></phrase>, from &yast; or "
+"from <filename>/usr/share/doc/release-notes/</filename> in your installed "
+"system."
+msgstr ""
+
+#. Tag: primary
+#: yast2_sw_addon.xml:55
+#, no-c-format
+msgid "&yast;"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_sw_addon.xml:56
+#, no-c-format
+msgid "add-on"
+msgstr ""
+
+#. Tag: primary
+#: yast2_sw_addon.xml:57
+#, no-c-format
+msgid "add-on products"
+msgstr ""
+
+#. Tag: title
+#: yast2_sw_addon.xml:59
+#, no-c-format
+msgid "Installing Modules and Extensions from Online Channels"
+msgstr ""
+
+#. Tag: title
+#: yast2_sw_addon.xml:62
+#, no-c-format
+msgid "&sled;"
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:63
+#, no-c-format
+msgid ""
+"As of &sle; 12, &sled; is not only available as a separate product, but also "
+"as a Workstation Extension for &sls;. If you register at the &scc;, the "
+"Workstation Extension can be selected for installation. Note that installing "
+"it requires a valid registration key."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:71
+#, no-c-format
+msgid ""
+"The following procedure requires that you have registered your system with "
+"&scc;, or a local registration server. If you are in the process of "
+"registering your system, you will see a list of extensions and modules "
+"immediately after having completed <xref linkend=\"step.y2.register.final\"/"
+"> of <xref linkend=\"sec.update.registersystem\"/>. In that case, skip the "
+"next steps and proceed with <xref linkend=\"step.y2.extensions.list\"/>."
+msgstr ""
+
+#. Tag: title
+#: yast2_sw_addon.xml:81
+#, no-c-format
+msgid "Installing Add-ons and Extensions from Online Channels with &yast;"
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:83 yast2_sw_addon.xml:189
+#, no-c-format
+msgid ""
+"Start &yast; and select <menuchoice> <guimenu>Software</guimenu> "
+"<guimenu>Add-On Products</guimenu> </menuchoice>. Alternatively, start the "
+"&yast; <guimenu>Add-On Products</guimenu> module from the command line with "
+"<command>sudo yast2 add-on</command>."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:89 yast2_sw_addon.xml:195
+#, no-c-format
+msgid ""
+"The dialog will show an overview of already installed add-on products, "
+"modules and extensions."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:95
+#, no-c-format
+msgid ""
+"To add repositories from &scc; (or a local registration server), select "
+"<menuchoice> <guimenu> Add</guimenu> <guimenu>Extensions and Modules from "
+"Registration Server</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:100
+#, no-c-format
+msgid ""
+"&yast; connects to the registration server and displays a list of "
+"<guimenu>Available Extensions and Modules</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: yast2_sw_addon.xml:105
+#, no-c-format
+msgid "Available Extensions and Modules"
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:106
+#, no-c-format
+msgid ""
+"The amount of available extensions and modules depends on the registration "
+"server. A local registration server may only offer update repositories and "
+"no additional extensions."
+msgstr ""
+
+#. Tag: title
+#: yast2_sw_addon.xml:113
+#, no-c-format
+msgid "Modules Life Cycles"
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:114
+#, no-c-format
+msgid ""
+"Life cycle end dates of modules are available on <link xlink:href=\"https://"
+"scc.suse.com/docs/lifecycle/sle/12/modules\"></link>."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:121
+#, no-c-format
+msgid "Click an entry to see its description."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:126
+#, no-c-format
+msgid ""
+"Select one or multiple entries for installation by activating their check "
+"marks."
+msgstr ""
+
+#. Tag: title
+#: yast2_sw_addon.xml:131
+#, no-c-format
+msgid "Installation of System Extensions"
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:143
+#, no-c-format
+msgid "Click <guimenu>Next</guimenu> to proceed."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:148
+#, no-c-format
+msgid ""
+"Depending on the repositories to be added for the extension or module, you "
+"may be asked if you want to import the &gpg; key with which the repository "
+"is signed or asked to agree to a license."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:153
+#, no-c-format
+msgid ""
+"After confirming these messages, &yast; will download and parse the "
+"metadata. The repositories for the selected extensions will be added to your "
+"system&mdash;no additional installation sources are required."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:160 yast2_sw_addon.xml:276
+#, no-c-format
+msgid ""
+"If needed, adjust the repository <guimenu>Properties</guimenu> as described "
+"in <xref linkend=\"sec.y2.sw.instsource.manage\"/>."
+msgstr ""
+
+#. Tag: title
+#: yast2_sw_addon.xml:168
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:169
+#, no-c-format
+msgid ""
+"White paper <link xlink:href=\"https://www.suse.com/docrep/documents/"
+"huz0a6bf9a/suse_linux_enterprise_server_12_modules_white_paper.pdf\"> SUSE "
+"Linux Enterprise Server 12 Modules</link>."
+msgstr ""
+
+#. Tag: title
+#: yast2_sw_addon.xml:178
+#, no-c-format
+msgid "Installing Extensions and Third Party Add-On Products from Media"
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:180
+#, no-c-format
+msgid ""
+"When installing an extension or add-on product from media, you can select "
+"various types of product media, like DVD/CD, removable mass storage devices "
+"(such as flash disks), or a local directory or ISO image. The media can also "
+"be provided by a network server, for example, via HTTP, FTP, NFS, or Samba."
+msgstr ""
+
+#. Tag: title
+#: yast2_sw_addon.xml:200
+#, no-c-format
+msgid "List of Installed Add-on Products, Modules and Extensions"
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:212
+#, no-c-format
+msgid "Choose <guimenu>Add</guimenu> to install a new add-on product."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:217
+#, no-c-format
+msgid ""
+"In the <guimenu>Add-On Product</guimenu> dialog, select the option that "
+"matches the type of medium from which you want to install:"
+msgstr ""
+
+#. Tag: title
+#: yast2_sw_addon.xml:222
+#, no-c-format
+msgid "Installation of an Add-on Product or an Extension"
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:234
+#, no-c-format
+msgid ""
+"To scan your network for installation servers announcing their services via "
+"SLP, select <guimenu>Scan Using SLP</guimenu> and click <guimenu>Next</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:241
+#, no-c-format
+msgid ""
+"To add a repository from a removable medium, choose the relevant option and "
+"insert the medium or connect the USB device to the machine, respectively. "
+"Click <guimenu>Next</guimenu> to start the installation."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:248
+#, no-c-format
+msgid ""
+"For the majority of media types, you will be asked to specify the path (or "
+"URL) to the media after selecting the respective option and clicking "
+"<guimenu>Next</guimenu>. Specifying a <guimenu>Repository Name</guimenu> is "
+"optional. If none is specified, &yast; will use the product name or the URL "
+"as the repository name."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:257
+#, no-c-format
+msgid ""
+"The option <guimenu>Download Repository Description Files</guimenu> is "
+"activated by default. If you deactivate the option, &yast; will "
+"automatically download the files later, if needed."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:264
+#, no-c-format
+msgid ""
+"Depending on the repository you have added, you may be asked if you want to "
+"import the &gpg; key with which it is signed or asked to agree to a license."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:269
+#, no-c-format
+msgid ""
+"After confirming these messages, &yast; will download and parse the "
+"metadata. It will add the repository to the list of <guimenu>Configured "
+"Repositories</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:282
+#, no-c-format
+msgid ""
+"Confirm your changes with <guimenu>OK</guimenu> to close the configuration "
+"dialog."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:288
+#, no-c-format
+msgid ""
+"After having successfully added the repository for the add-on media, the "
+"software manager starts and you can install packages. For details, refer to "
+"<xref linkend=\"cha.y2.sw\"/>."
+msgstr ""
+
+#. Tag: title
+#: yast2_sw_addon.xml:297
+#, no-c-format
+msgid "&sdk; (SDK) &productnumber;"
+msgstr ""
+
+#. Tag: primary
+#: yast2_sw_addon.xml:299
+#, no-c-format
+msgid "software"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_sw_addon.xml:301
+#, no-c-format
+msgid "development"
+msgstr ""
+
+#. Tag: tertiary
+#: yast2_sw_addon.xml:303
+#, no-c-format
+msgid "<tertiary>SUSE SDK</tertiary>"
+msgstr ""
+
+#. Tag: primary
+#: yast2_sw_addon.xml:305
+#, no-c-format
+msgid "<primary>SUSE SDK</primary>"
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:307
+#, no-c-format
+msgid ""
+"&sdk; &productnumber; is a module for &sle; &productnumber;. It is a "
+"complete tool kit for application development. In fact, to provide a "
+"comprehensive build system, &sdk; &productnumber; includes all the open "
+"source tools that were used to build the &sls; product. It provides you as a "
+"developer, independent software vendor (ISV), or independent hardware vendor "
+"(IHV) with all the tools needed to port applications to all the platforms "
+"supported by &sled; and &sls;."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:317
+#, no-c-format
+msgid ""
+"&sdk; also contains integrated development environments (IDEs), debuggers, "
+"code editors, and other related tools. It supports most major programming "
+"languages, including C, C++, Java, and most scripting languages. For your "
+"convenience, &sdk; includes multiple Perl packages that are not included in "
+"&sle;."
+msgstr ""
+
+#. Tag: para
+#: yast2_sw_addon.xml:325
+#, no-c-format
+msgid ""
+"The SDK is a module for &sle; and is available via an online channel from "
+"the &scc;. Alternatively, go to <link xlink:href=\"http://download.suse.com/"
+"\"></link>, search for <literal>&sle; Software Development Kit</literal> and "
+"download it from there. Refer to <xref linkend=\"cha.add-ons\"/> for details."
+msgstr ""

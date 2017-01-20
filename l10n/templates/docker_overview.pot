@@ -1,0 +1,460 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: docker_overview.xml:9
+#, no-c-format
+msgid "Docker Overview"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:10
+#, no-c-format
+msgid ""
+"Docker is a lightweight virtualization solution to run multiple virtual "
+"units (containers) simultaneously on a single control host. Containers are "
+"isolated with Kernel Control Groups (<xref linkend=\"vle.docker.cgroup\"/>) "
+"and <xref linkend=\"vle.docker.namespace\"/>."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:16
+#, no-c-format
+msgid ""
+"Full virtualization solutions such as &xen;, &kvm;, or &libvirt; are based "
+"on the processor simulating a complete hardware environment and controlling "
+"the virtual machines. However, Docker only provides operating system-level "
+"virtualization where the Linux kernel controls isolated containers."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:23
+#, no-c-format
+msgid ""
+"Before going into detail about Docker, let's define some of the terms used:"
+msgstr ""
+
+#. Tag: term
+#: docker_overview.xml:28
+#, no-c-format
+msgid "Docker engine"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:32
+#, no-c-format
+msgid ""
+"The docker engine is a server-client type application that performs all "
+"tasks related to virtual machines. The Docker engine comprises the following:"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:37
+#, no-c-format
+msgid ""
+"daemon - is the server side of the docker engine that manages all docker "
+"objects (images, containers, network used by containers, etc.)"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:42
+#, no-c-format
+msgid ""
+"REST API - applications can use this API to communicate directly with the "
+"daemon"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:47
+#, no-c-format
+msgid ""
+"a CLI client - that enables you to communicate with the daemon. If the "
+"daemon is running on a different machine than the CLI client, the CLI client "
+"can communicate by using network sockets or the REST API provided by the "
+"docker engine."
+msgstr ""
+
+#. Tag: term
+#: docker_overview.xml:55
+#, no-c-format
+msgid "Image"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:57
+#, no-c-format
+msgid ""
+"An <emphasis>image</emphasis> is a read-only template used to create a "
+"<emphasis>virtual machine</emphasis> on the host server. A Docker image is "
+"made by a series of layers built one over the other. Each layer corresponds "
+"to a permanent change, for example an update of an application. The changes "
+"are stored in a file called a <emphasis>dockerfile</emphasis>. For more "
+"details see <link xlink:href=\"http://docs.docker.com/engine/reference/"
+"glossary#image\">the official Docker documentation</link>."
+msgstr ""
+
+#. Tag: term
+#: docker_overview.xml:65
+#, no-c-format
+msgid "Dockerfile"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:69
+#, no-c-format
+msgid ""
+"A <emphasis>dockerfile</emphasis> stores changes made on top of the base "
+"image. The <xref linkend=\"Docker_engine\"/> reads instructions in the "
+"<emphasis>dockerfile</emphasis> and builds a new image according to the "
+"instructions."
+msgstr ""
+
+#. Tag: term
+#: docker_overview.xml:75
+#, no-c-format
+msgid "Container"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:79
+#, no-c-format
+msgid ""
+"A <emphasis>container</emphasis> is a running instance based on a particular "
+"Docker <xref linkend=\"Docker_Image\"/>. Each <emphasis>container</emphasis> "
+"can be distinguished by a unique container ID."
+msgstr ""
+
+#. Tag: term
+#: docker_overview.xml:85
+#, no-c-format
+msgid "Registry"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:89
+#, no-c-format
+msgid ""
+"A <emphasis>registry</emphasis> is storage for already created images. It "
+"typically contains several <emphasis>repositories</emphasis> There are two "
+"types of registry:"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:94
+#, no-c-format
+msgid ""
+"public registry - where everyone (usually registered) can download and use "
+"images. A typical public registry is <link xlink:href=\"https://hub.docker."
+"com/\">Docker Hub</link>."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:99
+#, no-c-format
+msgid ""
+"private registry - these are accessible for particular users or from a "
+"particular private network."
+msgstr ""
+
+#. Tag: term
+#: docker_overview.xml:107
+#, no-c-format
+msgid "Repository"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:111
+#, no-c-format
+msgid ""
+"A <emphasis>repository</emphasis> is storage in a <emphasis>registry</"
+"emphasis> that stores a different version of a particular image. You can "
+"pull or push images from or to a repository."
+msgstr ""
+
+#. Tag: term
+#: docker_overview.xml:117
+#, no-c-format
+msgid "Control groups"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:121
+#, no-c-format
+msgid ""
+"<emphasis>Control groups</emphasis>, also called <literal>cgroups</literal>, "
+"is a Linux kernel feature that allows aggregating or partitioning tasks "
+"(processes) and all their children into hierarchically organized groups to "
+"isolate resources."
+msgstr ""
+
+#. Tag: term
+#: docker_overview.xml:129
+#, no-c-format
+msgid "Namespace"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:133
+#, no-c-format
+msgid ""
+"Docker uses <emphasis>namespaces</emphasis> for its containers that isolates "
+"resources reserved for particular containers."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:140
+#, no-c-format
+msgid ""
+"Docker is a platform that allows developers and system administrators to "
+"manage the complete life cycle of images. Docker makes it easy to build, "
+"ship and run images containing applications."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:143
+#, no-c-format
+msgid "Docker provides you with the following advantages:"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:148
+#, no-c-format
+msgid "Isolation of applications and operating systems through containers."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:153
+#, no-c-format
+msgid ""
+"Near native performance, as Docker manages allocation of resources in real "
+"time."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:157
+#, no-c-format
+msgid ""
+"Controls network interfaces and resources available inside containers "
+"through cgroups."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:163
+#, no-c-format
+msgid "Versioning of images."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:168
+#, no-c-format
+msgid "Allows building new images based on existing ones."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:173
+#, no-c-format
+msgid "Provides you with container orchestration."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:178
+#, no-c-format
+msgid "On the other hand, Docker has the following limitations:"
+msgstr ""
+
+#. Tag: title
+#: docker_overview.xml:182
+#, no-c-format
+msgid "Limitations of Docker"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:184
+#, no-c-format
+msgid ""
+"Containers run inside the host system's kernel and cannot use a different "
+"kernel."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:190
+#, no-c-format
+msgid "Only allows Linux <emphasis>guest</emphasis> operating systems."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:195
+#, no-c-format
+msgid ""
+"Docker is not a full virtualization stack like &xen;, &kvm;, or &libvirt;."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:201
+#, no-c-format
+msgid ""
+"Security depends on the host system. Refer to the <link xlink:href=\"http://"
+"docs.docker.com/articles/security/\">official security documentation</link> "
+"for more details."
+msgstr ""
+
+#. Tag: title
+#: docker_overview.xml:210
+#, no-c-format
+msgid "Docker Architecture"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:211
+#, no-c-format
+msgid ""
+"Docker uses a client/server architecture. You can use the <emphasis>CLI "
+"client</emphasis> to communicate with the <emphasis>daemon</emphasis>. The "
+"<emphasis>daemon</emphasis> then performs operations with containers and "
+"manages images locally or in registry. The <emphasis>CLI client</emphasis> "
+"can run on the same server as the host daemon or on a different machine. The "
+"<emphasis>CLI client</emphasis> communicates with the <emphasis>daemon</"
+"emphasis> by using network sockets. The architecture is depicted in <xref "
+"linkend=\"Docker_architecture\"/>."
+msgstr ""
+
+#. Tag: title
+#: docker_overview.xml:215
+#, no-c-format
+msgid "The docker architecture"
+msgstr ""
+
+#. Tag: title
+#: docker_overview.xml:224
+#, no-c-format
+msgid "Docker Drivers"
+msgstr ""
+
+#. Tag: title
+#: docker_overview.xml:226
+#, no-c-format
+msgid "Container Drivers"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:227
+#, no-c-format
+msgid ""
+"Docker uses <link xlink:href=\"https://github.com/docker/libcontainer"
+"\">libcontainer</link> as the back-end driver to handle containers."
+msgstr ""
+
+#. Tag: title
+#: docker_overview.xml:232
+#, no-c-format
+msgid "Storage Drivers"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:233
+#, no-c-format
+msgid "Docker supports different storage drivers:"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:238
+#, no-c-format
+msgid ""
+"<systemitem class=\"resource\">vfs</systemitem>: this driver is "
+"automatically used when the Docker host file system does not support copy-on-"
+"write. This is a simple driver which does not offer some advantages of "
+"Docker (like sharing layers, more on that in the next sections). It is "
+"highly reliable but also slow."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:247
+#, no-c-format
+msgid ""
+"<systemitem class=\"resource\">devicemapper</systemitem>: this driver relies "
+"on the device-mapper thin provisioning module. It supports copy-on-write, "
+"hence it offers all the advantages of Docker."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:254
+#, no-c-format
+msgid ""
+"<systemitem class=\"resource\">btrfs</systemitem>: this driver relies on "
+"Btrfs to provide all the features required by Docker. To use this driver the "
+"<filename>/var/lib/docker</filename> directory must be on a Btrfs file "
+"system."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:262
+#, no-c-format
+msgid ""
+"<systemitem class=\"resource\">AUFS</systemitem>: this driver relies on the "
+"AUFS union file system. Neither the upstream kernel nor the SUSE one "
+"supports this file system. Hence the AUFS driver is not built into the SUSE "
+"Docker package."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:269
+#, no-c-format
+msgid ""
+"&slea;&nbsp;12 uses the Btrfs file system by default, which leads Docker to "
+"use the <systemitem class=\"resource\">btrfs</systemitem> driver."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:273
+#, no-c-format
+msgid ""
+"It is possible to specify which driver to use by changing the value of the "
+"<envar>DOCKER_OPTS</envar> variable defined inside of the <filename>/etc/"
+"sysconfig/docker</filename> file. This can be done either manually or using "
+"&yast; by browsing to <menuchoice> <guimenu>System</guimenu> <guimenu>/etc/"
+"sysconfig Editor</guimenu> <guimenu>System</guimenu> <guimenu>Management</"
+"guimenu> <guimenu>DOCKER_OPTS</guimenu> </menuchoice> menu and entering the "
+"<systemitem class=\"library\">-s storage_driver</systemitem> string."
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:283
+#, no-c-format
+msgid ""
+"For example, to force the usage of the <systemitem class=\"resource"
+"\">devicemapper</systemitem> driver enter the following text:"
+msgstr ""
+
+#. Tag: screen
+#: docker_overview.xml:288
+#, no-c-format
+msgid "DOCKER_OPTS=\"-s devicemapper\""
+msgstr ""
+
+#. Tag: title
+#: docker_overview.xml:290
+#, no-c-format
+msgid "Mounting <filename>/var/lib/docker</filename>"
+msgstr ""
+
+#. Tag: para
+#: docker_overview.xml:291
+#, no-c-format
+msgid ""
+"It is recommended to have <filename>/var/lib/docker</filename> mounted on a "
+"different file system to not affect the Docker host operating system in case "
+"of a file system corruption."
+msgstr ""

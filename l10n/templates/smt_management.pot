@@ -1,0 +1,654 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: smt_management.xml:9
+#, no-c-format
+msgid "Managing Repositories with &yast; &smt; Server Management"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:11
+#, no-c-format
+msgid ""
+"You can use the &yast; &smt; Server Management module for day-to-day "
+"management. &smt; Server Management enables and disables the mirroring of "
+"repositories, the staging flag for repositories, and performs the mirroring "
+"and staging."
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:18
+#, no-c-format
+msgid "Starting &smt; Management Module"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:20
+#, no-c-format
+msgid ""
+"&smt; Management is a &yast; module. To start the module, do one of the "
+"following:"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:27
+#, no-c-format
+msgid ""
+"Start &yast; and select <guimenu>Network Services</guimenu>, then "
+"<guimenu>&smt; Server Management</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:33
+#, no-c-format
+msgid "Enter <command>yast2 smt</command> in the command line as &rootuser;."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:39
+#, no-c-format
+msgid ""
+"The &smt; Management application window opens with the "
+"<guimenu>Repositories</guimenu> tab active."
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:45
+#, no-c-format
+msgid "List of Repositories"
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:57
+#, no-c-format
+msgid "Viewing and Managing Repositories"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:59
+#, no-c-format
+msgid ""
+"In the <guimenu>Repositories</guimenu> tab, you can see the list of all "
+"available package repositories for &smt;. For each repository, the list "
+"shows the repository's name, target product and architecture, mirroring and "
+"staging flag, date of last mirroring, and a short description. You can sort "
+"the list by clicking the relevant column's header, and scroll the list items "
+"using the scrollbars on the window's right side."
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:69
+#, no-c-format
+msgid "Filtering Repositories"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:70
+#, no-c-format
+msgid ""
+"You can also filter out groups of repositories with the <guimenu>Repository "
+"Filter</guimenu> text box. Enter the phrase that you want included in the "
+"repository name and click <guimenu>Filter</guimenu>. The list of "
+"repositories reduces depending on the given phrase. To cancel the filtering "
+"and display all repositories, erase the <guimenu>Repository Filter</guimenu> "
+"field and click <guimenu>Filter</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:79
+#, no-c-format
+msgid "Repository Filter"
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:92
+#, no-c-format
+msgid "Mirroring Repositories"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:93
+#, no-c-format
+msgid ""
+"Before you can start to offer package repositories, you need to create a "
+"local mirror of their packages. To do so, follow this procedure:"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:99
+#, no-c-format
+msgid ""
+"From the list, select the line containing the name of the repository you "
+"want to mirror."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:105
+#, no-c-format
+msgid "Click the selected line to highlight it."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:110
+#, no-c-format
+msgid ""
+"Click the <guimenu>Toggle Mirroring</guimenu> button in the lower left part "
+"of the window. In the <guimenu>Mirroring</guimenu> column of the selected "
+"repository, a check mark appears. If the repository was already selected for "
+"mirroring before, the check mark will disappear, and the repository will not "
+"be mirrored anymore."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:119
+#, no-c-format
+msgid ""
+"Hit the <guimenu>Mirror Now</guimenu> button and the repository will be "
+"mirrored immediately."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:125
+#, no-c-format
+msgid ""
+"A pop-up window appears with the information about mirroring status and "
+"result."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:131
+#, no-c-format
+msgid ""
+"Click OK and the original window with the list of repositories will be "
+"refreshed."
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:138
+#, no-c-format
+msgid "Status of Mirroring Process"
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:151
+#, no-c-format
+msgid "Staging Repositories"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:153
+#, no-c-format
+msgid ""
+"After the mirroring is finished, you can stage the mirrored repositories. In "
+"&smt;, <emphasis>staging</emphasis> is a process where you create either "
+"testing or production repositories based on the mirrored ones. The testing "
+"repository helps you examine the repository and its packages before you make "
+"them available in a production environment. To make repositories available "
+"for staging, do the following:"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:164
+#, no-c-format
+msgid ""
+"From the repository list, select the line containing the name of the "
+"repository you want to manage."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:170
+#, no-c-format
+msgid "Click the selected line, highlighting it."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:175
+#, no-c-format
+msgid ""
+"Click the <guimenu>Toggle Staging</guimenu> button in the lower left part of "
+"the window next to the <guimenu>Toggle Mirroring</guimenu> button. In the "
+"<guimenu>Staging</guimenu> column of the selected repository, a check mark "
+"appears. If the repository was already selected for staging before, the "
+"check mark will disappear, and the repository will not be available for "
+"staging."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:185
+#, no-c-format
+msgid ""
+"Repeat steps 1 to 3 for all directories whose staging flag you want to "
+"change."
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:193
+#, no-c-format
+msgid "Toggle Staging Button Not Active"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:194
+#, no-c-format
+msgid ""
+"You can only stage the repositories that were previously selected for "
+"mirroring. If it is not the case, the <guimenu>Toggle Staging</guimenu> "
+"button will not be active."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:201
+#, no-c-format
+msgid ""
+"Once you mirror the repositories and make them available for staging, click "
+"the <guimenu>Staging</guimenu> tab. In the upper left part of the window, "
+"there is a <guimenu>Repository Name</guimenu> drop-down box of all "
+"repositories which are available for staging. There the repository names "
+"have the name of the staging group attached in parentheses. Select the one "
+"you want to stage and a list of packages of this repository appears below. "
+"Information about the patch name, its version and category, testing and "
+"production flags, and a short summary is available for each patch."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:212
+#, no-c-format
+msgid ""
+"Next to the <guimenu>Repository Name</guimenu> drop-down box, there is a "
+"<guimenu>Patch Category</guimenu> filter. It helps you to list only the "
+"patches that belong to one of the predefined categories."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:218
+#, no-c-format
+msgid ""
+"If the selected repository allows for patch filtering, you can toggle the "
+"status flag for individual patches. Do so by clicking the <guimenu>Toggle "
+"Patch Status</guimenu> button in the lower left part of the window."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:224
+#, no-c-format
+msgid ""
+"Before creating a repository of packages that are available in the "
+"<emphasis>production</emphasis> environment, you need to create and test the "
+"<emphasis>testing</emphasis> repository. Click the <guimenu>Create Snapshot</"
+"guimenu> drop-down box and select the <guimenu>From Full Mirror to Testing</"
+"guimenu> menu item. A small pop-up window appears informing you about the "
+"staging process. After the testing repository snapshot is created, the "
+"relevant check marks in the <guimenu>Testing</guimenu> column will be "
+"displayed."
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:236
+#, no-c-format
+msgid "Testing Snapshot Created"
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:248
+#, no-c-format
+msgid "Creating a Production Snapshot"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:249
+#, no-c-format
+msgid ""
+"After you enable <emphasis>staging</emphasis> for an update repository, you "
+"need to create its <emphasis>production</emphasis> snapshot to make it "
+"available to the clients. Otherwise the clients will not be able to find the "
+"update repository."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:257
+#, no-c-format
+msgid ""
+"After you have examined the newly created testing repository, you can safely "
+"create a production one. Click the <guimenu>Create Snapshot</guimenu> drop-"
+"down box and select the <guimenu>From Testing to Production</guimenu> menu "
+"item. A small pop-up window appears informing you about linking the testing "
+"repository to the production one. After the production snapshot is created, "
+"the relevant check marks in the <guimenu>Production</guimenu> column will be "
+"displayed. Also, a green check mark appears in the <guimenu>Repository Name</"
+"guimenu> drop-down box."
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:269
+#, no-c-format
+msgid "Jobs and Client Status Monitoring"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:271
+#, no-c-format
+msgid ""
+"For each client that is registered against the &smt; server, &smt; creates a "
+"job queue. To make use of the job queue, you need to install the "
+"<systemitem>smt-client</systemitem> package on the client. During the "
+"installation of the <systemitem>smt-client</systemitem> package, a cron job "
+"is created that runs the client executable <command>/usr/sbin/smt-agent</"
+"command> every three hours by default. The agent then asks the server if it "
+"has any jobs in the queue belonging to this client, and executes these jobs. "
+"When there are no more jobs in the queue, the agent terminates completely. "
+"It is important to understand that jobs are not pushed directly to the "
+"clients when they get created, and are not executed until the client asks "
+"for them in the preconfigured intervals of the cron job. Therefore, a delay "
+"of several hours may occur from the creation time of a job on the server "
+"until the job is executed on the client."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:288
+#, no-c-format
+msgid ""
+"Every job can have a parent job, which means that the child job only runs "
+"after the parent job has successfully finished. It is also possible to "
+"configure advanced timing and recurrence/persistence of jobs. You can find "
+"more details about &smt; jobs in <xref linkend=\"smt.scripts.job\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:295
+#, no-c-format
+msgid ""
+"When creating jobs, you need to specify the GUID of the target clients using "
+"the <option>-g <replaceable>GUID</replaceable></option> parameter. Although "
+"the <option>-g</option> parameter can be specified multiple times on a "
+"single command, there is no \"wild card\" functionality to assign a job to "
+"all clients."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:303
+#, no-c-format
+msgid "Currently the following types of jobs are relevant:"
+msgstr ""
+
+#. Tag: term
+#: smt_management.xml:309
+#, no-c-format
+msgid "Execute"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:311
+#, no-c-format
+msgid "Run commands on the client."
+msgstr ""
+
+#. Tag: term
+#: smt_management.xml:317
+#, no-c-format
+msgid "Eject"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:319
+#, no-c-format
+msgid "Open, close, or toggle the CD tray of the client."
+msgstr ""
+
+#. Tag: term
+#: smt_management.xml:325
+#, no-c-format
+msgid "Patchstatus"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:327
+#, no-c-format
+msgid "Report the status of installed patches."
+msgstr ""
+
+#. Tag: term
+#: smt_management.xml:333
+#, no-c-format
+msgid "Reboot"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:335
+#, no-c-format
+msgid "Reboot the client."
+msgstr ""
+
+#. Tag: term
+#: smt_management.xml:341
+#, no-c-format
+msgid "Softwarepush"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:343
+#, no-c-format
+msgid "Install packages."
+msgstr ""
+
+#. Tag: term
+#: smt_management.xml:349
+#, no-c-format
+msgid "Update"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:351
+#, no-c-format
+msgid "Install available updates."
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:359
+#, no-c-format
+msgid "Default Job Types"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:360
+#, no-c-format
+msgid ""
+"By default only 'softwarepush', 'patchstatus', and 'update' jobs are "
+"allowed. To allow more types of jobs, append the job type to the "
+"<literal>ALLOWED_AGENTS</literal> list in <filename>/etc/sysconfig/smt-"
+"client</filename>."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:368
+#, no-c-format
+msgid ""
+"All clients that register against the &smt; server automatically get a "
+"persistent 'patchstatus' job added to their job queue. This is also true for "
+"clients with no <systemitem>smt-clients</systemitem> package (&sle; 10 and "
+"older, or non-SUSE based distributions). These clients will appear with a "
+"patchstatus of \"Unknown\" in the client lists. The 'patchstatus' jobs for "
+"such clients are not required, and clients can safely be deleted to clean up "
+"the output of <command>smt-job</command>. Remember that if you update a "
+"machine to &sle; 11 or later, you will need to create the 'patchstatus' job "
+"manually."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:380
+#, no-c-format
+msgid ""
+"Whenever the client runs a 'patchstatus' job, it compares the currently "
+"installed updates with what is available in the repositories on the &smt; "
+"server. The job then reports back the number of missing patches that need to "
+"be installed in each of the four categories:"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:389
+#, no-c-format
+msgid "Security"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:394
+#, no-c-format
+msgid "Package Manager"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:399
+#, no-c-format
+msgid "Recommended"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:404
+#, no-c-format
+msgid "Optional"
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:411
+#, no-c-format
+msgid "The <option>--agreelicense</option> Option"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:412
+#, no-c-format
+msgid ""
+"To install a package and its dependencies, the job type 'softwarepush' is "
+"used. When creating this type of job, it is handy to always add the "
+"<option>--agreelicense</option> option. The reason for this is that if a "
+"package displays a license agreement and expects it to be accepted, the job "
+"will skip the package if <option>--agreelicense</option> was not specified. "
+"The <command>smt-client</command> forwards the installation process to "
+"<command>zypper</command>, which does not consider a failed acceptance of a "
+"license agreement to be an error. This results in the job being completed "
+"successfully, even though the package may not be installed."
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:426
+#, no-c-format
+msgid "Checking the Client Status with &yast;"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:427
+#, no-c-format
+msgid ""
+"The <guimenu>Clients Status</guimenu> tab of the <guimenu>&smt; Management</"
+"guimenu> window contains the status information about all the clients that "
+"use the repositories on your &smt; server. It is divided into two main "
+"parts: the list of the clients and the detailed information."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:433
+#, no-c-format
+msgid ""
+"You can read the client's host name, the date and time of the last network "
+"contact with the &smt; server, and its update status. The update status can "
+"be one of the following:"
+msgstr ""
+
+#. Tag: term
+#: smt_management.xml:440
+#, no-c-format
+msgid "Up-to-date"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:442
+#, no-c-format
+msgid ""
+"The client packages are updated to their last version available in the "
+"production repository."
+msgstr ""
+
+#. Tag: term
+#: smt_management.xml:449
+#, no-c-format
+msgid "Updates available"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:451
+#, no-c-format
+msgid ""
+"This status means that there are updates available for the client that are "
+"either <literal>optional</literal> or <literal>recommended</literal>."
+msgstr ""
+
+#. Tag: term
+#: smt_management.xml:459
+#, no-c-format
+msgid "Critical"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:461
+#, no-c-format
+msgid ""
+"Either <literal>security</literal> patches or <literal>package manager</"
+"literal> patches are available for the client."
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:468
+#, no-c-format
+msgid ""
+"In the lower part of the window, more detailed information about the "
+"selected client is available. It usually consists of extended status "
+"information and detailed information about the number and types of available "
+"updates."
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:475
+#, no-c-format
+msgid "Clients Status"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:485
+#, no-c-format
+msgid ""
+"The date and time in the <guimenu>Last Contact</guimenu> column is the real "
+"last time contact of the server, even if it only ran the regular "
+"registration update script. This date is not the date of the last "
+"'patchstatus' report. The command line tool <command>smt-client</command> "
+"prints the correct date and calls it <literal>Patch Status Date</literal> "
+"(<command>smt-client -v</command> prints both dates, the 'patchstatus' date "
+"and the last contact of the client system)."
+msgstr ""
+
+#. Tag: title
+#: smt_management.xml:495
+#, no-c-format
+msgid "Hidden Patches"
+msgstr ""
+
+#. Tag: para
+#: smt_management.xml:496
+#, no-c-format
+msgid ""
+"Package manager patches can \"hide\" other patches, since they may be a "
+"prerequisite to other patches in such a way that these do not show up as "
+"available until the package manager patch(es) have been installed."
+msgstr ""

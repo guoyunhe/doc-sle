@@ -1,0 +1,267 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: deployment_prep_x86_choose.xml:12
+#, no-c-format
+msgid "Installation Considerations"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: deployment_prep_x86_choose.xml:15
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:21
+#, no-c-format
+msgid ""
+"This section encompasses many factors that need to be considered before "
+"installing &productname; on &amd64; and &intel64; hardware."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_x86_choose.xml:27
+#, no-c-format
+msgid "Installation Type"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:28
+#, no-c-format
+msgid ""
+"&productname; is normally installed as an independent operating system. With "
+"the introduction of Virtualization, it is also possible to run multiple "
+"instances of &sls; on the same hardware. However, the installation of the "
+"&vmhost; is performed like a typical installation with some additional "
+"packages.<phrase os=\"sles;osuse\"> The installation of virtual guests is "
+"described in <xref linkend=\"cha.kvm.inst\"/>.</phrase>"
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_x86_choose.xml:38
+#, no-c-format
+msgid "Boot Methods"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:39
+#, no-c-format
+msgid ""
+"Depending on the hardware used, the following boot methods are available for "
+"the first boot procedure (prior to the installation of &sls;)."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_x86_choose.xml:44
+#, no-c-format
+msgid "Boot Options"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:49
+#, no-c-format
+msgid "Boot Option"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:54
+#, no-c-format
+msgid "<para>Use</para>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:63
+#, no-c-format
+msgid "CD or DVD drive"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:68
+#, no-c-format
+msgid ""
+"The simplest booting method. The system requires a locally-available CD-ROM "
+"or DVD-ROM drive for this."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:76
+#, no-c-format
+msgid "Flash disks"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:81
+#, no-c-format
+msgid ""
+"Find the images required for creating boot disks on the first CD or DVD in "
+"the <filename>/boot</filename> directory. See also the <filename>README</"
+"filename> in the same directory. Booting from a USB memory stick is only "
+"possible if the BIOS of the machine supports this method."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:92
+#, no-c-format
+msgid "PXE or bootp"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:97
+#, no-c-format
+msgid ""
+"Must be supported by the BIOS or by the firmware of the system used. This "
+"option requires a boot server in the network. This task can be handled by a "
+"separate &sls;."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:106
+#, no-c-format
+msgid "Hard disk"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:111
+#, no-c-format
+msgid ""
+"&productname; can also be booted from hard disk. For this, copy the kernel "
+"(<systemitem>linux</systemitem>) and the installation system "
+"(<systemitem>initrd</systemitem>) from the <filename>/boot/loader</filename> "
+"directory of the first CD or DVD onto the hard disk and add an appropriate "
+"entry to the boot loader."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_x86_choose.xml:126
+#, no-c-format
+msgid "Installation Source"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:127
+#, no-c-format
+msgid ""
+"When installing &productname;, the actual installation data must be "
+"available in the network, on a hard disk partition, or on a local DVD. To "
+"install from the network, you need an installation server. To make the "
+"installation data available, set up any computer in a Unix or Linux "
+"environment as an NFS, HTTP, SMB, or FTP server. To make the installation "
+"data available from a Windows computer, release the data with SMB."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:135
+#, no-c-format
+msgid ""
+"The installation source is particularly easy to select if you configure an "
+"<emphasis>SLP server</emphasis> in the local network. For more information, "
+"see <xref linkend=\"cha.deployment.instserver\"/>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_x86_choose.xml:143
+#, no-c-format
+msgid "Installation Target"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:144
+#, no-c-format
+msgid ""
+"Most installations are to a local hard disk. Therefore, it is necessary for "
+"the hard disk controllers to be available to the installation system. If a "
+"special controller (like a RAID controller) needs an extra kernel module, "
+"provide a kernel module update disk to the installation system."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:150
+#, no-c-format
+msgid ""
+"Other installation targets may be various types of block devices that "
+"provide sufficient disk space and speed to run an operating system. This "
+"includes network block devices like <systemitem>iSCSI</systemitem> or "
+"<systemitem>SAN</systemitem>. It is also possible to install on network file "
+"systems that offer the standard Unix permissions. However, it may be "
+"problematic to boot these, because they must be supported by the "
+"<systemitem>initramfs</systemitem> before the actual system can start. Such "
+"installations are useful if there is a need to start the same system in "
+"different locations or if you intend to use virtualization features like "
+"domain migration."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_x86_choose.xml:165
+#, no-c-format
+msgid "Different Installation Methods"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:166
+#, no-c-format
+msgid "&productname; offers several methods for controlling installation:"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:171
+#, no-c-format
+msgid "Installation on the console"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:176
+#, no-c-format
+msgid "Installation via serial console"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:181
+#, no-c-format
+msgid "Installation with &ay;"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:186
+#, no-c-format
+msgid "Installation with KIWI images"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:191
+#, no-c-format
+msgid "Installation via SSH"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:196
+#, no-c-format
+msgid "Installation with VNC"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_choose.xml:201
+#, no-c-format
+msgid ""
+"By default, the graphical console is used. If you have many similar "
+"computers to install, it is advisable to create an &ay; configuration file "
+"or a KIWI preload image and make this available to the installation process. "
+"See also the documentation for &ay; at <link xlink:href=\"https://www.suse."
+"com/documentation/sles-12/book_autoyast/data/book_autoyast.html\"></link> "
+"and <systemitem class=\"resource\">KIWI</systemitem> at <link xlink:href="
+"\"http://doc.opensuse.org/projects/kiwi/doc/\"></link>."
+msgstr ""

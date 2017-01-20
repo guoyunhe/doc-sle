@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: x11.xml:12
+#, no-c-format
+msgid "The X Window System"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: x11.xml:14
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: x11.xml:19
+#, no-c-format
+msgid "X Window System"
+msgstr ""
+
+#. Tag: see
+#: x11.xml:20
+#, no-c-format
+msgid "<see>X</see>"
+msgstr ""
+
+#. Tag: para
+#: x11.xml:21
+#, no-c-format
+msgid ""
+"The X Window System (X11) is the de facto standard for graphical user "
+"interfaces in Unix. X is network-based, enabling applications started on one "
+"host to be displayed on another host connected over any kind of network (LAN "
+"or Internet). This chapter provides basic information on the X "
+"configuration, and background information about the use of fonts in "
+"&productnamereg;."
+msgstr ""
+
+#. Tag: para
+#: x11.xml:28
+#, no-c-format
+msgid ""
+"Usually, the X Window System needs no configuration. The hardware is "
+"dynamically detected during X start-up. The use of <filename>xorg.conf</"
+"filename> is therefore deprecated. If you still need to specify custom "
+"options to change the way X behaves, you can still do so by modifying "
+"configuration files under <filename>/etc/X11/xorg.conf.d/</filename>."
+msgstr ""
+
+#. Tag: title
+#: x11.xml:37
+#, no-c-format
+msgid "IBM &zseries;: Configuring the Graphical User Interface"
+msgstr ""
+
+#. Tag: para
+#: x11.xml:38
+#, no-c-format
+msgid ""
+"IBM &zseries; does not have any input or output devices supported by "
+"&xvendor;. Therefore, none of the configuration procedures described in this "
+"section apply. More relevant information for IBM &zseries; can be found in "
+"<xref linkend=\"cha.zseries\"/>."
+msgstr ""
+
+#. Tag: title
+#: x11.xml:50
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: x11.xml:52
+#, no-c-format
+msgid ""
+"Install the packages <systemitem class=\"resource\">xorg-docs</systemitem> "
+"to get more in-depth information about X11. <command>man 5 xorg.conf</"
+"command> tells you more about the format of the manual configuration (if "
+"needed). More information on the X11 development can be found on the "
+"project's home page at <link xlink:href=\"http://www.x.org\"></link>."
+msgstr ""
+
+#. Tag: para
+#: x11.xml:60
+#, no-c-format
+msgid ""
+"Drivers are found in <systemitem>xf86-video-*</systemitem> packages, for "
+"example <systemitem>xf86-video-nv</systemitem>. Many of the drivers "
+"delivered with these packages are described in detail in the related manual "
+"page. For example, if you use the <literal>nv</literal> driver, find more "
+"information about this driver in <command>man 4 nv</command>."
+msgstr ""
+
+#. Tag: para
+#: x11.xml:68
+#, no-c-format
+msgid ""
+"Information about third-party drivers should be available in <filename>/usr/"
+"share/doc/packages/&lt;package_name&gt;</filename>. For example, the "
+"documentation of <systemitem class=\"resource\">x11-video-nvidiaG03</"
+"systemitem> is available in <filename>/usr/share/doc/packages/x11-video-"
+"nvidiaG03</filename> after the package was installed."
+msgstr ""

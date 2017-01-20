@@ -1,0 +1,263 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: updater_gnome.xml:12
+#, no-c-format
+msgid "Keeping the System Up-to-date"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: updater_gnome.xml:15
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:21
+#, no-c-format
+msgid ""
+"&suse; offers a continuous stream of software security patches for your "
+"product. They can be installed using the <xref linkend=\"cha.onlineupdate.you"
+"\" xrefstyle=\"select:title nopage\"/> module. It also offers advanced "
+"features to customize the patch installation."
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:30
+#, no-c-format
+msgid ""
+"The &gnome; desktop also provides a tool for installing patches and for "
+"installing package updates of packages that are already installed. In "
+"contrast to a <xref linkend=\"vle.patch\"/>, a package update is only "
+"related to <emphasis>one</emphasis> package and provides a newer version of "
+"a package. The &gnome; tool lets you install both patches and package "
+"updates with a few clicks as described in <xref linkend=\"sec.updater.gnome."
+"patches\"/>."
+msgstr ""
+
+#. Tag: remark
+#: updater_gnome.xml:40
+#, no-c-format
+msgid ""
+"2007-08-06 - fs: To differentiate between official updates and new program "
+"versions, the official updates are called \"patches\" contrary to \"New "
+"(program) versions\"."
+msgstr ""
+
+#. Tag: title
+#: updater_gnome.xml:48
+#, no-c-format
+msgid "The &gnome; Software Updater"
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:49 updater_gnome.xml:138
+#, no-c-format
+msgid ""
+"Whenever new patches or package updates are available, &gnome; shows a "
+"notification about this at the bottom of the desktop (or on the locked "
+"screen)."
+msgstr ""
+
+#. Tag: title
+#: updater_gnome.xml:57
+#, no-c-format
+msgid "Update Notification on &gnome; Lock Screen"
+msgstr ""
+
+#. Tag: title
+#: updater_gnome.xml:137
+#, no-c-format
+msgid "Installing Patches and Package Updates"
+msgstr ""
+
+#. Tag: title
+#: updater_gnome.xml:144
+#, no-c-format
+msgid "Update Notification on &gnome; Desktop"
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:156
+#, no-c-format
+msgid ""
+"To install the patches and updates, click <guimenu>Install updates</guimenu> "
+"in the notification message. This opens the &gnome; update viewer. "
+"Alternatively, open the update viewer from <menuchoice> "
+"<guimenu>Applications</guimenu> <guimenu>System Tools</guimenu> "
+"<guimenu>Software Update</guimenu> </menuchoice> or press <keycombo> <keycap "
+"function=\"alt\"></keycap> <keycap>F2</keycap> </keycombo> and enter "
+"<command>gpk-update-viewer</command>."
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:167
+#, no-c-format
+msgid ""
+"All <guimenu>Security Updates</guimenu> and <guimenu>Important Updates</"
+"guimenu> are preselected. It is strongly recommended to install these "
+"patches. <guimenu>Other Updates</guimenu> can be manually selected by "
+"activating the respective check boxes. Get detailed information on a patch "
+"or package update by clicking its title."
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:176
+#, no-c-format
+msgid ""
+"Click <guimenu>Install Updates</guimenu> to start the installation. You will "
+"be prompted for the &rootuser; password."
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:189
+#, no-c-format
+msgid "Enter the &rootuser; password in the authentication dialog and proceed."
+msgstr ""
+
+#. Tag: title
+#: updater_gnome.xml:195
+#, no-c-format
+msgid "&gnome; Update Viewer"
+msgstr ""
+
+#. Tag: title
+#: updater_gnome.xml:208
+#, no-c-format
+msgid "Configuring the &gnome; Software Updater"
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:209
+#, no-c-format
+msgid ""
+"To define the appearance of the notification (where it appears on the "
+"screen, whether to display it on the lock screen), select <menuchoice> "
+"<guimenu>Applications</guimenu><guimenu>System Settings</"
+"guimenu><guimenu>Notification</guimenu> <guimenu>Software Update</guimenu> </"
+"menuchoice> and change the settings according to your wishes."
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:217
+#, no-c-format
+msgid ""
+"To configure how often to check for updates or to activate or deactivate "
+"repositories, select <menuchoice><guimenu>Applications</"
+"guimenu><guimenu>System Tools</guimenu> <guimenu>Settings</"
+"guimenu><guimenu>Software Settings</guimenu></menuchoice>. The tabs of the "
+"configuration dialog let you modify the following settings:"
+msgstr ""
+
+#. Tag: title
+#: updater_gnome.xml:226
+#, no-c-format
+msgid "Update Settings"
+msgstr ""
+
+#. Tag: guimenu
+#: updater_gnome.xml:228
+#, no-c-format
+msgid "Check for Updates"
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:231
+#, no-c-format
+msgid ""
+"Choose how often a check for updates is performed: <guimenu>Hourly</"
+"guimenu>, <guimenu>Daily</guimenu>, <guimenu>Weekly</guimenu>, or "
+"<guimenu>Never</guimenu>."
+msgstr ""
+
+#. Tag: guimenu
+#: updater_gnome.xml:239
+#, no-c-format
+msgid "Check for Major Upgrades"
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:242
+#, no-c-format
+msgid ""
+"Choose how often a check for major upgrades is performed: <guimenu>Daily</"
+"guimenu>, <guimenu>Weekly</guimenu>, or <guimenu>Never</guimenu>."
+msgstr ""
+
+#. Tag: term
+#: updater_gnome.xml:250
+#, no-c-format
+msgid "Check for updates when using mobile broadband"
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:252 updater_gnome.xml:261
+#, no-c-format
+msgid ""
+"This configuration option is only available on mobile computers. Turned off "
+"by default."
+msgstr ""
+
+#. Tag: term
+#: updater_gnome.xml:259
+#, no-c-format
+msgid "Check for updates on battery power"
+msgstr ""
+
+#. Tag: title
+#: updater_gnome.xml:269
+#, no-c-format
+msgid "Software Sources"
+msgstr ""
+
+#. Tag: term
+#: updater_gnome.xml:271
+#, no-c-format
+msgid "Repositories"
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:273
+#, no-c-format
+msgid ""
+"Lists the repositories that will be checked for available patches and "
+"package updates. You can enable or disable certain repositories."
+msgstr ""
+
+#. Tag: title
+#: updater_gnome.xml:278
+#, no-c-format
+msgid "Keep <literal>Update</literal> Repository Enabled"
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:279
+#, no-c-format
+msgid ""
+"To make sure that you are notified about any patches that are security-"
+"relevant, keep the <literal>Updates</literal> repository for your product "
+"enabled."
+msgstr ""
+
+#. Tag: para
+#: updater_gnome.xml:288
+#, no-c-format
+msgid ""
+"More options are configurable using <command>gconf-editor</command>: "
+"<menuchoice> <guimenu>apps</guimenu> <guimenu>gnome-packagekit</guimenu></"
+"menuchoice>."
+msgstr ""

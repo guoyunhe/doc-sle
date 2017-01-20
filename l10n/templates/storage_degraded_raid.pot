@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: storage_degraded_raid.xml:9
+#, no-c-format
+msgid "Creating a Degraded RAID Array"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:12
+#, no-c-format
+msgid ""
+"A degraded array is one in which some devices are missing. Degraded arrays "
+"are supported only for RAID 1, RAID 4, RAID 5, and RAID 6. These RAID types "
+"are designed to withstand some missing devices as part of their fault-"
+"tolerance features. Typically, degraded arrays occur when a device fails. It "
+"is possible to create a degraded array on purpose."
+msgstr ""
+
+#. Tag: dm:docmanager
+#: storage_degraded_raid.xml:20
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:32
+#, no-c-format
+msgid "RAID Type"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:37
+#, no-c-format
+msgid "Allowable Number of Slots Missing"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:47
+#, no-c-format
+msgid "RAID 1"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:52
+#, no-c-format
+msgid "All but one device"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:60
+#, no-c-format
+msgid "RAID 4"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:65 storage_degraded_raid.xml:78
+#, no-c-format
+msgid "One slot"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:73
+#, no-c-format
+msgid "RAID 5"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:86
+#, no-c-format
+msgid "RAID 6"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:91
+#, no-c-format
+msgid "One or two slots"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:100
+#, no-c-format
+msgid ""
+"To create a degraded array in which some devices are missing, simply give "
+"the word <literal>missing</literal> in place of a device name. This causes "
+"<command>mdadm</command> to leave the corresponding slot in the array empty."
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:105
+#, no-c-format
+msgid ""
+"When creating a RAID 5 array, <command>mdadm</command> automatically creates "
+"a degraded array with an extra spare drive. This is because building the "
+"spare into a degraded array is generally faster than resynchronizing the "
+"parity on a non-degraded, but not clean, array. You can override this "
+"feature with the <literal>--force</literal> option."
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:112
+#, no-c-format
+msgid ""
+"Creating a degraded array might be useful if you want create a RAID, but one "
+"of the devices you want to use already has data on it. In that case, you "
+"create a degraded array with other devices, copy data from the in-use device "
+"to the RAID that is running in degraded mode, add the device into the RAID, "
+"then wait while the RAID is rebuilt so that the data is now across all "
+"devices. An example of this process is given in the following procedure:"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:122
+#, no-c-format
+msgid ""
+"To create a degraded RAID 1 device <filename>/dev/md0</filename>, using one "
+"single drive <filename>/dev/sd1</filename>, enter the following at the "
+"command prompt:"
+msgstr ""
+
+#. Tag: screen
+#: storage_degraded_raid.xml:127
+#, no-c-format
+msgid "mdadm --create /dev/md0 -l 1 -n 2 /dev/sda1 missing"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:128
+#, no-c-format
+msgid ""
+"The device should be the same size or larger than the device you plan to add "
+"to it."
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:134
+#, no-c-format
+msgid ""
+"If the device you want to add to the mirror contains data that you want to "
+"move to the RAID array, copy it now to the RAID array while it is running in "
+"degraded mode."
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:141
+#, no-c-format
+msgid ""
+"Add the device you copied the data from to the mirror. For example, to add "
+"<filename>/dev/sdb1</filename> to the RAID, enter the following at the "
+"command prompt:"
+msgstr ""
+
+#. Tag: screen
+#: storage_degraded_raid.xml:146
+#, no-c-format
+msgid "mdadm /dev/md0 -a /dev/sdb1"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:147
+#, no-c-format
+msgid ""
+"You can add only one device at a time. You must wait for the kernel to build "
+"the mirror and bring it fully online before you add another mirror."
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:153
+#, no-c-format
+msgid ""
+"Monitor the build progress by entering the following at the command prompt:"
+msgstr ""
+
+#. Tag: screen
+#: storage_degraded_raid.xml:156
+#, no-c-format
+msgid "cat /proc/mdstat"
+msgstr ""
+
+#. Tag: para
+#: storage_degraded_raid.xml:157
+#, no-c-format
+msgid "To see the rebuild progress while being refreshed every second, enter"
+msgstr ""
+
+#. Tag: screen
+#: storage_degraded_raid.xml:160
+#, no-c-format
+msgid "watch -n 1 cat /proc/mdstat"
+msgstr ""

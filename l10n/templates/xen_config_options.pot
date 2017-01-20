@@ -1,0 +1,1014 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: xen_config_options.xml:8
+#, no-c-format
+msgid "Virtualization: Configuration Options and Settings"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:15
+#, no-c-format
+msgid ""
+"The documentation in this section, describes advanced management tasks and "
+"configuration options that might help technology innovators implement "
+"leading-edge virtualization solutions. It is provided as a courtesy and does "
+"not imply that all documented options and tasks are supported by Novell, Inc."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:23
+#, no-c-format
+msgid "Virtual CD Readers"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:25
+#, no-c-format
+msgid ""
+"Virtual CD readers can be set up when a virtual machine is created or added "
+"to an existing virtual machine. A virtual CD reader can be based on a "
+"physical CD/DVD, or based on an ISO image. Virtual CD readers work "
+"differently depending on whether they are paravirtual or fully virtual."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:33
+#, no-c-format
+msgid "Virtual CD Readers on Paravirtual Machines"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:34
+#, no-c-format
+msgid ""
+"A paravirtual machine can have up to 100 block devices composed of virtual "
+"CD readers and virtual disks. On paravirtual machines, virtual CD readers "
+"present the CD as a virtual disk with read-only access. Virtual CD readers "
+"cannot be used to write data to a CD."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:40
+#, no-c-format
+msgid ""
+"After you have finished accessing a CD on a paravirtual machine, it is "
+"recommended that you remove the virtual CD reader from the virtual machine."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:45
+#, no-c-format
+msgid ""
+"Paravirtualized guests can use the device type <literal>devtype=cdrom</"
+"literal>. This partly emulates the behavior of a real CD reader, and allows "
+"CDs to be changed. It is even possible to use the eject command to open the "
+"tray of the CD reader."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:54
+#, no-c-format
+msgid "Virtual CD Readers on Fully Virtual Machines"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:56
+#, no-c-format
+msgid ""
+"A fully virtual machine can have up to four block devices composed of "
+"virtual CD readers and virtual disks. A virtual CD reader on a fully virtual "
+"machine interacts with an inserted CD in the way you would expect a physical "
+"CD reader to interact. For example, in a Windows* XP* virtual machine, the "
+"inserted CD appears in the <literal>Devices with Removable Storage</literal> "
+"section of <literal>My Computer</literal>."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:64
+#, no-c-format
+msgid ""
+"When a CD is inserted in the physical CD reader on the host computer, all "
+"virtual machines with virtual CD readers based on the physical CD reader, "
+"such as <filename>/dev/cdrom/</filename>, can read the inserted CD. Assuming "
+"the operating system has automount functionality, the CD should "
+"automatically appear in the file system. Virtual CD readers cannot be used "
+"to write data to a CD. They are configured as read-only devices."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:76
+#, no-c-format
+msgid "Adding Virtual CD Readers"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:77
+#, no-c-format
+msgid ""
+"Virtual CD readers can be based on a CD inserted into the CD reader or on an "
+"ISO image file."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:83 xen_config_options.xml:176
+#, no-c-format
+msgid ""
+"Make sure that the virtual machine is running and the operating system has "
+"finished booting."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:89
+#, no-c-format
+msgid ""
+"Insert the desired CD into the physical CD reader or copy the desired ISO "
+"image to a location available to &dom0;."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:95
+#, no-c-format
+msgid ""
+"Select a new, unused block device in your &vmguest;, such as <filename>/dev/"
+"xvdb</filename>."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:101
+#, no-c-format
+msgid "Choose the CD reader or ISO image that you want to assign to the guest."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:107
+#, no-c-format
+msgid ""
+"When using a real CD reader, use the following command to assign the CD "
+"reader to your &vmguest;. In this example, the name of the guest is "
+"&xenguest;:"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:112
+#, no-c-format
+msgid "xl block-attach &xenguest; target=/dev/sr0,vdev=xvdb,access=ro"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:115
+#, no-c-format
+msgid "When assigning an image file, use the following command:"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:118
+#, no-c-format
+msgid "xl block-attach &xenguest; target=/path/to/file.iso,vdev=xvdb,access=ro"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:121
+#, no-c-format
+msgid ""
+"A new block device, such as <filename>/dev/xvdb</filename>, is added to the "
+"virtual machine."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:127
+#, no-c-format
+msgid "If the virtual machine is running Linux, complete the following:"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:132
+#, no-c-format
+msgid ""
+"Open a terminal in the virtual machine and enter <command>fdisk -l</command> "
+"to verify that the device was properly added. You can also enter "
+"<command>ls /sys/block</command> to see all disks available to the virtual "
+"machine."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:138
+#, no-c-format
+msgid ""
+"The CD is recognized by the virtual machine as a virtual disk with a drive "
+"designation, for example:"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:142
+#, no-c-format
+msgid "/dev/xvdb"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:145
+#, no-c-format
+msgid ""
+"Enter the command to mount the CD or ISO image using its drive designation. "
+"For example,"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:149
+#, no-c-format
+msgid "mount -o ro /dev/xvdb /mnt"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:150
+#, no-c-format
+msgid "mounts the CD to a mount point named <command>/mnt</command>."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:153
+#, no-c-format
+msgid ""
+"The CD or ISO image file should be available to the virtual machine at the "
+"specified mount point."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:161
+#, no-c-format
+msgid "If the virtual machine is running Windows, reboot the virtual machine."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:164
+#, no-c-format
+msgid ""
+"Verify that the virtual CD reader appears in its <literal>My Computer</"
+"literal> section."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:173
+#, no-c-format
+msgid "Removing Virtual CD Readers"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:182
+#, no-c-format
+msgid ""
+"If the virtual CD reader is mounted, unmount it from within the virtual "
+"machine."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:188
+#, no-c-format
+msgid ""
+"Enter <command>xl block-list alice</command> on the host view of the guest "
+"block devices."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:194
+#, no-c-format
+msgid ""
+"Enter <command>xl block-detach alice</command> <replaceable>block_dev_id</"
+"replaceable> to remove the virtual device from the guest. If that fails, try "
+"to add <option>-f</option> to force the removal."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:202
+#, no-c-format
+msgid "Press the hardware eject button to eject the CD."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:210
+#, no-c-format
+msgid "Remote Access Methods"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:212
+#, no-c-format
+msgid ""
+"Some configurations, such as those that include rack-mounted servers, "
+"require a computer to run without a video monitor, keyboard, or mouse. This "
+"type of configuration is often called <literal>headless</literal> and "
+"requires the use of remote administration technologies."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:219
+#, no-c-format
+msgid "Typical configuration scenarios and technologies include:"
+msgstr ""
+
+#. Tag: term
+#: xen_config_options.xml:225
+#, no-c-format
+msgid "Graphical Desktop with X Window Server"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:227
+#, no-c-format
+msgid ""
+"If a graphical desktop, such as &gnome;, is installed on the virtual machine "
+"host, you can use a remote viewer, such as a VNC viewer. On a remote "
+"computer, log in and manage the remote guest environment by using graphical "
+"tools, such as <command>tigervnc</command> or <command>virt-viewer</command>."
+msgstr ""
+
+#. Tag: term
+#: xen_config_options.xml:237
+#, no-c-format
+msgid "Text Only"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:239
+#, no-c-format
+msgid ""
+"You can use the <command>ssh</command> command from a remote computer to log "
+"in to a virtual machine host and access its text-based console. You can then "
+"use the <command>xl</command> command to manage virtual machines, and the "
+"<command>virt-install</command> command to create new virtual machines."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:250
+#, no-c-format
+msgid "VNC Viewer"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:252
+#, no-c-format
+msgid ""
+"VNC viewer is used to view the environment of the running guest system in a "
+"graphical way. You can use it from &dom0; (known as local access or on-box "
+"access), or from a remote computer."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:258
+#, no-c-format
+msgid ""
+"You can use the IP address of a &vmhost; and a VNC viewer to view the "
+"display of this &vmguest;. When a virtual machine is running, the VNC server "
+"on the host assigns the virtual machine a port number to be used for VNC "
+"viewer connections. The assigned port number is the lowest port number "
+"available when the virtual machine starts. The number is only available for "
+"the virtual machine while it is running. After shutting down, the port "
+"number might be assigned to other virtual machines."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:268
+#, no-c-format
+msgid ""
+"For example, if ports 1 and 2 and 4 and 5 are assigned to the running "
+"virtual machines, the VNC viewer assigns the lowest available port number, "
+"3. If port number 3 is still in use the next time the virtual machine "
+"starts, the VNC server assigns a different port number to the virtual "
+"machine."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:276
+#, no-c-format
+msgid ""
+"To use the VNC viewer from a remote computer, the firewall must permit "
+"access to as many ports as &vmguest; systems run from. This means from port "
+"5900 and up. For example, to run 10 &vmguest; systems, you need to open the "
+"TCP ports 5900:5910."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:283
+#, no-c-format
+msgid ""
+"To access the virtual machine from the local console running a VNC viewer "
+"client, enter one of the following commands:"
+msgstr ""
+
+#. Tag: command
+#: xen_config_options.xml:291
+#, no-c-format
+msgid "vncviewer ::590#"
+msgstr ""
+
+#. Tag: command
+#: xen_config_options.xml:296
+#, no-c-format
+msgid "vncviewer :#"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:301
+#, no-c-format
+msgid ""
+"<replaceable>#</replaceable> is the VNC viewer port number assigned to the "
+"virtual machine."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:306
+#, no-c-format
+msgid ""
+"When accessing the &vmguest; from a machine other than &dom0;, use the "
+"following syntax:"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:311
+#, no-c-format
+msgid "vncviewer &xenhostip;::590#"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:313
+#, no-c-format
+msgid "In this case, the IP address of &dom0; is &xenhostip;."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:318
+#, no-c-format
+msgid "Assigning VNC Viewer Port Numbers to Virtual Machines"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:319
+#, no-c-format
+msgid ""
+"Although the default behavior of VNC viewer is to assign the first available "
+"port number, you should assign a specific VNC viewer port number to a "
+"specific virtual machine."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:324
+#, no-c-format
+msgid ""
+"To assign a specific port number on a &vmguest;, edit the xl setting of the "
+"virtual machine and change the <literal>vnclisten</literal> to the desired "
+"value. Note that for example for port number 5902, specify 2 only, as 5900 "
+"is added automatically:"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:330
+#, no-c-format
+msgid "vfb = [ 'vnc=1,vnclisten=\"localhost:2\"' ]"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:331
+#, no-c-format
+msgid ""
+"For more information regarding editing the xl settings of a guest domain, "
+"see <xref linkend=\"sec.xen.manage.xl\"/>."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:336
+#, no-c-format
+msgid ""
+"Assign higher port numbers to avoid conflict with port numbers assigned by "
+"the VNC viewer, which uses the lowest available port number."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:344
+#, no-c-format
+msgid "Using SDL instead of a VNC Viewer"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:345
+#, no-c-format
+msgid ""
+"If you access a virtual machine's display from the virtual machine host "
+"console (known as local or on-box access), you should use SDL instead of VNC "
+"viewer. VNC viewer is faster for viewing desktops over a network, but SDL is "
+"faster for viewing desktops from the same computer."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:351
+#, no-c-format
+msgid ""
+"To set the default to use SDL instead of VNC, change the virtual machine's "
+"configuration information to the following. For instructions, see <xref "
+"linkend=\"sec.xen.manage.xl\"/>."
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:356
+#, no-c-format
+msgid "vfb = [ 'sdl=1' ]"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:357
+#, no-c-format
+msgid ""
+"Remember that, unlike a VNC viewer window, closing an SDL window terminates "
+"the virtual machine."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:364
+#, no-c-format
+msgid "Virtual Keyboards"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:366
+#, no-c-format
+msgid ""
+"When a virtual machine is started, the host creates a virtual keyboard that "
+"matches the <command>keymap</command> entry according to the virtual "
+"machine's settings. If there is no <command>keymap</command> entry "
+"specified, the virtual machine's keyboard defaults to English (US)."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:373
+#, no-c-format
+msgid ""
+"To view a virtual machine's current <command>keymap</command> entry, enter "
+"the following command on the &dom0;:"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:378
+#, no-c-format
+msgid "xl list -l <replaceable>vm_name</replaceable> | grep keymap"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:380
+#, no-c-format
+msgid "To configure a virtual keyboard for a guest, use the following snippet:"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:384
+#, no-c-format
+msgid "vfb = [ 'keymap=\"de\"' ]"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:386
+#, no-c-format
+msgid ""
+"For a complete list of supported keyboard layouts, see the <literal>Keymaps</"
+"literal> section of the <command>xl.cfg</command> manual page <command>man 5 "
+"xl.cfg</command>."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:684
+#, no-c-format
+msgid "Dedicating CPU Resources"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:686
+#, no-c-format
+msgid ""
+"In &xen; it is possible to specify how many and which CPU cores the &dom0; "
+"or &vmguest; should use to retain its performance. The performance of &dom0; "
+"is important for the overall system, as the disk and network drivers are "
+"running on it. Also I/O intensive guests' workloads may consume lots of "
+"&dom0;s' CPU cycles. On the other hand, the performance of &vmguest;s is "
+"also important, to be able to accomplish the task they were set up for."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:697
+#, no-c-format
+msgid "&dom0;"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:698
+#, no-c-format
+msgid ""
+"Dedicating CPU resources to &dom0; results in a better overall performance "
+"of the virtualized environment because &dom0; has free CPU time to process I/"
+"O requests from &vmguest;s. Failing to dedicate exclusive CPU resources to "
+"&dom0; usually results in a poor performance and can cause the &vmguest;s to "
+"function incorrectly."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:705
+#, no-c-format
+msgid ""
+"Dedicating CPU resources involves three basic steps: modifying &xen; boot "
+"line, binding &dom0;'s VCPUs to a physical processor, and configuring CPU-"
+"related options on &vmguest;s:"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:712
+#, no-c-format
+msgid ""
+"First you need to append the <literal>dom0_max_vcpus=X</literal> to the "
+"&xen; boot line. Do so by adding the following line to <filename>/etc/"
+"default/grub</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:717
+#, no-c-format
+msgid "GRUB_CMDLINE_XEN=\"dom0_max_vcpus=X\""
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:718
+#, no-c-format
+msgid ""
+"If <filename>/etc/default/grub</filename> already contains a line setting "
+"<envar>GRUB_CMDLINE_XEN</envar>, rather append <literal>dom0_max_vcpus=X</"
+"literal> to this line."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:723
+#, no-c-format
+msgid ""
+"<literal>X</literal> needs to be replaced by the number of VCPUs dedicated "
+"to &dom0;."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:729
+#, no-c-format
+msgid "Update the &grub; configuration file by running the following command:"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:733
+#, no-c-format
+msgid "grub2-mkconfig -o /boot/grub2/grub.cfg"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:736
+#, no-c-format
+msgid "Reboot for the change to take effect."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:741
+#, no-c-format
+msgid ""
+"The next step is to bind (or <quote>pin</quote>) each &dom0;'s VCPU to a "
+"physical processor."
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:745
+#, no-c-format
+msgid ""
+"xl vcpu-pin Domain-0 0 0\n"
+"xl vcpu-pin Domain-0 1 1"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:746
+#, no-c-format
+msgid ""
+"The first line binds &dom0;'s VCPU number 0 to the physical processor number "
+"0, while the second line binds &dom0;'s VCPU number 1 to the physical "
+"processor number 1."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:753
+#, no-c-format
+msgid ""
+"Lastly, you need to make sure no &vmguest; uses the physical processors "
+"dedicated to VCPUs of &dom0;. Assuming you are running an 8-CPU system, you "
+"need to add"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:758
+#, no-c-format
+msgid "cpus=\"2-8\""
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:759
+#, no-c-format
+msgid "to the configuration file of the relevant &vmguest;."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:767
+#, no-c-format
+msgid "&vmguest;s"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:768
+#, no-c-format
+msgid ""
+"It is often necessary to dedicate specific CPU resources to a virtual "
+"machine. By default, a virtual machine uses any available CPU core. Its "
+"performance can be improved by assigning a reasonable number of physical "
+"processors to it as other &vmguest;s are not allowed to use them after that. "
+"Assuming a machine with 8 CPU cores while a virtual machine needs to use 2 "
+"of them, change its configuration file as follows:"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:777
+#, no-c-format
+msgid ""
+"vcpus=2\n"
+"cpus=\"2,3\""
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:778
+#, no-c-format
+msgid ""
+"The above example dedicates <literal>2</literal> processors to the "
+"&vmguest;, and these being the 3rd and 4th one, (<literal>2</literal> and "
+"<literal>3</literal> counted from zero). If you need to assign more physical "
+"processors, use the <literal>cpus=\"2-8\"</literal> syntax."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:784
+#, no-c-format
+msgid ""
+"If you need to change the CPU assignment for a guest named <quote>alice</"
+"quote> in a hotplug manner, do the following on the related &dom0;:"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:789
+#, no-c-format
+msgid ""
+"xl vcpu-set alice 2\n"
+"xl vcpu-pin alice 0 2\n"
+"xl vcpu-pin alice 1 3"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:790
+#, no-c-format
+msgid ""
+"The example will dedicate 2 physical processors to the guest, and bind its "
+"VCPU 0 to physical processor 2 and VCPU 1 to physical processor 3. Now check "
+"the assignment:"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:795
+#, no-c-format
+msgid ""
+"xl vcpu-list alice\n"
+"Name                              ID VCPUs   CPU State   Time(s) CPU "
+"Affinity\n"
+"alice                             4     0     2   -b-       1.9 2-3\n"
+"alice                             4     1     3   -b-       2.8 2-3"
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:889
+#, no-c-format
+msgid "HVM Features"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:891
+#, no-c-format
+msgid ""
+"In &xen; some features are only available for fully virtualized domains. "
+"They are not very often used, but still may be interesting in some "
+"environments."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:898
+#, no-c-format
+msgid "Specify Boot Device on Boot"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:899
+#, no-c-format
+msgid ""
+"Just as with physical hardware, it is sometimes desirable to boot a "
+"&vmguest; from a different device than its own boot device. For fully "
+"virtual machines, it is possible to select a boot device with the "
+"<literal>boot</literal> parameter in a domain xl configuration file:"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:905
+#, no-c-format
+msgid "boot = <replaceable>boot_device</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:906
+#, no-c-format
+msgid ""
+"<replaceable>boot_device</replaceable> can be one of <literal>c</literal> "
+"for hard disk, <literal>d</literal> for CD-ROM, or <literal>n</literal> for "
+"Network/PXE. You can specify multiple options, and they will be attempted in "
+"the given order. For example,"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:912
+#, no-c-format
+msgid "boot = dc"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:913
+#, no-c-format
+msgid ""
+"boots from CD-ROM, and falls back to the hard disk if CD-ROM is not bootable."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:920
+#, no-c-format
+msgid "Changing CPUIDs for Guests"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:921
+#, no-c-format
+msgid ""
+"To be able to migrate a &vmguest; from one &vmhost; to a different &vmhost;, "
+"it is mandatory, that the &vmguest; system only uses CPU features that are "
+"available on both &vmhost; systems. If the actual CPUs are different on both "
+"hosts, it may be necessary to hide some features before the &vmguest; is "
+"started to maintain the possibility to migrate the &vmguest; between both "
+"hosts. For fully virtualized guests, this can be achieved by configuring the "
+"<literal>cpuid</literal> that is available to the guest."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:931
+#, no-c-format
+msgid ""
+"To gain an overview of the current CPU, have a look at <filename>/proc/"
+"cpuinfo</filename>. This contains all the important information that defines "
+"the current CPU."
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:936
+#, no-c-format
+msgid ""
+"To redefine a CPU, first have a look at the respective cpuid definitions of "
+"the CPU vendor. These are available from:"
+msgstr ""
+
+#. Tag: term
+#: xen_config_options.xml:951
+#, no-c-format
+msgid "Intel"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:959
+#, no-c-format
+msgid "cpuid = \"host,tm=0,sse3=0\""
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:960
+#, no-c-format
+msgid ""
+"The syntax is a comma-separated list of key=value pairs, preceded by the "
+"word \"host\". A few keys take a numerical value, while all others take a "
+"single character which describes what to do with the feature bit. See "
+"<command>man 5 xl.cfg</command> for a complete list of cpuid keys. The "
+"respective bits may be changed by using the following values:"
+msgstr ""
+
+#. Tag: term
+#: xen_config_options.xml:969
+#, no-c-format
+msgid "<term>1</term>"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:971
+#, no-c-format
+msgid "Force the corresponding bit to <literal>1</literal>"
+msgstr ""
+
+#. Tag: term
+#: xen_config_options.xml:977
+#, no-c-format
+msgid "<term>0</term>"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:979
+#, no-c-format
+msgid "Force the corresponding bit to <literal>0</literal>"
+msgstr ""
+
+#. Tag: term
+#: xen_config_options.xml:985
+#, no-c-format
+msgid "<term>x</term>"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:987
+#, no-c-format
+msgid "Use the values of the default policy"
+msgstr ""
+
+#. Tag: term
+#: xen_config_options.xml:993
+#, no-c-format
+msgid "<term>k</term>"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:995
+#, no-c-format
+msgid "Use the values defined by the host"
+msgstr ""
+
+#. Tag: term
+#: xen_config_options.xml:1001
+#, no-c-format
+msgid "<term>s</term>"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:1003
+#, no-c-format
+msgid "Like <literal>k</literal>, but preserve the value over migrations"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:1009
+#, no-c-format
+msgid ""
+"Note that counting bits is done from right to left, starting with bit "
+"<literal>0</literal>."
+msgstr ""
+
+#. Tag: title
+#: xen_config_options.xml:1016
+#, no-c-format
+msgid "Increasing the Number of PCI-IRQs"
+msgstr ""
+
+#. Tag: para
+#: xen_config_options.xml:1017
+#, no-c-format
+msgid ""
+"In case you need to increase the default number of PCI-IRQs available to "
+"&dom0; and/or &vmguest;, you can do so by modifying the &xen; kernel command "
+"line. Use the command <command>extra_guest_irqs=</command> "
+"<replaceable>domu_irgs,dom0_irgs</replaceable>. The optional first number "
+"<replaceable>domu_irgs</replaceable> is common for all &vmguest;s, while the "
+"optional second number <replaceable>dom0_irgs</replaceable> (preceded by a "
+"comma) is for &dom0;. Changing the setting for &vmguest; has no impact on "
+"&dom0; and vice versa. For example to change &dom0; without changing "
+"&vmguest;, use"
+msgstr ""
+
+#. Tag: screen
+#: xen_config_options.xml:1030
+#, no-c-format
+msgid "extra_guest_irqs=,512"
+msgstr ""

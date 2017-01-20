@@ -1,0 +1,1336 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: gnome_crypto.xml:21
+#, no-c-format
+msgid "Passwords and Keys: Signing and Encrypting Data"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: gnome_crypto.xml:23
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:28
+#, no-c-format
+msgid ""
+"The &gnome; Passwords and Keys program is an important component of the "
+"encryption infrastructure on your system. With this program, you can create "
+"and manage PGP and SSH keys, import, export and share keys, back up your "
+"keys and keyring, and cache your passphrase."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:34
+#, no-c-format
+msgid ""
+"Start the program by choosing <menuchoice> <guimenu>Applications</guimenu> "
+"<guimenu>Utilities</guimenu> <guimenu>Passwords and Keys</guimenu> </"
+"menuchoice>"
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:40
+#, no-c-format
+msgid "Password and Keys Main Window"
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:51
+#, no-c-format
+msgid "Signing and Encryption"
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:54
+#, no-c-format
+msgid "Signing"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:55
+#, no-c-format
+msgid ""
+"Attaching electronic signatures to pieces of information, such as e-mail "
+"messages or software to prove its origin. To keep someone else from writing "
+"messages using your name, and to protect both you and the people you send "
+"them to, you should sign your mails. Signatures help you check the sender of "
+"the messages you receive and distinguish authentic messages from malicious "
+"ones."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:65
+#, no-c-format
+msgid ""
+"Software developers sign their software so that you can check the integrity. "
+"Even if you get the software from an unofficial server, you can verify the "
+"package with the signature."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:72
+#, no-c-format
+msgid "Encryption"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:73
+#, no-c-format
+msgid ""
+"You might also have sensitive information you want to protect from other "
+"parties. Encryption helps you transform data and make it unreadable for "
+"others. This is important for companies so they can protect internal "
+"information and their employees' privacy."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:82
+#, no-c-format
+msgid "Generating a New Key Pair"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:84
+#, no-c-format
+msgid ""
+"To exchange encrypted messages with other users, you must first generate "
+"your own pair of keys. It consists of two parts:"
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:92
+#, no-c-format
+msgid "Public Key"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:93
+#, no-c-format
+msgid ""
+"This key is used for encryption. Distribute it to your communication "
+"partners, so they can use it to encrypt files or messages for you."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:101
+#, no-c-format
+msgid "Private Key"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:102
+#, no-c-format
+msgid ""
+"This key is used for decryption. Use it to make encrypted files or messages "
+"from others (or yourself) legible again."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:111
+#, no-c-format
+msgid "Access to the Private Key"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:112
+#, no-c-format
+msgid ""
+"If others gain access to your private key, they can decrypt files and "
+"messages intended only for you. Never grant others access to your private "
+"key."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:120
+#, no-c-format
+msgid "Creating OpenPGP Keys"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:121
+#, no-c-format
+msgid ""
+"OpenPGP is a non-proprietary protocol for encrypting e-mail with the use of "
+"public-key cryptography based on PGP. It defines standard formats for "
+"encrypted messages, signatures, private keys, and certificates for "
+"exchanging public keys."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:129 gnome_crypto.xml:243 gnome_crypto.xml:337
+#: gnome_crypto.xml:542 gnome_crypto.xml:642 gnome_crypto.xml:732
+#: gnome_crypto.xml:768 gnome_crypto.xml:791 gnome_crypto.xml:826
+#: gnome_crypto.xml:863 gnome_crypto.xml:1062 gnome_crypto.xml:1135
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Applications</guimenu> <guimenu>Utilities</"
+"guimenu> <guimenu>Passwords and Keys</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:136
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>File</guimenu> <guimenu>New</guimenu></"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:142
+#, no-c-format
+msgid ""
+"Select <guimenu>PGP Key</guimenu> and click <guimenu>Continue</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:147
+#, no-c-format
+msgid "Specify your full name and e-mail address."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:152
+#, no-c-format
+msgid ""
+"Click <guimenu>Advanced key options</guimenu> to specify the following "
+"advanced options for the key."
+msgstr ""
+
+#. Tag: term
+#: gnome_crypto.xml:158
+#, no-c-format
+msgid "Comment"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:160
+#, no-c-format
+msgid "An optional comment."
+msgstr ""
+
+#. Tag: term
+#: gnome_crypto.xml:166
+#, no-c-format
+msgid "<term>Encryption Type</term>"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:168
+#, no-c-format
+msgid ""
+"Specifies the encryption algorithms used to generate your keys. <guimenu>DSA "
+"ElGamal</guimenu> is the recommended choice because it lets you encrypt, "
+"decrypt, sign, and verify as needed. Both <guimenu>DSA (sign only)</guimenu> "
+"and <guimenu>RSA (sign only)</guimenu> allow only signing."
+msgstr ""
+
+#. Tag: term
+#: gnome_crypto.xml:178
+#, no-c-format
+msgid "<term>Key Strength</term>"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:180
+#, no-c-format
+msgid ""
+"Specifies the length of the key in bits. The longer the key, the more secure "
+"it is (provided a strong passphrase is used). Keep in mind that performing "
+"any operation with a longer key requires more time than it does with a "
+"shorter key. Acceptable values are between 1024 and 4096 bits. At least 2048 "
+"bits are recommended."
+msgstr ""
+
+#. Tag: term
+#: gnome_crypto.xml:190
+#, no-c-format
+msgid "Expiration Date"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:192
+#, no-c-format
+msgid ""
+"Specifies the date at which the key will cease to be usable for performing "
+"encryption or signing operations. You will need to either change the "
+"expiration date or generate a new key or subkey after this amount of time "
+"passes. Sign your new key with your old one before it expires to preserve "
+"your trust status."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:204
+#, no-c-format
+msgid "Click <guimenu>Create</guimenu> to create the new key pair."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:207
+#, no-c-format
+msgid "The <guimenu>Passphrase for New PGP Key</guimenu> dialog opens."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:212
+#, no-c-format
+msgid ""
+"Specify the passphrase twice for your new key, then click <guimenu>OK</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:216 gnome_crypto.xml:307
+#, no-c-format
+msgid ""
+"When you specify a passphrase, use the same practices you use when you "
+"create a strong password."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:233
+#, no-c-format
+msgid "Creating Secure Shell Keys"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:234
+#, no-c-format
+msgid ""
+"Secure Shell (SSH) is a method of logging in to a remote computer to execute "
+"commands on that machine. SSH keys are used in key-based authentication "
+"system as an alternative to the default password authentication system. With "
+"key-based authentication, there is no need to manually type a password to "
+"authenticate."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:250
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>File</guimenu> <guimenu>New</guimenu> </"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:256
+#, no-c-format
+msgid ""
+"Select <guimenu>Secure Shell Key</guimenu>, then click <guimenu>Continue</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:262
+#, no-c-format
+msgid "Specify a description of what the key is to be used for."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:265
+#, no-c-format
+msgid "You can use your e-mail address or any other reminder."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:270
+#, no-c-format
+msgid ""
+"Optionally, click <guimenu>Advanced key options</guimenu> to specify the "
+"following advanced options for the key."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:275
+#, no-c-format
+msgid "<title>Encryption Type</title>"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:276
+#, no-c-format
+msgid ""
+"Specifies the encryption algorithms used to generate your keys. Select "
+"<guimenu>RSA</guimenu> to use the Rivest-Shamir-Adleman (RSA) algorithm to "
+"create the SSH key. This is the preferred and more secure choice. Select "
+"<guimenu>DSA</guimenu> to use the Digital Signature Algorithm (DSA) to "
+"create the SSH key."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:285
+#, no-c-format
+msgid "<title>Key Strength</title>"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:286
+#, no-c-format
+msgid ""
+"Specifies the length of the key in bits. The longer the key, the more secure "
+"it is (provided a strong passphrase is used). Keep in mind that performing "
+"any operation with a longer key requires more time than it does with a "
+"shorter key. Acceptable values are between 1024 and 4096 bits. At least 2048 "
+"bits is recommended."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:296
+#, no-c-format
+msgid ""
+"Click <guimenu>Just Create Key</guimenu> to create the new key, or click "
+"<guimenu>Create and Set Up</guimenu> to create the key and set up another "
+"computer to use for authentication."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:303
+#, no-c-format
+msgid ""
+"Specify the passphrase for your new key, click <guimenu>OK</guimenu>, then "
+"repeat."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:324
+#, no-c-format
+msgid "Modifying Key Properties"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:326
+#, no-c-format
+msgid "You can modify properties of existing OpenPGP or SSH keys."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:331
+#, no-c-format
+msgid "Editing OpenPGP Key Properties"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:332
+#, no-c-format
+msgid "The descriptions in this section apply to all OpenPGP keys."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:344 gnome_crypto.xml:487
+#, no-c-format
+msgid "Double-click the PGP key you want to view or edit."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:351
+#, no-c-format
+msgid ""
+"Use the options on the <guimenu>Owner</guimenu> tab to add a photo to the "
+"key or to change the passphrase associated with the key."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:355
+#, no-c-format
+msgid ""
+"Photo IDs allow a key owner to embed one or more pictures of themselves in a "
+"key. These identities can be signed like normal user IDs. A photo ID must be "
+"in JPEG format. The recommended size is 120×150 pixels."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:360
+#, no-c-format
+msgid ""
+"If the chosen image does not meet the required file type or size, "
+"<guimenu>Passwords and Keys</guimenu> can resize and convert it on the fly "
+"from any image format supported by the GDK library."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:367
+#, no-c-format
+msgid ""
+"Click the <guimenu>Names and Signatures</guimenu> tab to add a user ID to a "
+"key."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:371
+#, no-c-format
+msgid ""
+"See <xref linkend=\"cha.gnome.crypto.modify_key.openpgp.add_user\" xrefstyle="
+"\"HeadingOnPage\"/> for more information."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:378 gnome_crypto.xml:662
+#, no-c-format
+msgid ""
+"Click the <guimenu>Details</guimenu> tab, which contains the following "
+"properties:"
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:383
+#, no-c-format
+msgid "Key ID:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:384
+#, no-c-format
+msgid ""
+"The Key ID is similar to the Fingerprint, but the Key ID contains only the "
+"last eight characters of the fingerprint. It is generally possible to "
+"identify a key with only the Key ID, but sometimes two keys might have the "
+"same Key ID."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:392 gnome_crypto.xml:586
+#, no-c-format
+msgid "Type:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:393
+#, no-c-format
+msgid ""
+"Specifies the encryption algorithm used to generate a key. DSA keys can only "
+"sign. ElGamal keys are used to encrypt."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:399 gnome_crypto.xml:618 gnome_crypto.xml:673
+#, no-c-format
+msgid "Strength:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:400 gnome_crypto.xml:619
+#, no-c-format
+msgid ""
+"Specifies the length, in bits, of the key. The longer the key, the more "
+"security it provides. However, a long key will not compensate for the use of "
+"a weak passphrase."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:407 gnome_crypto.xml:687
+#, no-c-format
+msgid "Fingerprint:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:408 gnome_crypto.xml:688
+#, no-c-format
+msgid "A unique string of characters that exactly identifies a key."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:413 gnome_crypto.xml:600
+#, no-c-format
+msgid "Created:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:414
+#, no-c-format
+msgid "The date the key was created."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:419 gnome_crypto.xml:606
+#, no-c-format
+msgid "Expires:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:420
+#, no-c-format
+msgid ""
+"The date the key can no longer be used (a key can no longer be used to "
+"perform key operations after it has expired). Changing a key's expiration "
+"date to a point in the future re-enables it. A good general practice is to "
+"have a master key that never expires and multiple subkeys that do expire and "
+"are signed by the master key."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:429
+#, no-c-format
+msgid "Override Owner Trust:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:430
+#, no-c-format
+msgid ""
+"Here you can set the level of trust in the owner of the key. Trust is an "
+"indication of how sure you are of a person's ability to correctly extend the "
+"Web of trust. When there is a key that you have not signed, the validity of "
+"the key is determined from its signatures and how much you trust the people "
+"who made those signatures."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:439
+#, no-c-format
+msgid "Export Secret Key:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:440 gnome_crypto.xml:694
+#, no-c-format
+msgid "Exports the key to a file."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:445
+#, no-c-format
+msgid "Subkeys:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:446
+#, no-c-format
+msgid ""
+"See <xref linkend=\"cha.gnome.crypto.modify_key.openpgp.edit_subkey\" "
+"xrefstyle=\"HeadingOnPage\"/> for more information."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:464 gnome_crypto.xml:627 gnome_crypto.xml:710
+#: gnome_crypto.xml:1117 gnome_crypto.xml:1154
+#, no-c-format
+msgid "Click <guimenu>Close</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:470
+#, no-c-format
+msgid "Adding a User ID"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:471
+#, no-c-format
+msgid ""
+"User IDs allow multiple identities and e-mail addresses to be used with the "
+"same key. Adding a user ID is useful, for example, when you want to have an "
+"identity for your job and one for your friends. They take the following form:"
+msgstr ""
+
+#. Tag: screen
+#: gnome_crypto.xml:477
+#, no-c-format
+msgid ""
+"Name (<replaceable>comment</replaceable>) &lt;<replaceable>e-mail address</"
+"replaceable>&gt;"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:480
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Applications</guimenu> <guimenu>Utilities</"
+"guimenu><guimenu>Passwords and Keys</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:494
+#, no-c-format
+msgid ""
+"Click the <guimenu>Names and Signatures</guimenu> tab, then click "
+"<guimenu>Add Name</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:500
+#, no-c-format
+msgid "Specify a name in the <guimenu>Full Name</guimenu> field."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:503
+#, no-c-format
+msgid "You must enter at least five characters in this field."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:508
+#, no-c-format
+msgid ""
+"Specify an e-mail address in the <guimenu>E-Mail Address</guimenu> field."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:512
+#, no-c-format
+msgid ""
+"Your e-mail address is how most people will locate your key on a key server "
+"or other key provider. Make sure it is correct before continuing."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:518
+#, no-c-format
+msgid ""
+"In the <guimenu>Key Comment</guimenu> field, specify additional information "
+"that will display in the name of your new ID."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:522
+#, no-c-format
+msgid "This information can be searched for on key servers."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:527
+#, no-c-format
+msgid "Confirm your changes and enter the passphrase when prompted for it."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:534
+#, no-c-format
+msgid "Editing OpenPGP Subkey Properties"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:535
+#, no-c-format
+msgid ""
+"Each OpenPGP key has a single master key used to sign only. Subkeys are used "
+"to encrypt and to sign as well. In this way, if your subkey is compromised, "
+"you do not need to revoke your master key."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:549
+#, no-c-format
+msgid "Double-click the PGP key you want to edit."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:556
+#, no-c-format
+msgid ""
+"Click the <guimenu>Details</guimenu> tab, then click to show the "
+"<guimenu>Subkeys</guimenu> category."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:562
+#, no-c-format
+msgid ""
+"Use the buttons on the left of the dialog to add, delete, expire, or revoke "
+"subkeys."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:576
+#, no-c-format
+msgid "Each subkey has the following information:"
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:580
+#, no-c-format
+msgid "<title>ID:</title>"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:581
+#, no-c-format
+msgid "The identifier of the subkey."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:587
+#, no-c-format
+msgid ""
+"Specifies the encryption algorithm used to generate a subkey. DSA keys can "
+"only sign, ElGamal keys are used to encrypt, and RSA keys are used to sign "
+"or to encrypt."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:594
+#, no-c-format
+msgid "Usage:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:595
+#, no-c-format
+msgid "Shows if the key can be used to sign, to certify, or also to encrypt."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:601
+#, no-c-format
+msgid "Specifies the date the key was created."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:607
+#, no-c-format
+msgid "Specifies the date the key can no longer be used."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:612
+#, no-c-format
+msgid "Status:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:613
+#, no-c-format
+msgid "Specifies the status of the key."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:636
+#, no-c-format
+msgid "Editing Secure Shell Key Properties"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:637
+#, no-c-format
+msgid "The descriptions in this section apply to all SSH keys."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:649
+#, no-c-format
+msgid "Double-click the Secure Shell key you want to view or edit."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:656
+#, no-c-format
+msgid ""
+"Use the options on the <guimenu>Key</guimenu> tab to change the name of the "
+"key or the passphrase associated with the key."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:667
+#, no-c-format
+msgid "Algorithm:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:668
+#, no-c-format
+msgid "Specifies the encryption algorithm used to generate a key."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:674
+#, no-c-format
+msgid ""
+"Indicates the length in bits of a key. The longer the key, the more security "
+"it provides. However, a long key does not make up for the use of a weak "
+"passphrase."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:681
+#, no-c-format
+msgid "Location:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:682
+#, no-c-format
+msgid "The location where the private key has been stored."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:693
+#, no-c-format
+msgid "Export Complete Key:"
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:718
+#, no-c-format
+msgid "Importing Keys"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:720
+#, no-c-format
+msgid ""
+"Keys can be exported to text files. These files contain human-readable text "
+"at the beginning and at the end of a key. This format is called an ASCII-"
+"armored key."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:726
+#, no-c-format
+msgid "To import keys:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:739
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>File</guimenu> <guimenu>Import</guimenu> </"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:745
+#, no-c-format
+msgid "Select a file containing at least one ASCII-armored public key."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:750
+#, no-c-format
+msgid "Click <guimenu>Open</guimenu> to import the key."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:756
+#, no-c-format
+msgid "You can also paste keys inside <guimenu>Passwords and Keys</guimenu>:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:762
+#, no-c-format
+msgid ""
+"Select an ASCII-armored public block of text, then copy it to the clipboard."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:775
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Edit</guimenu> <guimenu>Paste</guimenu> </"
+"menuchoice>"
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:783
+#, no-c-format
+msgid "Exporting Keys"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:785
+#, no-c-format
+msgid "To export keys:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:798 gnome_crypto.xml:833
+#, no-c-format
+msgid "Select the keys you want to export."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:803
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>File</guimenu> <guimenu>Export</guimenu> </"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:809
+#, no-c-format
+msgid "Specify a file name and location for the exported key."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:814
+#, no-c-format
+msgid "Click <guimenu>Save</guimenu> to export the key."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:820
+#, no-c-format
+msgid ""
+"You can also export keys to the clipboard in an ASCII-armored block of text:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:838
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Edit</guimenu> <guimenu>Copy</guimenu> </"
+"menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:846
+#, no-c-format
+msgid "Signing a Key"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:848
+#, no-c-format
+msgid ""
+"Signing another person's key means that you are giving trust to that person. "
+"Before signing a key, carefully check the key's fingerprint to ensure that "
+"the key really belongs to that person."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:854
+#, no-c-format
+msgid ""
+"Trust is an indication of how sure you are of a person's ability to "
+"correctly extend the Web of trust. When there is a key that you have not "
+"signed, the validity of the key is determined from its signatures and how "
+"much you trust the people who made those signatures."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:870
+#, no-c-format
+msgid ""
+"Select the key you want to sign from the <guimenu>My Personal Keys</guimenu> "
+"or <guimenu>Other Keys</guimenu> tabs."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:876
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>File</guimenu> <guimenu>Sign</guimenu> </"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:882
+#, no-c-format
+msgid ""
+"Select how carefully the key has been checked, then indicate if the "
+"signature should be local to your keyring, and if your signature can be "
+"revoked:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:899
+#, no-c-format
+msgid "Click <guimenu>Sign</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:907
+#, no-c-format
+msgid "File Manager Integration"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:912
+#, no-c-format
+msgid ""
+"Passwords and Keys integrates with &nautilus;. You can encrypt, decrypt, "
+"sign, verify files, and import public keys from the file manager window "
+"without launching <guimenu>Passwords and Keys</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:919
+#, no-c-format
+msgid "Enabling File Manager Integration"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:920
+#, no-c-format
+msgid ""
+"The package <systemitem>nautilus-extension-seahorse</systemitem> has to be "
+"installed to enable file manager integration."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:927
+#, no-c-format
+msgid "Encrypting Files From &nautilus;"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:930
+#, no-c-format
+msgid "In &nautilus;, right-click the files you want to encrypt."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:935
+#, no-c-format
+msgid "Select <guimenu>Encrypt</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:940
+#, no-c-format
+msgid ""
+"Select the people (recipients) you want to encrypt the file to, then click "
+"<guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:946 gnome_crypto.xml:973
+#, no-c-format
+msgid ""
+"If prompted, specify the passphrase of your private key, then click "
+"<guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:955
+#, no-c-format
+msgid "Signing Files From &nautilus;"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:958
+#, no-c-format
+msgid "In &nautilus;, right-click the files you want to sign."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:963
+#, no-c-format
+msgid "Select <guimenu>Sign</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:968
+#, no-c-format
+msgid "Select a signer, then click <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:982
+#, no-c-format
+msgid "Decrypting Files From &nautilus;"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:983
+#, no-c-format
+msgid ""
+"To decrypt an encrypted file in &nautilus;, simply double-click the file you "
+"want to decrypt."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:987
+#, no-c-format
+msgid "If prompted, specify the passphrase of your private key."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:993
+#, no-c-format
+msgid "Verifying Signatures From &nautilus;"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:994
+#, no-c-format
+msgid ""
+"To verify files, simply double-click the detached signature file. Detached "
+"signature file names often have a <filename>.sig</filename> extension."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:1001
+#, no-c-format
+msgid "Password Keyrings"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1003
+#, no-c-format
+msgid ""
+"You can use password keyring preferences to create or remove keyrings, to "
+"set the default keyring for application passwords or to change the unlock "
+"password of a keyring. To create a new keyring, follow these steps:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1011
+#, no-c-format
+msgid ""
+"Click <menuchoice><guimenu>Applications</guimenu> <guimenu>Utilities</"
+"guimenu> <guimenu>Passwords and Keys</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1018
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>File</guimenu> <guimenu>New</guimenu> "
+"<guimenu>Password Keyring</guimenu> </menuchoice>, then click "
+"<guimenu>Continue</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1025
+#, no-c-format
+msgid "Enter a name for the keyring and click <guimenu>Add</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1030
+#, no-c-format
+msgid ""
+"Set and confirm a new <guimenu>Password</guimenu> for the keyring and click "
+"<guimenu>Create</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1037
+#, no-c-format
+msgid ""
+"To change the unlock password of an existing keyring, right-click the "
+"keyring in the <guimenu>Passwords</guimenu> tab and click <guimenu>Change "
+"Password</guimenu>. You need to provide the old password to be able to "
+"change it."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1044
+#, no-c-format
+msgid ""
+"To change the default keyring for application passwords, right-click the "
+"keyring in the <guimenu>Passwords</guimenu> tab and click <guimenu>Set as "
+"Default</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:1051
+#, no-c-format
+msgid "Key Servers"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1053
+#, no-c-format
+msgid ""
+"You can keep your keys up-to-date by synchronizing keys periodically with "
+"remote keyservers. Synchronizing will ensure that you have the latest "
+"signatures made on all of your keys, so that the Web of trust will be "
+"effective."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1069 gnome_crypto.xml:1142
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Edit</guimenu> <guimenu>Preferences</guimenu> </"
+"menuchoice>, then click the <guimenu>Key Servers</guimenu> tab."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1083
+#, no-c-format
+msgid ""
+"<guimenu>Passwords and Keys</guimenu> provides support for HKP and LDAP "
+"keyservers."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:1088
+#, no-c-format
+msgid "HKP Key Servers:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1089
+#, no-c-format
+msgid ""
+"HKP key servers are ordinary Web-based key servers, such as the popular "
+"<literal>hkp://pgp.mit.edu:11371</literal>, also accessible at <link xlink:"
+"href=\"http://pgp.mit.edu\">http://pgp.mit.edu</link>."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:1096
+#, no-c-format
+msgid "LDAP Key Servers:"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1097
+#, no-c-format
+msgid ""
+"LDAP key servers are less common, but use the standard LDAP protocol to "
+"serve keys. <literal>ldap://keyserver.pgp.com</literal> is a good LDAP "
+"server."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1103
+#, no-c-format
+msgid ""
+"You can <guimenu>Add</guimenu> or <guimenu>Remove</guimenu> key servers to "
+"be used using the buttons on the left. To add a new key server, set its "
+"type, host and port, if necessary."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1110
+#, no-c-format
+msgid ""
+"Set whether you want to automatically publish your public keys and which "
+"keyserver to use. Set whether you want to automatically retrieve keys from "
+"key servers and whether to synchronize modified keys with keyservers."
+msgstr ""
+
+#. Tag: title
+#: gnome_crypto.xml:1124
+#, no-c-format
+msgid "Key Sharing"
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1126
+#, no-c-format
+msgid ""
+"Key Sharing is provided by DNS-SD, also known as Bonjour or Rendezvous. "
+"Enabling key sharing adds the local <guimenu>Passwords and Keys</guimenu> "
+"users' public key rings to the remote search dialog. Using these local key "
+"servers is generally faster than accessing remote servers."
+msgstr ""
+
+#. Tag: para
+#: gnome_crypto.xml:1148
+#, no-c-format
+msgid ""
+"Select <guimenu>Automatically synchronize modified keys with key servers</"
+"guimenu>."
+msgstr ""

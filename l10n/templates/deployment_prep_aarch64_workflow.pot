@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: deployment_prep_aarch64_workflow.xml:12
+#, no-c-format
+msgid "Installation Procedure"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: deployment_prep_aarch64_workflow.xml:15
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_workflow.xml:21
+#, no-c-format
+msgid ""
+"This section offers an overview of the steps required for the complete "
+"installation of &productnamereg; in the required mode. <xref linkend=\"part."
+"mandeploy\"/> contains a full description of how to install and configure "
+"the system with &yast;."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_aarch64_workflow.xml:29
+#, no-c-format
+msgid "Booting from a Local Interchangeable Drive"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_workflow.xml:30
+#, no-c-format
+msgid ""
+"DVD-ROM and USB storage devices can be used for installation purposes. "
+"Adjust your computer to your needs:"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_workflow.xml:36
+#, no-c-format
+msgid ""
+"Make sure that the drive is entered as a bootable drive in the firmware."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_workflow.xml:41
+#, no-c-format
+msgid "Insert the boot medium in the drive and start the boot procedure."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_workflow.xml:46
+#, no-c-format
+msgid ""
+"The installation boot menu of &productname; allows transferring different "
+"parameters to the installation system. See also <xref linkend=\"sec."
+"deployment.remoteinst.bootinst.custom\"/>. If the installation should be "
+"performed over the network, specify the installation source here."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_workflow.xml:55
+#, no-c-format
+msgid ""
+"If unexpected problems arise during installation, use safe settings to boot."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_aarch64_workflow.xml:64
+#, no-c-format
+msgid "Installing over the Network"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_workflow.xml:65
+#, no-c-format
+msgid ""
+"An installation server is required to perform the installation by using a "
+"network source. The procedure for installing this server is outlined in "
+"<xref linkend=\"cha.deployment.instserver\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_workflow.xml:70
+#, no-c-format
+msgid ""
+"If you have an SLP server, select SLP as the installation source in the "
+"first boot screen. During the boot procedure, select which of the available "
+"installation sources to use."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_workflow.xml:75
+#, no-c-format
+msgid ""
+"If the DVD is available on the network, use it as an installation source. In "
+"this case, specify the parameter <option>install=&lt;URL&gt;</option> with "
+"suitable values at the boot prompt. Find a more detailed description of this "
+"parameter in <xref linkend=\"sec.deployment.remoteinst.bootinst.custom\"/>."
+msgstr ""

@@ -1,0 +1,585 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: smt_advanced.xml:8
+#, no-c-format
+msgid "Advanced Topics"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:9
+#, no-c-format
+msgid ""
+"This chapter introduces topics that will give you more control over your "
+"&smt; server, but are beyond the usual workflow."
+msgstr ""
+
+#. Tag: title
+#: smt_advanced.xml:14
+#, no-c-format
+msgid "Backup of the &smt; Server"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:16
+#, no-c-format
+msgid ""
+"Creating backups of the &smt; server regularly can help restore it quickly "
+"and reliably if the server fails."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:21
+#, no-c-format
+msgid "There are three main areas on the &smt; server to back up:"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:27
+#, no-c-format
+msgid "Configuration files"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:32
+#, no-c-format
+msgid "Package repositories"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:37
+#, no-c-format
+msgid "The database"
+msgstr ""
+
+#. Tag: title
+#: smt_advanced.xml:44
+#, no-c-format
+msgid "Configuration Files and Repositories"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:45
+#, no-c-format
+msgid ""
+"The &smt; server configuration is stored in the <filename>/etc/smt.conf</"
+"filename> file and files in the <filename>/etc/smt.d</filename> directory."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:50
+#, no-c-format
+msgid ""
+"As &smt; depends on the services provided by the Apache Web server and "
+"&mariadb; database engine, you need to back up their configuration files as "
+"well. Apache's configuration files are located in the <filename>/etc/"
+"apache2</filename> directory, while the configuration files for &mariadb; "
+"are <filename>/etc/my.cnf</filename>, <filename>/etc/mysqlaccess.conf</"
+"filename>, and files in the <filename>/etc/my.cnf.d</filename> directory."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:59
+#, no-c-format
+msgid ""
+"Package repositories are stored in the <filename>/srv/www/htdocs/repo</"
+"filename> directory. Although you can normally mirror the repositories on "
+"the restored server from the update server as well, the download can take a "
+"long time. Therefore backing up the repositories saves you time and "
+"bandwidth. Furthermore, backing up the repositories is necessary if you are "
+"using repository staging and want to restore the snapshots of the "
+"repositories (see <xref linkend=\"smt.staging\"/>)."
+msgstr ""
+
+#. Tag: title
+#: smt_advanced.xml:70
+#, no-c-format
+msgid "Size of the Repositories"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:71
+#, no-c-format
+msgid ""
+"The size of the software repositories can be huge and you will need to "
+"transfer them from the update server."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:76
+#, no-c-format
+msgid ""
+"Use your preferred tool to back up the configuration and repository files."
+msgstr ""
+
+#. Tag: title
+#: smt_advanced.xml:82
+#, no-c-format
+msgid "The Database"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:83
+#, no-c-format
+msgid ""
+"&smt; uses the &mariadb; database to store information about clients, "
+"registrations, machine data, which repositories are enabled for mirroring, "
+"or custom repositories. Unlike the configuration files and repositories, the "
+"database information cannot be recovered without a valid backup."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:89
+#, no-c-format
+msgid ""
+"To back up the &smt; database, you can for example create a cron job that "
+"performs an SQL dump into a plain text file:"
+msgstr ""
+
+#. Tag: screen
+#: smt_advanced.xml:93
+#, no-c-format
+msgid ""
+"mysqldump -u root -p <replaceable>smt_db_password</replaceable> smt > /"
+"<replaceable>backup_dir</replaceable>/smt-db-backup.sql"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:94
+#, no-c-format
+msgid "Then include the resulting file to your normal backup jobs."
+msgstr ""
+
+#. Tag: title
+#: smt_advanced.xml:100
+#, no-c-format
+msgid "Disconnected &smt; Servers"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:102
+#, no-c-format
+msgid ""
+"In some restricted environments it is not possible for &smt; servers to "
+"access the Internet because they are located in disconnected or isolated "
+"networks. By using some special parameters on the &smt; commands and a "
+"mobile disk, it is possible to accommodate for this."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:109
+#, no-c-format
+msgid ""
+"You need to have one external &smt; server that mirrors the repositories "
+"from &scc;. Then you can 'mirror' these repositories to the &smt; servers on "
+"the isolated network using the mobile storage medium."
+msgstr ""
+
+#. Tag: title
+#: smt_advanced.xml:116
+#, no-c-format
+msgid "&smt; Disconnected Setup"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:127
+#, no-c-format
+msgid ""
+"Although the initial setup of this solution requires additional "
+"configuration, the regular update synchronization with &scc; and "
+"distribution to isolated servers is simple. The steps required during the "
+"initial setup consist of:"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:136
+#, no-c-format
+msgid "Installation and configuration of the external &smt; server."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:141
+#, no-c-format
+msgid "Installation of the internal server."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:146
+#, no-c-format
+msgid ""
+"Modification of <filename>/etc/smt.conf</filename> and cron setup on the "
+"internal &smt; server."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:152
+#, no-c-format
+msgid ""
+"Copying of the &scc; data on the external &smt; server and importing it to "
+"the internal one."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:158
+#, no-c-format
+msgid "Enabling and disabling of repositories on the internal server."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:163
+#, no-c-format
+msgid ""
+"Creation of an &smt; database replacement file (which can be used instead of "
+"the normal &mariadb; database when performing the mirror jobs) on the "
+"internal server."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:171
+#, no-c-format
+msgid "Day-to-day operation includes:"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:177
+#, no-c-format
+msgid ""
+"On the external server run the <command>smt-mirror</command> job based on "
+"the database replacement file that writes to the mobile disk."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:183
+#, no-c-format
+msgid ""
+"Synchronization of the mirrored repositories from the mobile disk to the "
+"internal &smt; server."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:190
+#, no-c-format
+msgid "A detailed description of the individual steps follows:"
+msgstr ""
+
+#. Tag: title
+#: smt_advanced.xml:195
+#, no-c-format
+msgid "External &smt; Server Configuration for the Disconnected Setup"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:197
+#, no-c-format
+msgid ""
+"Install and configure &smt; as described in <xref linkend=\"smt.installation"
+"\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:203
+#, no-c-format
+msgid "Enable the repositories to be consumed by the internal &smt; servers."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:208
+#, no-c-format
+msgid ""
+"Perform a normal repository mirroring from &scc; with <command>smt-mirror</"
+"command>."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:214
+#, no-c-format
+msgid "Attach a removable disk to the server and mount it."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:219
+#, no-c-format
+msgid ""
+"Export the required &scc; data to a directory on the mounted removable disk:"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:225
+#, no-c-format
+msgid ""
+"Create the directory with proper permissions to hold the data. Because the "
+"<command>smt</command> commands run as the <systemitem class=\"username"
+"\">smt</systemitem> user (whose numeric UID can differ between the servers), "
+"we need to make the permissions for the directories on the mobile disk less "
+"restrictive:"
+msgstr ""
+
+#. Tag: screen
+#: smt_advanced.xml:232
+#, no-c-format
+msgid "chmod o+w <replaceable>/path/to/scc/dir/on/mobile/disk</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:235
+#, no-c-format
+msgid "Export the &scc; data:"
+msgstr ""
+
+#. Tag: screen
+#: smt_advanced.xml:238 smt_advanced.xml:372
+#, no-c-format
+msgid ""
+"smt-sync --todir <replaceable>/path/to/scc/dir/on/mobile/disk</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:243
+#, no-c-format
+msgid "Set up a directory with proper permissions:"
+msgstr ""
+
+#. Tag: screen
+#: smt_advanced.xml:246
+#, no-c-format
+msgid ""
+"mkdir <replaceable>/path/to/repository/on/mobile/disk</replaceable>\n"
+"chmod o+w <replaceable>/path/to/repository/on/mobile/disk</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:249 smt_advanced.xml:340
+#, no-c-format
+msgid "Unmount and detach the removable disk."
+msgstr ""
+
+#. Tag: title
+#: smt_advanced.xml:256
+#, no-c-format
+msgid "Internal &smt; Server Configuration for the Disconnected Setup"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:258
+#, no-c-format
+msgid "Ensure you have a working &sls; installation source."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:263
+#, no-c-format
+msgid ""
+"Install &smt; the same way as on the external server with the following "
+"exceptions:"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:269
+#, no-c-format
+msgid ""
+"Select <guimenu>Generate new SCC credentials</guimenu> in the <guimenu>SCC "
+"Credentials</guimenu> dialog."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:275
+#, no-c-format
+msgid ""
+"Ignore the error message when running the synchronization script in the "
+"<guimenu>Writing SMT Configuration</guimenu> phase of the wizard."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:281
+#, no-c-format
+msgid ""
+"Abort the <guimenu>SUSE Customer Center Configuration</guimenu> wizard and "
+"then click <guimenu>OK</guimenu> in the list of installed add-on products."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:290
+#, no-c-format
+msgid ""
+"Re-launch the &yast; &smtool; Server Configuration module (<command>yast2 "
+"smt-server</command>), and go to the<guimenu> Scheduled SMT Jobs</guimenu> "
+"tab."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:297
+#, no-c-format
+msgid "Delete \"SCC Registration\" and \"Synchronization of Updates\" jobs."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:302
+#, no-c-format
+msgid ""
+"Click <guimenu>OK</guimenu> to finish the wizard, provide the &smt; user "
+"password, and acknowledge the synchronization error again."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:308
+#, no-c-format
+msgid "Prevent registration data upstream synchronization to &scc; by setting"
+msgstr ""
+
+#. Tag: screen
+#: smt_advanced.xml:311
+#, no-c-format
+msgid "forwardRegistration = false"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:312
+#, no-c-format
+msgid "in <filename>/etc/smt.conf</filename>."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:317 smt_advanced.xml:356 smt_advanced.xml:389
+#, no-c-format
+msgid "Connect the mobile disk and mount it."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:322
+#, no-c-format
+msgid "Populate the &smt; database with the &scc; data previously created:"
+msgstr ""
+
+#. Tag: screen
+#: smt_advanced.xml:325 smt_advanced.xml:397
+#, no-c-format
+msgid ""
+"smt-sync --fromdir <replaceable>/path/to/scc/dir/on/mobile/disk</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:328
+#, no-c-format
+msgid ""
+"Enable mirroring of the desired repositories with <command>smt-repos -e</"
+"command>."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:334
+#, no-c-format
+msgid "Create a database replacement file on the mobile hard disk:"
+msgstr ""
+
+#. Tag: screen
+#: smt_advanced.xml:337 smt_advanced.xml:410
+#, no-c-format
+msgid ""
+"smt-sync --createdbreplacementfile <replaceable>/path/to/dbrepl/file/on/"
+"mobile/disk</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:346
+#, no-c-format
+msgid ""
+"Now the configuration of both the external and internal &smt; servers is "
+"complete. However, the update repository is still empty. After you run the "
+"following daily operation routines for the first time, the repository will "
+"get synchronized, and the internal &smt; server will be ready to serve "
+"clients."
+msgstr ""
+
+#. Tag: title
+#: smt_advanced.xml:354
+#, no-c-format
+msgid "Daily External &smt; Server Operation"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:361
+#, no-c-format
+msgid ""
+"Perform a mirror to a directory on the mobile disk based on the file on the "
+"mobile disk:"
+msgstr ""
+
+#. Tag: screen
+#: smt_advanced.xml:365
+#, no-c-format
+msgid ""
+"smt-mirror --dbreplfile <replaceable>/path/to/dbrepl/file/on/mobile/disk</"
+"replaceable> \\\n"
+" --fromlocalsmt --directory <replaceable>/path/to/repository/on/mobile/disk</"
+"replaceable> \\\n"
+" -L /var/log/smt/smt-mirror-example.log"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:368
+#, no-c-format
+msgid ""
+"Update the database on the mobile disk with the product and subscription "
+"info from &scc;:"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:375
+#, no-c-format
+msgid ""
+"Optionally, scan the mobile disk for viruses and/or other unwanted content."
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:380 smt_advanced.xml:413
+#, no-c-format
+msgid "Unmount and disconnect the mobile disk."
+msgstr ""
+
+#. Tag: title
+#: smt_advanced.xml:387
+#, no-c-format
+msgid "Daily Internal &smt; Server Operation"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:394
+#, no-c-format
+msgid "Update the &scc; data on the server:"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:400
+#, no-c-format
+msgid "Mirror from the mobile disk to the server:"
+msgstr ""
+
+#. Tag: screen
+#: smt_advanced.xml:403
+#, no-c-format
+msgid ""
+"smt-mirror --fromdir <replaceable>/path/to/repository/on/mobile/disk</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_advanced.xml:406
+#, no-c-format
+msgid ""
+"Update the &scc; data on the mobile disk with local changes in the mirror "
+"status since the last synchronization:"
+msgstr ""

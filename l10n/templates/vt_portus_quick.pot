@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: vt_portus_quick.xml:17
+#, no-c-format
+msgid "Portus Quick Start"
+msgstr ""
+
+#. Tag: subtitle
+#: vt_portus_quick.xml:18
+#, no-c-format
+msgid "&productname; &productnumber;"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:23
+#, no-c-format
+msgid "Please fill in text for an abstract."
+msgstr ""
+
+#. Tag: title
+#: vt_portus_quick.xml:34
+#, no-c-format
+msgid "Examples: The most commonly used DocBook XML constructs"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:35
+#, no-c-format
+msgid "I am a paragraph in a section 1."
+msgstr ""
+
+#. Tag: title
+#: vt_portus_quick.xml:39
+#, no-c-format
+msgid "Lists"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:40
+#, no-c-format
+msgid "This section 2 showcases 3 types of lists."
+msgstr ""
+
+#. Tag: title
+#: vt_portus_quick.xml:44
+#, no-c-format
+msgid "Itemized Lists"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:45
+#, no-c-format
+msgid "I am a paragraph in a section 3."
+msgstr ""
+
+#. Tag: title
+#: vt_portus_quick.xml:47
+#, no-c-format
+msgid "Example Itemized List"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:49
+#, no-c-format
+msgid "Listitem 1"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:54
+#, no-c-format
+msgid "Listitem 2"
+msgstr ""
+
+#. Tag: title
+#: vt_portus_quick.xml:61
+#, no-c-format
+msgid "Ordered Lists"
+msgstr ""
+
+#. Tag: title
+#: vt_portus_quick.xml:63
+#, no-c-format
+msgid "Example Ordered List"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:65
+#, no-c-format
+msgid "First item"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:70
+#, no-c-format
+msgid "Second item"
+msgstr ""
+
+#. Tag: title
+#: vt_portus_quick.xml:77
+#, no-c-format
+msgid "Variablelists"
+msgstr ""
+
+#. Tag: title
+#: vt_portus_quick.xml:79
+#, no-c-format
+msgid "Example Variablelist"
+msgstr ""
+
+#. Tag: term
+#: vt_portus_quick.xml:81
+#, no-c-format
+msgid "Term 1"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:83
+#, no-c-format
+msgid "Definition 1"
+msgstr ""
+
+#. Tag: term
+#: vt_portus_quick.xml:89
+#, no-c-format
+msgid "Term 2"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:91
+#, no-c-format
+msgid "Definition 2"
+msgstr ""
+
+#. Tag: title
+#: vt_portus_quick.xml:100
+#, no-c-format
+msgid "Tables"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:101
+#, no-c-format
+msgid "This section 2 features a table with 4 columns and 3 rows:"
+msgstr ""
+
+#. Tag: title
+#: vt_portus_quick.xml:104
+#, no-c-format
+msgid "Example Table"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:112
+#, no-c-format
+msgid "Col 1"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:113
+#, no-c-format
+msgid "Col 2"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:114
+#, no-c-format
+msgid "Col 3"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:115
+#, no-c-format
+msgid "Col 4"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:120
+#, no-c-format
+msgid "Row 1, Cell 1"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:121
+#, no-c-format
+msgid "Row 1, Cell 2"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:122
+#, no-c-format
+msgid "Row 1, Cell 3"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:123
+#, no-c-format
+msgid "Row 1, Cell 4"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:126
+#, no-c-format
+msgid "Row 2, Cell 1"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:127
+#, no-c-format
+msgid "Row 2, Cell 2"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:128
+#, no-c-format
+msgid "Row 2, Cell 3"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:129
+#, no-c-format
+msgid "Row 2, Cell 4"
+msgstr ""
+
+#. Tag: title
+#: vt_portus_quick.xml:136
+#, no-c-format
+msgid "Images"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:137
+#, no-c-format
+msgid "This section 2 shows two types of images: with and without a caption."
+msgstr ""
+
+#. Tag: title
+#: vt_portus_quick.xml:141
+#, no-c-format
+msgid "Basketball Player"
+msgstr ""
+
+#. Tag: para
+#: vt_portus_quick.xml:151
+#, no-c-format
+msgid "And now an image without caption:"
+msgstr ""

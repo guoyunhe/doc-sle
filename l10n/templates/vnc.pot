@@ -1,0 +1,631 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: vnc.xml:9
+#, no-c-format
+msgid "Remote Access with VNC"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: vnc.xml:11
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:16
+#, no-c-format
+msgid ""
+"Virtual Network Computing (VNC) enables you to control a remote computer via "
+"a graphical desktop (as opposed to a remote shell access). VNC is platform-"
+"independent and lets you access the remote machine from any operating system."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:23
+#, no-c-format
+msgid ""
+"&productname; supports two different kinds of VNC sessions: One-time "
+"sessions that <quote>live</quote> as long as the VNC connection from the "
+"client is kept up, and persistent sessions that <quote>live</quote> until "
+"they are explicitly terminated."
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:32
+#, no-c-format
+msgid "Session Types"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:33
+#, no-c-format
+msgid ""
+"A machine can offer both kinds of sessions simultaneously on different "
+"ports, but an open session cannot be converted from one type to the other."
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:40
+#, no-c-format
+msgid "KDE Display Manager <systemitem>sddm</systemitem> not Supported"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:43
+#, no-c-format
+msgid ""
+"A machine running KDE Plasma 5 can reliably accept VNC connections only if "
+"it uses a display manager other than <systemitem>sddm</systemitem>. The "
+"<systemitem>lightdm</systemitem> display manager can be used as an "
+"alternative."
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:52
+#, no-c-format
+msgid "The <command>vncviewer</command> Client"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:54
+#, no-c-format
+msgid ""
+"To connect to a VNC service provided by a server, a client is needed. The "
+"default in &productname; is <command>vncviewer</command>, provided by the "
+"<systemitem class=\"resource\">tigervnc</systemitem> package."
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:61
+#, no-c-format
+msgid "Connecting Using the vncviewer CLI"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:63
+#, no-c-format
+msgid ""
+"To start your VNC viewer and initiate a session with the server, use the "
+"command:"
+msgstr ""
+
+#. Tag: screen
+#: vnc.xml:67
+#, no-c-format
+msgid "vncviewer &wsIname;:1"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:68
+#, no-c-format
+msgid ""
+"Instead of the VNC display number you can also specify the port number with "
+"two colons:"
+msgstr ""
+
+#. Tag: screen
+#: vnc.xml:72
+#, no-c-format
+msgid "vncviewer &wsIname;::5901"
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:74
+#, no-c-format
+msgid "Note: Display and Port Number"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:75
+#, no-c-format
+msgid ""
+"The actual display or port number you specify in the VNC client must be the "
+"same as the display or port number picked by the <command>vncserver</"
+"command> command on the target machine. See <xref linkend=\"sec.vnc."
+"persistent\"/> for further info."
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:83
+#, no-c-format
+msgid "Connecting Using the vncviewer GUI"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:85
+#, no-c-format
+msgid ""
+"By running <command>vncviewer</command> without specifying <command>--"
+"listen</command> or a host to connect to, it will show a window to ask for "
+"connection details. Enter the host into the <guimenu>VNC server</guimenu> "
+"field like in <xref linkend=\"sec.vnc.viewer.connectcli\"/> and click "
+"<guimenu>Connect</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:95
+#, no-c-format
+msgid "vncviewer"
+msgstr ""
+
+#. Tag: phrase
+#: vnc.xml:98
+#, no-c-format
+msgid "vncviewer asking for connection details"
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:111
+#, no-c-format
+msgid "Notification of Unencrypted Connections"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:113
+#, no-c-format
+msgid ""
+"The VNC protocol supports different kinds of encrypted connections, not to "
+"be confused with password authentication. If a connection does not use TLS, "
+"the text <quote>(Connection not encrypted!)</quote> can be seen in the "
+"window title of the VNC viewer."
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:123
+#, no-c-format
+msgid "One-time VNC Sessions"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:125
+#, no-c-format
+msgid ""
+"A one-time session is initiated by the remote client. It starts a graphical "
+"login screen on the server. This way you can choose the user which starts "
+"the session and, if supported by the login manager, the desktop environment. "
+"When you terminate the client connection to such a VNC session, all "
+"applications started within that session will be terminated, too. One-time "
+"VNC sessions cannot be shared, but it is possible to have multiple sessions "
+"on a single host at the same time."
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:136
+#, no-c-format
+msgid "Enabling One-time VNC Sessions"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:138
+#, no-c-format
+msgid ""
+"Start <menuchoice> <guimenu>&yast;</guimenu> <guimenu>Network Services</"
+"guimenu> <guimenu>Remote Administration (VNC)</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:145
+#, no-c-format
+msgid "Check <guimenu>Allow Remote Administration</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:150
+#, no-c-format
+msgid ""
+"If necessary, also check <guimenu>Open Port in Firewall</guimenu> (for "
+"example, when your network interface is configured to be in the External "
+"Zone). If you have more than one network interface, restrict opening the "
+"firewall ports to a specific interface via <guimenu>Firewall Details</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:159
+#, no-c-format
+msgid "Confirm your settings with <guimenu>Finish</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:164
+#, no-c-format
+msgid ""
+"In case not all needed packages are available yet, you need to approve the "
+"installation of missing packages."
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:172
+#, no-c-format
+msgid "Available Configurations"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:173
+#, no-c-format
+msgid ""
+"The default configuration on &productname; serves sessions with a resolution "
+"of 1024x768 pixels at a color depth of 16-bit. The sessions are available on "
+"ports <systemitem class=\"resource\">5901</systemitem> for <quote>regular</"
+"quote> VNC viewers (equivalent to VNC display <literal>1</literal>) and on "
+"port <systemitem class=\"resource\">5801</systemitem> for Web browsers."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:181
+#, no-c-format
+msgid ""
+"Other configurations can be made available on different ports<phrase os="
+"\"sles;osuse\">, see <xref linkend=\"sec.vnc.one-time.config\"/></phrase>."
+"<phrase os=\"sled\"> Ask your system administrator for details if you need "
+"to modify the configuration.</phrase>"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:188
+#, no-c-format
+msgid ""
+"VNC display numbers and X display numbers are independent in one-time "
+"sessions. A VNC display number is manually assigned to every configuration "
+"that the server supports (:1 in the example above). Whenever a VNC session "
+"is initiated with one of the configurations, it automatically gets a free X "
+"display number."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:195
+#, no-c-format
+msgid ""
+"By default, both the VNC client and server try to communicate securely via a "
+"self-signed SSL certificate, which is generated after installation. You can "
+"either use the default one, or replace it with your own. When using the self-"
+"signed certificate, you need to confirm its signature before the first "
+"connection&mdash;both in the VNC viewer and the Web browser. The Java client "
+"is served over HTTPS, using the same certificate as VNC."
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:206
+#, no-c-format
+msgid "Initiating a One-time VNC Session"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:207 vnc.xml:395
+#, no-c-format
+msgid ""
+"To connect to a persistent VNC session, a VNC viewer must be installed, see "
+"also <xref linkend=\"sec.vnc.viewer\"/>. Alternatively use a Java-capable "
+"Web browser to view the VNC session by entering the following URL: "
+"<literal>http://&wsIname;:5801</literal>"
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:216
+#, no-c-format
+msgid "Configuring One-time VNC Sessions"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:217
+#, no-c-format
+msgid ""
+"You can skip this section, if you do not need or want to modify the default "
+"configuration."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:221
+#, no-c-format
+msgid ""
+"One-time VNC sessions are started via the <systemitem class=\"daemon"
+"\">xinetd</systemitem> daemon. A configuration file is located at <filename>/"
+"etc/xinetd.d/vnc</filename>. By default it offers six configuration blocks: "
+"three for VNC viewers (<literal>vnc1</literal> to <literal>vnc3</literal>), "
+"and three serving a Java applet (<literal>vnchttpd1</literal> to "
+"<literal>vnchttpd3</literal>). By default only <literal>vnc1</literal> and "
+"<literal>vnchttpd1</literal> are active."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:230
+#, no-c-format
+msgid ""
+"To activate a configuration, comment the line <literal>disable = yes</"
+"literal> with a <literal>#</literal> character in the first column, or "
+"remove that line completely. To deactivate a configuration uncomment or add "
+"that line."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:236
+#, no-c-format
+msgid ""
+"The <command>Xvnc</command> server can be configured via the "
+"<literal>server_args</literal> option&mdash;see <command>Xnvc --help</"
+"command> for a list of options."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:241
+#, no-c-format
+msgid ""
+"When adding custom configurations, make sure they are not using ports that "
+"are already in use by other configurations, other services, or existing "
+"persistent VNC sessions on the same host."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:246
+#, no-c-format
+msgid "Activate configuration changes by entering the following command:"
+msgstr ""
+
+#. Tag: screen
+#: vnc.xml:249
+#, no-c-format
+msgid "sudo systemctl reload xinetd"
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:251
+#, no-c-format
+msgid "Firewall and VNC Ports"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:252
+#, no-c-format
+msgid ""
+"When activating Remote Administration as described in <xref linkend=\"pro."
+"vnc.one-time.activate\"/>, the ports <systemitem class=\"resource\">5801</"
+"systemitem> and <systemitem class=\"resource\">5901</systemitem> are opened "
+"in the firewall. If the network interface serving the VNC sessions is "
+"protected by a firewall, you need to manually open the respective ports when "
+"activating additional ports for VNC sessions. See <xref linkend=\"cha."
+"security.firewall\"/> for instructions."
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:266
+#, no-c-format
+msgid "Persistent VNC Sessions"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:268
+#, no-c-format
+msgid ""
+"A persistent VNC session is initiated on the server. The session and all "
+"applications started in this session run regardless of client connections "
+"until the session is terminated."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:274
+#, no-c-format
+msgid ""
+"A persistent session can be accessed from multiple clients simultaneously. "
+"This is ideal for demonstration purposes where one client has full access "
+"and all other clients have view-only access. Another use case are trainings "
+"where the trainer might need access to the trainee's desktop. However, most "
+"of the times you probably do not want to share your VNC session."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:283
+#, no-c-format
+msgid ""
+"In contrast to one-time sessions that start a display manager, a persistent "
+"session starts a ready-to-operate desktop that runs as the user that started "
+"the VNC session. Access to persistent sessions is protected by a password."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:289
+#, no-c-format
+msgid ""
+"Access to persistent sessions is protected by two possible types of "
+"passwords:"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:296
+#, no-c-format
+msgid "a regular password that grants full access or"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:301
+#, no-c-format
+msgid ""
+"an optional view-only password that grants a non-interactive (view-only) "
+"access."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:308
+#, no-c-format
+msgid "A session can have multiple client connections of both kinds at once."
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:313
+#, no-c-format
+msgid "Starting a Persistent VNC Session"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:315
+#, no-c-format
+msgid ""
+"Open a shell and make sure you are logged in as the user that should own the "
+"VNC session."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:325
+#, no-c-format
+msgid ""
+"If the network interface serving the VNC sessions is protected by a "
+"firewall, you need to manually open the port used by your session in the "
+"firewall. If starting multiple sessions you may alternatively open a range "
+"of ports. See <xref linkend=\"cha.security.firewall\"/> for details on how "
+"to configure the firewall."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:332
+#, no-c-format
+msgid ""
+"<command>vncserver</command> uses the ports <systemitem class=\"resource"
+"\">5901</systemitem> for display <literal>:1</literal>, <systemitem class="
+"\"resource\">5902</systemitem> for display <literal>:2</literal>, and so on. "
+"For persistent sessions, the VNC display and the X display usually have the "
+"same number."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:341
+#, no-c-format
+msgid ""
+"To start a session with a resolution of 1024x769 pixel and with a color "
+"depth of 16-bit, enter the following command:"
+msgstr ""
+
+#. Tag: screen
+#: vnc.xml:345
+#, no-c-format
+msgid "vncserver -geometry 1024x768 -depth 16"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:346
+#, no-c-format
+msgid ""
+"The <command>vncserver</command> command picks an unused display number when "
+"none is given and prints its choice. See <command>man 1 vncserver</command> "
+"for more options."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:354
+#, no-c-format
+msgid ""
+"When running <command>vncserver</command> for the first time, it asks for a "
+"password for full access to the session. If needed, you can also provide a "
+"password for view-only access to the session."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:360
+#, no-c-format
+msgid ""
+"The password(s) you are providing here are also used for future sessions "
+"started by the same user. They can be changed with the <command>vncpasswd</"
+"command> command."
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:367
+#, no-c-format
+msgid "Security Considerations"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:368
+#, no-c-format
+msgid ""
+"Make sure to use strong passwords of significant length (eight or more "
+"characters). Do not share these passwords."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:372
+#, no-c-format
+msgid ""
+"VNC connections are unencrypted, so people who can sniff the network(s) "
+"between the two machines can read the password when it gets transferred at "
+"the beginning of a session."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:379
+#, no-c-format
+msgid ""
+"To terminate the session shut down the desktop environment that runs inside "
+"the VNC session from the VNC viewer as you would shut it down if it was a "
+"regular local X session."
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:385
+#, no-c-format
+msgid ""
+"If you prefer to manually terminate a session, open a shell on the VNC "
+"server and make sure you are logged in as the user that owns the VNC session "
+"you want to terminate. Run the following command to terminate the session "
+"that runs on display <literal>:1</literal>: <command>vncserver -kill :1</"
+"command>"
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:394
+#, no-c-format
+msgid "Connecting to a Persistent VNC Session"
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:404
+#, no-c-format
+msgid "Configuring Persistent VNC Sessions"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:405
+#, no-c-format
+msgid ""
+"Persistent VNC sessions can be configured by editing <filename>$HOME/.vnc/"
+"xstartup</filename>. By default this shell script starts the same GUI/window "
+"manager it was started from. In &productname; this will either be &gnome; or "
+"IceWM. If you want to start your session with a window manager of your "
+"choice, set the variable <envar>WINDOWMANAGER</envar>:"
+msgstr ""
+
+#. Tag: screen
+#: vnc.xml:413
+#, no-c-format
+msgid ""
+"WINDOWMANAGER=gnome vncserver -geometry 1024x768\n"
+"WINDOWMANAGER=icewm vncserver -geometry 1024x768"
+msgstr ""
+
+#. Tag: title
+#: vnc.xml:415
+#, no-c-format
+msgid "One Configuration for Each User"
+msgstr ""
+
+#. Tag: para
+#: vnc.xml:416
+#, no-c-format
+msgid ""
+"Persistent VNC sessions are configured in a single per-user configuration. "
+"Multiple sessions started by the same user will all use the same start-up "
+"and password files."
+msgstr ""

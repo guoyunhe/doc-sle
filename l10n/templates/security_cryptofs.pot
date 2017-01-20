@@ -1,0 +1,596 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: security_cryptofs.xml:9
+#, no-c-format
+msgid "Encrypting Partitions and Files"
+msgstr ""
+
+#. Tag: primary
+#: security_cryptofs.xml:17 security_cryptofs.xml:100 security_cryptofs.xml:104
+#: security_cryptofs.xml:125 security_cryptofs.xml:231
+#: security_cryptofs.xml:255 security_cryptofs.xml:283
+#: security_cryptofs.xml:380
+#, no-c-format
+msgid "<primary>encrypting</primary>"
+msgstr ""
+
+#. Tag: primary
+#: security_cryptofs.xml:18 security_cryptofs.xml:20
+#, no-c-format
+msgid "file systems"
+msgstr ""
+
+#. Tag: secondary
+#: security_cryptofs.xml:19 security_cryptofs.xml:124 security_cryptofs.xml:254
+#, no-c-format
+msgid "<secondary>encrypting</secondary>"
+msgstr ""
+
+#. Tag: secondary
+#: security_cryptofs.xml:21
+#, no-c-format
+msgid "cryptofs"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:22
+#, no-c-format
+msgid ""
+"Most users have some confidential data on their computer that third parties "
+"should not be able to access. The more you rely on mobile computing and on "
+"working in different environments and networks, the more carefully you "
+"should handle your data. The encryption of files or entire partitions is "
+"recommended if others have network or physical access to your system. "
+"Laptops or removable media, such as external hard disks or flash disks, are "
+"prone to being lost or stolen. Thus, it is recommended to encrypt the parts "
+"of your file system that hold confidential data."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:32
+#, no-c-format
+msgid "There are several ways to protect your data by means of encryption:"
+msgstr ""
+
+#. Tag: term
+#: security_cryptofs.xml:37
+#, no-c-format
+msgid "Encrypting a Hard Disk Partition"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:39
+#, no-c-format
+msgid ""
+"You can create an encrypted partition with &yast; during installation or in "
+"an already installed system. Refer to <xref linkend=\"sec.security.cryptofs."
+"y2.part_inst\"/> and <xref linkend=\"sec.security.cryptofs.y2.part_run\"/> "
+"for details. This option can also be used for removable media, such as "
+"external hard disks, as described in <xref linkend=\"sec.security.cryptofs."
+"y2.removables\"/>."
+msgstr ""
+
+#. Tag: term
+#: security_cryptofs.xml:51
+#, no-c-format
+msgid "Creating an Encrypted File as Container"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:53
+#, no-c-format
+msgid ""
+"You can create an encrypted file on your hard disk or on a removable medium "
+"with &yast; at any time. The encrypted file can then be used to "
+"<emphasis>store</emphasis> other files or directories. For more information, "
+"refer to <xref linkend=\"sec.security.cryptofs.y2.container\"/>."
+msgstr ""
+
+#. Tag: term
+#: security_cryptofs.xml:63
+#, no-c-format
+msgid "Encrypting Home Directories"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:65
+#, no-c-format
+msgid ""
+"With &productname;, you can also create encrypted user home directories. "
+"When the user logs in to the system, the encrypted home directory is mounted "
+"and the contents are made available to the user. Refer to <xref linkend="
+"\"sec.security.cryptofs.y2.homes\"/> for more information."
+msgstr ""
+
+#. Tag: term
+#: security_cryptofs.xml:75
+#, no-c-format
+msgid "Encrypting Single ASCII Text Files"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:77
+#, no-c-format
+msgid ""
+"If you only have a few ASCII text files that hold sensitive or confidential "
+"data, you can encrypt them individually and protect them with a password "
+"using the vi editor. Refer to <xref linkend=\"sec.security.cryptofs.vi\"/> "
+"for more information."
+msgstr ""
+
+#. Tag: title
+#: security_cryptofs.xml:87
+#, no-c-format
+msgid "Encrypted Media Offers Limited Protection"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:88
+#, no-c-format
+msgid ""
+"The methods described in this chapter offer only a limited protection. You "
+"cannot protect your running system from being compromised. After the "
+"encrypted medium is successfully mounted, everybody with appropriate "
+"permissions has access to it. However, encrypted media are useful in case of "
+"loss or theft of your computer, or to prevent unauthorized individuals from "
+"reading your confidential data."
+msgstr ""
+
+#. Tag: title
+#: security_cryptofs.xml:98
+#, no-c-format
+msgid "Setting Up an Encrypted File System with &yast;"
+msgstr ""
+
+#. Tag: secondary
+#: security_cryptofs.xml:102 security_cryptofs.xml:232
+#, no-c-format
+msgid "<secondary>partitions</secondary>"
+msgstr ""
+
+#. Tag: secondary
+#: security_cryptofs.xml:106
+#, no-c-format
+msgid "&yast;, with"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:108
+#, no-c-format
+msgid ""
+"Use &yast; to encrypt partitions or parts of your file system during "
+"installation or in an already installed system. However, encrypting a "
+"partition in an already-installed system is more difficult, because you need "
+"to resize and change existing partitions. In such cases, it may be more "
+"convenient to create an encrypted file of a defined size, in which to "
+"<emphasis>store</emphasis> other files or parts of your file system. To "
+"encrypt an entire partition, dedicate a partition for encryption in the "
+"partition layout. The standard partitioning proposal as suggested by &yast;, "
+"does not include an encrypted partition by default. Add it manually in the "
+"partitioning dialog."
+msgstr ""
+
+#. Tag: title
+#: security_cryptofs.xml:122
+#, no-c-format
+msgid "Creating an Encrypted Partition during Installation"
+msgstr ""
+
+#. Tag: primary
+#: security_cryptofs.xml:123
+#, no-c-format
+msgid "<primary>partitions</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: security_cryptofs.xml:126
+#, no-c-format
+msgid "creating partitions"
+msgstr ""
+
+#. Tag: title
+#: security_cryptofs.xml:128
+#, no-c-format
+msgid "Password Input"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:129
+#, no-c-format
+msgid ""
+"Make sure to memorize the password for your encrypted partitions well. "
+"Without that password, you cannot access or restore the encrypted data."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:134
+#, no-c-format
+msgid ""
+"The &yast; expert dialog for partitioning offers the options needed for "
+"creating an encrypted partition. To create a new encrypted partition proceed "
+"as follows:"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:141
+#, no-c-format
+msgid ""
+"Run the &yast; Expert Partitioner with <menuchoice> <guimenu>System</"
+"guimenu><guimenu>Partitioner</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:147
+#, no-c-format
+msgid ""
+"Select a hard disk, click <guimenu>Add</guimenu>, and select a primary or an "
+"extended partition."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:153
+#, no-c-format
+msgid "Select the partition size or the region to use on the disk."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:158
+#, no-c-format
+msgid "Select the file system, and mount point of this partition."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:163
+#, no-c-format
+msgid "Activate the <guimenu>Encrypt device</guimenu> check box."
+msgstr ""
+
+#. Tag: title
+#: security_cryptofs.xml:167
+#, no-c-format
+msgid "Additional Software Required"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:168
+#, no-c-format
+msgid ""
+"After checking <guimenu>Encrypt device</guimenu>, a pop-up window asking for "
+"installing additional software may appear. Confirm to install all the "
+"required packages to ensure that the encrypted partition works well."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:180
+#, no-c-format
+msgid ""
+"If the encrypted file system needs to be mounted only when necessary, enable "
+"<guimenu>Do not mount partition</guimenu> in the <guimenu>Fstab Options</"
+"guimenu>. otherwise enable <guimenu>Mount partition</guimenu> and enter the "
+"mount point."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:188
+#, no-c-format
+msgid ""
+"Click <guimenu>Next</guimenu> and enter a password which is used to encrypt "
+"this partition. This password is not displayed. To prevent typing errors, "
+"you need to enter the password twice."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:195
+#, no-c-format
+msgid ""
+"Complete the process by clicking <guimenu>Finish</guimenu>. The newly-"
+"encrypted partition is now created."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:201
+#, no-c-format
+msgid ""
+"During the boot process, the operating system asks for the password before "
+"mounting any encrypted partition which is set to be auto-mounted in "
+"<filename>/etc/fstab</filename>. Such a partition is then available to all "
+"users when it has been mounted."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:207
+#, no-c-format
+msgid ""
+"To skip mounting the encrypted partition during start-up, press <keycap "
+"function=\"enter\"></keycap> when prompted for the password. Then decline "
+"the offer to enter the password again. In this case, the encrypted file "
+"system is not mounted and the operating system continues booting, blocking "
+"access to your data."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:214
+#, no-c-format
+msgid ""
+"To mount an encrypted partition which is not mounted during the boot "
+"process, open a file manager and click the partition entry in the pane "
+"listing common places on your file system. You will be prompted for a "
+"password and the partition will be mounted."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:220
+#, no-c-format
+msgid ""
+"When you are installing your system on a machine where partitions already "
+"exist, you can also decide to encrypt an existing partition during "
+"installation. In this case follow the description in <xref linkend=\"sec."
+"security.cryptofs.y2.part_run\"/> and be aware that this action destroys all "
+"data on the existing partition."
+msgstr ""
+
+#. Tag: title
+#: security_cryptofs.xml:230
+#, no-c-format
+msgid "Creating an Encrypted Partition on a Running System"
+msgstr ""
+
+#. Tag: title
+#: security_cryptofs.xml:234
+#, no-c-format
+msgid "Activating Encryption on a Running System"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:235
+#, no-c-format
+msgid ""
+"It is also possible to create encrypted partitions on a running system. "
+"However, encrypting an existing partition destroys all data on it, and "
+"requires re-sizing and restructuring of existing partitions."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:241
+#, no-c-format
+msgid ""
+"On a running system, select <menuchoice> <guimenu>System</guimenu> "
+"<guimenu>Partitioner</guimenu> </menuchoice> in the &yast; control center. "
+"Click <guimenu>Yes</guimenu> to proceed. In the <guimenu>Expert Partitioner</"
+"guimenu>, select the partition to encrypt and click <guimenu>Edit</guimenu>. "
+"The rest of the procedure is the same as described in <xref linkend=\"sec."
+"security.cryptofs.y2.part_inst\"/>."
+msgstr ""
+
+#. Tag: title
+#: security_cryptofs.xml:252
+#, no-c-format
+msgid "Creating an Encrypted File as a Container"
+msgstr ""
+
+#. Tag: primary
+#: security_cryptofs.xml:253
+#, no-c-format
+msgid "<primary>files</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: security_cryptofs.xml:256
+#, no-c-format
+msgid "<secondary>files</secondary>"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:257
+#, no-c-format
+msgid ""
+"Instead of using a partition, it is possible to create an encrypted file, "
+"which can hold other files or directories containing confidential data. Such "
+"container files are created from the &yast; Expert Partitioner dialog. "
+"Select <menuchoice><guimenu>Crypt Files</guimenu> <guimenu>Add Crypt File</"
+"guimenu></menuchoice> and enter the full path to the file and its size. If "
+"&yast; should create the container file, activate the check box "
+"<guimenu>Create Loop File</guimenu>. Accept or change the proposed "
+"formatting settings and the file system type. Specify the mount point and "
+"make sure that <guimenu>Encrypt Device</guimenu> is checked."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:269
+#, no-c-format
+msgid ""
+"Click <guimenu>Next</guimenu>, enter your password for decrypting the file, "
+"and confirm with <guimenu>Finish</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:273
+#, no-c-format
+msgid ""
+"The advantage of encrypted container files over encrypted partitions is that "
+"they can be added without re-partitioning the hard disk. They are mounted "
+"with a loop device and behave like normal partitions."
+msgstr ""
+
+#. Tag: title
+#: security_cryptofs.xml:282
+#, no-c-format
+msgid "Encrypting the Content of Removable Media"
+msgstr ""
+
+#. Tag: secondary
+#: security_cryptofs.xml:284
+#, no-c-format
+msgid "removable media"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:285
+#, no-c-format
+msgid ""
+"&yast; treats removable media (like external hard disks or flash disks) the "
+"same as any other hard disk. Container files or partitions on such media can "
+"be encrypted as described above. Do not, however, enable mounting at boot "
+"time, because removable media are usually only connected while the system is "
+"running."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:292
+#, no-c-format
+msgid ""
+"If you encrypted your removable device with &yast;, the &gnome; desktop "
+"automatically recognizes the encrypted partition and prompt for the password "
+"when the device is detected. If you plug in a FAT formatted removable device "
+"while running &gnome;, the desktop user entering the password automatically "
+"becomes the owner of the device. For devices with a file system other than "
+"FAT, change the ownership explicitly for users other than &rootuser; to "
+"enable these users to read or write files on the device."
+msgstr ""
+
+#. Tag: title
+#: security_cryptofs.xml:305
+#, no-c-format
+msgid "Using Encrypted Home Directories"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:307
+#, no-c-format
+msgid ""
+"To protect data in home directories from being stolen and consequent "
+"unauthorized access, use the &yast; user management module to enable "
+"encryption of home directories. You can create encrypted home directories "
+"for new or existing users. To encrypt or decrypt home directories of already "
+"existing users, you need to know their login password. See <xref linkend="
+"\"sec.y2.userman.adv.crypto\"/> for instructions."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:316
+#, no-c-format
+msgid ""
+"Encrypted home partitions are created within a file container as described "
+"in <xref linkend=\"sec.security.cryptofs.y2.container\"/>. Two files are "
+"created under <filename>/home</filename> for each encrypted home directory:"
+msgstr ""
+
+#. Tag: filename
+#: security_cryptofs.xml:330
+#, no-c-format
+msgid "<replaceable>LOGIN</replaceable>.img"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:333
+#, no-c-format
+msgid "The image holding the directory"
+msgstr ""
+
+#. Tag: filename
+#: security_cryptofs.xml:339
+#, no-c-format
+msgid "<replaceable>LOGIN</replaceable>.key"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:342
+#, no-c-format
+msgid "The image key, protected with the user's login password."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:349
+#, no-c-format
+msgid ""
+"On login, the home directory automatically gets decrypted. Internally, it "
+"works through the PAM module called <emphasis>pam_mount</emphasis>. If you "
+"need to add an additional login method that provides encrypted home "
+"directories, you need to add this module to the respective configuration "
+"file in <filename>/etc/pam.d/</filename>. For more information, see <xref "
+"linkend=\"cha.pam\"/> and the man page of <option>pam_mount</option>."
+msgstr ""
+
+#. Tag: title
+#: security_cryptofs.xml:359
+#, no-c-format
+msgid "Security Restrictions"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:360
+#, no-c-format
+msgid ""
+"Encrypting a user's home directory does not provide strong security from "
+"other users. If strong security is required, the system should not be shared "
+"physically."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:365
+#, no-c-format
+msgid ""
+"To enhance security, also encrypt the <filename>swap</filename> partition "
+"and the <filename>/tmp</filename> and <filename>/var/tmp</filename> "
+"directories, because these may contain temporary images of critical data. "
+"You can encrypt <filename>swap</filename>, <filename>/tmp</filename>, and "
+"<filename>/var/tmp</filename> with the &yast; partitioner as described in "
+"<xref linkend=\"sec.security.cryptofs.y2.part_inst\"/> or <xref linkend="
+"\"sec.security.cryptofs.y2.container\"/>."
+msgstr ""
+
+#. Tag: title
+#: security_cryptofs.xml:378
+#, no-c-format
+msgid "Using vi to Encrypt Single ASCII Text Files"
+msgstr ""
+
+#. Tag: secondary
+#: security_cryptofs.xml:382
+#, no-c-format
+msgid "files with vi"
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:384
+#, no-c-format
+msgid ""
+"The disadvantage of using encrypted partitions is obvious: While the "
+"partition is mounted, at least <systemitem class=\"username\">root</"
+"systemitem> can access the data. To prevent this, <command>vi</command> can "
+"be used in encrypted mode."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:391
+#, no-c-format
+msgid ""
+"Use <command>vi</command> <option>-x</option> <replaceable>filename</"
+"replaceable> to edit a new file. <command>vi</command> prompts you to set a "
+"password, after which it encrypts the content of the file. Whenever you "
+"access this file, <command>vi</command> requests the correct password."
+msgstr ""
+
+#. Tag: para
+#: security_cryptofs.xml:399
+#, no-c-format
+msgid ""
+"For even more security, you can place the encrypted text file in an "
+"encrypted partition. This is recommended because the encryption used in "
+"<command>vi</command> is not very strong."
+msgstr ""

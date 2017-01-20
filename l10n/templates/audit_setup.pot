@@ -1,0 +1,1021 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: audit_setup.xml:9 audit_setup.xml:27
+#, no-c-format
+msgid "Setting Up the Linux Audit Framework"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:16
+#, no-c-format
+msgid ""
+"This chapter shows how to set up a simple audit scenario. Every step "
+"involved in configuring and enabling audit is explained in detail. After you "
+"have learned to set up audit, consider a real-world example scenario in "
+"<xref linkend=\"cha.audit.scenarios\"/>."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:22
+#, no-c-format
+msgid ""
+"To set up audit on &productname;, you need to complete the following steps:"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:29
+#, no-c-format
+msgid ""
+"Make sure that all required packages are installed: <systemitem class="
+"\"resource\">audit</systemitem>, <systemitem class=\"resource\">audit-libs</"
+"systemitem>, and optionally <systemitem class=\"resource\">audit-libs-"
+"python</systemitem>. To use the log visualization as described in <xref "
+"linkend=\"sec.audit.viz\"/>, install <systemitem class=\"resource\">gnuplot</"
+"systemitem> and <systemitem class=\"resource\">graphviz</systemitem> from "
+"the &productname; media."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:41
+#, no-c-format
+msgid ""
+"Determine the components to audit. Refer to <xref linkend=\"sec.audit.choose"
+"\"/> for details."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:47
+#, no-c-format
+msgid ""
+"Check or modify the basic audit daemon configuration. Refer to <xref linkend="
+"\"sec.audit.config\"/> for details."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:53
+#, no-c-format
+msgid ""
+"Enable auditing for system calls. Refer to <xref linkend=\"sec.audit.syscall"
+"\"/> for details."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:59
+#, no-c-format
+msgid ""
+"Compose audit rules to suit your scenario. Refer to <xref linkend=\"sec."
+"audit.aurules\"/> for details."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:65
+#, no-c-format
+msgid ""
+"Generate logs and configure tailor-made reports. Refer to <xref linkend="
+"\"sec.audit.aurepo\"/> for details."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:71
+#, no-c-format
+msgid ""
+"Configure optional log visualization. Refer to <xref linkend=\"sec.audit.viz"
+"\"/> for details."
+msgstr ""
+
+#. Tag: title
+#: audit_setup.xml:78
+#, no-c-format
+msgid "Controlling the Audit Daemon"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:79
+#, no-c-format
+msgid ""
+"Before configuring any of the components of the audit system, make sure that "
+"the audit daemon is not running by entering <command>systemctl status "
+"auditd</command> as &rootuser;. On a default &productname; system, audit is "
+"started on boot, so you need to turn it off by entering <command>systemctl "
+"stop auditd</command>. Start the daemon after configuring it with "
+"<command>systemctl start auditd</command>."
+msgstr ""
+
+#. Tag: title
+#: audit_setup.xml:90
+#, no-c-format
+msgid "Determining the Components to Audit"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:92
+#, no-c-format
+msgid ""
+"Before starting to create your own audit configuration, determine to which "
+"degree you want to use it. Check the following general rules to determine "
+"which use case best applies to you and your requirements:"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:100
+#, no-c-format
+msgid ""
+"If you require a full security audit for CAPP/EAL certification, enable full "
+"audit for system calls and configure watches on various configuration files "
+"and directories, similar to the rule set featured in <xref linkend=\"cha."
+"audit.scenarios\"/>."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:108
+#, no-c-format
+msgid ""
+"If you need to trace a process based on the audit rules, use "
+"<command>autrace</command>."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:114
+#, no-c-format
+msgid ""
+"If you require file and directory watches to track access to important or "
+"security-sensitive data, create a rule set matching these requirements. "
+"Enable audit as described in <xref linkend=\"sec.audit.syscall\"/> and "
+"proceed to <xref linkend=\"sec.audit.aurules\"/>."
+msgstr ""
+
+#. Tag: title
+#: audit_setup.xml:125
+#, no-c-format
+msgid "Configuring the Audit Daemon"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:127
+#, no-c-format
+msgid ""
+"The basic setup of the audit daemon is done by editing <filename>/etc/audit/"
+"auditd.conf</filename>. You may also use &yast; to configure the basic "
+"settings by calling <menuchoice> <guimenu>&yast;</guimenu> <guimenu>Security "
+"and Users</guimenu> <guimenu>Linux Audit Framework (LAF)</guimenu> </"
+"menuchoice>. Use the tabs <guimenu>Log File</guimenu> and <guimenu>Disk "
+"Space</guimenu> for configuration."
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:137
+#, no-c-format
+msgid ""
+"log_file = /var/log/audit/audit.log\n"
+"log_format = RAW\n"
+"log_group = root\n"
+"priority_boost = 4\n"
+"flush = INCREMENTAL\n"
+"freq = 20\n"
+"num_logs = 5\n"
+"disp_qos = lossy\n"
+"dispatcher = /sbin/audispd\n"
+"name_format = NONE\n"
+"##name = mydomain\n"
+"max_log_file = 6\n"
+"max_log_file_action = ROTATE\n"
+"space_left = 75\n"
+"space_left_action = SYSLOG\n"
+"action_mail_acct = root\n"
+"admin_space_left = 50\n"
+"admin_space_left_action = SUSPEND\n"
+"disk_full_action = SUSPEND\n"
+"disk_error_action = SUSPEND\n"
+"##tcp_listen_port =\n"
+"tcp_listen_queue = 5\n"
+"tcp_max_per_addr = 1\n"
+"##tcp_client_ports = 1024-65535\n"
+"tcp_client_max_idle = 0\n"
+"cp_client_max_idle = 0"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:139
+#, no-c-format
+msgid ""
+"The default settings work reasonably well for many setups. Some values, such "
+"as <literal>num_logs</literal>, <literal>max_log_file</literal>, "
+"<literal>space_left</literal>, and <literal>admin_space_left</literal> "
+"depend on the size of your deployment. If disk space is limited, you should "
+"reduce the number of log files to keep if they are rotated and you should "
+"get an earlier warning if disk space is running out. For a CAPP-compliant "
+"setup, adjust the values for <literal>log_file</literal>, <literal>flush</"
+"literal>, <literal>max_log_file</literal>, <literal>max_log_file_action</"
+"literal>, <literal>space_left</literal>, <literal>space_left_action</"
+"literal>, <literal>admin_space_left</literal>, "
+"<literal>admin_space_left_action</literal>, <literal>disk_full_action</"
+"literal>, and <literal>disk_error_action</literal>, as described in <xref "
+"linkend=\"sec.audit.auditd\"/>. An example CAPP-compliant configuration "
+"looks like this:"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:158
+#, no-c-format
+msgid ""
+"log_file = <replaceable>path_to_separate_partition</replaceable>/audit.log\n"
+"log_format = RAW\n"
+"priority_boost = 4\n"
+"flush = SYNC                       ### or DATA\n"
+"freq = 20\n"
+"num_logs = 4\n"
+"dispatcher = /sbin/audispd\n"
+"disp_qos = lossy\n"
+"max_log_file = 5\n"
+"max_log_file_action = KEEP_LOGS\n"
+"space_left = 75\n"
+"space_left_action = EMAIL\n"
+"action_mail_acct = root\n"
+"admin_space_left = 50\n"
+"admin_space_left_action = SINGLE   ### or HALT\n"
+"disk_full_action = SUSPEND         ### or HALT\n"
+"disk_error_action = SUSPEND        ### or HALT"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:160
+#, no-c-format
+msgid ""
+"The <literal>###</literal> precedes comments where you can choose from "
+"several options. Do not add the comments to your actual configuration files."
+msgstr ""
+
+#. Tag: title
+#: audit_setup.xml:167
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:168
+#, no-c-format
+msgid ""
+"Refer to <xref linkend=\"sec.audit.auditd\"/> for detailed background "
+"information about the <filename>auditd.conf</filename> configuration "
+"parameters."
+msgstr ""
+
+#. Tag: title
+#: audit_setup.xml:176
+#, no-c-format
+msgid "Enabling Audit for System Calls"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:178
+#, no-c-format
+msgid ""
+"If the audit framework is not installed, install the <systemitem>audit</"
+"systemitem> package. A standard &productname; system does not have auditd "
+"running by default. Enable it with:"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:184
+#, no-c-format
+msgid "systemctl enable auditd"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:186
+#, no-c-format
+msgid "There are different levels of auditing activity available:"
+msgstr ""
+
+#. Tag: term
+#: audit_setup.xml:192
+#, no-c-format
+msgid "Basic Logging"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:194
+#, no-c-format
+msgid ""
+"Out of the box (without any further configuration) auditd logs only events "
+"concerning its own configuration changes to <filename>/var/log/audit/audit."
+"log</filename>. No events (file access, system call, etc.) are generated by "
+"the kernel audit component until requested by <command>auditctl</command>. "
+"However, other kernel components and modules may log audit events outside of "
+"the control of <command>auditctl</command> and these appear in the audit "
+"log. By default, the only module that generates audit events is &aa;."
+msgstr ""
+
+#. Tag: term
+#: audit_setup.xml:207
+#, no-c-format
+msgid "Advanced Logging with System Call Auditing"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:209
+#, no-c-format
+msgid ""
+"To audit system calls and get meaningful file watches, you need to enable "
+"audit contexts for system calls."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:217
+#, no-c-format
+msgid ""
+"As you need system call auditing capabilities even when you are configuring "
+"plain file or directory watches, you need to enable audit contexts for "
+"system calls. To enable audit contexts for the duration of the current "
+"session only, execute <command>auditctl -e 1</command> as &rootuser;. To "
+"disable this feature, execute <command>auditctl -e 0</command> as &rootuser;."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:226
+#, no-c-format
+msgid ""
+"The audit contexts are enabled by default. To turn this feature off "
+"temporarily, use <command>auditctl -e 0</command>."
+msgstr ""
+
+#. Tag: title
+#: audit_setup.xml:232
+#, no-c-format
+msgid "Setting Up Audit Rules"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:234
+#, no-c-format
+msgid ""
+"Using audit rules, determine which aspects of the system should be analyzed "
+"by audit. Normally this includes important databases and security-relevant "
+"configuration files. You may also analyze various system calls in detail if "
+"a broad analysis of your system is required. A very detailed example "
+"configuration that includes most of the rules that are needed in a CAPP "
+"compliant environment is available in <xref linkend=\"cha.audit.scenarios\"/"
+">."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:244
+#, no-c-format
+msgid ""
+"Audit rules can be passed to the audit daemon on the <command>auditctl</"
+"command> command line and by composing a rule set in <filename>/etc/audit/"
+"audit.rules</filename> which is processed whenever the audit daemon is "
+"started. To customize <filename>/etc/audit/audit.rules</filename> either "
+"edit it directly, or use &yast;: <menuchoice> <guimenu>Security and Users</"
+"guimenu> <guimenu>Linux Audit Framework (LAF)</guimenu> <guimenu>Rules for "
+"'auditctl'</guimenu> </menuchoice>. Rules passed on the command line are not "
+"persistent and need to be re-entered when the audit daemon is restarted."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:257
+#, no-c-format
+msgid ""
+"A simple rule set for very basic auditing on a few important files and "
+"directories could look like this:"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:262
+#, no-c-format
+msgid ""
+"# basic audit system parameters\n"
+"-D\n"
+"-b 8192\n"
+"-f 1\n"
+"-e 1\n"
+"\n"
+"# some file and directory watches with keys\n"
+"-w /var/log/audit/ -k LOG_audit\n"
+"-w /etc/audit/auditd.conf -k CFG_audit_conf -p rxwa\n"
+"-w /etc/audit/audit.rules -k CFG_audit_rules -p rxwa\n"
+"\n"
+"-w /etc/passwd -k CFG_passwd -p rwxa\n"
+"-w /etc/sysconfig/ -k CFG_sysconfig  \n"
+"\n"
+"# an example system call rule\n"
+"-a entry,always -S umask\n"
+"\n"
+"### add your own rules"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:264
+#, no-c-format
+msgid ""
+"When configuring the basic audit system parameters (such as the backlog "
+"parameter <literal>-b</literal>) test these settings with your intended "
+"audit rule set to determine whether the backlog size is appropriate for the "
+"level of logging activity caused by your audit rule set. If your chosen "
+"backlog size is too small, your system might not be able to handle the audit "
+"load and consult the failure flag (<literal>-f</literal>) when the backlog "
+"limit is exceeded."
+msgstr ""
+
+#. Tag: title
+#: audit_setup.xml:275
+#, no-c-format
+msgid "Choosing the Failure Flag"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:276
+#, no-c-format
+msgid ""
+"When choosing the failure flag, note that <option>-f 2</option> tells your "
+"system to perform an immediate shutdown without flushing any pending data to "
+"disk when the limits of your audit system are exceeded. Because this "
+"shutdown is not a clean shutdown, restrict the use of <option>-f 2</option> "
+"to only the most security-conscious environments and use <option>-f 1</"
+"option> (system continues to run, issues a warning and audit stops) for any "
+"other setup to avoid loss of data or data corruption."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:288
+#, no-c-format
+msgid ""
+"Directory watches produce less verbose output than separate file watches for "
+"the files under these directories. To get detailed logging for your system "
+"configuration in <filename>/etc/sysconfig</filename>, for example, add "
+"watches for each file. Audit does not support globbing, which means you "
+"cannot create a rule that says <literal>-w /etc/*</literal> and watches all "
+"files and directories below <filename>/etc</filename>."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:298
+#, no-c-format
+msgid ""
+"For better identification in the log file, a key has been added to each of "
+"the file and directory watches. Using the key, it is easier to comb the logs "
+"for events related to a certain rule. When creating keys, distinguish "
+"between mere log file watches and configuration file watches by using an "
+"appropriate prefix with the key, in this case <literal>LOG</literal> for a "
+"log file watch and <literal>CFG</literal> for a configuration file watch. "
+"Using the file name as part of the key also makes it easier for you to "
+"identify events of this type in the log file."
+msgstr ""
+
+#. Tag: remark
+#: audit_setup.xml:310
+#, no-c-format
+msgid ""
+"jsegitz 2014-07-23: this isn't a good suggestion IMHO since it can be "
+"queried with -w anyway"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:313
+#, no-c-format
+msgid ""
+"Another thing to bear in mind when creating file and directory watches is "
+"that audit cannot deal with files that do not exist when the rules are "
+"created. Any file that is added to your system while audit is already "
+"running is not watched unless you extend the rule set to watch this new file."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:321
+#, no-c-format
+msgid ""
+"For more information about creating custom rules, refer to <xref linkend="
+"\"sec.audit.rules\"/>."
+msgstr ""
+
+#. Tag: title
+#: audit_setup.xml:327
+#, no-c-format
+msgid "Changing Audit Rules"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:328
+#, no-c-format
+msgid ""
+"After you change audit rules, always restart the audit daemon with "
+"<command>systemctl restart auditd</command> to reread the changed rules."
+msgstr ""
+
+#. Tag: title
+#: audit_setup.xml:345
+#, no-c-format
+msgid "Configuring Audit Reports"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:347
+#, no-c-format
+msgid ""
+"To avoid having to dig through the raw audit logs to get an impression of "
+"what your system is currently doing, run custom audit reports at certain "
+"intervals. Custom audit reports enable you to focus on areas of interest and "
+"get meaningful statistics on the nature and frequency of the events you are "
+"monitoring. To analyze individual events in detail, use the ausearch tool."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:356
+#, no-c-format
+msgid "Before setting up audit reporting, consider the following:"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:362
+#, no-c-format
+msgid ""
+"What types of events do you want to monitor by generating regular reports? "
+"Select the appropriate aureport command lines as described in <xref linkend="
+"\"sec.audit.aureport.gen\"/>."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:369
+#, no-c-format
+msgid ""
+"What do you want to do with the audit reports? Decide whether to create "
+"graphical charts from the data accumulated or whether it should be "
+"transferred into any sort of spreadsheet or database. Set up the aureport "
+"command line and further processing similar to the examples shown in <xref "
+"linkend=\"sec.audit.viz\"/> if you want to visualize your reports."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:379
+#, no-c-format
+msgid ""
+"When and at which intervals should the reports run? Set up appropriate "
+"automated reporting using cron."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:386
+#, no-c-format
+msgid ""
+"For this example, assume that you are interested in finding out about any "
+"attempts to access your audit, PAM, and system configuration. Proceed as "
+"follows to find out about file events on your system:"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:394
+#, no-c-format
+msgid ""
+"Generate a full summary report of all events and check for any anomalies in "
+"the summary report, for example, have a look at the <quote>failed syscalls</"
+"quote> record, because these might have failed because of insufficient "
+"permissions to access a file or a file not being there:"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:401
+#, no-c-format
+msgid ""
+"<command>aureport</command>\n"
+"\n"
+"Summary Report\n"
+"======================\n"
+"Range of time in logs: 03/02/09 14:13:38.225 - 17/02/09 16:30:10.352\n"
+"Selected time for report: 03/02/09 14:13:38 - 17/02/09 16:30:10.352\n"
+"Number of changes in configuration: 24\n"
+"Number of changes to accounts, groups, or roles: 0\n"
+"Number of logins: 9\n"
+"Number of failed logins: 15\n"
+"Number of authentications: 19\n"
+"Number of failed authentications: 578\n"
+"Number of users: 3\n"
+"Number of terminals: 15\n"
+"Number of host names: 4\n"
+"Number of executables: 20\n"
+"Number of files: 279\n"
+"Number of AVC's: 0\n"
+"Number of MAC events: 0\n"
+"Number of failed syscalls: 994\n"
+"Number of anomaly events: 0\n"
+"Number of responses to anomaly events: 0\n"
+"Number of crypto events: 0\n"
+"Number of keys: 2\n"
+"Number of process IDs: 1238\n"
+"Number of events: 5435"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:404
+#, no-c-format
+msgid ""
+"Run a summary report for failed events and check the <quote>files</quote> "
+"record for the number of failed file access events:"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:409
+#, no-c-format
+msgid ""
+"<command>aureport</command> <option>--failed</option>\n"
+"\n"
+"Failed Summary Report\n"
+"======================\n"
+"Range of time in logs: 03/02/09 14:13:38.225 - 17/02/09 16:30:10.352\n"
+"Selected time for report: 03/02/09 14:13:38 - 17/02/09 16:30:10.352\n"
+"Number of changes in configuration: 0\n"
+"Number of changes to accounts, groups, or roles: 0\n"
+"Number of logins: 0\n"
+"Number of failed logins: 15\n"
+"Number of authentications: 0\n"
+"Number of failed authentications: 578\n"
+"Number of users: 1\n"
+"Number of terminals: 7\n"
+"Number of host names: 4\n"
+"Number of executables: 12\n"
+"Number of files: 77\n"
+"Number of AVC's: 0\n"
+"Number of MAC events: 0\n"
+"Number of failed syscalls: 994\n"
+"Number of anomaly events: 0\n"
+"Number of responses to anomaly events: 0\n"
+"Number of crypto events: 0\n"
+"Number of keys: 2\n"
+"Number of process IDs: 713\n"
+"Number of events: 1589"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:412
+#, no-c-format
+msgid ""
+"To list the files that could not be accessed, run a summary report of failed "
+"file events:"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:416
+#, no-c-format
+msgid ""
+"<command>aureport</command> <option>-f -i --failed --summary</option>\n"
+"\n"
+"Failed File Summary Report\n"
+"===========================\n"
+"total  file                \n"
+"===========================\n"
+"80  /var                   \n"
+"80  spool                  \n"
+"80  cron                   \n"
+"80  lastrun                \n"
+"46  /usr/lib/locale/en_GB.UTF-8/LC_CTYPE\n"
+"45  /usr/lib/locale/locale-archive      \n"
+"38  /usr/lib/locale/en_GB.UTF-8/LC_IDENTIFICATION\n"
+"38  /usr/lib/locale/en_GB.UTF-8/LC_MEASUREMENT   \n"
+"38  /usr/lib/locale/en_GB.UTF-8/LC_TELEPHONE     \n"
+"38  /usr/lib/locale/en_GB.UTF-8/LC_ADDRESS       \n"
+"38  /usr/lib/locale/en_GB.UTF-8/LC_NAME          \n"
+"38  /usr/lib/locale/en_GB.UTF-8/LC_PAPER         \n"
+"38  /usr/lib/locale/en_GB.UTF-8/LC_MESSAGES      \n"
+"38  /usr/lib/locale/en_GB.UTF-8/LC_MONETARY      \n"
+"38  /usr/lib/locale/en_GB.UTF-8/LC_COLLATE       \n"
+"38  /usr/lib/locale/en_GB.UTF-8/LC_TIME          \n"
+"38  /usr/lib/locale/en_GB.UTF-8/LC_NUMERIC       \n"
+"8  /etc/magic.mgc                           \n"
+"..."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:417
+#, no-c-format
+msgid ""
+"To focus this summary report on a few files or directories of interest only, "
+"such as <filename>/etc/audit/auditd.conf</filename>, <filename>/etc/pam.d</"
+"filename>, and <filename>/etc/sysconfig</filename>, use a command similar to "
+"the following:"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:424
+#, no-c-format
+msgid ""
+"<command>aureport -f -i --failed --summary |grep -e \"/etc/audit/auditd.conf"
+"\" -e \"/etc/pam.d/\" -e \"/etc/sysconfig\"</command>\n"
+"\n"
+"1  /etc/sysconfig/displaymanager"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:427
+#, no-c-format
+msgid ""
+"From the summary report, then proceed to isolate these items of interest "
+"from the log and find out their event IDs for further analysis:"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:432
+#, no-c-format
+msgid ""
+"<command>aureport -f -i --failed |grep -e \"/etc/audit/auditd.conf\" -e \"/"
+"etc/pam.d/\" -e \"/etc/sysconfig\"</command>\n"
+"\n"
+"993. 17/02/09 16:47:34 /etc/sysconfig/displaymanager readlink no /bin/vim-"
+"normal root 7887\n"
+"994. 17/02/09 16:48:23 /etc/sysconfig/displaymanager getxattr no /bin/vim-"
+"normal root 7889"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:435
+#, no-c-format
+msgid "Use the event ID to get a detailed record for each item of interest:"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:438
+#, no-c-format
+msgid ""
+"<command>ausearch -a</command> <replaceable>7887</replaceable> -i\n"
+"----\n"
+"time-&gt;Tue Feb 17 16:48:23 2009\n"
+"type=PATH msg=audit(1234885703.090:7889): item=0 name=\"/etc/sysconfig/"
+"displaymanager\" inode=369282 dev=08:06 mode=0100644 ouid=0 ogid=0 "
+"rdev=00:00\n"
+"type=CWD msg=audit(1234885703.090:7889):  cwd=\"/root\"\n"
+"type=SYSCALL msg=audit(1234885703.090:7889): arch=c000003e syscall=191 "
+"success=no exit=-61 a0=7e1e20 a1=7f90e4cf9187 a2=7fffed5b57d0 a3=84 items=1 "
+"ppid=25548 pid=23045 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 "
+"fsgid=0 tty=pts2 ses=1166 comm=\"vim\" exe=\"/bin/vim-normal\" key=(null)"
+msgstr ""
+
+#. Tag: title
+#: audit_setup.xml:443
+#, no-c-format
+msgid "Focusing on a Certain Time Frame"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:444
+#, no-c-format
+msgid ""
+"If you are interested in events during a particular period of time, trim "
+"down the reports by using start and end dates and times with your "
+"<command>aureport</command> commands (<option>-ts</option> and <option>-te</"
+"option>). For more information, refer to <xref linkend=\"sec.audit.aureport."
+"gen\"/>."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:453
+#, no-c-format
+msgid ""
+"All steps (except for the last one) can be run automatically and would "
+"easily be scriptable and configured as cron jobs. Any of the <literal>--"
+"failed --summary</literal> reports could be transformed easily into a bar "
+"chart that plots files versus failed access attempts. For more information "
+"about visualizing audit report data, refer to <xref linkend=\"sec.audit.viz"
+"\"/>."
+msgstr ""
+
+#. Tag: title
+#: audit_setup.xml:463
+#, no-c-format
+msgid "Configuring Log Visualization"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:465
+#, no-c-format
+msgid ""
+"Using the scripts <command>mkbar</command> and <command>mkgraph</command> "
+"you can illustrate your audit statistics with various graphs and charts. As "
+"with any other <command>aureport</command> command, the plotting commands "
+"are scriptable and can easily be configured to run as cron jobs."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:472
+#, no-c-format
+msgid ""
+"<command>mkbar</command> and <command>mkgraph</command> were created by "
+"Steve Grubb at Red Hat. They are available from <link xlink:href=\"http://"
+"people.redhat.com/sgrubb/audit/visualize/\"></link>. Because the current "
+"version of audit in &productname; does not ship with these scripts, proceed "
+"as follows to make them available on your system:"
+msgstr ""
+
+#. Tag: title
+#: audit_setup.xml:482
+#, no-c-format
+msgid "Downloaded Content Is Dangerous"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:483
+#, no-c-format
+msgid ""
+"Use <command>mkbar</command> and <command>mkgraph</command> at your own "
+"risk. Any content downloaded from the Web is potentially dangerous to your "
+"system, even more so when run with &rootuser; privileges."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:492
+#, no-c-format
+msgid ""
+"Download the scripts to &rootuser;'s <filename>~/bin</filename> directory:"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:496
+#, no-c-format
+msgid ""
+"wget http://people.redhat.com/sgrubb/audit/visualize/mkbar -O ~/bin/mkbar\n"
+"wget http://people.redhat.com/sgrubb/audit/visualize/mkgraph -O ~/bin/mkgraph"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:499
+#, no-c-format
+msgid "Adjust the file permissions to read, write, and execute for &rootuser;:"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:503
+#, no-c-format
+msgid "chmod 744 ~/bin/mk{bar,graph}"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:507
+#, no-c-format
+msgid ""
+"To plot summary reports, such as the ones discussed in <xref linkend=\"sec."
+"audit.aurepo\"/>, use the script <command>mkbar</command>. Some example "
+"commands could look like the following:"
+msgstr ""
+
+#. Tag: term
+#: audit_setup.xml:516
+#, no-c-format
+msgid "Create a Summary of Events"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:518
+#, no-c-format
+msgid "aureport -e -i --summary | mkbar events"
+msgstr ""
+
+#. Tag: term
+#: audit_setup.xml:522
+#, no-c-format
+msgid "Create a Summary of File Events"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:524
+#, no-c-format
+msgid "aureport -f -i --summary | mkbar files"
+msgstr ""
+
+#. Tag: term
+#: audit_setup.xml:528
+#, no-c-format
+msgid "Create a Summary of Login Events"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:530
+#, no-c-format
+msgid "aureport -l -i --summary | mkbar login"
+msgstr ""
+
+#. Tag: term
+#: audit_setup.xml:534
+#, no-c-format
+msgid "Create a Summary of User Events"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:536
+#, no-c-format
+msgid "aureport -u -i --summary | mkbar users"
+msgstr ""
+
+#. Tag: term
+#: audit_setup.xml:540
+#, no-c-format
+msgid "Create a Summary of System Call Events"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:542
+#, no-c-format
+msgid "aureport -s -i --summary | mkbar syscalls"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:547
+#, no-c-format
+msgid ""
+"To create a summary chart of failed events of any of the above event types, "
+"add the <option>--failed</option> option to the respective "
+"<command>aureport</command> command. To cover a certain period of time only, "
+"use the <option>-ts</option> and <option>-te</option> options on aureport. "
+"Any of these commands can be tweaked further by narrowing down its scope "
+"using grep or egrep and regular expressions. See the comments in the "
+"<command>mkbar</command> script for an example. Any of the above commands "
+"produces a PNG file containing a bar chart of the requested data."
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:559
+#, no-c-format
+msgid ""
+"To illustrate the relationship between different kinds of audit objects, "
+"such as users and system calls, use the script <command>mkgraph</command>. "
+"Some example commands could look like the following:"
+msgstr ""
+
+#. Tag: term
+#: audit_setup.xml:568
+#, no-c-format
+msgid "Users versus Executables"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:570
+#, no-c-format
+msgid ""
+"LC_ALL=C aureport -u -i | awk '/^[0-9]/ { print $4\" \"$7 }' | sort | uniq | "
+"mkgraph users_vs_exec"
+msgstr ""
+
+#. Tag: term
+#: audit_setup.xml:574
+#, no-c-format
+msgid "Users versus Files"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:576
+#, no-c-format
+msgid ""
+"LC_ALL=C aureport -f -i | awk '/^[0-9]/ { print $8\" \"$4 }' | sort | uniq | "
+"mkgraph users_vs_files"
+msgstr ""
+
+#. Tag: term
+#: audit_setup.xml:580
+#, no-c-format
+msgid "System Calls versus Commands"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:582
+#, no-c-format
+msgid ""
+"LC_ALL=C aureport -s -i | awk '/^[0-9]/ { print $4\" \"$6 }' | sort | uniq | "
+"mkgraph syscall_vs_com"
+msgstr ""
+
+#. Tag: term
+#: audit_setup.xml:586
+#, no-c-format
+msgid "System Calls versus Files"
+msgstr ""
+
+#. Tag: screen
+#: audit_setup.xml:588
+#, no-c-format
+msgid ""
+"LC_ALL=C aureport -s -i | awk '/^[0-9]/ { print $5\" \"$4 }' | sort | uniq | "
+"mkgraph | syscall_vs_file"
+msgstr ""
+
+#. Tag: para
+#: audit_setup.xml:593
+#, no-c-format
+msgid ""
+"Graphs can also be combined to illustrate complex relationships. See the "
+"comments in the <command>mkgraph</command> script for further information "
+"and an example. The graphs produced by this script are created in PostScript "
+"format by default, but you can change the output format by changing the "
+"<envar>EXT</envar> variable in the script from <literal>ps</literal> to "
+"<literal>png</literal> or <literal>jpg</literal>."
+msgstr ""

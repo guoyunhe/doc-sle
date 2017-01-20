@@ -1,0 +1,781 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: journalctl.xml:9
+#, no-c-format
+msgid "<command>journalctl</command>: Query the &systemd; Journal"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: journalctl.xml:11
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:16
+#, no-c-format
+msgid ""
+"When &systemd; replaced traditional init scripts in &sle; 12 (see <xref "
+"linkend=\"cha.systemd\"/>), it introduced its own logging system called "
+"<emphasis>journal</emphasis>. There is no need to run a <systemitem>syslog</"
+"systemitem> based service anymore, as all system events are written in the "
+"journal."
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:23
+#, no-c-format
+msgid ""
+"The journal itself is a system service managed by &systemd;. Its full name "
+"is <literal>systemd-journald.service</literal>. It collects and stores "
+"logging data by maintaining structured indexed journals based on logging "
+"information received from the kernel, from user processes, from standard "
+"input and from system service errors. The <literal>systemd-journald</"
+"literal> service is on by default:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:31
+#, no-c-format
+msgid ""
+"# systemctl status systemd-journald\n"
+"systemd-journald.service - Journal Service\n"
+"   Loaded: loaded (/usr/lib/systemd/system/systemd-journald.service; "
+"static)\n"
+"   Active: active (running) since Mon 2014-05-26 08:36:59 EDT; 3 days ago\n"
+"     Docs: man:systemd-journald.service(8)\n"
+"           man:journald.conf(5)\n"
+" Main PID: 413 (systemd-journal)\n"
+"   Status: \"Processing requests...\"\n"
+"   CGroup: /system.slice/systemd-journald.service\n"
+"           └─413 /usr/lib/systemd/systemd-journald\n"
+"[...]"
+msgstr ""
+
+#. Tag: title
+#: journalctl.xml:33
+#, no-c-format
+msgid "Making the Journal Persistent"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:35
+#, no-c-format
+msgid ""
+"The journal stores log data in <filename>/run/log/journal/</filename> by "
+"default. Because the <filename>/run/</filename> directory is volatile by "
+"nature, log data is lost at reboot. To make the log data persistent, the "
+"directory <filename>/var/log/journal/</filename> with correct ownership and "
+"permissions must exist, where the systemd-journald service can store its "
+"data. &systemd; will create the directory for you&mdash;and switch to "
+"persistent logging&mdash;if you do the following:"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:47
+#, no-c-format
+msgid ""
+"As &rootuser;, open <filename>/etc/systemd/journald.conf</filename> for "
+"editing."
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:51
+#, no-c-format
+msgid "# vi /etc/systemd/journald.conf"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:54
+#, no-c-format
+msgid ""
+"Uncomment the line containing <literal>Storage=</literal> and change it to"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:57
+#, no-c-format
+msgid ""
+"[...]\n"
+"[Journal]\n"
+"Storage=persistent\n"
+"#Compress=yes\n"
+"[...]"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:60
+#, no-c-format
+msgid "Save the file and restart systemd-journald:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:63
+#, no-c-format
+msgid "systemctl restart systemd-journald"
+msgstr ""
+
+#. Tag: title
+#: journalctl.xml:68
+#, no-c-format
+msgid "<command>journalctl</command> Useful Switches"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:70
+#, no-c-format
+msgid ""
+"This section introduces several common useful options to enhance the default "
+"<command>journalctl</command> behavior. All switches are described in the "
+"<command>journalctl</command> manual page, <command>man 1 journalctl</"
+"command>."
+msgstr ""
+
+#. Tag: title
+#: journalctl.xml:78
+#, no-c-format
+msgid "Messages Related to a Specific Executable"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:79
+#, no-c-format
+msgid ""
+"To show all journal messages related to a specific executable, specify the "
+"full path to the executable:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:83
+#, no-c-format
+msgid "journalctl /usr/lib/systemd/systemd"
+msgstr ""
+
+#. Tag: term
+#: journalctl.xml:88
+#, no-c-format
+msgid "<term>-f</term>"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:90
+#, no-c-format
+msgid ""
+"Shows only the most recent journal messages, and prints new log entries as "
+"they are added to the journal."
+msgstr ""
+
+#. Tag: term
+#: journalctl.xml:97
+#, no-c-format
+msgid "<term>-e</term>"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:99
+#, no-c-format
+msgid ""
+"Prints the messages and jumps to the end of the journal, so that the latest "
+"entries are visible within the pager."
+msgstr ""
+
+#. Tag: term
+#: journalctl.xml:106
+#, no-c-format
+msgid "<term>-r</term>"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:108
+#, no-c-format
+msgid ""
+"Prints the messages of the journal in reverse order, so that the latest "
+"entries are listed first."
+msgstr ""
+
+#. Tag: term
+#: journalctl.xml:115
+#, no-c-format
+msgid "<term>-k</term>"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:117
+#, no-c-format
+msgid ""
+"Shows only kernel messages. This is equivalent to the field match "
+"<literal>_TRANSPORT=kernel</literal> (see <xref linkend=\"journalctl."
+"filtering.fields\"/>)."
+msgstr ""
+
+#. Tag: term
+#: journalctl.xml:125
+#, no-c-format
+msgid "<term>-u</term>"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:127
+#, no-c-format
+msgid ""
+"Shows only messages for the specified &systemd; unit. This is equivalent to "
+"the field match <literal>_SYSTEMD_UNIT=<replaceable>UNIT</replaceable></"
+"literal> (see <xref linkend=\"journalctl.filtering.fields\"/>)."
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:133
+#, no-c-format
+msgid ""
+"# journalctl -u apache2\n"
+"[...]\n"
+"Jun 03 10:07:11 pinkiepie systemd[1]: Starting The Apache Webserver...\n"
+"Jun 03 10:07:12 pinkiepie systemd[1]: Started The Apache Webserver."
+msgstr ""
+
+#. Tag: title
+#: journalctl.xml:141
+#, no-c-format
+msgid "Filtering the Journal Output"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:143
+#, no-c-format
+msgid ""
+"When called without switches, <command>journalctl</command> shows the full "
+"content of the journal, the oldest entries listed first. The output can be "
+"filtered by specific switches and fields."
+msgstr ""
+
+#. Tag: title
+#: journalctl.xml:150
+#, no-c-format
+msgid "Filtering Based on a Boot Number"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:151
+#, no-c-format
+msgid ""
+"<command>journalctl</command> can filter messages based on a specific system "
+"boot. To list all available boots, run"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:155
+#, no-c-format
+msgid ""
+"# journalctl --list-boots\n"
+"-1 097ed2cd99124a2391d2cffab1b566f0 Mon 2014-05-26 08:36:56 EDT—Fri "
+"2014-05-30 05:33:44 EDT\n"
+" 0 156019a44a774a0bb0148a92df4af81b Fri 2014-05-30 05:34:09 EDT—Fri "
+"2014-05-30 06:15:01 EDT"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:156
+#, no-c-format
+msgid ""
+"The first column lists the boot offset: <literal>0</literal> for the current "
+"boot, <literal>-1</literal> for the previous, <literal>-2</literal> for the "
+"prior to that, etc. The second column contains the boot ID, and then the "
+"limiting time stamps of the specific boot follow."
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:162
+#, no-c-format
+msgid "Show all messages from the current boot:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:165
+#, no-c-format
+msgid "# journalctl -b"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:166
+#, no-c-format
+msgid ""
+"If you need to see journal messages from the previous boot, add an offset "
+"parameter. The following example outputs the previous boot messages:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:170
+#, no-c-format
+msgid "# journalctl -b -1"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:171
+#, no-c-format
+msgid ""
+"Another way is to list boot messages based on the boot ID. For this purpose, "
+"use the _BOOT_ID field:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:175
+#, no-c-format
+msgid "# journalctl _BOOT_ID=156019a44a774a0bb0148a92df4af81b"
+msgstr ""
+
+#. Tag: title
+#: journalctl.xml:179
+#, no-c-format
+msgid "Filtering Based on Time Interval"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:180
+#, no-c-format
+msgid ""
+"You can filter the output of <command>journalctl</command> by specifying the "
+"starting and/or ending date. The date specification should be of the format "
+"\"2014-06-30 9:17:16\". If the time part is omitted, midnight is assumed. If "
+"seconds are omitted, \":00\" is assumed. If the date part is omitted, the "
+"current day is assumed. Instead of numeric expression, you can specify the "
+"keywords \"yesterday\", \"today\", or \"tomorrow\", which refer to midnight "
+"of the day before the current day, of the current day, or of the day after "
+"the current day. If you specify \"now\", it refers to the current time. You "
+"can also specify relative times prefixed with <literal>-</literal> or "
+"<literal>+</literal>, referring to times before or after the current time."
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:193
+#, no-c-format
+msgid "Show only new messages since now, and update the output continuously:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:196
+#, no-c-format
+msgid "# journalctl --since \"now\" -f"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:197
+#, no-c-format
+msgid "Show all messages since last midnight till 3:20am:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:200
+#, no-c-format
+msgid "# journalctl --since \"today\" --until \"3:20\""
+msgstr ""
+
+#. Tag: title
+#: journalctl.xml:204
+#, no-c-format
+msgid "Filtering Based on Fields"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:205
+#, no-c-format
+msgid ""
+"You can filter the output of the journal by specific fields. The syntax of a "
+"field to be matched is <literal>FIELD_NAME=MATCHED_VALUE</literal>, such as "
+"<literal>_SYSTEMD_UNIT=httpd.service</literal>. You can specify multiple "
+"matches in a single query to filter the output messages even more. See "
+"<command>man 7 systemd.journal-fields</command> for a list of default fields."
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:213
+#, no-c-format
+msgid "Show messages produced by a specific process ID:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:216
+#, no-c-format
+msgid "# journalctl _PID=1039"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:217
+#, no-c-format
+msgid "Show messages belonging to a specific user ID:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:220
+#, no-c-format
+msgid "# journalctl _UID=1000"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:221
+#, no-c-format
+msgid ""
+"Show messages from the kernel ring buffer (the same as <command>dmesg</"
+"command> produces):"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:225
+#, no-c-format
+msgid "# journalctl _TRANSPORT=kernel"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:226
+#, no-c-format
+msgid "Show messages from the service's standard or error output:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:229
+#, no-c-format
+msgid "# journalctl _TRANSPORT=stdout"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:230
+#, no-c-format
+msgid "Show messages produced by a specified service only:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:233
+#, no-c-format
+msgid "# journalctl _SYSTEMD_UNIT=avahi-daemon.service"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:234
+#, no-c-format
+msgid ""
+"If two different fields are specified, only entries that match both "
+"expressions at the same time are shown:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:238
+#, no-c-format
+msgid "# journalctl _SYSTEMD_UNIT=avahi-daemon.service _PID=1488"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:239
+#, no-c-format
+msgid ""
+"If two matches refer to the same field, all entries matching either "
+"expression are shown:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:243
+#, no-c-format
+msgid ""
+"# journalctl _SYSTEMD_UNIT=avahi-daemon.service _SYSTEMD_UNIT=dbus.service"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:244
+#, no-c-format
+msgid ""
+"You can use the '+' separator to combine two expressions in a logical 'OR'. "
+"The following example shows all messages from the Avahi service process with "
+"the process ID 1480 together with all messages from the D-Bus service:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:249
+#, no-c-format
+msgid ""
+"# journalctl _SYSTEMD_UNIT=avahi-daemon.service _PID=1480 + "
+"_SYSTEMD_UNIT=dbus.service"
+msgstr ""
+
+#. Tag: title
+#: journalctl.xml:253
+#, no-c-format
+msgid "Investigating &systemd; Errors"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:255
+#, no-c-format
+msgid ""
+"This section introduces a simple example to illustrate how to find and fix "
+"the error reported by &systemd; during <command>apache2</command> start-up."
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:262
+#, no-c-format
+msgid "Try to start the apache2 service:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:265
+#, no-c-format
+msgid ""
+"# systemctl start apache2\n"
+"Job for apache2.service failed. See 'systemctl status apache2' and "
+"'journalctl -xn' for details."
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:268
+#, no-c-format
+msgid "Let us see what the service's status says:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:271
+#, no-c-format
+msgid ""
+"# systemctl status apache2\n"
+"apache2.service - The Apache Webserver\n"
+"   Loaded: loaded (/usr/lib/systemd/system/apache2.service; disabled)\n"
+"   Active: failed (Result: exit-code) since Tue 2014-06-03 11:08:13 CEST; "
+"7min ago\n"
+"  Process: 11026 ExecStop=/usr/sbin/start_apache2 -D SYSTEMD -DFOREGROUND "
+"\\\n"
+"           -k graceful-stop (code=exited, status=1/FAILURE)"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:272
+#, no-c-format
+msgid "The ID of the process causing the failure is 11026."
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:277
+#, no-c-format
+msgid "Show the verbose version of messages related to process ID 11026:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:280
+#, no-c-format
+msgid ""
+"# journalctl -o verbose _PID=11026\n"
+"[...]\n"
+"MESSAGE=AH00526: Syntax error on line 6 of /etc/apache2/default-server."
+"conf:\n"
+"[...]\n"
+"MESSAGE=Invalid command 'DocumenttRoot', perhaps misspelled or defined by a "
+"module\n"
+"[...]"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:283
+#, no-c-format
+msgid ""
+"Fix the typo inside <filename>/etc/apache2/default-server.conf</filename>, "
+"start the apache2 service, and print its status:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:287
+#, no-c-format
+msgid ""
+"# systemctl start apache2 &amp;&amp; systemctl status apache2\n"
+"apache2.service - The Apache Webserver\n"
+"   Loaded: loaded (/usr/lib/systemd/system/apache2.service; disabled)\n"
+"   Active: active (running) since Tue 2014-06-03 11:26:24 CEST; 4ms ago\n"
+"  Process: 11026 ExecStop=/usr/sbin/start_apache2 -D SYSTEMD -DFOREGROUND\n"
+"           -k graceful-stop (code=exited, status=1/FAILURE)\n"
+" Main PID: 11263 (httpd2-prefork)\n"
+"   Status: \"Processing requests...\"\n"
+"   CGroup: /system.slice/apache2.service\n"
+"           ├─11263 /usr/sbin/httpd2-prefork -f /etc/apache2/httpd.conf -D "
+"[...]\n"
+"           ├─11280 /usr/sbin/httpd2-prefork -f /etc/apache2/httpd.conf -D "
+"[...]\n"
+"           ├─11281 /usr/sbin/httpd2-prefork -f /etc/apache2/httpd.conf -D "
+"[...]\n"
+"           ├─11282 /usr/sbin/httpd2-prefork -f /etc/apache2/httpd.conf -D "
+"[...]\n"
+"           ├─11283 /usr/sbin/httpd2-prefork -f /etc/apache2/httpd.conf -D "
+"[...]\n"
+"           └─11285 /usr/sbin/httpd2-prefork -f /etc/apache2/httpd.conf -D "
+"[...]"
+msgstr ""
+
+#. Tag: title
+#: journalctl.xml:292
+#, no-c-format
+msgid "Journald Configuration"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:294
+#, no-c-format
+msgid ""
+"The behavior of the systemd-journald service can be adjusted by modifying "
+"<filename>/etc/systemd/journald.conf</filename>. This section introduces "
+"only basic option settings. For a complete file description, see "
+"<command>man 5 journald.conf</command>. Note that you need to restart the "
+"journal for the changes to take effect with"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:302
+#, no-c-format
+msgid "# systemctl restart systemd-journald"
+msgstr ""
+
+#. Tag: title
+#: journalctl.xml:305
+#, no-c-format
+msgid "Changing the Journal Size Limit"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:306
+#, no-c-format
+msgid ""
+"If the journal log data is saved to a persistent location (see <xref linkend="
+"\"journalctl.persistent\"/>), it uses up to 10% of the file system the "
+"<filename>/var/log/journal</filename> resides on. For example, if <filename>/"
+"var/log/journal</filename> is located on a 30 GB <filename>/var</filename> "
+"partition, the journal may use up to 3 GB of the disk space. To change this "
+"limit, change (and uncomment) the <option>SystemMaxUse</option> option:"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:315
+#, no-c-format
+msgid "SystemMaxUse=50M"
+msgstr ""
+
+#. Tag: title
+#: journalctl.xml:319
+#, no-c-format
+msgid "Forwarding the Journal to <filename>/dev/ttyX</filename>"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:320
+#, no-c-format
+msgid ""
+"You can forward the journal to a terminal device to inform you about system "
+"messages on a preferred terminal screen, for example <literal>/dev/tty12</"
+"literal>. Change the following journald options to"
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:325
+#, no-c-format
+msgid ""
+"ForwardToConsole=yes\n"
+"TTYPath=/dev/tty12"
+msgstr ""
+
+#. Tag: title
+#: journalctl.xml:329
+#, no-c-format
+msgid "Forwarding the Journal to Syslog Facility"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:330
+#, no-c-format
+msgid ""
+"Journald is backward compatible with traditional syslog implementations such "
+"as <systemitem>rsyslog</systemitem>. Make sure the following is valid:"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:336
+#, no-c-format
+msgid "rsyslog is installed."
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:339
+#, no-c-format
+msgid ""
+"# rpm -q rsyslog\n"
+"rsyslog-7.4.8-2.16.x86_64"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:342
+#, no-c-format
+msgid "rsyslog service is enabled."
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:345
+#, no-c-format
+msgid ""
+"# systemctl is-enabled rsyslog\n"
+"enabled"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:348
+#, no-c-format
+msgid ""
+"Forwarding to syslog is enabled in <filename>/etc/systemd/journald.conf</"
+"filename>."
+msgstr ""
+
+#. Tag: screen
+#: journalctl.xml:352
+#, no-c-format
+msgid "ForwardToSyslog=yes"
+msgstr ""
+
+#. Tag: title
+#: journalctl.xml:358
+#, no-c-format
+msgid "Using &yast; to Filter the &systemd; Journal"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:360
+#, no-c-format
+msgid ""
+"For an easy way of filtering the systemd journal (without having to deal "
+"with the journalctl syntax), you can use the &yast; journal module. After "
+"installing it with <command>sudo zypper in yast2-journal</command>, start it "
+"from &yast; by selecting <menuchoice> <guimenu>System</guimenu> "
+"<guimenu>Systemd Journal</guimenu> </menuchoice>. Alternatively, start it "
+"from command line by entering <command>sudo yast2 journal</command>."
+msgstr ""
+
+#. Tag: title
+#: journalctl.xml:370
+#, no-c-format
+msgid "&yast; systemd Journal"
+msgstr ""
+
+#. Tag: para
+#: journalctl.xml:381
+#, no-c-format
+msgid ""
+"The module displays the log entries in a table. The search box on top allows "
+"you to search for entries that contain certain characters, similar to using "
+"<command>grep</command>. To filter the entries by date and time, unit, file, "
+"or priority, click <guimenu>Change filters</guimenu> and set the respective "
+"options."
+msgstr ""

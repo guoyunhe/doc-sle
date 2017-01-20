@@ -1,0 +1,276 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: vt_introduction.xml:10
+#, no-c-format
+msgid "Virtualization Technology"
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:17
+#, no-c-format
+msgid ""
+"Virtualization is a technology that provides a way for a machine (Host) to "
+"run another operating system (guest virtual machines) on top of the host "
+"operating system."
+msgstr ""
+
+#. Tag: title
+#: vt_introduction.xml:25
+#, no-c-format
+msgid "Overview"
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:29
+#, no-c-format
+msgid ""
+"&sle; includes the latest open source virtualization technologies, &xen; and "
+"&kvm;. With these Hypervisors, &sle; can be used to provision, de-provision, "
+"install, monitor and manage multiple virtual machines (&vmguest;s) on a "
+"single physical system (for more information see <xref linkend=\"gloss.vt."
+"hypervisor\"/>)."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:36
+#, no-c-format
+msgid ""
+"Out of the box, &sle; can create virtual machines running both modified, "
+"highly tuned, paravirtualized operating systems and fully virtualized "
+"unmodified operating systems. Full virtualization allows the guest OS to run "
+"unmodified and requires the presence of &x86-64; processors which supports "
+"either Intel* Virtualization Technology (Intel VT) or AMD* Virtualization "
+"(AMD-V))."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:45
+#, no-c-format
+msgid ""
+"The primary component of the operating system that enables virtualization is "
+"a Hypervisor (or virtual machine manager), which is a layer of software that "
+"runs directly on server hardware. It controls platform resources, sharing "
+"them among multiple &vmguest;s and their operating systems by presenting "
+"virtualized hardware interfaces to each &vmguest;."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:53
+#, no-c-format
+msgid ""
+"&sle; is an enterprise-class Linux server operating system that offers two "
+"types of Hypervisors: &xen; and &kvm;. Both Hypervisors support "
+"virtualization on 64-bit x86-based hardware architectures. Both &xen; and "
+"&kvm; support full virtualization mode. In addition, &xen; supports "
+"paravirtualized mode. &sle; with &xen; or &kvm; acts as a virtualization "
+"host server (<xref linkend=\"gloss.vt.vhs\"/>) that supports &vmguest;s with "
+"its own guest operating systems. The &suse; &vmguest; architecture consists "
+"of a Hypervisor and management components that constitute the VHS, which "
+"runs many application-hosting &vmguest;s."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:65
+#, no-c-format
+msgid ""
+"In &xen;, the management components run in a privileged &vmguest; often "
+"called <xref linkend=\"gloss.vt.dom0\"/>. In &kvm;, where the Linux kernel "
+"acts as the hypervisor, the management components run directly on the VHS."
+msgstr ""
+
+#. Tag: title
+#: vt_introduction.xml:72
+#, no-c-format
+msgid "Virtualization Capabilities"
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:74
+#, no-c-format
+msgid ""
+"Virtualization design provides many capabilities to your organization. "
+"Virtualization of operating systems is used in many computing areas:"
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:82
+#, no-c-format
+msgid ""
+"Server consolidation: Many servers can be replaced by one big physical "
+"server, so hardware is consolidated, and Guest Operating Systems are "
+"converted to virtual machine. It provides the ability to run legacy software "
+"on new hardware."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:90
+#, no-c-format
+msgid ""
+"Isolation: guest operating system can be fully isolated from the Host "
+"running it. So if the virtual machine is corrupted, the Host system is not "
+"harmed."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:97
+#, no-c-format
+msgid ""
+"Migration: A process to move a running virtual machine to another physical "
+"machine. Live migration is an extended feature that allows this move without "
+"disconnection of the client or the application."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:104
+#, no-c-format
+msgid ""
+"Disaster recovery: <xref linkend=\"gloss.vt.virtualized\"/> guests are less "
+"dependent on the hardware, and the Host server provides snapshot features to "
+"be able to restore a known running system without any corruption."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:112
+#, no-c-format
+msgid ""
+"Dynamic load balancing: A migration feature that brings a simple way to load-"
+"balance your service across your infrastructure."
+msgstr ""
+
+#. Tag: title
+#: vt_introduction.xml:120
+#, no-c-format
+msgid "Virtualization Benefits"
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:122
+#, no-c-format
+msgid ""
+"Virtualization brings a lot of advantages while providing the same service "
+"as a hardware server."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:127
+#, no-c-format
+msgid ""
+"First, it reduces the cost of your infrastructure. Servers are mainly used "
+"to provide a service to a customer, and a virtualized operating system can "
+"provide the same service, with:"
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:135
+#, no-c-format
+msgid ""
+"Less hardware: You can run several operating system on one host, so all "
+"hardware maintenance will be reduced."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:141
+#, no-c-format
+msgid ""
+"Less power/cooling: Less hardware means you do not need to invest more in "
+"electric power, backup power, and cooling if you need more service."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:147
+#, no-c-format
+msgid ""
+"Save space: Your data center space will be saved because you do not need "
+"more hardware servers (less servers than service running)."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:153
+#, no-c-format
+msgid ""
+"Less management: Using a &vmguest; simplifies the administration of your "
+"infrastructure."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:159
+#, no-c-format
+msgid ""
+"Agility and productivity: Virtualization provides <emphasis>migration</"
+"emphasis> capabilities, <emphasis>live migration</emphasis> and "
+"<emphasis>snapshots</emphasis>. These features reduce downtime, and bring an "
+"easy way to move your service from one place to another without any service "
+"interruption."
+msgstr ""
+
+#. Tag: title
+#: vt_introduction.xml:170
+#, no-c-format
+msgid "Understanding Virtualization Modes"
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:172
+#, no-c-format
+msgid ""
+"Guest operating systems are hosted on virtual machines in either full "
+"virtualization (FV) mode or paravirtual (PV) mode. Each virtualization mode "
+"has advantages and disadvantages."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:180
+#, no-c-format
+msgid ""
+"Full virtualization mode lets virtual machines run unmodified operating "
+"systems, such as Windows* Server 2003. However, it also requires the "
+"&vmhost; to support <xref linkend=\"gloss.vt.hwassisted\"/> virtualization "
+"technology, such as AMD* Virtualization or Intel* Virtualization Technology."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:187
+#, no-c-format
+msgid ""
+"Some guest operating systems hosted in full virtualization mode can be "
+"configured to run the Novell* Virtual Machine Drivers instead of drivers "
+"originating from the operating system. Running virtual machine drivers "
+"improves performance dramatically on guest operating systems, such as "
+"Windows Server 2003. For more information, see <xref linkend=\"app.vmdp."
+"driver\" xrefstyle=\"ChapTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:197
+#, no-c-format
+msgid ""
+"Paravirtual mode does not require the host computer to support <xref linkend="
+"\"gloss.vt.hwassisted\"/> virtualization technology, but does require the "
+"guest operating system to be modified for the virtualization environment. "
+"Typically, operating systems running in paravirtual mode enjoy better "
+"performance than those requiring full virtualization mode."
+msgstr ""
+
+#. Tag: para
+#: vt_introduction.xml:205
+#, no-c-format
+msgid ""
+"Operating systems currently modified to run in paravirtual mode are called "
+"<emphasis>paravirtualized operating systems</emphasis> and include "
+"&productname; and NetWare® 6.5 SP8."
+msgstr ""

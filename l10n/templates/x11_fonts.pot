@@ -1,0 +1,1389 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: x11_fonts.xml:9
+#, no-c-format
+msgid "Installing and Configuring Fonts"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: x11_fonts.xml:12
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: x11_fonts.xml:18 x11_fonts.xml:26 x11_fonts.xml:30 x11_fonts.xml:34
+#: x11_fonts.xml:239
+#, no-c-format
+msgid "<primary>X</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: x11_fonts.xml:20
+#, no-c-format
+msgid "TrueType fonts"
+msgstr ""
+
+#. Tag: primary
+#: x11_fonts.xml:22 x11_fonts.xml:241
+#, no-c-format
+msgid "<primary>fonts</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: x11_fonts.xml:24
+#, no-c-format
+msgid "TrueType"
+msgstr ""
+
+#. Tag: secondary
+#: x11_fonts.xml:28
+#, no-c-format
+msgid "<secondary>fonts</secondary>"
+msgstr ""
+
+#. Tag: secondary
+#: x11_fonts.xml:32
+#, no-c-format
+msgid "<secondary>xft</secondary>"
+msgstr ""
+
+#. Tag: secondary
+#: x11_fonts.xml:36
+#, no-c-format
+msgid "character sets"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:38
+#, no-c-format
+msgid "Fonts in Linux can be categorized into two parts:"
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:44
+#, no-c-format
+msgid "Outline or Vector Fonts"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:46
+#, no-c-format
+msgid ""
+"Contains a mathematical description as drawing instructions about the shape "
+"of a glyph. As such, each glyph can be scaled to arbitrary sizes without "
+"loss of quality. Before such a font (or glyph) can be used, the mathematical "
+"descriptions need to be transformed into a raster (grid). This process is "
+"called <emphasis>font rasterization</emphasis>. <emphasis>Font hinting</"
+"emphasis> (embedded inside the font) improves and optimizes the rendering "
+"result for a particular size. Rasterization and hinting is done with the "
+"FreeType library."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:56
+#, no-c-format
+msgid ""
+"Common formats under Linux are PostScript Type 1 and Type 2, TrueType, and "
+"OpenType."
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:63
+#, no-c-format
+msgid "Bitmap or Raster Fonts"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:65
+#, no-c-format
+msgid ""
+"Consists of an array of pixels designed for a specific font size. Bitmap "
+"fonts are extremely fast and simple to render. However, compared to vector "
+"fonts, bitmap fonts cannot be scaled without losing quality. As such, these "
+"fonts are usually distributed in different sizes. These days, bitmap fonts "
+"are still used in the Linux console and sometimes in terminals."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:72
+#, no-c-format
+msgid ""
+"Under Linux, Portable Compiled Format (PCF) or Glyph Bitmap Distribution "
+"Format (BDF) are the most common formats."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:80
+#, no-c-format
+msgid "The appearance of these fonts can be influenced by two main aspects:"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:86
+#, no-c-format
+msgid "choosing a suitable font family,"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:91
+#, no-c-format
+msgid ""
+"rendering the font with an algorithm that achieves results comfortable for "
+"the receiver's eyes."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:98
+#, no-c-format
+msgid ""
+"The last point is only relevant to vector fonts. Although the above two "
+"points are highly subjective, some defaults need to be created."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:103
+#, no-c-format
+msgid ""
+"Linux font rendering systems consist of several libraries with different "
+"relations. The basic font rendering library is <link xlink:href=\"http://www."
+"freetype.org/\">FreeType</link>, which converts font glyphs of supported "
+"formats into optimized bitmap glyphs. The rendering process is controlled by "
+"an algorithm and its parameters (which may be subject to patent issues)."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:112
+#, no-c-format
+msgid ""
+"Every program or library which uses FreeType should consult the <link xlink:"
+"href=\"http://www.fontconfig.org/\">Fontconfig</link> library. This library "
+"gathers font configuration from users and from the system. When a user "
+"amends his Fontconfig setting, this change will result in Fontconfig-aware "
+"applications."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:120
+#, no-c-format
+msgid ""
+"More sophisticated OpenType shaping needed for scripts such as Arabic, Han "
+"or Phags-Pa and other higher level text processing lies on the shoulders of "
+"<link xlink:href=\"http://www.harfbuzz.org/\">Harfbuzz</link> or <link xlink:"
+"href=\"http://www.pango.org/\">Pango</link>, to mention some examples."
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:129
+#, no-c-format
+msgid "Showing Installed Fonts"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:130
+#, no-c-format
+msgid ""
+"To get an overview about which fonts are installed on your system, ask the "
+"commands <command>rpm</command> or <command>fc-list</command>. Both will "
+"give you a good answer, but may return a different list depending on system "
+"and user configuration:"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:141
+#, no-c-format
+msgid ""
+"Invoke <command>rpm</command> to see which software packages containing "
+"fonts are installed on your system:"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:145
+#, no-c-format
+msgid "rpm -qa '*fonts*'"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:146
+#, no-c-format
+msgid ""
+"Every font package should satisfy this expression. However, the command may "
+"return some false positives like <literal>fonts-config</literal> (which is "
+"neither a font nor does it contain fonts)."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:157
+#, no-c-format
+msgid ""
+"Invoke <command>fc-list</command> to get an overview about what font "
+"families can be accessed, whether they are installed on the system or in "
+"your home:"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:162
+#, no-c-format
+msgid "fc-list ':' family"
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:164
+#, no-c-format
+msgid "Command <command>fc-list</command>"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:165
+#, no-c-format
+msgid ""
+"The command <command>fc-list</command> is a wrapper to the Fontconfig "
+"library. It is possible to query a lot of interesting information from "
+"Fontconfig&mdash;or, to be more precise, from its cache. See <command>man 1 "
+"fc-list</command> for more details."
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:178
+#, no-c-format
+msgid "Viewing Fonts"
+msgstr ""
+
+#. Tag: primary
+#: x11_fonts.xml:179 x11_fonts.xml:288 x11_fonts.xml:307
+#, no-c-format
+msgid "font"
+msgstr ""
+
+#. Tag: secondary
+#: x11_fonts.xml:180
+#, no-c-format
+msgid "information, see fontinfo.opensuse.org"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:181
+#, no-c-format
+msgid ""
+"If you want to know what an installed font family looks like, either use the "
+"command <command>ftview</command> (package <systemitem>ft2demos</"
+"systemitem>) or visit <link xlink:href=\"http://fontinfo.opensuse.org/\"></"
+"link>. For example, to display the FreeMono font in 14 point, use "
+"<command>ftview</command> like this:"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:188
+#, no-c-format
+msgid "ftview 14 /usr/share/fonts/truetype/FreeMono.ttf"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:189
+#, no-c-format
+msgid ""
+"If you need further information, go to <link xlink:href=\"http://fontinfo."
+"opensuse.org/\"></link> to find out which styles (regular, bold, italic, "
+"etc.) and languages are supported."
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:197
+#, no-c-format
+msgid "Querying Fonts"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:198
+#, no-c-format
+msgid ""
+"To query which font is used when a pattern is given, use the <command>fc-"
+"match</command> command."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:202
+#, no-c-format
+msgid ""
+"For example, if your pattern contains an already installed font, <command>fc-"
+"match</command> returns the file name, font family, and the style:"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:207
+#, no-c-format
+msgid ""
+"&prompt.user;fc-match 'Liberation Serif'\n"
+"LiberationSerif-Regular.ttf: \"Liberation Serif\" \"Regular\""
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:208
+#, no-c-format
+msgid ""
+"If the desired font does not exist on your system, Fontconfig's matching "
+"rules take place and try to find the most similar fonts available. This "
+"means, your request is substituted:"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:213
+#, no-c-format
+msgid ""
+"&prompt.user;fc-match 'Foo Family'\n"
+"DejaVuSans.ttf: \"DejaVu Sans\" \"Book\""
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:214
+#, no-c-format
+msgid ""
+"Fontconfig supports <emphasis>aliases</emphasis>: a name is substituted with "
+"another family name. A typical example are the generic names such as "
+"<quote>sans-serif</quote>, <quote>serif</quote>, and <quote>monospace</"
+"quote>. These alias names can be substituted by real family names or even a "
+"preference list of family names:"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:221
+#, no-c-format
+msgid ""
+"&prompt.user;for font in serif sans mono; do fc-match \"$font\" ; done\n"
+"DejaVuSerif.ttf: \"DejaVu Serif\" \"Book\"\n"
+"DejaVuSans.ttf: \"DejaVu Sans\" \"Book\"\n"
+"DejaVuSansMono.ttf: \"DejaVu Sans Mono\" \"Book\""
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:222
+#, no-c-format
+msgid ""
+"The result may vary on your system, depending on which fonts are currently "
+"installed."
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:227
+#, no-c-format
+msgid "Similarity Rules according to Fontconfig"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:228
+#, no-c-format
+msgid ""
+"Fontconfig <emphasis>always</emphasis> returns a real family (if at least "
+"one is installed) according to the given request, as similar as possible. "
+"<quote>Similarity</quote> depends on Fontconfig's internal metrics and on "
+"the user's or administrator's Fontconfig settings."
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:238
+#, no-c-format
+msgid "Installing Fonts"
+msgstr ""
+
+#. Tag: secondary
+#: x11_fonts.xml:240
+#, no-c-format
+msgid "install fonts"
+msgstr ""
+
+#. Tag: secondary
+#: x11_fonts.xml:242
+#, no-c-format
+msgid "install"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:243
+#, no-c-format
+msgid "To install a new font there are these major methods:"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:248
+#, no-c-format
+msgid ""
+"Manually install the font files such as <filename>*.ttf</filename> or "
+"<filename>*.otf</filename> to a known font directory. If it needs to be "
+"system-wide, use the standard directory <filename>/usr/share/fonts</"
+"filename>. For installation in your home directory, use <filename>~/.config/"
+"fonts</filename>."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:255
+#, no-c-format
+msgid ""
+"If you want to deviate from the standard directories, Fontconfig allows you "
+"to choose another one. Let Fontconfig know by using the <literal>&lt;dir&gt;"
+"</literal> element, see <xref linkend=\"sec.x11.fontsys.config.fontconfig\"/"
+"> for details."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:263
+#, no-c-format
+msgid ""
+"Install fonts using <command>zypper</command>. Lots of fonts are already "
+"available as a package, be it on your &suse; distribution or in the <link "
+"xlink:href=\"http://download.opensuse.org/repositories/M17N:/fonts/\">M17N:"
+"fonts</link> repository. Add the repository to your list using the following "
+"command. For example, to add a repository for &slea; 12:"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:270
+#, no-c-format
+msgid ""
+"sudo zypper ar\n"
+"     http://download.opensuse.org/repositories/M17N:/fonts/SLE_12/M17N:fonts."
+"repo"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:271
+#, no-c-format
+msgid ""
+"To search for your <replaceable>FONT_FAMILY_NAME</replaceable> use this "
+"command:"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:275
+#, no-c-format
+msgid "sudo zypper se '<replaceable>FONT_FAMILY_NAME</replaceable>*fonts'"
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:287
+#, no-c-format
+msgid "Configuring the Appearance of Fonts"
+msgstr ""
+
+#. Tag: secondary
+#: x11_fonts.xml:289
+#, no-c-format
+msgid "configuration"
+msgstr ""
+
+#. Tag: primary
+#: x11_fonts.xml:290
+#, no-c-format
+msgid "font family"
+msgstr ""
+
+#. Tag: secondary
+#: x11_fonts.xml:291
+#, no-c-format
+msgid "substitutions"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:292
+#, no-c-format
+msgid ""
+"Depending on the rendering medium, and font size, the result may be "
+"unsatisfactory. For example, an average monitor these days has a resolution "
+"of 100dpi which makes pixels too big and glyphs look clunky."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:297
+#, no-c-format
+msgid ""
+"There are several algorithms available to deal with low resolutions, such as "
+"anti-aliasing (grayscale smoothing), hinting (fitting to the grid), or "
+"subpixel rendering (tripling resolution in one direction). These algorithms "
+"can also differ from one font format to another."
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:304
+#, no-c-format
+msgid "Patent Issues with Subpixel Rendering"
+msgstr ""
+
+#. Tag: secondary
+#: x11_fonts.xml:308
+#, no-c-format
+msgid "subpixel patent"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:309
+#, no-c-format
+msgid ""
+"Subpixel rendering is not used in &suse; distributions. Although FreeType2 "
+"has support for this algorithm, it is covered by several patents expiring at "
+"the end of the year 2019. Therefore, setting subpixel rendering options in "
+"Fontconfig has no effect unless the system has a FreeType2 library with "
+"subpixel rendering compiled in."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:316
+#, no-c-format
+msgid ""
+"Via Fontconfig, it is possible to select a rendering algorithms for every "
+"font individually or for a set of fonts."
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:321
+#, no-c-format
+msgid "Configuring Fonts via <literal>sysconfig</literal>"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:322
+#, no-c-format
+msgid ""
+"&productname; comes with a <literal>sysconfig</literal> layer above "
+"Fontconfig. This is a good starting point for experimenting with font "
+"configuration. To change the default settings, edit the configuration file "
+"<filename>/etc/sysconfig/fonts-config</filename>. (or use the &yast; "
+"sysconfig module). After you have edited the file, run <command>fonts-"
+"config</command>:"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:330
+#, no-c-format
+msgid "sudo /usr/sbin/fonts-config"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:331
+#, no-c-format
+msgid ""
+"Restart the application to make the effect visible. Keep in mind the "
+"following issues:"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:337
+#, no-c-format
+msgid ""
+"A few applications do need not to be restarted. For example, Firefox re-"
+"reads Fontconfig configuration from time to time. Newly created or reloaded "
+"tabs get new font configurations later."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:344
+#, no-c-format
+msgid ""
+"The <command>fonts-config</command> script is called automatically after "
+"every package installation or removal (if not, it is a bug of the font "
+"software package)."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:351
+#, no-c-format
+msgid ""
+"Every sysconfig variable can be temporarily overridden by the <command>fonts-"
+"config</command> command line option. See <command>fonts-config --help</"
+"command> for details."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:358
+#, no-c-format
+msgid ""
+"There are several sysconfig variables which can be altered. See <command>man "
+"1 fonts-config</command> or the help page of the &yast; sysconfig module. "
+"The following variables are examples:"
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:365
+#, no-c-format
+msgid "Usage of Rendering Algorithms"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:367
+#, no-c-format
+msgid ""
+"Consider <varname>FORCE_HINTSTYLE</varname>, <varname>FORCE_AUTOHINT</"
+"varname>, <varname>FORCE_BW</varname>, <varname>FORCE_BW_MONOSPACE</"
+"varname>, <varname>USE_EMBEDDED_BITMAPS</varname> and "
+"<varname>EMBEDDED_BITMAP_LANGAGES</varname>"
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:377
+#, no-c-format
+msgid "Preference Lists of Generic Aliases"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:379
+#, no-c-format
+msgid ""
+"Use <varname>PREFER_SANS_FAMILIES</varname>, <varname>PREFER_SERIF_FAMILIES</"
+"varname>, <varname>PREFER_MONO_FAMILIES</varname> and "
+"<varname>SEARCH_METRIC_COMPATIBLE</varname>"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:388
+#, no-c-format
+msgid ""
+"The following list provides some configuration examples, sorted from the "
+"<quote>most readable</quote> fonts (more contrast) to <quote>most beautiful</"
+"quote> (more smoothed)."
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:395
+#, no-c-format
+msgid "Bitmap Fonts"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:397
+#, no-c-format
+msgid ""
+"Prefer bitmap fonts via the <varname>PREFER_*_FAMILIES</varname> variables. "
+"Follow the example in the help section for these variables. Be aware that "
+"these fonts are rendered black and white, not smoothed and that bitmap fonts "
+"are available in several sizes only. Consider using"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:403 x11_fonts.xml:453 x11_fonts.xml:458
+#, no-c-format
+msgid "SEARCH_METRIC_COMPATIBLE=\"no\""
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:404
+#, no-c-format
+msgid "to disable metric compatibility-driven family name substitutions."
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:410
+#, no-c-format
+msgid "Scalable Fonts Rendered Black and White"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:412
+#, no-c-format
+msgid ""
+"Scalable fonts rendered without antialiasing can result in a similar outcome "
+"to bitmap fonts, while maintaining font scalability. Use well hinted fonts "
+"like the Liberation families. Unfortunately, there is a lack of well hinted "
+"fonts though. Set the following variable to force this method:"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:419
+#, no-c-format
+msgid "FORCE_BW=\"yes\""
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:423
+#, no-c-format
+msgid "Monospaced Fonts Rendered Black and White"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:425
+#, no-c-format
+msgid ""
+"Render monospaced fonts without antialiasing only, otherwise use default "
+"settings:"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:429
+#, no-c-format
+msgid "FORCE_BW_MONOSPACE=\"yes\""
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:433
+#, no-c-format
+msgid "Default Settings"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:435
+#, no-c-format
+msgid ""
+"All fonts are rendered with antialiasing. Well hinted fonts will be rendered "
+"with the <emphasis>byte code interpreter</emphasis> (BCI) and the rest with "
+"autohinter (<literal>hintstyle=hintslight</literal>). Leave all relevant "
+"sysconfig variables to the default setting."
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:444
+#, no-c-format
+msgid "CFF Fonts"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:446
+#, no-c-format
+msgid ""
+"Use fonts in CFF format. They can be considered also more readable than the "
+"default TrueType fonts given the current improvements in FreeType2. Try them "
+"out by following the example of <literal>PREFER_*_FAMILIES</literal>. "
+"Possibly make them more dark and bold with:"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:454
+#, no-c-format
+msgid ""
+"as they are rendered by <literal>hintstyle=hintslight</literal> by default. "
+"Also consider using:"
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:462
+#, no-c-format
+msgid "Autohinter Exclusively"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:464
+#, no-c-format
+msgid ""
+"Even for a well hinted font, use FreeType2's autohinter. That can lead to "
+"thicker, sometimes fuzzier letter shapes with lower contrast. Set the "
+"following variable to activate this:"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:469
+#, no-c-format
+msgid "FORCE_AUTOHINTER=\"yes\""
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:470
+#, no-c-format
+msgid "Use <literal>FORCE_HINTSTYLE</literal> to control the level of hinting."
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:478
+#, no-c-format
+msgid "Diving into Fontconfig XML"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:479
+#, no-c-format
+msgid ""
+"Fontconfig's configuration format is the <emphasis>eXtensible Markup "
+"Language</emphasis> (XML). These few examples are not a complete reference, "
+"but a brief overview. Details and other inspiration can be found in "
+"<command>man 5 fonts-conf</command> or in <filename>/etc/fonts/conf.d/</"
+"filename>."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:486
+#, no-c-format
+msgid ""
+"The central Fontconfig configuration file is <filename>/etc/fonts/fonts."
+"conf</filename>, which&mdash;along other work&mdash;includes the whole "
+"<filename>/etc/fonts/conf.d/</filename> directory. To customize Fontconfig, "
+"there are two places where you can insert your changes:"
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:494
+#, no-c-format
+msgid "Fontconfig Configuration Files"
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:497
+#, no-c-format
+msgid "System-wide changes"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:498
+#, no-c-format
+msgid ""
+"Edit the file <filename>/etc/fonts/local.conf</filename> (by default, it "
+"contains an empty <literal>fontconfig</literal> element)."
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:506
+#, no-c-format
+msgid "User-specific changes"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:507
+#, no-c-format
+msgid ""
+"Edit the file <filename>~/.config/fontconfig/fonts.conf</filename>. Place "
+"Fontconfig configuration files in the <filename>~/.config/fontconfig/conf.d/"
+"</filename> directory."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:515
+#, no-c-format
+msgid "User-specific changes overwrite any system-wide settings."
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:519
+#, no-c-format
+msgid "Deprecated User Configuration File"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:520
+#, no-c-format
+msgid ""
+"The file <filename>~/.fonts.conf</filename> is marked as deprecated and "
+"should not be used anymore. Use <filename>~/.config/fontconfig/fonts.conf</"
+"filename> instead."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:526
+#, no-c-format
+msgid ""
+"Every configuration file needs to have a <literal>fontconfig</literal> "
+"element. As such, the minimal file looks like this:"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:530
+#, no-c-format
+msgid ""
+"&lt;?xml version=\"1.0\"?&gt;\n"
+"   &lt;!DOCTYPE fontconfig SYSTEM \"fonts.dtd\"&gt;\n"
+"   &lt;fontconfig&gt;\n"
+"   &lt;!-- Insert your changes here --&gt;\n"
+"   &lt;/fontconfig&gt;"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:531
+#, no-c-format
+msgid ""
+"If the default directories are not enough, insert the <literal>dir</literal> "
+"element with the respective directory:"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:535
+#, no-c-format
+msgid "&lt;dir&gt;/usr/share/fonts2&lt;/dir&gt;"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:536
+#, no-c-format
+msgid "Fontconfig searches <emphasis>recursively</emphasis> for fonts."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:539
+#, no-c-format
+msgid ""
+"Font-rendering algorithms can be chosen with following Fontconfig snippet "
+"(see <xref linkend=\"ex.x11.fontsys.fontconfig.rendering_algorithms\"/>):"
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:544
+#, no-c-format
+msgid "Specifying Rendering Algorithms"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:545
+#, no-c-format
+msgid ""
+"&lt;match target=\"font\"&gt;\n"
+" &lt;test name=\"family\"&gt;\n"
+"  &lt;string&gt;<replaceable>FAMILY_NAME</replaceable>&lt;/string&gt;\n"
+" &lt;/test&gt;\n"
+" &lt;edit name=\"antialias\" mode=\"assign\"&gt;\n"
+"  &lt;bool&gt;true&lt;/bool&gt;\n"
+" &lt;/edit&gt;\n"
+" &lt;edit name=\"hinting\" mode=\"assign\"&gt;\n"
+"  &lt;bool&gt;true&lt;/bool&gt;\n"
+" &lt;/edit&gt;\n"
+" &lt;edit name=\"autohint\" mode=\"assign\"&gt;\n"
+"  &lt;bool&gt;false&lt;/bool&gt;\n"
+" &lt;/edit&gt;\n"
+" &lt;edit name=\"hintstyle\" mode=\"assign\"&gt;\n"
+"  &lt;const&gt;hintfull&lt;/const&gt;\n"
+" &lt;/edit&gt;\n"
+"&lt;/match&gt;"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:547
+#, no-c-format
+msgid ""
+"Various properties of fonts can be tested. For example, the <literal>&lt;"
+"test&gt;</literal> element can test for the font family (as shown in the "
+"example), size interval, spacing, font format, and others. When abandoning "
+"<literal>&lt;test&gt;</literal> completely, all <literal>&lt;edit&gt;</"
+"literal> elements will be applied to every font (global change)."
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:556 x11_fonts.xml:841
+#, no-c-format
+msgid "Aliases and Family Name Substitutions"
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:559
+#, no-c-format
+msgid "Rule 1"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:561
+#, no-c-format
+msgid ""
+"&lt;alias&gt;\n"
+" &lt;family&gt;Alegreya SC&lt;/family&gt;\n"
+" &lt;default&gt;\n"
+"  &lt;family&gt;serif&lt;/family&gt;\n"
+" &lt;/default&gt;\n"
+"&lt;/alias&gt;"
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:565
+#, no-c-format
+msgid "Rule 2"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:567
+#, no-c-format
+msgid ""
+"&lt;alias&gt;\n"
+" &lt;family&gt;serif&lt;/family&gt;\n"
+" &lt;prefer&gt;\n"
+"  &lt;family&gt;Droid Serif&lt;/family&gt;\n"
+" &lt;/prefer&gt;\n"
+"&lt;/alias&gt;"
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:571
+#, no-c-format
+msgid "Rule 3"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:573
+#, no-c-format
+msgid ""
+"&lt;alias&gt;\n"
+" &lt;family&gt;serif&lt;/family&gt;\n"
+" &lt;accept&gt;\n"
+"  &lt;family&gt;STIXGeneral&lt;/family&gt;\n"
+" &lt;/accept&gt;\n"
+"&lt;/alias&gt;"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:578
+#, no-c-format
+msgid ""
+"The rules from <xref linkend=\"ex.x11.fontsys.fontconfig.aliases1\"/> create "
+"a <emphasis>prioritized family list</emphasis> (PFL). Depending on the "
+"element, different actions are performed:"
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:585
+#, no-c-format
+msgid "<literal>&lt;default&gt;</literal> from"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:589
+#, no-c-format
+msgid ""
+"This rule adds a <literal>serif</literal> family name <emphasis>at the end</"
+"emphasis> of the PFL."
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:596
+#, no-c-format
+msgid "<literal>&lt;prefer&gt;</literal> from"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:600
+#, no-c-format
+msgid ""
+"This rule adds <quote>Droid Serif</quote> <emphasis>just before</emphasis> "
+"the first occurrence of <literal>serif</literal> in the PFL, whenever "
+"<literal>Alegreya SC</literal> is present in PFL."
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:608
+#, no-c-format
+msgid "<literal>&lt;accept&gt;</literal> from"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:611
+#, no-c-format
+msgid ""
+"This rule adds a <quote>STIXGeneral</quote> family name <emphasis>just "
+"after</emphasis> the first occurrence of the <literal>serif</literal> family "
+"name in the PFL."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:619
+#, no-c-format
+msgid ""
+"Putting this together, when snippets occur in the order <xref linkend=\"vle."
+"x11.fontsys.example.alias.default\"/> - <xref linkend=\"vle.x11.fontsys."
+"example.alias.prefer\"/> - <xref linkend=\"vle.x11.fontsys.example.alias."
+"accept\"/> and the user requests <quote>Alegreya SC</quote>, then the PFL is "
+"created as depicted in <xref linkend=\"tab.x11.fontsys.example.alias\"/>."
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:628
+#, no-c-format
+msgid "Generating PFL from Fontconfig rules"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:635 x11_fonts.xml:718 x11_fonts.xml:883
+#, no-c-format
+msgid "Order"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:640 x11_fonts.xml:723 x11_fonts.xml:888
+#, no-c-format
+msgid "Current PFL"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:649 x11_fonts.xml:737 x11_fonts.xml:897
+#, no-c-format
+msgid "Request"
+msgstr ""
+
+#. Tag: literal
+#: x11_fonts.xml:655 x11_fonts.xml:743 x11_fonts.xml:760 x11_fonts.xml:777
+#: x11_fonts.xml:903
+#, no-c-format
+msgid "Alegreya SC"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:666 x11_fonts.xml:793 x11_fonts.xml:914
+#, no-c-format
+msgid "<literal>Alegreya SC</literal>, <literal>serif</literal>"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:678 x11_fonts.xml:926
+#, no-c-format
+msgid ""
+"<literal>Alegreya SC</literal>, <literal>Droid Serif</literal>, "
+"<literal>serif</literal>"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:691 x11_fonts.xml:939
+#, no-c-format
+msgid ""
+"<literal>Alegreya SC</literal>, <literal>Droid Serif</literal>, "
+"<literal>serif</literal>, <literal>STIXGeneral</literal>"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:700
+#, no-c-format
+msgid ""
+"In Fontconfig's metrics, the family name has the highest priority over other "
+"patterns, like style, size, etc. Fontconfig checks which family is currently "
+"installed on the system. If <quote>Alegreya SC</quote> is installed, then "
+"Fontconfig returns it. If not, it asks for <quote>Droid Serif</quote>, etc."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:707
+#, no-c-format
+msgid ""
+"Be careful. When the order of Fontconfig snippets is changed, Fontconfig can "
+"return different results, as depicted in <xref linkend=\"tab.x11.fontsys."
+"example.alias2\"/>."
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:713
+#, no-c-format
+msgid "Results from Generating PFL from Fontconfig Rules with Changed Order"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:728
+#, no-c-format
+msgid "Note"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:747
+#, no-c-format
+msgid "Same request performed."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:764 x11_fonts.xml:781
+#, no-c-format
+msgid "<literal>serif</literal> not in FPL, nothing is substituted"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:798
+#, no-c-format
+msgid ""
+"<literal>Alegreya SC</literal> present in FPL, substitution is performed"
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:808
+#, no-c-format
+msgid "Implication."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:809
+#, no-c-format
+msgid ""
+"Think of the <literal>&lt;default&gt;</literal> alias as a classification or "
+"inclusion of this group (if not installed). As the example shows, "
+"<literal>&lt;default&gt;</literal> should always precede the <literal>&lt;"
+"prefer&gt;</literal> and <literal>&lt;accept&gt;</literal> aliases of that "
+"group."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:816
+#, no-c-format
+msgid ""
+"<literal>&lt;default&gt;</literal> classification is not limited to the "
+"generic aliases serif, sans-serif and monospace. See <filename>/usr/share/"
+"fontconfig/conf.avail/30-metric-aliases.conf</filename> for a complex "
+"example."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:834
+#, no-c-format
+msgid ""
+"The following Fontconfig snippet in <xref linkend=\"ex.x11.fontsys."
+"fontconfig.aliases2\"/> creates a <literal>serif</literal> group. Every "
+"family in this group could substitute others when a former font is not "
+"installed."
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:842
+#, no-c-format
+msgid ""
+"&lt;alias&gt;\n"
+" &lt;family&gt;Alegreya SC&lt;/family&gt;\n"
+" &lt;default&gt;\n"
+"  &lt;family&gt;serif&lt;/family&gt;\n"
+" &lt;/default&gt;\n"
+"&lt;/alias&gt;\n"
+"&lt;alias&gt;\n"
+" &lt;family&gt;Droid Serif&lt;/family&gt;\n"
+" &lt;default&gt;\n"
+"  &lt;family&gt;serif&lt;/family&gt;\n"
+" &lt;/default&gt;\n"
+"&lt;/alias&gt;\n"
+"&lt;alias&gt;\n"
+" &lt;family&gt;STIXGeneral&lt;/family&gt;\n"
+" &lt;default&gt;\n"
+"  &lt;family&gt;serif&lt;/family&gt;\n"
+" &lt;/default&gt;\n"
+"&lt;/alias&gt;\n"
+"&lt;alias&gt;\n"
+" &lt;family&gt;serif&lt;/family&gt;\n"
+" &lt;accept&gt;\n"
+"  &lt;family&gt;Droid Serif&lt;/family&gt;\n"
+"  &lt;family&gt;STIXGeneral&lt;/family&gt;\n"
+"  &lt;family&gt;Alegreya SC&lt;/family&gt;\n"
+" &lt;/accept&gt;\n"
+"&lt;/alias&gt;"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:844
+#, no-c-format
+msgid ""
+"Priority is given by the order in the <literal>&lt;accept&gt;</literal> "
+"alias. Similarly, stronger <literal>&lt;prefer&gt;</literal> aliases can be "
+"used."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:849
+#, no-c-format
+msgid "is expanded by <xref linkend=\"ex.x11.fontsys.fontconfig.aliases3\"/>."
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:854
+#, no-c-format
+msgid "Aliases and Family Names Substitutions"
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:857
+#, no-c-format
+msgid "Rule 4"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:859
+#, no-c-format
+msgid ""
+"&lt;alias&gt;\n"
+" &lt;family&gt;serif&lt;/family&gt;\n"
+" &lt;accept&gt;\n"
+"  &lt;family&gt;Liberation Serif&lt;/family&gt;\n"
+" &lt;/accept&gt;\n"
+"&lt;/alias&gt;"
+msgstr ""
+
+#. Tag: term
+#: x11_fonts.xml:863
+#, no-c-format
+msgid "Rule 5"
+msgstr ""
+
+#. Tag: screen
+#: x11_fonts.xml:865
+#, no-c-format
+msgid ""
+"&lt;alias&gt;\n"
+" &lt;family&gt;serif&lt;/family&gt;\n"
+" &lt;prefer&gt;\n"
+"  &lt;family&gt;DejaVu Serif&lt;/family&gt;\n"
+" &lt;/prefer&gt;\n"
+"&lt;/alias&gt;"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:870
+#, no-c-format
+msgid ""
+"The expanded configuration from <xref linkend=\"ex.x11.fontsys.fontconfig."
+"aliases3\"/> would lead to the following PFL evolution:"
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:876
+#, no-c-format
+msgid "Results from Generating PFL from Fontconfig Rules"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:952
+#, no-c-format
+msgid ""
+"<literal>Alegreya SC</literal>, <literal>Droid Serif</literal>, "
+"<literal>serif</literal>, <literal>Liberation Serif</literal>, "
+"<literal>STIXGeneral</literal>"
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:966
+#, no-c-format
+msgid ""
+"<literal>Alegreya SC</literal>, <literal>Droid Serif</literal>, "
+"<literal>DejaVu Serif</literal>, <literal>serif</literal>, "
+"<literal>Liberation Serif</literal>, <literal>STIXGeneral</literal>"
+msgstr ""
+
+#. Tag: title
+#: x11_fonts.xml:977
+#, no-c-format
+msgid "Implications."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:980
+#, no-c-format
+msgid ""
+"In case multiple <literal>&lt;accept&gt;</literal> declarations for the same "
+"generic name exist, the declaration that is parsed last <quote>wins</quote>. "
+"If possible, do not use <literal>&lt;accept&gt;</literal> <emphasis role="
+"\"bold\">after</emphasis> user (<filename>/etc/fonts/conf.d/*-user.conf</"
+"filename>) when creating a system-wide configuration."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:990
+#, no-c-format
+msgid ""
+"In case multiple <literal>&lt;prefer</literal> declarations for the same "
+"generic name exist, the declaration that is parsed last <quote>wins</quote>. "
+"If possible, do not use <literal>&lt;prefer&gt;</literal> <emphasis role="
+"\"bold\">before</emphasis> user in the system-wide configuration."
+msgstr ""
+
+#. Tag: para
+#: x11_fonts.xml:1000
+#, no-c-format
+msgid ""
+"Every <literal>&lt;prefer&gt;</literal> declaration overwrites <literal>&lt;"
+"accept&gt;</literal> declarations for the same generic name. If the "
+"administrator wants to give the user free rein to use even <literal>&lt;"
+"accept&gt;</literal> and not only <literal>&lt;prefer&gt;</literal>,the "
+"administrator should not use <literal>&lt;prefer&gt;</literal> in the system-"
+"wide configuration. On the other hand, users mostly use <literal>&lt;"
+"prefer&gt;</literal>,, so that should not be detrimental and we see the use "
+"of <literal>&lt;prefer&gt;</literal> also in system wide configurations."
+msgstr ""

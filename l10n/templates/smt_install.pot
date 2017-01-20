@@ -1,0 +1,439 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: smt_install.xml:10
+#, no-c-format
+msgid "&smt; Installation"
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:11
+#, no-c-format
+msgid ""
+"From version 12 SP1 onward, &smt; is included in &sls;. To install it, start "
+"&sls; installation, and click <guimenu>Software</guimenu> on the "
+"<guimenu>Installation Settings</guimenu> screen. Then select the "
+"<guimenu>Subscription Management Tool</guimenu> pattern on the "
+"<guimenu>Software Selection and System Tasks</guimenu> screen, and confirm "
+"with <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: smt_install.xml:20
+#, no-c-format
+msgid "&smt; Pattern"
+msgstr ""
+
+#. Tag: title
+#: smt_install.xml:31
+#, no-c-format
+msgid "Installing &smt; on an Already Installed System"
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:32
+#, no-c-format
+msgid ""
+"If you already have &sls; installed and want to install &smt; additionally, "
+"follow the same procedure, but instead of including the &smt; pattern from "
+"the installation screen, simply run <menuchoice><guimenu>&yast;</"
+"guimenu><guimenu>Software</guimenu><guimenu>Software Management</guimenu></"
+"menuchoice>, select <menuchoice><guimenu>View</guimenu><guimenu>Patterns</"
+"guimenu></menuchoice> and select the <guimenu>&smt;</guimenu> pattern there."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:42
+#, no-c-format
+msgid ""
+"Because &smt; depends on other software products, such as &mariadb; database "
+"engine or Apache Web server, several packages are automatically selected for "
+"installation."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:47
+#, no-c-format
+msgid ""
+"It is recommended to check for &smt; updates available immediately after "
+"installing &sls;. &suse; continuously releases maintenance updates for "
+"&smt;, and newer packages are likely to be available compared to those "
+"installed from media, for example using the <command>zypper patch</command> "
+"command."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:54
+#, no-c-format
+msgid ""
+"After the system is installed and updated, do a first-time &smt; "
+"configuration with <menuchoice><guimenu>&yast;</guimenu><guimenu>Network "
+"Services</guimenu><guimenu>&smt; Configuration Wizard</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: smt_install.xml:61
+#, no-c-format
+msgid "&smt; Configuration Wizard"
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:63
+#, no-c-format
+msgid ""
+"The two-step <guimenu>&smt; Configuration Wizard</guimenu> helps you "
+"configure &smt; after &sls; installation is finished. You can then change "
+"the configuration later using the &yast; &smt; Server Configuration "
+"module&mdash;see <xref linkend=\"smt.server\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:72
+#, no-c-format
+msgid ""
+"The <guimenu>Enable Subscription Management Tool service (&smt;)</guimenu> "
+"option is checked by default. Uncheck it only if you want to disable the "
+"&smt; product."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:77
+#, no-c-format
+msgid ""
+"If the firewall is enabled, check <guimenu>Open Port in Firewall</guimenu> "
+"to allow access to the &smt; service from remote computers."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:82
+#, no-c-format
+msgid ""
+"Enter your &scc; organization credentials in <guimenu>User</guimenu> and "
+"<guimenu>Password</guimenu>. If you do not know your &scc; credentials, "
+"refer to <xref linkend=\"smt.mirroring.getcredentials\"/>. Test the entered "
+"credentials by clicking the <guimenu>Test</guimenu> button. &smt; will "
+"connect to the Customer Center server using the provided credentials and "
+"download some testing data."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:90
+#, no-c-format
+msgid ""
+"Enter the e-mail address you used for the &scc; registration into "
+"<guimenu>SCC E-mail Used for Registration</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:92
+#, no-c-format
+msgid ""
+"<guimenu>Your &smt; Server URL</guimenu> should contain the URL of the &smt; "
+"server being configured. It is populated automatically."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:96
+#, no-c-format
+msgid ""
+"Press <guimenu>Next</guimenu> to continue to the second configuration step."
+msgstr ""
+
+#. Tag: title
+#: smt_install.xml:101
+#, no-c-format
+msgid "&smt; Wizard"
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:113
+#, no-c-format
+msgid ""
+"For security reasons, &smt; requires a separate user to connect to the "
+"database. With the <guimenu>Database Password for smt User</guimenu> widget "
+"set the database password for that user. Confirm it in the following field."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:119
+#, no-c-format
+msgid ""
+"Enter all e-mail addresses that &smt; should send reports to using the "
+"<guimenu>Add</guimenu> button. You are also able to <guimenu>Edit</guimenu> "
+"or <guimenu>Delete</guimenu> any incorrect or obsolete addresses."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:125
+#, no-c-format
+msgid "Then click <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:130
+#, no-c-format
+msgid ""
+"If the current database root password is empty&mdash;as in any freshly "
+"installed system&mdash;you will be asked to enter it."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:136
+#, no-c-format
+msgid ""
+"&smt; defaults to communicate with the client hosts via a secure protocol. "
+"To use the secured <systemitem>https</systemitem> protocol, the &smt; server "
+"needs to have a server SSL certificate. If it is not created yet, the wizard "
+"warns you and offers its creation with <guimenu>Run CA Management</guimenu>. "
+"Refer to <xref linkend=\"sec.security.yast_ca.module\"/> for detailed "
+"information to manage certificates with &yast;."
+msgstr ""
+
+#. Tag: title
+#: smt_install.xml:146
+#, no-c-format
+msgid "Missing Server Certificate"
+msgstr ""
+
+#. Tag: title
+#: smt_install.xml:160
+#, no-c-format
+msgid "Upgrading from Previous Versions of &smt;"
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:162
+#, no-c-format
+msgid ""
+"This section contains information about upgrading &smt; from the previous "
+"versions."
+msgstr ""
+
+#. Tag: title
+#: smt_install.xml:166
+#, no-c-format
+msgid "Upgrade from Versions Prior to 11 SP3"
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:167
+#, no-c-format
+msgid ""
+"Direct upgrade path from &smt; prior to version 11 SP3 is not supported. You "
+"need to upgrade the operating system to &sls; 11 SP3 or SP4 as described in "
+"<link xlink:href=\"https://www.suse.com/documentation/sles11/"
+"book_sle_deployment/data/cha_update_sle.html\"></link>, and at the same time "
+"upgrade &smt; to version 11 SP3 as described in <link xlink:href=\"https://"
+"www.suse.com/documentation/smt11/book_yep/data/smt_installation_upgrade.html"
+"\"></link>. Then follow the steps described in <xref linkend=\"smt."
+"installation.upgrade.latest\"/>."
+msgstr ""
+
+#. Tag: title
+#: smt_install.xml:175
+#, no-c-format
+msgid "Upgrade from &smt; 12 SP1"
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:176
+#, no-c-format
+msgid ""
+"Upgrade from &smt; 12 SP1 happens automatically during the &sls; upgrade, "
+"and needs no further manual steps. For more information on &sls; upgrade, "
+"see <xref linkend=\"cha.update.sle\"/>."
+msgstr ""
+
+#. Tag: title
+#: smt_install.xml:182
+#, no-c-format
+msgid "Upgrade from &smt; 11 SP3"
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:183
+#, no-c-format
+msgid "To upgrade &smt; from version 11 SP3 to 12 SP2, follow these steps:"
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:188
+#, no-c-format
+msgid ""
+"If you have not already done so, migrate from Novell Customer Center to "
+"&scc; as described in <xref linkend=\"smt.installation.upgrade.scc\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:195
+#, no-c-format
+msgid ""
+"Back up and migrate the database. See the general procedure in <xref linkend="
+"\"sec.update.prep.mariadb\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:199
+#, no-c-format
+msgid ""
+"Upgrade to &sls; 12 SP2 as described in <xref linkend=\"cha.update.sle\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:205
+#, no-c-format
+msgid ""
+"Look if the new <filename>/etc/my.cnf.rpmnew</filename> exists and update it "
+"with any custom changes you need. Then copy it over the existing <filename>/"
+"etc/my.cnf</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: smt_install.xml:208
+#, no-c-format
+msgid "cp /etc/my.cnf.rpmnew /etc/my.cnf"
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:211
+#, no-c-format
+msgid ""
+"Enable the <systemitem>smt</systemitem> target to start at the system boot:"
+msgstr ""
+
+#. Tag: screen
+#: smt_install.xml:213
+#, no-c-format
+msgid "systemctl enable smt.target"
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:214
+#, no-c-format
+msgid "and optionally start it now:"
+msgstr ""
+
+#. Tag: screen
+#: smt_install.xml:217
+#, no-c-format
+msgid "systemctl start smt.target"
+msgstr ""
+
+#. Tag: title
+#: smt_install.xml:221
+#, no-c-format
+msgid "Migration to &scc; on &smt; 11 SP3"
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:222
+#, no-c-format
+msgid ""
+"&smt; now registers against &scc; instead of Novell Customer Center. "
+"Therefore you need to switch the registration center on &sls; 11 before "
+"upgrading to &sls; 12. You can switch to &scc; either via a &yast; module or "
+"command line tools."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:228
+#, no-c-format
+msgid ""
+"Before performing the switch between customer centers, make sure that the "
+"target customer center serves all products that are registered against "
+"&smt;. Both &yast; and the command line tools perform a check to find out "
+"whether all products can be served with the new registration server."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:235
+#, no-c-format
+msgid "To perform the migration to &scc; via command line, use:"
+msgstr ""
+
+#. Tag: screen
+#: smt_install.xml:238
+#, no-c-format
+msgid "smt ncc-scc-migration"
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:239
+#, no-c-format
+msgid ""
+"The migration itself is time-consuming and during the migration process the "
+"&smt; server may not be able to serve clients that are already registered."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:244
+#, no-c-format
+msgid ""
+"The migration process itself changes the registration server and the proper "
+"type of API in the configuration files. No further (configuration) changes "
+"are needed on the &smt;."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:249
+#, no-c-format
+msgid ""
+"To migrate from Novell Customer Center to &scc; via &yast;, use the &yast; "
+"smt-server module."
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:253
+#, no-c-format
+msgid ""
+"After migration is done, it is necessary to re-synchronize &smt; with the "
+"customer center. It is recommended to ensure that the repositories are up to "
+"date. This can be done using the following commands:"
+msgstr ""
+
+#. Tag: screen
+#: smt_install.xml:257
+#, no-c-format
+msgid ""
+"smt sync\n"
+"   smt mirror"
+msgstr ""
+
+#. Tag: title
+#: smt_install.xml:262
+#, no-c-format
+msgid "Enabling SLP Announcements"
+msgstr ""
+
+#. Tag: para
+#: smt_install.xml:264
+#, no-c-format
+msgid ""
+"&smt; already includes the SLP service description file (<filename>/etc/slp."
+"reg.d/smt.reg</filename>). To enable SLP announcements of the &smt; service, "
+"open respective ports in your firewall and enable the SLP service."
+msgstr ""
+
+#. Tag: screen
+#: smt_install.xml:271
+#, no-c-format
+msgid ""
+"sysconf_addword /etc/sysconfig/SuSEfirewall2 FW_SERVICES_EXT_TCP \"427\"\n"
+"sysconf_addword /etc/sysconfig/SuSEfirewall2 FW_SERVICES_EXT_UDP \"427\"\n"
+"insserv slpd\n"
+"rcslpd start"
+msgstr ""

@@ -1,0 +1,485 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: fuse.xml:30
+#, no-c-format
+msgid "Accessing File Systems with FUSE"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:33
+#, no-c-format
+msgid ""
+"FUSE is the acronym for <emphasis>file system in user space</emphasis>. This "
+"means you can configure and mount a file system as an unprivileged user. "
+"Normally, you need to be <systemitem class=\"username\">root</systemitem> "
+"for this task. FUSE alone is a kernel module. Combined with plug-ins, it "
+"allows you to extend FUSE to access almost all file systems like remote SSH "
+"connections, ISO images, and more."
+msgstr ""
+
+#. Tag: dm:docmanager
+#: fuse.xml:43
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: fuse.xml:48 fuse.xml:65 fuse.xml:87 fuse.xml:154 fuse.xml:202 fuse.xml:240
+#, no-c-format
+msgid "FUSE"
+msgstr ""
+
+#. Tag: title
+#: fuse.xml:63
+#, no-c-format
+msgid "Configuring FUSE"
+msgstr ""
+
+#. Tag: secondary
+#: fuse.xml:67
+#, no-c-format
+msgid "configuring"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:69
+#, no-c-format
+msgid ""
+"Before you can use FUSE, you need to install the package <systemitem class="
+"\"resource\">fuse</systemitem>. Depending which file system you want to use, "
+"you need additional plug-ins available as separate packages. <phrase os="
+"\"osuse\">For an overview, see <xref linkend=\"sec.fuse.plugins\"/>.</phrase>"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:77
+#, no-c-format
+msgid ""
+"Generally you do not need to configure FUSE. However, it is a good idea to "
+"create a directory where all your mount points are combined. For example, "
+"you can create a directory <filename>~/mounts</filename> and insert your "
+"subdirectories for your different file systems there."
+msgstr ""
+
+#. Tag: title
+#: fuse.xml:85
+#, no-c-format
+msgid "Mounting an NTFS Partition"
+msgstr ""
+
+#. Tag: secondary
+#: fuse.xml:89
+#, no-c-format
+msgid "<secondary>ntfs-3g</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: fuse.xml:91
+#, no-c-format
+msgid "<primary>ntfs-3g</primary>"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:93
+#, no-c-format
+msgid ""
+"NTFS, the <emphasis>New Technology File System</emphasis>, is the default "
+"file system of Windows. Since under normal circumstances the unprivileged "
+"user can not mount NTFS block devices using the external FUSE library, the "
+"process of mounting a Windows partition described below requires root "
+"privileges."
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:100
+#, no-c-format
+msgid ""
+"Become <systemitem class=\"username\">root</systemitem> and install the "
+"package <systemitem class=\"resource\">ntfs-3g</systemitem>. It is available "
+"in &sle; Workstation Extension."
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:107
+#, no-c-format
+msgid ""
+"Create a directory that is to be used as a mount point, for example "
+"<filename>~/mounts/windows</filename>."
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:113
+#, no-c-format
+msgid ""
+"Find out which Windows partition you need. Use &yast; and start the "
+"partitioner module to see which partition belongs to Windows, but do not "
+"modify anything. Alternatively, become &rootuser; and execute <command>/sbin/"
+"fdisk</command> <option>-l</option>. Look for partitions with a partition "
+"type of <literal>HPFS/NTFS</literal>."
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:122
+#, no-c-format
+msgid ""
+"Mount the partition in read-write mode. Replace the placeholder "
+"<replaceable>DEVICE</replaceable> with your respective Windows partition:"
+msgstr ""
+
+#. Tag: screen
+#: fuse.xml:126
+#, no-c-format
+msgid ""
+"ntfs-3g /dev/<replaceable>DEVICE</replaceable> <replaceable>MOUNT POINT</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:127
+#, no-c-format
+msgid ""
+"To use your Windows partition in read-only mode, append <option>-o ro</"
+"option>:"
+msgstr ""
+
+#. Tag: screen
+#: fuse.xml:131
+#, no-c-format
+msgid ""
+"ntfs-3g /dev/<replaceable>DEVICE</replaceable> <replaceable>MOUNT POINT</"
+"replaceable> -o ro"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:132
+#, no-c-format
+msgid ""
+"The command <command>ntfs-3g</command> uses the current user (UID) and group "
+"(GID) to mount the given device. If you want to set the write permissions to "
+"a different user, use the command <command>id</command> <option>USER</"
+"option> to get the output of the UID and GID values. Set it with:"
+msgstr ""
+
+#. Tag: screen
+#: fuse.xml:139
+#, no-c-format
+msgid ""
+"id tux\n"
+"uid=1000(tux) gid=100(users) groups=100(users),16(dialout),33(video)\n"
+"ntfs-3g /dev/<replaceable>DEVICE</replaceable> <replaceable>MOUNT POINT</"
+"replaceable> -o uid=1000,gid=100"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:140
+#, no-c-format
+msgid "Find additional options in the man page."
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:146 fuse.xml:192
+#, no-c-format
+msgid ""
+"To unmount the resource, run <command>fusermount -u</command> "
+"<replaceable>MOUNT POINT</replaceable>."
+msgstr ""
+
+#. Tag: title
+#: fuse.xml:152
+#, no-c-format
+msgid "Mounting Remote File System with SSHFS"
+msgstr ""
+
+#. Tag: secondary
+#: fuse.xml:156
+#, no-c-format
+msgid "<secondary>sshfs</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: fuse.xml:158
+#, no-c-format
+msgid "<primary>sshfs</primary>"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:160
+#, no-c-format
+msgid ""
+"SSH, the secure shell network protocol, can be used to exchange data between "
+"two computers using a secure channel. To establish an SSH connection through "
+"FUSE, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:168
+#, no-c-format
+msgid "Install the package <systemitem class=\"resource\">sshfs</systemitem>."
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:173
+#, no-c-format
+msgid ""
+"Create a directory that is to be used as a mount point. A good idea is to "
+"use <filename>~/mounts/<replaceable>HOST</replaceable></filename>. Replace "
+"<replaceable>HOST</replaceable> with the name of your remote computer."
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:180
+#, no-c-format
+msgid "Mount the remote file system:"
+msgstr ""
+
+#. Tag: screen
+#: fuse.xml:183
+#, no-c-format
+msgid ""
+"sshfs <replaceable>USER</replaceable>:<replaceable>HOST</replaceable> "
+"<replaceable>MOUNT POINT</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:186
+#, no-c-format
+msgid "Enter your password for the remote computer."
+msgstr ""
+
+#. Tag: title
+#: fuse.xml:198
+#, no-c-format
+msgid "Mounting an ISO File System"
+msgstr ""
+
+#. Tag: primary
+#: fuse.xml:200
+#, no-c-format
+msgid "<primary>fuseiso</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: fuse.xml:204
+#, no-c-format
+msgid "<secondary>fuseiso</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:206
+#, no-c-format
+msgid ""
+"To look into an ISO image, you can mount it with the <systemitem class="
+"\"resource\">fuseiso</systemitem> package:"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:213
+#, no-c-format
+msgid ""
+"Install the package <systemitem class=\"resource\">fuseiso</systemitem>."
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:218
+#, no-c-format
+msgid ""
+"Create a directory that is to be used as a mount point, for example "
+"<filename>~/mounts/iso</filename>."
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:224
+#, no-c-format
+msgid "Mount the ISO image:"
+msgstr ""
+
+#. Tag: screen
+#: fuse.xml:227
+#, no-c-format
+msgid ""
+"fuseiso <replaceable>ISO_IMAGE</replaceable> <replaceable>MOUNT POINT</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:231
+#, no-c-format
+msgid ""
+"You can only read content from the ISO image, but you can not write back. To "
+"unmount the resource, use <command>fusermount -u</command> "
+"<replaceable>MOUNT POINT</replaceable>."
+msgstr ""
+
+#. Tag: title
+#: fuse.xml:238 fuse.xml:255
+#, no-c-format
+msgid "Available FUSE Plug-ins"
+msgstr ""
+
+#. Tag: secondary
+#: fuse.xml:242
+#, no-c-format
+msgid "plug-ins"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:244
+#, no-c-format
+msgid ""
+"FUSE is dependent on plug-ins. The following table lists common plug-ins."
+msgstr ""
+
+#. Tag: remark
+#: fuse.xml:250
+#, no-c-format
+msgid "toms 2008-10-23: The following plugins are not available for SLES. :-("
+msgstr ""
+
+#. Tag: systemitem
+#: fuse.xml:261
+#, no-c-format
+msgid "curlftpfs"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:265
+#, no-c-format
+msgid "mount FTP servers"
+msgstr ""
+
+#. Tag: systemitem
+#: fuse.xml:273
+#, no-c-format
+msgid "encfs"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:277
+#, no-c-format
+msgid "mount encrypted file systems"
+msgstr ""
+
+#. Tag: systemitem
+#: fuse.xml:285
+#, no-c-format
+msgid "<systemitem class=\"resource\">fuseiso</systemitem>"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:289
+#, no-c-format
+msgid "mounts CD-ROM images with ISO9660 file systems in them"
+msgstr ""
+
+#. Tag: systemitem
+#: fuse.xml:297
+#, no-c-format
+msgid "fusepod"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:301
+#, no-c-format
+msgid "mount iPods"
+msgstr ""
+
+#. Tag: systemitem
+#: fuse.xml:309
+#, no-c-format
+msgid "fusesmb"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:313
+#, no-c-format
+msgid "mount browseable Samba clients or Windows shares"
+msgstr ""
+
+#. Tag: systemitem
+#: fuse.xml:321
+#, no-c-format
+msgid "gphotofs"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:325
+#, no-c-format
+msgid "mount supported digital cameras through gPhoto"
+msgstr ""
+
+#. Tag: systemitem
+#: fuse.xml:333
+#, no-c-format
+msgid "<systemitem class=\"resource\">ntfs-3g</systemitem>"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:337
+#, no-c-format
+msgid "mount NTFS volumes (with read and write support)"
+msgstr ""
+
+#. Tag: systemitem
+#: fuse.xml:345
+#, no-c-format
+msgid "obexfs"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:349
+#, no-c-format
+msgid "mount Bluetooth devices"
+msgstr ""
+
+#. Tag: systemitem
+#: fuse.xml:357
+#, no-c-format
+msgid "<systemitem class=\"resource\">sshfs</systemitem>"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:361
+#, no-c-format
+msgid "file system client based on SSH file transfer protocol"
+msgstr ""
+
+#. Tag: systemitem
+#: fuse.xml:369
+#, no-c-format
+msgid "wdfs"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:373
+#, no-c-format
+msgid "mount WebDAV file systems"
+msgstr ""
+
+#. Tag: title
+#: fuse.xml:383
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: fuse.xml:385
+#, no-c-format
+msgid ""
+"See the home page <link xlink:href=\"http://fuse.sourceforge.net\"></link> "
+"of FUSE for more information."
+msgstr ""

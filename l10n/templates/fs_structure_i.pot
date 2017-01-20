@@ -1,0 +1,681 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: fs_structure_i.xml:9
+#, no-c-format
+msgid "The Directory Structure"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: fs_structure_i.xml:11
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: fs_structure_i.xml:16 fs_structure_i.xml:263 fs_structure_i.xml:279
+#: fs_structure_i.xml:292 fs_structure_i.xml:303 fs_structure_i.xml:317
+#: fs_structure_i.xml:341 fs_structure_i.xml:354 fs_structure_i.xml:372
+#: fs_structure_i.xml:384 fs_structure_i.xml:396 fs_structure_i.xml:408
+#: fs_structure_i.xml:421 fs_structure_i.xml:435 fs_structure_i.xml:446
+#: fs_structure_i.xml:466 fs_structure_i.xml:540 fs_structure_i.xml:556
+#, no-c-format
+msgid "directories"
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:17
+#, no-c-format
+msgid "structure"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:18
+#, no-c-format
+msgid ""
+"The following table provides a short overview of the most important higher-"
+"level directories that you find on a Linux system. Find more detailed "
+"information about the directories and important subdirectories in the "
+"following list."
+msgstr ""
+
+#. Tag: title
+#: fs_structure_i.xml:25
+#, no-c-format
+msgid "Overview of a Standard Directory Tree"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:32
+#, no-c-format
+msgid "Directory"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:37
+#, no-c-format
+msgid "Contents"
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:47
+#, no-c-format
+msgid "<filename>/</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:51
+#, no-c-format
+msgid "Root directory&mdash;the starting point of the directory tree."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:59 fs_structure_i.xml:262
+#, no-c-format
+msgid "<filename>/bin</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:63
+#, no-c-format
+msgid ""
+"Essential binary files, such as commands that are needed by both the system "
+"administrator and normal users. Usually also contains the shells, such as "
+"Bash."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:73 fs_structure_i.xml:278
+#, no-c-format
+msgid "<filename>/boot</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:77
+#, no-c-format
+msgid "Static files of the boot loader."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:85 fs_structure_i.xml:291
+#, no-c-format
+msgid "<filename>/dev</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:89
+#, no-c-format
+msgid "Files needed to access host-specific devices."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:97 fs_structure_i.xml:302
+#, no-c-format
+msgid "<filename>/etc</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:101
+#, no-c-format
+msgid "Host-specific system configuration files."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:109
+#, no-c-format
+msgid "<filename>/home</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:113
+#, no-c-format
+msgid ""
+"Holds the home directories of all users who have accounts on the system. "
+"However, &rootuser;'s home directory is not located in <filename>/home</"
+"filename> but in <filename>/root</filename>."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:123 fs_structure_i.xml:340
+#, no-c-format
+msgid "<filename>/lib</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:127
+#, no-c-format
+msgid "Essential shared libraries and kernel modules."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:135 fs_structure_i.xml:353
+#, no-c-format
+msgid "<filename>/media</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:139
+#, no-c-format
+msgid "Mount points for removable media."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:147 fs_structure_i.xml:371
+#, no-c-format
+msgid "<filename>/mnt</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:151
+#, no-c-format
+msgid "Mount point for temporarily mounting a file system."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:159 fs_structure_i.xml:383
+#, no-c-format
+msgid "<filename>/opt</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:163
+#, no-c-format
+msgid "Add-on application software packages."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:171 fs_structure_i.xml:395
+#, no-c-format
+msgid "<filename>/root</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:175
+#, no-c-format
+msgid "Home directory for the superuser &rootuser;."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:183 fs_structure_i.xml:420
+#, no-c-format
+msgid "<filename>/sbin</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:187
+#, no-c-format
+msgid "Essential system binaries."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:195 fs_structure_i.xml:434
+#, no-c-format
+msgid "<filename>/srv</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:199
+#, no-c-format
+msgid "Data for services provided by the system."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:207 fs_structure_i.xml:445
+#, no-c-format
+msgid "<filename>/tmp</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:211
+#, no-c-format
+msgid "Temporary files."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:219 fs_structure_i.xml:465
+#, no-c-format
+msgid "<filename>/usr</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:223
+#, no-c-format
+msgid "Secondary hierarchy with read-only data."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:231 fs_structure_i.xml:539
+#, no-c-format
+msgid "<filename>/var</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:235
+#, no-c-format
+msgid "Variable data such as log files."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:243 fs_structure_i.xml:555
+#, no-c-format
+msgid "<filename>/windows</filename>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:247
+#, no-c-format
+msgid ""
+"Only available if you have both Microsoft Windows* and Linux installed on "
+"your system. Contains the Windows data."
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:256
+#, no-c-format
+msgid ""
+"The following list provides more detailed information and gives some "
+"examples of which files and subdirectories can be found in the directories:"
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:264
+#, no-c-format
+msgid "<secondary>/bin</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:267
+#, no-c-format
+msgid ""
+"Contains the basic shell commands that may be used both by &rootuser; and by "
+"other users. These commands include <command>ls</command>, <command>mkdir</"
+"command>, <command>cp</command>, <command>mv</command>, <command>rm</"
+"command> and <command>rmdir</command>. <filename>/bin</filename> also "
+"contains Bash, the default shell in &productname;."
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:280
+#, no-c-format
+msgid "<secondary>/boot</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:283
+#, no-c-format
+msgid ""
+"Contains data required for booting, such as the boot loader, the kernel, and "
+"other data that is used before the kernel begins executing user-mode "
+"programs."
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:293
+#, no-c-format
+msgid "<secondary>/dev</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:296
+#, no-c-format
+msgid "Holds device files that represent hardware components."
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:304
+#, no-c-format
+msgid "<secondary>/etc</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:307
+#, no-c-format
+msgid ""
+"Contains local configuration files that control the operation of programs "
+"like the X Window System. The <filename>/etc/init.d</filename> subdirectory "
+"contains LSB init scripts that can be executed during the boot process."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:316
+#, no-c-format
+msgid "/home/<replaceable>username</replaceable>"
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:318
+#, no-c-format
+msgid "<secondary>/home</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:321
+#, no-c-format
+msgid ""
+"Holds the private data of every user who has an account on the system. The "
+"files located here can only be modified by their owner or by the system "
+"administrator. By default, your e-mail directory and personal desktop "
+"configuration are located here in the form of hidden files and directories, "
+"such as <filename>.gconf/</filename> and <filename>.config</filename>."
+msgstr ""
+
+#. Tag: title
+#: fs_structure_i.xml:330
+#, no-c-format
+msgid "Home Directory in a Network Environment"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:331
+#, no-c-format
+msgid ""
+"If you are working in a network environment, your home directory may be "
+"mapped to a directory in the file system other than <filename>/home</"
+"filename>."
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:342
+#, no-c-format
+msgid "<secondary>/lib</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:345
+#, no-c-format
+msgid ""
+"Contains the essential shared libraries needed to boot the system and to run "
+"the commands in the root file system. The Windows equivalent for shared "
+"libraries are DLL files."
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:355
+#, no-c-format
+msgid "<secondary>/media</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:358
+#, no-c-format
+msgid ""
+"Contains mount points for removable media, such as CD-ROMs, flash disks, and "
+"digital cameras (if they use USB). <filename>/media</filename> generally "
+"holds any type of drive except the hard disk of your system. When your "
+"removable medium has been inserted or connected to the system and has been "
+"mounted, you can access it from here."
+msgstr ""
+
+#. Tag: remark
+#: fs_structure_i.xml:364
+#, no-c-format
+msgid ""
+"taroth 060518: find out how the names of the drives are assigned to a medium!"
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:373
+#, no-c-format
+msgid "<secondary>/mnt</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:376
+#, no-c-format
+msgid ""
+"This directory provides a mount point for a temporarily mounted file system. "
+"&rootuser; may mount file systems here."
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:385
+#, no-c-format
+msgid "<secondary>/opt</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:388
+#, no-c-format
+msgid ""
+"Reserved for the installation of third-party software. Optional software and "
+"larger add-on program packages can be found here."
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:397
+#, no-c-format
+msgid "<secondary>/root</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:400
+#, no-c-format
+msgid ""
+"Home directory for the &rootuser; user. The personal data of &rootuser; is "
+"located here."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:407
+#, no-c-format
+msgid "<filename>/run</filename>"
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:409
+#, no-c-format
+msgid "<secondary>/run</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:412
+#, no-c-format
+msgid ""
+"A tmpfs directory used by <systemitem>systemd</systemitem> and various "
+"components. <filename>/var/run</filename> is a symbolic link to <filename>/"
+"run</filename>."
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:422
+#, no-c-format
+msgid "<secondary>/sbin</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:425
+#, no-c-format
+msgid ""
+"As the <literal>s</literal> indicates, this directory holds utilities for "
+"the superuser. <filename>/sbin</filename> contains the binaries essential "
+"for booting, restoring and recovering the system in addition to the binaries "
+"in <filename>/bin</filename>."
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:436
+#, no-c-format
+msgid "<secondary>/srv</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:439
+#, no-c-format
+msgid "Holds data for services provided by the system, such as FTP and HTTP."
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:447
+#, no-c-format
+msgid "<secondary>/tmp</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:450
+#, no-c-format
+msgid ""
+"This directory is used by programs that require temporary storage of files."
+msgstr ""
+
+#. Tag: title
+#: fs_structure_i.xml:455
+#, no-c-format
+msgid "Cleaning up <filename>/tmp</filename> at Boot Time"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:456
+#, no-c-format
+msgid ""
+"Data stored in <filename>/tmp</filename> are not guaranteed to survive a "
+"system reboot. It depends, for example, on settings in <filename>/etc/"
+"sysconfig/cron</filename>."
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:467
+#, no-c-format
+msgid "<secondary>/usr</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:470
+#, no-c-format
+msgid ""
+"<literal>/usr</literal> has nothing to do with users, but is the acronym for "
+"Unix system resources. The data in <filename>/usr</filename> is static, read-"
+"only data that can be shared among various hosts compliant with the "
+"<literal>Filesystem Hierarchy Standard</literal> (FHS). This directory "
+"contains all application programs including the graphical desktops such as "
+"GNOME and establishes a secondary hierarchy in the file system. <filename>/"
+"usr</filename> holds several subdirectories, such as <filename>/usr/bin</"
+"filename>, <filename>/usr/sbin</filename>, <filename>/usr/local</filename>, "
+"and <filename>/usr/share/doc</filename>."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:484
+#, no-c-format
+msgid "/usr/bin"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:487
+#, no-c-format
+msgid "Contains generally accessible programs."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:493
+#, no-c-format
+msgid "/usr/sbin"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:496
+#, no-c-format
+msgid ""
+"Contains programs reserved for the system administrator, such as repair "
+"functions."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:503
+#, no-c-format
+msgid "/usr/local"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:506
+#, no-c-format
+msgid ""
+"In this directory the system administrator can install local, distribution-"
+"independent extensions."
+msgstr ""
+
+#. Tag: filename
+#: fs_structure_i.xml:513
+#, no-c-format
+msgid "/usr/share/doc"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:516
+#, no-c-format
+msgid ""
+"Holds various documentation files and the release notes for your system. In "
+"the <filename>manual</filename> subdirectory find an online version of this "
+"manual. If more than one language is installed, this directory may contain "
+"versions of the manuals for different languages."
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:522
+#, no-c-format
+msgid ""
+"Under <filename>packages</filename> find the documentation included in the "
+"software packages installed on your system. For every package, a "
+"subdirectory <filename>/usr/share/doc/packages/<replaceable>packagename</"
+"replaceable></filename> is created that often holds README files for the "
+"package and sometimes examples, configuration files or additional scripts."
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:530
+#, no-c-format
+msgid ""
+"If HOWTOs are installed on your system <filename>/usr/share/doc</filename> "
+"also holds the <filename>howto</filename> subdirectory in which to find "
+"additional documentation on many tasks related to the setup and operation of "
+"Linux software."
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:541
+#, no-c-format
+msgid "<secondary>/var</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:544
+#, no-c-format
+msgid ""
+"Whereas <filename>/usr</filename> holds static, read-only data, <filename>/"
+"var</filename> is for data which is written during system operation and thus "
+"is variable data, such as log files or spooling data. For an overview of the "
+"most important log files you can find under <filename>/var/log/</filename>, "
+"refer to <xref linkend=\"tab.trouble.info\"/>."
+msgstr ""
+
+#. Tag: secondary
+#: fs_structure_i.xml:557
+#, no-c-format
+msgid "<secondary>/windows</secondary>"
+msgstr ""
+
+#. Tag: para
+#: fs_structure_i.xml:560
+#, no-c-format
+msgid ""
+"Only available if you have both Microsoft Windows and Linux installed on "
+"your system. Contains the Windows data available on the Windows partition of "
+"your system. Whether you can edit the data in this directory depends on the "
+"file system your Windows partition uses. If it is FAT32, you can open and "
+"edit the files in this directory. For NTFS, &productname; also includes "
+"write access support. However, the driver for the NTFS-3g file system has "
+"limited functionality."
+msgstr ""

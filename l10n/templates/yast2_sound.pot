@@ -1,0 +1,403 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: yast2_sound.xml:13
+#, no-c-format
+msgid "Setting Up Sound Cards"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: yast2_sound.xml:16
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: yast2_sound.xml:22
+#, no-c-format
+msgid "configuring"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_sound.xml:24 yast2_sound.xml:28
+#, no-c-format
+msgid "sound cards"
+msgstr ""
+
+#. Tag: primary
+#: yast2_sound.xml:26
+#, no-c-format
+msgid "YaST"
+msgstr ""
+
+#. Tag: primary
+#: yast2_sound.xml:30 yast2_sound.xml:224 yast2_sound.xml:227
+#, no-c-format
+msgid "<primary>sound</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_sound.xml:32
+#, no-c-format
+msgid "configuring in YaST"
+msgstr ""
+
+#. Tag: primary
+#: yast2_sound.xml:34
+#, no-c-format
+msgid "cards"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_sound.xml:36
+#, no-c-format
+msgid "<secondary>sound</secondary>"
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:38
+#, no-c-format
+msgid ""
+"&yast; detects most sound cards automatically and configures them with the "
+"appropriate values. If you want to change the default settings, or need to "
+"set up a sound card that could not be configured automatically, use the "
+"&yast; sound module. There, you can also set up additional sound cards or "
+"switch their order."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:46
+#, no-c-format
+msgid ""
+"To start the sound module, start &yast; and click <menuchoice> "
+"<guimenu>Hardware</guimenu> <guimenu>Sound</guimenu> </menuchoice>. "
+"Alternatively, start the <guimenu>Sound Configuration</guimenu> dialog "
+"directly by running <command>yast2 sound &amp;</command> as user &rootuser; "
+"from a command line."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:65
+#, no-c-format
+msgid "The dialog shows all sound cards that were detected."
+msgstr ""
+
+#. Tag: title
+#: yast2_sound.xml:74
+#, no-c-format
+msgid "Configuring Sound Cards"
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:75
+#, no-c-format
+msgid ""
+"If you have added a new sound card or &yast; could not automatically "
+"configure an existing sound card, follow the steps below. For configuring a "
+"new sound card, you need to know your sound card vendor and model. If in "
+"doubt, refer to your sound card documentation for the required information. "
+"For a reference list of sound cards supported by ALSA with their "
+"corresponding sound modules, see <link xlink:href=\"http://www.alsa-project."
+"org/main/index.php/Matrix:Main\"></link>."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:84
+#, no-c-format
+msgid ""
+"During configuration, you can choose between the following setup options:"
+msgstr ""
+
+#. Tag: guimenu
+#: yast2_sound.xml:89
+#, no-c-format
+msgid "Quick Automatic Setup"
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:92
+#, no-c-format
+msgid ""
+"You are not required to go through any of the further configuration "
+"steps&mdash;the sound card is configured automatically. You can set the "
+"volume or any options you want to change later."
+msgstr ""
+
+#. Tag: guimenu
+#: yast2_sound.xml:100
+#, no-c-format
+msgid "Normal Setup"
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:103
+#, no-c-format
+msgid ""
+"Allows you to adjust the output volume and play a test sound during the "
+"configuration."
+msgstr ""
+
+#. Tag: guimenu
+#: yast2_sound.xml:110
+#, no-c-format
+msgid "Advanced setup with possibility to change options"
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:113
+#, no-c-format
+msgid ""
+"For experts only. Allows you to customize all parameters of the sound card."
+msgstr ""
+
+#. Tag: title
+#: yast2_sound.xml:118
+#, no-c-format
+msgid "Advanced Configuration"
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:119
+#, no-c-format
+msgid ""
+"Only use this option if you know exactly what you are doing. Otherwise leave "
+"the parameters untouched and use the normal or the automatic setup options."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:129
+#, no-c-format
+msgid "Start the &yast; sound module."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:134
+#, no-c-format
+msgid ""
+"To configure a detected, but <guimenu>Not Configured</guimenu> sound card, "
+"select the respective entry from the list and click <guimenu>Edit</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:139
+#, no-c-format
+msgid ""
+"To configure a new sound card, click <guimenu>Add</guimenu>. Select your "
+"sound card vendor and model and click <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:145
+#, no-c-format
+msgid "Choose one of the setup options and click <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:150
+#, no-c-format
+msgid ""
+"If you have chosen <guimenu>Normal Setup</guimenu>, you can now "
+"<guimenu>Test</guimenu> your sound configuration and make adjustments to the "
+"volume. You should start at about ten percent volume to avoid damage to your "
+"hearing or the speakers."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:158
+#, no-c-format
+msgid ""
+"If all options are set according to your wishes, click <guimenu>Next</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:162
+#, no-c-format
+msgid ""
+"The <guimenu>Sound Configuration</guimenu> dialog shows the newly configured "
+"or modified sound card."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:168
+#, no-c-format
+msgid ""
+"To remove a sound card configuration that you no longer need, select the "
+"respective entry and click <guimenu>Delete</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:174
+#, no-c-format
+msgid ""
+"Click <guimenu>OK</guimenu> to save the changes and leave the &yast; sound "
+"module."
+msgstr ""
+
+#. Tag: title
+#: yast2_sound.xml:182
+#, no-c-format
+msgid "Modifying Sound Card Configurations"
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:184
+#, no-c-format
+msgid ""
+"To change the configuration of an individual sound card (for experts only!), "
+"select the sound card entry in the <guimenu>Sound Configuration</guimenu> "
+"dialog and click <guimenu>Edit</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:189
+#, no-c-format
+msgid ""
+"This takes you to the <guimenu>Sound Card Advanced Options</guimenu> where "
+"you can fine-tune several parameters. For more information, click "
+"<guimenu>Help</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:196
+#, no-c-format
+msgid ""
+"To adjust the volume of an already configured sound card or to test the "
+"sound card, select the sound card entry in the <guimenu>Sound Configuration</"
+"guimenu> dialog and click <guimenu>Other</guimenu>. Select the respective "
+"menu item."
+msgstr ""
+
+#. Tag: title
+#: yast2_sound.xml:203
+#, no-c-format
+msgid "&yast; Mixer"
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:204
+#, no-c-format
+msgid ""
+"The &yast; mixer settings provide only basic options. They are intended for "
+"troubleshooting (for example, if the test sound is not audible). Access the "
+"&yast; mixer settings from <menuchoice> <guimenu>Other</guimenu> "
+"<guimenu>Volume</guimenu> </menuchoice>. For everyday use and fine-tuning of "
+"sound options, use the mixer applet provided by your desktop or the "
+"<command>alsasound</command> command line tool."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:216
+#, no-c-format
+msgid ""
+"For playback of MIDI files, select <menuchoice> <guimenu>Other</guimenu> "
+"<guimenu>Start Sequencer</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: secondary
+#: yast2_sound.xml:225
+#, no-c-format
+msgid "fonts"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_sound.xml:228
+#, no-c-format
+msgid "MIDI"
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:229
+#, no-c-format
+msgid ""
+"When a supported sound card is detected (like a Creative "
+"<literal>Soundblaster Live</literal>, <literal>Audigy</literal> or "
+"<literal>AWE</literal> sound card), you can also install SoundFonts for "
+"playback of MIDI files:"
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:236
+#, no-c-format
+msgid "Insert the original driver CD-ROM into your CD or DVD drive."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:241
+#, no-c-format
+msgid ""
+"Select <menuchoice> <guimenu>Other</guimenu> <guimenu>Install SoundFonts</"
+"guimenu> </menuchoice> to copy SF2 SoundFonts&trade; to your hard disk. The "
+"SoundFonts are saved in the directory <filename>/usr/share/sfbank/creative/</"
+"filename>."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:251
+#, no-c-format
+msgid ""
+"If you have configured more than one sound card in your system you can "
+"adjust the order of your sound cards. To set a sound card as primary device, "
+"select the sound card in the <guimenu>Sound Configuration</guimenu> and "
+"click <menuchoice> <guimenu>Other</guimenu> <guimenu>Set as the Primary "
+"Card</guimenu> </menuchoice>. The sound device with index <literal>0</"
+"literal> is the default device and thus used by the system and the "
+"applications."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:263
+#, no-c-format
+msgid ""
+"By default, &productname; uses the PulseAudio sound system. It is an "
+"abstraction layer that helps to mix multiple audio streams, bypassing any "
+"restrictions the hardware may have. To enable or disable the PulseAudio "
+"sound system, click <menuchoice> <guimenu>Other</guimenu> "
+"<guimenu>PulseAudio Configuration</guimenu> </menuchoice>. If enabled, "
+"PulseAudio daemon is used to play sounds. Disable <guimenu>PulseAudio "
+"Support</guimenu> to use something else system-wide."
+msgstr ""
+
+#. Tag: para
+#: yast2_sound.xml:275
+#, no-c-format
+msgid ""
+"The volume and configuration of all sound cards are saved when you click "
+"<guimenu>OK</guimenu> and leave the &yast; sound module. The mixer settings "
+"are saved to the file <filename>/etc/asound.state</filename>. The ALSA "
+"configuration data is appended to the end of the file <filename>/etc/"
+"modprobe.d/sound</filename> and written to <filename>/etc/sysconfig/sound</"
+"filename>."
+msgstr ""
+
+#. Tag: primary
+#: yast2_sound.xml:282 yast2_sound.xml:285
+#, no-c-format
+msgid "configuration files"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_sound.xml:283
+#, no-c-format
+msgid "asound.state"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_sound.xml:286
+#, no-c-format
+msgid "modprobe.d/sound"
+msgstr ""

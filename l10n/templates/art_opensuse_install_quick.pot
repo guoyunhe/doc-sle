@@ -1,0 +1,599 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: art_opensuse_install_quick.xml:16
+#, no-c-format
+msgid "&instquick;"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: art_opensuse_install_quick.xml:18
+#, no-c-format
+msgid "<dm:bugtracker> </dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:24
+#, no-c-format
+msgid ""
+"Use the following procedures to install a new version of &productnamereg; "
+"&productnumber;. This document gives a quick overview on how to run through "
+"a default installation of &productname; on the x86_64 architecture."
+msgstr ""
+
+#. Tag: title
+#: art_opensuse_install_quick.xml:34
+#, no-c-format
+msgid "Welcome to &productname;"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:36
+#, no-c-format
+msgid ""
+"For more detailed installation instructions see <xref linkend=\"cha.inst\"/>."
+msgstr ""
+
+#. Tag: title
+#: art_opensuse_install_quick.xml:41
+#, no-c-format
+msgid "Minimum System Requirements"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:44
+#, no-c-format
+msgid "any AMD64/Intel* EM64T processor (32-bit processors are not supported)"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:49
+#, no-c-format
+msgid "1 GB physical RAM (2 GB or more recommended)"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:54
+#, no-c-format
+msgid ""
+"3 GB available disk space for a minimal install, 5 GB available for a "
+"graphical desktop (more recommended)"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:60
+#, no-c-format
+msgid ""
+"Supports most modern sound and graphics cards, 800 x 600 display resolution "
+"(1024 x 768 or higher recommended)"
+msgstr ""
+
+#. Tag: title
+#: art_opensuse_install_quick.xml:68
+#, no-c-format
+msgid "Installing &productname;"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:69
+#, no-c-format
+msgid ""
+"Use these instructions if there is no existing Linux system on your machine, "
+"or if you want to replace an existing Linux system."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:75
+#, no-c-format
+msgid ""
+"Insert the &productname; DVD into the drive, then reboot the computer to "
+"start the installation program. On machines with a traditional BIOS you will "
+"see the graphical boot screen shown below. On machines equipped with UEFI, a "
+"slightly different boot screen is used. Secure boot on UEFI machines is "
+"supported."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:82
+#, no-c-format
+msgid ""
+"Use <keycap>F2</keycap> to change the language for the installer. A "
+"corresponding keyboard layout is chosen automatically. See <xref linkend="
+"\"sec.i.yast2.bootscreen\"/> or <xref linkend=\"sec.i.yast2.bootscreen_uefi"
+"\"/> for more information about changing boot options."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:101
+#, no-c-format
+msgid ""
+"Select <guimenu>Installation</guimenu> on the boot screen, then press "
+"<keycap function=\"enter\"></keycap>. This boots the system and loads the "
+"&productname; installer."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:108
+#, no-c-format
+msgid ""
+"The <guimenu>Language</guimenu> and <guimenu>Keyboard Layout</guimenu> are "
+"initialized with the language settings you have chosen on the boot screen. "
+"Change them here, if necessary."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:113
+#, no-c-format
+msgid ""
+"Read the License Agreement. It is presented in the language you have chosen "
+"on the boot screen. <guimenu>License Translations</guimenu> are available. "
+"Proceed with <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:130
+#, no-c-format
+msgid ""
+"In case no network interface could be configured automatically via DHCP, the "
+"<guimenu>Network Settings</guimenu> dialog opens. If you prefer to install "
+"&productname; with no network connection, choose <guimenu>Next</guimenu> to "
+"proceed. However, configuring the network at this stage is recommended, "
+"since it will allow to install the latest updates and security fixes from "
+"the online update repository. A working network connection will also give "
+"you access to additional software repositories. This step is skipped if a "
+"network interface was successfully configured via DHCP."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:141
+#, no-c-format
+msgid ""
+"To configure the network, choose a network interface from the list and click "
+"<guimenu>Edit</guimenu> to change its settings. Use the tabs to configure "
+"DNS and routing. See <xref linkend=\"sec.basicnet.yast\"/> for more details."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:159
+#, no-c-format
+msgid ""
+"A system analysis is performed, where the installer probes for storage "
+"devices, and tries to find other installed systems. When the analasys has "
+"finished, the <guimenu>Installation Options</guimenu> screen launches."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:177
+#, no-c-format
+msgid "You have got two choices:"
+msgstr ""
+
+#. Tag: guimenu
+#: art_opensuse_install_quick.xml:183
+#, no-c-format
+msgid "Add Online Repositories Before Installation"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:186
+#, no-c-format
+msgid ""
+"Adds the online software sources (so-called <quote>repositories</quote>) for "
+"&productname; from <link xlink:href=\"http://download.opensuse.org/"
+"distribution/leap/\"></link>. It also adds the update repository for "
+"&productname;. This ensures that the system will be installed with the most "
+"current packages without having to apply the updates after installation. "
+"Activating this option is recommended. Later during the installation "
+"workflow, you will be able to specify which repositories to add."
+msgstr ""
+
+#. Tag: guimenu
+#: art_opensuse_install_quick.xml:199
+#, no-c-format
+msgid "Include Add-On Products from Separate Media"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:202
+#, no-c-format
+msgid ""
+"This option allows you to add additional software repositories to "
+"&productname;, that are not provided on <link xlink:href=\"http://download."
+"opensuse.org/distribution/leap/\"></link>. Such add-on products may include "
+"third-party products and drivers or additional software for your system. "
+"Later during the installation workflow, you will be able to specify which "
+"repositories to add."
+msgstr ""
+
+#. Tag: title
+#: art_opensuse_install_quick.xml:214
+#, no-c-format
+msgid "Release Notes"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:215
+#, no-c-format
+msgid ""
+"From this point on, the Release Notes can be viewed from any screen during "
+"the installation process by selecting <guimenu>Release Notes</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:224
+#, no-c-format
+msgid ""
+"Review the partition setup proposed by the system. If necessary, change it. "
+"You have the following options:"
+msgstr ""
+
+#. Tag: guimenu
+#: art_opensuse_install_quick.xml:230
+#, no-c-format
+msgid "Edit Proposal Settings"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:233
+#, no-c-format
+msgid ""
+"Lets you change options for the proposed settings, but not the suggested "
+"partition layout itself."
+msgstr ""
+
+#. Tag: guimenu
+#: art_opensuse_install_quick.xml:240
+#, no-c-format
+msgid "Create Partition Setup"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:243
+#, no-c-format
+msgid "Select a disk to which to apply the proposal."
+msgstr ""
+
+#. Tag: guimenu
+#: art_opensuse_install_quick.xml:249
+#, no-c-format
+msgid "Expert Partitioner"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:252
+#, no-c-format
+msgid ""
+"Opens the <guimenu>Expert Partitioner</guimenu> described in <xref linkend="
+"\"sec.yast2.i_y2_part_expert\"/>."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:259
+#, no-c-format
+msgid ""
+"To accept the proposed setup without any changes, choose <guimenu>Next</"
+"guimenu> to proceed."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:275
+#, no-c-format
+msgid ""
+"Select the clock and time zone to use in your system. To manually adjust the "
+"time or to configure an NTP server for time synchronization, choose "
+"<guimenu>Other Settings</guimenu>. See <xref linkend=\"sec.i.yast2.timezone"
+"\"/> for detailed information. Proceed with <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:294
+#, no-c-format
+msgid ""
+"If you have selected <guimenu>Add Online Repositories Before Installation</"
+"guimenu> earlier during the installation, the <guimenu>List of Online "
+"Repositories</guimenu> screen lets you choose which official &productname; "
+"online repositories to add. The default selection is the recommended choice. "
+"In case you would also like to have the repository hosting the sources for "
+"the complete distribution, add <guimenu>Main Repository (Sources)</guimenu>. "
+"The <guimenu>Debug</guimenu> repositories and the <guimenu>Untested Updates</"
+"guimenu> are for experts and beta testers only."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:317
+#, no-c-format
+msgid ""
+"After having proceeded with <guimenu>Next</guimenu>, you need to confirm the "
+"license agreement for the online repositories with <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:326
+#, no-c-format
+msgid ""
+"If you have selected <guimenu>Include Add-On Products from Separate Media</"
+"guimenu> earlier during the installation, the <guimenu>Add-On Product</"
+"guimenu> step lets you add addtitional repositories."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:331
+#, no-c-format
+msgid ""
+"Activate <guimenu>I would like to install an additional Add-On Product</"
+"guimenu>. Specify a media type, a local path or a network resource hosting "
+"the repository and follow the on-screen instructions."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:336
+#, no-c-format
+msgid ""
+"Check <guimenu>Download Repository Description Files</guimenu> to download "
+"the files describing the repository now. If deactivated, they will be "
+"downloaded after the installation has started. Proceed with <guimenu>Next</"
+"guimenu> and insert a medium if required. Depending on the product's content "
+"it may be necessary to accept additional license agreements. Proceed with "
+"<guimenu>Next</guimenu>. Add-On products can also be installed at any time "
+"later from the running system as described in <xref linkend=\"cha.add-ons\"/"
+">."
+msgstr ""
+
+#. Tag: title
+#: art_opensuse_install_quick.xml:359
+#, no-c-format
+msgid "The Add-On Product Installation Screen"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:360
+#, no-c-format
+msgid ""
+"In case you have also configured the product online repositories, you will "
+"not see the screen depicted in the screensjot above, but rather a table "
+"showing the products online repositories that already have been added. "
+"Choose <guimenu>Add</guimenu> to advance to the <guimenu>Add-On Product</"
+"guimenu> screen."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:370
+#, no-c-format
+msgid ""
+"Select the desktop system you would like to use. <guimenu>KDE</guimenu> and "
+"<guimenu>GNOME</guimenu> are among the most widely used desktops on Linux. "
+"If you prefer a different desktop, choose <guimenu>Other</guimenu> for more "
+"options. The <guimenu>XFCE Desktop</guimenu> and the <guimenu>LXDE Desktop</"
+"guimenu> are fast and lightweight desktop environments suitable for modest "
+"hardware. With <guimenu>Minimal X Window</guimenu>, install a graphical "
+"window manager that allows for running stand-alone X applications and "
+"console windows but does not provide the usual integrated desktop "
+"functionality. In <guimenu>Minimal Server Selection (Text Mode)</guimenu>, "
+"only console terminals are available."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:396
+#, no-c-format
+msgid ""
+"To create a local user, type the first and last name in the <guimenu>User’s "
+"Full Name</guimenu> field, the login name in the <guimenu>Username</guimenu> "
+"field, and the password in the <guimenu>Password</guimenu> field."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:402
+#, no-c-format
+msgid ""
+"The password should be at least eight characters long and should contain "
+"both uppercase and lowercase letters and numbers. The maximum length for "
+"passwords is 72 characters, and passwords are case-sensitive."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:408
+#, no-c-format
+msgid ""
+"For security reasons it is also strongly recommended <emphasis>not</"
+"emphasis> to enable the <guimenu>Automatic Login</guimenu>. You should also "
+"<emphasis>not</emphasis> <guimenu>Use this Password for the System "
+"Administrator</guimenu> but rather provide a separate &rootuser; password in "
+"the next installation step. Proceed with <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:428
+#, no-c-format
+msgid ""
+"Type a password for the system administrator account (called the &rootuser; "
+"user). This step is skipped if you have chosen <guimenu>Use this Password "
+"for the System Administrator</guimenu> in the previous step."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:434
+#, no-c-format
+msgid ""
+"You should never forget the &rootuser; password! After you entered it here, "
+"the password cannot be retrieved. See <xref linkend=\"sec.i.yast2.user.root"
+"\"/> for more information. Proceed with <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: art_opensuse_install_quick.xml:452
+#, no-c-format
+msgid "Passwords and Keyboard Layout"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:453
+#, no-c-format
+msgid ""
+"It is recommended to only use characters that are available on an English "
+"keyboard. In case of a system error or when you need to start your system in "
+"rescue mode a localized keyboard might not be available."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:461
+#, no-c-format
+msgid ""
+"Use the <guimenu>Installation Settings</guimenu> screen to review and&mdash;"
+"if necessary&mdash;change several proposed installation settings. The "
+"current configuration is listed for each setting. To change it, click the "
+"headline. Some settings, such as firewall or SSH can directly be changed by "
+"clicking the respective links."
+msgstr ""
+
+#. Tag: title
+#: art_opensuse_install_quick.xml:470
+#, no-c-format
+msgid "Remote Access"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:471
+#, no-c-format
+msgid ""
+"Changes you can make here, can also be made later at any time from the "
+"installed system. However, if you need remote access directly after the "
+"installation, you should adjust the <guimenu>Firewall and SSH</guimenu> "
+"settings by opening the SSH port and enablöing the SSH server."
+msgstr ""
+
+#. Tag: guimenu
+#: art_opensuse_install_quick.xml:481
+#, no-c-format
+msgid "Software"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:484
+#, no-c-format
+msgid ""
+"The default scope of software includes the base system and X Window with the "
+"selected desktop. Clicking <guimenu>Software</guimenu> opens the "
+"<guimenu>Software Selection and System Tasks</guimenu> screen, where you can "
+"change the software selection by selecting or deselecting patterns. Each "
+"pattern contains several software packages needed for specific functions "
+"(for example, Web and LAMP server or a print server). For a more detailed "
+"selection based on software packages to install, select <guimenu>Details</"
+"guimenu> to switch to the &yast; <guimenu>Software Manager</guimenu>. See "
+"<xref linkend=\"cha.y2.sw\"/> for more information."
+msgstr ""
+
+#. Tag: guimenu
+#: art_opensuse_install_quick.xml:499
+#, no-c-format
+msgid "Booting"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:502
+#, no-c-format
+msgid ""
+"This section shows the boot loader configuration. Changing the defaults is "
+"only recommended if really needed. Refer to <xref linkend=\"cha.grub2\"/> "
+"for details."
+msgstr ""
+
+#. Tag: guimenu
+#: art_opensuse_install_quick.xml:510
+#, no-c-format
+msgid "Firewall and SSH"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:513
+#, no-c-format
+msgid ""
+"By default, the Firewall is enabled with the active network interface "
+"configured for the external zone. See <xref linkend=\"sec.security.firewall."
+"SuSE\"/> for configuration details."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:519
+#, no-c-format
+msgid ""
+"The SSH service is disabled by default, its port (22) is closed. Therefore "
+"logging in from remote is not possible by default. Click <guimenu>enable and "
+"open</guimenu> to toggle these settings."
+msgstr ""
+
+#. Tag: guimenu
+#: art_opensuse_install_quick.xml:527
+#, no-c-format
+msgid "Default Systemd Target"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:530
+#, no-c-format
+msgid ""
+"By default, the system boots into the <guimenu>graphical</guimenu> target, "
+"with network, multiuser and display manager support. Switch to "
+"<guimenu>multi-user</guimenu> if you do not need to log in via display "
+"manager."
+msgstr ""
+
+#. Tag: guimenu
+#: art_opensuse_install_quick.xml:539
+#, no-c-format
+msgid "System"
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:542
+#, no-c-format
+msgid ""
+"View detailed hardware information by clicking <guimenu>System</guimenu>. In "
+"the resulting screen you can also change <guimenu>Kernel Settings</"
+"guimenu>&mdash;see <xref linkend=\"sec.i.yast2.proposal.system\"/> for more "
+"information."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:563
+#, no-c-format
+msgid ""
+"After you have finalized the system configuration on the "
+"<guimenu>Installation Settings</guimenu> screen, click <guimenu>Install</"
+"guimenu>. Depending on your software selection you may need to agree to "
+"license agreements before the installation confirmation screen pops up. Up "
+"to this point no changes have been made to your system. After you click "
+"<guimenu>Install</guimenu> a second time, the installation process starts."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:584
+#, no-c-format
+msgid ""
+"During the installation, the progress is shown in detail on the "
+"<guimenu>Details</guimenu> tab."
+msgstr ""
+
+#. Tag: para
+#: art_opensuse_install_quick.xml:600
+#, no-c-format
+msgid ""
+"After the installation routine has finished, the computer is rebooted into "
+"the installed system. Log in and start &yast; to fine-tune the system. If "
+"you are not using a graphical desktop or are working from remote, refer to "
+"<xref linkend=\"cha.yast.text\"/> for information on using &yast; from a "
+"terminal."
+msgstr ""

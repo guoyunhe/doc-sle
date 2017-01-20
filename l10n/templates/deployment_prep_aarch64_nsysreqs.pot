@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: deployment_prep_aarch64_nsysreqs.xml:12
+#, no-c-format
+msgid "System Requirements for Operating Linux"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: deployment_prep_aarch64_nsysreqs.xml:15
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:21
+#, no-c-format
+msgid ""
+"The &slsreg; operating system can be deployed on a wide range of hardware. "
+"It is impossible to list all the different combinations of hardware &sls; "
+"supports. However, to provide you with a guide to help you during the "
+"planning phase, the minimum requirements are presented here."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:28
+#, no-c-format
+msgid ""
+"If you want to be sure that a given computer configuration will work, find "
+"out which platforms have been certified by &suse;. Find a list at <link "
+"xlink:href=\"https://www.suse.com/yessearch/\"></link>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_aarch64_nsysreqs.xml:35
+#, no-c-format
+msgid "Hardware for &arm64;"
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_aarch64_nsysreqs.xml:38
+#, no-c-format
+msgid "<term>CPU</term>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:40
+#, no-c-format
+msgid ""
+"The minimum requirement are CPUs that support the &arm;v8-A instruction set "
+"architecture (ISA), for example &arm; Cortex-A53 and Cortex-A57. Refer to "
+"<link xlink:href=\"https://www.arm.com/products/processors/cortex-a/\"></"
+"link> for a list of available &arm;v8-A processors."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:46
+#, no-c-format
+msgid ""
+"CPUs with the &arm;v8-R (realtime) and &arm;v8-M (microcontroller) ISA are "
+"currently not supported."
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_aarch64_nsysreqs.xml:53
+#, no-c-format
+msgid "Maximum Number of CPUs"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:55
+#, no-c-format
+msgid ""
+"The maximum number of CPUs supported by software design is 128. If you plan "
+"to use such a large system, check our hardware system certification Web page "
+"for supported devices, see <link xlink:href=\"https://www.suse.com/yessearch/"
+"\"></link>."
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_aarch64_nsysreqs.xml:64
+#, no-c-format
+msgid "Memory Requirements"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:66
+#, no-c-format
+msgid ""
+"A minimum of 1 GB of memory is required for a minimal installation. However, "
+"the minimum recommended is 1024 MB or 512 MB per CPU on multiprocessor "
+"computers. Add 150 MB for a remote installation via HTTP or FTP. Note that "
+"these values are only valid for the installation of the operating "
+"system&mdash;the actual memory requirement in production depends on the "
+"system's workload."
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_aarch64_nsysreqs.xml:79
+#, no-c-format
+msgid "<term>Hard Disk Requirements</term>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:81
+#, no-c-format
+msgid ""
+"The disk requirements depend largely on the installation selected and how "
+"you use your machine. Minimum requirements for different selections are:"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:90
+#, no-c-format
+msgid "System"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:95
+#, no-c-format
+msgid "<para>Hard Disk Requirements</para>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:104
+#, no-c-format
+msgid "Minimal System"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:109
+#, no-c-format
+msgid "800 MB - 1GB"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:116
+#, no-c-format
+msgid "Minimal X Window System"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:121
+#, no-c-format
+msgid "1.4 GB"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:128
+#, no-c-format
+msgid "&gnome; Desktop"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:133
+#, no-c-format
+msgid "3.5 GB"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:140
+#, no-c-format
+msgid "All patterns"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:145
+#, no-c-format
+msgid "8.5 GB"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:152
+#, no-c-format
+msgid "Using snapshots for virtualization"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:157
+#, no-c-format
+msgid "min. 8 GB"
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_aarch64_nsysreqs.xml:168
+#, no-c-format
+msgid "Boot Methods"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_aarch64_nsysreqs.xml:170
+#, no-c-format
+msgid ""
+"The computer can be booted from a CD or a network. A special boot server is "
+"required to boot over the network. This can be set up with &sls;."
+msgstr ""

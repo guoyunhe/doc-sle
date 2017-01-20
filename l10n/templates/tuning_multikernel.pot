@@ -1,0 +1,495 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: tuning_multikernel.xml:12
+#, no-c-format
+msgid "Installing Multiple Kernel Versions"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:15
+#, no-c-format
+msgid ""
+"&productname; supports the parallel installation of multiple kernel "
+"versions. When installing a second kernel, a boot entry and an initrd are "
+"automatically created, so no further manual configuration is needed. When "
+"rebooting the machine, the newly added kernel is available as an additional "
+"boot option."
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:23
+#, no-c-format
+msgid ""
+"Using this functionality, you can safely test kernel updates while being "
+"able to always fall back to the proven former kernel. To do so, do not use "
+"the update tools (such as the &yast; Online Update or the updater applet), "
+"but instead follow the process described in this chapter."
+msgstr ""
+
+#. Tag: dm:docmanager
+#: tuning_multikernel.xml:30
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:37
+#, no-c-format
+msgid "Support Entitlement"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:38
+#, no-c-format
+msgid ""
+"Be aware that you lose your entire support entitlement for the machine when "
+"installing a self-compiled or a third-party kernel. Only kernels shipped "
+"with &productname; and kernels delivered via the official update channels "
+"for &productname; are supported."
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:46
+#, no-c-format
+msgid "Check Your Boot Loader Configuration Kernel"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:47
+#, no-c-format
+msgid ""
+"It is recommended to check your boot loader configuration after having "
+"installed another kernel to set the default boot entry of your choice. See "
+"<xref linkend=\"sec.grub2.yast2.config\"/> for more information."
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:54
+#, no-c-format
+msgid "Enabling and Configuring Multiversion Support"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:58
+#, no-c-format
+msgid ""
+"Installing multiple versions of a software package (multiversion support) is "
+"enabled by default on &sle;&nbsp;12. To verify this setting, proceed as "
+"follows:"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:66 tuning_multikernel.xml:119
+#, no-c-format
+msgid ""
+"Open <filename>/etc/zypp/zypp.conf</filename> with the editor of your choice "
+"as &rootuser;."
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:72
+#, no-c-format
+msgid ""
+"Search for the string <literal>multiversion</literal>. If multiversion is "
+"enabled for all kernel packages capable of this feature, the following line "
+"appears uncommented:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_multikernel.xml:77
+#, no-c-format
+msgid "multiversion = provides:multiversion(kernel)"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:80
+#, no-c-format
+msgid ""
+"To restrict multiversion support to certain kernel flavors, add the package "
+"names as a comma-separated list to the <literal>multiversion</literal> "
+"option in <filename>/etc/zypp/zypp.conf</filename>&mdash;for example"
+msgstr ""
+
+#. Tag: screen
+#: tuning_multikernel.xml:86
+#, no-c-format
+msgid "multiversion = kernel-default,kernel-default-base,kernel-source"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:89
+#, no-c-format
+msgid "Save your changes."
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:96
+#, no-c-format
+msgid "Kernel Module Packages (KMP)"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:97
+#, no-c-format
+msgid ""
+"Make sure that required vendor provided kernel modules (Kernel Module "
+"Packages) are also installed for the new updated kernel. The kernel update "
+"process will not warn about eventually missing kernel modules because "
+"package requirements are still fulfilled by the old kernel that is kept on "
+"the system."
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:107
+#, no-c-format
+msgid "Automatically Deleting Unused Kernels"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:108
+#, no-c-format
+msgid ""
+"When frequently testing new kernels with multiversion support enabled, the "
+"boot menu quickly becomes confusing. Since a <filename>/boot</filename> "
+"partition usually has limited space you also might run into trouble with "
+"<filename>/boot</filename> overflowing. While you may delete unused kernel "
+"versions manually with &yast; or Zypper (as described below), you can also "
+"configure <systemitem class=\"library\">libzypp</systemitem> to "
+"automatically delete kernels no longer used. By default no kernels are "
+"deleted."
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:125
+#, no-c-format
+msgid ""
+"Search for the string <literal>multiversion.kernels</literal> and activate "
+"this option by uncommenting the line. This option takes a comma-separated "
+"list of the following values:"
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:131
+#, no-c-format
+msgid "<literal><replaceable>3.12.24-7.1</replaceable></literal>:"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:132
+#, no-c-format
+msgid "keep the kernel with the specified version number"
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:137
+#, no-c-format
+msgid "<literal>latest</literal>:"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:138
+#, no-c-format
+msgid "keep the kernel with the highest version number"
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:143
+#, no-c-format
+msgid "<literal>latest-N</literal>:"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:144
+#, no-c-format
+msgid "keep the kernel with the Nth highest version number"
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:149
+#, no-c-format
+msgid "<literal>running</literal>:"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:150
+#, no-c-format
+msgid "keep the running kernel"
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:155
+#, no-c-format
+msgid "<literal>oldest</literal>:"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:156
+#, no-c-format
+msgid ""
+"keep the kernel with the lowest version number (the one that was originally "
+"shipped with &productname;)"
+msgstr ""
+
+#. Tag: literal
+#: tuning_multikernel.xml:162
+#, no-c-format
+msgid "oldest+N"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:163
+#, no-c-format
+msgid "keep the kernel with the Nth lowest version number"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:167
+#, no-c-format
+msgid "Here are some examples"
+msgstr ""
+
+#. Tag: literal
+#: tuning_multikernel.xml:172
+#, no-c-format
+msgid "multiversion.kernels = latest,running"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:175
+#, no-c-format
+msgid ""
+"Keep the latest kernel and the one currently running. This is similar to not "
+"enabling the multiversion feature, except that the old kernel is removed "
+"<emphasis>after the next reboot</emphasis> and not immediately after the "
+"installation."
+msgstr ""
+
+#. Tag: literal
+#: tuning_multikernel.xml:184
+#, no-c-format
+msgid "multiversion.kernels = latest,latest-1,running"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:187
+#, no-c-format
+msgid "Keep the last two kernels and the one currently running."
+msgstr ""
+
+#. Tag: literal
+#: tuning_multikernel.xml:193
+#, no-c-format
+msgid ""
+"multiversion.kernels = latest,running,<replaceable>3.12.25.rc7-test</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:197
+#, no-c-format
+msgid ""
+"Keep the latest kernel, the one currently running, and <replaceable>3.12.25."
+"rc7-test</replaceable>."
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:205
+#, no-c-format
+msgid "Keep the <literal>running</literal> Kernel"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:206
+#, no-c-format
+msgid ""
+"Unless using special setups, you probably always want to keep the "
+"<literal>running</literal> Kernel. If not keeping the running Kernel, it "
+"will be deleted in case of a Kernel update. This in turn makes it necessary "
+"to immediately reboot the system after the update, since modules for the "
+"Kernel that is currently running can no longer be loaded since they have "
+"been deleted."
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:220
+#, no-c-format
+msgid "Installing/Removing Multiple Kernel Versions with &yast;"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:224
+#, no-c-format
+msgid ""
+"Start &yast; and open the software manager via <menuchoice> "
+"<guimenu>Software</guimenu> <guimenu>Software Management</guimenu> </"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:231
+#, no-c-format
+msgid ""
+"List all packages capable of providing multiple versions by choosing "
+"<menuchoice> <guimenu>View</guimenu> <guimenu>Package Groups</guimenu> "
+"<guimenu>Multiversion Packages</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:237
+#, no-c-format
+msgid "The &yast; Software Manager: Multiversion View"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:249
+#, no-c-format
+msgid ""
+"Select a package and open its <guimenu>Version</guimenu> tab in the bottom "
+"pane on the left."
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:255
+#, no-c-format
+msgid ""
+"To install a package, click its check box. A green check mark indicates it "
+"is selected for installation."
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:259
+#, no-c-format
+msgid ""
+"To remove an already installed package (marked with a white check mark), "
+"click its check box until a red <literal>X</literal> indicates it is "
+"selected for removal."
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:266
+#, no-c-format
+msgid "Click <guimenu>Accept</guimenu> to start the installation."
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:273
+#, no-c-format
+msgid "Installing/Removing Multiple Kernel Versions with Zypper"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:277
+#, no-c-format
+msgid ""
+"Use the command <command>zypper se -s 'kernel*'</command> to display a list "
+"of all kernel packages available:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_multikernel.xml:281
+#, no-c-format
+msgid ""
+"<?dbsuse-fo font-size=\"7pt\"?>S | Name           | Type       | "
+"Version         | Arch   | Repository\n"
+"--+----------------+------------+-----------------+--------"
+"+-------------------\n"
+"v | kernel-default | package    | 2.6.32.10-0.4.1 | x86_64 | Alternative "
+"Kernel\n"
+"i | kernel-default | package    | 2.6.32.9-0.5.1  | x86_64 | (System "
+"Packages)\n"
+"  | kernel-default | srcpackage | 2.6.32.10-0.4.1 | noarch | Alternative "
+"Kernel\n"
+"i | kernel-default | package    | 2.6.32.9-0.5.1  | x86_64 | (System "
+"Packages)\n"
+"..."
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:284
+#, no-c-format
+msgid "Specify the exact version when installing:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_multikernel.xml:287
+#, no-c-format
+msgid "zypper in kernel-default-2.6.32.10-0.4.1"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:290
+#, no-c-format
+msgid ""
+"When uninstalling a kernel, use the commands <command>zypper se -si "
+"'kernel*'</command> to list all kernels installed and <command>zypper rm</"
+"command> <replaceable>PACKAGENAME-VERSION</replaceable> to remove the "
+"package."
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:300
+#, no-c-format
+msgid "Install the Latest Kernel Version from the Kernel:HEAD Repository"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:305
+#, no-c-format
+msgid ""
+"Add the Kernel HEAD repository using the <command>sudo zypper ar http://"
+"download.opensuse.org/repositories/Kernel:/HEAD/standard/ kernel-repo</"
+"command>"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:312
+#, no-c-format
+msgid "Run the <command>sudo zypper ref</command> to refresh repositories."
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:317
+#, no-c-format
+msgid ""
+"Execute the <command>sudo zypper dist-upgrade --from kernel-repo</command> "
+"to upgrade the kernel to the latest version in the Kernel:HEAD repository."
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:323
+#, no-c-format
+msgid "Reboot the machine."
+msgstr ""
+
+#. Tag: title
+#: tuning_multikernel.xml:330
+#, no-c-format
+msgid "Installing from Kernel HEAD may Break the System"
+msgstr ""
+
+#. Tag: para
+#: tuning_multikernel.xml:331
+#, no-c-format
+msgid ""
+"Installing a Kernel from Kernel HEAD should never be necessary, because "
+"important fixes are backporten by &suse; and are made available as official "
+"updates. Installing the latest Kernel only makes sense for Kernel developers "
+"and Kernel testers. If installing from Kernel HEAD, be aware that it may "
+"break your system. Make sure to always have the original kernel available "
+"for booting as well."
+msgstr ""

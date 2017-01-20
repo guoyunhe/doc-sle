@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: qemu_overview.xml:9
+#, no-c-format
+msgid "&qemu; Overview"
+msgstr ""
+
+#. Tag: para
+#: qemu_overview.xml:16
+#, no-c-format
+msgid ""
+"&qemu; is a fast, cross-platform open source machine emulator which can "
+"emulate a huge number of hardware architectures for you. &qemu; lets you run "
+"a complete unmodified operating system (&vmguest;) on top of your existing "
+"system (&vmhost;)."
+msgstr ""
+
+#. Tag: para
+#: qemu_overview.xml:22
+#, no-c-format
+msgid ""
+"You can also use &qemu; for debugging purposes&mdash;you can easily stop "
+"your running virtual machine, inspect its state and save and restore it "
+"later."
+msgstr ""
+
+#. Tag: para
+#: qemu_overview.xml:27
+#, no-c-format
+msgid "&qemu; consists of the following parts:"
+msgstr ""
+
+#. Tag: para
+#: qemu_overview.xml:32
+#, no-c-format
+msgid "processor emulator (x86, s390x, PowerPC, Sparc)"
+msgstr ""
+
+#. Tag: para
+#: qemu_overview.xml:37
+#, no-c-format
+msgid "emulated devices (graphic card, network card, hard disks, mice)"
+msgstr ""
+
+#. Tag: para
+#: qemu_overview.xml:42
+#, no-c-format
+msgid ""
+"generic devices used to connect the emulated devices to the related host "
+"devices"
+msgstr ""
+
+#. Tag: para
+#: qemu_overview.xml:48
+#, no-c-format
+msgid "descriptions of the emulated machines (PC, Power Mac)"
+msgstr ""
+
+#. Tag: para
+#: qemu_overview.xml:53
+#, no-c-format
+msgid "debugger"
+msgstr ""
+
+#. Tag: para
+#: qemu_overview.xml:58
+#, no-c-format
+msgid "user interface used to interact with the emulator"
+msgstr ""
+
+#. Tag: para
+#: qemu_overview.xml:63
+#, no-c-format
+msgid ""
+"&qemu; is central to &kvm; and &xen; Virtualization, where it provides the "
+"general machine emulation. &xen;'s usage of &qemu; is somewhat hidden from "
+"the user, while &kvm;'s usage exposes most &qemu; features transparently. If "
+"the &vmguest; hardware architecture is the same as the &vmhost;'s "
+"architecture, &qemu; can take advantage of the &kvm; acceleration (&suse; "
+"only supports &qemu; with the &kvm; acceleration loaded)."
+msgstr ""
+
+#. Tag: para
+#: qemu_overview.xml:72
+#, no-c-format
+msgid ""
+"Apart from providing a core virtualization infrastructure and processor-"
+"specific drivers, &qemu; also provides an architecture-specific user space "
+"program for managing &vmguest;s. Depending on the architecture this program "
+"is one of:"
+msgstr ""
+
+#. Tag: para
+#: qemu_overview.xml:95
+#, no-c-format
+msgid ""
+"In the following this command is called &qemusystemarch;; in examples the "
+"<command>qemu-system-x86_64</command> command is used."
+msgstr ""

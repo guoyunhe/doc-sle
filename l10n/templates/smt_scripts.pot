@@ -1,0 +1,2027 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: smt_scripts.xml:9
+#, no-c-format
+msgid "Important Scripts and Tools"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:11
+#, no-c-format
+msgid ""
+"There are two important groups of &smt; commands: The <command>smt</command> "
+"command with its sub-commands is used for managing the mirroring of updates, "
+"registration of clients, and reporting. The &systemd; <systemitem>smt."
+"target</systemitem> is used for starting, stopping, restarting the &smt; "
+"service and services that &smt; depends on, and for checking their status."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:21
+#, no-c-format
+msgid "&smt; JobQueue"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:22
+#, no-c-format
+msgid ""
+"Since &sle; version 11, there is a new &smt; service called &smt; JobQueue. "
+"It is a system to delegate <emphasis>jobs</emphasis> to the registered "
+"clients."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:27
+#, no-c-format
+msgid ""
+"To enable JobQueue, the <systemitem>smt-client</systemitem> package needs to "
+"be installed on the SMT client. The client then pulls jobs from the server "
+"via a cron job (every 3 hours by default). The list of jobs is maintained on "
+"the server. Jobs are not pushed directly to the clients and processed "
+"immediately, but the client asks for them. Therefore, a delay of several "
+"hours may occur."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:35
+#, no-c-format
+msgid ""
+"Every job can have its parent job, which sets a dependency. The child job "
+"only runs after the parent job successfully finished. Job timing is also "
+"possible: a job can have a start time and an expiration time to define its "
+"earliest execution time or the time the job will expire. A job may also be "
+"persistent. It is run repeatedly with a delay. For example, a patch status "
+"job is a persistent job that runs once a day. For each client, a patch "
+"status job is automatically generated after it registers successfully "
+"against an &smt; 11 server. The patchstatus information can be queried with "
+"the <command>smt-client</command> command. For already registered clients, "
+"you can add patchstatus jobs manually with the <command>smt-job</command> "
+"command."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:47
+#, no-c-format
+msgid ""
+"You can manipulate, list, create or delete the jobs. For this reason, the "
+"command line tool <command>smt-job</command> was introduced. For more "
+"details on <command>smt-job</command>, see <xref linkend=\"smt.scripts.job\"/"
+">."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:54
+#, no-c-format
+msgid "Overriding the Automatic Creation of Patch Status Jobs"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:55
+#, no-c-format
+msgid ""
+"When creating a software push or an update job, normally a non-persistent "
+"patch status job will be added automatically with the parent id set to the "
+"id of the new job. To disable this behavior, use the <option>--no-"
+"autopatchstatus</option> option."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:62
+#, no-c-format
+msgid ""
+"&smt; is not intended to be a system to directly access the clients or to "
+"immediately report the results back; it is a longtime maintenance and "
+"monitoring system rather than a live interaction tool."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:67
+#, no-c-format
+msgid "Job Time Lag Limitation"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:68
+#, no-c-format
+msgid ""
+"The client will process one job at a time, report back the result, and then "
+"ask for the next job. If you create a persistent job with a time lag of only "
+"a few seconds, it will be repeated forever and block other jobs of this "
+"client. Therefore, adding jobs with a time lag smaller than one minute is "
+"not supported."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:79
+#, no-c-format
+msgid "/usr/sbin/smt Commands"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:80
+#, no-c-format
+msgid ""
+"The main command to manage the &smt; is <command>smt</command> (<filename>/"
+"usr/sbin/smt</filename>). The <command>smt</command> command should be used "
+"together with various sub-commands described in this section. If the "
+"<command>smt</command> command is used alone, it prints a list of all "
+"available sub-commands. To get help for individual sub-commands, use "
+"<command>smt</command> <replaceable>subcommand</replaceable> --help."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:89
+#, no-c-format
+msgid "The following sub-commands are available:"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:169
+#, no-c-format
+msgid ""
+"There are two syntax types you can use with the <command>smt</command> "
+"command: either use <command>smt</command> followed by a sub-command or use "
+"a single command (composed of <command>smt</command>, dash, and the sub-"
+"command of your choice). For example, it is possible to use either "
+"<command>smt mirror</command> or <command>smt-mirror</command>, as both have "
+"the same meaning."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:177
+#, no-c-format
+msgid "Conflicting Commands"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:178
+#, no-c-format
+msgid ""
+"Depending on your <literal>$PATH</literal> environment variable, the &smt; "
+"<command>smt</command> command (<filename>/usr/sbin/smt</filename>) may "
+"collide with the <command>smt</command> command from the <systemitem>star</"
+"systemitem> package (<filename>/usr/bin/smt</filename>). Either use the "
+"absolute path <filename>/usr/sbin/smt</filename>, create an alias, or set "
+"your <literal>$PATH</literal> accordingly."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:187
+#, no-c-format
+msgid ""
+"Another solution is to always use the <command>smt-</command> "
+"<replaceable>subcommand</replaceable> syntax (connected with a minus sign) "
+"instead of <command>smt</command> <replaceable>subcommand</replaceable> "
+"(separated by a space)."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:195
+#, no-c-format
+msgid "<title>smt-client</title>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:196
+#, no-c-format
+msgid ""
+"The <command>smt-client</command> command shows information about registered "
+"clients. The information includes:"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:202
+#, no-c-format
+msgid "guid"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:207
+#, no-c-format
+msgid "host name"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:212
+#, no-c-format
+msgid "patch status"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:217
+#, no-c-format
+msgid "time stamps of the patch status"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:222
+#, no-c-format
+msgid "last contact with the &smt; server"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:227
+#, no-c-format
+msgid "The <command>smt-client</command> understands the following options:"
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:232 smt_scripts.xml:568 smt_scripts.xml:1017
+#: smt_scripts.xml:1230
+#, no-c-format
+msgid "<option>--verbose</option> or <option>-v</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:235
+#, no-c-format
+msgid ""
+"Show detailed information about the client. The last contact date is shown "
+"as well."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:242 smt_scripts.xml:313 smt_scripts.xml:609
+#: smt_scripts.xml:1221
+#, no-c-format
+msgid "<option>--debug</option> or <option>-d</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:245 smt_scripts.xml:316 smt_scripts.xml:753
+#: smt_scripts.xml:784 smt_scripts.xml:902
+#, no-c-format
+msgid "Enable debugging mode."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:251
+#, no-c-format
+msgid ""
+"<option>--logfile</option> or <option>-L</option><replaceable>file</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:254
+#, no-c-format
+msgid "Specify the file the log will be written to."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:260
+#, no-c-format
+msgid ""
+"<option>--hostname</option> or <option>-h</option><replaceable>name</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:263
+#, no-c-format
+msgid ""
+"Only the entries whose host name begins with <replaceable>name</replaceable> "
+"will be listed."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:270 smt_scripts.xml:381
+#, no-c-format
+msgid ""
+"<option>--guid</option> or <option>-g</option><replaceable>guid</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:273
+#, no-c-format
+msgid ""
+"Only the entries whose GUID is <replaceable>guid</replaceable> will be "
+"listed."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:280
+#, no-c-format
+msgid ""
+"<option>--severity</option> or <option>-s</option><replaceable>level</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:283
+#, no-c-format
+msgid ""
+"Filter the result by the patch status information. The value "
+"<replaceable>level</replaceable> can be one of 'packagemanager', 'security', "
+"'recommended' or 'optional'. Only those entries are listed which have "
+"patches of the respective level."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:294
+#, no-c-format
+msgid "<title>smt-delete-registration</title>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:295
+#, no-c-format
+msgid ""
+"The <command>smt-delete-registration</command> command deletes one or more "
+"registrations from &smt; and &scc;. It will unregister machines from the "
+"system. The following options are available:"
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:302
+#, no-c-format
+msgid ""
+"<option>--guid <replaceable>ID</replaceable></option> or <option>-g</"
+"option><replaceable>ID</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:306
+#, no-c-format
+msgid ""
+"Delete the machine with the guid <replaceable>ID</replaceable> from the "
+"system. You can use this option multiple times."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:325
+#, no-c-format
+msgid "<title>smt-job</title>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:326
+#, no-c-format
+msgid ""
+"The <command>smt-job</command> script manages jobs for individual &smt; "
+"clients. You can list, create, edit, or delete jobs with it. The following "
+"options are available:"
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:333 smt_scripts.xml:1399
+#, no-c-format
+msgid "<option>--list</option> or <option>-l</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:336
+#, no-c-format
+msgid ""
+"List all client jobs. This is the default if the operation mode switch is "
+"omitted."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:343
+#, no-c-format
+msgid ""
+"<option>--verbose</option> or <option>-v</option><replaceable>level</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:346
+#, no-c-format
+msgid ""
+"Show detailed information about a job or jobs in a list mode. The "
+"<replaceable>level</replaceable> value can be a number from 0 to 3. The "
+"bigger the value, the more verbose the command is."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:354
+#, no-c-format
+msgid "<option>--create</option> or <option>-c</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:357
+#, no-c-format
+msgid "Create a new job."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:363
+#, no-c-format
+msgid "<option>--edit</option> or <option>-e</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:366
+#, no-c-format
+msgid "Edit an existing job."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:372
+#, no-c-format
+msgid "<option>--delete</option> or <option>-d</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:375
+#, no-c-format
+msgid "Delete an existing job."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:384
+#, no-c-format
+msgid ""
+"Specify the client's <replaceable>guid</replaceable>. This parameter can be "
+"used multiple times to create a job for more than one client."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:391
+#, no-c-format
+msgid ""
+"<option>--jobid</option> or <option>-j</option><replaceable>id</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:394
+#, no-c-format
+msgid ""
+"Specify the job ID. You need to specify job ID and client's "
+"<replaceable>guid</replaceable> when editing or deleting a job, because the "
+"same job for multiple clients has the same job ID."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:402
+#, no-c-format
+msgid ""
+"<option>--deleteall</option> or <option>-A</option><replaceable>id</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:405
+#, no-c-format
+msgid ""
+"Omit either the client's guid or the job ID in this delete operation. The "
+"missing parameter will match all respective jobs."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:411
+#, no-c-format
+msgid ""
+"<option>--type</option> or <option>-t</option><replaceable>type</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:414
+#, no-c-format
+msgid ""
+"Specify the job type. The type can be one of 'patchstatus', 'softwarepush', "
+"'update', 'execute', 'reboot', 'wait', 'eject'. On the client, only "
+"'patchstatus', 'softwarepush' and 'update' are enabled by default."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:423
+#, no-c-format
+msgid "--description <replaceable>description</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:426
+#, no-c-format
+msgid "Specify a job description."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:432
+#, no-c-format
+msgid "<option>--parent</option><replaceable>id</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:435
+#, no-c-format
+msgid ""
+"Specify the job ID of the parent job. Use it to describe a dependency. A job "
+"will not be processed until its parent has successfully finished."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:443
+#, no-c-format
+msgid ""
+"<option>--name</option> or <option>-n <replaceable>name</replaceable></"
+"option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:446
+#, no-c-format
+msgid "Specify a job name."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:452
+#, no-c-format
+msgid "--persistent"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:455
+#, no-c-format
+msgid ""
+"Specify if a job is persistent. Non-persistent jobs are processed only once, "
+"while persistent jobs are processed again and again. Use <option>--timelag</"
+"option> to define the time that elapses until the next run."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:464
+#, no-c-format
+msgid "--finished"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:467
+#, no-c-format
+msgid "Search option for finished jobs."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:473
+#, no-c-format
+msgid "<option>--targeted</option><replaceable>time</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:476
+#, no-c-format
+msgid ""
+"Specify the earliest execution time of a job. Note that the job most likely "
+"will not run exactly at that point in time, but probably some minutes or "
+"hours after. The reason is that the client polls in a fixed interval for "
+"jobs."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:485
+#, no-c-format
+msgid "<option>--expires</option><replaceable>time</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:488
+#, no-c-format
+msgid "Define when the job will no longer be executed anymore."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:494
+#, no-c-format
+msgid "<option>--timelag</option><replaceable>time</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:497
+#, no-c-format
+msgid "Define the time interval for persistent jobs."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:503
+#, no-c-format
+msgid ""
+"For a complete list of possible options and their explanation, see the "
+"manual page of the smt-job command (<command>man</command> <replaceable>smt-"
+"job</replaceable>)."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:508
+#, no-c-format
+msgid "Examples"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:509
+#, no-c-format
+msgid "To list all finished jobs, enter the following:"
+msgstr ""
+
+#. Tag: screen
+#: smt_scripts.xml:512
+#, no-c-format
+msgid "smt-job --list --finished"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:513
+#, no-c-format
+msgid ""
+"To create a 'softwarepush' job that installs <literal>xterm</literal> and "
+"<literal>bash</literal> on client 12345 and 67890, enter the following:"
+msgstr ""
+
+#. Tag: screen
+#: smt_scripts.xml:518
+#, no-c-format
+msgid "smt-job --create -t softwarepush -P xterm -P bash -g 12345 -g 67890"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:519
+#, no-c-format
+msgid ""
+"To change the timing for a persistent job with job ID 42 and guid 12345 to "
+"run every 6 hours, enter the following:"
+msgstr ""
+
+#. Tag: screen
+#: smt_scripts.xml:523
+#, no-c-format
+msgid "smt-job --edit -j 42 -g 12345 --targeted 0000-00-00 --timelag 06:00:00"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:524
+#, no-c-format
+msgid "To delete all jobs with job ID 42, enter the following:"
+msgstr ""
+
+#. Tag: screen
+#: smt_scripts.xml:527
+#, no-c-format
+msgid "smt-job --delete -jobid 42 --deleteall"
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:531
+#, no-c-format
+msgid "<title>smt-list-products</title>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:532
+#, no-c-format
+msgid ""
+"The <command>smt-list-products</command> script lists all software products "
+"in the &smt; database. The following options are available:"
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:538
+#, no-c-format
+msgid "<option>--used</option> or <option>-u</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:541
+#, no-c-format
+msgid "Show only used products."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:548
+#, no-c-format
+msgid "<option>--catstat</option> or <option>-c</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:551
+#, no-c-format
+msgid ""
+"Show whether all repositories needed for a product are locally mirrored."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:561
+#, no-c-format
+msgid "<title>smt-list-registrations</title>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:562
+#, no-c-format
+msgid ""
+"The <command>smt-list-registrations</command> script lists all "
+"registrations. There are two options available for this command."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:571
+#, no-c-format
+msgid "Show detailed information about the registered devices."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:577
+#, no-c-format
+msgid ""
+"<option>--format</option> or <option>-f</option><replaceable>format</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:580
+#, no-c-format
+msgid ""
+"Format the output. Possible types of formats are <replaceable>asciitable</"
+"replaceable> and <replaceable>csv</replaceable>."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:588
+#, no-c-format
+msgid "<title>smt-mirror</title>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:589
+#, no-c-format
+msgid ""
+"The <command>smt-mirror</command> command performs the mirroring procedure "
+"and downloads repositories that are set to be mirrored."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:593
+#, no-c-format
+msgid ""
+"You can run the <command>smt-mirror</command> with the following options:"
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:599
+#, no-c-format
+msgid "<option>--clean</option> or <option>-c</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:602
+#, no-c-format
+msgid ""
+"Remove all files no longer mentioned in the metadata from the mirror. No "
+"mirroring occurs before cleanup."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:612
+#, no-c-format
+msgid "Enable the debugging mode."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:618
+#, no-c-format
+msgid "--deepverify"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:621
+#, no-c-format
+msgid "Turn on verifying of all package checksums."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:627
+#, no-c-format
+msgid "--hardlink <replaceable>size</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:630
+#, no-c-format
+msgid ""
+"Search for duplicate files with a size greater than the size specified in "
+"kilobytes. Creates hard links for them."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:638
+#, no-c-format
+msgid "--directory <replaceable>path</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:641
+#, no-c-format
+msgid ""
+"Define the directory to work on. If you use this option, the default value "
+"configured in the <filename>smt.conf</filename> configuration file is "
+"ignored."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:649
+#, no-c-format
+msgid "--dbreplfile <replaceable>file</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:652
+#, no-c-format
+msgid ""
+"Define the path to the *.xml file to use as database replacement. You can "
+"create such a file with the <command>smt-scc</command> command."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:659 smt_scripts.xml:740 smt_scripts.xml:771
+#, no-c-format
+msgid ""
+"<option>--logfile <replaceable>file</replaceable></option> or <option>-L "
+"<replaceable>file</replaceable></option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:663 smt_scripts.xml:744 smt_scripts.xml:775
+#, no-c-format
+msgid "Specify the path to a log file."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:671
+#, no-c-format
+msgid "<title>smt-sync</title>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:672
+#, no-c-format
+msgid ""
+"The <command>smt-sync</command> or <command>smt sync</command> command gets "
+"data from &scc; and updates the local &smt; database. It can also save &scc; "
+"data to a directory instead of the &smt; database, or read the data from "
+"such a directory instead of downloading it from &scc; itself."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:679
+#, no-c-format
+msgid ""
+"For &sle; 11 clients, this script automatically decided whether Novell "
+"Customer Center or &scc; would be used. Then <command>smt-ncc-sync</command> "
+"or <command>smt-scc-sync</command> was called, as appropriate. For &sle; 12 "
+"clients, only <command>smt-scc-sync</command> is supported."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:687
+#, no-c-format
+msgid "<title>smt-scc-sync</title>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:688
+#, no-c-format
+msgid ""
+"The <command>smt scc-sync</command> command gets data from the &scc; and "
+"updates the local &smt; database. It can also save &scc; data to a directory "
+"instead of the &smt; database, or read &scc; data from a directory instead "
+"of downloading it from &scc; itself."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:695
+#, no-c-format
+msgid ""
+"You can run the <command>smt-scc-sync</command> with the following options:"
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:701
+#, no-c-format
+msgid "--fromdir <replaceable>directory</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:704
+#, no-c-format
+msgid "Read &scc; data from a directory instead of downloading it from &scc;."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:711
+#, no-c-format
+msgid "--todir <replaceable>directory</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:714
+#, no-c-format
+msgid ""
+"Write &scc; data to the specified directory without updating the &smt; "
+"database."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:719
+#, no-c-format
+msgid "&susemgr;'s Subscription Matching Feature"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:720
+#, no-c-format
+msgid ""
+"This data can be consumed by the subscription matching feature of &susemgr;, "
+"which gives you a detailed overview of your subscription usage. For more "
+"information on the subscription matching feature, see <link xlink:href="
+"\"https://www.suse.com/documentation/suse-manager-3/"
+"book_suma_reference_manual/data/ref_webui_audit_subscription.html\"></link>"
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:730
+#, no-c-format
+msgid "--createdbreplacementfile"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:733
+#, no-c-format
+msgid ""
+"Create a database replacement file for using <command>smt-mirror</command> "
+"without database."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:750 smt_scripts.xml:781 smt_scripts.xml:899
+#, no-c-format
+msgid "--debug"
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:761
+#, no-c-format
+msgid "<title>smt-register</title>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:762
+#, no-c-format
+msgid ""
+"The <command>smt-register</command> or <command>smt register</command> "
+"command registers all currently unregistered clients at the &scc;. It also "
+"registers all clients whose data has changed since the last registration."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:766 smt_scripts.xml:798
+#, no-c-format
+msgid "The following options are available:"
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:792
+#, no-c-format
+msgid "<title>smt-report</title>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:793
+#, no-c-format
+msgid ""
+"The <command>smt-report</command> or <command>smt report</command> command "
+"generates a subscription report based on local calculation or &scc; "
+"registrations."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:803
+#, no-c-format
+msgid "<option>--mail</option> or <option>-m</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:806
+#, no-c-format
+msgid ""
+"Activate mailing the report to the addresses configured with the &smt; "
+"Server and written in <filename>/etc/smt.conf</filename>. The report will be "
+"rendered as tables."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:814
+#, no-c-format
+msgid "<option>--attach</option> or <option>-a</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:817
+#, no-c-format
+msgid ""
+"Append the report to the e-mails in CSV format. This option should only be "
+"used together with the <option>--mail</option> option."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:824
+#, no-c-format
+msgid "<option>--quiet</option> or <option>-q</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:827
+#, no-c-format
+msgid ""
+"Suppress output to STDOUT and runs <command>smt-report</command> in quiet "
+"mode."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:834
+#, no-c-format
+msgid "<option>--csv</option> or <option>-c</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:837
+#, no-c-format
+msgid ""
+"The report will be exported to multiple files in CSV format. The first line "
+"of each *.csv file consists of the column names, then the data starts on "
+"line two. The <option>--csv</option> parameter should only be used together "
+"with the <option>--file</option> parameter. If the specified file name "
+"contains <literal>.csv</literal> as extension, the report format will be CSV "
+"(as if the <option>--csv</option> parameter was used)."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:848
+#, no-c-format
+msgid "<option>--pdf</option> or <option>-p</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:851
+#, no-c-format
+msgid ""
+"The report will be exported in PDF format. Use it only together with the "
+"<option>-file</option> option."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:858
+#, no-c-format
+msgid "--xml"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:861
+#, no-c-format
+msgid ""
+"The report will be exported in XML format. Use it only together with the "
+"<option>-file</option> option. For a detailed description of this XML "
+"format, see the manual page of the <command>smt-report</command> command."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:870
+#, no-c-format
+msgid "<option>--file</option> or <option>-F</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:873
+#, no-c-format
+msgid ""
+"Export the report to one or several files. By default, the report will be "
+"written to a single file rendered as tables. Optionally, the file name or "
+"whole path may be specified after the parameter: <option>--file "
+"<replaceable>filename</replaceable></option>. If no file name is specified, "
+"a default file name containing a time stamp is used. However, &smt; will not "
+"check if the file or files already exist."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:882
+#, no-c-format
+msgid ""
+"In CSV mode the report will be written to multiple files, therefore the "
+"specified file name will expand to <filename><replaceable>[path/]filename</"
+"replaceable>-<replaceable>reportname</replaceable>.<replaceable>extension</"
+"replaceable></filename> for every report."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:889
+#, no-c-format
+msgid ""
+"<option>--logfile <replaceable>filename</replaceable></option> or <option>-L "
+"<replaceable>filename</replaceable></option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:893
+#, no-c-format
+msgid "Specify path to a log file."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:910
+#, no-c-format
+msgid "<title>smt-repos</title>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:911
+#, no-c-format
+msgid ""
+"You can use <command>smt-repos</command> (or <command>smt repositories</"
+"command>) to list all available repositories and for enabling, disabling, or "
+"deleting repositories. The following options are available:"
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:920
+#, no-c-format
+msgid "<option>--enable-mirror</option> or <option>-e</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:923
+#, no-c-format
+msgid "Enable repository mirroring."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:929
+#, no-c-format
+msgid "<option>--disable-mirror</option> or <option>-d</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:932
+#, no-c-format
+msgid "Disable repository mirroring."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:938
+#, no-c-format
+msgid "<option>--enable-by-prod</option> or <option>-p</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:941
+#, no-c-format
+msgid ""
+"Enable repository mirroring by giving product data in the following format: "
+"<literal>Product[,Version[,Architecture[,Release]]]</literal>."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:950
+#, no-c-format
+msgid "<option>--disable-by-prod</option> or <option>-P</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:953
+#, no-c-format
+msgid ""
+"Disable repository mirroring by giving product data in the following format: "
+"<literal>Product[,Version[,Architecture[,Release]]]</literal>."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:962
+#, no-c-format
+msgid "<option>--enable-staging</option> or <option>-s</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:965
+#, no-c-format
+msgid "Enable repository staging."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:971
+#, no-c-format
+msgid "<option>--disable-staging</option> or <option>-S</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:974
+#, no-c-format
+msgid "Disable repository staging."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:980
+#, no-c-format
+msgid "<option>--only-mirrorable</option> or <option>-m</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:983
+#, no-c-format
+msgid "List only repositories that can be mirrored."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:989
+#, no-c-format
+msgid "<option>--only-enabled</option> or <option>-o</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:992
+#, no-c-format
+msgid "List only enabled repositories."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:999 smt_scripts.xml:1078
+#, no-c-format
+msgid "--delete"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1002
+#, no-c-format
+msgid "List repositories and delete them from disk."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1008
+#, no-c-format
+msgid "--namespace <replaceable>dirname</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1011
+#, no-c-format
+msgid "Delete the repository in the specified name space."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1020
+#, no-c-format
+msgid "Show detailed repository information."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:1028
+#, no-c-format
+msgid "<title>smt-setup-custom-repos</title>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1029
+#, no-c-format
+msgid ""
+"The <command>smt-setup-custom-repos</command> or <command>smt setup-custom-"
+"repos</command> script is a tool to set up custom repositories (repositories "
+"not present in the download server) to be used with &smt;. You can use this "
+"script to add a new repository to the &smt; database or to delete a "
+"repository from the database. The script recognizes the following options:"
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1039
+#, no-c-format
+msgid "--productid"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1042
+#, no-c-format
+msgid ""
+"ID of a product the repository belongs to. If a repository should belong to "
+"multiple products, use this option multiple times to assign the repository "
+"to all relevant products."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1050
+#, no-c-format
+msgid "--name"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1053
+#, no-c-format
+msgid "The name of the custom repository."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1059
+#, no-c-format
+msgid "--description"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1062
+#, no-c-format
+msgid "The description of the custom repository."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1068
+#, no-c-format
+msgid "--exturl"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1071
+#, no-c-format
+msgid ""
+"The URL where this repository can be mirrored from. Only HTTP and HTTPS "
+"protocols are supported (no directory, file, or FTP)."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1081
+#, no-c-format
+msgid "Remove a custom repository with a given ID from the &smt; database."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1088
+#, no-c-format
+msgid "To set up a new repository, use the following command:"
+msgstr ""
+
+#. Tag: screen
+#: smt_scripts.xml:1091
+#, no-c-format
+msgid ""
+"smt-setup-custom-repos --productid <replaceable>Product_ID</replaceable> \\\n"
+"--name <replaceable>Catalog_Name</replaceable> --exturl <replaceable>URL</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1092 smt_scripts.xml:1100
+#, no-c-format
+msgid "For example:"
+msgstr ""
+
+#. Tag: screen
+#: smt_scripts.xml:1095
+#, no-c-format
+msgid ""
+"smt-setup-custom-repos --productid <replaceable>434</replaceable> \\\n"
+"--name <replaceable>My_Catalog</replaceable> --exturl <replaceable>http://my."
+"example.com/My_Catalog</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1096
+#, no-c-format
+msgid "To remove a configured repository, use the following command:"
+msgstr ""
+
+#. Tag: screen
+#: smt_scripts.xml:1099
+#, no-c-format
+msgid "smt-setup-custom-repos --delete <replaceable>Catalog_ID</replaceable>"
+msgstr ""
+
+#. Tag: screen
+#: smt_scripts.xml:1103
+#, no-c-format
+msgid ""
+"smt-setup-custom-repos --delete "
+"<replaceable>1cf336d819e8e5904f4d4b05ee081971a0cc8afc</replaceable>"
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:1107
+#, no-c-format
+msgid "<title>smt-staging</title>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1108
+#, no-c-format
+msgid ""
+"A <emphasis>patch</emphasis> is an update of a package or group of packages. "
+"The term <emphasis>update</emphasis> and <emphasis>patch</emphasis> are "
+"often interchangeable. With the <command>smt-staging</command> script, you "
+"can set up patch filters for update repositories. It can also help you "
+"generate both testing repositories and repositories for the production "
+"environment."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1116
+#, no-c-format
+msgid ""
+"The first argument of <command>smt-staging</command> is always the "
+"<emphasis>command</emphasis>. It must be followed by a "
+"<replaceable>repository</replaceable>. The repository can be specified by "
+"<replaceable>Name</replaceable> and <replaceable>Target</replaceable> from "
+"the table scheme returned by the <command>smt-repos</command> command. "
+"Alternatively, it can be specified by its <literal>Repository ID</literal>, "
+"which is returned when running the commend <command>smt-repos -v</command>. "
+"The <command>smt-staging</command> script understands the following commands:"
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1129
+#, no-c-format
+msgid "listupdates"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1132
+#, no-c-format
+msgid "List available patches and their allowed/forbidden status."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1138
+#, no-c-format
+msgid "allow/forbid"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1141
+#, no-c-format
+msgid "Allow or forbid specified patches."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1147
+#, no-c-format
+msgid "createrepo"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1150
+#, no-c-format
+msgid "Generate both testing and production repository with allowed patches."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1156
+#, no-c-format
+msgid "status"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1159
+#, no-c-format
+msgid ""
+"Give information about both testing and production snapshots, and patch "
+"counts."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1170
+#, no-c-format
+msgid "listgroups"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1173
+#, no-c-format
+msgid "List staging groups."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1176
+#, no-c-format
+msgid ""
+"There is always one group available with the name <quote>default</quote>. "
+"The default group has the path <filename>repo/full</filename>, "
+"<filename>repo/testing</filename> and <filename>repo</filename>. With "
+"creating a new group, new paths can be specified."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1186
+#, no-c-format
+msgid "creategroup"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1189
+#, no-c-format
+msgid ""
+"Create a staging group. Required parameters are: group name, testing "
+"directory name, and production directory name."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1196
+#, no-c-format
+msgid "removegroup"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1199
+#, no-c-format
+msgid "Remove a staging group. Required parameter is: group name."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1205
+#, no-c-format
+msgid ""
+"The following options apply to any <command>smt-staging</command> command:"
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:1211
+#, no-c-format
+msgid ""
+"<option>--logfile</option> or <option>-L</option><replaceable>file path</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1214
+#, no-c-format
+msgid ""
+"Write log information to the specified file. If it does not exist, it is "
+"created."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1224
+#, no-c-format
+msgid "Turn on the debugging output and log."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1233
+#, no-c-format
+msgid "Turn more detailed output on."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1239
+#, no-c-format
+msgid ""
+"The following options apply to specific <command>smt-staging</command> "
+"commands:"
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1245
+#, no-c-format
+msgid "--patch"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1248
+#, no-c-format
+msgid ""
+"Specify a patch by its ID. You can get a list of available patches with the "
+"<command>listupates</command> command. This option can be used multiple "
+"times. Use it with the <command>allow</command>, <command>forbid</command>, "
+"and <command>listupdates</command> commands. If used with "
+"<command>listupdates</command>, the command will print detailed information "
+"about the specified patches."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1259
+#, no-c-format
+msgid "--category"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1262
+#, no-c-format
+msgid ""
+"Specify the patch category. The following categories are available: "
+"'security', 'recommended' and 'optional'. Use it with the <command>allow</"
+"command>, <command>forbid</command>, and <command>listupdates</command> "
+"commands."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1271
+#, no-c-format
+msgid "--all"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1274
+#, no-c-format
+msgid ""
+"Allow or forbid all patches in the <command>allow</command> or "
+"<command>forbid</command> commands."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1281
+#, no-c-format
+msgid "--individually"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1287
+#, no-c-format
+msgid ""
+"Allow or forbid multiple patches (for example by category) one by one, that "
+"is, as if the <option>--patch</option> option had been used on each of the "
+"patches."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1295
+#, no-c-format
+msgid "--testing"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1298
+#, no-c-format
+msgid ""
+"Use with the <command>createrepo</command> command to generate a repository "
+"for testing. The repository will be generated from the full unfiltered local "
+"mirror of the remote repository. It will be written into the <filename>&lt;"
+"MirrorTo&gt;/repo/testing</filename> directory, where <filename>MirrorTo</"
+"filename> is the value taken from <filename>smt.conf</filename>."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1309
+#, no-c-format
+msgid "--production"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1312
+#, no-c-format
+msgid ""
+"Use with the <command>createrepo</command> command to generate a repository "
+"for production use. The repository will be generated from the testing "
+"repository. It will be written into the <filename>&lt;MirrorTo&gt;/repo</"
+"filename> directory, where <filename>MirrorTo</filename> is the value taken "
+"from <filename>smt.conf</filename>. If the testing repository does not "
+"exist, the production repository will be generated from the full unfiltered "
+"local mirror of the remote repository."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1325
+#, no-c-format
+msgid "--group"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1328
+#, no-c-format
+msgid ""
+"Specify on which group the command should work. The default for <option>--"
+"group</option> is the name <literal>default</literal>."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1335
+#, no-c-format
+msgid "--nohardlink"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1338
+#, no-c-format
+msgid ""
+"During the repository creation with the <command>createrepo</command> "
+"command, avoid creating hard links instead of copying files. If not "
+"specified, hard links are created instead."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1346
+#, no-c-format
+msgid "--nodesc"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1349
+#, no-c-format
+msgid ""
+"Do not print patch descriptions and summaries&mdash;to save some screen "
+"space and make the output more readable."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1356
+#, no-c-format
+msgid "--sort-by-version"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1359
+#, no-c-format
+msgid ""
+"Sort the <literal>listupdates</literal> table by patch version. The higher "
+"the version, the newer the patch should be."
+msgstr ""
+
+#. Tag: option
+#: smt_scripts.xml:1366
+#, no-c-format
+msgid "--sort-by-category"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1369
+#, no-c-format
+msgid "Sort the <literal>listupdates</literal> table by patch category."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:1378
+#, no-c-format
+msgid "<title>smt-support</title>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1379
+#, no-c-format
+msgid ""
+"The <command>smt-support</command> command manages uploaded support data "
+"usually coming from the <command>supportconfig</command> tool. You can "
+"forward the data to &suse;, either selectively or in full. This command "
+"understands the following options:"
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:1387
+#, no-c-format
+msgid ""
+"<option>--incoming</option> or <option>-i</option><replaceable>directory</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1390
+#, no-c-format
+msgid ""
+"Specify the directory where the supportconfig archives are uploaded. You can "
+"also set this option with the <literal>SMT_INCOMING</literal> environment "
+"variable. The default <literal>SMT_INCOMING</literal> directory is "
+"<filename>/var/spool/smt-support</filename>."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1402
+#, no-c-format
+msgid "List the uploaded supportconfig archives in the incoming directory."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:1408
+#, no-c-format
+msgid ""
+"<option>--remove</option> or <option>-r</option><replaceable>archive</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1411
+#, no-c-format
+msgid "Delete the specified archive."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:1417
+#, no-c-format
+msgid "<option>--empty</option> or <option>-R</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1420
+#, no-c-format
+msgid "Delete all archives in the incoming directory."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:1426
+#, no-c-format
+msgid ""
+"<option>--upload</option> or <option>-u</option><replaceable>archive</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1429
+#, no-c-format
+msgid ""
+"Upload the specified archive to &suse;. If you specify <option>-s</option>, "
+"<option>-n</option>, <option>-c</option>, <option>-p</option>, and <option>-"
+"e</option> options, the archive is repackaged with contact information."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:1438
+#, no-c-format
+msgid "<option>--uploadall</option> or <option>-U</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1441
+#, no-c-format
+msgid "Upload all archives in the incoming directory to &suse;."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:1447
+#, no-c-format
+msgid ""
+"<option>--srnum</option> or <option>-s</option><replaceable>SR number</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1450
+#, no-c-format
+msgid "Accept the Novell Service Request 11-digit number."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:1456
+#, no-c-format
+msgid ""
+"<option>--name</option> or <option>-n</option><replaceable>name</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1459
+#, no-c-format
+msgid "Enter the first and last name of the contact, in quotes."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:1465
+#, no-c-format
+msgid ""
+"<option>--company</option> or <option>-c</option><replaceable>company</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1468
+#, no-c-format
+msgid "Enter the company name."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:1474
+#, no-c-format
+msgid ""
+"<option>--storeid</option> or <option>-d</option><replaceable>id</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1477
+#, no-c-format
+msgid "Enter the store ID, if applicable."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:1483
+#, no-c-format
+msgid ""
+"<option>--terminalid</option> or <option>-t</option><replaceable>id</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1486
+#, no-c-format
+msgid "Enter the terminal ID, if applicable."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:1492
+#, no-c-format
+msgid ""
+"<option>--phone</option> or <option>-p</option><replaceable>phone</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1495
+#, no-c-format
+msgid "Enter the phone number of the contact person."
+msgstr ""
+
+#. Tag: term
+#: smt_scripts.xml:1501
+#, no-c-format
+msgid ""
+"<option>--email</option> or <option>-e</option><replaceable>email</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1504
+#, no-c-format
+msgid "Enter the e-mail address of the contact."
+msgstr ""
+
+#. Tag: title
+#: smt_scripts.xml:1514
+#, no-c-format
+msgid "&smt; &systemd; Commands"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1515
+#, no-c-format
+msgid ""
+"You can operate &smt; related services with the standard &systemd; commands:"
+msgstr ""
+
+#. Tag: command
+#: smt_scripts.xml:1521
+#, no-c-format
+msgid "systemctl start smt.target"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1524
+#, no-c-format
+msgid "Start the &smt; services."
+msgstr ""
+
+#. Tag: command
+#: smt_scripts.xml:1530
+#, no-c-format
+msgid "systemctl stop smt.target"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1533
+#, no-c-format
+msgid "Stop the &smt; services."
+msgstr ""
+
+#. Tag: command
+#: smt_scripts.xml:1539
+#, no-c-format
+msgid "systemctl status smt.target"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1542
+#, no-c-format
+msgid ""
+"Check the status of the &smt; services. Checks whether httpd, &mariadb;, and "
+"cron are running."
+msgstr ""
+
+#. Tag: command
+#: smt_scripts.xml:1549
+#, no-c-format
+msgid "systemctl restart smt.target"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1552
+#, no-c-format
+msgid "Restart the &smt; services."
+msgstr ""
+
+#. Tag: command
+#: smt_scripts.xml:1558
+#, no-c-format
+msgid "systemctl try-restart smt.target"
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1561
+#, no-c-format
+msgid "Check whether the &smt; services are enabled and if so, restart them."
+msgstr ""
+
+#. Tag: para
+#: smt_scripts.xml:1567
+#, no-c-format
+msgid "You can enable and disable &smt; with the &yast; &smt; Server module."
+msgstr ""

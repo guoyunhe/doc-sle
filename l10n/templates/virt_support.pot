@@ -1,0 +1,902 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: virt_support.xml:10
+#, no-c-format
+msgid "Supported Guests, Hosts and Features"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:17
+#, no-c-format
+msgid ""
+"Supported virtualization limits for &xen; and &kvm; are outlined in the "
+"<link xlink:href=\"http://www.suse.com/releasenotes/\">Release Notes</link>."
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:22
+#, no-c-format
+msgid "Supported VM Guests"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:24
+#, no-c-format
+msgid ""
+"This section lists the support status for various guest operating systems "
+"virtualized on top of &productname; &productnumber;. All guest operating "
+"systems are supported both fully-virtualized (<quote>FV</quote> in the "
+"following table) and paravirtualized (<quote>PV</quote> in the following "
+"table) with two exceptions: Windows, which is only supported fully-"
+"virtualized, and OES and NetWare operating systems, which are only supported "
+"on &xen; paravirtualized. All guest operating systems are supported both in "
+"32-bit and 64-bit flavors, unless stated otherwise (see NetWare)."
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:38
+#, no-c-format
+msgid "Paravirtualized OS Support"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:45
+#, no-c-format
+msgid "Operating System"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:50
+#, no-c-format
+msgid "FV Support (&xen;/&kvm;)"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:55
+#, no-c-format
+msgid "PV Support (&xen;)"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:64
+#, no-c-format
+msgid "&slsa; 12 SP2"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:69 virt_support.xml:74 virt_support.xml:86
+#: virt_support.xml:91 virt_support.xml:103 virt_support.xml:108
+#: virt_support.xml:120 virt_support.xml:125 virt_support.xml:137
+#: virt_support.xml:142 virt_support.xml:154 virt_support.xml:159
+#: virt_support.xml:318 virt_support.xml:335 virt_support.xml:352
+#: virt_support.xml:369 virt_support.xml:386
+#, no-c-format
+msgid "Full"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:81
+#, no-c-format
+msgid "&slsa; 12 SP1"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:98
+#, no-c-format
+msgid "&slsa; 12"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:115
+#, no-c-format
+msgid "&slsa; 11 SP4"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:132
+#, no-c-format
+msgid "&slsa; 11 SP3"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:149
+#, no-c-format
+msgid "&slsa; 10 SP4"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:166
+#, no-c-format
+msgid "&sleda; 12 SP1"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:171 virt_support.xml:176 virt_support.xml:188
+#: virt_support.xml:193
+#, no-c-format
+msgid "Technology preview<superscript>1</superscript>"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:183
+#, no-c-format
+msgid "&sleda; 12 SP2"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:200
+#, no-c-format
+msgid "OES 11 SP2"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:205 virt_support.xml:222 virt_support.xml:239
+#: virt_support.xml:256 virt_support.xml:323 virt_support.xml:340
+#: virt_support.xml:357 virt_support.xml:374 virt_support.xml:391
+#: virt_support.xml:408 virt_support.xml:425 virt_support.xml:442
+#: virt_support.xml:459 virt_support.xml:472
+#, no-c-format
+msgid "None"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:210 virt_support.xml:227 virt_support.xml:244
+#, no-c-format
+msgid "Full<superscript>2, 3</superscript>"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:217
+#, no-c-format
+msgid "OES 2015"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:234
+#, no-c-format
+msgid "OES 2015 SP1"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:251
+#, no-c-format
+msgid "Netware 6.5 SP8"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:261
+#, no-c-format
+msgid "Full (32-bit only)<superscript>2</superscript>"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:268
+#, no-c-format
+msgid "RHEL 5.11+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:271 virt_support.xml:276 virt_support.xml:286
+#: virt_support.xml:291 virt_support.xml:301 virt_support.xml:306
+#, no-c-format
+msgid "Full/best effort<superscript>4</superscript>"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:283
+#, no-c-format
+msgid "RHEL 6.7+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:298
+#, no-c-format
+msgid "RHEL 7.2+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:313
+#, no-c-format
+msgid "Windows Server 2008 SP2+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:330
+#, no-c-format
+msgid "Windows Server 2008 R2 SP1+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:347
+#, no-c-format
+msgid "Windows Server 2012+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:364
+#, no-c-format
+msgid "Windows Server 2012 R2+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:381
+#, no-c-format
+msgid "Windows Server 2016"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:398
+#, no-c-format
+msgid "Windows Vista SP2+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:403 virt_support.xml:420 virt_support.xml:437
+#: virt_support.xml:454 virt_support.xml:469
+#, no-c-format
+msgid "Best effort"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:415
+#, no-c-format
+msgid "Windows 7 SP1+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:432
+#, no-c-format
+msgid "Windows 8+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:449
+#, no-c-format
+msgid "Windows 8.1+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:466
+#, no-c-format
+msgid "Windows 10+"
+msgstr ""
+
+#. Tag: member
+#: virt_support.xml:480
+#, no-c-format
+msgid ""
+"<superscript>1</superscript> Technology preview: The operating system has "
+"been tested to install and run successfully. Bugs can be reported and will "
+"be tracked by SUSE Technical Services, but no support commitments or service "
+"level agreements apply. Potential fixes and patches will be evaluated for "
+"future inclusion."
+msgstr ""
+
+#. Tag: member
+#: virt_support.xml:487
+#, no-c-format
+msgid ""
+"<superscript>2</superscript> You need a static IP address for each virtual "
+"machine running NetWare or OES."
+msgstr ""
+
+#. Tag: member
+#: virt_support.xml:491
+#, no-c-format
+msgid ""
+"<superscript>3</superscript> OES can only be installed from a network "
+"installation source."
+msgstr ""
+
+#. Tag: member
+#: virt_support.xml:495
+#, no-c-format
+msgid ""
+"<superscript>4</superscript> RedHat* guest operating systems are fully "
+"supported with <emphasis>Expanded Support</emphasis>. Otherwise, they will "
+"be supported on a best-effort basis (fixes if reasonable)."
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:503
+#, no-c-format
+msgid "Availability of Paravirtualized Drivers"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:504
+#, no-c-format
+msgid ""
+"To improve the performance of the guest operating system, paravirtualized "
+"drivers are provided when available. Although they are not required, it is "
+"strongly recommended to use them. The paravirtualized drivers are available "
+"as follows:"
+msgstr ""
+
+#. Tag: term
+#: virt_support.xml:512
+#, no-c-format
+msgid "&productname;"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:514 virt_support.xml:522 virt_support.xml:530
+#: virt_support.xml:538
+#, no-c-format
+msgid "Included in kernel"
+msgstr ""
+
+#. Tag: term
+#: virt_support.xml:520
+#, no-c-format
+msgid "&sls; 12 / 12 SP1 / 12 SP2"
+msgstr ""
+
+#. Tag: term
+#: virt_support.xml:528
+#, no-c-format
+msgid "&sls; 11 / 11 SP1 / 11 SP2 / 11 SP3 / 11 SP4"
+msgstr ""
+
+#. Tag: term
+#: virt_support.xml:536
+#, no-c-format
+msgid "&sls; 10 SP4"
+msgstr ""
+
+#. Tag: term
+#: virt_support.xml:544
+#, no-c-format
+msgid "RedHat"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:546
+#, no-c-format
+msgid "Available in RedHat Enterprise Linux 5.4 and newer"
+msgstr ""
+
+#. Tag: term
+#: virt_support.xml:552
+#, no-c-format
+msgid "Windows"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:554
+#, no-c-format
+msgid ""
+"&suse; has developed virtio-based drivers for Windows, which are available "
+"in the Virtual Machine Driver Pack (VMDP). For more information, see <link "
+"xlink:href=\"http://www.suse.com/products/vmdriverpack/\"></link>."
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:566
+#, no-c-format
+msgid "Supported &vmhost;s for &productname; &productnumber; &vmguest;s"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:569
+#, no-c-format
+msgid ""
+"This section lists the support status of &productname; &productnumber; "
+"running as a guest on top of various virtualization hosts (<xref linkend="
+"\"gloss.vt.hypervisor\"/>). Both 32-bit and 64-bit versions are supported "
+"for the host if available. The support status is defined as follows:"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:578
+#, no-c-format
+msgid ""
+"Full support for all &suse; host systems and &productname; &productnumber; "
+"&vmguest;s"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:584
+#, no-c-format
+msgid ""
+"Full support for &productname; &productnumber; &vmguest;s on third-party "
+"host systems"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:592
+#, no-c-format
+msgid "The following &suse; host operating systems are supported:"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:598
+#, no-c-format
+msgid "&sls; 11 SP4 (&kvm;/&xen;)"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:603
+#, no-c-format
+msgid "&sls; 12 SP1 (&kvm;/&xen;)"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:608
+#, no-c-format
+msgid "&sls; 12 SP2 (&kvm;/&xen;)"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:614
+#, no-c-format
+msgid "The following third party host operating systems are supported:"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:620
+#, no-c-format
+msgid "KVM for IBM &zseries; 1.1.0"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:624
+#, no-c-format
+msgid "PowerKVM"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:628
+#, no-c-format
+msgid "VMware ESX 5.5"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:633
+#, no-c-format
+msgid "VMware ESXi 6.0"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:638
+#, no-c-format
+msgid "Windows 2008 SP2+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:643
+#, no-c-format
+msgid "Windows 2008 R2 SP1+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:648
+#, no-c-format
+msgid "Windows 2012+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:653
+#, no-c-format
+msgid "Windows 2012 R2+"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:658
+#, no-c-format
+msgid "Microsoft Windows 2016"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:663 virt_support.xml:691
+#, no-c-format
+msgid "Citrix XenServer 6.5"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:668
+#, no-c-format
+msgid "Oracle VM 3.3"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:674
+#, no-c-format
+msgid "The following host operating systems will be supported when released:"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:681
+#, no-c-format
+msgid "&sls; 12 SP3 (&kvm;/&xen;)"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:686
+#, no-c-format
+msgid "VMware ESXi 2016"
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:699
+#, no-c-format
+msgid "&kvm; Hardware Requirements"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:701
+#, no-c-format
+msgid ""
+"Currently, &suse; only supports &kvm; full virtualization on &x86-64; hosts "
+"and on &zseries; (only as Technology Preview). On the &x86-64; architecture, "
+"&kvm; is designed around hardware virtualization features included in AMD* "
+"(AMD-V) and Intel* (VT-x) CPUs. It supports virtualization features of "
+"chipsets, and PCI devices, such as an I/O Memory Mapping Unit (<xref linkend="
+"\"gloss.vt.acronym.iommu\"/>) and Single Root I/O Virtualization (<xref "
+"linkend=\"vt.io.sriov\"/>)."
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:711
+#, no-c-format
+msgid ""
+"On the &x86-64; architecture, you can test whether your CPU supports "
+"hardware virtualization with the following command:"
+msgstr ""
+
+#. Tag: screen
+#: virt_support.xml:716
+#, no-c-format
+msgid "egrep '(vmx|svm)' /proc/cpuinfo"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:718
+#, no-c-format
+msgid ""
+"If this command returns no output, your processor either does not support "
+"hardware virtualization, or this feature has been disabled in the BIOS or "
+"Firmware."
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:724
+#, no-c-format
+msgid ""
+"The following Web sites identify &x86-64; processors that support hardware "
+"virtualization: <link xlink:href=\"http://ark.intel.com/Products/"
+"VirtualizationTechnology\"></link> (for Intel CPUs), and <link xlink:href="
+"\"http://products.amd.com/\"></link> (for AMD CPUs)."
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:733
+#, no-c-format
+msgid "&kvm; Kernel Modules Not Loading"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:734
+#, no-c-format
+msgid ""
+"The &kvm; kernel modules only load if the CPU hardware virtualization "
+"features are available."
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:740
+#, no-c-format
+msgid ""
+"<phrase os=\"sles\"> The general minimum hardware requirements for the "
+"&vmhost; are the same as outlined in <xref linkend=\"sec.x86.sysreqs\"/>.</"
+"phrase> <phrase os=\"sled;osuse\"> The general minimum hardware requirements "
+"for the &vmhost; are the same as for a physical machine.</phrase> However, "
+"additional RAM for each virtualized guest is needed. It should at least be "
+"the same amount that is needed for a physical installation. It is also "
+"strongly recommended to have at least one processor core or hyper-thread for "
+"each running guest."
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:752
+#, no-c-format
+msgid "Feature Support"
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:757
+#, no-c-format
+msgid "Host (Dom0)"
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:759
+#, no-c-format
+msgid "Feature Support&mdash;Host (<literal>Dom0</literal>)"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:766 virt_support.xml:905 virt_support.xml:1071
+#, no-c-format
+msgid "Features"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:771 virt_support.xml:910 virt_support.xml:1076
+#, no-c-format
+msgid "&xen;"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:780
+#, no-c-format
+msgid "Network and block device hotplugging"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:785 virt_support.xml:809 virt_support.xml:821
+#: virt_support.xml:833 virt_support.xml:846 virt_support.xml:859
+#: virt_support.xml:872 virt_support.xml:924 virt_support.xml:936
+#: virt_support.xml:948 virt_support.xml:960 virt_support.xml:972
+#: virt_support.xml:996 virt_support.xml:1008 virt_support.xml:1020
+#: virt_support.xml:1095 virt_support.xml:1100 virt_support.xml:1129
+#: virt_support.xml:1134 virt_support.xml:1146 virt_support.xml:1151
+#: virt_support.xml:1163 virt_support.xml:1168 virt_support.xml:1186
+#: virt_support.xml:1198 virt_support.xml:1203 virt_support.xml:1215
+#: virt_support.xml:1220 virt_support.xml:1232 virt_support.xml:1237
+#: virt_support.xml:1249 virt_support.xml:1254
+#, no-c-format
+msgid "<para>Yes</para>"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:792
+#, no-c-format
+msgid "Physical <xref linkend=\"gloss.vt.cpu.hotplug\"/>"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:797 virt_support.xml:1112 virt_support.xml:1117
+#, no-c-format
+msgid "<para>No</para>"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:804 virt_support.xml:931 virt_support.xml:1107
+#, no-c-format
+msgid "Virtual <xref linkend=\"gloss.vt.cpu.hotplug\"/>"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:816
+#, no-c-format
+msgid "Virtual <xref linkend=\"gloss.vt.cpu.pinning\"/>"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:828
+#, no-c-format
+msgid "Virtual <xref linkend=\"gloss.vt.cpu.capping\"/>"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:840
+#, no-c-format
+msgid ""
+"Intel* VT-x2: FlexPriority, FlexMigrate (migration constraints apply to "
+"dissimilar CPU architectures)"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:853
+#, no-c-format
+msgid ""
+"Intel* VT-d2 (DMA remapping with interrupt filtering and queued invalidation)"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:866
+#, no-c-format
+msgid ""
+"AMD* IOMMU (I/O page table with guest-to-host physical address translation)"
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:887
+#, no-c-format
+msgid "Adding or Removing Physical CPUs at Runtime Is Not Supported"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:888
+#, no-c-format
+msgid ""
+"The addition or removal of physical CPUs at runtime is not supported. "
+"However, virtual CPUs can be added or removed for each &vmguest;."
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:896
+#, no-c-format
+msgid "Paravirtualized Guest"
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:898
+#, no-c-format
+msgid "Feature Support&mdash;Paravirtualized Guest"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:919 virt_support.xml:1090
+#, no-c-format
+msgid "Virtual network and virtual block device hotplugging"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:943 virt_support.xml:1124
+#, no-c-format
+msgid "Virtual <xref linkend=\"gloss.vt.cpu.overcommit\"/>"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:955 virt_support.xml:1141
+#, no-c-format
+msgid "Dynamic virtual memory resize"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:967 virt_support.xml:1158
+#, no-c-format
+msgid "VM save and restore"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:979
+#, no-c-format
+msgid "VM live migration"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:984
+#, no-c-format
+msgid "Yes, between like virtual host systems with similar resources"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:991 virt_support.xml:1210
+#, no-c-format
+msgid "Advanced debugging with GDBC"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:1003 virt_support.xml:1227
+#, no-c-format
+msgid "Dom0 metrics visible to VM"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:1015
+#, no-c-format
+msgid "Memory ballooning"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:1027 virt_support.xml:1244
+#, no-c-format
+msgid "PCI pass-through"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:1032
+#, no-c-format
+msgid "Yes (Netware guests are excluded)"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:1040
+#, no-c-format
+msgid ""
+"For live migration, both source and target system architectures need to "
+"match; that is, the processors (AMD* or Intel*) must be the same. Unless CPU "
+"ID masking is used, such as with Intel FlexMigration, the target should "
+"feature the same processor revision or a more recent processor revision than "
+"the source. If VMs are moved among different systems, the same rules apply "
+"for each move. To avoid failing optimized code at runtime or application "
+"start-up, source and target CPUs need to expose the same processor "
+"extensions. &xen; exposes the physical CPU extensions to the VMs "
+"transparently. To summarize, guests can be 32-bit or 64-bit, but the <xref "
+"linkend=\"gloss.vt.vhs\"/> must be identical."
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:1053
+#, no-c-format
+msgid "Intel FlexMigration"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:1054
+#, no-c-format
+msgid ""
+"For machines that support Intel FlexMigration, CPU-ID masking and faulting "
+"allow more flexibility in cross-CPU migration."
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:1062
+#, no-c-format
+msgid "Fully Virtualized Guest"
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:1064
+#, no-c-format
+msgid "Feature Support&mdash;Fully Virtualized Guest"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:1081
+#, no-c-format
+msgid "&kvm;"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:1175
+#, no-c-format
+msgid "VM Live Migration"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:1180
+#, no-c-format
+msgid ""
+"Yes between like virtual host systems with similar resources (that is, from "
+"32-bit to 32-bit, 64-bit to 64-bit)"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:1193
+#, no-c-format
+msgid "VM snapshot"
+msgstr ""
+
+#. Tag: title
+#: virt_support.xml:1263
+#, no-c-format
+msgid "Windows Guest"
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:1264
+#, no-c-format
+msgid ""
+"Hotplugging of virtual network and virtual block devices, and resizing, "
+"shrinking, and restoring dynamic virtual memory are supported in &xen; and "
+"&kvm; only if PV drivers are being used (VMDP)."
+msgstr ""
+
+#. Tag: para
+#: virt_support.xml:1270
+#, no-c-format
+msgid ""
+"For &kvm;, a detailed description of supported limits, features, recommended "
+"settings and scenarios, and other useful information is maintained in "
+"<filename>kvm-supported.txt</filename>. This file is part of the &kvm; "
+"package and can be found in <filename>/usr/share/doc/packages/kvm</filename>."
+msgstr ""

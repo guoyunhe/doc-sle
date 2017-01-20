@@ -1,0 +1,436 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: apps_brasero.xml:14
+#, no-c-format
+msgid "Brasero: Burning CDs and DVDs"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:17
+#, no-c-format
+msgid ""
+"Brasero is a &gnome; program for writing data and audio CDs and DVDs. Start "
+"the program from the main menu by clicking "
+"<menuchoice><guimenu>Applications</guimenu><guimenu>Sound &amp; Video</"
+"guimenu> <guimenu>Brasero</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:24
+#, no-c-format
+msgid ""
+"The following sections are a quick introduction on how to create your own CD "
+"or DVD."
+msgstr ""
+
+#. Tag: dm:docmanager
+#: apps_brasero.xml:29
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: apps_brasero.xml:34 apps_brasero.xml:153 apps_brasero.xml:210
+#, no-c-format
+msgid "Brasero"
+msgstr ""
+
+#. Tag: title
+#: apps_brasero.xml:36
+#, no-c-format
+msgid "Creating a Data CD or DVD"
+msgstr ""
+
+#. Tag: primary
+#: apps_brasero.xml:38 apps_brasero.xml:147 apps_brasero.xml:206
+#: apps_brasero.xml:257 apps_brasero.xml:278
+#, no-c-format
+msgid "<primary>CDs</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: apps_brasero.xml:40 apps_brasero.xml:50 apps_brasero.xml:149
+#, no-c-format
+msgid "creating"
+msgstr ""
+
+#. Tag: tertiary
+#: apps_brasero.xml:42 apps_brasero.xml:52
+#, no-c-format
+msgid "data"
+msgstr ""
+
+#. Tag: primary
+#: apps_brasero.xml:44
+#, no-c-format
+msgid "<primary>K3b</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: apps_brasero.xml:46
+#, no-c-format
+msgid "data CDs"
+msgstr ""
+
+#. Tag: primary
+#: apps_brasero.xml:48 apps_brasero.xml:214 apps_brasero.xml:261
+#, no-c-format
+msgid "DVDs"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:54
+#, no-c-format
+msgid ""
+"After starting Brasero for the first time, the main window appears as shown "
+"in <xref linkend=\"fig.brasero.main\" xrefstyle=\"select:label nopage\"/>."
+msgstr ""
+
+#. Tag: title
+#: apps_brasero.xml:60
+#, no-c-format
+msgid "Main View of Brasero"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:71
+#, no-c-format
+msgid "To create a data CD or DVD, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:77
+#, no-c-format
+msgid ""
+"Click <guimenu>Data project</guimenu> or select <menuchoice> "
+"<guimenu>Project</guimenu> <guimenu>New Project</guimenu> <guimenu>New Data "
+"Project</guimenu> </menuchoice>. The project view appears."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:84
+#, no-c-format
+msgid ""
+"Drag and drop the desired directories or individual files either from your "
+"file manager or by clicking the plus icon. To show your directory structure "
+"directly in Brasero, select <menuchoice> <guimenu>View</guimenu> "
+"<guimenu>Show Side Panel</guimenu> </menuchoice> or press <keycap>F7</"
+"keycap>."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:93
+#, no-c-format
+msgid ""
+"Optionally, save the project under a name of your choice with <menuchoice> "
+"<guimenu>Project</guimenu> <guimenu>Save As</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:99
+#, no-c-format
+msgid ""
+"Name your medium. The original label is <guimenu>Data disc (date)</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:105
+#, no-c-format
+msgid ""
+"Choose the output medium from the pull down menu next to the <guimenu>Burn</"
+"guimenu> button (CD/DVD or an ISO image file)."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:111
+#, no-c-format
+msgid ""
+"Click <guimenu>Burn</guimenu>. A new dialog appears, depending on what "
+"medium you have selected in the previous step:"
+msgstr ""
+
+#. Tag: title
+#: apps_brasero.xml:118
+#, no-c-format
+msgid "CD/DVD"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:119
+#, no-c-format
+msgid ""
+"You can define some parameters, like the burning speed or where to store "
+"temporary files. Under <guimenu>Options</guimenu> you can also choose "
+"whether to burn the image directly, close the session, verify the written "
+"data, and others."
+msgstr ""
+
+#. Tag: title
+#: apps_brasero.xml:129
+#, no-c-format
+msgid "ISO Image"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:130
+#, no-c-format
+msgid "Specify a file name for your ISO image file."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:138
+#, no-c-format
+msgid "Start the process with <guimenu>Burn</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apps_brasero.xml:145
+#, no-c-format
+msgid "Creating an Audio CD"
+msgstr ""
+
+#. Tag: tertiary
+#: apps_brasero.xml:151
+#, no-c-format
+msgid "audio"
+msgstr ""
+
+#. Tag: secondary
+#: apps_brasero.xml:155
+#, no-c-format
+msgid "audio CDs"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:157
+#, no-c-format
+msgid ""
+"There are no significant differences between creating an audio CD and "
+"creating a data CD. Proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:164
+#, no-c-format
+msgid ""
+"Select <menuchoice> <guimenu>Project</guimenu> <guimenu>New Project</"
+"guimenu> <guimenu>New Audio Project</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:170
+#, no-c-format
+msgid ""
+"Drag and drop the individual audio tracks to the project directory. The "
+"audio data must be in WAV or Ogg Vorbis format. Determine the sequence of "
+"the tracks by moving them up or down in the project directory."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:177
+#, no-c-format
+msgid "Click <guimenu>Burn</guimenu>. A dialog opens."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:182
+#, no-c-format
+msgid "Specify a drive to write to."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:187
+#, no-c-format
+msgid ""
+"Click <guimenu>Properties</guimenu> to adjust burning speed and other "
+"preferences. When burning audio CDs, choose a lower burning speed to reduce "
+"the risk of burn errors."
+msgstr ""
+
+#. Tag: remark
+#: apps_brasero.xml:191
+#, no-c-format
+msgid ""
+"Not sure if this really is still the case with newer burners. Supposedly, "
+"sometimes, you get better results with higher speeds. - sknorr, 2015-09-24"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:197
+#, no-c-format
+msgid "Click <guimenu>Burn</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apps_brasero.xml:204
+#, no-c-format
+msgid "Copying a CD or DVD"
+msgstr ""
+
+#. Tag: secondary
+#: apps_brasero.xml:208 apps_brasero.xml:216
+#, no-c-format
+msgid "copying"
+msgstr ""
+
+#. Tag: secondary
+#: apps_brasero.xml:212
+#, no-c-format
+msgid "copying CDs"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:218
+#, no-c-format
+msgid "To copy a CD or DVD, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:224
+#, no-c-format
+msgid ""
+"Click <guimenu>Disc Copy</guimenu> or go to <menuchoice> <guimenu>Project</"
+"guimenu> <guimenu>New Project</guimenu> <guimenu>Copy Disc</guimenu> </"
+"menuchoice>. The <guimenu>Copy CD/DVD</guimenu> dialog opens."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:232
+#, no-c-format
+msgid "Specify the source drive you want to copy."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:237
+#, no-c-format
+msgid "Specify a drive or image file to write to."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:242
+#, no-c-format
+msgid ""
+"If necessary, change the burning speed, the temporary directory and other "
+"options in <guimenu>Properties</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:248
+#, no-c-format
+msgid "Click <guimenu>Copy</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apps_brasero.xml:255
+#, no-c-format
+msgid "Writing ISO Images"
+msgstr ""
+
+#. Tag: secondary
+#: apps_brasero.xml:259 apps_brasero.xml:263
+#, no-c-format
+msgid "ISO images"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:265
+#, no-c-format
+msgid ""
+"If you already have an ISO image, click <guimenu>Burn image</guimenu> or go "
+"to <menuchoice> <guimenu>Project</guimenu> <guimenu>New Project</guimenu> "
+"<guimenu>Burn Image</guimenu> </menuchoice>. Choose the image to write and a "
+"disc to write to. If necessary, change parameters by clicking "
+"<guimenu>Properties</guimenu>. Choose the location of the image file with "
+"the pop-up menu labeled <guimenu>Path</guimenu>. Start the burning process "
+"and click <guimenu>Burn</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apps_brasero.xml:276
+#, no-c-format
+msgid "Creating a Multisession CD or DVD"
+msgstr ""
+
+#. Tag: secondary
+#: apps_brasero.xml:280
+#, no-c-format
+msgid "multisession"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:282
+#, no-c-format
+msgid ""
+"Multisession discs can be used to write data in more than one burning "
+"session. This is useful, for example, for writing backups that are smaller "
+"than the media. In each session, you can add another backup file. One note "
+"of interest is that you are not only limited to data CDs or DVDs. You can "
+"also add audio sessions in a multisession disc."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:290
+#, no-c-format
+msgid "To start a new multisession disc, do the following:"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:296
+#, no-c-format
+msgid ""
+"Start with a data disc first as described in <xref linkend=\"sec.brasero."
+"creating\"/>. You cannot start with an audio CD session. Make sure that you "
+"do not fill up the entire disc, because otherwise you cannot append a new "
+"session."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:304
+#, no-c-format
+msgid ""
+"Click <guimenu>Burn</guimenu>. The window <guimenu>Disc Burning Setup</"
+"guimenu> opens."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:310
+#, no-c-format
+msgid ""
+"Select <guimenu>Leave the disc open to add other files later</guimenu> to "
+"make the disc multisession capable. Configure other options if needed."
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:316
+#, no-c-format
+msgid "Start the burning session with <guimenu>Burn</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apps_brasero.xml:323
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: apps_brasero.xml:325
+#, no-c-format
+msgid ""
+"You can find more information about Brasero at <link xlink:href=\"https://"
+"wiki.gnome.org/Apps/Brasero\"></link>."
+msgstr ""

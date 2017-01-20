@@ -1,0 +1,194 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: backup.xml:16
+#, no-c-format
+msgid "Backing Up User Data"
+msgstr ""
+
+#. Tag: para
+#: backup.xml:19
+#, no-c-format
+msgid ""
+"The Backup tool is a simple framework to let users back up and restore their "
+"own data such as home directories or selected files. It is possible to "
+"create scheduled backups or backups on request, and to play back a previous "
+"state of this data."
+msgstr ""
+
+#. Tag: dm:docmanager
+#: backup.xml:26
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: title
+#: backup.xml:32
+#, no-c-format
+msgid "Creating Backups"
+msgstr ""
+
+#. Tag: para
+#: backup.xml:34
+#, no-c-format
+msgid "First schedule which data you want to back up and when to do it."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:40
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Applications</guimenu> <guimenu>System Tools</"
+"guimenu> <guimenu>Backup</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:46
+#, no-c-format
+msgid ""
+"If you are opening the application for the first time, you will see a screen "
+"welcoming you. Click <guimenu>Just show my backup settings</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:53
+#, no-c-format
+msgid ""
+"On the <guimenu>Overview</guimenu> tab you can turn the <guimenu>Automatic "
+"backups</guimenu> on and off. You can also see the overview of the current "
+"settings."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:60
+#, no-c-format
+msgid ""
+"On the <guimenu>Storage</guimenu> tab, select a <guimenu>Backup Location</"
+"guimenu> and a <guimenu>Folder</guimenu> to which the backup should be "
+"written."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:67
+#, no-c-format
+msgid ""
+"On the <guimenu>Folders</guimenu> tab select the directories to back up and "
+"directories to ignore. For example, if you want to back up your home "
+"directory except for the <filename>Downloads</filename> directory, add your "
+"home directory to the category <guimenu>Folders to back up</guimenu> and "
+"your <filename>Downloads</filename> directory to the category "
+"<guimenu>Folders to ignore</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:77
+#, no-c-format
+msgid ""
+"On the <guimenu>Schedule</guimenu> tab select how often to perform the "
+"automatic backups (daily or weekly) and how long to keep the backups."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:83
+#, no-c-format
+msgid ""
+"If you want to perform a backup immediately, too, switch back to the "
+"<guimenu>Overview</guimenu> tab and click <guimenu>Back Up Now</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:89
+#, no-c-format
+msgid "Choose whether you want the backup to be password-protected."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:92
+#, no-c-format
+msgid ""
+"If so, type a password in the two text boxes next to <guimenu>Encryption "
+"Password</guimenu> and <guimenu>Confirm Password</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:96
+#, no-c-format
+msgid "If not, click <guimenu>Allow Restoring Without a Password</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:101
+#, no-c-format
+msgid ""
+"Click <guimenu>Continue</guimenu> to start the backup process. When the "
+"backup is finished, the window will close."
+msgstr ""
+
+#. Tag: title
+#: backup.xml:111
+#, no-c-format
+msgid "Restoring Data"
+msgstr ""
+
+#. Tag: para
+#: backup.xml:113
+#, no-c-format
+msgid "To restore a previous state of your data, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: backup.xml:119
+#, no-c-format
+msgid ""
+"Select <menuchoice> <guimenu>Applications</guimenu> <guimenu>System Tools</"
+"guimenu> <guimenu>Backup</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:125
+#, no-c-format
+msgid ""
+"On the <guimenu>Overview</guimenu> tab, click <guimenu>Restore</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:130
+#, no-c-format
+msgid ""
+"Choose the location from which to restore. Click <guimenu>Forward</guimenu>. "
+"The tool searches for backups stored in that location."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:137
+#, no-c-format
+msgid "Choose a date. Click <guimenu>Forward</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:142
+#, no-c-format
+msgid ""
+"Choose whether to restore the files to the original location or to another "
+"directory. Click <guimenu>Forward</guimenu> to see a summary of your choices."
+msgstr ""
+
+#. Tag: para
+#: backup.xml:149
+#, no-c-format
+msgid "Click <guimenu>Restore</guimenu> to start the restoration process."
+msgstr ""

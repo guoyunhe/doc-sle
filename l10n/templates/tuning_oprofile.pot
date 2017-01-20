@@ -1,0 +1,609 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: tuning_oprofile.xml:20
+#, no-c-format
+msgid "&oprof;&mdash;System-Wide Profiler"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:23
+#, no-c-format
+msgid ""
+"&oprof; is a profiler for dynamic program analysis. It investigates the "
+"behavior of a running program and gathers information. This information can "
+"be viewed and gives hints for further optimization."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:28
+#, no-c-format
+msgid ""
+"It is not necessary to recompile or use wrapper libraries to use &oprof;. "
+"Not even a kernel patch is needed. Usually, when profiling an application, a "
+"small overhead is expected, depending on the workload and sampling frequency."
+msgstr ""
+
+#. Tag: title
+#: tuning_oprofile.xml:49
+#, no-c-format
+msgid "Conceptual Overview"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:51
+#, no-c-format
+msgid ""
+"&oprof; consists of a kernel driver and a daemon for collecting data. It "
+"makes use of the hardware performance counters provided on many processors. "
+"&oprof; is capable of profiling all code including the kernel, kernel "
+"modules, kernel interrupt handlers, system shared libraries, and other "
+"applications."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:59
+#, no-c-format
+msgid ""
+"Modern processors support profiling through the hardware by performance "
+"counters. Depending on the processor, there can be many counters and each of "
+"these can be programmed with an event to count. Each counter has a value "
+"which determines how often a sample is taken. The lower the value, the more "
+"often it is used."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:67
+#, no-c-format
+msgid ""
+"During the post-processing step, all information is collected and "
+"instruction addresses are mapped to a function name."
+msgstr ""
+
+#. Tag: title
+#: tuning_oprofile.xml:73
+#, no-c-format
+msgid "Installation and Requirements"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:75
+#, no-c-format
+msgid ""
+"To use &oprof;, install the <systemitem class=\"resource\">oprofile</"
+"systemitem> package<phrase os=\"sles;sled\"> that is included with the "
+"&slea; SDK. &oprof; works on &x86-64;, &zseries;, and &power; processors. To "
+"find out how to install software from the SDK, refer to <xref linkend=\"sec."
+"add-ons.sdk\"/></phrase>."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:83
+#, no-c-format
+msgid ""
+"It is useful to install the <filename>*-debuginfo</filename> package for the "
+"respective application you want to profile. If you want to profile the "
+"Kernel, you need the <filename>debuginfo</filename> package as well."
+msgstr ""
+
+#. Tag: title
+#: tuning_oprofile.xml:90
+#, no-c-format
+msgid "Available &oprof; Utilities"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:92
+#, no-c-format
+msgid ""
+"&oprof; contains several utilities to handle the profiling process and its "
+"profiled data. The following list is a short summary of programs used in "
+"this chapter:"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:103
+#, no-c-format
+msgid ""
+"Outputs annotated source or assembly listings mixed with profile "
+"information. An annotated report can be used in combination with "
+"<command>addr2line</command> to identify the source file and line where "
+"hotspots potentially exist. See <command>man addr2line</command> for more "
+"information."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:122
+#, no-c-format
+msgid ""
+"Controls the profiling sessions (start or stop), dumps profile data, and "
+"sets up parameters."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:138
+#, no-c-format
+msgid "Lists available events with short descriptions."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:147
+#, no-c-format
+msgid ""
+"Converts sample database files from a foreign binary format to the native "
+"format."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:157
+#, no-c-format
+msgid "Generates reports from profiled data."
+msgstr ""
+
+#. Tag: title
+#: tuning_oprofile.xml:165
+#, no-c-format
+msgid "Using &oprof;"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:167
+#, no-c-format
+msgid ""
+"With &oprof;, you can profile both the kernel and applications. When "
+"profiling the kernel, tell &oprof; where to find the <filename>vmlinuz*</"
+"filename> file. Use the <option>--vmlinux</option> option and point it to "
+"<filename>vmlinuz*</filename> (usually in <filename>/boot</filename>). If "
+"you need to profile kernel modules, &oprof; does this by default. However, "
+"make sure you read <link xlink:href=\"http://oprofile.sourceforge.net/doc/"
+"kernel-profiling.html\"></link>."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:177
+#, no-c-format
+msgid ""
+"Applications usually do not need to profile the kernel, therefore you should "
+"use the <option>--no-vmlinux</option> option to reduce the amount of "
+"information."
+msgstr ""
+
+#. Tag: title
+#: tuning_oprofile.xml:184
+#, no-c-format
+msgid "Creating a Report"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:185
+#, no-c-format
+msgid ""
+"Starting the daemon, collecting data, stopping the daemon, and creating a "
+"report."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:191
+#, no-c-format
+msgid "Open a shell and log in as &rootuser;."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:196
+#, no-c-format
+msgid "Decide if you want to profile with or without the Linux Kernel:"
+msgstr ""
+
+#. Tag: title
+#: tuning_oprofile.xml:202
+#, no-c-format
+msgid "Profile With the Linux Kernel"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:203
+#, no-c-format
+msgid ""
+"Execute the following commands, because <command>opcontrol</command> can "
+"only work with uncompressed images:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_oprofile.xml:209
+#, no-c-format
+msgid ""
+"cp /boot/vmlinux-`uname -r`.gz /tmp\n"
+"gunzip /tmp/vmlinux*.gz\n"
+"opcontrol --vmlinux=/tmp/vmlinux*"
+msgstr ""
+
+#. Tag: title
+#: tuning_oprofile.xml:213
+#, no-c-format
+msgid "Profile Without the Linux Kernel"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:214
+#, no-c-format
+msgid "Use the following command:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_oprofile.xml:218
+#, no-c-format
+msgid "opcontrol --no-vmlinux"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:219
+#, no-c-format
+msgid ""
+"If you want to see which functions call other functions in the output, "
+"additionally use the <option>--callgraph</option> option and set a maximum "
+"<replaceable>DEPTH</replaceable>:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_oprofile.xml:224
+#, no-c-format
+msgid "opcontrol --no-vmlinux --callgraph <replaceable>DEPTH</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:229
+#, no-c-format
+msgid "Start the &oprof; daemon:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_oprofile.xml:232
+#, no-c-format
+msgid ""
+"opcontrol --start\n"
+"Using 2.6+ OProfile kernel interface.\n"
+"Using log file /var/lib/oprofile/samples/oprofiled.log\n"
+"Daemon started.\n"
+"Profiler running."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:235
+#, no-c-format
+msgid "Now start the application you want to profile."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:240
+#, no-c-format
+msgid "Stop the &oprof; daemon:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_oprofile.xml:243
+#, no-c-format
+msgid "opcontrol --stop"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:246
+#, no-c-format
+msgid ""
+"Dump the collected data to <filename>/var/lib/oprofile/samples</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_oprofile.xml:250
+#, no-c-format
+msgid "opcontrol --dump"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:253
+#, no-c-format
+msgid "Create a report:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_oprofile.xml:256
+#, no-c-format
+msgid ""
+"opreport\n"
+"Overflow stats not available\n"
+"CPU: CPU with timer interrupt, speed 0 MHz (estimated)\n"
+"Profiling through timer interrupt\n"
+"          TIMER:0|\n"
+"  samples|      %|\n"
+"------------------\n"
+"    84877 98.3226 no-vmlinux\n"
+"..."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:259
+#, no-c-format
+msgid "Shut down the &oprofd; daemon:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_oprofile.xml:262
+#, no-c-format
+msgid "opcontrol --shutdown"
+msgstr ""
+
+#. Tag: title
+#: tuning_oprofile.xml:268
+#, no-c-format
+msgid "Getting Event Configurations"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:269
+#, no-c-format
+msgid "The general procedure for event configuration is as follows:"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:274
+#, no-c-format
+msgid ""
+"Use first the events <literal>CPU-CLK_UNHALTED</literal> and "
+"<literal>INST_RETIRED</literal> to find optimization opportunities."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:280
+#, no-c-format
+msgid ""
+"Use specific events to find bottlenecks. To list them, use the command "
+"<command>opcontrol</command> <option>--list-events</option>."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:286
+#, no-c-format
+msgid ""
+"If you need to profile certain events, first check the available events "
+"supported by your processor with the <command>ophelp</command> command "
+"(example output generated from Intel Core i5 CPU):"
+msgstr ""
+
+#. Tag: screen
+#: tuning_oprofile.xml:291
+#, no-c-format
+msgid ""
+"<command>ophelp</command>\n"
+"oprofile: available events for CPU type \"Intel Architectural Perfmon\"\n"
+"\n"
+"See Intel 64 and IA-32 Architectures Software Developer's Manual\n"
+"Volume 3B (Document 253669) Chapter 18 for architectural perfmon events\n"
+"This is a limited set of fallback events because oprofile does not know your "
+"CPU\n"
+"CPU_CLK_UNHALTED: (counter: all))\n"
+"        Clock cycles when not halted (min count: 6000)\n"
+"INST_RETIRED: (counter: all))\n"
+"        number of instructions retired (min count: 6000)\n"
+"LLC_MISSES: (counter: all))\n"
+"        Last level cache demand requests from this core that missed the LLC "
+"(min count: 6000)\n"
+"        Unit masks (default 0x41)\n"
+"        ----------\n"
+"        0x41: No unit mask\n"
+"LLC_REFS: (counter: all))\n"
+"        Last level cache demand requests from this core (min count: 6000)\n"
+"        Unit masks (default 0x4f)\n"
+"        ----------\n"
+"        0x4f: No unit mask\n"
+"BR_MISS_PRED_RETIRED: (counter: all))\n"
+"        number of mispredicted branches retired (precise) (min count: 500)"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:292
+#, no-c-format
+msgid ""
+"You can get the same output from <command>opcontrol</command> <option>--list-"
+"events</option>."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:296
+#, no-c-format
+msgid ""
+"Specify the performance counter events with the option <option>--event</"
+"option>. Multiple options are possible. This option needs an event name "
+"(from <command>ophelp</command>) and a sample rate, for example:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_oprofile.xml:302
+#, no-c-format
+msgid "opcontrol --event=CPU_CLK_UNHALTED:100000"
+msgstr ""
+
+#. Tag: title
+#: tuning_oprofile.xml:304
+#, no-c-format
+msgid "Setting Sampling Rates with <literal>CPU_CLK_UNHALTED</literal>"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:305
+#, no-c-format
+msgid ""
+"Setting low sampling rates can seriously impair the system performance while "
+"high sample rates can disrupt the system to such a high degree that the data "
+"is useless. It is recommended to tune the performance metric for being "
+"monitored with and without &oprof; and to experimentally determine the "
+"minimum sample rate that disrupts the performance the least."
+msgstr ""
+
+#. Tag: title
+#: tuning_oprofile.xml:371
+#, no-c-format
+msgid "Using &oprof;'s GUI"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:373
+#, no-c-format
+msgid ""
+"The GUI for &oprof; can be started as &rootuser; with <command>oprof_start</"
+"command>, see <xref linkend=\"fig.tuning.oprofile\"/>. Select your events "
+"and change the counter, if necessary. Every green line is added to the list "
+"of checked events. Hover the mouse over the line to see a help text in the "
+"status line below. Use the <guimenu>Configuration</guimenu> tab to set the "
+"buffer and CPU size, the verbose option and others. Click <guimenu>Start</"
+"guimenu> to execute &oprof;."
+msgstr ""
+
+#. Tag: title
+#: tuning_oprofile.xml:385
+#, no-c-format
+msgid "GUI for &oprof;"
+msgstr ""
+
+#. Tag: title
+#: tuning_oprofile.xml:397
+#, no-c-format
+msgid "Generating Reports"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:399
+#, no-c-format
+msgid ""
+"Before generating a report, make sure &oprof; has dumped your data to the "
+"<filename>/var/lib/oprofile/samples</filename> directory using the command "
+"<command>opcontrol</command> <option>--dump</option>. A report can be "
+"generated with the commands <command>opreport</command> or "
+"<command>opannotate</command>."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:407
+#, no-c-format
+msgid ""
+"Calling <command>opreport</command> without any options gives a complete "
+"summary. With an executable as an argument, retrieve profile data only from "
+"this executable. If you analyze applications written in C++, use the "
+"<option>--demangle smart</option> option."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:414
+#, no-c-format
+msgid ""
+"The <command>opannotate</command> generates output with annotations from "
+"source code. Run it with the following options:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_oprofile.xml:419
+#, no-c-format
+msgid ""
+"<command>opannotate</command> --source \\\n"
+"   --base-dirs=<replaceable>BASEDIR</replaceable> \\\n"
+"   --search-dirs=<replaceable/> \\\n"
+"   --output-dir=annotated/ \\\n"
+"   /lib/libfoo.so"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:421
+#, no-c-format
+msgid ""
+"The option <option>--base-dir</option> contains a comma separated list of "
+"paths which is stripped from debug source files. These paths were searched "
+"prior to looking in <option>--search-dirs</option>. The <option>--search-"
+"dirs</option> option is also a comma separated list of directories to search "
+"for source files."
+msgstr ""
+
+#. Tag: title
+#: tuning_oprofile.xml:430
+#, no-c-format
+msgid "Inaccuracies in Annotated Source"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:431
+#, no-c-format
+msgid ""
+"Because of compiler optimization, code can disappear and appear in a "
+"different place. Use the information in <link xlink:href=\"http://oprofile."
+"sourceforge.net/doc/debug-info.html\"></link> to fully understand its "
+"implications."
+msgstr ""
+
+#. Tag: title
+#: tuning_oprofile.xml:440
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:442
+#, no-c-format
+msgid ""
+"This chapter only provides a short overview. Refer to the following links "
+"for more information:"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:452
+#, no-c-format
+msgid "The project home page."
+msgstr ""
+
+#. Tag: term
+#: tuning_oprofile.xml:458
+#, no-c-format
+msgid "Manpages"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:460
+#, no-c-format
+msgid "Details descriptions about the options of the different tools."
+msgstr ""
+
+#. Tag: filename
+#: tuning_oprofile.xml:466
+#, no-c-format
+msgid "/usr/share/doc/packages/oprofile/oprofile.html"
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:469
+#, no-c-format
+msgid "Contains the &oprof; manual."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:478
+#, no-c-format
+msgid "Architecture reference for Intel processors."
+msgstr ""
+
+#. Tag: para
+#: tuning_oprofile.xml:497
+#, no-c-format
+msgid ""
+"Architecture reference for PowerPC64 processors in IBM iSeries, pSeries, and "
+"Blade server systems."
+msgstr ""

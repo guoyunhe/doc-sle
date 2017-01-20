@@ -1,0 +1,299 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: tuning_how.xml:14
+#, no-c-format
+msgid "General Notes on System Tuning"
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:17
+#, no-c-format
+msgid ""
+"This manual discusses how to find the reasons for performance problems and "
+"provides means to solve these problems. Before you start tuning your system, "
+"you should make sure you have ruled out common problems and have found the "
+"cause for the problem. You should also have a detailed plan on how to tune "
+"the system, because applying random tuning tips often will not help and "
+"could make things worse."
+msgstr ""
+
+#. Tag: title
+#: tuning_how.xml:33
+#, no-c-format
+msgid "General Approach When Tuning a System"
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:35
+#, no-c-format
+msgid "Specify the problem that needs to be solved."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:40
+#, no-c-format
+msgid ""
+"In case the degradation is new, identify any recent changes to the system."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:46
+#, no-c-format
+msgid "Identify why the issue is considered a performance problem."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:51
+#, no-c-format
+msgid ""
+"Specify a metric that can be used to analyze performance. This metric could "
+"for example be latency, throughput, the maximum number of users that are "
+"simultaneously logged in, or the maximum number of active users."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:58
+#, no-c-format
+msgid "Measure current performance using the metric from the previous step."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:63
+#, no-c-format
+msgid ""
+"Identify the subsystem(s) where the application is spending the most time."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:72
+#, no-c-format
+msgid "Monitor the system and/or the application."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:77
+#, no-c-format
+msgid "Analyze the data, categorize where time is being spent."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:84
+#, no-c-format
+msgid "Tune the subsystem identified in the previous step."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:89
+#, no-c-format
+msgid ""
+"Remeasure the current performance without monitoring using the same metric "
+"as before."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:95
+#, no-c-format
+msgid ""
+"If performance is still not acceptable, start over with <xref linkend=\"st."
+"tuning.basics.whyproblem\"/>."
+msgstr ""
+
+#. Tag: title
+#: tuning_how.xml:102
+#, no-c-format
+msgid "Be Sure What Problem to Solve"
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:104
+#, no-c-format
+msgid ""
+"Before starting to tuning a system, try to describe the problem as exactly "
+"as possible. A statement like <quote>The system is slow!</quote> is not a "
+"helpful problem description. For example, it could make a difference whether "
+"the system speed needs to be improved in general or only at peak times."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:112
+#, no-c-format
+msgid ""
+"Furthermore, make sure you can apply a measurement to your problem, "
+"otherwise you will not be able to verify if the tuning was a success or not. "
+"You should always be able to compare <quote>before</quote> and <quote>after</"
+"quote>. Which metrics to use depends on the scenario or application you are "
+"looking into. Relevant Web server metrics, for example, could be expressed "
+"in terms of"
+msgstr ""
+
+#. Tag: term
+#: tuning_how.xml:123
+#, no-c-format
+msgid "Latency"
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:125
+#, no-c-format
+msgid "The time to deliver a page"
+msgstr ""
+
+#. Tag: term
+#: tuning_how.xml:131
+#, no-c-format
+msgid "Throughput"
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:133
+#, no-c-format
+msgid "Number of pages served per second or megabytes transferred per second"
+msgstr ""
+
+#. Tag: term
+#: tuning_how.xml:139
+#, no-c-format
+msgid "Active Users"
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:141
+#, no-c-format
+msgid ""
+"The maximum number of users that can be downloading pages while still "
+"receiving pages within an acceptable latency"
+msgstr ""
+
+#. Tag: title
+#: tuning_how.xml:150
+#, no-c-format
+msgid "Rule Out Common Problems"
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:152
+#, no-c-format
+msgid ""
+"A performance problem often is caused by network or hardware problems, bugs, "
+"or configuration issues. Make sure to rule out problems such as the ones "
+"listed below before attempting to tune your system:"
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:160
+#, no-c-format
+msgid ""
+"Check the output of the &systemd; journal (see <xref linkend=\"cha.journalctl"
+"\"/>) for unusual entries."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:166
+#, no-c-format
+msgid ""
+"Check (using <command>top</command> or <command>ps</command>) whether a "
+"certain process misbehaves by eating up unusual amounts of CPU time or "
+"memory."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:173
+#, no-c-format
+msgid ""
+"Check for network problems by inspecting <filename>/proc/net/dev</filename>."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:179
+#, no-c-format
+msgid ""
+"In case of I/O problems with physical disks, make sure it is not caused by "
+"hardware problems (check the disk with the <systemitem>smartmontools</"
+"systemitem>) or by a full disk."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:186
+#, no-c-format
+msgid ""
+"Ensure that background jobs are scheduled to be carried out in times the "
+"server load is low. Those jobs should also run with low priority (set via "
+"<command>nice</command>)."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:193
+#, no-c-format
+msgid ""
+"If the machine runs several services using the same resources, consider "
+"moving services to another server."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:199
+#, no-c-format
+msgid "Last, make sure your software is up-to-date."
+msgstr ""
+
+#. Tag: title
+#: tuning_how.xml:206
+#, no-c-format
+msgid "Finding the Bottleneck"
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:208
+#, no-c-format
+msgid ""
+"Finding the bottleneck very often is the hardest part when tuning a system. "
+"&productname; offers many tools to help you with this task. See <xref "
+"linkend=\"part.tuning.monitoring\"/> for detailed information on general "
+"system monitoring applications and log file analysis. If the problem "
+"requires a long-time in-depth analysis, the Linux kernel offers means to "
+"perform such analysis. See <xref linkend=\"part.tuning.kerneltrace\"/> for "
+"coverage."
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:218
+#, no-c-format
+msgid ""
+"Once you have collected the data, it needs to be analyzed. First, inspect if "
+"the server's hardware (memory, CPU, bus) and its I/O capacities (disk, "
+"network) are sufficient. If these basic conditions are met, the system might "
+"benefit from tuning."
+msgstr ""
+
+#. Tag: title
+#: tuning_how.xml:226
+#, no-c-format
+msgid "Step-by-step Tuning"
+msgstr ""
+
+#. Tag: para
+#: tuning_how.xml:228
+#, no-c-format
+msgid ""
+"Make sure to carefully plan the tuning itself. It is of vital importance to "
+"only do one step at a time. Only by doing so you will be able to measure if "
+"the change provided an improvement or even had a negative impact. Each "
+"tuning activity should be measured over a sufficient time period to ensure "
+"you can do an analysis based on significant data. If you cannot measure a "
+"positive effect, do not make the change permanent. Chances are, that it "
+"might have a negative effect in the future."
+msgstr ""

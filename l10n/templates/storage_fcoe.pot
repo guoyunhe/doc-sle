@@ -1,0 +1,901 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: storage_fcoe.xml:9
+#, no-c-format
+msgid "Fibre Channel Storage over Ethernet Networks: FCoE"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: storage_fcoe.xml:11
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:16
+#, no-c-format
+msgid ""
+"Many enterprise data centers rely on Ethernet for their LAN and data "
+"traffic, and on Fibre Channel networks for their storage infrastructure. "
+"Open Fibre Channel over Ethernet (FCoE) Initiator software allows servers "
+"with Ethernet adapters to connect to a Fibre Channel storage subsystem over "
+"an Ethernet network. This connectivity was previously reserved exclusively "
+"for systems with Fibre Channel adapters over a Fibre Channel fabric. The "
+"FCoE technology reduces complexity in the data center by aiding network "
+"convergence. This helps to preserve your existing investments in a Fibre "
+"Channel storage infrastructure and to simplify network management."
+msgstr ""
+
+#. Tag: title
+#: storage_fcoe.xml:28
+#, no-c-format
+msgid "Open Fibre Channel over Ethernet SAN"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:38
+#, no-c-format
+msgid ""
+"Open-FCoE allows you to run the Fibre Channel protocols on the host, instead "
+"of on proprietary hardware on the host bus adapter. It is targeted for 10 "
+"Gbps (gigabit per second) Ethernet adapters, but can work on any Ethernet "
+"adapter that supports pause frames. The initiator software provides a Fibre "
+"Channel protocol processing module and an Ethernet-based transport module. "
+"The Open-FCoE module acts as a low-level driver for SCSI. The Open-FCoE "
+"transport uses <command>net_device</command> to send and receive packets. "
+"Data Center Bridging (DCB) drivers provide the quality of service for FCoE."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:48
+#, no-c-format
+msgid ""
+"FCoE is an encapsulation protocol that moves the Fibre Channel protocol "
+"traffic over Ethernet connections without changing the Fibre Channel frame. "
+"This allows your network security and traffic management infrastructure to "
+"work the same with FCoE as it does with Fibre Channel."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:54
+#, no-c-format
+msgid ""
+"You might choose to deploy FCoE in your enterprise if the following "
+"conditions exist:"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:60
+#, no-c-format
+msgid ""
+"Your enterprise already has a Fibre Channel storage subsystem and "
+"administrators with Fibre Channel skills and knowledge."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:66
+#, no-c-format
+msgid "You are deploying 10 Gbps Ethernet in the network."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:71
+#, no-c-format
+msgid "This section describes how to set up FCoE in your network."
+msgstr ""
+
+#. Tag: title
+#: storage_fcoe.xml:75
+#, no-c-format
+msgid "Configuring FCoE Interfaces during the Installation"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:77
+#, no-c-format
+msgid ""
+"The &yast; installation for &productname; allows you to configure FCoE disks "
+"during the operating system installation if FCoE is enabled at the switch "
+"for the connections between the server and the Fibre Channel storage "
+"infrastructure. Some system BIOS types can automatically detect the FCoE "
+"disks, and report the disks to the &yast; Installation software. However, "
+"automatic detection of FCoE disks is not supported by all BIOS types. To "
+"enable automatic detection in this case, you can add the <command>withfcoe</"
+"command> option to the kernel command line when you begin the installation:"
+msgstr ""
+
+#. Tag: screen
+#: storage_fcoe.xml:89
+#, no-c-format
+msgid "withfcoe=1"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:91
+#, no-c-format
+msgid ""
+"When the FCoE disks are detected, the &yast; installation offers the option "
+"to configure FCoE instances at that time. On the Disk Activation page, "
+"select <guimenu>Configure FCoE Interfaces</guimenu> to access the FCoE "
+"configuration. For information about configuring the FCoE interfaces, see "
+"<xref linkend=\"sec.fcoe.yast\" xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_fcoe.xml:110
+#, no-c-format
+msgid "Mount Point Support"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:111
+#, no-c-format
+msgid ""
+"FCoE devices will appear asynchronously during the boot process. While the "
+"initrd guarantees that those devices are set up correctly for the root file "
+"system, there are no such guarantees for any other file systems or mount "
+"points like <filename>/usr</filename>. Hence any system mount points like "
+"<filename>/usr</filename> or <filename>/var</filename> are not supported. If "
+"you want to use those devices, ensure correct synchronisation of the "
+"respective services and devices."
+msgstr ""
+
+#. Tag: title
+#: storage_fcoe.xml:122
+#, no-c-format
+msgid "Installing FCoE and the &yast; FCoE Client"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:124
+#, no-c-format
+msgid ""
+"You can set up FCoE disks in your storage infrastructure by enabling FCoE at "
+"the switch for the connections to a server. If FCoE disks are available when "
+"the &productname; operating system is installed, the FCoE Initiator software "
+"is automatically installed at that time."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:131
+#, no-c-format
+msgid ""
+"If the FCoE Initiator software and the &yast; FCoE Client software are not "
+"installed, use the following procedure to manually install them with the "
+"following command:"
+msgstr ""
+
+#. Tag: screen
+#: storage_fcoe.xml:137
+#, no-c-format
+msgid "sudo zypper in yast2-fcoe-client fcoe-utils"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:139
+#, no-c-format
+msgid ""
+"Alternatively, use the &yast; Software Manager to install the packages "
+"listed above."
+msgstr ""
+
+#. Tag: title
+#: storage_fcoe.xml:145
+#, no-c-format
+msgid "Managing FCoE Services with &yast;"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:147
+#, no-c-format
+msgid ""
+"You can use the &yast; FCoE Client Configuration option to create, "
+"configure, and remove FCoE interfaces for the FCoE disks in your Fibre "
+"Channel storage infrastructure. To use this option, the FCoE Initiator "
+"service (the <systemitem class=\"daemon\">fcoemon</systemitem> daemon) and "
+"the Link Layer Discovery Protocol agent daemon (<systemitem class=\"daemon"
+"\">llpad</systemitem>) must be installed and running, and the FCoE "
+"connections must be enabled at the FCoE-capable switch."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:160
+#, no-c-format
+msgid ""
+"Launch &yast; and select <menuchoice><guimenu>Network Services</"
+"guimenu><guimenu>FCoE Client Configuration</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:177
+#, no-c-format
+msgid ""
+"On the <guimenu>Services</guimenu> tab, view or modify the FCoE service and "
+"Lldpad (Link Layer Discovery Protocol agent daemon) service start time as "
+"necessary."
+msgstr ""
+
+#. Tag: title
+#: storage_fcoe.xml:185
+#, no-c-format
+msgid "FCoE Service Start:"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:186
+#, no-c-format
+msgid ""
+"Specifies whether to start the Fibre Channel over Ethernet service "
+"<command>fcoemon</command> daemon at the server boot time or manually. The "
+"daemon controls the FCoE interfaces and establishes a connection with the "
+"<systemitem class=\"daemon\">llpad</systemitem> daemon. The values are "
+"<guimenu>When Booting</guimenu> (default) or <guimenu>Manually</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: storage_fcoe.xml:198
+#, no-c-format
+msgid "Lldpad Service Start:"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:199
+#, no-c-format
+msgid ""
+"Specifies whether to start the Link Layer Discovery Protocol agent "
+"<systemitem class=\"daemon\">llpad</systemitem> daemon at the server boot "
+"time or manually. The <systemitem class=\"daemon\">llpad</systemitem> daemon "
+"informs the <command>fcoemon</command> daemon about the Data Center Bridging "
+"features and the configuration of the FCoE interfaces. The values are "
+"<guimenu>When Booting</guimenu> (default) or <guimenu>Manually</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:211
+#, no-c-format
+msgid ""
+"If you modify a setting, click <guimenu>OK</guimenu> to save and apply the "
+"change."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:217
+#, no-c-format
+msgid ""
+"On the <guimenu>Interfaces</guimenu> tab, view information about all of the "
+"detected network adapters on the server, including information about VLAN "
+"and FCoE configuration. You can also create an FCoE VLAN interface, change "
+"settings for an existing FCoE interface, or remove an FCoE interface."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:234
+#, no-c-format
+msgid ""
+"Use the <guimenu>FCoE VLAN Interface</guimenu> column to determine whether "
+"FCoE is available or not:"
+msgstr ""
+
+#. Tag: replaceable
+#: storage_fcoe.xml:240
+#, no-c-format
+msgid "Interface Name"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:243
+#, no-c-format
+msgid ""
+"If a name is assigned to the interface, such as <filename>eth4.200</"
+"filename>, FCoE is available on the switch, and the FCoE interface is "
+"activated for the adapter."
+msgstr ""
+
+#. Tag: term
+#: storage_fcoe.xml:251
+#, no-c-format
+msgid "Not Configured:"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:253
+#, no-c-format
+msgid ""
+"If the status is <guimenu>not configured</guimenu>, FCoE is enabled on the "
+"switch, but an FCoE interface has not been activated for the adapter. Select "
+"the adapter, then click <guimenu>Create FCoE VLAN Interface</guimenu> to "
+"activate the interface on the adapter."
+msgstr ""
+
+#. Tag: term
+#: storage_fcoe.xml:262
+#, no-c-format
+msgid "Not Available:"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:264
+#, no-c-format
+msgid ""
+"If the status is <guimenu>not available</guimenu>, FCoE is not possible for "
+"the adapter because FCoE has not been enabled for that connection on the "
+"switch."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:274
+#, no-c-format
+msgid ""
+"To set up an FCoE-enabled adapter that has not yet been configured, select "
+"it and click <guimenu>Create FCoE VLAN Interface</guimenu>. Confirm the "
+"query with <guimenu>Yes</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:279
+#, no-c-format
+msgid ""
+"The adapter is now listed with an interface name in the <guimenu>FCoE VLAN "
+"Interface</guimenu> column."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:285
+#, no-c-format
+msgid ""
+"To change the settings for an adapter that is already configured, select it "
+"from the list, then click <guimenu>Change Settings</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:289
+#, no-c-format
+msgid "The following options can be configured:"
+msgstr ""
+
+#. Tag: guimenu
+#: storage_fcoe.xml:294
+#, no-c-format
+msgid "FCoE Enable"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:297
+#, no-c-format
+msgid "Enable or disable the creation of FCoE instances for the adapter."
+msgstr ""
+
+#. Tag: guimenu
+#: storage_fcoe.xml:303
+#, no-c-format
+msgid "DCB Required"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:306
+#, no-c-format
+msgid ""
+"Specifies whether Data Center Bridging is required for the adapter (usually "
+"this is the case)."
+msgstr ""
+
+#. Tag: guimenu
+#: storage_fcoe.xml:313
+#, no-c-format
+msgid "Auto VLAN"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:316
+#, no-c-format
+msgid ""
+"Specifies whether the <systemitem class=\"daemon\">fcoemon</systemitem> "
+"daemon creates the VLAN interfaces automatically."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:323
+#, no-c-format
+msgid ""
+"If you modify a setting, click <guimenu>Next</guimenu> to save and apply the "
+"change. The settings are written to the <filename>/etc/fcoe/cfg-"
+"eth<replaceable>X</replaceable></filename> file. The <systemitem class="
+"\"daemon\">fcoemon</systemitem> daemon reads the configuration files for "
+"each FCoE interface when it is initialized."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:332
+#, no-c-format
+msgid ""
+"To remove an interface that is already configured, select it from the list. "
+"Click <guimenu>Remove Interface</guimenu> and <guimenu>Continue</guimenu> to "
+"confirm. The FCoE Interface value changes to <guimenu>not configured</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:340
+#, no-c-format
+msgid ""
+"On the <guimenu>Configuration</guimenu> tab, view or modify the general "
+"settings for the FCoE system service. You can enable or disable debugging "
+"messages from the FCoE service script and the <systemitem class=\"daemon"
+"\">fcoemon</systemitem> daemon and specify whether messages are sent to the "
+"system log."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:359
+#, no-c-format
+msgid "Click <guimenu>OK</guimenu> to save and apply changes."
+msgstr ""
+
+#. Tag: title
+#: storage_fcoe.xml:366
+#, no-c-format
+msgid "Configuring FCoE with Commands"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:370
+#, no-c-format
+msgid "Open a terminal console."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:375
+#, no-c-format
+msgid ""
+"Use &yast; to configure the Ethernet network interface card, such as "
+"<filename>eth2</filename>."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:381
+#, no-c-format
+msgid ""
+"Start the Link Layer Discovery Protocol agent daemon (<systemitem class="
+"\"daemon\">llpad</systemitem>)."
+msgstr ""
+
+#. Tag: screen
+#: storage_fcoe.xml:385
+#, no-c-format
+msgid "sudo systemctl start lldpad"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:388
+#, no-c-format
+msgid "Enable Data Center Bridging on your Ethernet adapter."
+msgstr ""
+
+#. Tag: screen
+#: storage_fcoe.xml:391
+#, no-c-format
+msgid ""
+"&prompt.user;dcbtool sc eth2 dcb on\n"
+"  Version:       2\n"
+"  Command:       Set Config\n"
+"  Feature:       DCB State\n"
+"  Port:          eth2\n"
+"  Status:        Successful"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:394
+#, no-c-format
+msgid ""
+"Enable and set the Priority Flow Control (PFC) settings for Data Center "
+"Bridging."
+msgstr ""
+
+#. Tag: screen
+#: storage_fcoe.xml:398
+#, no-c-format
+msgid "sudo dcbtool sc eth&lt;x&gt; pfc e:1 a:1 w:1"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:399
+#, no-c-format
+msgid "Argument setting values are:"
+msgstr ""
+
+#. Tag: term
+#: storage_fcoe.xml:404
+#, no-c-format
+msgid "e:&lt;0|1&gt;"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:406
+#, no-c-format
+msgid "Controls feature enablement."
+msgstr ""
+
+#. Tag: term
+#: storage_fcoe.xml:412
+#, no-c-format
+msgid "a:&lt;0|1&gt;"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:414
+#, no-c-format
+msgid ""
+"Controls whether the feature is advertised via Data Center Bridging Exchange "
+"protocol to the peer."
+msgstr ""
+
+#. Tag: term
+#: storage_fcoe.xml:421
+#, no-c-format
+msgid "w:&lt;0|1&gt;"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:423
+#, no-c-format
+msgid ""
+"Controls whether the feature is willing to change its operational "
+"configuration based on what is received from the peer."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:432
+#, no-c-format
+msgid ""
+"Enable the Data Center Bridging to accept the switch’s priority setting for "
+"FCoE."
+msgstr ""
+
+#. Tag: screen
+#: storage_fcoe.xml:436
+#, no-c-format
+msgid ""
+"&prompt.user;sudo dcbtool sc eth2 app:fcoe e:1\n"
+"  Version:       2\n"
+"  Command:       Set Config\n"
+"  Feature:       Application FCoE\n"
+"  Port:          eth2\n"
+"  Status:        Successful"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:439
+#, no-c-format
+msgid ""
+"Copy the default FCoE configuration file to <filename>/etc/fcoe/cfg-eth2</"
+"filename>."
+msgstr ""
+
+#. Tag: screen
+#: storage_fcoe.xml:443
+#, no-c-format
+msgid "sudo cp /etc/fcoe/cfg-ethx /etc/fcoe/cfg-eth2"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:446
+#, no-c-format
+msgid "Start the FCoE Initiator service."
+msgstr ""
+
+#. Tag: screen
+#: storage_fcoe.xml:449
+#, no-c-format
+msgid "systemctl start fcoe.service"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:452
+#, no-c-format
+msgid ""
+"Set up the Link Layer Discovery Protocol agent daemon (<systemitem class="
+"\"daemon\">llpad</systemitem>) and the FCoE Initiator service to start when "
+"booting."
+msgstr ""
+
+#. Tag: screen
+#: storage_fcoe.xml:457
+#, no-c-format
+msgid "systemctl enable llpad fcoe"
+msgstr ""
+
+#. Tag: title
+#: storage_fcoe.xml:462
+#, no-c-format
+msgid "Managing FCoE Instances with the FCoE Administration Tool"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:464
+#, no-c-format
+msgid ""
+"The <command>fcoeadm</command> utility is the Fibre Channel over Ethernet "
+"(FCoE) management tool. It can be used to create, destroy, and reset an FCoE "
+"instance on a given network interface. The <command>fcoeadm</command> "
+"utility sends commands to a running <systemitem class=\"daemon\">fcoemon</"
+"systemitem> process via a socket interface. For information about "
+"<command>fcoemon</command>, see the <command>man 8 fcoemon</command>."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:474
+#, no-c-format
+msgid ""
+"The <command>fcoeadm</command> utility allows you to query the FCoE "
+"instances about the following:"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:481
+#, no-c-format
+msgid "Interfaces"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:486
+#, no-c-format
+msgid "Target LUNs"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:491
+#, no-c-format
+msgid "Port statistics"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:497
+#, no-c-format
+msgid ""
+"The <command>fcoeadm</command> utility is part of the <filename>fcoe-utils</"
+"filename> package. The general syntax for the command looks like the "
+"following:"
+msgstr ""
+
+#. Tag: screen
+#: storage_fcoe.xml:503
+#, no-c-format
+msgid ""
+"fcoeadm\n"
+"  [-c|--create] [&lt;ethX&gt;]\n"
+"  [-d|--destroy] [&lt;ethX&gt;]\n"
+"  [-r|--reset] [&lt;ethX&gt;]\n"
+"  [-S|--Scan] [&lt;ethX&gt;]\n"
+"  [-i|--interface] [&lt;ethX&gt;]\n"
+"  [-t|--target] [&lt;ethX&gt;]\n"
+"  [-l|--lun] [&lt;ethX&gt;]\n"
+"  [-s|--stats &lt;ethX&gt;] [&lt;interval&gt;]\n"
+"  [-v|--version]\n"
+"  [-h|--help]"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:505
+#, no-c-format
+msgid "Refer to <command>man 8 fcoeadm</command> for details."
+msgstr ""
+
+#. Tag: bridgehead
+#: storage_fcoe.xml:509
+#, no-c-format
+msgid "Examples"
+msgstr ""
+
+#. Tag: command
+#: storage_fcoe.xml:513
+#, no-c-format
+msgid "fcoeadm -c eth2.101"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:516
+#, no-c-format
+msgid "Create an FCoE instance on eth2.101."
+msgstr ""
+
+#. Tag: command
+#: storage_fcoe.xml:522
+#, no-c-format
+msgid "fcoeadm -d eth2.101"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:525
+#, no-c-format
+msgid "Destroy an FCoE instance on eth2.101."
+msgstr ""
+
+#. Tag: command
+#: storage_fcoe.xml:531
+#, no-c-format
+msgid "fcoeadm -i eth3"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:534
+#, no-c-format
+msgid ""
+"Show information about all of the FCoE instances on interface <literal>eth3</"
+"literal>. If no interface is specified, information for all interfaces that "
+"have FCoE instances created will be shown. The following example shows "
+"information on connection eth0.201:"
+msgstr ""
+
+#. Tag: screen
+#: storage_fcoe.xml:540
+#, no-c-format
+msgid ""
+"&prompt.user;sudo fcoeadm -i eth0.201\n"
+"  Description:      82599EB 10-Gigabit SFI/SFP+ Network Connection \n"
+"  Revision:         01\n"
+"  Manufacturer:     Intel Corporation \n"
+"  Serial Number:    001B219B258C \n"
+"  Driver:           ixgbe 3.3.8-k2 \n"
+"  Number of Ports:  1      \n"
+"\n"
+"      Symbolic Name:     fcoe v0.1 over eth0.201     \n"
+"      OS Device Name:    host8     \n"
+"      Node Name:         0x1000001B219B258E     \n"
+"      Port Name:         0x2000001B219B258E     \n"
+"      FabricName:        0x2001000573D38141     \n"
+"      Speed:             10 Gbit     \n"
+"      Supported Speed:   10 Gbit     \n"
+"      MaxFrameSize:      2112     \n"
+"      FC-ID (Port ID):   0x790003     \n"
+"      State:             Online"
+msgstr ""
+
+#. Tag: command
+#: storage_fcoe.xml:544
+#, no-c-format
+msgid "fcoeadm -l eth3.101"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:547
+#, no-c-format
+msgid ""
+"Show detailed information about all of the LUNs discovered on connection "
+"eth3.101. If no connection is specified, information about all of the LUNs "
+"discovered on all FCoE connections will be shown."
+msgstr ""
+
+#. Tag: command
+#: storage_fcoe.xml:555
+#, no-c-format
+msgid "fcoeadm -r eth2.101"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:558
+#, no-c-format
+msgid "Reset the FCoE instance on eth2.101."
+msgstr ""
+
+#. Tag: command
+#: storage_fcoe.xml:564
+#, no-c-format
+msgid "fcoeadm -s eth3 3"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:567
+#, no-c-format
+msgid ""
+"Show statistical information about a specific eth3 port that has FCoE "
+"instances, at an interval of three seconds. The statistics are displayed one "
+"line per time interval. If no interval is given, the default of one second "
+"is used."
+msgstr ""
+
+#. Tag: command
+#: storage_fcoe.xml:576
+#, no-c-format
+msgid "fcoeadm -t eth3"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:579
+#, no-c-format
+msgid ""
+"Show information about all of the discovered targets from a given eth3 port "
+"having FCoE instances. After each discovered target, any associated LUNs are "
+"listed. If no instance is specified, targets from all of the ports that have "
+"FCoE instances are shown. The following example shows information of targets "
+"from the eth0.201 connection:"
+msgstr ""
+
+#. Tag: screen
+#: storage_fcoe.xml:586
+#, no-c-format
+msgid ""
+"&prompt.user;sudo fcoeadm -t eth0.201  \n"
+"  Interface:        eth0.201 \n"
+"  Roles:            FCP Target \n"
+"  Node Name:        0x200000D0231B5C72 \n"
+"  Port Name:        0x210000D0231B5C72 \n"
+"  Target ID:        0 \n"
+"  MaxFrameSize:     2048 \n"
+"  OS Device Name:   rport-8:0-7 \n"
+"  FC-ID (Port ID):  0x79000C \n"
+"  State:            Online  \n"
+"\n"
+"LUN ID  Device Name   Capacity   Block Size  Description \n"
+"------  -----------  ----------  ----------  "
+"----------------------------     \n"
+"    40  /dev/sdqi     792.84 GB      512     IFT DS S24F-R2840-4 (rev 386C)\n"
+"    72  /dev/sdpk     650.00 GB      512     IFT DS S24F-R2840-4 (rev 386C)\n"
+"   168  /dev/sdgy       1.30 TB      512     IFT DS S24F-R2840-4 (rev 386C)"
+msgstr ""
+
+#. Tag: title
+#: storage_fcoe.xml:592
+#, no-c-format
+msgid "Additional Information"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:594
+#, no-c-format
+msgid "For information, see the follow documentation:"
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:600
+#, no-c-format
+msgid ""
+"For information about the Open-FCoE service daemon, see the "
+"<command>fcoemon(8)</command> man page."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:606
+#, no-c-format
+msgid ""
+"For information about the Open-FCoE Administration tool, see the "
+"<command>fcoeadm(8)</command> man page."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:612
+#, no-c-format
+msgid ""
+"For information about the Data Center Bridging Configuration tool, see the "
+"<command>dcbtool(8)</command> man page."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:618
+#, no-c-format
+msgid ""
+"For information about the Link Layer Discovery Protocol agent daemon, see "
+"the <filename>lldpad(8)</filename> man page."
+msgstr ""
+
+#. Tag: para
+#: storage_fcoe.xml:624
+#, no-c-format
+msgid ""
+"For general information, see the Open-FCoE home page: <link xlink:href="
+"\"http://www.open-fcoe.org/dokuwiki/start\"></link>."
+msgstr ""

@@ -1,0 +1,341 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: docker_installation.xml:9
+#, no-c-format
+msgid "Docker Installation"
+msgstr ""
+
+#. Tag: title
+#: docker_installation.xml:11
+#, no-c-format
+msgid "General Preparation"
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:12
+#, no-c-format
+msgid ""
+"Prepare the host as described below. Before installing any Docker-related "
+"packages, you need to enable the container module:"
+msgstr ""
+
+#. Tag: title
+#: docker_installation.xml:17
+#, no-c-format
+msgid "Built-in Docker Orchestration Support"
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:18
+#, no-c-format
+msgid ""
+"Starting with Docker 1.12 the container orchestration is now an integral "
+"part of the Docker engine. Even though this feature is available in &slsa;"
+"SP1 and in &slsa;SP2, it is not supported and it is only a technical "
+"preview. Use Kubernetes for Docker containers orchestration, for details "
+"refer to the <link xlink:href=\"http://kubernetes.io/docs/getting-started-"
+"guides/kubeadm/\">Kubernetes documentation</link>."
+msgstr ""
+
+#. Tag: title
+#: docker_installation.xml:24
+#, no-c-format
+msgid "Enabling the Container Module Using &yast;"
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:26
+#, no-c-format
+msgid ""
+"Start &yast;, and select <menuchoice> <guimenu>Software</guimenu> <guimenu> "
+"Software Repositories</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:32
+#, no-c-format
+msgid "Click <guimenu>Add</guimenu> to open the add-on dialog."
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:37
+#, no-c-format
+msgid ""
+"Select <guimenu>Extensions and Modules from Registration Server</guimenu> "
+"and click <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:43
+#, no-c-format
+msgid ""
+"From the list of available extensions and modules, select <guimenu>Container "
+"Module 12 x86_64</guimenu> and click <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:48
+#, no-c-format
+msgid ""
+"The containers module and its repositories will be added to your system."
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:54
+#, no-c-format
+msgid ""
+"If you use &smtool;, update the list of repositories on the &smt; server."
+msgstr ""
+
+#. Tag: title
+#: docker_installation.xml:59
+#, no-c-format
+msgid "Enabling the Container Module Using SUSEConnect"
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:61
+#, no-c-format
+msgid "The Container Module can be added also with the following command:"
+msgstr ""
+
+#. Tag: screen
+#: docker_installation.xml:64
+#, no-c-format
+msgid "$ sudo SUSEConnect -p sle-module-containers/12/x86_64 -r ''"
+msgstr ""
+
+#. Tag: title
+#: docker_installation.xml:66
+#, no-c-format
+msgid "Note about the SUSEConnect syntax"
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:67
+#, no-c-format
+msgid ""
+"The <option>-r ''</option> flag is required to avoid a known limitation of "
+"SUSEConnect."
+msgstr ""
+
+#. Tag: title
+#: docker_installation.xml:75
+#, no-c-format
+msgid "Installing and Setting Up Docker"
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:77
+#, no-c-format
+msgid "Install the <systemitem>docker</systemitem> package:"
+msgstr ""
+
+#. Tag: screen
+#: docker_installation.xml:80
+#, no-c-format
+msgid "sudo zypper install docker"
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:83
+#, no-c-format
+msgid "To automatically start the Docker service at boot time:"
+msgstr ""
+
+#. Tag: screen
+#: docker_installation.xml:86
+#, no-c-format
+msgid "sudo systemctl enable docker.service"
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:87
+#, no-c-format
+msgid "This will automatically enable docker.socket in consequence."
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:92
+#, no-c-format
+msgid ""
+"In case you will use Portus and an SSL secured registry, open the <filename>/"
+"etc/sysconfig/docker</filename> file. Search for the parameter "
+"<parameter>DOCKER_OPTS</parameter> and add <literal>--insecure-registry "
+"<replaceable>ADDRESS_OF_YOUR_REGISTRY</replaceable></literal>."
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:99
+#, no-c-format
+msgid ""
+"In the production environment when using the SSL secured registry with "
+"Portus, add CA certificates to the directory <filename>/etc/docker/certs.d/"
+"&lt;registry address&gt;</filename> and copy the CA certificates to your "
+"system:"
+msgstr ""
+
+#. Tag: screen
+#: docker_installation.xml:102
+#, no-c-format
+msgid "sudo cp CA /etc/pki/trust/anchors/ &amp;&amp; update-ca-certificates"
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:105
+#, no-c-format
+msgid "Start the Docker service:"
+msgstr ""
+
+#. Tag: screen
+#: docker_installation.xml:108
+#, no-c-format
+msgid "sudo systemctl start docker.service"
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:109
+#, no-c-format
+msgid "This will automatically start docker.socket in consequence."
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:114
+#, no-c-format
+msgid ""
+"The Docker daemon listens on a local socket which is accessible only by the "
+"<systemitem class=\"username\">root</systemitem> user and by the members of "
+"the <systemitem class=\"groupname\">docker</systemitem> group. The "
+"<systemitem class=\"groupname\">docker</systemitem> group is automatically "
+"created at package installation time. To allow a certain user to connect to "
+"the local Docker daemon, use the following command:"
+msgstr ""
+
+#. Tag: screen
+#: docker_installation.xml:122
+#, no-c-format
+msgid "sudo /usr/sbin/usermod -aG docker <replaceable>USERNAME</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:123
+#, no-c-format
+msgid ""
+"The user can communicate with the local Docker daemon upon his next login."
+msgstr ""
+
+#. Tag: title
+#: docker_installation.xml:129
+#, no-c-format
+msgid "Networking"
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:130
+#, no-c-format
+msgid ""
+"If you want your containers to be able to access the external network, you "
+"must enable the <option>ipv4 ip_forward</option> rule. This can be done "
+"using &yast; by browsing to <menuchoice> <guimenu>System</guimenu> "
+"<guimenu>Network Settings</guimenu> <guimenu>Routing</guimenu> </menuchoice> "
+"menu and ensuring <option>Enable IPv4 Forwarding</option> is checked."
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:138
+#, no-c-format
+msgid ""
+"This option cannot be changed when networking is handled by the Network "
+"Manager. In such cases the <filename>/etc/sysconfig/SuSEfirewall2</filename> "
+"file needs to be edited manually to ensure the <option>FW_ROUTE</option> "
+"flag is set to <option>yes</option>:"
+msgstr ""
+
+#. Tag: screen
+#: docker_installation.xml:144
+#, no-c-format
+msgid "FW_ROUTE=\"yes\""
+msgstr ""
+
+#. Tag: title
+#: docker_installation.xml:147
+#, no-c-format
+msgid "Networking Limitations on Power Architecture"
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:148
+#, no-c-format
+msgid ""
+"Currently Docker networking has two limitations on the Power architecture."
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:151
+#, no-c-format
+msgid ""
+"The first limitation is about iptables. &slea;&nbsp;12 machines cannot run "
+"Docker with the iptables support enabled. An update of the kernel is going "
+"to solve this issue. In the meantime the Docker package for Power has "
+"iptables support disabled via a dedicated directive inside of <filename>/etc/"
+"sysconfig/docker</filename>."
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:158
+#, no-c-format
+msgid ""
+"As a result of this limitation Docker containers will not have access to the "
+"outer network. A possible workaround is to share the same network namespace "
+"between the host and the containers. This however reduces the isolation of "
+"the containers."
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:164
+#, no-c-format
+msgid ""
+"The network namespace of the host can be shared on a per-container basis by "
+"adding <option>--net=host</option> to the <option>docker run</option> "
+"command."
+msgstr ""
+
+#. Tag: title
+#: docker_installation.xml:170
+#, no-c-format
+msgid "iptables support on &slea;&nbsp;12 SP1"
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:171
+#, no-c-format
+msgid ""
+"&slea;&nbsp;12 SP1 hosts are not affected by this limitation but, given they "
+"use the same &slea;&nbsp;12 package, they will have iptables support "
+"disabled. This can be changed by removing the <option>-iptables=false</"
+"option> setting inside of <filename>/etc/sysconfig/docker</filename>."
+msgstr ""
+
+#. Tag: para
+#: docker_installation.xml:179
+#, no-c-format
+msgid ""
+"The second limitation is about network isolation between the containers and "
+"the host. Currently it is not possible to prevent containers from probing or "
+"accessing arbitrary ports of each other."
+msgstr ""

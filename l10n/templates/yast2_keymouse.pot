@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: yast2_keymouse.xml:12
+#, no-c-format
+msgid "Setting Up Your System Keyboard Layout"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: yast2_keymouse.xml:15
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: yast2_keymouse.xml:21
+#, no-c-format
+msgid ""
+"The &yast; <guimenu>System Keyboard Layout</guimenu> module lets you define "
+"the default keyboard layout for the system (also used for the console). "
+"Users can modify the keyboard layout in their individual X sessions, using "
+"the desktop's tools."
+msgstr ""
+
+#. Tag: para
+#: yast2_keymouse.xml:30
+#, no-c-format
+msgid ""
+"Start the &yast; <guimenu>System Keyboard Configuration</guimenu> dialog by "
+"clicking <menuchoice> <guimenu>Hardware</guimenu> <guimenu>System Keyboard "
+"Layout</guimenu> </menuchoice> in &yast;. Alternatively, start the module "
+"from the command line with <command>sudo yast2 keyboard</command>."
+msgstr ""
+
+#. Tag: para
+#: yast2_keymouse.xml:38
+#, no-c-format
+msgid "Select the desired <guimenu>Keyboard Layout</guimenu> from the list."
+msgstr ""
+
+#. Tag: para
+#: yast2_keymouse.xml:43
+#, no-c-format
+msgid ""
+"Optionally, you can also define the keyboard repeat rate or keyboard delay "
+"rate in the <guimenu>Expert Settings</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_keymouse.xml:49
+#, no-c-format
+msgid "Try the selected settings in the <guimenu>Test</guimenu> text box."
+msgstr ""
+
+#. Tag: para
+#: yast2_keymouse.xml:54
+#, no-c-format
+msgid ""
+"If the result is as expected, confirm your changes and close the dialog. The "
+"settings are written to <filename>/etc/sysconfig/keyboard</filename>."
+msgstr ""

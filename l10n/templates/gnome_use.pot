@@ -1,0 +1,1520 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: gnome_use.xml:8
+#, no-c-format
+msgid "Working with Your Desktop"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: gnome_use.xml:10
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:15
+#, no-c-format
+msgid ""
+"In this chapter you will learn how to work with files and burn CDs. You will "
+"also find out how to perform regular tasks with your desktop."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:20
+#, no-c-format
+msgid "Managing Files and Directories"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:22
+#, no-c-format
+msgid "You can open &nautilus; in multiple ways:"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:28
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Applications</guimenu> <guimenu>Accessories</"
+"guimenu><guimenu>Files</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:34
+#, no-c-format
+msgid "Open the Activities Overview and search for <literal>files</literal>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:39
+#, no-c-format
+msgid "On the desktop, double-click <guimenu>Home</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:44
+#, no-c-format
+msgid ""
+"Open the <guimenu>Places</guimenu> menu and select any entry, such as "
+"<guimenu>Home</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:52
+#, no-c-format
+msgid "File Manager"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:63
+#, no-c-format
+msgid "The elements of the &nautilus; window include the following:"
+msgstr ""
+
+#. Tag: term
+#: gnome_use.xml:69
+#, no-c-format
+msgid "Toolbar"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:71
+#, no-c-format
+msgid ""
+"The toolbar contains back and forward buttons, the path bar, a search "
+"function, elements to let you change the layout of the content area, and the "
+"application menu."
+msgstr ""
+
+#. Tag: term
+#: gnome_use.xml:79
+#, no-c-format
+msgid "Menu"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:81
+#, no-c-format
+msgid ""
+"The menu is the last icon on the toolbar. It lets you perform many tasks, "
+"such as opening the preferences dialog, creating a new directory or opening "
+"a new window or tab."
+msgstr ""
+
+#. Tag: term
+#: gnome_use.xml:92
+#, no-c-format
+msgid "Sidebar"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:94
+#, no-c-format
+msgid ""
+"The sidebar lets you navigate between often-used directories and external or "
+"network storage devices. To display or hide the sidebar, press <keycap>F9</"
+"keycap>."
+msgstr ""
+
+#. Tag: term
+#: gnome_use.xml:102
+#, no-c-format
+msgid "Content Area"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:104
+#, no-c-format
+msgid "Displays files and directories."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:107
+#, no-c-format
+msgid ""
+"Use the icons in the top right part of the window to switch between list and "
+"grid icon view."
+msgstr ""
+
+#. Tag: term
+#: gnome_use.xml:117
+#, no-c-format
+msgid "Context Menus"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:119
+#, no-c-format
+msgid ""
+"Open a context menu by right-clicking inside the content area. The items in "
+"this menu depend on where you right-click."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:123
+#, no-c-format
+msgid ""
+"For example, if you right-click a file or directory, you can select items "
+"related to the file or directory. If you right-click the background of a "
+"content area, you can select items related to the display of items in the "
+"content area."
+msgstr ""
+
+#. Tag: term
+#: gnome_use.xml:132
+#, no-c-format
+msgid "Floating Statusbar"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:134
+#, no-c-format
+msgid ""
+"The floating statusbar appears when a file is selected. It displays the file "
+"name and size."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:143
+#, no-c-format
+msgid "Key Combinations"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:144
+#, no-c-format
+msgid ""
+"The following table lists a selection of key combinations of &nautilus;."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:148
+#, no-c-format
+msgid "&nautilus; Key Combinations"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:155
+#, no-c-format
+msgid "Key Combination"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:160 gnome_use.xml:946
+#, no-c-format
+msgid "Description"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:169
+#, no-c-format
+msgid ""
+"<keycombo><keycap function=\"alt\"></keycap> <keycap function=\"left\"></"
+"keycap></keycombo>/ <keycombo><keycap function=\"alt\"></keycap> <keycap "
+"function=\"right\"></keycap></keycombo>"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:177
+#, no-c-format
+msgid "Go backward/go forward."
+msgstr ""
+
+#. Tag: keycombo
+#: gnome_use.xml:185
+#, no-c-format
+msgid "<keycap function=\"alt\"></keycap> <keycap function=\"up\"></keycap>"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:189
+#, no-c-format
+msgid "Open the parent directory."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:196
+#, no-c-format
+msgid ""
+"<keycap function=\"left\"></keycap>, <keycap function=\"right\"></keycap>, "
+"<keycap function=\"up\"></keycap>, <keycap function=\"down\"></keycap>"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:202
+#, no-c-format
+msgid "Select an item."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:209
+#, no-c-format
+msgid ""
+"<keycombo> <keycap function=\"alt\"></keycap> <keycap function=\"down\"></"
+"keycap> </keycombo> or <keycap function=\"enter\"></keycap>"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:215
+#, no-c-format
+msgid "Open an item."
+msgstr ""
+
+#. Tag: keycombo
+#: gnome_use.xml:223
+#, no-c-format
+msgid "<keycap function=\"alt\"></keycap> <keycap function=\"enter\"></keycap>"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:228
+#, no-c-format
+msgid "Open an item's <guimenu>Properties</guimenu> dialog."
+msgstr ""
+
+#. Tag: keycombo
+#: gnome_use.xml:236
+#, no-c-format
+msgid ""
+"<keycap function=\"shift\"></keycap> <keycap function=\"alt\"></keycap> "
+"<keycap function=\"down\"></keycap>"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:241
+#, no-c-format
+msgid "Open an item and close the current directory."
+msgstr ""
+
+#. Tag: keycombo
+#: gnome_use.xml:249
+#, no-c-format
+msgid "<keycap function=\"control\"></keycap> <keycap>L</keycap>"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:253
+#, no-c-format
+msgid "Transform the path bar from a button view to a text box."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:256
+#, no-c-format
+msgid ""
+"Exit this mode by pressing <keycap function=\"enter\"></keycap> (go to the "
+"location) or <keycap function=\"escape\"></keycap> (to remain in the current "
+"directory)."
+msgstr ""
+
+#. Tag: keycap
+#: gnome_use.xml:266
+#, no-c-format
+msgid "<keycap>/</keycap>"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:270
+#, no-c-format
+msgid ""
+"Transform the path bar from a button view to a text box and replace the "
+"current path with <literal>/</literal>."
+msgstr ""
+
+#. Tag: keycombo
+#: gnome_use.xml:279
+#, no-c-format
+msgid "<keycap function=\"alt\"></keycap><keycap function=\"home\"></keycap>"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:283
+#, no-c-format
+msgid "Open your home directory."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:290
+#, no-c-format
+msgid "Any number or letter key"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:295 gnome_use.xml:310
+#, no-c-format
+msgid ""
+"Start a search within the current directories and their subdirectories. The "
+"character you pressed is used as the first character of the search term. "
+"Search happens as you type, you do not need to press <keycap function=\"enter"
+"\"></keycap>."
+msgstr ""
+
+#. Tag: keycombo
+#: gnome_use.xml:306
+#, no-c-format
+msgid "<keycap function=\"control\"></keycap><keycap>T</keycap>"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:325
+#, no-c-format
+msgid ""
+"Moves the selected file or directory to the trash, from which it can be "
+"restored with <guimenu>Undo</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:337
+#, no-c-format
+msgid "Compressing Files or Directories"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:338
+#, no-c-format
+msgid "Sometimes, it is useful to archive or compress files, for example:"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:343
+#, no-c-format
+msgid ""
+"You want to attach an entire directory, including its subdirectories, to an "
+"e-mail."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:349
+#, no-c-format
+msgid "You want to attach a large file to an e-mail."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:354
+#, no-c-format
+msgid "You want to save space on your hard disk and have files you rarely use."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:359
+#, no-c-format
+msgid ""
+"In all these cases, you can create a compressed file, such as a ZIP file, "
+"which can contain multiple original files. How much smaller the compressed "
+"version is than the original depends on the file type. Many video, image and "
+"office document formats are already compressed and will only become "
+"marginally smaller."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:368
+#, no-c-format
+msgid ""
+"In the &nautilus; content area, right-click the directory you want to "
+"archive, then click <guimenu>Compress</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:374
+#, no-c-format
+msgid "Accept the default archive file name or provide a new one."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:379
+#, no-c-format
+msgid "Select a file extension from the drop-down box."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:384
+#, no-c-format
+msgid ""
+"<filename>.zip</filename> files are supported on most operating systems, "
+"including Windows*."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:390
+#, no-c-format
+msgid ""
+"<filename>.tar.gz</filename> files are compatible with most Linux* and Unix* "
+"systems."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:396
+#, no-c-format
+msgid ""
+"<filename>.7z</filename> files usually offer better compression ratios than "
+"other formats, but are not as widely supported."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:404
+#, no-c-format
+msgid ""
+"Specify a location for the archive file, then click <guimenu>Create</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:410
+#, no-c-format
+msgid ""
+"To extract an archived file, right-click the file, then select "
+"<guimenu>Extract Here</guimenu>. You can also double-click the compressed "
+"file to open it and see which files are included."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:415
+#, no-c-format
+msgid ""
+"For more information on compressed files, see <xref linkend=\"sec.gnomeuser."
+"use.archives\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:422
+#, no-c-format
+msgid "Burning a CD/DVD"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:423
+#, no-c-format
+msgid ""
+"If your system has a CD or DVD writer, you can use &nautilus; to burn CDs "
+"and DVDs. If you want to burn an audio CD or need more control over the "
+"result, see <xref linkend=\"cha.gnome.burn\"/>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:430
+#, no-c-format
+msgid "Open &nautilus;."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:435
+#, no-c-format
+msgid "Insert a blank medium."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:440
+#, no-c-format
+msgid ""
+"Find the files you want to add to the medium and drag them to the sidebar "
+"item called <guimenu>Blank CD-R Disc</guimenu>. (The label may read slightly "
+"differently, depending on the type of medium you inserted.) When your mouse "
+"pointer is over the sidebar item, a small <literal>+</literal> should appear "
+"next to the pointer."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:449
+#, no-c-format
+msgid ""
+"When you have dragged all files onto the sidebar item <guimenu>Blank CD-R "
+"Disc</guimenu>, click it."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:455
+#, no-c-format
+msgid ""
+"Provide a name next to <guimenu>Disc Name</guimenu> or keep the proposal."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:460
+#, no-c-format
+msgid "Click <guimenu>Write to Disc</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:465
+#, no-c-format
+msgid ""
+"In the appearing dialog <guimenu>CD/DVD Creator</guimenu>, make sure the "
+"right medium is selected. Then click <guimenu>Burn</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:469
+#, no-c-format
+msgid ""
+"The files are burned to the disc. This can take a few minutes, depending on "
+"the amount of data being burned and the speed of your burner."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:475
+#, no-c-format
+msgid ""
+"After the medium has been burned, it will be ejected from the drive. In the "
+"window <guimenu>CD/DVD Creator</guimenu>, you can click <guimenu>Close</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:482
+#, no-c-format
+msgid ""
+"To burn an ISO disc image, first insert a medium, then double-click the ISO "
+"file in &nautilus;. In the dialog <guimenu>Image Burning Setup</guimenu>, "
+"click <guimenu>Burn</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:490
+#, no-c-format
+msgid "Creating a Bookmark"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:491
+#, no-c-format
+msgid ""
+"Use the bookmarks feature in &nautilus; to quickly jump to your favorite "
+"directories from the sidebar."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:497
+#, no-c-format
+msgid ""
+"Switch to the directory for which you want to create a bookmark in the "
+"content area."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:503
+#, no-c-format
+msgid ""
+"Click the list icon, then select <guimenu>Bookmark this Location</guimenu> "
+"from the menu."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:509
+#, no-c-format
+msgid ""
+"The bookmark now appears in the sidebar, with the directory name as the "
+"bookmark name."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:515
+#, no-c-format
+msgid ""
+"If you want, you can change the name of the bookmark. This does not affect "
+"the name of the bookmarked directory itself. To change the name, right-click "
+"the new sidebar item and select <guimenu>Rename</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:522
+#, no-c-format
+msgid ""
+"If you want, you can change the order in which the bookmarks are displayed. "
+"To reorder, click a bookmark and drag it to the desired location."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:529
+#, no-c-format
+msgid ""
+"To switch to a bookmarked directory, click the appropriate sidebar item."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:547
+#, no-c-format
+msgid "Accessing Remote Files"
+msgstr ""
+
+#. Tag: remark
+#: gnome_use.xml:549
+#, no-c-format
+msgid ""
+"fs 2008-12-10: Removed section Accessing Network Resources because it was "
+"almost identical to cha.gnome.network."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:550
+#, no-c-format
+msgid ""
+"You can use &nautilus; to access files on remote servers. For more "
+"information, see <xref linkend=\"cha.gnome.network\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:557
+#, no-c-format
+msgid "Accessing Removable Media"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:559
+#, no-c-format
+msgid ""
+"To access CDs/DVDs or flash disks, insert or attach the medium. An icon for "
+"the medium is automatically created on the desktop. For many types of "
+"removable media, a &nautilus; window pops up automatically. If &nautilus; "
+"does not open, double-click the icon for that drive on the desktop to view "
+"the contents. In &nautilus;, you will see an item for the medium in the "
+"sidebar."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:569
+#, no-c-format
+msgid "Unmount to Prevent Data Loss"
+msgstr ""
+
+#. Tag: remark
+#: gnome_use.xml:570
+#, no-c-format
+msgid ""
+"Pressing the Eject button on any &gnome; system of the past ten years has "
+"resulted in the disc being unmounted automatically. Diskettes (where the "
+"ejection mechanism was purely mechanical) are not relevant any more. The "
+"only issue here is with flash disks indicating they are done copying/moving/"
+"deleting but are actually not being done. If applications are still "
+"accessing a drive, &gnome; will show a very visible warning (screen dimmed "
+"etc.). -- sknorr, 2015-09-15."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:579
+#, no-c-format
+msgid ""
+"Do not physically remove flash disks immediately after using them. Even when "
+"the system does not indicate that data is being written, the drive may not "
+"be finished with a previous operation."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:584
+#, no-c-format
+msgid ""
+"In the sidebar of &nautilus;, click the Eject icon next to the medium to "
+"safely remove or unmount the drive."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:601
+#, no-c-format
+msgid "Searching for Files"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:603
+#, no-c-format
+msgid ""
+"There are multiple ways to search for files or directories. In all cases, "
+"the search will be performed on file and directory names. Searching by file "
+"size, modification date and other properties is only partially possible in "
+"the preinstalled graphical tools. Such searches are easier to do on the "
+"command line."
+msgstr ""
+
+#. Tag: term
+#: gnome_use.xml:613
+#, no-c-format
+msgid "Using &nautilus;"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:615
+#, no-c-format
+msgid ""
+"In &nautilus;, navigate to the directory from which you want to start the "
+"search. Then start typing the search term. To search for objects with a "
+"certain modification date or file type, click the arrow-down icon of the "
+"search box and modify the properties."
+msgstr ""
+
+#. Tag: term
+#: gnome_use.xml:624
+#, no-c-format
+msgid "Using the Activities Overview"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:626
+#, no-c-format
+msgid ""
+"Open the Activities Overview by pressing <keycap function=\"meta\"></"
+"keycap>. Then start typing the search term. The search will be performed "
+"within your home directory."
+msgstr ""
+
+#. Tag: term
+#: gnome_use.xml:634
+#, no-c-format
+msgid "Using the Desktop Search application"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:636
+#, no-c-format
+msgid ""
+"Click <menuchoice><guimenu>Applications</guimenu><guimenu>Accessories</"
+"guimenu> <guimenu>Desktop Search</guimenu></menuchoice>. Enter the search "
+"term in the text box <guimenu>Search</guimenu>. The search will be performed "
+"within your home directory."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:648
+#, no-c-format
+msgid "Copying Text Between Applications"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:650
+#, no-c-format
+msgid ""
+"Copy and paste works the same as in other operating systems. First select "
+"the text, so that it appears highlighted, usually in blue. Then press "
+"<keycombo><keycap function=\"control\"></keycap><keycap>C</keycap></"
+"keycombo>. Now move the keyboard focus to the right position. Finally, to "
+"insert the text, press <keycombo><keycap function=\"control\"></"
+"keycap><keycap>V</keycap></keycombo>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:658
+#, no-c-format
+msgid ""
+"To copy or paste in the terminal, additionally press <keycap function=\"shift"
+"\"></keycap> together with the above key combinations."
+msgstr ""
+
+#. Tag: remark
+#: gnome_use.xml:664
+#, no-c-format
+msgid ""
+"Note that the middle-click clipboard is deactivated by default in new "
+"&gnome; releases. Though, afaik, the version shipped with openSUSE still has "
+"this activated. However, this might change in the future. - sknorr, "
+"2015-09-15"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:668
+#, no-c-format
+msgid ""
+"An alternative way of using copy and paste is described in the following. "
+"First select the text. To paste the text, middle-click over the position "
+"where you want the text to be pasted. As soon as you make another selection, "
+"the text from the original selection will be replaced in the clipboard."
+msgstr ""
+
+#. Tag: remark
+#: gnome_use.xml:676
+#, no-c-format
+msgid ""
+"There is a Gnome Shell extension that adds clipboard history/cache: https://"
+"extensions.gnome.org/extension/779/clipboard-indicator/ . On KDE, klipper "
+"comes standard - for good reasons, actually. - sknorr, 2015-09-18"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:681
+#, no-c-format
+msgid ""
+"When copying information between programs, you must keep the source program "
+"open and paste the text before closing it. When a program closes, any "
+"content from that application that is on the clipboard is lost."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:688
+#, no-c-format
+msgid "Managing Internet Connections"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:690
+#, no-c-format
+msgid ""
+"To surf the Web or send and receive e-mail messages, you must have "
+"configured an Internet connection. If you have installed &productname; on a "
+"laptop or a mobile device, &nm; is enabled by default. On the &gnome; "
+"desktop, you can then establish Internet connections with &nm; as described "
+"in <xref linkend=\"sec.nm.configure\"/>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:698
+#, no-c-format
+msgid ""
+"Depending on your environment, you can choose in &yast; which basic service "
+"to use for setting up network connections (either &nm; or wicked). For "
+"details, see <xref linkend=\"sec.basicnet.yast.netcard.global\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:705
+#, no-c-format
+msgid "Exploring the Internet"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:707
+#, no-c-format
+msgid ""
+"The &gnome; desktop includes Firefox, a Mozilla*-based Web browser. You can "
+"start it by clicking <menuchoice> <guimenu>Applications</"
+"guimenu><guimenu>Internet</guimenu> <guimenu>Firefox</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:714
+#, no-c-format
+msgid ""
+"You can type an address into the location bar at the top or click links in a "
+"page to move to different pages, like in any other Web browser."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:719
+#, no-c-format
+msgid "For more information, see <xref linkend=\"cha.firefox\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:724
+#, no-c-format
+msgid "E-mail and Scheduling"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:726
+#, no-c-format
+msgid ""
+"For reading and managing your mail and events, use Evolution. Evolution is a "
+"groupware program that makes it easy to store, organize and retrieve your "
+"personal information."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:732
+#, no-c-format
+msgid ""
+"Evolution seamlessly combines e-mail, a calendar, an address book, and a "
+"memo and task list in one easy-to-use application. With its extensive "
+"support for communications and data interchange standards, Evolution can "
+"work with existing corporate networks and applications, including Microsoft* "
+"Exchange."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:751
+#, no-c-format
+msgid ""
+"To start Evolution, click <menuchoice> <guimenu>Applications</guimenu> "
+"<guimenu>Internet</guimenu> <guimenu>Evolution</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:756
+#, no-c-format
+msgid ""
+"The first time you start Evolution, it prompts you with a few questions to "
+"set up a mail account and import mail from an old mail client. Then it shows "
+"you how many new messages you have and lists upcoming appointments and "
+"tasks. The calendar, address book and mail tools are available in the "
+"shortcut bar on the left."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:764
+#, no-c-format
+msgid "For more information, see <xref linkend=\"cha.gnome.evolution\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:769
+#, no-c-format
+msgid "Opening or Creating Documents with &libo;"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:771
+#, no-c-format
+msgid ""
+"For creating and editing documents, &libo; is installed with the &gnome; "
+"desktop. &libo; is a complete set of office tools that can both read and "
+"save Microsoft Office file formats. &libo; has a word processor, a "
+"spreadsheet, a database, a drawing tool and a presentation program."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:778
+#, no-c-format
+msgid ""
+"To start &libo;, click <menuchoice><guimenu>Applications</"
+"guimenu><guimenu>Office</guimenu> <guimenu>LibreOffice</guimenu></"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:784
+#, no-c-format
+msgid "For more information, see <xref linkend=\"cha.oo.oview\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:789
+#, no-c-format
+msgid "Controlling Your Desktop’s Power Management"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:791
+#, no-c-format
+msgid ""
+"To see the state of the computer battery on your laptop, check the battery "
+"icon in the right part of the panel. On certain events, such as a critically "
+"low battery state, &gnome; will display notifications informing you about "
+"the event."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:798
+#, no-c-format
+msgid ""
+"You can open the power settings via <menuchoice> <guimenu>Applications</"
+"guimenu><guimenu>System Tools</guimenu> <guimenu>Settings</"
+"guimenu><guimenu>Power</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:804
+#, no-c-format
+msgid ""
+"For more information, see <xref linkend=\"sec.gnome.settings.hardware.power"
+"\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:810
+#, no-c-format
+msgid "Creating, Displaying, and Decompressing Archives"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:812
+#, no-c-format
+msgid ""
+"You can use the Archive Manager application (also known as File Roller) to "
+"create, view, modify or unpack an archive. An archive is a file that acts as "
+"a container for other files. An archive can contain many files, directories "
+"and subdirectories, usually in compressed form. Archive Manager supports "
+"common formats such as <filename>zip</filename>, <filename>tar.gz</"
+"filename>, <filename>tar.bz2</filename>, <filename>lzh</filename>, and "
+"<filename>rar</filename>. You can use Archive Manager to create, open and "
+"extract a compressed non-archive file."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:823
+#, no-c-format
+msgid ""
+"To start Archive Manager, click <menuchoice> <guimenu>Applications</guimenu> "
+"<guimenu>Utilities</guimenu> <guimenu>Archive Manager</guimenu> </"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:829
+#, no-c-format
+msgid ""
+"If you already have a compressed file, double-click the file name in "
+"&nautilus; to view the contents of the archive in Archive Manager."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:835
+#, no-c-format
+msgid "Archive Manager"
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:847
+#, no-c-format
+msgid "Opening an Archive"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:850
+#, no-c-format
+msgid "In Archive Manager, click <guimenu>Open</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:855
+#, no-c-format
+msgid "Select the archive you want to open."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:860
+#, no-c-format
+msgid "Click <guimenu>Open</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:863
+#, no-c-format
+msgid "Archive Manager displays the following:"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:868
+#, no-c-format
+msgid "The archive name in the titlebar."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:873
+#, no-c-format
+msgid "The archive contents in the content area."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:889
+#, no-c-format
+msgid ""
+"To open another archive, click <guimenu>Open</guimenu> again. Archive "
+"Manager opens each archive in a new window. To open another archive in the "
+"same window, you must first select <guimenu>Close</guimenu> from the menu in "
+"the right part of the window to close the current archive, then click "
+"<guimenu>Open</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:896
+#, no-c-format
+msgid ""
+"If you try to open an archive that was created in a format that Archive "
+"Manager does not recognize, the application displays an error message."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:902
+#, no-c-format
+msgid ""
+"To display the archive's properties, click the last icon in the titlebar and "
+"select <guimenu>Properties</guimenu>. Details like name, location, type, "
+"last modification, number of files, size, and compression ratio are shown."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:913
+#, no-c-format
+msgid "Extracting Files from an Archive"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:916
+#, no-c-format
+msgid "In Archive Manager, select the files that you want to extract."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:921 gnome_use.xml:1041
+#, no-c-format
+msgid "Click <guimenu>Extract</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:926
+#, no-c-format
+msgid "Specify the directory where Archive Manager will extracts the files."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:931
+#, no-c-format
+msgid "Choose from the following extraction options:"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:941
+#, no-c-format
+msgid "Option"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:955
+#, no-c-format
+msgid "All files"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:960
+#, no-c-format
+msgid "Extracts all files from the archive."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:967
+#, no-c-format
+msgid "Selected files"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:972
+#, no-c-format
+msgid "Extracts the selected files from the archive."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:979
+#, no-c-format
+msgid "Files"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:984
+#, no-c-format
+msgid "Extracts from the archive all files that match the specified pattern."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:992
+#, no-c-format
+msgid "Keep directory structure"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:997
+#, no-c-format
+msgid ""
+"Reconstructs the directory structure when extracting the specified files."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1001
+#, no-c-format
+msgid ""
+"For example, you specify <filename>/tmp</filename> in the <guimenu>Filename</"
+"guimenu> text box and extract all files. The archive contains a subdirectory "
+"called <filename>doc</filename>. If you select the <guimenu>Keep directory "
+"structure</guimenu> option, Archive Manager extracts the contents of the "
+"subdirectory to <filename>/tmp/doc</filename>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1009
+#, no-c-format
+msgid ""
+"If you do not select the <guimenu>Keep directory structure</guimenu> option, "
+"Archive Manager does not create any subdirectories. Instead, it extracts all "
+"files from the archive, including files from subdirectories, to <filename>/"
+"tmp</filename>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1019
+#, no-c-format
+msgid "Do not overwrite newer files"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1024
+#, no-c-format
+msgid ""
+"If not active, the Archive Manager overwrites any files in the destination "
+"directory that have the same name as the specified files."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1029
+#, no-c-format
+msgid ""
+"If you select this option, Archive Manager does not extract the specified "
+"file if an existing file with the same name already exists in the "
+"destination directory."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1044
+#, no-c-format
+msgid ""
+"To extract an archived file in a file manager window without opening Archive "
+"Manager, right-click the file and select <guimenu>Extract Here</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1049
+#, no-c-format
+msgid ""
+"The Extract operation extracts a copy of the specified files from the "
+"archive. The extracted files have the same permissions and modification date "
+"as the original files that were added to the archive."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1054
+#, no-c-format
+msgid "The Extract operation does not change the contents of the archive."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:1062
+#, no-c-format
+msgid "Creating Archives"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1065
+#, no-c-format
+msgid ""
+"In Archive Manager, click the main menu icon in the top left part of the "
+"window and select <guimenu>New Archive</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1071
+#, no-c-format
+msgid "Specify the name and location of the new archive."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1076
+#, no-c-format
+msgid "Select an archive type from the drop-down box."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1081
+#, no-c-format
+msgid "Click <guimenu>Create</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1084
+#, no-c-format
+msgid ""
+"Archive Manager creates an empty archive, but does not yet write the archive "
+"to disk. Archive Manager writes a new archive to disk only when the archive "
+"contains at least one file. If you create a new archive and quit Archive "
+"Manager before you add any files to the archive, the archive will be deleted."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1093
+#, no-c-format
+msgid "Add files and directories to the new archive:"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1098
+#, no-c-format
+msgid ""
+"Click <guimenu>Add Files</guimenu> and select the files or directories you "
+"want to add."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1104
+#, no-c-format
+msgid "Click <guimenu>Add</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1107
+#, no-c-format
+msgid "Archive Manager adds the files to the current directory in the archive."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1114
+#, no-c-format
+msgid ""
+"You can also add files to an archive in a file manager window without "
+"opening Archive Manager. See <xref linkend=\"sec.gnomeuser.use.nautilus."
+"archiving\"/> for more information."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:1123
+#, no-c-format
+msgid "Taking Screenshots"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1125
+#, no-c-format
+msgid ""
+"You can take a snapshot of your screen or of an individual application "
+"window by using the Take Screenshots utility. Start it by pressing "
+"<keycap>Print</keycap> to take a screenshot of the entire desktop or by "
+"pressing <keycombo> <keycap function=\"alt\"></keycap> <keycap>Print</"
+"keycap> </keycombo> to take a screenshot of the currently active window or "
+"dialog."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1133
+#, no-c-format
+msgid ""
+"The screenshots are automatically saved to your <filename>~/Pictures</"
+"filename> directory."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1138
+#, no-c-format
+msgid ""
+"You can also use GIMP to take screenshots. (For more information on GIMP, "
+"see <xref linkend=\"cha.gimp\"/>). In GIMP, click <menuchoice> "
+"<guimenu>File</guimenu> <guimenu>Create</guimenu> <guimenu>Screenshot</"
+"guimenu> </menuchoice>, select an area, choose a delay and then click "
+"<guimenu>Snap</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:1147
+#, no-c-format
+msgid "Viewing PDF Files"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1149
+#, no-c-format
+msgid ""
+"Documents that need to be shared or printed across platforms can be saved as "
+"PDF (Portable Document Format) files. Document Viewer (also known as Evince) "
+"can open PDF files and many similar file types, such as XPS, DjVu, or TIFF."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:1156
+#, no-c-format
+msgid "Rare Display Issues"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1157
+#, no-c-format
+msgid ""
+"In rare cases, documents will not be displayed correctly in Document Viewer. "
+"This can happen, for example, with certain forms, animations or 3D images. "
+"In such cases, ask the authors of the file what viewer they recommend. "
+"However, in some cases the recommended viewer will not work on Linux."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:1167
+#, no-c-format
+msgid "Document Viewer"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1178
+#, no-c-format
+msgid ""
+"To open Document Viewer, double-click a PDF file in a file manager window. "
+"Document Viewer will also open when you download a PDF file from a Web site. "
+"To open Document Viewer without a file, select "
+"<menuchoice><guimenu>Applications</guimenu><guimenu>Office</guimenu> "
+"<guimenu>Document Viewer</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1186
+#, no-c-format
+msgid ""
+"To view a PDF file in Document Viewer, click the cog wheel icon to open the "
+"menu and select <guimenu>Open</guimenu>. Now locate the desired PDF file and "
+"click <guimenu>Open</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1192
+#, no-c-format
+msgid ""
+"Use the navigation icons at the top of the window or the thumbnails in the "
+"left panel to navigate through the document. If your PDF document provides "
+"bookmarks, you can access them in the left panel of the viewer."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:1199
+#, no-c-format
+msgid "Obtaining Software Updates"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1201
+#, no-c-format
+msgid ""
+"When you connect to the Internet, the updater applet automatically checks "
+"whether software updates for your system are available. When important "
+"updates are available, you will receive a notification on your desktop."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1207
+#, no-c-format
+msgid ""
+"For detailed information on how to install software updates with the updater "
+"applet and how to configure it, refer to the chapter about installing and "
+"removing software in <xref linkend=\"sec.updater\"/>."
+msgstr ""
+
+#. Tag: title
+#: gnome_use.xml:1214
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1216
+#, no-c-format
+msgid ""
+"Along with the applications described in this chapter for getting started, "
+"you can use many other applications on &gnome;. Find detailed information "
+"about these applications in the other parts of this manual."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1222
+#, no-c-format
+msgid ""
+"To learn more about &gnome; and &gnome; applications, see <link xlink:href="
+"\"http://www.gnome.org\"></link>."
+msgstr ""
+
+#. Tag: para
+#: gnome_use.xml:1227
+#, no-c-format
+msgid ""
+"To report bugs or add feature requests, go to <link xlink:href=\"http://"
+"bugzilla.gnome.org\"></link>."
+msgstr ""

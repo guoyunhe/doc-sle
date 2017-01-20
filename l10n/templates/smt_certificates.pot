@@ -1,0 +1,328 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: smt_certificates.xml:9
+#, no-c-format
+msgid "Server Certificates"
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:11
+#, no-c-format
+msgid ""
+"For communication between the &smt; server and client machines, the "
+"encrypted HTTPS protocol is used, requiring a server certificate. If the "
+"certificate is not available, or if clients are not configured to use the "
+"certificate, the communication between server and clients will fail."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:18
+#, no-c-format
+msgid ""
+"Every client must be able to verify the server certificate by trusting the "
+"CA (certificate authority) certificate that signed the server certificate. "
+"Therefore, the &smt; server provides a copy of the CA at <filename>/srv/www/"
+"htdocs/smt.crt</filename>. This CA can be downloaded from every client via "
+"the URL <literal>http://<replaceable>FQDN</replaceable>/smt.crt</literal>. "
+"The copy is created when &yast; writes the &smt; configuration. Whenever "
+"&smt; is started with <command>systemctl start smt.target</command>, it "
+"checks the certificate. If a new CA certificate exists, it is copied again. "
+"Therefore, whenever the CA certificate is changed, restart &smt; using the "
+"<command>systemctl restart smt.target</command> command."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:31
+#, no-c-format
+msgid ""
+"When the &smt; Server module applies configuration changes, it checks for "
+"the existence of the common server certificate. If the certificate does not "
+"exist, &yast; asks whether the certificate should be created. If the user "
+"confirms, the &yast; CA Management module is started."
+msgstr ""
+
+#. Tag: title
+#: smt_certificates.xml:39
+#, no-c-format
+msgid "Certificate Expiration"
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:40
+#, no-c-format
+msgid ""
+"The common server certificate &smt; uses is valid for one year. After that "
+"time, a new certificate is needed. Either generate a new certificate using "
+"&yast; CA Management module or import a new certificate using the &yast; "
+"Common Server Certificate module. Both options are described in the "
+"following sections."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:47
+#, no-c-format
+msgid ""
+"As long as the same CA certificate is used, there is no need to update "
+"certificates on the client machines. The generated CA certificate is valid "
+"for 10 years."
+msgstr ""
+
+#. Tag: title
+#: smt_certificates.xml:53
+#, no-c-format
+msgid "Creating a New Common Server Certificate"
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:54
+#, no-c-format
+msgid ""
+"To create a new common server certificate with &yast;, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:60
+#, no-c-format
+msgid ""
+"Start &yast; and select <menuchoice> <guimenu>Security and Users</guimenu> "
+"<guimenu>CA Management</guimenu> </menuchoice>. Alternatively, start the "
+"&yast; CA Management module from a command line by entering <command>yast2 "
+"ca_mgm</command> as &rootuser;."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:68
+#, no-c-format
+msgid "Select the required CA and click <guimenu>Enter CA</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:73
+#, no-c-format
+msgid ""
+"Enter the password if entering a CA for the first time. &yast; displays the "
+"CA key information in the <guimenu>Description</guimenu> tab."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:79
+#, no-c-format
+msgid ""
+"Click the <guimenu>Certificates</guimenu> tab (see <xref linkend=\"fig.yast."
+"ca_cert\"/>) and select <menuchoice> <guimenu>Add</guimenu> <guimenu>Add "
+"Server Certificate</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: smt_certificates.xml:86
+#, no-c-format
+msgid "Certificates of a CA"
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:98
+#, no-c-format
+msgid ""
+"Enter the fully qualified domain name of the server as <guimenu>Common Name</"
+"guimenu>. Add a valid e-mail address of the server administrator. Other "
+"fields, such as <guimenu>Organization</guimenu>, <guimenu>Organizational "
+"Unit</guimenu>, <guimenu>Locality</guimenu>, and <guimenu>State</guimenu> "
+"are optional. Click <guimenu>Next</guimenu> to proceed."
+msgstr ""
+
+#. Tag: title
+#: smt_certificates.xml:106
+#, no-c-format
+msgid "Host Name in Server Certificate"
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:107
+#, no-c-format
+msgid ""
+"The server certificate must contain the correct host name. If the client "
+"requests server <literal>https://some.hostname/</literal>, then "
+"<literal>some.hostname</literal> must be part of the certificate. The host "
+"name must either be used as the <guimenu>Common Name</guimenu>, see <xref "
+"linkend=\"step.new.cert1\"/>, or as the <guimenu>Subject Alternative Name</"
+"guimenu>, see <xref linkend=\"step.new.cert2\"/>: <literal>DNS:some."
+"hostname</literal> and <literal>IP:<replaceable>&lt;ipaddress&gt;</"
+"replaceable></literal>."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:120
+#, no-c-format
+msgid ""
+"Enter a <guimenu>Password</guimenu> for the private key of the certificate "
+"and re-enter it in the next field to verify it."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:125
+#, no-c-format
+msgid ""
+"If you want to define a <guimenu>Subject Alternative Name</guimenu>, click "
+"<guimenu>Advanced Options</guimenu>, select <guimenu>Subject Alternative "
+"Name</guimenu> from the list and click <guimenu>Add</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: smt_certificates.xml:132
+#, no-c-format
+msgid "Subject Alternative Name"
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:133
+#, no-c-format
+msgid ""
+"If <guimenu>Subject Alternative Name</guimenu> is present in the server "
+"certificate, then it needs to contain the DNS entry. If <guimenu>Subject "
+"Alternative Name</guimenu> is present, the <guimenu>Common Name</guimenu> "
+"(CN) is not checked anymore."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:141
+#, no-c-format
+msgid ""
+"If you want to keep the default values for the other options, like "
+"<guimenu>Key Length</guimenu> and <guimenu>Valid Period</guimenu>, click "
+"<guimenu>Next</guimenu>. An overview of the certificate to be created is "
+"shown."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:149
+#, no-c-format
+msgid "Click <guimenu>Create</guimenu> to generate the certificate."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:154
+#, no-c-format
+msgid ""
+"To export the new certificate as the common server certificate, select it in "
+"the <guimenu>Certificates</guimenu> tab and select <menuchoice> "
+"<guimenu>Export</guimenu> <guimenu>Export as Common Server Certificate</"
+"guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:162 smt_certificates.xml:217
+#, no-c-format
+msgid ""
+"After having created a new certificate, restart &smt; using the "
+"<command>systemctl restart smt.target</command> command. Restarting &smt; "
+"ensures that the new certificate is copied from <filename>/etc/ssl/certs/"
+"YaST-CA.pem</filename> to <filename>/srv/www/htdocs/smt.crt</filename>, the "
+"copy &smt; uses. Restarting &smt; also restarts the Web server."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:172
+#, no-c-format
+msgid ""
+"For detailed information about managing certification and further usage of "
+"the &yast; CA Management module and the Common Server Certificate module, "
+"refer to the &secguide; coming with the base system."
+msgstr ""
+
+#. Tag: title
+#: smt_certificates.xml:179
+#, no-c-format
+msgid "Importing a Common Server Certificate"
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:180
+#, no-c-format
+msgid ""
+"You can import an own common server certificate from a file. The certificate "
+"to be imported needs to be in the PKCS12 format with CA chain. Common server "
+"certificates can be imported with the &yast; Common Server Certificate "
+"module."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:186
+#, no-c-format
+msgid "To import an own certificate with &yast;, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:191
+#, no-c-format
+msgid ""
+"Start &yast; and select <menuchoice> <guimenu>Security and Users</guimenu> "
+"<guimenu>Common Server Certificate</guimenu> </menuchoice>. Alternatively, "
+"start the &yast; Common Server Certificate module from the command line by "
+"entering <command>yast2 common_cert</command> as &rootuser;."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:198
+#, no-c-format
+msgid ""
+"The description of the currently used common server certificate is shown in "
+"the dialog that opens."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:204
+#, no-c-format
+msgid ""
+"Click <guimenu>Import</guimenu> and select the file containing the "
+"certificate to be imported. Specify the certificate password in the "
+"<guimenu>Password</guimenu> field."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:211
+#, no-c-format
+msgid ""
+"Press <guimenu>Next</guimenu>. If the certificate is successfully imported, "
+"close &yast; with <guimenu>Finish</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: smt_certificates.xml:230
+#, no-c-format
+msgid "Synchronizing Time between &smt; Server and Clients"
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:231
+#, no-c-format
+msgid ""
+"The synchronization of time between the &smt; server and clients is highly "
+"recommended. Each server certificate has a validity period. If the client "
+"happens to be set to a time outside of this period, the certificate "
+"validation on the client side fails."
+msgstr ""
+
+#. Tag: para
+#: smt_certificates.xml:237
+#, no-c-format
+msgid ""
+"Therefore, it is advisable to keep the time on the server and clients "
+"synchronized. You can easily synchronize the time using NTP (network time "
+"protocol). Use <command>yast2 ntp-client</command> to configure an NTP "
+"client. Find detailed information about NTP in the &admin;."
+msgstr ""

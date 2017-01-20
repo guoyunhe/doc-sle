@@ -1,0 +1,1035 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: adm_sudo.xml:11
+#, no-c-format
+msgid "sudo"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: adm_sudo.xml:14
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:19
+#, no-c-format
+msgid ""
+"Many commands and system utilities need to be run as &rootuser; to modify "
+"files and/or perform tasks that only the super user is allowed to. For "
+"security reasons and to avoid accidentally running dangerous commands, it is "
+"generally advisable not to log in directly as &rootuser;. Instead, it is "
+"recommended to work as a normal, unprivileged user and use the &sudo; "
+"command to run commands with elevated privileges."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:27
+#, no-c-format
+msgid ""
+"On &productname;, &sudo; is configured by default to work similarly to su. "
+"However, &sudo; offers the possibility to allow users to run commands with "
+"privileges of any other user in a highly configurable manner. This can be "
+"used to assign roles with specific privileges to certain users and groups. "
+"It is for example possible to allow members of the group &examplegroup; to "
+"run a command with the privileges of &exampleuserII;. Access to the command "
+"can be further restricted by, for example, forbidding to specify any command "
+"options. While su always requires the &rootuser; password for authentication "
+"with PAM, &sudo; can be configured to authenticate with your own "
+"credentials. This increases security by not having to share the &rootuser; "
+"password. For instance, you can allow members of the group &examplegroup; to "
+"run a command <command>frobnicate</command> as &exampleuserII;, with the "
+"restriction that no arguments are specified. This can be used to assign "
+"roles with specific abilities to certain users and groups."
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:44
+#, no-c-format
+msgid "Basic &sudo; Usage"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:46
+#, no-c-format
+msgid "&sudo; is simple to use, yet very powerful."
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:51
+#, no-c-format
+msgid "Running a Single Command"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:52
+#, no-c-format
+msgid ""
+"Logged in as normal user, you can run any command as &rootuser; by adding "
+"&sudo; before it. It will prompt for the root password and, if authenticated "
+"successfully, run the command as &rootuser;:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:57
+#, no-c-format
+msgid ""
+"&prompt.user;<command>id -un</command><co xml:id=\"co.sudo.usage.id\"/>\n"
+"tux\n"
+"&prompt.user;<command>sudo id -un</command>\n"
+"root's password:<co xml:id=\"co.sudo.usage.pw\"/>\n"
+"root\n"
+"&prompt.user;<command>id -un</command>\n"
+"tux<co xml:id=\"co.sudo.usage.after\"/>\n"
+"&prompt.user;<command>sudo id -un</command>\n"
+"<co xml:id=\"co.sudo.usage.nopw\"/>\n"
+"root"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:60
+#, no-c-format
+msgid ""
+"The <command>id -un</command> command prints the login name of the current "
+"user."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:66
+#, no-c-format
+msgid ""
+"The password is not shown during input, neither as clear text nor as bullets."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:72
+#, no-c-format
+msgid ""
+"Only commands started with &sudo; are run with elevated privileges. If you "
+"run the same command without the &sudo; prefix, it is run with the "
+"privileges of the current user again."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:79
+#, no-c-format
+msgid ""
+"For a limited amount of time, you do not need to enter the &rootuser; "
+"password again."
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:86
+#, no-c-format
+msgid "I/O Redirection"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:87
+#, no-c-format
+msgid "I/O redirection does not work as you would probably expect:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:90
+#, no-c-format
+msgid ""
+"&prompt.user; sudo echo s &gt; /proc/sysrq-trigger\n"
+"bash: /proc/sysrq-trigger: Permission denied\n"
+"&prompt.user; sudo cat &lt; /proc/1/maps\n"
+"bash: /proc/1/maps: Permission denied"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:91
+#, no-c-format
+msgid ""
+"Only the <command>echo</command>/<command>cat</command> binary is run with "
+"elevated privileges, while the redirection is performed by the user's shell "
+"with user privileges. You can either start a shell like in <xref linkend="
+"\"sec.sudo.shell\"/> or use the <command>dd</command> utility instead:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:98
+#, no-c-format
+msgid ""
+"echo s | sudo dd of=/proc/sysrq-trigger\n"
+"sudo dd if=/proc/1/maps | cat <!-- TODO: Better example! -->"
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:103
+#, no-c-format
+msgid "Starting a Shell"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:104
+#, no-c-format
+msgid ""
+"Having to add &sudo; before every command can be cumbersome. While you could "
+"specify a shell as a command <command>sudo bash</command>, it is recommended "
+"to rather use one of the built-in mechanisms to start a shell:"
+msgstr ""
+
+#. Tag: literal
+#: adm_sudo.xml:111
+#, no-c-format
+msgid "sudo -s (&lt;command&gt;)"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:114
+#, no-c-format
+msgid ""
+"Starts a shell specified by the <envar>SHELL</envar> environment variable or "
+"the target user's default shell. If a command is given, it is passed to the "
+"shell (with the <option>-c</option> option), else the shell is run in "
+"interactive mode."
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:120
+#, no-c-format
+msgid ""
+"<prompt>&exampleuser_plain;:~ &gt; </prompt>sudo -i\n"
+"root's password:\n"
+"<prompt>root:/home/tux # </prompt>exit\n"
+"<prompt>&exampleuser_plain;:~ &gt; </prompt>"
+msgstr ""
+
+#. Tag: literal
+#: adm_sudo.xml:124
+#, no-c-format
+msgid "sudo -i (&lt;command&gt;)"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:127
+#, no-c-format
+msgid ""
+"Like <option>-s</option>, but starts the shell as login shell. This means "
+"that the shell's start-up files (<filename>.profile</filename> etc.) are "
+"processed and the current working directory is set to the target user's home "
+"directory."
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:133
+#, no-c-format
+msgid ""
+"<prompt>&exampleuser_plain;:~ &gt; </prompt>sudo -i\n"
+"root's password:\n"
+"<prompt>root:~ # </prompt>exit\n"
+"<prompt>&exampleuser_plain;:~ &gt; </prompt>"
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:140
+#, no-c-format
+msgid "Environment Variables"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:141
+#, no-c-format
+msgid "By default, &sudo; does not propagate environment variables:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:144
+#, no-c-format
+msgid ""
+"&prompt.user;ENVVAR=test env | grep ENVVAR\n"
+"ENVVAR=test\n"
+"&prompt.user;ENVVAR=test sudo env | grep ENVVAR\n"
+"root's password:\n"
+"<co xml:id=\"co.sudo.env.novar\"/>\n"
+"&prompt.user;"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:147
+#, no-c-format
+msgid ""
+"The empty output shows that the environment variable <envar>ENVVAR</envar> "
+"did not exist in the context of the command run with &sudo;."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:154
+#, no-c-format
+msgid ""
+"This behavior can be changed by the <literal>env_reset</literal> option, see "
+"<xref linkend=\"tab.adm.sudo.options\"/>."
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:161
+#, no-c-format
+msgid "Configuring &sudo;"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:163
+#, no-c-format
+msgid "&sudo; is a very flexible tool with extensive configuration."
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:168
+#, no-c-format
+msgid "Locked yourself out of sudo"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:169
+#, no-c-format
+msgid ""
+"If you locked yourself out of &sudo; by mistake, you can use <command>su -</"
+"command> and the &rootuser; password to get a root shell and run "
+"<command>visudo</command> to fix the error."
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:177
+#, no-c-format
+msgid "Editing the Configuration Files"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:181
+#, no-c-format
+msgid ""
+"The main policy configuration file for &sudo; is <filename>/etc/sudoers</"
+"filename>. As it is possible to lock yourself out of the system if there are "
+"any errors in that file, it is strongly recommended to use <command>visudo</"
+"command> for editing. It will prevent simultaneous changes to the opened "
+"file and check for syntax errors before saving."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:189
+#, no-c-format
+msgid ""
+"Despite its name, you can also use editors other than vi by setting the "
+"<envar>EDITOR</envar> environment variable, for example:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:193
+#, no-c-format
+msgid "sudo EDITOR=<replaceable>/usr/bin/nano</replaceable> visudo"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:194
+#, no-c-format
+msgid ""
+"However, the <filename>/etc/sudoers</filename> file itself is supplied by "
+"the system packages and modifications may break on updates. Therefore, it is "
+"recommended to put custom configuration into files in the <filename>/etc/"
+"sudoers.d/</filename> directory. Any file in there is automatically "
+"included. To create or edit a file in that subdirectory, run:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:201
+#, no-c-format
+msgid "sudo visudo -f /etc/sudoers.d/<replaceable>NAME</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:202
+#, no-c-format
+msgid ""
+"Alternatively with a different editor (for example <command>nano</command>):"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:206
+#, no-c-format
+msgid ""
+"sudo EDITOR=<replaceable>/usr/bin/nano</replaceable> visudo -f /etc/sudoers."
+"d/<replaceable>NAME</replaceable>"
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:208
+#, no-c-format
+msgid "Ignored Files in <filename>/etc/sudoers.d</filename>"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:209
+#, no-c-format
+msgid ""
+"The <literal>#includedir</literal> command in <filename>/etc/sudoers</"
+"filename>, used for <filename>/etc/sudoers.d</filename>, ignores files that "
+"end in <literal>~</literal> (tilde) or contain a <literal>.</literal> (dot)."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:216
+#, no-c-format
+msgid ""
+"For more information on the <command>visudo</command> command, run "
+"<command>man 8 visudo</command>."
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:223
+#, no-c-format
+msgid "Basic sudoers Configuration Syntax"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:224
+#, no-c-format
+msgid ""
+"In the sudoers configuration files, there are two types of options: strings "
+"and flags. While strings can contain any value, flags can be turned either "
+"ON or OFF. The most important syntax constructs for sudoers configuration "
+"files are:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:230
+#, no-c-format
+msgid ""
+"# Everything on a line after a # gets ignored <co xml:id=\"co.sudo.syntax."
+"comment\"/>\n"
+"Defaults !insults # Disable the insults flag <co xml:id=\"co.sudo.syntax.flag"
+"\"/>\n"
+"Defaults env_keep += \"DISPLAY HOME\" # Add DISPLAY and HOME to env_keep\n"
+"&exampleuser_plain; ALL = NOPASSWD: /usr/bin/frobnicate, PASSWD: /usr/bin/"
+"journalctl <co xml:id=\"co.sudo.syntax.rule\"/>"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:233
+#, no-c-format
+msgid ""
+"There are two exceptions: <literal>#include</literal> and "
+"<literal>#includedir</literal> are normal commands. Followed by digits, it "
+"specifies a UID."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:240
+#, no-c-format
+msgid "Remove the <literal>!</literal> to set the specified flag to ON."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:245
+#, no-c-format
+msgid "See <xref linkend=\"sec.sudo.conf.rule\"/>."
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:251
+#, no-c-format
+msgid "Useful Flags and Options"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:256
+#, no-c-format
+msgid "Option name"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:261
+#, no-c-format
+msgid "Description"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:266
+#, no-c-format
+msgid "Example"
+msgstr ""
+
+#. Tag: literal
+#: adm_sudo.xml:274
+#, no-c-format
+msgid "targetpw"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:277
+#, no-c-format
+msgid ""
+"This flag controls whether the invoking user is required to enter the "
+"password of the target user (ON) (for example &rootuser;) or the invoking "
+"user (OFF)."
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:284
+#, no-c-format
+msgid "Defaults targetpw # Turn targetpw flag ON"
+msgstr ""
+
+#. Tag: literal
+#: adm_sudo.xml:288
+#, no-c-format
+msgid "rootpw"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:291
+#, no-c-format
+msgid ""
+"If set, &sudo; will prompt for the &rootuser; password instead of the target "
+"user's or the invoker's. The default is OFF."
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:297
+#, no-c-format
+msgid "Defaults !rootpw # Turn rootpw flag OFF"
+msgstr ""
+
+#. Tag: literal
+#: adm_sudo.xml:301
+#, no-c-format
+msgid "env_reset"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:304
+#, no-c-format
+msgid ""
+"If set, &sudo; constructs a minimal environment with only <envar>TERM</"
+"envar>, <envar>PATH</envar>, <envar>HOME</envar>, <envar>MAIL</envar>, "
+"<envar>SHELL</envar>, <envar>LOGNAME</envar>, <envar>USER</envar>, "
+"<envar>USERNAME</envar>, and <envar>SUDO_*</envar> set. Additionally, "
+"variables listed in <literal>env_keep</literal> get imported from the "
+"calling environment. The default is ON."
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:315
+#, no-c-format
+msgid "Defaults env_reset # Turn env_reset flag ON"
+msgstr ""
+
+#. Tag: literal
+#: adm_sudo.xml:319
+#, no-c-format
+msgid "env_keep"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:322
+#, no-c-format
+msgid ""
+"List of environment variables to keep when the <literal>env_reset</literal> "
+"flag is ON."
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:328
+#, no-c-format
+msgid ""
+"# Set env_keep to contain EDITOR and PROMPT\n"
+"Defaults env_keep = \"EDITOR PROMPT\"\n"
+"Defaults env_keep += \"JRE_HOME\" # Add JRE_HOME\n"
+"Defaults env_keep -= \"JRE_HOME\" # Remove JRE_HOME"
+msgstr ""
+
+#. Tag: literal
+#: adm_sudo.xml:332
+#, no-c-format
+msgid "env_delete"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:335
+#, no-c-format
+msgid ""
+"List of environment variables to remove when the <literal>env_reset</"
+"literal> flag is OFF."
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:341
+#, no-c-format
+msgid ""
+"# Set env_delete to contain EDITOR and PROMPT\n"
+"Defaults env_delete = \"EDITOR PROMPT\"\n"
+"Defaults env_delete += \"JRE_HOME\" # Add JRE_HOME\n"
+"Defaults env_delete -= \"JRE_HOME\" # Remove JRE_HOME"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:347
+#, no-c-format
+msgid ""
+"The <literal>Defaults</literal> token can also be used to create aliases for "
+"a collection of users, hosts, and commands. Furthermore, it is possible to "
+"apply an option only to a specific set of users."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:352
+#, no-c-format
+msgid ""
+"For detailed information about the <filename>/etc/sudoers</filename> "
+"configuration file, consult <command>man 5 sudoers</command>."
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:359
+#, no-c-format
+msgid "Rules in sudoers"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:360
+#, no-c-format
+msgid ""
+"Rules in the sudoers configuration can be very complex, so this section will "
+"only cover the basics. Each rule follows the basic scheme (<literal>[]</"
+"literal> marks optional parts):"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:365
+#, no-c-format
+msgid ""
+"#Who      Where         As whom      Tag                What\n"
+"User_List Host_List = [(User_List)] [NOPASSWD:|PASSWD:] Cmnd_List"
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:367
+#, no-c-format
+msgid "Syntax for sudoers Rules"
+msgstr ""
+
+#. Tag: literal
+#: adm_sudo.xml:369
+#, no-c-format
+msgid "User_List"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:372
+#, no-c-format
+msgid ""
+"One or more (separated by <literal>,</literal>) identifiers: Either a user "
+"name, a group in the format <literal>%GROUPNAME</literal> or a user ID in "
+"the format <literal>#UID</literal>. Negation can be performed with a "
+"<literal>!</literal> prefix."
+msgstr ""
+
+#. Tag: literal
+#: adm_sudo.xml:381
+#, no-c-format
+msgid "Host_List"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:384
+#, no-c-format
+msgid ""
+"One or more (separated by <literal>,</literal>) identifiers: Either a (fully "
+"qualified) host name or an IP address. Negation can be performed with a "
+"<literal>!</literal> prefix. <literal>ALL</literal> is the usual choice for "
+"<literal>Host_List</literal>."
+msgstr ""
+
+#. Tag: literal
+#: adm_sudo.xml:393
+#, no-c-format
+msgid "NOPASSWD:|PASSWD:"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:396
+#, no-c-format
+msgid ""
+"The user will not be prompted for a password when running commands matching "
+"<literal>CMDSPEC</literal> after <literal>NOPASSWD:</literal>."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:400
+#, no-c-format
+msgid ""
+"<literal>PASSWD</literal> is the default, it only needs to be specified when "
+"both are on the same line:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:404
+#, no-c-format
+msgid "&exampleuser_plain; ALL = PASSWD: /usr/bin/foo, NOPASSWD: /usr/bin/bar"
+msgstr ""
+
+#. Tag: literal
+#: adm_sudo.xml:408
+#, no-c-format
+msgid "Cmnd_List"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:411
+#, no-c-format
+msgid ""
+"One or more (separated by <literal>,</literal>) specifiers: A path to an "
+"executable, followed by allowed arguments or nothing."
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:415
+#, no-c-format
+msgid ""
+"/usr/bin/foo     # Anything allowed\n"
+"/usr/bin/foo bar # Only \"/usr/bin/foo bar\" allowed\n"
+"/usr/bin/foo \"\"  # No arguments allowed"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:419
+#, no-c-format
+msgid ""
+"<literal>ALL</literal> can be used as <literal>User_List</literal>, "
+"<literal>Host_List</literal>, and <literal>Cmnd_List</literal>."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:423
+#, no-c-format
+msgid ""
+"A rule that allows &exampleuser; to run all commands as root without "
+"entering a password:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:427
+#, no-c-format
+msgid "&exampleuser_plain; ALL = NOPASSWD: ALL"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:428
+#, no-c-format
+msgid ""
+"A rule that allows &exampleuser; to run <command>systemctl restart apache2</"
+"command>:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:432
+#, no-c-format
+msgid "&exampleuser_plain; ALL = /usr/bin/systemctl restart apache2"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:433
+#, no-c-format
+msgid ""
+"A rule that allows &exampleuser; to run <command>wall</command> as "
+"<systemitem>admin</systemitem> with no arguments:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:437
+#, no-c-format
+msgid "&exampleuser_plain; ALL = (admin) /usr/bin/wall \"\""
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:439
+#, no-c-format
+msgid "Dangerous constructs"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:440
+#, no-c-format
+msgid "Constructs of the kind"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:443
+#, no-c-format
+msgid "ALL ALL = ALL"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:444
+#, no-c-format
+msgid ""
+"<emphasis>must not</emphasis> be used without <literal>Defaults targetpw</"
+"literal>, otherwise anyone can run commands as &rootuser;."
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:452
+#, no-c-format
+msgid "Common Use Cases"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:454
+#, no-c-format
+msgid ""
+"Although the default configuration is often sufficient for simple setups and "
+"desktop environments, custom configurations can be very useful."
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:460
+#, no-c-format
+msgid "Using &sudo; without &rootuser; Password"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:461
+#, no-c-format
+msgid ""
+"In cases with special restrictions (<quote>user X can only run command Y as "
+"&rootuser;</quote>) it is not possible. In other cases, it is still "
+"favorable to have some kind of separation. By convention, members of the "
+"group <systemitem class=\"groupname\">wheel</systemitem> can run all "
+"commands with &sudo; as root."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:470
+#, no-c-format
+msgid ""
+"Add yourself to the <systemitem class=\"groupname\">wheel</systemitem> group"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:474
+#, no-c-format
+msgid ""
+"If your user account is not already member of the <systemitem class="
+"\"groupname\">wheel</systemitem> group, add it by running <command>sudo "
+"usermod -a -G wheel <replaceable>USERNAME</replaceable></command> and "
+"logging out and in again. Verify that the change was successful by running "
+"<command>groups <replaceable>USERNAME</replaceable></command>."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:484
+#, no-c-format
+msgid "Make authentication with the invoking user's password the default."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:487
+#, no-c-format
+msgid ""
+"Create the file <filename>/etc/sudoers.d/userpw</filename> with "
+"<command>visudo</command> (see <xref linkend=\"sec.sudo.conf.edit\"/>) and "
+"add:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:492
+#, no-c-format
+msgid "Defaults !targetpw"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:495
+#, no-c-format
+msgid "Select a new default rule."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:498
+#, no-c-format
+msgid ""
+"Depending on whether you want users to re-enter their passwords, uncomment "
+"the specific line in <filename>/etc/sudoers</filename> and comment out the "
+"default rule."
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:503
+#, no-c-format
+msgid ""
+"## Uncomment to allow members of group wheel to execute any command\n"
+"# %wheel ALL=(ALL) ALL\n"
+"\n"
+"## Same thing without a password\n"
+"# %wheel ALL=(ALL) NOPASSWD: ALL"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:506
+#, no-c-format
+msgid "Make the default rule more restrictive"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:509
+#, no-c-format
+msgid ""
+"Comment out or remove the allow-everything rule in <filename>/etc/sudoers</"
+"filename>:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:513
+#, no-c-format
+msgid ""
+"ALL     ALL=(ALL) ALL   # WARNING! Only use this together with 'Defaults "
+"targetpw'!"
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:515
+#, no-c-format
+msgid "Dangerous rule in sudoers"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:516
+#, no-c-format
+msgid ""
+"Do not forget this step, otherwise <emphasis>any</emphasis> user can execute "
+"<emphasis>any</emphasis> command as &rootuser;!"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:523
+#, no-c-format
+msgid "Test the configuration"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:526
+#, no-c-format
+msgid ""
+"Try to run &sudo; as member and non-member of <systemitem class=\"groupname"
+"\">wheel</systemitem>."
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:530
+#, no-c-format
+msgid ""
+"<prompt>&exampleuser_plain;:~ &gt; </prompt>groups\n"
+"users wheel\n"
+"<prompt>&exampleuser_plain;:~ &gt; </prompt>sudo id -un\n"
+"&exampleuser_plain;'s password:\n"
+"root\n"
+"<prompt>&exampleuserII_plain;:~ &gt; </prompt>groups\n"
+"users\n"
+"<prompt>&exampleuserII_plain;:~ &gt; </prompt>sudo id -un\n"
+"&exampleuserII_plain; is not in the sudoers file.  This incident will be "
+"reported."
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:536
+#, no-c-format
+msgid "Using &sudo; with &xvendor; Applications"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:537
+#, no-c-format
+msgid ""
+"When starting graphical applications with &sudo;, you will encounter the "
+"following error:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:541
+#, no-c-format
+msgid ""
+"&prompt.user;sudo xterm\n"
+"xterm: Xt error: Can't open display: %s\n"
+"xterm: DISPLAY is not set"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:542
+#, no-c-format
+msgid "&yast; will pick the ncurses interface instead of the graphical one."
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:545
+#, no-c-format
+msgid ""
+"To use &xvendor; in applications started with &sudo;, the environment "
+"variables <envar>DISPLAY</envar> and <envar>XAUTHORITY</envar> need to be "
+"propagated. To configure this, create the file <filename>/etc/sudoers.d/"
+"xorg</filename>, (see <xref linkend=\"sec.sudo.conf.edit\"/>) and add the "
+"following line:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:552
+#, no-c-format
+msgid "Defaults env_keep += \"DISPLAY XAUTHORITY\""
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:553
+#, no-c-format
+msgid ""
+"If not set already, set the <envar>XAUTHORITY</envar> variable as follows:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:556
+#, no-c-format
+msgid "export XAUTHORITY=~/.Xauthority"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:557
+#, no-c-format
+msgid "Now &xvendor; applications can be run as usual:"
+msgstr ""
+
+#. Tag: screen
+#: adm_sudo.xml:560
+#, no-c-format
+msgid "sudo yast2"
+msgstr ""
+
+#. Tag: title
+#: adm_sudo.xml:572
+#, no-c-format
+msgid "More Information"
+msgstr ""
+
+#. Tag: para
+#: adm_sudo.xml:574
+#, no-c-format
+msgid ""
+"A quick overview about the available command line switches can be retrieved "
+"by <command>sudo --help</command>. An explanation and other important "
+"information can be found in the man page: <command>man 8 sudo</command>, "
+"while the configuration is documented in <command>man 5 sudoers</command>."
+msgstr ""

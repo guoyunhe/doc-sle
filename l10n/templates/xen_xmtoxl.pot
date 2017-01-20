@@ -1,0 +1,288 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: xen_xmtoxl.xml:17
+#, no-c-format
+msgid "XM, XL Toolstacks and Libvirt framework"
+msgstr ""
+
+#. Tag: title
+#: xen_xmtoxl.xml:25
+#, no-c-format
+msgid "&xen; Toolstacks"
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:27
+#, no-c-format
+msgid ""
+"Since the early &xen; 2.x releases, <command>xend</command> has been the de "
+"facto toolstack for managing &xen; installations. In &xen; 4.1, a new "
+"toolstack called libxenlight (also known as libxl) was introduced with "
+"technology preview status. libxl is a small, low-level library written in C. "
+"It has been designed to provide a simple API for all client toolstacks "
+"(<link xlink:href=\"http://wiki.xen.org/wiki/XAPI\">XAPI</link>, &libvirt;, "
+"xl). In &xen; 4.2, libxl was promoted to officially supported status and "
+"<command>xend</command> was marked deprecated. <command>xend</command> has "
+"been included in the &xen; 4.3 and 4.4 series to give users ample time to "
+"convert their tooling to libxl, but it has been removed from the upstream "
+"&xen; project and will no longer be provided starting with the &xen; 4.5 "
+"series and &slsa; 12 SP1."
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:43
+#, no-c-format
+msgid ""
+"Although &slsa; 11 SP3 contains &xen; 4.2, &suse; retained the "
+"<command>xend</command> toolstack since making such an invasive change in a "
+"service pack would be too disruptive for &sle; customers. However, &slsa; 12 "
+"provides a suitable opportunity to move to the new libxl toolstack and "
+"remove the deprecated, unmaintained <command>xend</command> stack. Starting "
+"with &slsa; 12 SP1, <command>xend</command> is no longer supported."
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:53
+#, no-c-format
+msgid ""
+"One of the major differences between <command>xend</command> and libxl is "
+"that the former is stateful, while the latter is stateless. With "
+"<command>xend</command>, all client applications such as <command>xm</"
+"command> and &libvirt; see the same system state. <command>xend</command> is "
+"responsible for maintaining state for the entire &xen; host. In libxl, "
+"client applications such as <command>xl</command> or &libvirt; must maintain "
+"state. Thus domains created with <command>xl</command> or not visible or "
+"known to other libxl applications such as &libvirt;. Generally, it is "
+"discouraged to mix and match libxl applications and is preferred that a "
+"single libxl application be used to manage a &xen; host. In &sle; 12 , it is "
+"recommended to use &libvirt; to manage &xen; hosts, allowing management of "
+"the &xen; system through &libvirt; applications such as <command>virt-"
+"manager</command>, <command>virt-install</command>, <command>virt-viewer</"
+"command>, libguestfs, etc. If <command>xl</command> is used to manage the "
+"&xen; host, any virtual machines under its management will not be accessible "
+"to &libvirt;, and hence not accessible to any of the &libvirt; applications."
+msgstr ""
+
+#. Tag: title
+#: xen_xmtoxl.xml:76
+#, no-c-format
+msgid "Upgrading from xend/xm to xl/libxl"
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:77
+#, no-c-format
+msgid ""
+"The <command>xl</command> application, along with its configuration format "
+"(see <command>man xl.cfg</command>), was designed to be backward-compatible "
+"with the <command>xm</command> application and its configuration format (see "
+"<command>man xm.cfg</command>). Existing <command>xm</command> configuration "
+"should be usable with <command>xl</command>. Since libxl is stateless, and "
+"<command>xl</command> does not support the notion of managed domains, &suse; "
+"recommends using &libvirt; to manage &slsa; 12 &xen; hosts. SUSE has "
+"provided a tool called <command>xen2libvirt</command>, which provides a "
+"simple mechanism to import domains previously managed by <command>xend</"
+"command> into &libvirt;. See <xref linkend=\"xen.xen2libvirt\"/> for more "
+"information on <command>xen2libvirt</command>."
+msgstr ""
+
+#. Tag: title
+#: xen_xmtoxl.xml:95
+#, no-c-format
+msgid "XL design"
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:96
+#, no-c-format
+msgid "The basic structure of every <command>xl</command> command is:"
+msgstr ""
+
+#. Tag: screen
+#: xen_xmtoxl.xml:99
+#, no-c-format
+msgid ""
+"<command>xl subcommand</command> <option>OPTIONS</option> "
+"<replaceable>DOMAIN</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:100
+#, no-c-format
+msgid ""
+"<replaceable>DOMAIN</replaceable> is the numeric domain id, or the domain "
+"name (which will be internally translated to domain id), and "
+"<replaceable>OPTIONS</replaceable> are subcommand specific options."
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:105
+#, no-c-format
+msgid ""
+"Although xl/libxl was designed to be backward-compatible with xm/xend, there "
+"are a few differences that should be noted:"
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:111
+#, no-c-format
+msgid ""
+"Managed or persistent domains. &libvirt; now provides this functionality."
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:117
+#, no-c-format
+msgid ""
+"xl/libxl does not support Python code in the domain configuration files."
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:123
+#, no-c-format
+msgid ""
+"xl/libxl does not support creating domains from SXP format configuration "
+"files (<command>xm</command> <option>create</option> -F)."
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:130
+#, no-c-format
+msgid ""
+"xl/libxl does not support sharing storage across DomU's via <command>w!</"
+"command> in domain configuration files."
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:136
+#, no-c-format
+msgid ""
+"xl/libxl is relatively new and under heavy development, hence a few features "
+"are still missing with regard to the xm/xend toolstack:"
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:142
+#, no-c-format
+msgid "SCSI LUN/Host pass-through (PVSCSI)"
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:147
+#, no-c-format
+msgid "USB pass-through (PVUSB)"
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:152
+#, no-c-format
+msgid ""
+"Support Direct Kernel Boot for fully virtualized Linux guests for &xen; does "
+"not work anymore."
+msgstr ""
+
+#. Tag: title
+#: xen_xmtoxl.xml:161
+#, no-c-format
+msgid "Checklist before Upgrade"
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:162
+#, no-c-format
+msgid "Before upgrading a &slsa; 11 SP3 Xen host to &slsa; 12:"
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:167
+#, no-c-format
+msgid ""
+"You must remove any Python code from your xm domain configuration files."
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:173
+#, no-c-format
+msgid ""
+"It is recommended to capture the libvirt domain XML from all existing "
+"virtual machines using <command>virsh</command> <option>dumpxml</option> "
+"<replaceable>DOMAIN_NAME</replaceable> <replaceable>DOMAIN_NAME.xml</"
+"replaceable>."
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:181
+#, no-c-format
+msgid ""
+"It is recommended to do a backup of <filename>/etc/xen/xend-config.sxp</"
+"filename> and <filename>/boot/grub/menu.lst</filename> files to keep "
+"references of previous parameters used for &xen;."
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:190
+#, no-c-format
+msgid ""
+"Currently, live migrating virtual machines running on a &slsa; 11 SP3 &xen; "
+"host to a &slsa; 12 &xen; host is not supported. The <command>xend</command> "
+"and libxl toolstacks are not runtime-compatible. Virtual machine downtime "
+"will be required to move the virtual machines from &slsa; 11 SP3 to a &slsa; "
+"12 host."
+msgstr ""
+
+#. Tag: title
+#: xen_xmtoxl.xml:208
+#, no-c-format
+msgid ""
+"Saving a &xen; Guest Configuration in an <command>xm</command> Compatible "
+"Format"
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:210
+#, no-c-format
+msgid ""
+"Although <command>xl</command> is now the current toolkit for managing &xen; "
+"guests (apart from the preferred &libvirt;), you may need to export the "
+"guest configuration to the previously used <command>xm</command> format. To "
+"do this, follow these steps:"
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:219
+#, no-c-format
+msgid "First export the guest configuration to a file:"
+msgstr ""
+
+#. Tag: screen
+#: xen_xmtoxl.xml:222
+#, no-c-format
+msgid "virsh dumpxml guest_id &gt; guest_cfg.xml"
+msgstr ""
+
+#. Tag: para
+#: xen_xmtoxl.xml:225
+#, no-c-format
+msgid "Then convert the configuration to the <command>xm</command> format:"
+msgstr ""
+
+#. Tag: screen
+#: xen_xmtoxl.xml:228
+#, no-c-format
+msgid "virsh domxml-to-native xen-xm guest_cfg.xml &gt; guest_xm_cfg"
+msgstr ""

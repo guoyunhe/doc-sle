@@ -1,0 +1,2136 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: newbie_bash_commands_i.xml:11
+#, no-c-format
+msgid "Important Linux Commands"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:13
+#, no-c-format
+msgid "shells"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:15
+#, no-c-format
+msgid "<secondary>commands</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:17 newbie_bash_commands_i.xml:26
+#: newbie_bash_commands_i.xml:74 newbie_bash_commands_i.xml:108
+#: newbie_bash_commands_i.xml:141 newbie_bash_commands_i.xml:176
+#: newbie_bash_commands_i.xml:212 newbie_bash_commands_i.xml:240
+#: newbie_bash_commands_i.xml:255 newbie_bash_commands_i.xml:269
+#: newbie_bash_commands_i.xml:283 newbie_bash_commands_i.xml:307
+#: newbie_bash_commands_i.xml:322 newbie_bash_commands_i.xml:423
+#: newbie_bash_commands_i.xml:453 newbie_bash_commands_i.xml:568
+#: newbie_bash_commands_i.xml:593 newbie_bash_commands_i.xml:613
+#: newbie_bash_commands_i.xml:639 newbie_bash_commands_i.xml:664
+#: newbie_bash_commands_i.xml:687 newbie_bash_commands_i.xml:704
+#: newbie_bash_commands_i.xml:762 newbie_bash_commands_i.xml:806
+#: newbie_bash_commands_i.xml:858 newbie_bash_commands_i.xml:893
+#: newbie_bash_commands_i.xml:930 newbie_bash_commands_i.xml:973
+#: newbie_bash_commands_i.xml:1016 newbie_bash_commands_i.xml:1038
+#: newbie_bash_commands_i.xml:1057 newbie_bash_commands_i.xml:1079
+#: newbie_bash_commands_i.xml:1112 newbie_bash_commands_i.xml:1131
+#: newbie_bash_commands_i.xml:1181 newbie_bash_commands_i.xml:1200
+#: newbie_bash_commands_i.xml:1214 newbie_bash_commands_i.xml:1230
+#: newbie_bash_commands_i.xml:1255 newbie_bash_commands_i.xml:1266
+#: newbie_bash_commands_i.xml:1281
+#, no-c-format
+msgid "<primary>commands</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:19
+#, no-c-format
+msgid ""
+"This section gives insight into the most important commands. There are many "
+"more commands than listed in this chapter. Along with the individual "
+"commands, parameters are listed and, where appropriate, a typical sample "
+"application is introduced. To learn more about the various commands, use the "
+"manual pages, accessed with <command>man</command> followed by the name of "
+"the command, for example, <command>man ls</command>."
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:27
+#, no-c-format
+msgid "<secondary>man</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:29
+#, no-c-format
+msgid "help"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:30
+#, no-c-format
+msgid "<secondary>man pages</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:32
+#, no-c-format
+msgid "<primary>man pages</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:36
+#, no-c-format
+msgid ""
+"Man pages are displayed directly in the shell. To navigate them, move up and "
+"down with <keycap function=\"pageup\"></keycap> and <keycap function="
+"\"pagedown\"></keycap>. Move between the beginning and the end of a document "
+"with <keycap function=\"home\"></keycap> and <keycap function=\"end\"></"
+"keycap>. End this viewing mode by pressing <keycap>Q</keycap>. Learn more "
+"about the <command>man</command> command itself with <command>man man</"
+"command>."
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:45
+#, no-c-format
+msgid ""
+"In the following overview, the individual command elements are written in "
+"different typefaces. The actual command and its mandatory options are always "
+"printed as <command>command option</command>. Specifications or parameters "
+"that are not required are placed in <option>[square brackets]</option>."
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:53
+#, no-c-format
+msgid ""
+"Adjust the settings to your needs. It makes no sense to write <command>ls "
+"file</command> if no file named <filename>file</filename> actually exists. "
+"You can usually combine several parameters, for example, by writing "
+"<command>ls -la</command> instead of <command>ls -l -a</command>."
+msgstr ""
+
+#. Tag: title
+#: newbie_bash_commands_i.xml:61
+#, no-c-format
+msgid "File Commands"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:62
+#, no-c-format
+msgid ""
+"The following section lists the most important commands for file management. "
+"It covers everything from general file administration to the manipulation of "
+"file system ACLs."
+msgstr ""
+
+#. Tag: title
+#: newbie_bash_commands_i.xml:68
+#, no-c-format
+msgid "File Administration"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:71
+#, no-c-format
+msgid ""
+"<command>ls</command>&#x20;<option>[options]</option>&#x20;<option>[files]</"
+"option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:75
+#, no-c-format
+msgid "<secondary>ls</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:76
+#, no-c-format
+msgid "<primary>ls</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:77
+#, no-c-format
+msgid ""
+"If you run <command>ls</command> without any additional parameters, the "
+"program lists the contents of the current directory in short form."
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:84 newbie_bash_commands_i.xml:746
+#, no-c-format
+msgid "<option>-l</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:87
+#, no-c-format
+msgid "Detailed list"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:93 newbie_bash_commands_i.xml:940
+#, no-c-format
+msgid "<option>-a</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:96
+#, no-c-format
+msgid "Displays hidden files"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:105
+#, no-c-format
+msgid ""
+"<command>cp</command>&#x20;<option>[options]</option>&#x20;<option>source "
+"target</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:109
+#, no-c-format
+msgid "<secondary>cp</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:110
+#, no-c-format
+msgid "<primary>cp</primary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:111 newbie_bash_commands_i.xml:144
+#: newbie_bash_commands_i.xml:179 newbie_bash_commands_i.xml:426
+#: newbie_bash_commands_i.xml:456 newbie_bash_commands_i.xml:571
+#: newbie_bash_commands_i.xml:616 newbie_bash_commands_i.xml:632
+#: newbie_bash_commands_i.xml:707 newbie_bash_commands_i.xml:765
+#, no-c-format
+msgid "files"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:112
+#, no-c-format
+msgid "copying"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:113
+#, no-c-format
+msgid "Copies <filename>source</filename> to <filename>target</filename>."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:118 newbie_bash_commands_i.xml:161
+#, no-c-format
+msgid "<term>-i</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:120
+#, no-c-format
+msgid ""
+"Waits for confirmation, if necessary, before an existing <literal>target</"
+"literal> is overwritten"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:127
+#, no-c-format
+msgid "<term>-r</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:129
+#, no-c-format
+msgid "Copies recursively (includes subdirectories)"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:138
+#, no-c-format
+msgid ""
+"<command>mv</command>&#x20;<option>[options]</option>&#x20;<option>source "
+"target</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:142
+#, no-c-format
+msgid "<secondary>mv</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:143
+#, no-c-format
+msgid "<primary>mv</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:145
+#, no-c-format
+msgid "moving"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:146
+#, no-c-format
+msgid ""
+"Copies <filename>source</filename> to <filename>target</filename> then "
+"deletes the original <filename>source</filename>."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:152
+#, no-c-format
+msgid "<term>-b</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:154
+#, no-c-format
+msgid "Creates a backup copy of the <filename>source</filename> before moving"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:163
+#, no-c-format
+msgid ""
+"Waits for confirmation, if necessary, before an existing "
+"<filename>targetfile</filename> is overwritten"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:173
+#, no-c-format
+msgid ""
+"<command>rm</command>&#x20;<option>[options]</option>&#x20;<option>files</"
+"option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:177
+#, no-c-format
+msgid "<secondary>rm</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:178
+#, no-c-format
+msgid "<primary>rm</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:180 newbie_bash_commands_i.xml:273
+#, no-c-format
+msgid "deleting"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:181
+#, no-c-format
+msgid ""
+"Removes the specified files from the file system. Directories are not "
+"removed by <command>rm</command> unless the option <option>-r</option> is "
+"used."
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:188 newbie_bash_commands_i.xml:485
+#: newbie_bash_commands_i.xml:818
+#, no-c-format
+msgid "<option>-r</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:191
+#, no-c-format
+msgid "Deletes any existing subdirectories"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:197 newbie_bash_commands_i.xml:717
+#, no-c-format
+msgid "<option>-i</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:200
+#, no-c-format
+msgid "Waits for confirmation before deleting each file"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:209
+#, no-c-format
+msgid ""
+"<command>ln</command>&#x20;<option>[options]</option>&#x20;<option>source</"
+"option>&#x20;<option>target</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:213
+#, no-c-format
+msgid "<secondary>ln</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:214
+#, no-c-format
+msgid "<primary>ln</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:215
+#, no-c-format
+msgid ""
+"Creates an internal link from <option>source</option> to <option>target</"
+"option>. Normally, such a link points directly to <option>source</option> on "
+"the same file system. However, if <command>ln</command> is executed with the "
+"<option>-s</option> option, it creates a symbolic link that only points to "
+"the directory in which <filename>source</filename> is located, enabling "
+"linking across file systems."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:226
+#, no-c-format
+msgid "<term>-s</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:228
+#, no-c-format
+msgid "Creates a symbolic link"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:237
+#, no-c-format
+msgid ""
+"<command>cd</command>&#x20;<option>[options]</option>&#x20;"
+"<filename>[directory]</filename>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:241
+#, no-c-format
+msgid "<secondary>cd</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:242
+#, no-c-format
+msgid "<primary>cd</primary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:243 newbie_bash_commands_i.xml:258
+#: newbie_bash_commands_i.xml:272
+#, no-c-format
+msgid "directories"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:244 newbie_bash_commands_i.xml:326
+#: newbie_bash_commands_i.xml:1218
+#, no-c-format
+msgid "changing"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:245
+#, no-c-format
+msgid ""
+"Changes the current directory. <command>cd</command> without any parameters "
+"changes to the user's home directory."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:252
+#, no-c-format
+msgid ""
+"<command>mkdir</command>&#x20;<option>[options]</option>&#x20;"
+"<option>directory</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:256
+#, no-c-format
+msgid "<secondary>mkdir</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:257
+#, no-c-format
+msgid "<primary>mkdir</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:259
+#, no-c-format
+msgid "creating"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:260
+#, no-c-format
+msgid "Creates a new directory."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:266
+#, no-c-format
+msgid ""
+"<command>rmdir</command>&#x20;<option>[options]</option>&#x20;"
+"<option>directory</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:270
+#, no-c-format
+msgid "<secondary>rmdir</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:271
+#, no-c-format
+msgid "<primary>rmdir</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:274
+#, no-c-format
+msgid "Deletes the specified directory if it is already empty."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:280
+#, no-c-format
+msgid ""
+"<command>chown</command>&#x20;<option>[options] username[:[group]]</"
+"option>&#x20;<filename>files</filename>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:284
+#, no-c-format
+msgid "<secondary>chown</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:285
+#, no-c-format
+msgid "<primary>chown</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:286
+#, no-c-format
+msgid "Transfers ownership of a file to the user with the specified username."
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:292
+#, no-c-format
+msgid "<option>-R</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:295
+#, no-c-format
+msgid "Changes files and directories in all subdirectories"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:304
+#, no-c-format
+msgid ""
+"<command>chgrp</command>&#x20;<option>[options]</option>&#x20;"
+"<option>groupname</option>&#x20;<filename>files</filename>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:308
+#, no-c-format
+msgid "<secondary>chgrp</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:309
+#, no-c-format
+msgid "<primary>chgrp</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:310
+#, no-c-format
+msgid ""
+"Transfers the group ownership of a given <filename>file</filename> to the "
+"group with the specified group name. The file owner can change group "
+"ownership only if a member of both the current and the new group."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:319
+#, no-c-format
+msgid ""
+"<command>chmod</command>&#x20;<option>[options]</option>&#x20;<option>mode</"
+"option>&#x20;<option>files</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:323
+#, no-c-format
+msgid "<secondary>chmod</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:324
+#, no-c-format
+msgid "<primary>chmod</primary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:325
+#, no-c-format
+msgid "permissions"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:327
+#, no-c-format
+msgid "Changes the access permissions."
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:330
+#, no-c-format
+msgid ""
+"The <literal>mode</literal> parameter has three parts: <literal>group</"
+"literal>, <literal>access</literal>, and <literal>access type</literal>. "
+"<literal>group</literal> accepts the following characters:"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:338
+#, no-c-format
+msgid "<term>u</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:340
+#, no-c-format
+msgid "User"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:346
+#, no-c-format
+msgid "<term>g</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:348
+#, no-c-format
+msgid "Group"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:354
+#, no-c-format
+msgid "<term>o</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:356
+#, no-c-format
+msgid "Others"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:362
+#, no-c-format
+msgid ""
+"For <literal>access</literal>, grant access with <literal>+</literal> and "
+"deny it with <literal>-</literal>."
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:366
+#, no-c-format
+msgid ""
+"The <literal>access type</literal> is controlled by the following options:"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:372
+#, no-c-format
+msgid "<term>r</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:374
+#, no-c-format
+msgid "Read"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:380
+#, no-c-format
+msgid "<term>w</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:382
+#, no-c-format
+msgid "Write"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:388
+#, no-c-format
+msgid "<term>x</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:390
+#, no-c-format
+msgid "Execute&mdash;executing files or changing to the directory"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:396
+#, no-c-format
+msgid "<term>s</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:398
+#, no-c-format
+msgid ""
+"Setuid bit&mdash;the application or program is started as if it were started "
+"by the owner of the file"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:405
+#, no-c-format
+msgid ""
+"As an alternative, a numeric code can be used. The four digits of this code "
+"are composed of the sum of the values 4, 2, and 1&mdash;the decimal result "
+"of a binary mask. The first digit sets the set user ID (SUID) (4), the set "
+"group ID (2), and the sticky (1) bits. The second digit defines the "
+"permissions of the owner of the file. The third digit defines the "
+"permissions of the group members and the last digit sets the permissions for "
+"all other users. The read permission is set with 4, the write permission "
+"with 2, and the permission for executing a file is set with 1. The owner of "
+"a file would usually receive a 6 or a 7 for executable files."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:420
+#, no-c-format
+msgid ""
+"<command>gzip</command>&#x20;<option>[parameters]</option>&#x20;"
+"<filename>files</filename>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:424
+#, no-c-format
+msgid "<secondary>gzip</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:425
+#, no-c-format
+msgid "<primary>gzip</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:427
+#, no-c-format
+msgid "compressing"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:428
+#, no-c-format
+msgid ""
+"This program compresses the contents of files using complex mathematical "
+"algorithms. Files compressed in this way are given the extension <filename>."
+"gz</filename> and need to be uncompressed before they can be used. To "
+"compress several files or even entire directories, use the <command>tar</"
+"command> command."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:437
+#, no-c-format
+msgid "<term>-d</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:439
+#, no-c-format
+msgid ""
+"Decompresses the packed gzip files so they return to their original size and "
+"can be processed normally (like the command <command>gunzip</command>)"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:450
+#, no-c-format
+msgid ""
+"<command>tar</command>&#x20;<option>options</option>&#x20;<option>archive</"
+"option>&#x20;<option>files</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:454
+#, no-c-format
+msgid "<secondary>tar</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:455
+#, no-c-format
+msgid "<primary>tar</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:457
+#, no-c-format
+msgid "archiving"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:458
+#, no-c-format
+msgid ""
+"<command>tar</command> puts one or more files into an archive. Compression "
+"is optional. <command>tar</command> is a quite complex command with several "
+"options available. The most frequently used options are:"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:466 newbie_bash_commands_i.xml:1154
+#, no-c-format
+msgid "<option>-f</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:469
+#, no-c-format
+msgid ""
+"Writes the output to a file and not to the screen as is usually the case"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:476
+#, no-c-format
+msgid "<option>-c</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:479
+#, no-c-format
+msgid "Creates a new tar archive"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:488
+#, no-c-format
+msgid "Adds files to an existing archive"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:494
+#, no-c-format
+msgid "<option>-t</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:497
+#, no-c-format
+msgid "Outputs the contents of an archive"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:503 newbie_bash_commands_i.xml:784
+#, no-c-format
+msgid "<option>-u</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:506
+#, no-c-format
+msgid ""
+"Adds files, but only if they are newer than the files already contained in "
+"the archive"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:513
+#, no-c-format
+msgid "<option>-x</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:516
+#, no-c-format
+msgid "Unpacks files from an archive (<emphasis>extraction</emphasis>)"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:522
+#, no-c-format
+msgid "<option>-z</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:525
+#, no-c-format
+msgid "Packs the resulting archive with <command>gzip</command>"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:531
+#, no-c-format
+msgid "<option>-j</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:534
+#, no-c-format
+msgid "Compresses the resulting archive with <command>bzip2</command>"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:540
+#, no-c-format
+msgid "<option>-v</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:543
+#, no-c-format
+msgid "Lists files processed"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:549
+#, no-c-format
+msgid ""
+"The archive files created by <command>tar</command> end with <filename>.tar</"
+"filename>. If the tar archive was also compressed using <command>gzip</"
+"command>, the ending is <filename>.tgz</filename> or <filename>.tar.gz</"
+"filename>. If it was compressed using <command>bzip2</command>, the ending "
+"is <filename>.tar.bz2</filename>."
+msgstr ""
+
+#. Tag: remark
+#: newbie_bash_commands_i.xml:556
+#, no-c-format
+msgid ""
+"taroth 060929: commented link because dropped section from bash.xml - to be "
+"integrated into newbie_bash.xml later"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:565
+#, no-c-format
+msgid "<command>locate</command>&#x20;<option>patterns</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:569
+#, no-c-format
+msgid "<secondary>locate</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:570
+#, no-c-format
+msgid "<primary>locate</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:572 newbie_bash_commands_i.xml:617
+#, no-c-format
+msgid "searching for"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:573
+#, no-c-format
+msgid ""
+"This command is only available if you have installed the <systemitem class="
+"\"resource\">findutils-locate</systemitem> package. The <command>locate</"
+"command> command can find in which directory a specified file is located. If "
+"desired, use wild cards <indexterm> <primary>wild cards</primary> </"
+"indexterm> to specify filenames. The program is very fast, because it uses a "
+"database specifically created for the purpose (rather than searching through "
+"the entire file system). This very fact, however, also results in a major "
+"drawback: locate is unable to find any files created after the latest update "
+"of its database. The database can be generated by &rootuser; with "
+"<command>updatedb</command>."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:590
+#, no-c-format
+msgid "<command>updatedb</command>&#x20;<option>[options]</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:594
+#, no-c-format
+msgid "<secondary>updatedb</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:595
+#, no-c-format
+msgid "<primary>updatedb</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:596
+#, no-c-format
+msgid ""
+"This command performs an update of the database used by <command>locate</"
+"command>. To include files in all existing directories, run the program as "
+"&rootuser;. It also makes sense to place it in the background by appending "
+"an ampersand (<systemitem>&amp;</systemitem>), so you can immediately "
+"continue working on the same command line (<command>updatedb &amp;</"
+"command>). This command usually runs as a daily cron job (see <filename>cron."
+"daily</filename>)."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:610
+#, no-c-format
+msgid "<command>find</command>&#x20;<option>[options]</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:614
+#, no-c-format
+msgid "<secondary>find</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:615
+#, no-c-format
+msgid "<primary>find</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:618
+#, no-c-format
+msgid ""
+"With <command>find</command>, search for a file in a given directory. The "
+"first argument specifies the directory in which to start the search. The "
+"option <command>-name</command> must be followed by a search string, which "
+"may also include wild cards. Unlike <command>locate</command>, which uses a "
+"database, <command>find</command> scans the actual directory."
+msgstr ""
+
+#. Tag: title
+#: newbie_bash_commands_i.xml:631
+#, no-c-format
+msgid "Commands to Access File Contents"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:633
+#, no-c-format
+msgid "viewing"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:636
+#, no-c-format
+msgid ""
+"<command>file</command>&#x20;<option>[options]</option>&#x20;"
+"<option>[files]</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:640
+#, no-c-format
+msgid "<secondary>file</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:641
+#, no-c-format
+msgid "<primary>file</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:642
+#, no-c-format
+msgid ""
+"With <command>file</command>, detect the contents of the specified files."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:648
+#, no-c-format
+msgid "<term>-z</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:650
+#, no-c-format
+msgid "Tries to look inside compressed files"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:661
+#, no-c-format
+msgid ""
+"<command>cat</command>&#x20;<option>[options]</option>&#x20;<filename>files</"
+"filename>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:665
+#, no-c-format
+msgid "<secondary>cat</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:666
+#, no-c-format
+msgid "<primary>cat</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:667
+#, no-c-format
+msgid ""
+"The <command>cat</command> command displays the contents of a file, printing "
+"the entire contents to the screen without interruption."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:673
+#, no-c-format
+msgid "<term>-n</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:675
+#, no-c-format
+msgid "Numbers the output on the left margin"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:684
+#, no-c-format
+msgid ""
+"<command>less</command>&#x20;<option>[options]</option>&#x20;"
+"<filename>files</filename>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:688
+#, no-c-format
+msgid "<secondary>less</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:689
+#, no-c-format
+msgid "<primary>less</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:690
+#, no-c-format
+msgid ""
+"This command can be used to browse the contents of the specified file. "
+"Scroll half a screen page up or down with <keycap>PgUp</keycap> and "
+"<keycap>PgDn</keycap> or a full screen page down with <keycap>Space</"
+"keycap>. Jump to the beginning or end of a file using <keycap>Home</keycap> "
+"and <keycap>End</keycap>. Press <keycap>Q</keycap> to exit the program."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:701
+#, no-c-format
+msgid ""
+"<command>grep</command>&#x20;<option>[options]</option>&#x20;"
+"<option>searchstring</option>&#x20;<filename>files</filename>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:705
+#, no-c-format
+msgid "<secondary>grep</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:706
+#, no-c-format
+msgid "<primary>grep</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:708
+#, no-c-format
+msgid "searching contents"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:709
+#, no-c-format
+msgid ""
+"The grep command finds a specific search string in the specified files. If "
+"the search string is found, the command displays the line in which "
+"<literal>searchstring</literal> was found along with the filename."
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:720
+#, no-c-format
+msgid "Ignores case"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:726
+#, no-c-format
+msgid "<option>-H</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:729
+#, no-c-format
+msgid "Only displays the names of the relevant files, but not the text lines"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:736
+#, no-c-format
+msgid "<option>-n</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:739
+#, no-c-format
+msgid "Additionally displays the numbers of the lines in which it found a hit"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:749
+#, no-c-format
+msgid ""
+"Only lists the files in which <literal>searchstring</literal> does not occur"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:759
+#, no-c-format
+msgid ""
+"<command>diff</command>&#x20;<option>[options]</option>&#x20;"
+"<filename>file1</filename>&#x20;<filename>file2</filename>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:763
+#, no-c-format
+msgid "<secondary>diff</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:764
+#, no-c-format
+msgid "<primary>diff</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:766
+#, no-c-format
+msgid "comparing"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:767
+#, no-c-format
+msgid ""
+"The <command>diff</command> command compares the contents of any two files. "
+"The output produced by the program lists all lines that do not match. This "
+"is frequently used by programmers who need only to send their program "
+"alterations and not the entire source code."
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:775
+#, no-c-format
+msgid "<option>-q</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:778
+#, no-c-format
+msgid "Only reports whether the two files differ"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:787
+#, no-c-format
+msgid ""
+"Produces a <quote>unified</quote> diff, which makes the output more readable"
+msgstr ""
+
+#. Tag: title
+#: newbie_bash_commands_i.xml:800
+#, no-c-format
+msgid "File Systems"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:803
+#, no-c-format
+msgid ""
+"<command>mount</command>&#x20;<option>[options]</option>&#x20;"
+"<option>[device]</option>&#x20;<filename>mountpoint</filename>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:807
+#, no-c-format
+msgid "<secondary>mount</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:808
+#, no-c-format
+msgid "<primary>mount</primary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:809 newbie_bash_commands_i.xml:861
+#, no-c-format
+msgid "drives"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:810
+#, no-c-format
+msgid "mounting"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:811
+#, no-c-format
+msgid ""
+"This command can be used to mount any data media, such as hard disks, CD-ROM "
+"drives, and other drives, to a directory of the Linux file system."
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:821
+#, no-c-format
+msgid "Mount read-only"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:827
+#, no-c-format
+msgid "-t filesystem"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:830
+#, no-c-format
+msgid ""
+"Specify the file system, commonly <literal>ext2</literal> for Linux hard "
+"disks, <literal>msdos</literal> for MS-DOS media, <literal>vfat</literal> "
+"for the Windows file system, and <literal>iso9660</literal> for CDs"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:839
+#, no-c-format
+msgid "configuration files"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:840
+#, no-c-format
+msgid "fstab"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:841
+#, no-c-format
+msgid ""
+"For hard disks not defined in the file <filename>/etc/fstab</filename>, the "
+"device type must also be specified. In this case, only &rootuser; can mount "
+"it. If the file system needs to also be mounted by other users, enter the "
+"option <literal>user</literal> in the appropriate line in the <filename>/etc/"
+"fstab</filename> file (separated by commas) and save this change. Further "
+"information is available in the <systemitem>mount(1)</systemitem> man page."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:855
+#, no-c-format
+msgid ""
+"<command>umount</command>&#x20;<option>[options]</option>&#x20;"
+"<filename>mountpoint</filename>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:859
+#, no-c-format
+msgid "<secondary>umount</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:860
+#, no-c-format
+msgid "<primary>umount</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:862
+#, no-c-format
+msgid "unmounting"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:863
+#, no-c-format
+msgid ""
+"This command unmounts a mounted drive from the file system. To prevent data "
+"loss, run this command before taking a removable data medium from its drive. "
+"Normally, only &rootuser; is allowed to run the commands <command>mount</"
+"command> and <command>umount</command>. To enable other users to run these "
+"commands, edit the <filename>/etc/fstab</filename> file to specify the "
+"option <literal>user</literal> for the relevant drive."
+msgstr ""
+
+#. Tag: title
+#: newbie_bash_commands_i.xml:880
+#, no-c-format
+msgid "System Commands"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:881
+#, no-c-format
+msgid ""
+"The following section lists a few of the most important commands needed for "
+"retrieving system information and controlling processes and the network."
+msgstr ""
+
+#. Tag: title
+#: newbie_bash_commands_i.xml:887
+#, no-c-format
+msgid "System Information"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:890
+#, no-c-format
+msgid ""
+"<command>df</command>&#x20;<option>[options]</option>&#x20;"
+"<filename>[directory]</filename>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:894
+#, no-c-format
+msgid "<secondary>df</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:895
+#, no-c-format
+msgid "<primary>df</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:896
+#, no-c-format
+msgid ""
+"The <command>df</command> (disk free) command, when used without any "
+"options, displays information about the total disk space, the disk space "
+"currently in use, and the free space on all the mounted drives. If a "
+"directory is specified, the information is limited to the drive on which "
+"that directory is located."
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:905 newbie_bash_commands_i.xml:949
+#, no-c-format
+msgid "<option>-h</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:908
+#, no-c-format
+msgid ""
+"Shows the number of occupied blocks in gigabytes, megabytes, or "
+"kilobytes&mdash;in human-readable format"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:915
+#, no-c-format
+msgid "<option>-T</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:918
+#, no-c-format
+msgid "Type of file system (ext2, nfs, etc.)"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:927
+#, no-c-format
+msgid ""
+"<command>du</command>&#x20;<option>[options]</option>&#x20;<filename>[path]</"
+"filename>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:931
+#, no-c-format
+msgid "<secondary>du</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:932
+#, no-c-format
+msgid "<primary>du</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:933
+#, no-c-format
+msgid ""
+"This command, when executed without any parameters, shows the total disk "
+"space occupied by files and subdirectories in the current directory."
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:943
+#, no-c-format
+msgid "Displays the size of each individual file"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:952
+#, no-c-format
+msgid "Output in human-readable form"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:958
+#, no-c-format
+msgid "<option>-s</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:961
+#, no-c-format
+msgid "Displays only the calculated total size"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:970
+#, no-c-format
+msgid "<command>free</command>&#x20;<option>[options]</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:974
+#, no-c-format
+msgid "<secondary>free</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:975
+#, no-c-format
+msgid "<primary>free</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:976
+#, no-c-format
+msgid ""
+"The command <command>free</command> displays information about RAM and swap "
+"space usage, showing the total and the used amount in both categories. See "
+"<xref linkend=\"sec.suse.free\"/> for more information."
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:983
+#, no-c-format
+msgid "<option>-b</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:986
+#, no-c-format
+msgid "Output in bytes"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:992
+#, no-c-format
+msgid "<option>-k</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:995
+#, no-c-format
+msgid "Output in kilobytes"
+msgstr ""
+
+#. Tag: option
+#: newbie_bash_commands_i.xml:1001
+#, no-c-format
+msgid "<option>-m</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1004
+#, no-c-format
+msgid "Output in megabytes"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1013
+#, no-c-format
+msgid "<command>date</command>&#x20;<option>[options]</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1017
+#, no-c-format
+msgid "<secondary>date</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1018
+#, no-c-format
+msgid "<primary>date</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1019
+#, no-c-format
+msgid ""
+"This simple program displays the current system time. If run as &rootuser;, "
+"it can also be used to change the system time. Details about the program are "
+"available in the date(1) man page."
+msgstr ""
+
+#. Tag: title
+#: newbie_bash_commands_i.xml:1031
+#, no-c-format
+msgid "Processes"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1032 newbie_bash_commands_i.xml:1060
+#: newbie_bash_commands_i.xml:1082
+#, no-c-format
+msgid "processes"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1035
+#, no-c-format
+msgid "<command>top</command>&#x20;<option>[options]</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1039
+#, no-c-format
+msgid "<secondary>top</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1040
+#, no-c-format
+msgid "<primary>top</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1041
+#, no-c-format
+msgid ""
+"<command>top</command> provides a quick overview of the currently running "
+"processes. Press <keycap>H</keycap> to access a page that briefly explains "
+"the main options for customizing the program."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1049
+#, no-c-format
+msgid ""
+"<command>ps</command>&#x20;<option>[options]</option>&#x20;"
+"<option>[process_ID]</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1052
+#, no-c-format
+msgid ""
+"If run without any options, this command displays a table of all your own "
+"programs or processes&mdash;those you started. The options for this command "
+"are not preceded by hyphen."
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1058
+#, no-c-format
+msgid "<secondary>ps</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1059
+#, no-c-format
+msgid "<primary>ps</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1061
+#, no-c-format
+msgid "overview"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1064
+#, no-c-format
+msgid "<term>aux</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1066
+#, no-c-format
+msgid "Displays a detailed list of all processes, independent of the owner"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1076
+#, no-c-format
+msgid ""
+"<command>kill</command>&#x20;<option>[options]</option>&#x20;"
+"<option>process_ID</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1080
+#, no-c-format
+msgid "<secondary>kill</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1081
+#, no-c-format
+msgid "<primary>kill</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1083
+#, no-c-format
+msgid "killing"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1084
+#, no-c-format
+msgid ""
+"Unfortunately, sometimes a program cannot be terminated in the normal way. "
+"In most cases, you should still be able to stop such a runaway program by "
+"executing the <command>kill</command> command, specifying the respective "
+"process ID (see <command>top</command> and <command>ps</command>). "
+"<command>kill</command> sends a <emphasis>TERM</emphasis> signal that "
+"instructs the program to shut itself down. If this does not help, the "
+"following parameter can be used:"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1096
+#, no-c-format
+msgid "<term>-9</term>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1098
+#, no-c-format
+msgid ""
+"Sends a <emphasis>KILL</emphasis> signal instead of a <emphasis>TERM</"
+"emphasis> signal, bringing the specified process to an end in almost all "
+"cases"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1109
+#, no-c-format
+msgid ""
+"<command>killall</command>&#x20;<option>[options]</option>&#x20;"
+"<option>processname</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1113
+#, no-c-format
+msgid "<secondary>killall</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1114
+#, no-c-format
+msgid "<primary>killall</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1115
+#, no-c-format
+msgid ""
+"This command is similar to <command>kill</command>, but uses the process "
+"name (instead of the process ID) as an argument, killing all processes with "
+"that name."
+msgstr ""
+
+#. Tag: title
+#: newbie_bash_commands_i.xml:1125
+#, no-c-format
+msgid "Network"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1128
+#, no-c-format
+msgid ""
+"<command>ping</command>&#x20;<option>[options]</option>&#x20;"
+"<option>hostname_or_IP address</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1132
+#, no-c-format
+msgid "<secondary>ping</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1133
+#, no-c-format
+msgid "<primary>ping</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1134
+#, no-c-format
+msgid ""
+"The <command>ping</command> command is the standard tool for testing the "
+"basic functionality of TCP/IP networks. It sends a small data packet to the "
+"destination host, requesting an immediate reply. If this works, "
+"<command>ping</command> displays a message to that effect, which indicates "
+"that the network link is basically functioning."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1144
+#, no-c-format
+msgid "<option>-c</option><replaceable>number</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1147
+#, no-c-format
+msgid ""
+"Determines the total number of packages to send and ends after they have "
+"been dispatched (by default, there is no limitation set)"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1157
+#, no-c-format
+msgid ""
+"<emphasis>flood ping</emphasis>: sends as many data packages as possible; a "
+"popular means, reserved for &rootuser;, to test networks"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1165
+#, no-c-format
+msgid "<option>-i</option><replaceable>value</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1168
+#, no-c-format
+msgid ""
+"Specifies the interval between two data packages in seconds (default: one "
+"second)"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1178
+#, no-c-format
+msgid ""
+"<command>host</command>&#x20;<option>[options]</option>&#x20;"
+"<option>hostname</option>&#x20;<option>[server]</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1182
+#, no-c-format
+msgid "<secondary>host</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1183
+#, no-c-format
+msgid "<primary>host</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1184
+#, no-c-format
+msgid ""
+"The domain name system resolves domain names to IP addresses. With this "
+"tool, send queries to name servers (DNS servers)."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1191
+#, no-c-format
+msgid ""
+"<command>ssh</command>&#x20;<option>[options]</option>&#x20;"
+"<option>[user@]hostname</option>&#x20;<option>[command]</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1194
+#, no-c-format
+msgid ""
+"SSH is actually an Internet protocol that enables you to work on remote "
+"hosts across a network. SSH is also the name of a Linux program that uses "
+"this protocol to enable operations on remote computers."
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1201
+#, no-c-format
+msgid "<secondary>ssh</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1202
+#, no-c-format
+msgid "<primary>ssh</primary>"
+msgstr ""
+
+#. Tag: title
+#: newbie_bash_commands_i.xml:1208
+#, no-c-format
+msgid "Miscellaneous"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1211
+#, no-c-format
+msgid ""
+"<command>passwd</command>&#x20;<option>[options]</option>&#x20;"
+"<option>[username]</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1215
+#, no-c-format
+msgid "<secondary>passwd</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1216
+#, no-c-format
+msgid "<primary>passwd</primary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1217
+#, no-c-format
+msgid "passwords"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1219
+#, no-c-format
+msgid ""
+"Users may change their own passwords at any time using this command. The "
+"administrator &rootuser; can use the command to change the password of any "
+"user on the system."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1227
+#, no-c-format
+msgid ""
+"<command>su</command>&#x20;<option>[options]</option>&#x20;"
+"<option>[username]</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1231
+#, no-c-format
+msgid "<secondary>su</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1232
+#, no-c-format
+msgid "<primary>su</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1233
+#, no-c-format
+msgid ""
+"The <command>su</command> command makes it possible to log in under a "
+"different username from a running session. Specify a username and the "
+"corresponding password. The password is not required from &rootuser;, "
+"because &rootuser; is authorized to assume the identity of any user. When "
+"using the command without specifying a username, you are prompted for the "
+"&rootuser; password and change to the superuser (&rootuser;). Use "
+"<command>su -</command> to start a login shell for a different user."
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1248
+#, no-c-format
+msgid "<command>halt</command>&#x20;<option>[options]</option>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1251
+#, no-c-format
+msgid ""
+"To avoid loss of data, you should always use this program to shut down your "
+"system."
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1256
+#, no-c-format
+msgid "<secondary>halt</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1257
+#, no-c-format
+msgid "<primary>halt</primary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1258 newbie_bash_commands_i.xml:1269
+#, no-c-format
+msgid "system"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1259
+#, no-c-format
+msgid "shutdown"
+msgstr ""
+
+#. Tag: term
+#: newbie_bash_commands_i.xml:1263
+#, no-c-format
+msgid "<command>reboot</command>&#x20;<option>[options]</option>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1267
+#, no-c-format
+msgid "<secondary>reboot</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1268
+#, no-c-format
+msgid "<primary>reboot</primary>"
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1270
+#, no-c-format
+msgid "rebooting"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1271
+#, no-c-format
+msgid ""
+"Does the same as <command>halt</command> except the system performs an "
+"immediate reboot."
+msgstr ""
+
+#. Tag: secondary
+#: newbie_bash_commands_i.xml:1282
+#, no-c-format
+msgid "<secondary>clear</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: newbie_bash_commands_i.xml:1283
+#, no-c-format
+msgid "<primary>clear</primary>"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1284
+#, no-c-format
+msgid ""
+"This command cleans up the visible area of the console. It has no options."
+msgstr ""
+
+#. Tag: title
+#: newbie_bash_commands_i.xml:1295
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: newbie_bash_commands_i.xml:1296
+#, no-c-format
+msgid ""
+"There are many more commands than listed in this chapter. For information "
+"about other commands or more detailed information, the O'Reilly publication "
+"<emphasis>Linux in a Nutshell</emphasis> is recommended."
+msgstr ""

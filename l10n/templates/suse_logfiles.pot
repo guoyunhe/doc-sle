@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: suse_logfiles.xml:9
+#, no-c-format
+msgid "Log Files: Package logrotate"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: suse_logfiles.xml:11
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: suse_logfiles.xml:16
+#, no-c-format
+msgid "log files"
+msgstr ""
+
+#. Tag: primary
+#: suse_logfiles.xml:17
+#, no-c-format
+msgid "logrotate"
+msgstr ""
+
+#. Tag: para
+#: suse_logfiles.xml:18
+#, no-c-format
+msgid ""
+"There are several system services (<emphasis>daemons</emphasis>) that, along "
+"with the kernel itself, regularly record the system status and specific "
+"events onto log files. This way, the administrator can regularly check the "
+"status of the system at a certain point in time, recognize errors or faulty "
+"functions and troubleshoot them with pinpoint precision. These log files are "
+"normally stored in <filename>/var/log</filename> as specified by FHS and "
+"grow on a daily basis. The <systemitem>logrotate</systemitem> package helps "
+"control the growth of these files."
+msgstr ""
+
+#. Tag: para
+#: suse_logfiles.xml:28
+#, no-c-format
+msgid ""
+"Configure logrotate with the file <indexterm> <primary>configuration files</"
+"primary> <secondary>logrotate.conf</secondary> </indexterm> <filename>/etc/"
+"logrotate.conf</filename>. In particular, the <systemitem>include</"
+"systemitem> specification primarily configures the additional files to read. "
+"Programs that produce log files install individual configuration files in "
+"<filename>/etc/logrotate.d</filename>. For example, such files ship with the "
+"packages <systemitem>apache2</systemitem> (<filename>/etc/logrotate.d/"
+"apache2</filename>) and <systemitem>syslog-service</systemitem> (<filename>/"
+"etc/logrotate.d/syslog</filename>)."
+msgstr ""
+
+#. Tag: title
+#: suse_logfiles.xml:43
+#, no-c-format
+msgid "Example for /etc/logrotate.conf"
+msgstr ""
+
+#. Tag: screen
+#: suse_logfiles.xml:44
+#, no-c-format
+msgid ""
+"# see \"man logrotate\" for details\n"
+"# rotate log files weekly\n"
+"weekly\n"
+"\n"
+"# keep 4 weeks worth of backlogs\n"
+"rotate 4\n"
+"\n"
+"# create new (empty) log files after rotating old ones\n"
+"create\n"
+"\n"
+"# uncomment this if you want your log files compressed\n"
+"#compress\n"
+"\n"
+"# RPM packages drop log rotation information into this directory\n"
+"include /etc/logrotate.d\n"
+"\n"
+"# no packages own lastlog or wtmp - we'll rotate them here\n"
+"#/var/log/wtmp {\n"
+"#    monthly\n"
+"#    create 0664 root utmp\n"
+"#    rotate 1\n"
+"#}\n"
+"\n"
+"# system-specific logs may be also be configured here."
+msgstr ""
+
+#. Tag: para
+#: suse_logfiles.xml:46
+#, no-c-format
+msgid ""
+"logrotate is controlled through cron and is called daily by <filename>/etc/"
+"cron.daily/logrotate</filename>."
+msgstr ""
+
+#. Tag: title
+#: suse_logfiles.xml:51
+#, no-c-format
+msgid "Permissions"
+msgstr ""
+
+#. Tag: primary
+#: suse_logfiles.xml:54
+#, no-c-format
+msgid "permissions"
+msgstr ""
+
+#. Tag: secondary
+#: suse_logfiles.xml:55
+#, no-c-format
+msgid "file permissions"
+msgstr ""
+
+#. Tag: para
+#: suse_logfiles.xml:56
+#, no-c-format
+msgid ""
+"The <systemitem>create</systemitem> option reads all settings made by the "
+"administrator in <filename>/etc/permissions*</filename>. Ensure that no "
+"conflicts arise from any personal modifications."
+msgstr ""

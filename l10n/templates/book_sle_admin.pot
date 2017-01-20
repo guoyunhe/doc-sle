@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: book_sle_admin.xml:20
+#, no-c-format
+msgid "&admin;"
+msgstr ""
+
+#. Tag: para
+#: book_sle_admin.xml:25
+#, no-c-format
+msgid "&abstract_admin;"
+msgstr ""
+
+#. Tag: title
+#: book_sle_admin.xml:41
+#, no-c-format
+msgid "Common Tasks"
+msgstr ""
+
+#. Tag: title
+#: book_sle_admin.xml:56
+#, no-c-format
+msgid "System"
+msgstr ""
+
+#. Tag: title
+#: book_sle_admin.xml:75
+#, no-c-format
+msgid "Services"
+msgstr ""
+
+#. Tag: title
+#: book_sle_admin.xml:92
+#, no-c-format
+msgid "Mobile Computers"
+msgstr ""
+
+#. Tag: title
+#: book_sle_admin.xml:101
+#, no-c-format
+msgid "Troubleshooting"
+msgstr ""

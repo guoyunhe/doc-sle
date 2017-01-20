@@ -1,0 +1,286 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: zypper_upgrade.xml:11
+#, no-c-format
+msgid "Distribution Upgrade with Zypper"
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:17
+#, no-c-format
+msgid ""
+"With the <command>zypper</command> command line utility you can upgrade to "
+"the next version of the distribution. Most importantly, you can initiate the "
+"system upgrade process from within the running system."
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:22
+#, no-c-format
+msgid ""
+"This feature is attractive for advanced users who want to run remote "
+"upgrades or upgrades on many similarly configured systems."
+msgstr ""
+
+#. Tag: title
+#: zypper_upgrade.xml:27
+#, no-c-format
+msgid "Preparing the Upgrade with Zypper"
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:28
+#, no-c-format
+msgid ""
+"To avoid unexpected errors during the upgrade process using <command>zypper</"
+"command>, minimize risky constellations."
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:34
+#, no-c-format
+msgid ""
+"Quit as many applications and stop unneeded services as possible and log out "
+"all regular users."
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:40
+#, no-c-format
+msgid ""
+"Disable third party repositories before starting the upgrade, or lower the "
+"priority of these repositories to make sure packages from the default system "
+"repositories will get preference. Enable them again after the upgrade and "
+"edit their version string to match the version number of the distribution of "
+"the upgraded now running system."
+msgstr ""
+
+#. Tag: title
+#: zypper_upgrade.xml:51
+#, no-c-format
+msgid "The Upgrade Procedure"
+msgstr ""
+
+#. Tag: title
+#: zypper_upgrade.xml:53
+#, no-c-format
+msgid "Check Your System Backup"
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:54
+#, no-c-format
+msgid ""
+"Before actually starting the upgrade procedure, check that your system "
+"backup is up-to-date and restorable. This is especially important because "
+"you need to enter many of the following steps manually."
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:60
+#, no-c-format
+msgid ""
+"The program <command>zypper</command> supports long and short command names. "
+"For example, you can abbreviate <command>zypper install</command> as "
+"<command>zypper in</command>. In the following text, the short variants are "
+"used."
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:68
+#, no-c-format
+msgid ""
+"Run the online update to make sure the software management stack is up-to-"
+"date. For more information, see <xref linkend=\"cha.onlineupdate.you\"/>."
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:75
+#, no-c-format
+msgid ""
+"Configure the repositories you want to use as update sources. Getting this "
+"right is crucial. Either use &yast; (see <xref linkend=\"sec.y2.sw.instsource"
+"\"/>) or <command>zypper</command> (see <xref linkend=\"sec.zypper\"/>). The "
+"name of the repositories used in the following steps may vary depending on "
+"your customizations."
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:88
+#, no-c-format
+msgid "To view your current repositories enter:"
+msgstr ""
+
+#. Tag: screen
+#: zypper_upgrade.xml:91
+#, no-c-format
+msgid "zypper lr -u"
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:94
+#, no-c-format
+msgid ""
+"Increase the version number of the system repositories from <phrase os="
+"\"sles;sled\">11-SP2 to 11-SP3</phrase> <phrase os=\"osuse\">13.2 to 42.1 "
+"and prefix them with <literal>leap/</literal></phrase>. Add the new "
+"repositories with commands such as:"
+msgstr ""
+
+#. Tag: screen
+#: zypper_upgrade.xml:101
+#, no-c-format
+msgid ""
+"server=<replaceable>http://download.example.org</replaceable>\n"
+"zypper ar $server/distribution/11-SP3/repo/oss/ <replaceable>SLE-11-SP3</"
+"replaceable>\n"
+"zypper ar $server/update/11-SP3/ <replaceable>SLE-11-SP3-Update</replaceable>"
+msgstr ""
+
+#. Tag: screen
+#: zypper_upgrade.xml:102
+#, no-c-format
+msgid ""
+"server=<replaceable>http://download.example.org</replaceable>\n"
+"zypper ar $server/distribution/leap/42.1/repo/oss/ <replaceable>Leap-42.1-"
+"OSS</replaceable>\n"
+"zypper ar $server/update/leap/42.1/oss/ <replaceable>Leap-42.1-Update</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:103
+#, no-c-format
+msgid "And remove the old repositories:"
+msgstr ""
+
+#. Tag: screen
+#: zypper_upgrade.xml:106
+#, no-c-format
+msgid ""
+"zypper rr <replaceable>SLE-11-SP2</replaceable>\n"
+"zypper rr <replaceable>SLE-11-Update</replaceable>"
+msgstr ""
+
+#. Tag: screen
+#: zypper_upgrade.xml:107
+#, no-c-format
+msgid ""
+"zypper rr <replaceable>13.2-OSS</replaceable>\n"
+"zypper rr <replaceable>13.2-Update</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:108
+#, no-c-format
+msgid ""
+"If necessary, repeat these steps for other repositories to ensure a clean "
+"upgrade path for all your packages."
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:114
+#, no-c-format
+msgid ""
+"Disable third party repositories or other &obs; repositories, because "
+"<command>zypper dup</command> is guaranteed to work with the default "
+"repositories only (replace <replaceable>repo-alias</replaceable> with the "
+"name of the repository you want to disable):"
+msgstr ""
+
+#. Tag: screen
+#: zypper_upgrade.xml:120
+#, no-c-format
+msgid "zypper mr -d <replaceable>repo-alias</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:121
+#, no-c-format
+msgid "Alternatively, you can lower the priority of these repositories."
+msgstr ""
+
+#. Tag: title
+#: zypper_upgrade.xml:125
+#, no-c-format
+msgid "Handling of Unresolved Dependencies"
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:126
+#, no-c-format
+msgid ""
+"<command>zypper dup</command> will remove all packages having unresolved "
+"dependencies, but it keeps packages of disabled repositories as long as "
+"their dependencies are satisfied."
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:132
+#, no-c-format
+msgid ""
+"<command>zypper dup</command> ensures that all installed packages come from "
+"one of the available repositories. It does not consider the version, "
+"architecture, or vendor of the installed packages; thus it emulates a fresh "
+"installation. Packages that are no longer available in the repositories are "
+"considered orphaned. Such packages get uninstalled if their dependencies "
+"cannot be satisfied. If they can be satisfied, such packages stay installed."
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:143
+#, no-c-format
+msgid "Once done, check your repository configuration with:"
+msgstr ""
+
+#. Tag: screen
+#: zypper_upgrade.xml:146
+#, no-c-format
+msgid "zypper lr -d"
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:151
+#, no-c-format
+msgid ""
+"Refresh local metadata and repository contents with <command>zypper ref</"
+"command>."
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:157
+#, no-c-format
+msgid ""
+"Update Zypper and the package management itself with <command>zypper patch --"
+"updatestack-only</command>."
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:163
+#, no-c-format
+msgid ""
+"Run the actual distribution upgrade with <command>zypper dup</command>. You "
+"are asked to confirm the license of &sle; and of some packages&mdash;"
+"depending on the set of installed packages."
+msgstr ""
+
+#. Tag: para
+#: zypper_upgrade.xml:170
+#, no-c-format
+msgid "Reboot the system with <command>shutdown -r now</command>."
+msgstr ""

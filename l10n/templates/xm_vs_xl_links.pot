@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: xm_vs_xl_links.xml:9
+#, no-c-format
+msgid "External links"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl_links.xml:17
+#, no-c-format
+msgid ""
+"For more information on &xen; tool stacks refer to the following online "
+"resources:"
+msgstr ""
+
+#. Tag: term
+#: xm_vs_xl_links.xml:24
+#, no-c-format
+msgid "XL in &xen;"
+msgstr ""
+
+#. Tag: link
+#: xm_vs_xl_links.xml:27
+#, no-c-format
+msgid "XL in &xen; 4.2"
+msgstr ""
+
+#. Tag: term
+#: xm_vs_xl_links.xml:33
+#, no-c-format
+msgid "<command>xl</command> command"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl_links.xml:35
+#, no-c-format
+msgid ""
+"<link xlink:href=\"http://xenbits.xen.org/docs/unstable/man/xl.1.html\">XL</"
+"link> command line."
+msgstr ""
+
+#. Tag: term
+#: xm_vs_xl_links.xml:42
+#, no-c-format
+msgid "xl.cfg"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl_links.xml:44
+#, no-c-format
+msgid ""
+"<link xlink:href=\"http://xenbits.xen.org/docs/unstable/man/xl.cfg.5.html"
+"\">xl.cfg</link> domain configuration file syntax."
+msgstr ""
+
+#. Tag: term
+#: xm_vs_xl_links.xml:51
+#, no-c-format
+msgid "xl disk"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl_links.xml:53
+#, no-c-format
+msgid ""
+"<link xlink:href=\"http://xenbits.xen.org/docs/unstable/misc/xl-disk-"
+"configuration.txt\">xl disk</link> configuration option."
+msgstr ""
+
+#. Tag: term
+#: xm_vs_xl_links.xml:60
+#, no-c-format
+msgid "XL vs Xend"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl_links.xml:62
+#, no-c-format
+msgid ""
+"<link xlink:href=\"http://wiki.xenproject.org/wiki/"
+"XL_vs_Xend_Feature_Comparison\">XL vs Xend</link> feature comparison."
+msgstr ""
+
+#. Tag: term
+#: xm_vs_xl_links.xml:69
+#, no-c-format
+msgid "BDF doc"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl_links.xml:71
+#, no-c-format
+msgid ""
+"<link xlink:href=\"http://wiki.xen.org/wiki/Bus:Device.Function_%28BDF"
+"%29_Notation\">BDF documentation</link>."
+msgstr ""
+
+#. Tag: term
+#: xm_vs_xl_links.xml:78
+#, no-c-format
+msgid "libvirt"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl_links.xml:80
+#, no-c-format
+msgid ""
+"<link xlink:href=\"http://libvirt.org/virshcmdref.html\">virsh</link> "
+"command."
+msgstr ""

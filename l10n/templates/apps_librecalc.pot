@@ -1,0 +1,693 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: apps_librecalc.xml:8
+#, no-c-format
+msgid "&libo; Calc"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: apps_librecalc.xml:10
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:15
+#, no-c-format
+msgid ""
+"Calc is the &libo; spreadsheet module. Spreadsheets consist of several "
+"sheets, containing cells which can be filled with elements like text, "
+"numbers, or formulas. A formula can manipulate data from other cells to "
+"generate a value for the cell in which it is inserted. Calc also allows you "
+"to define ranges, filter and sort data and creates charts from data to "
+"present it graphically. Using pivot tables, you can combine, analyze or "
+"compare larger amounts of data."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:24
+#, no-c-format
+msgid ""
+"This chapter can only introduce some very basic Calc functionality. For more "
+"information and for complete instructions, see the &libo; application help "
+"and the sources listed in <xref linkend=\"sec.oo.oview.help\"/>."
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:30
+#, no-c-format
+msgid "VBA Macros"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:31
+#, no-c-format
+msgid ""
+"Calc can process many VBA macros in Excel documents. However, support for "
+"VBA macros is not complete. When opening an Excel spreadsheet that makes "
+"heavy use of macros, you might discover that some do not work."
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:38
+#, no-c-format
+msgid "Creating a New Document"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:40
+#, no-c-format
+msgid "There are two ways to create a new Calc document:"
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:47
+#, no-c-format
+msgid "From Scratch"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:48
+#, no-c-format
+msgid ""
+"To create a new empty document, click <menuchoice> <guimenu>File</guimenu> "
+"<guimenu>New</guimenu> <guimenu>Spreadsheet</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:57
+#, no-c-format
+msgid "From a Template"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:58
+#, no-c-format
+msgid ""
+"To use a template, click <menuchoice> <guimenu>File</guimenu> <guimenu>New</"
+"guimenu> <guimenu>Templates</guimenu> </menuchoice> and open, for example, "
+"<guimenu>Finances</guimenu>. From the list of spreadsheet templates, select "
+"the one that fits your needs."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:69
+#, no-c-format
+msgid ""
+"Access the individual sheets by clicking their respective tabs at the bottom "
+"of the window."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:74
+#, no-c-format
+msgid ""
+"Enter data in the cells as desired. To adjust the appearance, either use the "
+"<guimenu>Formatting</guimenu> toolbar or side bar panel, or use the "
+"<guimenu>Format</guimenu> menu&mdash;or define styles as described in <xref "
+"linkend=\"sec.oo.calc.styles\"/>. Use the <guimenu>File</guimenu> menu or "
+"the relevant buttons in the toolbar to print and save your document."
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:83
+#, no-c-format
+msgid "Using Formatting and Styles in Calc"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:85
+#, no-c-format
+msgid ""
+"Calc comes with a few built-in cell and page styles to improve the "
+"appearance of your spreadsheets and reports. Although these built-in styles "
+"are adequate for many uses, you will probably find it useful to create "
+"styles for your own frequently used formatting preferences."
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:93
+#, no-c-format
+msgid "Creating a Style"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:95
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Format</guimenu> <guimenu>Styles</guimenu> "
+"<guimenu>Styles and Formatting</guimenu> </menuchoice> or press <keycap>F11</"
+"keycap>."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:102 apps_librecalc.xml:136
+#, no-c-format
+msgid ""
+"At the top of the panel <guimenu>Styles and Formatting</guimenu>, click "
+"either <guimenu>Cell Styles</guimenu> (a green cell) or <guimenu>Page "
+"Styles</guimenu> (a document)."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:109
+#, no-c-format
+msgid ""
+"Right-click anywhere in the list of styles in the panel <guimenu>Styles and "
+"Formatting</guimenu>. Then click <guimenu>New</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:115
+#, no-c-format
+msgid ""
+"Specify a name for the style and use the various tabs to set the desired "
+"formatting options."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:121 apps_librecalc.xml:154
+#, no-c-format
+msgid "When you are done configuring the style, click <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:128
+#, no-c-format
+msgid "Modifying a Style"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:130
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Format</guimenu> <guimenu>Styles</guimenu> "
+"<guimenu>Styles and Formatting</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:143
+#, no-c-format
+msgid ""
+"Right-click the name of the style you want to change, then click "
+"<guimenu>Modify</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:149
+#, no-c-format
+msgid "Change the desired formatting options."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:160
+#, no-c-format
+msgid ""
+"To apply a style to specific cells, select the cells you want to format. "
+"Then double-click the style you want to apply in the <guimenu>Styles and "
+"Formatting</guimenu> window."
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:167
+#, no-c-format
+msgid "Working With Sheets"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:169
+#, no-c-format
+msgid ""
+"Sheets are a good method to organize your calculations. For example, if you "
+"have a business, accounting might be much clearer if you create a sheet for "
+"each month."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:175
+#, no-c-format
+msgid ""
+"To insert a new sheet after the last sheet, click the button <guimenu>+</"
+"guimenu> next to the sheet tabs."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:180
+#, no-c-format
+msgid ""
+"To insert one or more new sheet in your spreadsheet from a file or at a "
+"specific position at once, do the following:"
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:186
+#, no-c-format
+msgid "Inserting New Sheets"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:188
+#, no-c-format
+msgid ""
+"Right-click a sheet tab and select <guimenu>Insert Sheet</guimenu>. A dialog "
+"opens."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:194
+#, no-c-format
+msgid ""
+"Decide whether the new sheet should be positioned before or after the "
+"selected sheet."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:200
+#, no-c-format
+msgid ""
+"To create a new sheet, make sure the <guimenu>New Sheet</guimenu> radio "
+"button is activated. Enter the number of sheets and the sheet name. Skip the "
+"rest of this step."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:205
+#, no-c-format
+msgid "Alternatively, to import a sheet from another file, do the following:"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:210
+#, no-c-format
+msgid ""
+"Select <guimenu>From file</guimenu> and click <guimenu>Browse</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:215
+#, no-c-format
+msgid ""
+"Select the file name and confirm with <guimenu>OK</guimenu>. All the sheet "
+"names are now displayed in the list."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:221
+#, no-c-format
+msgid ""
+"Select the sheet names you want to import by holding the <keycap function="
+"\"shift\"></keycap> key and clicking them."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:229
+#, no-c-format
+msgid "To add the sheet or sheets, confirm with <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:235
+#, no-c-format
+msgid ""
+"To rename a sheet, right-click the tab of the sheet and select "
+"<guimenu>Rename Sheet</guimenu>. Alternatively, you can also double-click "
+"the sheet tab."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:241
+#, no-c-format
+msgid ""
+"To delete one or multiple sheets, do the following: Select the sheet you "
+"want to delete. To select more than one sheet, hold down <keycap function="
+"\"shift\"></keycap> while making the selection. Then right-click the tab of "
+"the sheet, choose <guimenu>Delete Sheet</guimenu> and confirm with "
+"<guimenu>Yes</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:250
+#, no-c-format
+msgid "Conditional Formatting"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:252
+#, no-c-format
+msgid ""
+"Conditional formatting is a useful feature to highlight certain values in "
+"your spreadsheet. For example, define a condition and if the condition is "
+"<literal>true</literal>, a style is applied to each cell that fulfills this "
+"condition."
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:260
+#, no-c-format
+msgid "Enable AutoCalculate"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:261
+#, no-c-format
+msgid ""
+"Before you apply conditional formatting, choose <menuchoice> <guimenu>Tools</"
+"guimenu> <guimenu>Cell Contents</guimenu> <guimenu>AutoCalculate</guimenu> </"
+"menuchoice>. You should see a check mark in front of <guimenu>AutoCalculate</"
+"guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:270
+#, no-c-format
+msgid "Using Conditional Formatting"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:272
+#, no-c-format
+msgid ""
+"Define a style first. This style is applied to each cell when your condition "
+"is <literal>true</literal>. Use <menuchoice> <guimenu>Format</"
+"guimenu><guimenu>Styles and Formatting</guimenu> </menuchoice> or press "
+"<keycap>F11</keycap>. For more information, see <xref linkend=\"pro.oo.calc."
+"createstyle\"/>. Confirm with <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:282
+#, no-c-format
+msgid "Select the cell range where you want to apply your condition."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:287
+#, no-c-format
+msgid ""
+"Select <menuchoice> <guimenu>Format</guimenu> <guimenu>Conditional "
+"Formatting</guimenu> <guimenu>Condition</guimenu> </menuchoice> from the "
+"menu. A dialog opens."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:294
+#, no-c-format
+msgid ""
+"You now see a template for a new condition. Conditions can operate in "
+"multiple modes:"
+msgstr ""
+
+#. Tag: guimenu
+#: apps_librecalc.xml:300
+#, no-c-format
+msgid "Cell value is"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:303
+#, no-c-format
+msgid ""
+"The condition tests if a cell matches a certain value. Next to the first "
+"drop-down box, select an operator such as <guimenu>equal to</guimenu>, "
+"<guimenu>less than</guimenu>, or <guimenu>greater than</guimenu>."
+msgstr ""
+
+#. Tag: guimenu
+#: apps_librecalc.xml:312
+#, no-c-format
+msgid "Formula is"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:315
+#, no-c-format
+msgid ""
+"The condition tests if a certain formula returns <literal>true</literal>."
+msgstr ""
+
+#. Tag: guimenu
+#: apps_librecalc.xml:322
+#, no-c-format
+msgid "Date is"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:325
+#, no-c-format
+msgid "The condition tests if a certain date value is reached."
+msgstr ""
+
+#. Tag: guimenu
+#: apps_librecalc.xml:331
+#, no-c-format
+msgid "All Cells"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:334
+#, no-c-format
+msgid ""
+"This mode allows creating data visualizations that depend on the value of a "
+"cell, similarly to <guimenu>Cell value is</guimenu>. However, with "
+"<guimenu>All Cells</guimenu>, you can use one condition to apply an entire "
+"range of styles."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:340
+#, no-c-format
+msgid ""
+"The types of styles that can be used are color scales (cell background "
+"color), data bars (bars with changing width in the cell) and icon sets (an "
+"icon in the cell)."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:345
+#, no-c-format
+msgid ""
+"For example, a color scale allows assigning <literal>0</literal> a black "
+"background and <literal>100</literal> a green background. All values in "
+"between are calculated automatically. For example, <literal>50</literal> "
+"receives a dark green background."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:356
+#, no-c-format
+msgid "For this example, keep the default: <guimenu>Cell value is</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:361
+#, no-c-format
+msgid "Select an operator and the value of the cell you want to test for."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:366
+#, no-c-format
+msgid ""
+"Choose the style you want to apply when this condition is <literal>true</"
+"literal> or click <guimenu>New Style</guimenu> to define a new appearance."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:373
+#, no-c-format
+msgid ""
+"If you need additional conditions, click <guimenu>Add</guimenu>. Then repeat "
+"the previous steps."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:379
+#, no-c-format
+msgid ""
+"Confirm with <guimenu>OK</guimenu>. Now the style of your cells has changed."
+msgstr ""
+
+#. Tag: remark
+#: apps_librecalc.xml:386
+#, no-c-format
+msgid ""
+"We might also want a procedure showing how to use the Manage dialog to "
+"remove conditions. -- sknorr, 2015-09-17"
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:392
+#, no-c-format
+msgid "Grouping and Ungrouping Cells"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:394
+#, no-c-format
+msgid ""
+"Grouping a cell range allows hiding parts of a spreadsheet. This makes "
+"spreadsheets more readable, as you can hide all the parts you are not "
+"currently interested in. It is possible to group rows or columns and nest "
+"groups in other groups."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:401
+#, no-c-format
+msgid "To group a range, proceed as follows:"
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:406
+#, no-c-format
+msgid "Grouping a Selected Cell Range"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:408
+#, no-c-format
+msgid "Select a cell range in your spreadsheet."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:413
+#, no-c-format
+msgid ""
+"Select <menuchoice> <guimenu>Data</guimenu> <guimenu>Group and Outline</"
+"guimenu> <guimenu>Group</guimenu> </menuchoice>. A dialog appears."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:420
+#, no-c-format
+msgid ""
+"Decide if you want to group your selected range by rows or by columns. "
+"Confirm with <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:427
+#, no-c-format
+msgid ""
+"After grouping selected cells, a line indicating the grouped cell range "
+"appears in the upper-left margin. Fold or unfold the cell range with the "
+"<guimenu>+</guimenu> and <guimenu>–</guimenu> icons. The numbers at the top "
+"left of the margins display the depth of your groups and can be clicked too."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:434
+#, no-c-format
+msgid ""
+"To ungroup a cell range, click into a cell which belongs to a group and "
+"select <menuchoice> <guimenu>Data</guimenu> <guimenu>Group and Outline</"
+"guimenu> <guimenu>Ungroup</guimenu> </menuchoice>. The line in the margin "
+"disappears. The innermost group is always deleted first."
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:442
+#, no-c-format
+msgid "Freezing Rows or Columns as Headers"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:444
+#, no-c-format
+msgid ""
+"If you have a spreadsheet with lots of data, scrolling usually makes the "
+"header disappear. &libo; can lock rows or columns or both, so they remain "
+"fixed as you scroll around."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:450
+#, no-c-format
+msgid "To freeze a single row or a single column, proceed as follows:"
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:455
+#, no-c-format
+msgid "Freezing a Single Row or Column"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:457
+#, no-c-format
+msgid ""
+"To create a frozen area before a row, click the header of the row "
+"(<literal>1</literal>, <literal>2</literal>, <literal>3</literal>, ...)."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:461
+#, no-c-format
+msgid ""
+"Alternatively, to create a frozen area above a column, click the header of "
+"the column (<literal>A</literal>, <literal>B</literal>, <literal>C</"
+"literal>, ...)."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:468
+#, no-c-format
+msgid ""
+"Select <menuchoice> <guimenu>View</guimenu> <guimenu>Freeze Rows and "
+"Columns</guimenu> </menuchoice>. A dark line appears, indicating the frozen "
+"area."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:476
+#, no-c-format
+msgid "It is also possible to freeze both rows and columns:"
+msgstr ""
+
+#. Tag: title
+#: apps_librecalc.xml:481
+#, no-c-format
+msgid "Freezing Row and Column"
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:483
+#, no-c-format
+msgid ""
+"Click into the cell to the right of the column and below the row you want "
+"frozen. For example, if your header occupies the space from A1 to B3, click "
+"cell C4."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:490
+#, no-c-format
+msgid ""
+"Select <menuchoice> <guimenu>View</guimenu> <guimenu>Freeze Rows and "
+"Columns</guimenu></menuchoice>. A dark line appears, indicating which area "
+"is frozen."
+msgstr ""
+
+#. Tag: para
+#: apps_librecalc.xml:498
+#, no-c-format
+msgid ""
+"To unfreeze, select <menuchoice><guimenu>View</guimenu> <guimenu>Freeze Rows "
+"and Columns</guimenu></menuchoice>. The check mark before the menu item "
+"disappears."
+msgstr ""

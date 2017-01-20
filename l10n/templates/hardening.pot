@@ -1,0 +1,5624 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: hardening.xml:41
+#, no-c-format
+msgid "Security and Hardening Guide"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:49
+#, no-c-format
+msgid "&abstract_hardening;"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:53
+#, no-c-format
+msgid "About This Guide"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:54
+#, no-c-format
+msgid ""
+"The &productname; Security and Hardening Guide deals with the particulars of "
+"installation and set up of a secure &productname; and additional post-"
+"install processes required to further secure and harden that installation. "
+"Security and hardening elements and procedures are best applied to a server "
+"both during installation and post-installation and aim to improve the "
+"fitness of the system for the purposes demanded by its administrator."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:63
+#, no-c-format
+msgid ""
+"This guide supports administrator in making security related choices and "
+"decisions. The individual steps and procedures should be seen as proposals, "
+"not as strict rules. You will often need to evaluate the usefulness of "
+"measures for your organization yourself."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:69
+#, no-c-format
+msgid ""
+"The objective is to improve the security value of the system. Definitions "
+"about the meaning of the term security vary, but we want to settle on one "
+"that is both simple and abstract:"
+msgstr ""
+
+#. Tag: emphasis
+#: hardening.xml:75
+#, no-c-format
+msgid "A good system does what it is expected to do, and it does it well."
+msgstr ""
+
+#. Tag: emphasis
+#: hardening.xml:79
+#, no-c-format
+msgid "A secure system is a good system that does nothing else."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:82
+#, no-c-format
+msgid ""
+"The focus of this guide lies on doing <quote>nothing else</quote>. The Linux "
+"system is constructed in such way that security policies are enforced. These "
+"policies consist of the following concepts (fairly generic and incomplete "
+"list):"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:90
+#, no-c-format
+msgid ""
+"DAC (Discretionary Access Control): File and directory permissions, as set "
+"by <command>chmod</command> and <command>chown</command>."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:96
+#, no-c-format
+msgid ""
+"Privileged ports: TCP and UDP ports 0-1023 and raw sockets can only be used "
+"by &rootuser;."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:102
+#, no-c-format
+msgid ""
+"Other privileged operations: Loading kernel modules, configuring network "
+"interfaces, all security relevant settings of the Linux kernel. These are "
+"operations that can only be done by the root user, that is the user with the "
+"user ID 0, or any other process with the necessary capabilities."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:111
+#, no-c-format
+msgid ""
+"Attacking a system means to attempt to overcome privilege boundaries, for "
+"example by circumventing or breaking them. That means the administrator or "
+"programmer of the system has not anticipated this scenario."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:117
+#, no-c-format
+msgid ""
+"A hardened system raises the bar by reducing the area that the system "
+"exposes to the attacker (often called attack surface). A hardened system can "
+"also provide measures to reduce the impact of vulnerabilities in the parts "
+"of the systems that must be exposed to a potential attacker."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:124
+#, no-c-format
+msgid ""
+"Security is about decisions, and whenever security is in (apparent) "
+"opposition to function, these decisions become trade-offs. While it can be "
+"argued that all systems should be set up to be as securely as possible, some "
+"levels of security and hardening may very well be overkill in some cases. "
+"Each system's operational environment has its own security requirements "
+"derived from business drivers or regulatory compliance mandates. &sls; can, "
+"for example, be configured to comply with security standards, such as SOX, "
+"HIPAA and PCIDSS. It can also be set up to fulfill the requirements from the "
+"German Federal Office of Information Security (Bundesamt für Sicherheit in "
+"der Informationstechnik) as described in BSI TR-02102-1. An effective "
+"business requirements analysis should be performed to determine the right "
+"level of security and hardening to be applied to a server or defined as part "
+"of a baseline server build."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:140
+#, no-c-format
+msgid ""
+"As a final note before we begin: You may encounter individual requirements "
+"in regulatory compliance frameworks that may not make sense from a technical "
+"perspective, or they do not serve the purpose of improving security. It may "
+"be a productive attitude to simply implement what is required, but whenever "
+"there is a contradiction to security, an informed discussion in the "
+"documentation serves the overall purpose of your regulative compliance "
+"framework much more than blindly obeying the specifications. Feel encouraged "
+"to dispute list items that you think are counterproductive."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:152
+#, no-c-format
+msgid "Assumptions and Scope"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:168
+#, no-c-format
+msgid ""
+"References in this document will usually be made to a single server target "
+"or host, however the scope can generally be applied to more than one "
+"machine. We generally assume that the security target can cover one or more "
+"systems running &productname;."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:175
+#, no-c-format
+msgid ""
+"We explicitly do <emphasis>not</emphasis> make any assumptions about the "
+"hostility of the network that the systems are connected to, or the "
+"cooperative nature of the users that leverage the services provided by the "
+"systems."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:182
+#, no-c-format
+msgid ""
+"In turn, this means that you partially define your context on your own when "
+"reading through this document. You will need to broaden the meaning of "
+"individual portions to adapt it to your environment. In some cases, such as "
+"the use case of a server that is exposed to the Internet, this document may "
+"even be insufficient or incomplete; however, it may still serve as a good "
+"starting point on your journey toward an increased level of confidence that "
+"your system will behave like you want it to."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:192
+#, no-c-format
+msgid ""
+"About trust: Trust relationships exist among all systems that participate in "
+"networked transactions. In this way, the trust relationship between the "
+"people that use the systems is transported across these systems. The chain "
+"that is formed by your trust relationships is only as strong as the weakest "
+"link. It is good practice to graphically visualize the trust relationships "
+"with the services in a schematic overview or map of your network. Generally, "
+"it is up to the owner of a resource to enforce the policies imposed on that "
+"resource; this would usually be the server that provides the resource. The "
+"client that opens a connection to request the resource can only be made "
+"responsible for the actions that it performs. This refers to the action of "
+"opening the connection to start with, but to nothing else as such."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:207
+#, no-c-format
+msgid ""
+"The case of hostile users is special and unique: The Human Resources "
+"department may be able to solve some security problems in your computing "
+"environment; in addition, some technical measures can be taken. Make sure "
+"that the necessary regulations in your environment fit your needs, and that "
+"they back your intentions instead of obstructing them if you need to work "
+"around a missing support from your HR department (and your management)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:217
+#, no-c-format
+msgid ""
+"Persons that have administrative privileges on a system are automatically "
+"considered trusted."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:222
+#, no-c-format
+msgid ""
+"A Linux system&mdash;without any additional security frameworks such as "
+"&selnx;&mdash;is a single level security system: From a security policy "
+"perspective there is only the superuser (root) and non-privileged users. "
+"System users are non-root user IDs that have access to files specific to "
+"their purpose. The separation of administrative duties is complicated by "
+"this simplicity. Some tools help: Use sudo(8) for administrative tasks, but "
+"be aware that after the privilege boundary is crossed, a program running "
+"with root privileges does not enforce any file access policies for non-"
+"privileged users anymore. vi(1) that runs as root can read and write to any "
+"file in the system."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:235
+#, no-c-format
+msgid ""
+"Another tool to mitigate the risk of abuse or accidental misuse of "
+"administrative privileges is NetIQ's Privileged User Manager product. More "
+"information is available here:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:274
+#, no-c-format
+msgid ""
+"Physical security of the server is another assumption made here, where the "
+"server is protected from theft and manipulation by unauthorized persons. A "
+"common sobering thought among security professionals is the <quote>ten-"
+"second Denial of Service</quote>: Unplug the wires and reboot the server. "
+"Physical security must be ensured and physical access must be controlled. "
+"Otherwise, all assumptions about at least the availability of these systems "
+"are void."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:285
+#, no-c-format
+msgid "Cryptography"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:286
+#, no-c-format
+msgid ""
+"The use of cryptography to protect the confidentiality of transactions with "
+"the services that your system provides is generally encouraged. The need to "
+"implement cryptographic enhancements is strongly dependent on the "
+"operational environments of all participating systems. Keep in mind that you "
+"need to verify all of the possible security benefits that cryptography can "
+"provide, for all of your services, and that these benefits are not delivered "
+"automatically by turning on the <quote>encrypt</quote> option of your "
+"service (if you can enjoy the idyllic situation where encryption is "
+"available as a button to check):"
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:299
+#, no-c-format
+msgid "Confidentiality"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:301
+#, no-c-format
+msgid "Protection against reading the content of a transaction"
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:307
+#, no-c-format
+msgid "Privacy"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:309
+#, no-c-format
+msgid ""
+"Protection against knowing that a transaction exists, and some properties "
+"that it may have, such as size, identities of involved parties, their "
+"presence, etc."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:317
+#, no-c-format
+msgid "Integrity"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:319
+#, no-c-format
+msgid ""
+"Protection against alteration of content. Be aware that cryptography does "
+"not automatically provide this kind of protection."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:326
+#, no-c-format
+msgid "Authenticity"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:328
+#, no-c-format
+msgid ""
+"Protection against identity fraud. Cryptography that does not know about "
+"identities of participating entities cannot deliver this value."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:336
+#, no-c-format
+msgid ""
+"Keep in mind that encryption of data for confidentiality purposes can merely "
+"reduce the size of the data to protect from the actual size to the size of "
+"the key that is used to encrypt the data. This results in a key exchange "
+"problem for encrypted transactions, and in a key management problem for "
+"encrypted data storage. Since data is (typically, there are exceptions!) "
+"processed in clear, you need your vault unlocked while data within is being "
+"worked with. The encryption of such data on the file system or block device "
+"layer helps against the theft of the system, but it does not help the "
+"confidentiality of the data while the system is running."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:364
+#, no-c-format
+msgid ""
+"If you want to implement a consistent security policy covering multiple "
+"hosts on a network then organizational procedures <emphasis>must</emphasis> "
+"ensure that all those hosts can be trusted and are configured with "
+"compatible security configurations enforcing an organization wide security "
+"policy. Isolation of groups of systems that maintain data of the same trust "
+"domain can provide an adequate means of control; ultimately, the access "
+"controls to these systems, both for end users and for other systems, need to "
+"be carefully designed, configured, inspected and monitored."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:389
+#, no-c-format
+msgid "Trusting Data"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:390
+#, no-c-format
+msgid ""
+"Data can only be trusted to the degree that is associated with the domain it "
+"comes from. If data leaves the domain in which security policies can be "
+"enforced, it should consequently be associated with the trust of the target "
+"domain."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:398
+#, no-c-format
+msgid ""
+"For a review of industry best practices on security, the development of "
+"sound security processes, controls, development, reviews, audit practices "
+"and incident management, you can review a public RFC (request for comments). "
+"RFC 2196 is the ongoing work of the world-wide community and individual "
+"security and process experts. You can review it online here: <link xlink:"
+"href=\"http://www.faqs.org/rfcs/rfc2196.html\"></link>. An RFC is an open "
+"and living document that invites comments and review. Enhancements and "
+"improvements are welcome; you will find instructions on where to send those "
+"suggestions within the document itself."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:410
+#, no-c-format
+msgid ""
+"This guide provides initial guidance on how to set up and secure a "
+"&productname; installation but it is not intended to be the only information "
+"required for a system administrator to learn how to operate Linux securely. "
+"Assumptions are made within this guide that the reader has knowledge and "
+"understanding of operating security principles in general, and of Linux "
+"administrative commands and configuration options in particular."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:563
+#, no-c-format
+msgid "Contents of this Book"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:565
+#, no-c-format
+msgid ""
+"contains a reference to Common Criteria and &productname;. <xref linkend="
+"\"part.sec_prot\"/> contains more general system security and service "
+"protection schemes."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:591
+#, no-c-format
+msgid "Common Criteria"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:1129
+#, no-c-format
+msgid "Overview and rationale"
+msgstr ""
+
+#. Tag: remark
+#: hardening.xml:1133
+#, no-c-format
+msgid "sknorr, 2014-07-14: update necessary, we are past Q2/2012"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:1146
+#, no-c-format
+msgid "What is the Common Criteria Certification?"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1148
+#, no-c-format
+msgid ""
+"Common Criteria is the best known and most widely used methodology to "
+"evaluate and measure the security value of an IT product. The methodology "
+"aims to be independent, as an independent laboratory conducts the "
+"evaluation, which a certification body will certify afterward. Security "
+"Functional Requirements (SFR) are summarized in so-called Protection "
+"Profiles (PP), which allows the comparison of security functions of "
+"different products if the definition of the Security Target (ST) (which "
+"typically uses a reference to the PP if one exists that fits the purpose of "
+"the product) and the Evaluation Assurance Levels are comparable."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1161
+#, no-c-format
+msgid ""
+"A clear definition of security in IT products is challenging. Security "
+"should be considered a process that never ends, not a static condition that "
+"can be met or not. A Common Criteria certificate (below EA7) does not make a "
+"clear statement about error proneness of the system (while many of the flaws "
+"that exist specifically in operating systems are security-relevant), but it "
+"adds an important value to the product that cannot be described with the "
+"presence of technology alone: That someone has independently inspected the "
+"design of the system in such way that is corresponds to the claims that are "
+"made, and that explicit care has been taken in producing and maintaining the "
+"product."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1174
+#, no-c-format
+msgid ""
+"The certificate states a degree of maturity of both the product with its "
+"security functions and the processes of the company that has designed, built "
+"and engineered the product, and that will maintain the product across its "
+"life cycle. As such, Common Criteria aims to be fairly holistic with its "
+"approach to take everything into account that is relevant for the security "
+"of an IT product."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1183
+#, no-c-format
+msgid ""
+"The Evaluation Assurance Level (EAL) shall denote the degree of confidence "
+"that the product fulfills the described claims. The levels are from 1 "
+"through 7:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1191
+#, no-c-format
+msgid "EAL1: Functionally tested"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1196
+#, no-c-format
+msgid "EAL2: Structurally tested"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1201
+#, no-c-format
+msgid "EAL3: Methodically tested and checked"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1206
+#, no-c-format
+msgid "EAL4: Methodically designed, tested and reviewed"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1211
+#, no-c-format
+msgid "EAL5: Semi-formally designed and tested"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1216
+#, no-c-format
+msgid "EAL6: Semi-formally verified design and tested"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1221
+#, no-c-format
+msgid "EAL7: Formally verified design and tested"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1227
+#, no-c-format
+msgid ""
+"While EAL1 only provides basic assurance for products to meet security "
+"requirements, EAL2 to 4 are medium assurance levels. EAL5-EAL7 describe "
+"medium-to-high and high assurance; EAL4 is expected to be the highest level "
+"of assurance that a product can have if it has not been designed from the "
+"start to achieve a higher level of assurance."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1235
+#, no-c-format
+msgid ""
+"Many commonly known General Purpose/Utility Computing operating systems have "
+"been awarded a Common Criteria certificate at EAL4. A \"+\" after the "
+"assurance level denotes an augmentation to the EAL, an addition that is "
+"useful for the articulation of security value, but formally not needed at "
+"the corresponding EAL."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1243
+#, no-c-format
+msgid ""
+"The &productname; version 8 was the first Linux system to achieve EAL3+ "
+"(Augmentation: Basic Flaw Remediation) in 2003; Version 9 of SLES was the "
+"first Linux based operating system to reach EAL4+ in 2004. More "
+"certifications and re-certifications have followed targeting SLES 9 and SLES "
+"10-SP1, until the &productname; version Service Pack 2 was evaluated in "
+"2011/2012."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1252
+#, no-c-format
+msgid ""
+"The Common Criteria evaluations inspect a specific configuration of the "
+"product in an evaluated setup. The <quote>Administrator's Guide</quote> is a "
+"document that comes with a Common Criteria certified product and describes "
+"the individual steps that need to be taken to install and configure the "
+"product to a state like it was evaluated."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1260
+#, no-c-format
+msgid ""
+"Very often, the evaluated configuration is used as a reference for the "
+"secure installation of the &productname;. It is however incorrect to "
+"understand the evaluated configuration as a hardened configuration: the "
+"removal of setuid bits and the prescription of administrative procedures "
+"after installation is there to reach a specific configuration that is sane, "
+"but this process is clearly insufficient for a hardening claim."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1270
+#, no-c-format
+msgid ""
+"Earlier versions of this document have contained a substantial part that "
+"links to Common Criteria evaluated configurations. For clarity and to avoid "
+"confusion these chapters have been removed."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1276
+#, no-c-format
+msgid ""
+"Instead, this guide recommends the lecture the documentation that comes with "
+"the Common Criteria certificate to understand the Common Criteria evaluation "
+"of &productname; in general, the security functions that are in place within "
+"the operating system and how these security functions are relevant for the "
+"mitigation of threats. The High Level Design documentation encompasses the "
+"design specifics of the &productname;: Authentication mechanisms, access "
+"controls, audit subsystem and system log files, to name a few of them. The "
+"accumulated knowledge contained in the documentation allows decision making "
+"for hardening purposes at an informed level&mdash;find it at <link xlink:"
+"href=\"http://www.suse.com/security/\"></link>."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1290
+#, no-c-format
+msgid ""
+"Apart from the valuable documentation that comes with the Common Criteria "
+"effort, the following manual pages may be of greater interest to the "
+"inclined reader:"
+msgstr ""
+
+#. Tag: quote
+#: hardening.xml:1297
+#, no-c-format
+msgid "pam(8), pam(5)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1300
+#, no-c-format
+msgid "<quote>apparmor(7)</quote> and referred man pages"
+msgstr ""
+
+#. Tag: quote
+#: hardening.xml:1305
+#, no-c-format
+msgid "rsyslogd(8), syslog(8), syslogd(8)"
+msgstr ""
+
+#. Tag: quote
+#: hardening.xml:1309
+#, no-c-format
+msgid "fstab(5), mount(8), losetup(8), cryptsetup(8)"
+msgstr ""
+
+#. Tag: quote
+#: hardening.xml:1313
+#, no-c-format
+msgid "haveged(8), random(4)"
+msgstr ""
+
+#. Tag: quote
+#: hardening.xml:1317
+#, no-c-format
+msgid ""
+"ssh(1), sshd(8), ssh_config(5), sshd_config(5), ssh-agent(1), ssh-add(1), "
+"ssh-keygen(1)"
+msgstr ""
+
+#. Tag: quote
+#: hardening.xml:1322
+#, no-c-format
+msgid "cron(1), crontab(5), at(1), atd(8)"
+msgstr ""
+
+#. Tag: quote
+#: hardening.xml:1326
+#, no-c-format
+msgid ""
+"systemctl(1), daemon(7), systemd.unit(5), systemd.special(5), kernel-command-"
+"line(7), bootup(7), systemd.directives"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:1404
+#, no-c-format
+msgid "Generic Guiding Principles"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1406
+#, no-c-format
+msgid ""
+"The following guiding principles motivate much of the advice in this guide, "
+"and security processes in general, and should also influence any "
+"configuration decisions that are not explicitly covered."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:1414
+#, no-c-format
+msgid "Use Data Encryption Whenever Possible"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1416
+#, no-c-format
+msgid ""
+"Refer to the <xref linkend=\"pre.hardening.about\"/> section of this guide. "
+"In <xref linkend=\"pre.hardening.about.assumptions\"/>, the limitations of "
+"cryptography are briefly outlined."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1421
+#, no-c-format
+msgid ""
+"Be aware that cryptography is certainly useful, but only for the specific "
+"purposes that it is good for. It is not a generic recipe for better security "
+"in a system, its use may even impose additional risk on the system. Make "
+"informed decisions about the use of cryptography, and feel obliged to have a "
+"reason for your decisions, no matter if they are for or against "
+"cryptography. A false sense of security can be more harmful than the "
+"weakness itself. &productname; supports encryption for generic network "
+"connections (the <command>openssl</command> command, <command>stunnel</"
+"command>), for remote login (<command>openssh</command>, <command>man "
+"ssh(1)</command>), for generic file encryption (<command>gpg</command>), for "
+"entire file systems at block layer (<command>dm_crypt</command>, "
+"<command>cryptsetup</command>) and for VPN (<command>iipsec</command>, "
+"<command>openvpn</command>)."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:1452
+#, no-c-format
+msgid "Minimal Package Installation"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1462
+#, no-c-format
+msgid ""
+"Generally, an RPM software package consists of the package's meta data that "
+"is written to the RPM database upon installation, the package's files and "
+"directories and scripts that are being executed before and after "
+"installation and removal."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1468
+#, no-c-format
+msgid "If the package does NOT contain"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1473
+#, no-c-format
+msgid "setuid- or setgid bits on any of the installed files"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1478
+#, no-c-format
+msgid "group- or world-writable files or directories"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1483
+#, no-c-format
+msgid "a service that is activated upon installation/activated by default."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1489
+#, no-c-format
+msgid ""
+"then the said package generally does not impose any security risk to the "
+"system. Under the above condition, the package is merely a collection of "
+"files, and their use shall not be automatically assumed if you do not have "
+"any local users on your system. Since the installation of such packages does "
+"not have any influence on the security value of the system, the "
+"uninstallation of them should not either."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1498
+#, no-c-format
+msgid ""
+"However, a fairly simple reason to keep to a minimal set of packages in your "
+"installation is that something that is not present cannot get used. Binaries "
+"not installed cannot be executed."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1503
+#, no-c-format
+msgid ""
+"A straight forward way of keeping to a minimal set of packages begins with "
+"the installation of the system. You can start the installation of your "
+"system by deselecting all packages and then select only those that you want "
+"to use. As an example, the selection of the apache2-mod_perl package in "
+"&yast; would automatically cause all packages to be selected for "
+"installation that are needed for the Apache package to operate. Dependencies "
+"have often been artificially cut down to be able to handle the system's "
+"dependency tree more flexibly. You should be safe if you chose the minimal "
+"system, and build the dependency tree from there with your (leaf) package "
+"selection."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:1558
+#, no-c-format
+msgid "Service Isolation&mdash;Run Different Services on Separate Systems"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1561
+#, no-c-format
+msgid ""
+"Whenever possible, a server should be dedicated to serving exactly one "
+"service or application. This limits the number of other services that could "
+"be compromised in the event an attacker can successfully exploit a software "
+"flaw in one service (assuming that flaw allows access to others)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1568
+#, no-c-format
+msgid ""
+"This point can lead to healthy and robust dialog on system sizing and even "
+"further to consolidation or virtualization. The intent with this guidance is "
+"to reduce the fault domain and risk where possible."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1573
+#, no-c-format
+msgid ""
+"The use of AppArmor for services that are provided on a system is an "
+"effective means of containment. Refer to the AppArmor documentation on your "
+"system to learn more. <command>man apparmor</command> is a good starting "
+"point."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1579
+#, no-c-format
+msgid ""
+"The use of virtualization technology with &kvm; or with &xen; is supported "
+"with the &productname; version &productnumber;. While virtualization is "
+"generally designed for server consolidation purposes, its usefulness for "
+"service isolation is another good argument. Be aware that the capability of "
+"the hypervisor to separate virtual machines is not higher or stronger than "
+"the Linux kernel's capability to separate processes and their address "
+"spaces. The granularity at which virtualization technology tackles "
+"separation may however come with its benefits, being resource-hungry and "
+"somewhat clumsy on the other hand."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1592
+#, no-c-format
+msgid ""
+"Virtualization technology cannot match or substitute the separation strength "
+"that is given by running services on different physical machines!"
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:1601
+#, no-c-format
+msgid "System fingerprinting and backups"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1605
+#, no-c-format
+msgid ""
+"In the case of the suspicion of an attack against the system, nothing can "
+"provide more comfort than"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1611
+#, no-c-format
+msgid "a backup"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1616
+#, no-c-format
+msgid "a fingerprint of your system to detect modifications"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1621
+#, no-c-format
+msgid "having done your homework."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1626
+#, no-c-format
+msgid ""
+"Several tools exist on &productname; &productnumber; which can be "
+"effectively used for the detection of unknown, but yet successful attacks. "
+"These tools come at the cost of relatively little configuration effort, but "
+"with the benefit of being able to actually know what has been changed in "
+"your system."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1633
+#, no-c-format
+msgid ""
+"In particular, the use of <systemitem class=\"resource\">AIDE</systemitem> "
+"is strongly encouraged. <systemitem class=\"resource\">AIDE</systemitem>, "
+"when run for initialization, creates a hash database of all files in the "
+"system that are listed in its configuration file. This allows to verify the "
+"integrity of all cataloged files at a later time."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1642
+#, no-c-format
+msgid ""
+"You need to copy the hash database that AIDE creates to a place that is "
+"inaccessible for potential attackers. Otherwise, the attacker may modify the "
+"integrity database after planting a backdoor, thereby defeating the purpose "
+"of the integrity measurement."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1651
+#, no-c-format
+msgid ""
+"An attacker may have planted a backdoor in the kernel. This has an entire "
+"variety of consequences: Apart from being very hard to detect, the kernel-"
+"based backdoor can effectively remove all traces of the system compromise to "
+"the degree that system alterations are almost invisible. By consequence, an "
+"integrity check needs to be done from a rescue system (or any other system "
+"where an independent system runs, and the target system's file systems are "
+"mounted manually)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1663
+#, no-c-format
+msgid ""
+"Security is a lively process. Essentially, in this context, this means that "
+"the application of security updates invalidates the integrity database. "
+"<command>rpm</command> <option>-qlv packagename</option> lists the files "
+"that are contained in a package. Generally spoken, the RPM subsystem is very "
+"powerful with the data that it maintains, and that is accessible with the "
+"<option>--queryformat</option> command line option. A differential update of "
+"integrity database with the changed files becomes more manageable with some "
+"fine-grained usage of RPM."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1675
+#, no-c-format
+msgid ""
+"A fast and directly accessible backup adds distinct confidence about the "
+"integrity of your system and can substitute an integrity check such as "
+"described above with AIDE. It is important, though, that the backup "
+"mechanism/solution has adequate versioning support so that you can trace "
+"changes in the system. As an example: The installation times of packages "
+"(<command>rpm</command> <option>-q</option> <option>--"
+"queryformat='%{INSTALLTIME} %{NAME}\\n'</option> <replaceable>package name</"
+"replaceable>) must correspond to the changed files in the backup log files."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:1687
+#, no-c-format
+msgid ""
+"Make it an integral part of your security routine to verify that your "
+"backups work."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:2255
+#, no-c-format
+msgid "General System Security and Service Protection Methods"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:2258
+#, no-c-format
+msgid "Introduction"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:2260
+#, no-c-format
+msgid ""
+"In <xref linkend=\"part.setup_for_eal\"/> we mentioned the Common Criteria "
+"EAL 4+ certified installation and setup that was sponsored by IBM for a "
+"select subset of hardware. This certified build is a great first step for "
+"customers wanting to build a secure and hardened base system, yet might not "
+"address all of the services and software specifics that many customers would "
+"be interested in."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:2268
+#, no-c-format
+msgid ""
+"This next part will present a more general view and give recommendations and "
+"guidance for &productname; system security. Some topics may seem repeated "
+"here (from the previous part) yet the context is very different. More detail "
+"will be provided in some sections and certainly some more general examples "
+"for a greater number of services."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:2991
+#, no-c-format
+msgid "Linux Security in General"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:2993
+#, no-c-format
+msgid ""
+"This portion of the guide will only give basic recommendations instead of "
+"strict rules. The procedures and examples here should give you the ability "
+"to apply security enhancement techniques to a wider variety of server-based "
+"services and programs."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:2999
+#, no-c-format
+msgid ""
+"Some subjects of this chapter have been discussed before. However, you will "
+"find more details and explanations in this chapter. Selected general topics "
+"are:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3006
+#, no-c-format
+msgid ""
+"Physical Security – Protection of the server from environmental threats "
+"(people, places, things)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3012
+#, no-c-format
+msgid ""
+"Security Policies and Procedures – Server life cycle management, disk/media "
+"reclamation, backup and archive security."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3018
+#, no-c-format
+msgid "Systems Monitoring – Procedures around event notification/management."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3024
+#, no-c-format
+msgid ""
+"Systems Automation – Mechanisms and/or procedures for automatic security "
+"measures. Heuristics, account control, security reporting and remediation, "
+"automated shutdown, etc."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3031
+#, no-c-format
+msgid ""
+"Systems Management – Methods to obtaining packages, verification and signing "
+"keys, patching procedures and recommendations."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3037
+#, no-c-format
+msgid ""
+"Securing Network – Addition programs, ports and service wrappers – iptables, "
+"tcpwrappers, services."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3043
+#, no-c-format
+msgid ""
+"Remote Access – extra SSH information and key federation. CA integration."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3049
+#, no-c-format
+msgid "Common Services – mail, NFS and automount."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3054
+#, no-c-format
+msgid ""
+"Securing the Kernel and Init Process – parameters, systemd targets, and boot "
+"scripts."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3060
+#, no-c-format
+msgid "Access Control – user/groups/permissions."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3065
+#, no-c-format
+msgid ""
+"Password Security and Warnings – Proper setup of passwords, banners and "
+"<systemitem class=\"daemon\">xinetd</systemitem>."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3071
+#, no-c-format
+msgid "Miscellaneous Security – Assorted security settings and miscellany."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3076
+#, no-c-format
+msgid ""
+"Resources – Web links, documentation and example references, howtos and "
+"general information, product links."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3082
+#, no-c-format
+msgid ""
+"The sections will again be organized by a topical hierarchy for continuity-"
+"sake. Refer to the main table of contents for easy reference."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3087
+#, no-c-format
+msgid "Physical Security"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3089
+#, no-c-format
+msgid ""
+"Physical security should be one of the utmost concerns. Linux production "
+"servers should be in locked data centers where only people have access that "
+"have passed security checks. Depending on the environment and circumstances, "
+"you can also consider boot loader passwords."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3097
+#, no-c-format
+msgid "Additionally, consider questions like:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3103
+#, no-c-format
+msgid "Who has direct physical access to the host?"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3108
+#, no-c-format
+msgid "Of those that do, should they?"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3113
+#, no-c-format
+msgid "Can the host be protected from tampering and should it be?"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3119
+#, no-c-format
+msgid ""
+"The amount of physical security needed on a particular system depends on the "
+"situation, and can also vary widely by available funds."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3125
+#, no-c-format
+msgid "System locks"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3126
+#, no-c-format
+msgid ""
+"Most server racks in data centers include a locking feature. Usually this "
+"will be a hasp/cylinder lock on the front of the rack that allows you to "
+"turn an included key to a locked or unlocked position – granting or denying "
+"entry. Cage locks can help prevent someone from tampering or stealing "
+"devices/media from the servers, or opening the cases and directly "
+"manipulating/sabotaging the hardware. Preventing system reboots or the "
+"booting from alternate devices is also important (for example CD/DVDs/USB "
+"drives/etc.)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3136
+#, no-c-format
+msgid ""
+"Some servers also have case locks. These locks can do different things "
+"according to the designs of the system vendor and construction. Many systems "
+"are designed to self-disable if attempts are made to open the system without "
+"unlocking. Others have device covers that will not let you plug in or unplug "
+"keyboards or mice. While locks are sometimes a useful feature, they are "
+"usually lower quality and easily defeated by attackers with ill intent."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3148
+#, no-c-format
+msgid "Locking down the BIOS"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3151
+#, no-c-format
+msgid "Secure Boot"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3152
+#, no-c-format
+msgid ""
+"This section describes only basic methods to secure the boot process. To "
+"find out more about UEFI and the secure boot feature, see <xref linkend="
+"\"sec.uefi.secboot\"/>."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3159
+#, no-c-format
+msgid ""
+"The BIOS (Basic Input/Output System) or its successor UEFI (Unified "
+"Extensible Firmware Interface) is the lowest level of software/firmware that "
+"dictates system configuration and low-level hardware. When this document "
+"references the BIOS, it usually means BIOS and/or UEFI. &grub; and other "
+"Linux boot loaders access the BIOS to determine how to boot the host. Other "
+"hardware types (&ipseries;/&zseries;) that run Linux also have low-level "
+"software/firmware. Typically the BIOS can be configured to help prevent "
+"attackers from being able to reboot the host and manipulate the system."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3171
+#, no-c-format
+msgid ""
+"Most BIOS varieties allow the setting of a boot password. While this does "
+"not provide a high level of security (a BIOS can be reset, removed or "
+"modified – assuming case access), it can be another deterrent."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3177
+#, no-c-format
+msgid ""
+"Many BIOS capabilities have other various security settings – checking with "
+"the system vendor, the system documentation or examine the BIOS during a "
+"system boot."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3184
+#, no-c-format
+msgid "Booting when a BIOS Password is Set"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3185
+#, no-c-format
+msgid ""
+"If a system host has been set up with a boot password, the host will not "
+"boot up unattended (for example a system reboot, power failure, etc.). This "
+"is a trade-off."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3193
+#, no-c-format
+msgid "Security via the Boot Loaders"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3195
+#, no-c-format
+msgid ""
+"The Linux boot loader &grub;, which is used by default in &productname;, can "
+"have a boot passwords set. It also provides a password feature, so that only "
+"administrators can start the interactive operations (for example editing "
+"menu entries and entering the command line interface). If a password is "
+"specified, &grub; will disallow any interactive control until you press the "
+"key <keycap>C</keycap> and <keycap>E</keycap> and enter a correct password."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3205
+#, no-c-format
+msgid "You can refer to the &grub; man page for examples."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3209
+#, no-c-format
+msgid ""
+"It is very important to keep in mind that when setting these passwords they "
+"will need to be remembered! Also, enabling these passwords might merely slow "
+"an intrusion, not necessarily prevent it. Again, someone could boot from a "
+"removable device, and mount your root partition. If you are using BIOS-level "
+"security and a boot loader, it is a good practice to disable the ability to "
+"boot from removable devices in your computer's BIOS, and then also password-"
+"protecting the BIOS itself."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3219
+#, no-c-format
+msgid ""
+"Also keep in mind that the boot loader configuration files will need to be "
+"protected by changing their mode to <literal>600</literal> (read/write for "
+"&rootuser; only), or others will be able to read your passwords or hashes!"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3227
+#, no-c-format
+msgid "Verifying Security Action with <command>seccheck</command>"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3229
+#, no-c-format
+msgid ""
+"It is highly recommended to have scripts in place which can verify that "
+"security actions or procedures have been run. Even the best systems "
+"administrators can make errors or forget something. If you have a small or "
+"large Linux installation or environment, you should consider the use of the "
+"<command>seccheck</command> scripts."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3237
+#, no-c-format
+msgid ""
+"<command>seccheck</command> is the &suse; Security Checker. It is a set of "
+"several shell scripts designed to check the local security of the system on "
+"a regular basis. There are three main scripts that are executed at different "
+"time intervals. They are <literal>security-daily,</literal> "
+"<literal>security-weekly</literal> and <literal>security-monthly</literal>. "
+"If <command>seccheck</command> is not installed on your system, install it "
+"with <command>sudo zypper in seccheck</command>. These scripts all have "
+"schedule entries that get placed in cron that determine when they run. "
+"Although cron scheduling is the default behavior, this can be controlled via "
+"configuration settings (see next section). The daily script runs at "
+"midnight, and if changes are detected since the last run (the night before), "
+"an e-mail noting the differences will be sent. The weekly script runs every "
+"Monday at 1:00 am, and only if changes to the last run (the week before) are "
+"found, a mail with the differences will be sent. The monthly script runs "
+"every on every 1st of the month and sends the full last daily and weekly "
+"report via e-mail."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3258
+#, no-c-format
+msgid "Seccheck Configuration"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3259
+#, no-c-format
+msgid ""
+"Note that you can change the receiver of the seccheck mails from root to "
+"anyone else if you add an entry like this one to <filename>/etc/sysconfig/"
+"seccheck</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:3264
+#, no-c-format
+msgid ""
+"SECCHK_USER=\"firewall\" # exchange firewall is an admin user's account name"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3265
+#, no-c-format
+msgid ""
+"Also note that the <envar>START_SECCHK</envar> variable from <filename>/etc/"
+"sysconfig/seccheck</filename> controls whether the security check will be "
+"run from cron. (It is ignored if you call <command>security-control</"
+"command> manually.)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3271
+#, no-c-format
+msgid "The following daily checks are done:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3281
+#, no-c-format
+msgid "<filename>/etc/passwd</filename> check"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3286
+#, no-c-format
+msgid ""
+"length/number/contents of fields, accounts with same uid accounts with uid/"
+"gid of 0 or 1 beside root and bin"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3294
+#, no-c-format
+msgid "<filename>/etc/shadow</filename> check"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3299
+#, no-c-format
+msgid "length/number/contents of fields, accounts with no password"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3306
+#, no-c-format
+msgid "<filename>/etc/group</filename> check"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3311
+#, no-c-format
+msgid "length/number/contents of fields"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3318
+#, no-c-format
+msgid "user root checks"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3323
+#, no-c-format
+msgid "secure umask and <envar>PATH</envar>"
+msgstr ""
+
+#. Tag: filename
+#: hardening.xml:3331
+#, no-c-format
+msgid "/etc/ftpusers"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3335
+#, no-c-format
+msgid "checks if important system users are put there"
+msgstr ""
+
+#. Tag: filename
+#: hardening.xml:3343
+#, no-c-format
+msgid "/etc/aliases"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3347
+#, no-c-format
+msgid "checks for mail aliases which execute programs"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3354
+#, no-c-format
+msgid "<filename>.rhosts</filename> check"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3359
+#, no-c-format
+msgid "checks if users' <filename>.rhosts</filename> file contain + signs"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3367
+#, no-c-format
+msgid "homedirectory"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3372
+#, no-c-format
+msgid "checks if home directories are writable or owned by someone else"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3379
+#, no-c-format
+msgid "dot-files check"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3384
+#, no-c-format
+msgid ""
+"checks many dot-files in the home directories if they are writable or owned "
+"by someone else"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3392
+#, no-c-format
+msgid "mailbox check"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3397
+#, no-c-format
+msgid "checks if user mailboxes are owned by user and are readable"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3404
+#, no-c-format
+msgid "NFS export check"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3409
+#, no-c-format
+msgid "exports should not be exported globally"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3416
+#, no-c-format
+msgid "NFS import check"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3421
+#, no-c-format
+msgid "NFS mounts should have the <option>nosuid</option> option set"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3428
+#, no-c-format
+msgid "promisc check"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3433
+#, no-c-format
+msgid "checks if network cards are in promiscuous mode"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3440
+#, no-c-format
+msgid "list modules"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3445
+#, no-c-format
+msgid "lists loaded modules"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3452
+#, no-c-format
+msgid "list sockets"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3457
+#, no-c-format
+msgid "lists open ports"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3464
+#, no-c-format
+msgid "Weekly Checks are as follows:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3471
+#, no-c-format
+msgid "password check"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3476
+#, no-c-format
+msgid ""
+"runs <command>john</command> to crack the password file, user will get an e-"
+"mail notice to change his password"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3484
+#, no-c-format
+msgid "RPM md5 check"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3489
+#, no-c-format
+msgid "checks for changed files via RPM's MD5 checksum feature"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3496
+#, no-c-format
+msgid "suid/sgid check"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3501
+#, no-c-format
+msgid "lists all suid and sgid files"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3508
+#, no-c-format
+msgid "exec group write"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3513
+#, no-c-format
+msgid "lists all executables which are group/world-writable"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3520
+#, no-c-format
+msgid "writable check"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3525
+#, no-c-format
+msgid "lists all files which are world-writable (including executables)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3532
+#, no-c-format
+msgid "device check"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3537
+#, no-c-format
+msgid "lists all devices"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3559
+#, no-c-format
+msgid ""
+"Additional monthly checks are also run, however the key difference is mainly "
+"that the monthly file is not a diff like the daily/weekly ones but the full "
+"reports in one file."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3567
+#, no-c-format
+msgid "Automatic Logout"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3568
+#, no-c-format
+msgid ""
+"The <systemitem>seccheck</systemitem> package provides an automatic logout "
+"feature. It is a script that runs every 10 minutes and checks both remote or "
+"local terminal sessions for inactivity, and terminates them if an idle time "
+"is exceeded."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3574
+#, no-c-format
+msgid ""
+"You can configure the functionality in the <filename>/etc/security/"
+"autologout.conf</filename> file. Parameters include default idle and logout "
+"delay times, and the configuration for limiting maximum idle times specific "
+"to users, groups, TTY devices and SSH sessions. <filename>/etc/security/"
+"autologout.conf</filename> also includes several configuration examples."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3583
+#, no-c-format
+msgid ""
+"The automatic logout feature is not enabled by default. To enable it, edit "
+"<filename>/etc/cron.d/autologout</filename> and uncomment the example cron "
+"line."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3592
+#, no-c-format
+msgid "Retiring Linux Servers with Sensitive Data"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3594
+#, no-c-format
+msgid ""
+"Security policies usually contain some procedures for the treatment of "
+"storage media that is going to be retired or disposed of. Disk and media "
+"wipe procedures are frequently prescribed as is complete destruction of the "
+"media. You can find several free tools on the Internet. A search of "
+"<quote>dod disk wipe utility</quote> will yield several variants. To retire "
+"servers with sensitive data, it is important to ensure that data cannot be "
+"recovered from the hard disks. To ensure that all traces of data are "
+"removed, a wipe utility&mdash;such as <command>scrub</command>&mdash;can be "
+"used. Many wipe utilities overwrite the data several times. This assures "
+"that even sophisticated methods are not able to retrieve any parts of the "
+"wiped data. Some tools can even be operated from a bootable removable device "
+"and remove data according to the U.S. Department of Defense (DoD) standards. "
+"Note that many government agencies specify their own standards for data "
+"security. Some standards are stronger than others, yet may require more time "
+"to implement."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3616
+#, no-c-format
+msgid "Wiping Wear Leveling Devices"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3617
+#, no-c-format
+msgid ""
+"Some devices, like SSDs, use wear leveling and do not necessarily write new "
+"data in the same physical locations. Such devices usually provide their own "
+"erasing functionality."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3625
+#, no-c-format
+msgid "scrub: Disk Overwrite Utility"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3626
+#, no-c-format
+msgid ""
+"<command>scrub</command> overwrites hard disks, files, and other devices "
+"with repeating patterns intended to make recovering data from these devices "
+"more difficult. It operates in three basic modes: on a character or block "
+"device, on a file, or on a directory specified. For more information, set "
+"the manual page <command>man 1 scrub</command>."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3634
+#, no-c-format
+msgid "Supported Scrub Methods"
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3636
+#, no-c-format
+msgid "nnsa"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3638
+#, no-c-format
+msgid ""
+"4-pass NNSA Policy Letter NAP-14.1-C (XVI-8) for sanitizing removable and "
+"non-removable hard disks, which requires overwriting all locations with a "
+"pseudo random pattern twice and then with a known pattern: ran- dom(x2), "
+"0x00, verify."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3647
+#, no-c-format
+msgid "<term>dod</term>"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3649
+#, no-c-format
+msgid ""
+"4-pass DoD 5220.22-M section 8-306 procedure (d) for sanitizing removable "
+"and non-removable rigid disks which requires overwriting all addressable "
+"locations with a character, its complement, a random character, then verify. "
+"NOTE: scrub performs the random pass first to make verification easier: "
+"random, 0x00, 0xff, verify."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3659
+#, no-c-format
+msgid "<term>bsi</term>"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3661
+#, no-c-format
+msgid ""
+"9-pass method recommended by the German Center of Security in Information "
+"Technologies (<link xlink:href=\"http://www.bsi.bund.de\"></link>): 0xff, "
+"0xfe, 0xfd, 0xfb, 0xf7, 0xef, 0xdf, 0xbf, 0x7f."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3670
+#, no-c-format
+msgid "gutmann"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3672
+#, no-c-format
+msgid ""
+"The canonical 35-pass sequence described in Gutmann's paper cited below."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3679
+#, no-c-format
+msgid "schneier"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3681
+#, no-c-format
+msgid ""
+"7-pass method described by Bruce Schneier in \"Applied Cryptography"
+"\" (1996): 0x00, 0xff, random(x5)"
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3688
+#, no-c-format
+msgid "pfitzner7"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3690
+#, no-c-format
+msgid "Roy Pfitzner's 7-random-pass method: random(x7)."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3696
+#, no-c-format
+msgid "pfitzner33"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3698
+#, no-c-format
+msgid "Roy Pfitzner's 33-random-pass method: random(x33)."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3704
+#, no-c-format
+msgid "usarmy"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3706
+#, no-c-format
+msgid ""
+"US Army AR380-19 method: 0x00, 0xff, random. (Note: identical to DoD 522.22-"
+"M section 8-306 procedure (e) for sanitizing magnetic core memory)."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3714
+#, no-c-format
+msgid "fillzero"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3716
+#, no-c-format
+msgid "1-pass pattern: 0x00."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3722
+#, no-c-format
+msgid "fillff"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3724
+#, no-c-format
+msgid "1-pass pattern: 0xff."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3730
+#, no-c-format
+msgid "random"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3732
+#, no-c-format
+msgid "1-pass pattern: random(x1)."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3738
+#, no-c-format
+msgid "random2"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3740
+#, no-c-format
+msgid "2-pass pattern: random(x2)."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3746
+#, no-c-format
+msgid "<term>old</term>"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3748
+#, no-c-format
+msgid ""
+"6-pass pre-version 1.7 scrub method: 0x00, 0xff, 0xaa, 0x00, 0x55, verify."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3755
+#, no-c-format
+msgid "fastold"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3757
+#, no-c-format
+msgid "5-pass pattern: 0x00, 0xff, 0xaa, 0x55, verify."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:3763
+#, no-c-format
+msgid "custom=string"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3765
+#, no-c-format
+msgid ""
+"1-pass custom pattern. String may contain C-style numerical escapes: \\nnn "
+"(octal) or \\xnn (hex)."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3775
+#, no-c-format
+msgid "Backups"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3777
+#, no-c-format
+msgid ""
+"If your system is compromised, backups can be used to restore a prior system "
+"state. When bugs or accidents occur, backups can also be used to compare the "
+"current system against an older version. For production systems, it is very "
+"important to take some backups off-site for cases like disasters (for "
+"example off-site storage of tapes/recordable media, or off-site initiated)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3786
+#, no-c-format
+msgid ""
+"For legal reasons, some firms and organizations must be careful about "
+"backing up too much information and holding it too long. If your environment "
+"has a policy regarding the destruction of old paper files, you might need to "
+"extend this policy to Linux backup tapes as well."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3793
+#, no-c-format
+msgid "The rules about physical security of servers apply on backups as well."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3798
+#, no-c-format
+msgid "Disk Partitions"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3800
+#, no-c-format
+msgid ""
+"Servers should have separate file systems for at least <filename>/</"
+"filename>, <filename>/boot</filename>, <filename>/usr</filename>, <filename>/"
+"var</filename>, <filename>/tmp</filename>, and <filename>/home</filename>. "
+"You do not want that for example logging and temporary space under "
+"<filename>/var</filename> and <filename>/tmp</filename> fill up the root "
+"partition. Third-party applications should be on separate file systems as "
+"well, for example under <filename>/opt</filename>."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3811
+#, no-c-format
+msgid ""
+"You are advised to review <xref linkend=\"part.setup_for_eal\"/>. It is "
+"important to understand the need to separate the partitions that could "
+"impact a running system (for example, log files filling up <filename>/var/"
+"log</filename> are a good reason to separate <filename>/var</filename> from "
+"the <filename>/</filename> partition). Another thing to keep in mind is that "
+"you will likely need to leverage LVM or another volume manager or at the "
+"very least the extended partition type to work around the limitations of "
+"primary partitions (4 partitions)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3823
+#, no-c-format
+msgid ""
+"Another capability in &productname; is encrypting a partition or even a "
+"single directory or file as a container. Refer to <xref linkend=\"cha."
+"security.cryptofs\"/> for details."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3830
+#, no-c-format
+msgid "Firewall (iptables)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3832
+#, no-c-format
+msgid ""
+"iptables will not be covered in detail in this guide. Most companies use "
+"dedicated firewalls or appliances to protect their servers in a production "
+"network. This is strongly recommended for secure environments. &productname; "
+"also includes &susefirewall; which is a wrapper for iptables and is enabled "
+"by default as a simple and layered protection."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3841
+#, no-c-format
+msgid ""
+"If you are also interested in Linux stateful firewalls using iptables, there "
+"are many guides on the Internet. See the Appendix for resources. For lots of "
+"iptables tutorials and examples, see <link xlink:href=\"http://www."
+"linuxguruz.com/iptables/\"></link>."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3851
+#, no-c-format
+msgid "Security Features in the Kernel"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3853
+#, no-c-format
+msgid ""
+"The following list shows tunable kernel parameters you can use to secure "
+"your Linux server against attacks. Some are defaults already within the SLE "
+"distributions. To check the current status of any of these settings, you can "
+"query the kernel (<filename>/proc/sys/...</filename> contents). For example, "
+"the Source Routing setting is located in the <filename>/proc/sys/net/ipv4/"
+"conf/all/accept_source_route</filename> file. Simply display the contents of "
+"a file to see how the current running kernel is set up."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3865
+#, no-c-format
+msgid ""
+"For each tunable kernel parameter shown, the change to the entry that needs "
+"to be affected can be modified or added to the <filename>/etc/sysctl.conf</"
+"filename> configuration file to make the change persistent after a reboots."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3872
+#, no-c-format
+msgid "You can get a list of current kernel settings by using the command:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:3876
+#, no-c-format
+msgid "&prompt.root;sysctl -a"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3878
+#, no-c-format
+msgid ""
+"It is even a very good idea to store the output of the kernel settings (for "
+"comparison or reference) by redirecting the output of the sysctl command to "
+"a file, for example"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:3884
+#, no-c-format
+msgid "&prompt.root;sysctl -A &gt; /root/sysctl.settings.store"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3886
+#, no-c-format
+msgid ""
+"Because &productname; includes, by default, security-focused kernel tuning "
+"parameters, you will find the existing <filename>/etc/sysctl.conf</filename> "
+"file to be sparsely populated. You may choose to use the above mentioned "
+"<quote>catalog</quote> method of storing the complete gamut of kernel "
+"settings and then choose those parameters you want to be reset at reboot. "
+"You can place these in the <filename>/etc/sysctl.conf</filename> file where "
+"they will be picked up upon a reboot or they can be inserted immediately "
+"(into the running kernel) by running the command <command>sysctl</command> "
+"<option>-p</option>."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3899
+#, no-c-format
+msgid ""
+"Many third-party applications like Oracle, SAP, DB2, Websphere, etc. "
+"recommend changing kernel parameters to ensure high performance for I/O or "
+"CPU processing. Having a full list of current settings can be helpful for "
+"reference."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3907
+#, no-c-format
+msgid ""
+"Enable TCP SYN Cookie Protection (default in &productname; &productnumber;)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3908
+#, no-c-format
+msgid ""
+"A SYN attack is a denial of service attack that consumes all the resources "
+"on a machine. Any server that is connected to a network is potentially "
+"subject to this attack. To enable TCP SYN Cookie Protection, edit the "
+"<filename>/etc/sysctl.conf</filename> file and ensure the following line and "
+"value exists:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:3915
+#, no-c-format
+msgid "net.ipv4.tcp_syncookies = 1"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3917
+#, no-c-format
+msgid ""
+"Despite the name of the configuration option, it applies to IP version 6 as "
+"well."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3925
+#, no-c-format
+msgid "Disable IP Source Routing (default in &productname; &productnumber;)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3926
+#, no-c-format
+msgid ""
+"Source Routing is used to specify a path or route through the network from "
+"source to destination. This feature can be used by network people for "
+"diagnosing problems. However, if an intruder was able to send a source "
+"routed packet into the network, then he could intercept the replies and your "
+"server might not know that it is not communicating with a trusted server."
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:3934
+#, no-c-format
+msgid "net.ipv4.conf.all.accept_source_route = 0"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3935 hardening.xml:3952
+#, no-c-format
+msgid "<para>or</para>"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:3938
+#, no-c-format
+msgid "net.ipv6.conf.all.accept_source_route = 0"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3942
+#, no-c-format
+msgid "Disable ICMP Redirect Acceptance"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3943
+#, no-c-format
+msgid ""
+"ICMP redirects are used by routers to tell the server that there is a better "
+"path to other networks than the one chosen by the server. However, an "
+"intruder could potentially use ICMP redirect packets to alter the host's "
+"routing table by causing traffic to use a path you did not intend. To "
+"disable ICMP Redirect Acceptance, edit the <filename>/etc/sysctl.conf</"
+"filename> file and add the following line:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:3951
+#, no-c-format
+msgid "net.ipv4.conf.all.accept_redirects = 0"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:3955
+#, no-c-format
+msgid "net.ipv6.conf.all.accept_redirects = 0"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3959
+#, no-c-format
+msgid ""
+"Enable IP Spoofing Protection (default in &productname; &productnumber;)"
+msgstr ""
+
+#. Tag: remark
+#: hardening.xml:3960
+#, no-c-format
+msgid "krahmer 2014-08-14: IPv6 should be handled separately"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3961
+#, no-c-format
+msgid ""
+"IP spoofing is a technique where an intruder sends out packets which claim "
+"to be from another host by manipulating the source address. IP spoofing is "
+"very often used for denial of service attacks. For more information on IP "
+"Spoofing, see <link xlink:href=\"http://en.wikipedia.org/wiki/"
+"IP_address_spoofing\"></link>"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:3968
+#, no-c-format
+msgid "net.ipv4.conf.all.rp_filter = 1"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3972
+#, no-c-format
+msgid "Enable Ignoring to ICMP Requests"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3973
+#, no-c-format
+msgid ""
+"If you want or need Linux to ignore <command>ping</command> requests, edit "
+"the <filename>/etc/sysctl.conf</filename> file and add the following line:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:3978
+#, no-c-format
+msgid "net.ipv4.icmp_echo_ignore_all = 1"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3979
+#, no-c-format
+msgid ""
+"This cannot be done in many environments, as some monitoring systems use a "
+"rudimentary ICMP (ping) to determine the health of the device on the network "
+"(or at least its ability to respond)."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3987
+#, no-c-format
+msgid ""
+"Enable Ignoring Broadcasts Request (default in &productname; &productnumber;)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3988
+#, no-c-format
+msgid "If you want or need Linux to ignore broadcast requests."
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:3991
+#, no-c-format
+msgid "net.ipv4.icmp_echo_ignore_broadcasts = 1"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:3995
+#, no-c-format
+msgid ""
+"Enable Bad Error Message Protection (default in &productname; "
+"&productnumber;)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:3996
+#, no-c-format
+msgid "To alert you about bad error messages in the network."
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:3999
+#, no-c-format
+msgid "net.ipv4.icmp_ignore_bogus_error_responses = 1"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4003
+#, no-c-format
+msgid ""
+"Enable Logging of Spoofed Packets, Source Routed Packets, Redirect Packets"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4004
+#, no-c-format
+msgid ""
+"To turn on logging for Spoofed Packets, Source Routed Packets, and Redirect "
+"Packets, edit the <filename>/etc/sysctl.conf</filename> file and add the "
+"following line:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:4009
+#, no-c-format
+msgid "net.ipv4.conf.all.log_martians = 1"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4011
+#, no-c-format
+msgid ""
+"Because of the way &productname; is set up (with rsyslog) for network event "
+"tracking, keep in mind that this can cause a large amount of messages to be "
+"logged."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4020
+#, no-c-format
+msgid "Buffer Overflow Attack Mitigation"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4021
+#, no-c-format
+msgid ""
+"Starting with the 2.6.x kernel releases, Linux offers <emphasis>Address "
+"Space Layout Randomization</emphasis> (ASLR) and the <emphasis>No-eXecute</"
+"emphasis> (NX bit) for mitigation of buffer overflow attacks. For more "
+"information, see:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4044
+#, no-c-format
+msgid ""
+"Since version 12, &productname; already comes with some buffer overflow "
+"attack mitigation techniques being enabled by default."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4048
+#, no-c-format
+msgid ""
+"ASLR is enabled by default. This can be verified with the output of the "
+"following command. The expected result is 2:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:4052
+#, no-c-format
+msgid ""
+"&prompt.user;cat /proc/sys/kernel/randomize_va_space\n"
+"2"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4053
+#, no-c-format
+msgid ""
+"This randomizes the heap, stack, and load addresses of dynamically linked "
+"libraries. Programs that run privileged or process network data are already "
+"built using special compiler flags (PIE and _FORTIFY_SOURCE) to take even "
+"more advantage of randomizing the text and data segments as well."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4060
+#, no-c-format
+msgid ""
+"Executable space protection prevents the execution of memory space which is "
+"not intended for execution. Linux makes use of the <emphasis>No eXecute bit</"
+"emphasis>. This is enabled by default on the &productname; kernel for the "
+"&x86; and &x86-64; architecture. The usage of the NX bit has to be supported "
+"by each single program. You can check if your system supports the NX bit:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:4068
+#, no-c-format
+msgid ""
+"&prompt.user;dmesg | grep '[NX|DX]*protection'\n"
+"[    0.000000] NX (Execute Disable) protection: active"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4069
+#, no-c-format
+msgid ""
+"If NX is disabled, check your BIOS or UEFI for a setting that enables it and "
+"make sure that it is supported by your CPU."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4071
+#, no-c-format
+msgid ""
+"Furthermore, since version 12, &productname; prevents leaking of internal "
+"kernel addresses to make kernel exploits harder by setting the "
+"<literal>kptr_restrict</literal>:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:4076
+#, no-c-format
+msgid ""
+"&prompt.user;cat /proc/sys/kernel/kptr_restrict\n"
+"1"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4077
+#, no-c-format
+msgid ""
+"On CPU's that support it (newer &x86-64; CPUs) the kernel also uses the SMEP "
+"protection by default that prevents direct execution of user space code from "
+"inside the kernel. This is often used by kernel exploits and therefore a "
+"good hardening measure."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4086
+#, no-c-format
+msgid "File system hardening"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4087
+#, no-c-format
+msgid ""
+"To mitigate vulnerabilities based on insecure file system access by "
+"privileged programs (tmp-races, TOCTOU) the Linux kernel offers two "
+"<command>sysctl</command> variables which should already be enabled by "
+"default on &productname; &productnumber;: <literal>fs.protected_hardlinks</"
+"literal> and <literal>fs.protected_symlinks</literal> or their corresponding "
+"<filename>/proc</filename> entries:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:4096
+#, no-c-format
+msgid ""
+"&prompt.user;cat /proc/sys/fs/protected_hardlinks\n"
+"1\n"
+"&prompt.user;cat /proc/sys/fs/protected_symlinks\n"
+"1"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4097
+#, no-c-format
+msgid ""
+"By setting these variables, users can no longer create soft or hard links to "
+"files which they do not own. This mitigates a commonly used exploitation "
+"vector for programs which call open(2), creat(2) or similar functions "
+"without care."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4106
+#, no-c-format
+msgid "Increased <command>dmesg</command> Restrictions"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4107
+#, no-c-format
+msgid ""
+"<command>dmesg</command> provides all kinds of system internal information, "
+"such as kernel addresses, crashes of services, and similar things that could "
+"be used by local attackers. This is why the access to <command>dmesg</"
+"command> is restricted to &rootuser; by default. The behavior is controlled "
+"by the <literal>kernel.dmesg_restrict</literal> option (defaults to 1). If "
+"set to 0, any user can view the output of <command>dmesg</command>."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4119
+#, no-c-format
+msgid ""
+"Filter access to <filename>/dev/mem</filename> (default in &productname; 12)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4123
+#, no-c-format
+msgid ""
+"<filename>/dev/mem</filename> hosts an image of the system's main memory, "
+"including kernel and user space memory. Allowing unfiltered access to this "
+"information is dangerous and therefore the Kernel on &productname; has been "
+"compiled with <envar>CONFIG_STRICT_DEVMEM</envar> enabled. This setting "
+"restricts user space access to <filename>/dev/mem</filename> to memory "
+"mapped peripherals."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4135
+#, no-c-format
+msgid "&aa;"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4137
+#, no-c-format
+msgid ""
+"Included with &productname;, &aa; is an application security tool designed "
+"to provide an easy-to-use security framework for your applications. &aa; "
+"proactively protects the operating system and applications from external or "
+"internal threats, even zero-day attacks, by enforcing a specified behavior "
+"and preventing some unknown application flaws from being exploited. &aa; "
+"security policies, called <quote>profiles</quote>, completely define which "
+"system resources and files can be accessed by each application. The profiles "
+"also define the access mode, for example read or write. Several default "
+"profiles are included with &aa;, and using a combination of advanced static "
+"analysis and learning-based tools, &aa; profiles for even very complex "
+"applications can be deployed successfully in a matter of hours."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4153
+#, no-c-format
+msgid "&aa; consists of:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4159
+#, no-c-format
+msgid "A kernel extension which enforces the security profiles."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4164
+#, no-c-format
+msgid "A collection of RPMs, also shipped with &productname; that provides:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4170
+#, no-c-format
+msgid ""
+"A set of &aa; profiles for numerous programs that ship with &productname;."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4176
+#, no-c-format
+msgid "Tools to create and manage new and existing &aa; profiles."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4181
+#, no-c-format
+msgid ""
+"A &yast; user interface to manage reports and notification of security "
+"events."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4187
+#, no-c-format
+msgid "Documentation about the &aa; tools."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4195
+#, no-c-format
+msgid ""
+"It is best to reboot a system after completing installation, so that &aa; "
+"can confine all system daemons."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4200
+#, no-c-format
+msgid ""
+"The &aa; quick-start and administrative guides are available online here:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4209
+#, no-c-format
+msgid ""
+"For additional details and step-by-step instructions on the usage and "
+"configuration of &aa; you can also refer to <xref linkend=\"part.apparmor\"/"
+">."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4216
+#, no-c-format
+msgid "&selnx;"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4218
+#, no-c-format
+msgid ""
+"&selnx; is an advanced technology for securing Linux systems. It is included "
+"with <quote>basic enablement</quote> in &productname; &productnumber;, and "
+"is included with some other distributions by default. Hardening Linux using "
+"&selnx; technology, on its own, warrants its own security HOWTO and is out "
+"of scope for this guide. The book <link xlink:href=\"http://shop.oreilly.com/"
+"product/9780596007164.do\">&selnx;: NSA's Open Source Security Enhanced "
+"Linux</link> contains a very good description of its setup and usage. As "
+"part of the <quote>basic enablement</quote>, &selnx; will not be officially "
+"supported, but packages have now been added to &productname; &productnumber; "
+"to enable its usage with minimal effort. While &aa; is much easier to use "
+"and has a similar feature set, knowing both will most certainly be "
+"beneficial."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4234
+#, no-c-format
+msgid "FTP, <command>telnet</command>, and <command>rlogin</command> (rsh)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4236
+#, no-c-format
+msgid ""
+"The programs/protocols of FTP, <command>telnet</command>, and "
+"<command>rlogin</command> (<command>rsh</command>) are vulnerable to "
+"eavesdropping, which is one of the main reasons secure alternatives such as "
+"<command>ssh</command>, <command>scp</command> or <command>sftp</command> "
+"should be used instead. It is highly recommended not to run the insecure "
+"services. Because of the high risk, this guide does not cover these services "
+"(other than vsftp). It would also be a good idea (and part of our guidance, "
+"see next section) not to have FTP and Telnet server RPMs installed on the "
+"system. Note that the EAL 4+ evaluation had vsftp installed. The <quote>vs</"
+"quote> stands for <quote>very secure</quote>&mdash;which is a differentiator "
+"here when compared to normal FTP."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4252
+#, no-c-format
+msgid "Removing Unnecessary Software Packages (RPMs)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4254
+#, no-c-format
+msgid ""
+"A very important step in securing a Linux system is to determine the primary "
+"function(s) or role(s) of the Linux server. Otherwise, it can be difficult "
+"to understand what needs to be secured and securing these Linux systems can "
+"prove ineffective. Therefore, it is critical to look at the default list of "
+"software packages and remove any unnecessary packages or packages that do "
+"not comply with your defined security policies."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4264
+#, no-c-format
+msgid ""
+"Doing this will result in fewer packages that require updates and will "
+"simplify maintenance efforts when security alerts and patches are released. "
+"It is a best practice not to install, among others, development packages or "
+"desktop software packages (for example, an X Server) on production servers. "
+"If you do not need them, you should also uninstall, for example, the Apache "
+"Web server or Samba file sharing server."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4275
+#, no-c-format
+msgid "Requirements of Third-party Installers"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4276
+#, no-c-format
+msgid ""
+"Many third-party vendors like Oracle and IBM require a desktop environment "
+"and development libraries to run installers. To avoid this from having an "
+"impact on the security of their production servers, many organizations work "
+"around this by creating a silent installation (response file) in a "
+"development lab."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4285
+#, no-c-format
+msgid ""
+"Also, other packages like FTP and Telnet daemons should not be installed as "
+"well unless there is a justified business reason for it (again, "
+"<command>ssh</command>, <command>scp</command> or <command>sftp</command> "
+"should be used as replacements)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4292
+#, no-c-format
+msgid ""
+"One of the first action items should be to create a Linux image that "
+"<emphasis>only</emphasis> contains RPMs needed by the system and "
+"applications, and those needed for maintenance and troubleshooting purposes. "
+"A good approach is to start with a minimum list of RPMs and then add "
+"packages as needed. This process is time-consuming but usually worth the "
+"effort."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4302
+#, no-c-format
+msgid "Just Enough Operating System (JeOS)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4303
+#, no-c-format
+msgid ""
+"The &suse; Appliance Program includes a component called JeOS (Just Enough "
+"Operating System). JeOS has a very small footprint and can be customized to "
+"fit the specific needs of a system developer. Main uses of JeOS are for "
+"hardware/software appliance or virtual machine development. Key benefits of "
+"JeOS are efficiency, higher performance, increased security and simplified "
+"management."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4311
+#, no-c-format
+msgid ""
+"If JeOS is not an option for you, a good choice is the minimal installation "
+"pattern."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4317
+#, no-c-format
+msgid "To generate a list of all installed RPMs, use the following command:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:4321
+#, no-c-format
+msgid "&prompt.root;rpm -qa"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4323
+#, no-c-format
+msgid "To retrieve details about a particular RPM (from the RPM itself), run:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:4327
+#, no-c-format
+msgid "&prompt.root;rpm -qi <replaceable>package_name</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4329
+#, no-c-format
+msgid ""
+"To check for and report potential conflicts and dependencies when deleting "
+"an RPM, run:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:4334
+#, no-c-format
+msgid "&prompt.root;rpm -e --test <replaceable>package_name</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4336
+#, no-c-format
+msgid ""
+"This can be very useful, as running the removal command without a test can "
+"often yield a mass of complaints and require manual recursive dependency "
+"hunting."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4343
+#, no-c-format
+msgid "Patching Linux Systems"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4345
+#, no-c-format
+msgid ""
+"Building an infrastructure for patch management is another very important "
+"part of a proactive and secure production Linux environment."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4350
+#, no-c-format
+msgid ""
+"It is recommended to have a written security policy and procedure to handle "
+"Linux security updates and issues. For example, a security policy should "
+"detail the time frame for assessment, testing, and roll out of patches. "
+"Network related security vulnerabilities should get the highest priority and "
+"should be addressed immediately within a short time frame. The assessment "
+"phase should occur within a testing lab, and initial roll out should occur "
+"on development systems first"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4360
+#, no-c-format
+msgid ""
+"A separate security log file should contain details on which Linux security "
+"announcements have been received, which patches have been researched and "
+"assessed, when patches have been applied, etc."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4366
+#, no-c-format
+msgid ""
+"&suse; releases their patches in three categories, security, recommended and "
+"optional. There are a few options that can be used to keep systems patched, "
+"up to date and secure. Each system can register and then retrieve updates "
+"via the &suse; Update Web site using the included &yast; tool&mdash;&yast; "
+"Online Update. &suse; has also created the &smtool; (&smt;), an efficient "
+"way to maintain a local repository of available/released patches/updates/"
+"fixes that systems can then pull from (reducing Internet traffic). &suse; "
+"also offers &susemgr; for the maintenance, patching, reporting and "
+"centralized management of Linux systems, not only &suse;, but other "
+"distributions as well."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4381
+#, no-c-format
+msgid "&yast; Online Update"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4382
+#, no-c-format
+msgid ""
+"On a per-server basis, installation of important updates and improvements is "
+"possible using the &yast; Online Update tool. Current updates for the &sle; "
+"family are available from the product specific update catalogs containing "
+"patches. Installation of updates and improvements is accomplished using "
+"&yast; and selecting <guimenu>Online Update</guimenu> in the "
+"<guimenu>Software</guimenu> Group. All new patches (except the optional "
+"ones) that are currently available for your system will already be marked "
+"for installation. Clicking <guimenu>Accept</guimenu> will then automatically "
+"install these patches."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4397
+#, no-c-format
+msgid "Automatic Online Update"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4398
+#, no-c-format
+msgid ""
+"&yast; also offers the possibility to set up an automatic update. Select "
+"<menuchoice> <guimenu>Software</guimenu> <guimenu> Automatic Online Update</"
+"guimenu></menuchoice>. Configure a Daily or a Weekly update. Some patches, "
+"such as kernel updates, require user interaction, which would cause the "
+"automatic update procedure to stop. Check <guimenu>Skip Interactive Patches</"
+"guimenu> for the update procedure to proceed automatically."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4407
+#, no-c-format
+msgid ""
+"In this case, run a manual Online Update from time to install patches that "
+"require interaction."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4411
+#, no-c-format
+msgid ""
+"When <guimenu>Only Download Patches</guimenu> is checked, the patches are "
+"downloaded at the specified time but not installed. They must be installed "
+"manually using <command>rpm</command>or <command>zypper</command>."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4420
+#, no-c-format
+msgid "&smtool;&mdash;&smt;"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4421
+#, no-c-format
+msgid ""
+"The &smtool; for &sle; goes one step further than the Online Update process "
+"by establishing a proxy system with repository and registration targets. "
+"This helps customers centrally manage software updates within the firewall "
+"on a per-system basis, while maintaining their corporate security policies "
+"and regulatory compliance."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4428
+#, no-c-format
+msgid ""
+"The downloadable &smt; (<link xlink:href=\"http://download.suse.com/\"></"
+"link>) is integrated with &scc; (<link xlink:href=\"&sccurl;\"></link>) and "
+"provides a repository and registration target that is synchronized with it. "
+"This can be very helpful in tracking entitlements in large deployments. The "
+"&smt; maintains all the capabilities of &scc;, while allowing a more secure "
+"centralized deployment. It is included with every &sle; subscription and is "
+"therefore fully supported."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4438
+#, no-c-format
+msgid ""
+"The &smt; provides an alternative to the default configuration, which "
+"requires opening the firewall to outbound connections for each device to "
+"receive updates. That requirement often violates corporate security policies "
+"and can be seen as a threat to regulatory compliance by some organizations. "
+"Through its integration with &scc;, the &smt; ensures that each device can "
+"receive its appropriate updates without the need to open the firewall, and "
+"without any redundant bandwidth requirements."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4448
+#, no-c-format
+msgid ""
+"The &smt; also enables customers to locally track their &sle; devices (that "
+"is servers, desktops, or Point of Service terminals) throughout their "
+"enterprise. Now they can easily determine how many entitlements are in need "
+"of renewal at the end of a billing cycle without having to physically walk "
+"through the data center to manually update spreadsheets."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4456
+#, no-c-format
+msgid ""
+"The &smt; informs the &sle; devices of any available software updates. Each "
+"device then obtains the required software updates from the &smt;. The "
+"introduction of the &smt; improves the interaction among &sle; devices "
+"within the network and simplifies how they receive their system updates. The "
+"&smt; enables an infrastructure for several hundred &sle; devices per "
+"instance of each installation (depending on the specific usage profile). "
+"This offers more accurate and efficient server tracking."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4466
+#, no-c-format
+msgid "In a nutshell, the &smtool; for &sle; provides customers with:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4471
+#, no-c-format
+msgid "Assurance of firewall and regulatory compliance"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4476
+#, no-c-format
+msgid "Reduced bandwidth usage during software updates"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4481
+#, no-c-format
+msgid "Full support under active subscription from &suse;"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4486
+#, no-c-format
+msgid "Maintenance of existing customer interface with &ncc;"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4491
+#, no-c-format
+msgid ""
+"Accurate server entitlement tracking and effective measurement of "
+"subscription usage"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4497
+#, no-c-format
+msgid ""
+"Automated process to easily tally entitlement totals (no more spreadsheets!)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4503
+#, no-c-format
+msgid ""
+"Simple installation process that automatically synchronizes server "
+"entitlement with &ncc;"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4512
+#, no-c-format
+msgid "&susemgr;"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4513
+#, no-c-format
+msgid ""
+"&susemgr; automates Linux server management, allowing you to provision and "
+"maintain your servers faster and more accurately. It monitors the health of "
+"each Linux server from a single console so you can identify server "
+"performance issues before they impact your business. And it lets you "
+"comprehensively manage your Linux servers across physical, virtual and cloud "
+"environments while improving data center efficiency. &susemgr; delivers "
+"complete life cycle management for Linux:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4524
+#, no-c-format
+msgid "Asset management"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4529
+#, no-c-format
+msgid "Provisioning"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4534
+#, no-c-format
+msgid "Package management"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4539
+#, no-c-format
+msgid "Patch management"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4544
+#, no-c-format
+msgid "Configuration management"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4549
+#, no-c-format
+msgid "Redeployment"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4554
+#, no-c-format
+msgid ""
+"For more information on &susemgr; refer to <link xlink:href=\"https://www."
+"suse.com/products/suse-manager/\"></link>."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:4561
+#, no-c-format
+msgid "Securing the Network&mdash;Open Network Ports Detection"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4563
+#, no-c-format
+msgid ""
+"Securing a server requires that you know what it is serving; what services "
+"are running. Default server installations may have services running that "
+"aren't self apparent and open network ports that they are using. So, one of "
+"the most important tasks is to detect and close network ports that are not "
+"needed. To get a list of listening network ports (TCP and UDP sockets), you "
+"can use the <command>netstat</command> service run the following command:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:4573
+#, no-c-format
+msgid "&prompt.root;netstat -tulp"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4575
+#, no-c-format
+msgid ""
+"Be aware that <command>netstat</command> output can be wider than a default "
+"terminal screen. If the screen is too narrow, the options described above "
+"will likely cause the output to wrap and be less legible."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4582
+#, no-c-format
+msgid "Below is an example of output from the above command:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:4586
+#, no-c-format
+msgid ""
+"Proto Recv-Q Send-Q Local            Foreign         State   PID/Program\n"
+"                    Address          Address                 name\n"
+"tcp   0      0      *:auth           *.*             LISTEN  2328/xinetd\n"
+"tcp   0      0      local[...].:smtp *.*             LISTEN  2360/sendmail:"
+"acce\n"
+"tcp   0      0      *:ssh            *.*             LISTEN  2317/sshd"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4588
+#, no-c-format
+msgid ""
+"From the output above you can see that three TCP-based services are running "
+"and listening: xinetd, sendmail, and sshd. Sendmail should not be configured "
+"to listen for incoming network connections unless the server running it is a "
+"designated as a mail or relay server. Running a port scan from another "
+"server can confirm that, but make sure to obtain proper permissions to scan/"
+"probe a machine on a production network."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4598
+#, no-c-format
+msgid ""
+"Some organizations consider port scans without permission a security offense."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4604
+#, no-c-format
+msgid "Using the Nmap tool, such a probe/scan can be run:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:4608
+#, no-c-format
+msgid ""
+"&prompt.root;nmap -sTU <replaceable>remote_host</replaceable>\n"
+"Starting nmap 3.70 ( http://www.insecure.org/nmap/ ) at 2004-12-10 22:51 "
+"CST\n"
+"Interesting ports on &wsII; (&wsIIip;):\n"
+"(The 3131 ports scanned but not shown below are in state: closed)\n"
+"PORT     STATE         SERVICE\n"
+"22/tcp   open          ssh\n"
+"113/tcp  open          auth\n"
+"\n"
+"Nmap run completed -- 1 IP address (1 host up) scanned in 221.669 seconds"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4610
+#, no-c-format
+msgid ""
+"Note that running the <command>nmap</command> command can take quite a while "
+"(in this example almost 4 minutes) depending on the options used. If you "
+"remove the UDP port scan (leave out the <option>-U</option> option), then "
+"<command>nmap</command> will finish the port scan nearly immediately. The "
+"results of <command>nmap</command> can vary widely and might not show all "
+"listening network sockets depending on the status of the &susefirewall; (or "
+"other) and if it has been set up to block any ports."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4621
+#, no-c-format
+msgid ""
+"From the sample run above, you see that the <systemitem class=\"daemon"
+"\">xinetd</systemitem> daemon is listening on port auth (port 113) for "
+"<literal>IDENT</literal> (for more information on this service, see <xref "
+"linkend=\"sec.sec_prot.general.disable_xinetd_services\"/>). You can also "
+"see that sendmail is not listening for remote incoming network connections."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:4631
+#, no-c-format
+msgid ""
+"Another method to list all of the TCP and UDP sockets to which programs are "
+"listening (on a host) is to use the <command>lsof</command> command – which "
+"lists open files :"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:4637
+#, no-c-format
+msgid ""
+"&prompt.root;lsof -i -n | egrep 'COMMAND|LISTEN|UDP'\n"
+"COMMAND  PID   USER   FD   TYPE    DEVICE SIZE/OFF NODE NAME\n"
+"sshd     2317  root   3u   IPv6    6579   0t0      TCP *:ssh (LISTEN)\n"
+"xinetd   2328  root   5u   IPv4    6698   0t0      TCP *:auth (LISTEN)\n"
+"sendmail 2360  root   3u   IPv4    6729   0t0      TCP 127.0.0.1:smtp "
+"(LISTEN)"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5066
+#, no-c-format
+msgid "<systemitem class=\"daemon\">xinetd</systemitem> Services - Disabling"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5068
+#, no-c-format
+msgid ""
+"The <systemitem class=\"daemon\">xinetd</systemitem> daemon is a replacement "
+"for inetd, the Internet services daemon. It monitors the ports for all "
+"network services configured in <filename>/etc/xinetd.d</filename>, and "
+"starts the services in response to incoming connections. To check if "
+"<systemitem class=\"daemon\">xinetd</systemitem> is enabled and running, "
+"execute:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5078 hardening.xml:5094
+#, no-c-format
+msgid "&prompt.root;systemctl status xinetd"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5089
+#, no-c-format
+msgid ""
+"To check the current status of the <systemitem class=\"daemon\">xinetd</"
+"systemitem> service, execute:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5096
+#, no-c-format
+msgid ""
+"If <systemitem class=\"daemon\">xinetd</systemitem> is active, it is very "
+"important to see which services are active and being controlled by "
+"<systemitem class=\"daemon\">xinetd</systemitem>. The following command will "
+"list all services configured in <filename>/etc/xinetd.d</filename> and "
+"whether <systemitem class=\"daemon\">xinetd</systemitem> monitors the ports "
+"for these services:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5108
+#, no-c-format
+msgid ""
+"&prompt.root;chkconfig -list | awk '/xinetd based services/,/\"\"/'\n"
+"xinetd based services:\n"
+"\n"
+"  chargen:     off\n"
+"  chargen-udp: off\n"
+"  cups-lpd:    off\n"
+"  cvs:         off\n"
+"  daytime:     off\n"
+"  daytime-udp: off\n"
+"  discard:     off\n"
+"  discard-udp: off\n"
+"  echo:        off\n"
+"  echo-udp:    off\n"
+"  netstat:     off\n"
+"  rsync:       off\n"
+"  sane-port:   off\n"
+"  servers:     off\n"
+"  services:    off\n"
+"  svnserve:    off\n"
+"  swat:        off\n"
+"  systat:      off\n"
+"  tftp:        on\n"
+"  time:        off\n"
+"  time-udp:    off\n"
+"  vnc:         off"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5110
+#, no-c-format
+msgid ""
+"To get a list of only active services for which xinetd monitors the ports, "
+"you could run (where the <option>-v</option> option of grep does an inverse-"
+"match) :"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5119
+#, no-c-format
+msgid ""
+"&prompt.root;chkconfig --list | awk '/xinetd based services/,/\"\"/' | grep -"
+"v off\n"
+"xinetd based services:\n"
+"\n"
+"  tftp:        on"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5121
+#, no-c-format
+msgid ""
+"In the above example you can see that the <systemitem class=\"resource"
+"\">telnet-server</systemitem> package is not installed on the system. If the "
+"Telnet Server package <systemitem class=\"resource\">telnet-server</"
+"systemitem> would be installed, it would show up on the list whether it is "
+"active. Here is an example how to disable a service. Assuming the "
+"<systemitem class=\"service\">tftp</systemitem> service is active, run the "
+"following commands to disable it and to see how the telnet service entries "
+"are being updated:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5133
+#, no-c-format
+msgid ""
+"&prompt.user;sudo systemctl status tftp\n"
+"tftp.service - Tftp Server\n"
+"Loaded: loaded (/usr/lib/systemd/system/tftp.service; static)\n"
+"Active: active (running) since Fri 2014-09-05 07:56:23 CEST; 2h 1min ago\n"
+"\n"
+"# sudo cat /etc/xinetd.d/tftp | grep disable\n"
+"   disable = no\n"
+"\n"
+"# sudo systemctl disable tftp\n"
+"\n"
+"# systemctl status tftp\n"
+"tftp.service - Tftp Server\n"
+"Loaded: loaded (/usr/lib/systemd/system/tftp.service; static)\n"
+"Active: inactive (dead)\n"
+"\n"
+"# sudo cat /etc/xinetd.d/tftp | grep disable\n"
+"      disable = yes"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5135
+#, no-c-format
+msgid ""
+"For the TFTP service it would be better to remove the package from the "
+"system since removal is always safer than disabling (when possible):"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5140
+#, no-c-format
+msgid "&prompt.root;rpm -e tftp"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5143
+#, no-c-format
+msgid "Inventory <systemitem class=\"daemon\">xinetd</systemitem> services"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5144
+#, no-c-format
+msgid ""
+"It is important to investigate <emphasis>all</emphasis> active <systemitem "
+"class=\"daemon\">xinetd</systemitem> services and to disable them (or remove "
+"their packages) if they are not needed. To find out what a service does, "
+"here is a viable approach. Using the <systemitem class=\"service\">tftp</"
+"systemitem> service as an example and assuming its function is unknown and "
+"it is listed as an active service. Execute the following commands:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5153
+#, no-c-format
+msgid ""
+"&prompt.root;grep \" server\" /etc/xinetd.d/tftp\n"
+"  server = /usr/sbin/in.tftpd\n"
+"  server_args = -s /tftpboot"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5154
+#, no-c-format
+msgid "To read the manual:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5157
+#, no-c-format
+msgid ""
+"&prompt.root;man in.tftpd\n"
+"TFTPD(8)               System Manager's Manual              TFTPD(8)\n"
+"\n"
+"\n"
+"\n"
+"NAME\n"
+"       tftpd - IPv4 Trivial File Transfer Protocol server\n"
+"\n"
+"SYNOPSIS\n"
+"       in.tftpd [options...]  directory...\n"
+"\n"
+"DESCRIPTION\n"
+"       tftpd  is  a  server  for the Trivial File Transfer Protocol.\n"
+"       The TFTP protocol is extensively used to support remote boot-\n"
+"       ing  of  diskless devices.  The server is normally started by\n"
+"       inetd, but can also run stand-alone.\n"
+"[...]"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5158
+#, no-c-format
+msgid "To determine what package supplies the in.tftpd binary:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5161
+#, no-c-format
+msgid ""
+"&prompt.root;rpm -qf /usr/sbin/in.tftpd\n"
+"tftp-0.48-101.16"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5162
+#, no-c-format
+msgid "To get a description of TFTP and its usage, etc:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5165
+#, no-c-format
+msgid ""
+"&prompt.root;rpm -qi tftp-0.48-101.16| awk '/Description/,/\"\"/'\n"
+"Description :\n"
+"The Trivial File Transfer Protocol (TFTP) is normally used only for\n"
+"booting diskless workstations and for getting or saving network\n"
+"component configuration files."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5166
+#, no-c-format
+msgid ""
+"To get a list of what files are installed via the TFTP package (RPM), "
+"execute the <command>rpm</command> command with the following options:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5170
+#, no-c-format
+msgid ""
+"&prompt.root;rpm -ql tftp-0.48-101.16\n"
+"/etc/xinetd.d/tftp\n"
+"/usr/bin/tftp\n"
+"/usr/sbin/in.tftpd\n"
+"/usr/share/doc/packages/tftp\n"
+"/usr/share/doc/packages/tftp/README\n"
+"/usr/share/doc/packages/tftp/README.security\n"
+"/usr/share/doc/packages/tftp/sample.rules\n"
+"/usr/share/man/man1/tftp.1.gz\n"
+"/usr/share/man/man8/in.tftpd.8.gz\n"
+"/usr/share/man/man8/tftpd.8.gz"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5171
+#, no-c-format
+msgid ""
+"This example described what could be done to find out information about "
+"services (specifically ones started by <systemitem class=\"daemon\">xinetd</"
+"systemitem>) even if an online manual did not exist for the binary "
+"<filename>in.ftpd</filename>. This example yielded a man page – but you may "
+"not always find one. The RPM commands in the example are very commonly used "
+"for a variety of reasons. It is also possible to use the &yast; software "
+"management interface to retrieve all of the resultant information – however "
+"having a knowledge of RPM command syntax can save quite a bit of time. Again "
+"to disable the TFTP service, execute the following command:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5183
+#, no-c-format
+msgid "&prompt.root;systemctl disable tftp"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5184
+#, no-c-format
+msgid ""
+"The <systemitem class=\"daemon\">xinetd</systemitem> daemon is quite "
+"flexible and has many features. Here are a few functionalities of "
+"<systemitem class=\"daemon\">xinetd</systemitem>:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5191
+#, no-c-format
+msgid "Access control for TCP, UDP, and RPC services."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5196
+#, no-c-format
+msgid "Access limitations based on time."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5201
+#, no-c-format
+msgid "Provides mechanisms to prevent DoS attacks."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5206
+#, no-c-format
+msgid ""
+"For more specific information on Xinetd, review the documentation and usage "
+"examples at the xinetd GitHub page <link xlink:href=\"https://github.com/"
+"xinetd-org/xinetd\"></link>."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5469
+#, no-c-format
+msgid "Securing Postfix"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5471
+#, no-c-format
+msgid ""
+"Postfix is a replacement for Sendmail and has several security advantages "
+"over Sendmail. Postfix is the default mail system in &productname; and "
+"consists of several small programs that each perform their own small "
+"task&mdash;most of these programs run in a chroot jail. This is one of the "
+"reasons Postfix is recommended over Sendmail."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5479
+#, no-c-format
+msgid ""
+"Linux servers that are not dedicated mail or relay servers should not accept "
+"external e-mails. However, it is important for production servers to send "
+"local e-mails to a relay server&mdash;some security setups (for example the "
+"seccheck scripts) can be configured to send e-mails to someone other than "
+"&rootuser;, even off the local system."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5487
+#, no-c-format
+msgid ""
+"Verify the following parameters in <filename>/etc/postfix/main.cf</filename> "
+"are set to ensure that Postfix accepts only local e-mails for delivery (look "
+"toward the bottom of the file as the top portion is mostly commented-out "
+"example entries and explanations):"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5495
+#, no-c-format
+msgid ""
+"mydestination = $myhostname, localhost.$mydomain, localhost\n"
+"inet_interfaces = localhost"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5497
+#, no-c-format
+msgid ""
+"The <literal>mydestination</literal> parameter lists all domains to receive "
+"e-mails for. The <literal>inet_interfaces</literal> parameter specifies the "
+"network to listen on. After reconfiguring Postfix, a restart of the mail "
+"system is necessary:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5504
+#, no-c-format
+msgid "&prompt.root;systemctl restart postfix"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5506
+#, no-c-format
+msgid ""
+"Verify that Postfix is not listening for network requests (incoming) by "
+"running one of these commands from another host:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5511
+#, no-c-format
+msgid ""
+"nmap -sT -p 25 <replaceable>remote_host</replaceable>\n"
+"telnet &lt;remote_host&gt; 25"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5514
+#, no-c-format
+msgid ""
+"Running these commands on the local host will provide inaccurate results "
+"because Postfix is supposed to accept connections from the local node. Use "
+"an external host for correct results."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5522
+#, no-c-format
+msgid "File Systems: Securing NFS"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5524
+#, no-c-format
+msgid ""
+"NFS (Network File System) allows servers to share files over a network. But "
+"like all network services using NFS involves risks."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5529
+#, no-c-format
+msgid "Here are some basic rules:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5535
+#, no-c-format
+msgid "NFS should not be enabled if not needed."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5540
+#, no-c-format
+msgid "If NFS is truly needed, use a TCP wrapper to restrict remote access."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5545
+#, no-c-format
+msgid "Ensure to export only to those hosts that really need access."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5550
+#, no-c-format
+msgid "Use a fully qualified domain name to diminish any spoofing attempts."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5555
+#, no-c-format
+msgid "Export only as read-only whenever possible."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5560
+#, no-c-format
+msgid "Use NFS only over TCP."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5566
+#, no-c-format
+msgid ""
+"If you do not have shared directories to export, then ensure that the NFS "
+"service is <emphasis>not</emphasis> enabled nor running on the system:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5572
+#, no-c-format
+msgid "Check the NFS service status:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5576
+#, no-c-format
+msgid ""
+"&prompt.root;systemctl status nfsserver\n"
+"<!--Checking for kernel based NFS server:\n"
+"idmapd                                                    running\n"
+"mountd                                                    unused\n"
+"statd                                                     unused\n"
+"nfsd                                                      unused-->"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5578
+#, no-c-format
+msgid "Check the current targets:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5586
+#, no-c-format
+msgid "&prompt.root;ls /etc/systemd/system/*.wants/nfsserver.service"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5593
+#, no-c-format
+msgid "Enabling and Starting NFS Server"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5594
+#, no-c-format
+msgid ""
+"If NFS must be used, it can be activated using the following commands on "
+"&productname; or more simply and securely with the &yast; plug-in (ncurses). "
+"Access it directly from command line with <command>yast nfs_server</command> "
+"or <command>yast nfs_client</command> – or manually:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5601
+#, no-c-format
+msgid ""
+"&prompt.root;systemctl enable nfs\n"
+"systemctl start nfs"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5602
+#, no-c-format
+msgid "Portmapper information:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5605
+#, no-c-format
+msgid ""
+"&prompt.root;rpcinfo -p <replaceable>server</replaceable>\n"
+"   program vers proto   port\n"
+"    100000    2   tcp    111  portmapper\n"
+"    100000    2   udp    111  portmapper\n"
+"    100003    2   udp   2049  nfs\n"
+"    100003    3   udp   2049  nfs\n"
+"    100003    2   tcp   2049  nfs\n"
+"    100003    3   tcp   2049  nfs\n"
+"    100005    1   udp    623  mountd\n"
+"    100005    1   tcp    626  mountd\n"
+"    100005    2   udp    623  mountd\n"
+"    100005    2   tcp    626  mountd\n"
+"    100005    3   udp    623  mountd\n"
+"    100005    3   tcp    626  mountd"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5606
+#, no-c-format
+msgid ""
+"If you run it from an \"untrusted\" server or network, you should get the "
+"following output:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5610
+#, no-c-format
+msgid ""
+"&prompt.root;rpcinfo -p <replaceable>server</replaceable>\n"
+"No remote programs registered."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5614
+#, no-c-format
+msgid "Exporting NFS"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5615
+#, no-c-format
+msgid ""
+"To allow a client access to a file system or directory, the <filename>/etc/"
+"exports</filename> file serves as the access control list. To give the "
+"network \"network.&exampledomain;\" read-only access to <filename>/pub</"
+"filename>, the entries in <filename>/etc/exports</filename> would look like "
+"as follows:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5622
+#, no-c-format
+msgid "/pub *.network.&exampledomain;(ro,sync)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5623
+#, no-c-format
+msgid ""
+"It is very important <emphasis>not</emphasis> to give write access to NFS "
+"clients if not absolutely needed! Entries in <filename>/etc/exports</"
+"filename> are exported read-only (<option>ro</option> option) by default. To "
+"allow servers <systemitem class=\"systemname\">sles-ha1</systemitem>, "
+"<systemitem class=\"systemname\">sles-ha2</systemitem> and <systemitem class="
+"\"systemname\">sles-ha3</systemitem> read-write access to the <filename>/"
+"data/MYSQL</filename> directory, the entries in <filename>/etc/exports</"
+"filename> would look like as follows:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5634
+#, no-c-format
+msgid ""
+"/data/MYSQL sles-ha1.&exampledomain;(rw,sync) sles-ha2.&exampledomain;(rw,"
+"sync) sles-ha3.&exampledomain;(rw,sync)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5635
+#, no-c-format
+msgid ""
+"Note that the options <emphasis>must not</emphasis> be separated from the "
+"host names or networks with whitespace(s). Also, fully qualified domain "
+"names should <emphasis>always</emphasis> be used to diminish spoofing "
+"attempts. All entries in <filename>/etc/exports</filename> are exported with "
+"the <option>root_squash</option> option (<quote>root squashing</quote>) by "
+"default. This means that a root user on a client machine does not have root "
+"privileges (root access) to files on exported NFS. It is not recommended to "
+"turn <quote>root squashing</quote> off using the <option>no_root_squash</"
+"option> option! After you have made all your entries in <filename>/etc/"
+"exports</filename>, you can export all file systems/directories using the "
+"following command:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5649
+#, no-c-format
+msgid "&prompt.root;exportfs -a"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5650
+#, no-c-format
+msgid "To unexport all shared file systems/directories, run:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5653
+#, no-c-format
+msgid "&prompt.root;exportfs -ua"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5654
+#, no-c-format
+msgid "To see all shared file systems/directories, run:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5657
+#, no-c-format
+msgid ""
+"&prompt.root;showmount -e localhost\n"
+"Export list for localhost:\n"
+"\n"
+"/pub *.network.&exampledomain;/data/MYSQL\n"
+"sles-ha1.&exampledomain;,sles-ha2.&exampledomain;,sles-ha3.&exampledomain;"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5661
+#, no-c-format
+msgid "Using NFS over TCP"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5662
+#, no-c-format
+msgid ""
+"If you need NFS, it is recommended to use NFS only over TCP since NFS over "
+"UDP is not secure. All 2.4 and later kernels support NFS over TCP on the "
+"client side. Server support for TCP appeared in later 2.4 kernels and "
+"beyond. To mount a shared directory using NFS over TCP, it is necessary to "
+"use the <option>proto=tcp</option> mount option:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5669
+#, no-c-format
+msgid ""
+"&prompt.root;mount -o proto=tcp <replaceable>server_name</replaceable>:/pub /"
+"usr/local/pub"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5670
+#, no-c-format
+msgid ""
+"Verify that the target directory, in this case <filename>/usr/local/pub</"
+"filename>, exists on the client:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5674
+#, no-c-format
+msgid ""
+"&prompt.root;mount [...] <replaceable>server_name</replaceable>:/pub on\n"
+"/usr/local/pub type nfs (rw,proto=tcp,addr=&nfsip;)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5675
+#, no-c-format
+msgid ""
+"To have the shared directory mounted on the client at boot time, use the "
+"<filename>/etc/fstab</filename> file. For the above example, the <filename>/"
+"etc/fstab</filename> entry could look like this:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5680
+#, no-c-format
+msgid ""
+"<replaceable>server_name</replaceable>:/pub /usr/local/pub nfs rsize=8192,"
+"wsize=8192,timeo=14,intr,tcp 0 0"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5684
+#, no-c-format
+msgid "Copying Files Using SSH Without Providing Login Prompts"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5686
+#, no-c-format
+msgid ""
+"This example is needed in some cases to enable files to be copied over the "
+"network using SSH without providing an interactive login prompt. This allows "
+"trusted hosts to be set up&mdash;an example of federation."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5692
+#, no-c-format
+msgid ""
+"SSH can allow a forced command using the <quote>command</quote> option. "
+"Using this option it is possible to disable scp (secure copy) and enforce "
+"every passed <command>ssh</command> command to be ignored. On the server "
+"side where you want to retrieve the file from, add the following entry to "
+"the beginning of the SSH key in the <filename>~/.ssh/authorized_keys</"
+"filename> file (the <filename>~</filename> represents a particular users "
+"home directory – &rootuser;'s home directory is <filename>/root</filename> – "
+"other users typically reside in <filename>/home/<replaceable>username</"
+"replaceable></filename>):"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5705
+#, no-c-format
+msgid "command=\"/bin/cat ~/&lt;file_name&gt;\" ssh-rsa AAAAB3N...{etc}"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5707
+#, no-c-format
+msgid "To copy now the file from the remote server, run the following command:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5711
+#, no-c-format
+msgid ""
+"ssh <replaceable>user</replaceable>@<replaceable>server</replaceable> "
+"<replaceable>local_file</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5716
+#, no-c-format
+msgid ""
+"Since <command>/bin/cat</command> is run on the server side, its output "
+"needs to be redirected to the local file."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5721
+#, no-c-format
+msgid ""
+"Another approach is to replace the <command>/bin/cat</command> (referenced "
+"above) with your own script that checks the passed SSH commands by reading "
+"the environment variable <envar>$SSH_ORIGINAL_COMMAND</envar>. For example:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5728
+#, no-c-format
+msgid ""
+"#!/bin/ksh\n"
+" if [[ $SSH_ORIGINAL_COMMAND = \"File1\" ||\n"
+"       $SSH_ORIGINAL_COMMAND = \"File2\" ]]\n"
+" then\n"
+"     /bin/cat $SSH_ORIGINAL_COMMAND\n"
+" else\n"
+"     echo \"Invalid file name!\"\n"
+"     exit 1\n"
+" fi"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5730
+#, no-c-format
+msgid ""
+"So you replace the <command>/bin/cat</command> portion with the script name "
+"in <filename>~/.ssh/authorized_keys</filename>, and run the following "
+"command to copy <filename>Foo1</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5736
+#, no-c-format
+msgid ""
+"&prompt.user;ssh <replaceable>user</replaceable>@<replaceable>server</"
+"replaceable> Foo1 &gt; <replaceable>local_file</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5738
+#, no-c-format
+msgid "To copy <filename>Foo 2</filename>, run:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5742
+#, no-c-format
+msgid ""
+"&prompt.user;ssh <replaceable>user</replaceable>@<replaceable>server</"
+"replaceable> Foo2 &gt; <replaceable>local_file</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5744
+#, no-c-format
+msgid ""
+"With the modifications above, every other variety of passed parameters will "
+"return errors."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5750
+#, no-c-format
+msgid "Checking File Permissions and Ownership"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5752
+#, no-c-format
+msgid ""
+"The following sections deal with some ways the default permissions and file "
+"settings can be modified to enhance the security of a host. It is important "
+"to note that the use of the default &productname; utilities like "
+"<command>seccheck</command> - can be run to lock down and improve the "
+"general file security and user environment. However, it is beneficial to "
+"understand how to modify these things."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5761
+#, no-c-format
+msgid ""
+"&productname; hosts include 3 defaults settings for file permissions: "
+"<filename>permissions.easy</filename>, <filename>permissions.secure</"
+"filename>, and <filename>permissions.paranoid</filename>, all located in the "
+"<filename>/etc</filename> directory. The purpose of these files is to define "
+"special permissions, such as world-writable directories or, for files, the "
+"setuser ID bit (programs with the setuser ID bit set do not run with the "
+"permissions of the user that has launched it, but with the permissions of "
+"the file owner, usually &rootuser;)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5773
+#, no-c-format
+msgid ""
+"Administrators can use the file <filename>/etc/permissions.local</filename> "
+"to add their own settings. The easiest way to implement one of the default "
+"permission rule-sets above is to use the <guimenu>Local Security</guimenu> "
+"module in &yast;."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5781
+#, no-c-format
+msgid ""
+"Each of the following topics will be modified by a selected rule-set, but "
+"the information is important to understand on its own."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5787
+#, no-c-format
+msgid "Default umask"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5789
+#, no-c-format
+msgid ""
+"The <command>umask</command> (user file-creation mode mask) command is a "
+"shell built-in command which determines the default file permissions for "
+"newly created files. This can be overwritten by system calls but many "
+"programs and utilities use <command>umask</command>. By default, &suse; sets "
+"<command>umask</command> to <literal>022</literal>. You can modify this by "
+"changing the value in <filename>/etc/profile</filename>."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5799
+#, no-c-format
+msgid ""
+"The <command>id</command> command will print out the current user identity "
+"information. Example from a non-root prompt:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5804
+#, no-c-format
+msgid ""
+"&prompt.user;id\n"
+"uid=1000(ne0) gid=100(users) groups=16(dialout),33(video),100(users)"
+msgstr ""
+
+#. Tag: remark
+#: hardening.xml:5806
+#, no-c-format
+msgid ""
+"jsegitz 2014-08-13: I don't really get why id is shown here tbazant "
+"2014-09-01: probably to compare the command's output when root vs when not "
+"root"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5810
+#, no-c-format
+msgid ""
+"And to determine the active umask, use the <command>umask</command> command:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5815
+#, no-c-format
+msgid ""
+"&prompt.user;umask\n"
+"0022"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5817
+#, no-c-format
+msgid "Now, for comparison's sake, the same commands from the root user:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5821
+#, no-c-format
+msgid ""
+"&prompt.root;id\n"
+"uid=0(root) gid=0(root) groups=0(root)\n"
+"&prompt.root;umask\n"
+"0022"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5824
+#, no-c-format
+msgid "SUID/SGID Files"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5826
+#, no-c-format
+msgid ""
+"When the SUID (set user ID) or SGID (set group ID) bits are set on an "
+"executable, it executes with the UID or GID of the owner of the executable "
+"rather than that of the person executing it. This means that, for example, "
+"all executables that have the SUID bit set and are owned by root are "
+"executed with the UID of root. A good example is the passwd command that "
+"allows ordinary users to update the password field in the /etc/shadow file "
+"which is owned by root."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5836
+#, no-c-format
+msgid ""
+"But SUID/SGID bits can be misused when the SUID/SGID executable has a "
+"security hole. Therefore, you should search the entire system for SUID/SGID "
+"executables and document it. For example, ensure that code developers do not "
+"set SUID/SGID bits on their programs if it is not an absolute requirement. "
+"Very often you can use workarounds like removing the executable bit for "
+"world/others. However, a better approach is to change the design of the "
+"software if possible."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5846
+#, no-c-format
+msgid ""
+"To search the entire system for SUID or SGID files, you can run the "
+"following command:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5855
+#, no-c-format
+msgid "&prompt.root;find / -path /proc -prune -o -type f -perm '/6000' -ls"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5857
+#, no-c-format
+msgid ""
+"The <option>-prune</option> option in this example is used to skip the /proc "
+"file system."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5863
+#, no-c-format
+msgid "World-Writable Files"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5865
+#, no-c-format
+msgid ""
+"World-writable files are a security risk since it allows anyone to modify "
+"them. Additionally, world-writable directories allow anyone to add or delete "
+"files. To locate world-writable files and directories, you can use the "
+"following command:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5872
+#, no-c-format
+msgid "&prompt.root;find / -path /proc -prune -o -perm -2 ! -type l -ls"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5874
+#, no-c-format
+msgid ""
+"The <option>! -type l</option> parameter skips all symbolic links since "
+"symbolic links are always world-writable. However, this is not a problem as "
+"long as the target of the link is not world-writable, which is checked by "
+"the above find command."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5881
+#, no-c-format
+msgid ""
+"World-writable directories with sticky bit&mdash;directory or file ownership "
+"where only the item's owner, the directory's owner, or &rootuser; can rename "
+"or delete files&mdash;such as the <filename>/tmp</filename> directory do not "
+"allow anyone except the owner of a file to delete or modify it in this "
+"directory. The sticky bit makes files stick to the user who created it and "
+"it prevents other users from deleting and renaming the files. Therefore, "
+"depending on the purpose of the directory world-writable directories with "
+"sticky are usually not an issue. An example is the <filename>/tmp</filename> "
+"directory:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5894
+#, no-c-format
+msgid ""
+"&prompt.user;ls -ld /tmp\n"
+"drwxrwxrwt 18 root root 16384 Dec 23 22:20 /tmp"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5896
+#, no-c-format
+msgid ""
+"The <literal>t</literal> mode, which denotes the sticky bit, allows files to "
+"be deleted and renamed only if the user is the owner of this file or the "
+"owner of the directory."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5902
+#, no-c-format
+msgid ""
+"&productname; supports file capabilities to allow more fine grained "
+"privileges to be given to programs rather than the full power of root:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5907
+#, no-c-format
+msgid ""
+"&prompt.root;getcap -v /usr/bin/ping\n"
+"      /usr/bin/ping = cap_new_raw+eip"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5909
+#, no-c-format
+msgid ""
+"The previous command only grants the CAP_NET_RAW capability to whoever "
+"executes ping. In case of vulnerabilities inside ping, an attacker can gain "
+"at most this capability in contrast to full root when granting the ping "
+"binary suid root rights. Whenever possible, file capabilities should be "
+"chosen in favor of the suid-to-root bit. But this only applies when the "
+"binary is suid to root, not to other users such as <literal>news</literal>, "
+"<literal>lp</literal> and alike."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5920
+#, no-c-format
+msgid "Orphaned or Unowned Files"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5922
+#, no-c-format
+msgid ""
+"Files not owned by any user or group might not necessarily be a security "
+"problem in itself. However, unowned files could pose a security problem in "
+"the future. For example, if a new user is created and the new users happens "
+"to get the same UID as the unowned files have, then this new user will "
+"automatically become the owner of these files."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5931
+#, no-c-format
+msgid ""
+"To locate files not owned by any user or group, use the following command:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5936
+#, no-c-format
+msgid "&prompt.root;find / -path /proc -prune -o -nouser -o -nogroup"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5940
+#, no-c-format
+msgid "Restricting Access to Removable Media"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5944
+#, no-c-format
+msgid ""
+"In some environments it is required to restrict access to removable media "
+"such as USB storage or optical devices. The tools coming with the "
+"<systemitem>udisks2</systemitem> package help with such a configuration."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5953
+#, no-c-format
+msgid ""
+"Create a rules file <filename>/etc/polkit-1/rules.d/01-restrict-removable-"
+"media.rules</filename> similar to the following:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5958
+#, no-c-format
+msgid ""
+"// Allow users in group 'mmedia_all' to mount/unmount all type of drives\n"
+"// Allow users in group 'mmedia_removable' to mount/umount USB storage "
+"drives\n"
+"// Allow users in group 'mmedia_optical' to mount/unmount Optical drives\n"
+"polkit.addRule(function(action, subject) {\n"
+"  if (/^org\\.freedesktop\\.udisks2\\.filesystem-.*mount.*$/.test(action.id) "
+"&amp;&amp;\n"
+"  action.lookup(\"drive.removable\") == \"true\") {\n"
+"    if (subject.isInGroup(\"mmedia_all\")) {\n"
+"      return polkit.Result.YES;\n"
+"    } else {\n"
+"      if (/.*optical.*/.test(action.lookup(\"drive.removable.media\"))) {\n"
+"        if (subject.isInGroup(\"mmedia_optical\"))\n"
+"        return polkit.Result.YES;\n"
+"      } else if (/.*floppy.*/.test(action.lookup(\"drive.removable.media"
+"\"))) {\n"
+"        return polkit.Result.NO;\n"
+"      } else if (action.lookup(\"drive.removable.bus\") == \"usb\") {\n"
+"        if (subject.isInGroup(\"mmedia_removable\"))\n"
+"        return polkit.Result.YES;\n"
+"      }\n"
+"      return polkit.Result.NO;\n"
+"    }\n"
+"  }\n"
+"});"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:5961
+#, no-c-format
+msgid "Naming of the Rules File"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5962
+#, no-c-format
+msgid ""
+"Rules files are processed in alphabetical order. Functions are called in the "
+"order they were added until one of the functions returns a value. Hence, to "
+"add an authorization rule that is processed before other rules, put it in a "
+"file in /etc/polkit-1/rules.d with a name that sorts before other rules "
+"files, for example <filename>01-restrict-removable-media.rules</filename>. "
+"Each function should return a value from <literal>polkit.Result</literal>."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5971
+#, no-c-format
+msgid ""
+"The name of a rules file must start with a digit, otherwise it will be "
+"ignored."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5979
+#, no-c-format
+msgid "Restart <systemitem>udisks2</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5982
+#, no-c-format
+msgid "&prompt.root;systemctl restart udisks2"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5985
+#, no-c-format
+msgid "Restart <systemitem>polkit</systemitem>"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:5988
+#, no-c-format
+msgid "&prompt.root;systemctl restart polkit"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:5991
+#, no-c-format
+msgid ""
+"In &yast;, click <menuchoice><guimenu>Security and Users</"
+"guimenu><guimenu>User and Group Management</guimenu><guimenu>Groups</"
+"guimenu></menuchoice> to create the three groups <literal>mmedia_all</"
+"literal>, <literal>mmedia_optical</literal>, and <literal>mmedia_removable</"
+"literal>. Then add the users to these groups as wanted."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6005
+#, no-c-format
+msgid "Various Account Checks"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6010
+#, no-c-format
+msgid "Unlocked Accounts"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6011
+#, no-c-format
+msgid ""
+"It is important that all system and vendor accounts that are not used for "
+"logins are locked. To get a list of unlocked accounts on your system, you "
+"can check for accounts that do <emphasis>not</emphasis> have an encrypted "
+"password string starting with <literal>!</literal> or <literal>*</literal> "
+"in the <filename>/etc/shadow</filename> file. If you lock an account using "
+"<command>passwd</command> <option>-l</option>, it will put a <literal>!!</"
+"literal> in front of the encrypted password, effectively disabling the "
+"password. If you lock an account using <command>usermod</command> <option>-"
+"L</option>, it will put a <literal>!</literal> in front of the encrypted "
+"password. Many system and shared accounts are usually locked by default by "
+"having a <literal>*</literal> or <literal>!!</literal> in the password field "
+"which renders the encrypted password into an invalid string. Hence, to get a "
+"list of all unlocked (encryptable) accounts, run (<command>egrep</command> "
+"is used to allow use of regular-expressions):"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6029
+#, no-c-format
+msgid "&prompt.root;egrep -v ':\\*|:\\!' /etc/shadow | awk -F: '{print $1}'"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6030
+#, no-c-format
+msgid ""
+"Also make sure all accounts have a <literal>x</literal> in the password "
+"field in <filename>/etc/passwd</filename>. The following command lists all "
+"accounts that do not have a <literal>x</literal> in the password field:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6036
+#, no-c-format
+msgid "&prompt.root;grep -v ':x:' /etc/passwd"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6037
+#, no-c-format
+msgid ""
+"An <literal>x</literal> in the password fields means that the password has "
+"been shadowed, for example the encrypted password needs to be looked up in "
+"the <filename>/etc/shadow</filename> file. If the password field in "
+"<filename>/etc/passwd</filename> is empty, then the system will not look up "
+"the shadow file and it will not prompt the user for a password at the login "
+"prompt."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6048
+#, no-c-format
+msgid "Unused Accounts"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6049
+#, no-c-format
+msgid ""
+"All system or vendor accounts that are not being used by users, "
+"applications, by the system or by daemons should be removed from the system. "
+"You can use the following command to find out if there are any files owned "
+"by a specific account:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6055
+#, no-c-format
+msgid ""
+"&prompt.root;find / -path /proc -prune -o -user <replaceable>account</"
+"replaceable> -ls"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6056
+#, no-c-format
+msgid ""
+"The <option>-prune</option> option in this example is used to skip the /proc "
+"file system. If you are sure that an account can be deleted, you can remove "
+"the account using the following command:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6061
+#, no-c-format
+msgid "&prompt.root;userdel -r <replaceable>account</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6062
+#, no-c-format
+msgid ""
+"Without the <option>-r</option> option <command>userdel</command> will not "
+"delete the user's home directory and mail spool (<filename>/var/spool/mail/"
+"<replaceable>user</replaceable></filename>). Note that many system accounts "
+"have no home directory."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6102
+#, no-c-format
+msgid "Enabling Password Aging"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6104
+#, no-c-format
+msgid ""
+"Password expirations are a general best practice&mdash;but might need to be "
+"excluded for some system and shared accounts (for example Oracle, etc.). "
+"Expiring password on those accounts could lead to system outages if the "
+"application account expires."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6111
+#, no-c-format
+msgid ""
+"Typically a corporate policy should be developed that dictates rules/"
+"procedures regarding password changes for system and shared accounts. "
+"However, normal user account passwords should expire automatically. The "
+"following example shows how password expiration can be set up for individual "
+"user accounts."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6119
+#, no-c-format
+msgid ""
+"The following files and parameters in the table can be used when a new "
+"account is created with the <command>useradd</command> command. Settings "
+"such as these are stored for each user account in the <filename>/etc/shadow</"
+"filename> file. If using the &yast; tool (<guimenu>User and Group "
+"Management</guimenu>) to add users, the settings are available on a per-user "
+"basis. Here are the various settings&mdash;some of which can also be system-"
+"wide (for example modification of <filename>/etc/login.defs</filename> and "
+"<filename>/etc/default/useradd</filename>):"
+msgstr ""
+
+#. Tag: filename
+#: hardening.xml:6137 hardening.xml:6154 hardening.xml:6172
+#, no-c-format
+msgid "/etc/login.defs"
+msgstr ""
+
+#. Tag: literal
+#: hardening.xml:6142
+#, no-c-format
+msgid "PASS_MAX_DAYS"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6146
+#, no-c-format
+msgid "Maximum number of days a password is valid."
+msgstr ""
+
+#. Tag: literal
+#: hardening.xml:6159
+#, no-c-format
+msgid "PASS_MIN_DAYS"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6163
+#, no-c-format
+msgid ""
+"Minimum number of days before a user can change the password since the last "
+"change."
+msgstr ""
+
+#. Tag: literal
+#: hardening.xml:6177
+#, no-c-format
+msgid "PASS_WARN_AGE"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6181
+#, no-c-format
+msgid "Number of days when the password change reminder starts."
+msgstr ""
+
+#. Tag: filename
+#: hardening.xml:6189 hardening.xml:6206
+#, no-c-format
+msgid "/etc/default/useradd"
+msgstr ""
+
+#. Tag: literal
+#: hardening.xml:6194
+#, no-c-format
+msgid "INACTIVE"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6198
+#, no-c-format
+msgid "Number of days after password expiration that account is disabled."
+msgstr ""
+
+#. Tag: literal
+#: hardening.xml:6211
+#, no-c-format
+msgid "EXPIRE"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6215
+#, no-c-format
+msgid "Account expiration date in the format YYYY-MM-DD."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6225
+#, no-c-format
+msgid "Users created prior to these modifications will not be affected."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6230
+#, no-c-format
+msgid ""
+"Ensure that the above parameters are changed in the <filename>/etc/login."
+"defs</filename> and <filename>/etc/default/useradd</filename> files. Review "
+"of the <filename>/etc/shadow</filename> file will show how these settings "
+"get stored after adding a user."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6238
+#, no-c-format
+msgid "To create a new user account, execute the following command:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6242
+#, no-c-format
+msgid ""
+"&prompt.root;useradd -c \"<replaceable>Test User</replaceable>\" -g "
+"<replaceable>users</replaceable> <replaceable>test</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6244
+#, no-c-format
+msgid ""
+"The <option>-g</option> option specifies the primary group for this account:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6249
+#, no-c-format
+msgid ""
+"&prompt.root;id <replaceable>test</replaceable>\n"
+"uid=509(test) gid=100(users) groups=100(users)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6251
+#, no-c-format
+msgid ""
+"The settings in <filename>/etc/login.defs</filename> and <filename>/etc/"
+"default/useradd</filename> are recorded for the test user in the <filename>/"
+"etc/shadow</filename> file as follows:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6257
+#, no-c-format
+msgid ""
+"&prompt.root;grep <replaceable>test</replaceable> /etc/shadow\n"
+"test:!!:12742:7:60:7:14::"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6259
+#, no-c-format
+msgid ""
+"Password aging can be modified at any time by use of the <command>chage</"
+"command> command. To disable password aging for system and shared accounts, "
+"you can run the following <command>chage</command> command:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6265
+#, no-c-format
+msgid "&prompt.root;chage -M -1 <replaceable>system_account_name</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6267
+#, no-c-format
+msgid "To get password expiration information:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6271
+#, no-c-format
+msgid "&prompt.root;chage -l <replaceable>system_account_name</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6273
+#, no-c-format
+msgid "For example:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6277
+#, no-c-format
+msgid ""
+"&prompt.root;chage -l <replaceable>test</replaceable>\n"
+"Minimum: 7\n"
+"Maximum: 60\n"
+"Warning: 7\n"
+"Inactive: 14\n"
+"Last Change: Jan 11, 2015\n"
+"Password Expires: Mar 12, 2015\n"
+"Password Inactive: Mar 26, 2015\n"
+"Account Expires: Never"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6280
+#, no-c-format
+msgid "Stronger Password Enforcement"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6282
+#, no-c-format
+msgid ""
+"On an audited system it is important to restrict people from using simple "
+"passwords that can be cracked too easily. Writing down complex passwords is "
+"all right as long as they are stored securely. Some will argue that strong "
+"passwords protect you against dictionary attacks and those type of attacks "
+"can be defeated by locking accounts after a few failed attempts. However, "
+"this is not always an option. If set up like this, locking system accounts "
+"could bring down your applications and systems which would be nothing short "
+"of a denial of service attack – another issue."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6294
+#, no-c-format
+msgid ""
+"At any rate, it is important to practice effective password management "
+"safety. Most companies require that passwords have at the very least a "
+"number, one lowercase letter, and one uppercase letter. Policies vary, but "
+"maintaining a balance between password strength/complexity and management is "
+"sometimes difficult."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6306
+#, no-c-format
+msgid "Preventing Accidental Denial of Service"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6308
+#, no-c-format
+msgid ""
+"Linux allows you to set limits on the amount of system resources that users "
+"and groups can consume. This is also very handy if bugs in programs cause "
+"them to use up too much resources (for example memory leaks), slow down the "
+"machine, or even render the system unusable. Incorrect settings can allow "
+"programs to use too many resources which may make the server unresponsive to "
+"new connections or even local logins (for example if a program uses up all "
+"available file handles on the host). This can also be a security concern if "
+"someone is allowed to consume all system resources and therefore cause a "
+"denial of service attack – either unplanned or worse, planned. Setting "
+"resource limits for users and groups may be an effective way to protect "
+"systems, depending on the environment."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6324
+#, no-c-format
+msgid "Example for Restricting System Resources"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6325
+#, no-c-format
+msgid ""
+"The following example demonstrates the practical usage of setting or "
+"restricting system resource consumption for an Oracle user account. For a "
+"list of system resource settings, see <filename>/etc/security/limits.conf</"
+"filename> or <command>man limits.conf</command>."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6332
+#, no-c-format
+msgid ""
+"Most shells like Bash provide control over various resources (for example "
+"the maximum allowable number of open file descriptors or the maximum number "
+"of processes) that are available on a per/user basis. To examine all current "
+"limits in the shell execute:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6338
+#, no-c-format
+msgid "&prompt.root;ulimit -a"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6339
+#, no-c-format
+msgid ""
+"For more information on <command>ulimit</command> for the Bash shell, "
+"examine the Bash man pages."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6344
+#, no-c-format
+msgid "Setting Limits for SSH Sessions"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6345
+#, no-c-format
+msgid ""
+"Setting \"hard\" and \"soft\" limits might not behave as expected when using "
+"an SSH session. To see valid behavior it may be necessary to login as root "
+"and then su to the id with limits (for example, <literal>oracle</literal> in "
+"these examples). Resource limits should also work assuming the application "
+"has been started automatically during the boot process. It may be necessary "
+"to set <option>UsePrivilegeSeparation</option> in <filename>/etc/ssh/"
+"sshd_config</filename> to \"no\" and restart the SSH daemon "
+"(<command>systemctl restart sshd</command>) if it seems that the changes to "
+"resource limits are not working (via SSH). However this is not generally "
+"recommended – as it weakens a systems security."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6361
+#, no-c-format
+msgid "Disabling Password Logins via <command>ssh</command>"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6362
+#, no-c-format
+msgid ""
+"You can add some extra security to your server by disabling password "
+"authentication for SSH. Remember that you need to have SSH keys configured, "
+"otherwise you cannot access the server. To disable password login, add the "
+"following lines to <filename>/etc/ssh/sshd_config</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6369
+#, no-c-format
+msgid ""
+"UseLogin no\n"
+"UsePAM no\n"
+"PasswordAuthentication no\n"
+"PubkeyAuthentication yes"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6371
+#, no-c-format
+msgid ""
+"In this example, a change to the number of file handles or open files that "
+"the user <literal>oracle</literal> can use is made by editing <filename>/etc/"
+"security/limits.conf</filename> as &rootuser; making the following changes:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6377
+#, no-c-format
+msgid ""
+"oracle           soft    nofile          4096\n"
+"oracle           hard    nofile          63536"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6378
+#, no-c-format
+msgid ""
+"The soft limit in the first line defines the limit on the number of file "
+"handles (open files) that the <systemitem class=\"username\">oracle</"
+"systemitem> user will have after login. If the user sees error messages "
+"about running out of file handles, then the user can increase the number of "
+"file handles like in this example up to the hard limit (in this example "
+"63536) by executing:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6387
+#, no-c-format
+msgid "&prompt.root;ulimit -n 63536"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6388
+#, no-c-format
+msgid "You can set the soft and hard limits higher if necessary."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6392
+#, no-c-format
+msgid ""
+"It is important to be judicious with the usage of ulimits. Allowing a \"hard"
+"\" limit for <quote>nofile</quote> for a user that equals the kernel limit "
+"(<filename>/proc/sys/fs/file-max</filename>) is very bad! If the user "
+"consumes all the available file handles, the system cannot initiate new "
+"logins as accessing (opening) PAM modules which are required for performing "
+"a login will not be possible."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6402
+#, no-c-format
+msgid ""
+"You also need to ensure that <literal>pam_limits</literal> is either "
+"configured globally in <filename>/etc/pam.d/common-auth</filename>, or for "
+"individual services like SSH, su, login, and telnet in:"
+msgstr ""
+
+#. Tag: member
+#: hardening.xml:6408
+#, no-c-format
+msgid "<filename>/etc/pam.d/sshd</filename> (for SSH)"
+msgstr ""
+
+#. Tag: member
+#: hardening.xml:6409
+#, no-c-format
+msgid "<filename>/etc/pam.d/su</filename> (for su)"
+msgstr ""
+
+#. Tag: member
+#: hardening.xml:6410
+#, no-c-format
+msgid "<filename>/etc/pam.d/login</filename> (local logins and telnet)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6412
+#, no-c-format
+msgid ""
+"If you do not want to enable it for all logins, there is a specific PAM "
+"module that will read the <filename>/etc/security/limits.conf</filename> "
+"file. Entries in pam configuration directives will have entries like:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6418
+#, no-c-format
+msgid ""
+"session     required      /lib/security/pam_limits.so\n"
+"session     required      /lib/security/pam_unix.so"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6419
+#, no-c-format
+msgid ""
+"It is important to note that changes are not immediate and require a new "
+"login session:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6423
+#, no-c-format
+msgid ""
+"&prompt.root;su – oracle\n"
+"&prompt.user;ulimit -n\n"
+"4096"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6424
+#, no-c-format
+msgid ""
+"Note that these examples are specific to the Bash shell - <command>ulimit</"
+"command> options are different for other shells. The default limit for the "
+"user <literal>oracle</literal> is <literal>4096</literal>. To increase the "
+"number of file handles the user <literal>oracle</literal> can use to "
+"<literal>63536</literal>, do:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6432
+#, no-c-format
+msgid ""
+"&prompt.root;su – oracle\n"
+"&prompt.user;ulimit -n\n"
+"4096\n"
+"&prompt.user;ulimit -n 63536\n"
+"&prompt.user;ulimit -n\n"
+"63536"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6433
+#, no-c-format
+msgid ""
+"Making this permanent requires the addition of the setting, <literal>ulimit -"
+"n 63536</literal>, (again, for Bash) to the users profile (<filename>~/."
+"bashrc</filename> or <filename>~/.profile</filename> file) which is the user "
+"start-up file for the Bash shell on &productname; (to verify your shell run: "
+"echo <envar>$SHELL</envar>). To do this you could simply type (or copy/paste "
+"– if you are reading this on the system) the following commands for the Bash "
+"shell of the user <literal>oracle</literal>:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6443
+#, no-c-format
+msgid ""
+"&prompt.root;su - oracle\n"
+"&prompt.user;cat &gt;&gt; ~oracle/.bash_profile &lt;&lt; EOF\n"
+"ulimit -n 63536\n"
+"EOF"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6447
+#, no-c-format
+msgid "Displaying Login Banners"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6449
+#, no-c-format
+msgid ""
+"It is often necessary to place a banner on login screens on all servers for "
+"legal/audit policy reasons and to deter intruders, etc."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6454
+#, no-c-format
+msgid ""
+"If you want to print a legal banner after a user logs in using SSH, local "
+"console, etc., you can leverage the <filename>/etc/motd</filename> (motd = "
+"message of the day) file. The file exists on &suse;, however it is empty. "
+"Simply add content to the file that is applicable/required by the "
+"organization."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6463
+#, no-c-format
+msgid "Banner Length"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6464
+#, no-c-format
+msgid ""
+"Try to keep the content to a single page (or less), as it will scroll the "
+"screen if it does not fit."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6470
+#, no-c-format
+msgid ""
+"For SSH you can edit the <quote>Banner</quote> parameter in the <filename>/"
+"etc/ssh/sshd_config</filename> file which will then appropriately display "
+"the banner text before the login prompt. For local console logins you can "
+"edit the <filename>/etc/issue</filename> file which will display the banner "
+"before the login prompt. For GDM, you could make the following changes to "
+"require a user to acknowledge the legal banner by selecting <guimenu>Yes</"
+"guimenu> or <guimenu>No</guimenu>. Edit the <filename>/etc/gdm/PreSession/"
+"Default</filename> file and add the following lines at the beginning of the "
+"script:"
+msgstr ""
+
+#. Tag: screen
+#: hardening.xml:6483
+#, no-c-format
+msgid ""
+"if ! gdialog --yesno '\\n<replaceable>This system is classified...</"
+"replaceable>\\n' 10 10; then\n"
+"    sleep 10\n"
+"    exit 1;\n"
+"fi"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6485
+#, no-c-format
+msgid ""
+"The <replaceable>This system is classified...</replaceable> test should be "
+"replaced with the valid text. It is important to note that this dialog will "
+"not prevent a login from progressing."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6492
+#, no-c-format
+msgid "Miscellaneous"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6497
+#, no-c-format
+msgid "Host-Based Linux Monitoring and Intrusion Detection"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6498
+#, no-c-format
+msgid ""
+"Before you place a host into production or even on a network, consider the "
+"use of a system integrity checker, like <command>seccheck</command> (already "
+"discussed in <xref linkend=\"sec.sec_prot.general.seccheck\"/>), so in case "
+"of unauthorized changes, notifications will be issued. Also consider the use "
+"of an intrusion detection environment, like AIDE, the Advanced Intrusion "
+"Detection Environment."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6507
+#, no-c-format
+msgid ""
+"AIDE is a GPL licensed and open source intrusion detection system. It could "
+"be considered a system fingerprinting mechanism. AIDE works by creating a "
+"database containing information about the files on your system. The database "
+"is created from rules laid out in the configuration file aide.conf. When "
+"AIDE is run, this database is referenced to check for changes (or created "
+"for the first time). Assuming a comparison check is being run, any changes "
+"not permitted by the configuration file are reported."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6517
+#, no-c-format
+msgid ""
+"By leveraging AIDE&mdash;storing a copy of the host's database in a secure "
+"location&mdash;and comparing it (on a scheduled basis or as part of a "
+"forensic effort), system integrity/insurance can be a matter of heuristics "
+"and procedure. If an intruder compromises your system, the comparison effort "
+"will enable an administrator or security officer to know what has changed on "
+"the host. The initial database should be created as a final step&mdash;"
+"<emphasis>before</emphasis> a system gets deployed into production."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6527
+#, no-c-format
+msgid ""
+"It is outside the scope of this article to cover Linux Monitoring and "
+"detailed Intrusion Detection systems (IDS) or solutions, however there is a "
+"plethora of information about configuring AIDE or other solutions and many "
+"informative articles on the Web."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6536
+#, no-c-format
+msgid "Connect Accounting Utilities"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6537
+#, no-c-format
+msgid "Here is a list of commands you can use to get data about user logins:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6542
+#, no-c-format
+msgid "Lists currently logged in users."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6548
+#, no-c-format
+msgid "Shows who is logged in and what they are doing."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6554
+#, no-c-format
+msgid ""
+"Shows a list of last logged in users, including login time, logout time, "
+"login IP address, etc."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6561
+#, no-c-format
+msgid ""
+"Same as <command>last</command>, except that by default it shows <filename>/"
+"var/log/btmp</filename>, which contains all the bad login attempts."
+msgstr ""
+
+#. Tag: remark
+#: hardening.xml:6570
+#, no-c-format
+msgid ""
+"jsegitz 2014-08-14: not available anymore, see above tbazant 2014-09-01: i "
+"have it in sle 12 rc2"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6571
+#, no-c-format
+msgid ""
+"This command reports data maintained in <filename>/var/log/lastlog</"
+"filename>, which is a record of the last time a user logged in."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6579
+#, no-c-format
+msgid ""
+"Available after installing the <systemitem>acct</systemitem> package. Prints "
+"the connect time in hours on a per-user basis or daily basis, etc. This "
+"command reads <filename>/var/log/wtmp</filename>."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6587
+#, no-c-format
+msgid ""
+"Converts raw data from /var/run/utmp or <filename>/var/log/wtmp</filename> "
+"into ASCII-parsable format."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6592
+#, no-c-format
+msgid ""
+"Also check the <filename>/var/log/messages</filename> file, or the output of "
+"<command>journalctl</command> if no logging facility is running. See <xref "
+"linkend=\"cha.journalctl\"/> for more information on the &systemd; journal."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6601
+#, no-c-format
+msgid "Other"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6602
+#, no-c-format
+msgid ""
+"Finally, the following items are relevant to the system security as well, "
+"and misconfiguration can cause many problems – and should be reviewed:"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6609
+#, no-c-format
+msgid ""
+"Resolver (<filename>/etc/hosts</filename>, <filename>/etc/resolv.conf</"
+"filename>, <filename>/etc/nsswitch.conf</filename>)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6616
+#, no-c-format
+msgid "NTP configuration (<filename>/etc/ntp.conf</filename>)."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6627
+#, no-c-format
+msgid "Documentation Updates"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6629
+#, no-c-format
+msgid ""
+"This chapter lists content changes for this document since the release of "
+"&productnamereg; 11 SP3."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6633
+#, no-c-format
+msgid "This manual was updated on the following dates:"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6666
+#, no-c-format
+msgid "November 2016"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6671
+#, no-c-format
+msgid "Referenced UEFI"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6677
+#, no-c-format
+msgid "More information about wiping files, wear leveling devices"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6683
+#, no-c-format
+msgid ""
+"Address Space Layout Randomization and No Execute bit do not prevent buffer "
+"overflows but buffer overflow attacks."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:6688
+#, no-c-format
+msgid "All sections"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6690
+#, no-c-format
+msgid "Unified input line style."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6696
+#, no-c-format
+msgid "Replaced depricated ~/.ssh/authorized_keys2 and rsa-dss"
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6703
+#, no-c-format
+msgid "October 2016 (Initial Release of &productname; 12 SP2)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6708
+#, no-c-format
+msgid ""
+"Fix configuration description (<link xlink:href=\"https://bugzilla.suse.com/"
+"show_bug.cgi?id=977984\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6716
+#, no-c-format
+msgid "Name of rules files must start with a digit (Doc comment #29432)."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:6722 hardening.xml:6755 hardening.xml:6775 hardening.xml:6853
+#, no-c-format
+msgid "Bugfixes"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6724
+#, no-c-format
+msgid ""
+"PAM related fixes (<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
+"id=978001\"></link>, <link xlink:href=\"https://bugzilla.suse.com/show_bug."
+"cgi?id=977984\"></link>, <link xlink:href=\"https://bugzilla.suse.com/"
+"show_bug.cgi?id=977988\"></link>)."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6732
+#, no-c-format
+msgid "December 2015 (Initial Release of &productname; 12 SP1)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6741
+#, no-c-format
+msgid ""
+"Added <xref linkend=\"sec.sec_prot.general.patching.suma\"/> (Doc comment "
+"#26206)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6747
+#, no-c-format
+msgid "Added <xref linkend=\"sec.sec_prot.general.devmem\"/> (Fate #315172)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6759
+#, no-c-format
+msgid ""
+"Access to Removable Media Cannot be Restricted as Described (<link xlink:"
+"href=\"https://bugzilla.suse.com/show_bug.cgi?id=929918\"></link>)."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6771
+#, no-c-format
+msgid "February 2015 (Documentation Maintenance Update)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6779
+#, no-c-format
+msgid ""
+"SLES hardening documentation wrong/incomplete&mdash;password strength (<link "
+"xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?id=907754\"></link>)."
+msgstr ""
+
+#. Tag: title
+#: hardening.xml:6790
+#, no-c-format
+msgid "October 2014 (Initial Release of &productname; 12)"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6802
+#, no-c-format
+msgid ""
+"Added <xref linkend=\"sec.sec_prot.general.retiring.scrub\"/> (Fate #315530)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6818
+#, no-c-format
+msgid "Added <xref linkend=\"sec.sec_prot.general.dmesg\"/> (Fate #315175)."
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6833
+#, no-c-format
+msgid ""
+"Added <xref linkend=\"sec.sec_prot.general.seccheck.config\"/> (Fate "
+"#312303)."
+msgstr ""
+
+#. Tag: term
+#: hardening.xml:6842
+#, no-c-format
+msgid "Obsolete Content"
+msgstr ""
+
+#. Tag: para
+#: hardening.xml:6859
+#, no-c-format
+msgid "Removed all content about or references to ZENworks Linux Management."
+msgstr ""

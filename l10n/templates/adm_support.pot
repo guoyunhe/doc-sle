@@ -1,0 +1,2439 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: adm_support.xml:31
+#, no-c-format
+msgid "Gathering System Information for Support"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:34
+#, no-c-format
+msgid ""
+"For a quick overview of all relevant system information of a machine, "
+"&productname; offers the <systemitem class=\"systemname\">hostinfo</"
+"systemitem> package. It also helps system administrators to check for "
+"tainted Kernels (that are not supported) or any third-party packages "
+"installed on a machine."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:42
+#, no-c-format
+msgid ""
+"In case of problems, a detailed system report may be created with either the "
+"<command>supportconfig</command> command line tool or the &yast; "
+"<guimenu>Support</guimenu> module. Both will collect information about the "
+"system such as: current Kernel version, hardware, installed packages, "
+"partition setup, and much more. The result is a TAR archive of files. After "
+"opening a Service Request (SR), you can upload the TAR archive to Global "
+"Technical Support. It will help to locate the issue you reported and to "
+"assist you in solving the problem."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:53
+#, no-c-format
+msgid ""
+"Additionally, you can analyze the <command>supportconfig</command> output "
+"for known issues to help resolve problems faster. For this purpose, "
+"&productname; provides both an appliance and a command line tool for "
+"<literal>Supportconfig Analysis</literal> (SCA)."
+msgstr ""
+
+#. Tag: dm:docmanager
+#: adm_support.xml:60
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: adm_support.xml:66
+#, no-c-format
+msgid "support"
+msgstr ""
+
+#. Tag: primary
+#: adm_support.xml:67
+#, no-c-format
+msgid "system information"
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:69
+#, no-c-format
+msgid "Displaying Current System Information"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:73
+#, no-c-format
+msgid ""
+"For a quick and easy overview of all relevant system information when "
+"logging in to a server, use the package <systemitem class=\"systemname"
+"\">hostinfo</systemitem>. After it has been installed on a machine, the "
+"console displays the following information to any &rootuser; user that logs "
+"in to this machine:"
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:82
+#, no-c-format
+msgid "Output of <command>hostinfo</command> When Logging In as &rootuser;"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:83
+#, no-c-format
+msgid ""
+"Hostname:                 &exampleclient;\n"
+"Current As Of:            Wed 12 Mar 2014 03:57:05 PM CET\n"
+"Distribution:             SUSE Linux Enterprise Server 12\n"
+" -Service Pack:           0\n"
+"Architecture:             x86_64\n"
+"Kernel Version:           3.12.12-3-default\n"
+" -Installed:              Mon 10 Mar 2014 03:15:05 PM CET\n"
+" -Status:                 Not Tainted\n"
+"Last Updated Package:     Wed 12 Mar 2014 03:56:43 PM CET\n"
+" -Patches Needed:         0\n"
+" -Security:               0\n"
+" -3rd Party Packages:     0\n"
+"IPv4 Address:             ens3 &exampledomain1ip;.1\n"
+"Total/Free/+Cache Memory: 983/95/383 MB (38% Free)\n"
+"Hard Disk:                /dev/sda 10 GB"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:86
+#, no-c-format
+msgid ""
+"In case the output shows a <literal>tainted</literal> Kernel status, see "
+"<xref linkend=\"sec.admsupport.kernel\"/> for more details."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:92
+#, no-c-format
+msgid "Collecting System Information with Supportconfig"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:94
+#, no-c-format
+msgid ""
+"To create a TAR archive with detailed system information that you can hand "
+"over to Global Technical Support, use either the <command>supportconfig</"
+"command> command line tool directly or the &yast; <guimenu>Support</guimenu> "
+"module. The command line tool is provided by the package "
+"<systemitem>supportutils</systemitem> which is installed by default. The "
+"&yast; <guimenu>Support</guimenu> module is also based on the command line "
+"tool."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:105
+#, no-c-format
+msgid "Creating a Service Request Number"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:106
+#, no-c-format
+msgid ""
+"Supportconfig archives can be generated at any time. However, for handing "
+"over the supportconfig data to Global Technical Support, you need to "
+"generate a service request number first. You will need it to upload the "
+"archive to support."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:112
+#, no-c-format
+msgid ""
+"To create a service request, go to <link xlink:href=\"http://www.novell.com/"
+"center/eservice\"></link> and follow the instructions on the screen. Write "
+"down your 11-digit service request number."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:119
+#, no-c-format
+msgid "Privacy Statement"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:120
+#, no-c-format
+msgid ""
+"&suse; and &novell; treat system reports as confidential data. For details "
+"about our privacy commitment, see <link xlink:href=\"http://www.novell.com/"
+"company/legal/privacy/\"></link>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:129
+#, no-c-format
+msgid "Upload Targets"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:130
+#, no-c-format
+msgid ""
+"After having created a service request number, you can upload your "
+"supportconfig archives to Global Technical Support as described in <xref "
+"linkend=\"pro.admsupport.submit.yast\"/> or <xref linkend=\"pro.admsupport."
+"submit.cli\"/>. Use one of the following upload targets:"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:165
+#, no-c-format
+msgid ""
+"US customers: <link xlink:href=\"ftp://ftp.novell.com/incoming\"></link>"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:170
+#, no-c-format
+msgid ""
+"EMEA, Europe, the Middle East, and Africa: <link xlink:href=\"ftp://support-"
+"ftp.suse.com/in\"></link>"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:176
+#, no-c-format
+msgid ""
+"Alternatively, you can manually attach the TAR archive to your service "
+"request using the service request URL: <link xlink:href=\"http://www.novell."
+"com/center/eservice\"></link>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:184
+#, no-c-format
+msgid "Creating a Supportconfig Archive with &yast;"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:185
+#, no-c-format
+msgid "To use &yast; to gather your system information, proceed as follows:"
+msgstr ""
+
+#. Tag: remark
+#: adm_support.xml:187
+#, no-c-format
+msgid ""
+"2008-11-20 toms: YaST asks the user to open a URL as root(!). This happens "
+"when the users clicks on \"Open\" (Open Support Center/ This will start a "
+"browser with Support Center Portal). I do not think we should describe this "
+"and only *use* the above URL as a normal user for security reasons."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:196 adm_support.xml:442
+#, no-c-format
+msgid "Start &yast; and open the <guimenu>Support</guimenu> module."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:211
+#, no-c-format
+msgid "Click <guimenu>Create report tarball</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:216
+#, no-c-format
+msgid ""
+"In the next window, select one of the supportconfig options from the radio "
+"button list. <guimenu>Use Custom (Expert) Settings</guimenu> is preselected "
+"by default. If you want to test the report function first, use <guimenu>Only "
+"gather a minimum amount of info</guimenu>. For some background information "
+"on the other options, refer to the <command>supportconfig</command> man page."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:224 adm_support.xml:250 adm_support.xml:479
+#, no-c-format
+msgid "Proceed with <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:229
+#, no-c-format
+msgid ""
+"Enter your contact information. It will be written to a file called "
+"<filename>basic-environment.txt</filename> and included in the archive to be "
+"created."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:236
+#, no-c-format
+msgid ""
+"If you want to submit the archive to Global Technical Support at the end of "
+"the information collection process, <guimenu>Upload Information</guimenu> is "
+"required. &yast; automatically proposes an upload server. If you want to "
+"modify it, refer to <xref linkend=\"sec.admsupport.supportconfig.upload\"/> "
+"for details of which upload servers are available."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:244
+#, no-c-format
+msgid ""
+"If you want to submit the archive later on, you can leave the "
+"<guimenu>Upload Information</guimenu> empty for now."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:255
+#, no-c-format
+msgid "The information gathering begins."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:268
+#, no-c-format
+msgid "After the process is finished, continue with <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:273
+#, no-c-format
+msgid ""
+"Review the data collection: Select the <guimenu>File Name</guimenu> of a log "
+"file to view its contents in &yast;. To remove any files you want excluded "
+"from the TAR archive before submitting it to support, use <guimenu>Remove "
+"from Data</guimenu>. Continue with <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:282
+#, no-c-format
+msgid ""
+"Save the TAR archive. If you started the &yast; module as &rootuser; user, "
+"by default &yast; proposes to save the archive to <filename>/var/log</"
+"filename> (otherwise, to your home directory). The file name format is "
+"<filename>nts_<replaceable>HOST</replaceable>_<replaceable>DATE</"
+"replaceable>_<replaceable>TIME</replaceable>.tbz</filename>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:291
+#, no-c-format
+msgid ""
+"If you want to upload the archive to support directly, make sure "
+"<guimenu>Upload log files tarball to URL</guimenu> is activated. The "
+"<guimenu>Upload Target</guimenu> shown here is the one that &yast; proposes "
+"in <xref linkend=\"step.supportconfig.upload.target\"/>. If you want to "
+"modify the upload target, find detailed information of which upload servers "
+"are available in <xref linkend=\"sec.admsupport.supportconfig.upload\"/>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:302
+#, no-c-format
+msgid ""
+"If you want to skip the upload, deactivate <guimenu>Upload log files tarball "
+"to URL</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:308
+#, no-c-format
+msgid "Confirm your changes to close the &yast; module."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:316
+#, no-c-format
+msgid "Creating a Supportconfig Archive from Command Line"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:317
+#, no-c-format
+msgid ""
+"The following procedure shows how to create a supportconfig archive, but "
+"without submitting it to support directly. For uploading it, you need to run "
+"the command with certain options as described in <xref linkend=\"pro."
+"admsupport.submit.cli\"/>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:325
+#, no-c-format
+msgid ""
+"Open a shell and become <systemitem class=\"username\">root</systemitem>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:330
+#, no-c-format
+msgid ""
+"Run <command>supportconfig</command> without any options. This gathers the "
+"default system information."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:336
+#, no-c-format
+msgid "Wait for the tool to complete the operation."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:341
+#, no-c-format
+msgid ""
+"The default archive location is <filename>/var/log</filename>, with the file "
+"name format being <filename>nts_<replaceable>HOST</"
+"replaceable>_<replaceable>DATE</replaceable>_<replaceable>TIME</replaceable>."
+"tbz</filename>"
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:351
+#, no-c-format
+msgid "Common Supportconfig Options"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:352
+#, no-c-format
+msgid ""
+"The <command>supportconfig</command> utility is usually called without any "
+"options. Display a list of all options with <command>supportconfig</command> "
+"<option>-h</option> or refer to the man page. The following list gives a "
+"brief overview of some common use cases:"
+msgstr ""
+
+#. Tag: term
+#: adm_support.xml:360
+#, no-c-format
+msgid "Reducing the Size of the Information Being Gathered"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:362
+#, no-c-format
+msgid "Use the minimal option (<option>-m</option>):"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:365
+#, no-c-format
+msgid "supportconfig -m"
+msgstr ""
+
+#. Tag: term
+#: adm_support.xml:369
+#, no-c-format
+msgid "Limiting the Information to a Specific Topic"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:371
+#, no-c-format
+msgid ""
+"If you have already localized a problem with the default "
+"<command>supportconfig</command> output and have found that it relates to a "
+"specific area or feature set only, you should limit the collected "
+"information to the specific area for the next <command>supportconfig</"
+"command> run. For example, if you detected problems with LVM and want to "
+"test a recent change that you did to the LVM configuration, it makes sense "
+"to gather the minimum supportconfig information around LVM only:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:381
+#, no-c-format
+msgid "supportconfig -i LVM"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:382
+#, no-c-format
+msgid ""
+"For a complete list of feature keywords that you can use for limiting the "
+"collected information to a specific area, run"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:386
+#, no-c-format
+msgid "supportconfig -F"
+msgstr ""
+
+#. Tag: term
+#: adm_support.xml:390
+#, no-c-format
+msgid "Including Additional Contact Information in the Output:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:392
+#, no-c-format
+msgid ""
+"supportconfig -E tux@example.org -N \"Tux Penguin\" -O<!--\n"
+"      --> \"Penguin Inc.\" ..."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:393
+#, no-c-format
+msgid "(all in one line)"
+msgstr ""
+
+#. Tag: term
+#: adm_support.xml:399
+#, no-c-format
+msgid "Collecting Already Rotated Log Files"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:401
+#, no-c-format
+msgid "supportconfig -l"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:402
+#, no-c-format
+msgid ""
+"This is especially useful in high logging environments or after a Kernel "
+"crash when syslog rotates the log files after a reboot."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:412
+#, no-c-format
+msgid "Submitting Information to Global Technical Support"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:414
+#, no-c-format
+msgid ""
+"Use the &yast; <guimenu>Support</guimenu> module or the "
+"<command>supportconfig</command> command line utility to submit system "
+"information to the Global Technical Support. When you experience a server "
+"issue and want the support's assistance, you will need to open a service "
+"request first. For details, see <xref linkend=\"sec.admsupport.supportconfig."
+"sr\"/>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:423
+#, no-c-format
+msgid ""
+"The following examples use <replaceable>12345678901</replaceable> as a "
+"placeholder for your service request number. Replace "
+"<replaceable>12345678901</replaceable> with the service request number you "
+"created in <xref linkend=\"sec.admsupport.supportconfig.sr\"/>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:431
+#, no-c-format
+msgid "Submitting Information to Support with &yast;"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:432
+#, no-c-format
+msgid ""
+"The following procedure assumes that you have already created a "
+"supportconfig archive, but have not uploaded it yet. Make sure to have "
+"included your contact information in the archive as described in <xref "
+"linkend=\"sec.admsupport.yast\"/>, <xref linkend=\"step.supportconfig.contact"
+"\" xrefstyle=\"select:label nopage\"/>. For instructions on how to generate "
+"and submit a supportconfig archive in one go, see <xref linkend=\"sec."
+"admsupport.yast\"/>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:447
+#, no-c-format
+msgid "Click <guimenu>Upload</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:452
+#, no-c-format
+msgid ""
+"In <guimenu>Package with log files</guimenu> specify the path to the "
+"existing supportconfig archive or <guimenu>Browse</guimenu> for it."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:458
+#, no-c-format
+msgid ""
+"&yast; automatically proposes an upload server. If you want to modify it, "
+"refer to <xref linkend=\"sec.admsupport.supportconfig.upload\"/> for details "
+"of which upload servers are available."
+msgstr ""
+
+#. Tag: remark
+#: adm_support.xml:474
+#, no-c-format
+msgid ""
+"taroth 2014-04-11: this does not make sense to me - why does the YaST module "
+"*not* ask for the SR number now? and lets you continue after specifying an "
+"upload target (but no RC or customer info)? I would expect it to *check* if "
+"an SR has been entered and otherwise show an error message - filed http://"
+"bugzilla.suse.com/show_bug.cgi?id=880943 for this, unfortunately it was "
+"rejected for technical reasons"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:484
+#, no-c-format
+msgid "Click <guimenu>Finish</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:491
+#, no-c-format
+msgid "Submitting Information to Support from Command Line"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:492
+#, no-c-format
+msgid ""
+"The following procedure assumes that you have already created a "
+"supportconfig archive, but have not uploaded it yet. For instructions on how "
+"to generate and submit a supportconfig archive in one go, see <xref linkend="
+"\"sec.admsupport.yast\"/>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:499
+#, no-c-format
+msgid "Servers with Internet connectivity:"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:504
+#, no-c-format
+msgid "To use the default upload target, run:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:507
+#, no-c-format
+msgid "supportconfig -ur <replaceable>12345678901</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:510
+#, no-c-format
+msgid "For the secure upload target, use the following:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:514
+#, no-c-format
+msgid "supportconfig -ar <replaceable>12345678901</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:519
+#, no-c-format
+msgid "Servers <emphasis>without</emphasis> Internet connectivity"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:524
+#, no-c-format
+msgid "Run the following:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:527
+#, no-c-format
+msgid "supportconfig -r <replaceable>12345678901</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:530
+#, no-c-format
+msgid ""
+"Manually upload the <filename>/var/log/nts_<replaceable>SR12345678901</"
+"replaceable>*tbz</filename> archive to one of our FTP servers. Which one to "
+"use depends on your location in the world. For an overview, see <xref "
+"linkend=\"sec.admsupport.supportconfig.upload\"/>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:541
+#, no-c-format
+msgid ""
+"After the TAR archive arrives in the incoming directory of our FTP server, "
+"it becomes automatically attached to your service request."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:551
+#, no-c-format
+msgid "Analyzing System Information"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:553
+#, no-c-format
+msgid ""
+"System reports created with <command>supportconfig</command> can be analyzed "
+"for known issues to help resolve problems faster. For this purpose, "
+"&productname; provides both an appliance and a command line tool for "
+"<literal>Supportconfig Analysis</literal> (SCA). The SCA appliance is a "
+"server-side tool which is non-interactive. The SCA tool (<command>scatool</"
+"command>) runs on the client-side and is executed from command line. Both "
+"tools analyze supportconfig archives from affected servers. The initial "
+"server analysis takes place on the SCA appliance or the workstation on which "
+"scatool is running. No analysis cycles happen on the production server."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:566
+#, no-c-format
+msgid ""
+"Both the appliance and the command line tool additionally need product-"
+"specific patterns that enable them to analyze the supportconfig output for "
+"the associated products. Each pattern is a script that parses and evaluates "
+"a supportconfig archive for one known issue. The patterns are available as "
+"RPM packages."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:574
+#, no-c-format
+msgid ""
+"For example, if you want to analyze supportconfig archives that have been "
+"generated on a &sle; 11 machine, you need to install the package <systemitem "
+"class=\"resource\">sca-patterns-sle11</systemitem> together with the SCA "
+"tool (or on the machine that you want to use as the SCA appliance server). "
+"To analyze supportconfig archives generated on a &sle; 10 machine, you need "
+"the package <systemitem class=\"resource\">sca-patterns-sle10</systemitem>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:584
+#, no-c-format
+msgid ""
+"You can also develop your own patterns as briefly described in <xref linkend="
+"\"sec.admsupport.sca.patterns\"/>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:590
+#, no-c-format
+msgid "SCA Command Line Tool"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:591
+#, no-c-format
+msgid ""
+"The SCA command line tool lets you analyze a local machine using both "
+"<command>supportconfig</command> and the analysis patterns for the specific "
+"product that is installed on the local machine. The tool creates an HTML "
+"report showing its analysis results. For an example, see <xref linkend=\"fig."
+"scatool.html\"/>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:599
+#, no-c-format
+msgid "HTML Report Generated by SCA Tool"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:609
+#, no-c-format
+msgid ""
+"The <command>scatool</command> command is provided by the <systemitem class="
+"\"resource\">sca-server-report</systemitem> package. It is not installed by "
+"default. Additionally, you need the <systemitem class=\"resource\">sca-"
+"patterns-base</systemitem> package and any of the product-specific "
+"<systemitem class=\"resource\">sca-patterns-*</systemitem> packages that "
+"matches the product installed on the machine where you want to run the "
+"<command>scatool</command> command."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:619
+#, no-c-format
+msgid ""
+"Execute the <command>scatool</command> command either as &rootuser; user or "
+"with <command>sudo</command>. When calling the SCA tool, you can either "
+"analyze an existing <command>supportconfig</command> TAR archive or you can "
+"let it generate and analyze a new archive in one go. The tool also provides "
+"an interactive console (with tab completion) and the possibility to run "
+"<command>supportconfig</command> on an external machine and to execute the "
+"subsequent analysis on the local machine."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:628
+#, no-c-format
+msgid "Find some example commands below:"
+msgstr ""
+
+#. Tag: term
+#: adm_support.xml:633
+#, no-c-format
+msgid "<command>sudo scatool</command><option>-s</option>"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:636
+#, no-c-format
+msgid ""
+"Calls <command>supportconfig</command> and generates a new supportconfig "
+"archive on the local machine. Analyzes the archive for known issues by "
+"applying the SCA analysis patterns that match the installed product. "
+"Displays the path to the HTML report that is generated from the results of "
+"the analysis. It is usually written to the same directory where the "
+"supportconfig archive can be found."
+msgstr ""
+
+#. Tag: term
+#: adm_support.xml:647
+#, no-c-format
+msgid ""
+"<command>sudo scatool&nbsp;</command><option>-s</option>&nbsp;<option>-o</"
+"option>&nbsp;<replaceable>/opt/sca/reports/</replaceable>&nbsp;"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:650
+#, no-c-format
+msgid ""
+"Same as <command>sudo scatool</command> <option>-s</option>, only that the "
+"HTML report is written to the path specified with <option>-o</option>."
+msgstr ""
+
+#. Tag: term
+#: adm_support.xml:658
+#, no-c-format
+msgid ""
+"<command>sudo scatool&nbsp;</command><option>-a</option>&nbsp;"
+"<replaceable>PATH_TO_TARBALL_OR_DIR</replaceable>&nbsp;"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:661
+#, no-c-format
+msgid ""
+"Analyzes the specified supportconfig archive file (or the specified "
+"directory to where the supportconfig archive has been extracted). The "
+"generated HTML report is saved in the same location as the supportconfig "
+"archive or directory."
+msgstr ""
+
+#. Tag: term
+#: adm_support.xml:670
+#, no-c-format
+msgid ""
+"<command>sudo scatool&nbsp;</command><option>-a</option>&nbsp;"
+"<replaceable>sles_server.company.com</replaceable>&nbsp;"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:673
+#, no-c-format
+msgid ""
+"Establishes an SSH connection to an external server <replaceable>sles_server."
+"company.com</replaceable> and runs <command>supportconfig</command> on the "
+"server. The supportconfig archive is then copied back to the local machine "
+"and is analyzed there. The generated HTML report is saved to the default "
+"<filename>/var/log</filename> directory. (Only the supportconfig archive is "
+"created on <replaceable>sles_server.company.com</replaceable>)."
+msgstr ""
+
+#. Tag: term
+#: adm_support.xml:685
+#, no-c-format
+msgid "<command>sudo scatool</command><option>-c</option>"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:688
+#, no-c-format
+msgid ""
+"Starts the interactive console for <command>scatool</command>. Press <keycap "
+"function=\"tab\"></keycap> twice to see the available commands."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:695
+#, no-c-format
+msgid ""
+"For further options and information, run <command>sudo scatool -h</command> "
+"or see the <command>scatool</command> man page."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:702
+#, no-c-format
+msgid "SCA Appliance"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:703
+#, no-c-format
+msgid ""
+"If you decide to use the SCA appliance for analyzing the supportconfig "
+"archives, you need to configure a dedicated server (or virtual machine) as "
+"the SCA appliance server. The SCA appliance server can then be used to "
+"analyze supportconfig archives from all machines in your enterprise running "
+"&sls; or &sled;. You can simply upload supportconfig archives to the "
+"appliance server for analysis. Interaction is not required. In a MariaDB "
+"database, the SCA appliance keeps track of all supportconfig archives that "
+"have been analyzed . You can read the SCA reports directly from the "
+"appliance Web interface. Alternatively, you can have the appliance send the "
+"HTML report to any administrative user via e-mail. For details, see <xref "
+"linkend=\"sec.admsupport.sca.appliance.config.mail\"/>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:717
+#, no-c-format
+msgid "Installation Quick Start"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:718
+#, no-c-format
+msgid ""
+"To install and set up the SCA appliance in a very fast way from the command "
+"line, follow the instructions here. The procedure is intended for experts "
+"and focuses on the bare installation and setup commands. For more "
+"information, refer to the more detailed description in <xref linkend=\"sec."
+"admsupport.sca.appliance.pre\"/> to <xref linkend=\"sec.admsupport.sca."
+"appliance.install\"/>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:729 adm_support.xml:801
+#, no-c-format
+msgid "Prerequisites"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:731
+#, no-c-format
+msgid "Web and LAMP Pattern"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:736
+#, no-c-format
+msgid ""
+"Web and Scripting Module (you must register the machine to be able to select "
+"this module)."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:743
+#, no-c-format
+msgid "&rootuser; Privileges Required"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:744
+#, no-c-format
+msgid "All commands in the following procedure must be run as &rootuser;."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:749
+#, no-c-format
+msgid "Installation Using Anonymous FTP for Upload"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:750
+#, no-c-format
+msgid ""
+"After the appliance is set up and running, no more manual interaction is "
+"required. This way of setting up the appliance is therefore ideal for using "
+"cron jobs to create and upload supportconfig archives."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:756
+#, no-c-format
+msgid ""
+"On the machine on which to install the appliance, log in to a console and "
+"execute the following commands:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:760
+#, no-c-format
+msgid ""
+"zypper install sca-appliance-* sca-patterns-* vsftpd\n"
+"systemctl enable apache2\n"
+"systemctl start apache2\n"
+"systemctl enable vsftpd\n"
+"systemctl start vsftpd\n"
+"yast ftp-server"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:763
+#, no-c-format
+msgid ""
+"In &yast; FTP Server, select <menuchoice> <guimenu>Authentication</guimenu> "
+"<guimenu>Enable Upload</guimenu> <guimenu>Anonymous Can Upload</guimenu> "
+"<guimenu>Finish</guimenu> <guimenu>Yes</guimenu> </menuchoice> to "
+"<guimenu>Create /srv/ftp/upload</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:772 adm_support.xml:793
+#, no-c-format
+msgid "Execute the following commands:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:775
+#, no-c-format
+msgid ""
+"systemctl enable mysql\n"
+"systemctl start mysql\n"
+"mysql_secure_installation\n"
+"setup-sca -f"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:776
+#, no-c-format
+msgid ""
+"The mysql_secure_installation will create a MariaDB &rootuser; password."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:782
+#, no-c-format
+msgid "Installation Using SCP/tmp for Upload"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:783
+#, no-c-format
+msgid ""
+"This way of setting up the appliance requires manual interaction when typing "
+"the SSH password."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:788
+#, no-c-format
+msgid "On the machine on which to install the appliance, log in to a console."
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:796
+#, no-c-format
+msgid ""
+"zypper install sca-appliance-* sca-patterns-*\n"
+"systemctl enable apache2\n"
+"systemctl start apache2\n"
+"sudo systemctl enable mysql\n"
+"systemctl start mysql\n"
+"mysql_secure_installation\n"
+"setup-sca"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:802
+#, no-c-format
+msgid "To run an SCA appliance server, you need the following prerequisites:"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:807
+#, no-c-format
+msgid "All <systemitem>sca-appliance-*</systemitem> packages."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:812
+#, no-c-format
+msgid ""
+"The <systemitem class=\"resource\">sca-patterns-base</systemitem> package. "
+"Additionally, any of the product-specific <systemitem class=\"resource\">sca-"
+"patterns-*</systemitem> for the type of supportconfig archives that you want "
+"to analyze with the appliance."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:820
+#, no-c-format
+msgid "Apache"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:825
+#, no-c-format
+msgid "<para>PHP</para>"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:830
+#, no-c-format
+msgid "MariaDB"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:835
+#, no-c-format
+msgid "anonymous FTP server (optional)"
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:842
+#, no-c-format
+msgid "Installation and Basic Setup"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:843
+#, no-c-format
+msgid ""
+"As listed in <xref linkend=\"sec.admsupport.sca.appliance.pre\"/>, the SCA "
+"appliance has several dependencies on other packages. Therefore you need do "
+"so some preparations before installing and setting up the SCA appliance "
+"server:"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:851
+#, no-c-format
+msgid ""
+"For Apache and MariaDB, install the <systemitem>Web</systemitem> and "
+"<systemitem>LAMP</systemitem> installation patterns."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:857
+#, no-c-format
+msgid ""
+"Set up Apache, MariaDB, and optionally an anonymous FTP server. <phrase os="
+"\"sles\"> For more information, see <xref linkend=\"cha.apache2\"/> and "
+"<xref linkend=\"cha.ftp\"/>. </phrase>"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:864
+#, no-c-format
+msgid "Configure Apache and MariaDB to start at boot time:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:867
+#, no-c-format
+msgid "sudo systemctl enable apache2 mysql"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:870
+#, no-c-format
+msgid "Start both services:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:873
+#, no-c-format
+msgid "sudo systemctl start apache2 mysql"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:876
+#, no-c-format
+msgid ""
+"Now you can install the SCA appliance and set it up as described in <xref "
+"linkend=\"pro.sca.appl.install\"/>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:881
+#, no-c-format
+msgid "Installing and Configuring the SCA Appliance"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:882
+#, no-c-format
+msgid ""
+"After installing the packages, use the <command>setup-sca</command> script "
+"for the basic configuration of the MariaDB administration and report "
+"database that is used by the SCA appliance."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:887
+#, no-c-format
+msgid ""
+"It can be used to configure the following options you have for uploading the "
+"supportconfig archives from your machines to the SCA appliance:"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:898
+#, no-c-format
+msgid "anonymous FTP server"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:904
+#, no-c-format
+msgid "Install the appliance and the SCA base-pattern library:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:907
+#, no-c-format
+msgid "sudo zypper install sca-appliance-* sca-patterns-base"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:910
+#, no-c-format
+msgid ""
+"Additionally, install the pattern packages for the types of supportconfig "
+"archives you want to analyze. For example, if you have &sls; 11 and &sls; 12 "
+"servers in your environment, install both the <systemitem>sca-patterns-"
+"sle11</systemitem> and <systemitem>sca-patterns-sle12</systemitem> packages."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:917
+#, no-c-format
+msgid "To install all available patterns:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:920
+#, no-c-format
+msgid "zypper install sca-patterns-*"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:923
+#, no-c-format
+msgid ""
+"For basic setup of the SCA appliance, use the <command>setup-sca</command> "
+"script. How to call it depends on how you want to upload the supportconfig "
+"archives to the SCA appliance server:"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:930
+#, no-c-format
+msgid ""
+"If you have configured an anonymous FTP server that uses the <filename>/srv/"
+"ftp/upload</filename> directory, execute the setup script with the <option>-"
+"f</option> option and follow the instructions on the screen:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:936
+#, no-c-format
+msgid "setup-sca -f"
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:938
+#, no-c-format
+msgid "FTP Server Using Another Directory"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:939
+#, no-c-format
+msgid ""
+"If your FTP server uses another directory than <filename>/srv/ftp/upload</"
+"filename>, adjust the following configuration files first to make them point "
+"to the correct directory: <filename>/etc/sca/sdagent.conf</filename> and "
+"<filename>/etc/sca/sdbroker.conf</filename> ."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:949
+#, no-c-format
+msgid ""
+"If you want to upload supportconfig files to the <filename>/tmp</filename> "
+"directory of the SCA appliance server via <command>scp</command>, call the "
+"setup script without any parameters and follow the instructions on the "
+"screen:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:955
+#, no-c-format
+msgid "setup-sca"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:958
+#, no-c-format
+msgid ""
+"The setup script runs a few checks regarding its requirements and configures "
+"the needed components. It will prompt you for two passwords: the MySQL "
+"&rootuser; password of the MariaDB that you have set up, and a Web user "
+"password with which to log in to the Web interface of the SCA appliance."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:967
+#, no-c-format
+msgid ""
+"Enter the existing MariaDB &rootuser; password. It will allow the SCA "
+"appliance to connect to the MariaDB."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:973
+#, no-c-format
+msgid ""
+"Define a password for the Web user. It will be written to <filename>/srv/www/"
+"htdocs/sca/web-config.php</filename> and will be set as the password for the "
+"user <systemitem class=\"username\">scdiag</systemitem>. Both user name and "
+"password can be changed at any time later, see <xref linkend=\"sec."
+"admsupport.sca.appliance.config.passwd\"/>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:986
+#, no-c-format
+msgid ""
+"After successful installation and setup, the SCA appliance is ready for use, "
+"see <xref linkend=\"sec.admsupport.sca.appliance.use\"/>. However, you "
+"should modify some options such as changing the password for the Web "
+"interface, changing the source for the SCA pattern updates, enabling "
+"archiving mode or configuring e-mail notifications. For details on that, see "
+"<xref linkend=\"sec.admsupport.sca.appliance.config\"/>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:995
+#, no-c-format
+msgid "Data Protection"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:996
+#, no-c-format
+msgid ""
+"As the reports on the SCA appliance server contain security-relevant "
+"information of the machines whose supportconfig archives have been analyzed, "
+"make sure to protect the data on the SCA appliance server against "
+"unauthorized access."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1005
+#, no-c-format
+msgid "Using the SCA Appliance"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1006
+#, no-c-format
+msgid ""
+"You can upload existing supportconfig archives to the SCA appliance manually "
+"or create new supportconfig archives and upload them to the SCA appliance in "
+"one step. Uploading can be done via FTP or SCP. For both, you need to know "
+"the URL where the SCA appliance can be reached. For upload via FTP, an FTP "
+"server needs to be configured for the SCA appliance, see <xref linkend=\"pro."
+"sca.appl.install\"/>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1015
+#, no-c-format
+msgid "Uploading Supportconfig Archives to the SCA Appliance"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1019
+#, no-c-format
+msgid ""
+"For creating a supportconfig archive and uploading it via (anonymous) FTP:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1023
+#, no-c-format
+msgid ""
+"sudo supportconfig -U “ftp://<replaceable>sca-appliance.company.com</"
+"replaceable>/upload”"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1026
+#, no-c-format
+msgid "For creating a supportconfig archive and uploading it via SCP:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1029
+#, no-c-format
+msgid ""
+"sudo supportconfig -U “scp://<replaceable>sca-appliance.company.com</"
+"replaceable>/tmp”"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1030
+#, no-c-format
+msgid ""
+"You will be prompted for the &rootuser; user password of the server running "
+"the SCA appliance."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1036
+#, no-c-format
+msgid ""
+"If you want to manually upload one or multiple archives, copy the existing "
+"archive files (usually located at<filename>/var/log/nts_*.tbz</filename>) to "
+"the SCA appliance. As target, use either the appliance server's <filename>/"
+"tmp</filename> directory or the <filename>/srv/ftp/upload</filename> "
+"directory (if FTP is configured for the SCA appliance server)."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1048
+#, no-c-format
+msgid "Viewing SCA Reports"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1049
+#, no-c-format
+msgid ""
+"SCA reports can be viewed from any machine that has a browser installed and "
+"can access the report index page of the SCA appliance."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1055
+#, no-c-format
+msgid ""
+"Start a Web browser and make sure that JavaScript and cookies are enabled."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1061
+#, no-c-format
+msgid "As a URL, enter the report index page of the SCA appliance."
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1064
+#, no-c-format
+msgid "https://sca-appliance.company.com/sca"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1065
+#, no-c-format
+msgid "If in doubt, ask your system administrator."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1070
+#, no-c-format
+msgid "You will be prompted for a user name and a password to log in."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1074
+#, no-c-format
+msgid "HTML Report Generated by SCA Appliance"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1086
+#, no-c-format
+msgid "After logging in, click the date of the report you want to read."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1091
+#, no-c-format
+msgid "Click the <guimenu>Basic Health</guimenu> category first to expand it."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1096
+#, no-c-format
+msgid ""
+"In the <guimenu>Message</guimenu> column, click an individual entry. This "
+"opens the corresponding article in the &suse; Knowledgebase. Read the "
+"proposed solution and follow the instructions."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1104
+#, no-c-format
+msgid ""
+"If the <guimenu>Solutions</guimenu> column of the <guimenu>Supportconfig "
+"Analysis Report</guimenu> shows any additional entries, click them. Read the "
+"proposed solution and follow the instructions."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1112
+#, no-c-format
+msgid ""
+"Check the &suse; Knowledgebase (<link xlink:href=\"http://www.suse.com/"
+"support/kb/\"></link>) for results that directly relate to the problem "
+"identified by SCA. Work at resolving them."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1120
+#, no-c-format
+msgid ""
+"Check for results that can be addressed proactively to avoid future problems."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1129
+#, no-c-format
+msgid "Customizing the SCA Appliance"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1130
+#, no-c-format
+msgid ""
+"The following sections show how to change the password for the Web "
+"interface, how to change the source for the SCA pattern updates, how to "
+"enable archiving mode, and how to configure e-mail notifications."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1136
+#, no-c-format
+msgid "Password for the Web Interface"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1137
+#, no-c-format
+msgid ""
+"The SCA Appliance Web interface requires a user name and password for "
+"logging in. The default user name is <literal>scdiag</literal> and the "
+"default password is <literal>linux</literal> (if not specified otherwise, "
+"see <xref linkend=\"pro.sca.appl.install\"/>). Change the default password "
+"to a secure password at the earliest possibility. You can also modify the "
+"user name."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1146
+#, no-c-format
+msgid "Changing User Name or Password for the Web Interface"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1148 adm_support.xml:1194 adm_support.xml:1237
+#: adm_support.xml:1326
+#, no-c-format
+msgid ""
+"Log in as &rootuser; user at the system console of the SCA appliance server."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1154
+#, no-c-format
+msgid ""
+"Open <filename>/srv/www/htdocs/sca/web-config.php</filename> in an editor."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1160
+#, no-c-format
+msgid ""
+"Change the values of <literal>$username</literal> and <literal>$password</"
+"literal> as desired."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1166
+#, no-c-format
+msgid "Save the file and exit."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1173
+#, no-c-format
+msgid "Updates of SCA Patterns"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1174
+#, no-c-format
+msgid ""
+"By default, all <systemitem class=\"resource\">sca-patterns-*</systemitem> "
+"packages are updated regularly by a &rootuser; cron job that executes the "
+"<filename>sdagent-patterns</filename> script nightly, which in turn runs "
+"<command>zypper update sca-patterns-*</command>. A regular system update "
+"will update all SCA appliance and pattern packages. To update the SCA "
+"appliance and patterns manually, run:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1182
+#, no-c-format
+msgid "sudo zypper update sca-*"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1183
+#, no-c-format
+msgid ""
+"The updates are installed from the &sle; &productnumber; update repository "
+"by default. You can change the source for the updates to an &smt; server, if "
+"desired. When <filename>sdagent-patterns</filename> runs <command>zypper "
+"update sca-patterns-*</command>, it gets the updates from the currently "
+"configured update channel. If that channel is located on an &smt; server, "
+"the packages will be pulled from there."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1192
+#, no-c-format
+msgid "Disabling Automatic Updates of SCA Patterns"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1200
+#, no-c-format
+msgid "Open <filename>/etc/sca/sdagent-patterns.conf</filename> in an editor."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1208 adm_support.xml:1248
+#, no-c-format
+msgid "Change the entry"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1211
+#, no-c-format
+msgid "UPDATE_FROM_PATTERN_REPO=1"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1212 adm_support.xml:1252
+#, no-c-format
+msgid "<para>to</para>"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1215
+#, no-c-format
+msgid "UPDATE_FROM_PATTERN_REPO=0"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1218 adm_support.xml:1258
+#, no-c-format
+msgid ""
+"Save the file and exit. The machine does not require any restart to apply "
+"the change."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1226
+#, no-c-format
+msgid "Archiving Mode"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1227
+#, no-c-format
+msgid ""
+"All supportconfig archives are deleted from the SCA appliance after they "
+"have been analyzed and their results have been stored in the MariaDB "
+"database. However, for troubleshooting purposes it can be useful to keep "
+"copies of supportconfig archives from a machine. By default, archiving mode "
+"is disabled."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1235
+#, no-c-format
+msgid "Enabling Archiving Mode in the SCA Appliance"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1243 adm_support.xml:1332
+#, no-c-format
+msgid "Open <filename>/etc/sca/sdagent.conf</filename> in an editor."
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1251
+#, no-c-format
+msgid "ARCHIVE_MODE=0"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1255
+#, no-c-format
+msgid "ARCHIVE_MODE=1"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1264
+#, no-c-format
+msgid ""
+"After having enabled archive mode, the SCA appliance will save the "
+"supportconfig files to the <filename>/var/log/archives/saved</filename> "
+"directory, instead of deleting them."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1271
+#, no-c-format
+msgid "Sending SCA Reports via E-Mail"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1272
+#, no-c-format
+msgid ""
+"The SCA appliance can e-mail a report HTML file for each supportconfig "
+"analyzed. This feature is disabled by default. When enabling it, you can "
+"define a list of e-mail addresses to which the reports should be sent, and "
+"define a level of status messages that trigger the sending of reports "
+"(<literal>STATUS_NOTIFY_LEVEL</literal>)."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1280
+#, no-c-format
+msgid "Possible Values for <literal>STATUS_NOTIFY_LEVEL</literal>"
+msgstr ""
+
+#. Tag: term
+#: adm_support.xml:1282
+#, no-c-format
+msgid "$STATUS_OFF"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1284
+#, no-c-format
+msgid "Deactivate sending of HTML reports."
+msgstr ""
+
+#. Tag: term
+#: adm_support.xml:1290
+#, no-c-format
+msgid "$STATUS_CRITICAL"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1292
+#, no-c-format
+msgid "Send only SCA reports that include a CRITICAL."
+msgstr ""
+
+#. Tag: term
+#: adm_support.xml:1298
+#, no-c-format
+msgid "$STATUS_WARNING"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1300
+#, no-c-format
+msgid "Send only SCA reports that include a WARNING or CRITICAL."
+msgstr ""
+
+#. Tag: term
+#: adm_support.xml:1306
+#, no-c-format
+msgid "$STATUS_RECOMMEND"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1308
+#, no-c-format
+msgid "Send only SCA reports that include a RECOMMEND, WARNING or CRITICAL."
+msgstr ""
+
+#. Tag: term
+#: adm_support.xml:1314
+#, no-c-format
+msgid "$STATUS_SUCCESS"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1316
+#, no-c-format
+msgid ""
+"Send SCA reports that include a SUCCESS, RECOMMEND, WARNING or CRITICAL."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1324
+#, no-c-format
+msgid "Configuring E-Mail Notifications for SCA Reports"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1337
+#, no-c-format
+msgid ""
+"Search for the entry <systemitem>STATUS_NOTIFY_LEVEL</systemitem>. By "
+"default, it is set to <literal>$STATUS_OFF</literal> (e-mail notifications "
+"are disabled)."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1344
+#, no-c-format
+msgid ""
+"To enable e-mail notifications, change <literal>$STATUS_OFF</literal> to the "
+"level of status messages that you want to have e-mail reports for, for "
+"example:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1349
+#, no-c-format
+msgid "STATUS_NOTIFY_LEVEL=$STATUS_SUCCESS"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1350
+#, no-c-format
+msgid "For details, see <xref linkend=\"vl.sca.mails.notify.level\"/>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1355
+#, no-c-format
+msgid "To define the list of recipients to which the reports should be sent:"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1360
+#, no-c-format
+msgid "Search for the entry <literal>EMAIL_REPORT='root'</literal>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1365
+#, no-c-format
+msgid ""
+"Replace <literal>root</literal> with a list of e-mail addresses to which SCA "
+"reports should be sent. The e-mail addresses must be separated by spaces. "
+"For example:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1370
+#, no-c-format
+msgid ""
+"EMAIL_REPORT='&exampleuser_plain;@my.company.com&nbsp;&exampleuserII_plain;"
+"@your.company.com'"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1375
+#, no-c-format
+msgid ""
+"Save the file and exit. The machine does not require any restart to apply "
+"the changes. All future SCA reports will be e-mailed to the specified "
+"addresses."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1385
+#, no-c-format
+msgid "Backing Up and Restoring the Database"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1386
+#, no-c-format
+msgid ""
+"To back up and restore the MariaDB database that stores the SCA reports, use "
+"the <command>scadb</command> command as described below."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1391
+#, no-c-format
+msgid "Backing Up the Database"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1393 adm_support.xml:1463
+#, no-c-format
+msgid ""
+"Log in as &rootuser; user at the system console of the server running the "
+"SCA appliance."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1399
+#, no-c-format
+msgid "Put the appliance into maintenance mode by executing:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1402
+#, no-c-format
+msgid "scadb maint"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1405
+#, no-c-format
+msgid "Start the backup with:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1408
+#, no-c-format
+msgid "scadb backup"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1409
+#, no-c-format
+msgid ""
+"The data is saved to a TAR archive: <filename>sca-backup-*sql.gz</filename>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1415
+#, no-c-format
+msgid ""
+"If you are using the pattern creation database to develop your own patterns "
+"(see <xref linkend=\"sec.admsupport.sca.patterns\"/>), back up this data, "
+"too:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1420
+#, no-c-format
+msgid "sdpdb backup"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1421
+#, no-c-format
+msgid ""
+"The data is saved to a TAR archive: <filename>sdp-backup-*sql.gz</filename>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1427
+#, no-c-format
+msgid ""
+"Copy the following data to another machine or an external storage medium:"
+msgstr ""
+
+#. Tag: filename
+#: adm_support.xml:1434
+#, no-c-format
+msgid "sca-backup-*sql.gz"
+msgstr ""
+
+#. Tag: filename
+#: adm_support.xml:1439
+#, no-c-format
+msgid "sdp-backup-*sql.gz"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1443
+#, no-c-format
+msgid ""
+"<filename>/usr/lib/sca/patterns/local</filename> (only needed if you have "
+"created custom patterns)"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1451 adm_support.xml:1501
+#, no-c-format
+msgid "Reactivate the SCA appliance with:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1454 adm_support.xml:1504
+#, no-c-format
+msgid "scadb reset agents"
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1458
+#, no-c-format
+msgid "Restoring the Database"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1459
+#, no-c-format
+msgid "To restore the database from your backup, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1469
+#, no-c-format
+msgid ""
+"Copy the newest <filename>sca-backup-*sql.gz</filename> and <filename>sdp-"
+"backup-*sql.gz</filename> TAR archives to the SCA appliance server."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1476
+#, no-c-format
+msgid "To decompress the files, run:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1479
+#, no-c-format
+msgid "gzip -d *-backup-*sql.gz"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1482
+#, no-c-format
+msgid "To import the data into the database, execute:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1485
+#, no-c-format
+msgid "scadb import sca-backup-*sql"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1488
+#, no-c-format
+msgid ""
+"If you are using the pattern creation database to create your own patterns, "
+"also import the following data with:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1492
+#, no-c-format
+msgid "sdpdb import sdp-backup-*sql"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1495
+#, no-c-format
+msgid ""
+"If you are using custom patterns, also restore <filename>/usr/lib/sca/"
+"patterns/local</filename> from your backup data."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1507
+#, no-c-format
+msgid "Update the pattern modules in the database with:"
+msgstr ""
+
+#. Tag: screen
+#: adm_support.xml:1510
+#, no-c-format
+msgid "sdagent-patterns -u"
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1517
+#, no-c-format
+msgid "Developing Custom Analysis Patterns"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1518
+#, no-c-format
+msgid ""
+"The SCA appliance comes with a complete pattern development environment (the "
+"SCA Pattern Database) that enables you to develop your own, custom patterns. "
+"Patterns can be written in any programming language. To make them available "
+"for the supportconfig analysis process, they need to be saved to <filename>/"
+"usr/lib/sca/patterns/local</filename> and to be made executable. Both the "
+"SCA appliance and the SCA tool will then run the custom patterns against new "
+"supportconfig archives as part of the analysis report. For detailed "
+"instructions on how to create (and test) your own patterns, see <link xlink:"
+"href=\"http://www.suse.com/communities/conversations/sca-pattern-development/"
+"\"></link>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1533
+#, no-c-format
+msgid "Gathering Information During the Installation"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1534
+#, no-c-format
+msgid ""
+"During the installation, <command>supportconfig</command> is not available. "
+"However, you can collect log files from &yast; by using "
+"<command>save_y2logs</command>. This command will create a <filename>.tar."
+"xz</filename> archive in the directory <filename>/tmp</filename>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1543
+#, no-c-format
+msgid ""
+"If issues appear very early during installation, you may be able to gather "
+"information from the log file created by <command>linuxrc</command>. "
+"<command>linuxrc</command> is a small command that runs before &yast; "
+"starts. This log file is available at <filename>/var/log/linuxrc.log</"
+"filename>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1551
+#, no-c-format
+msgid "Installation Log Files Not Available in the Installed System"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1552
+#, no-c-format
+msgid ""
+"The log files available during the installation are not available in the "
+"installed system anymore. Properly save the installation log files while the "
+"installer is still running."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1561
+#, no-c-format
+msgid "Support of Kernel Modules"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1563
+#, no-c-format
+msgid ""
+"An important requirement for every enterprise operating system is the level "
+"of support you receive for your environment. Kernel modules are the most "
+"relevant connector between hardware (<quote>controllers</quote>) and the "
+"operating system. Every Kernel module in &sle; has a <literal>supported</"
+"literal> flag that can take three possible values:"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1574
+#, no-c-format
+msgid "<quote>yes</quote>, thus <literal>supported</literal>"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1579
+#, no-c-format
+msgid "<quote>external</quote>, thus <literal>supported</literal>"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1584
+#, no-c-format
+msgid "<quote></quote> (empty, not set), thus <literal>unsupported</literal>"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1590
+#, no-c-format
+msgid "The following rules apply:"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1596
+#, no-c-format
+msgid ""
+"All modules of a self-recompiled Kernel are by default marked as unsupported."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1602
+#, no-c-format
+msgid ""
+"Kernel modules supported by &suse; partners and delivered using "
+"<literal>&suse; SolidDriver Program</literal> are marked <quote>external</"
+"quote>."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1609
+#, no-c-format
+msgid ""
+"If the <literal>supported</literal> flag is not set, loading this module "
+"will taint the Kernel. Tainted Kernels are not supported. Unsupported Kernel "
+"modules are included in an extra RPM package (<systemitem>kernel-"
+"<replaceable>FLAVOR</replaceable>-extra</systemitem>) that is only available "
+"for &sled; and the &sle; Workstation Extension. Those kernels will not be "
+"loaded by default (<replaceable>FLAVOR</replaceable>=<literal>default</"
+"literal>|<literal>xen</literal>|...). In addition, these unsupported modules "
+"are not available in the installer, and the <systemitem class=\"resource"
+"\">kernel-<replaceable>FLAVOR</replaceable>-extra</systemitem> package is "
+"not part of the &sle; media."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1624
+#, no-c-format
+msgid ""
+"Kernel modules not provided under a license compatible to the license of the "
+"Linux Kernel will also taint the Kernel. For details, see <filename>/usr/src/"
+"linux/Documentation/sysctl/kernel.txt</filename> and the state of <filename>/"
+"proc/sys/kernel/tainted</filename>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1634
+#, no-c-format
+msgid "Technical Background"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1638
+#, no-c-format
+msgid ""
+"Linux Kernel: The value of <filename>/proc/sys/kernel/unsupported</filename> "
+"defaults to <literal>2</literal> on &sle; &productnumber; (<literal>do not "
+"warn in syslog when loading unsupported modules</literal>). This default is "
+"used in the installer and in the installed system. See <filename>/usr/src/"
+"linux/Documentation/sysctl/kernel.txt</filename> for more information."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1649
+#, no-c-format
+msgid ""
+"<command>modprobe</command>: The <command>modprobe</command> utility for "
+"checking module dependencies and loading modules appropriately checks for "
+"the value of the <literal>supported</literal> flag. If the value is "
+"<quote>yes</quote> or <quote>external</quote> the module will be loaded, "
+"otherwise it will not. For information on how to override this behavior, see "
+"<xref linkend=\"sec.admsupport.kernel.unsupported\"/>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1658
+#, no-c-format
+msgid "Support"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1659
+#, no-c-format
+msgid ""
+"&suse; does not generally support the removal of storage modules via "
+"<command>modprobe -r</command>."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1669
+#, no-c-format
+msgid "Working with Unsupported Modules"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1670
+#, no-c-format
+msgid ""
+"While general supportability is important, situations can occur where "
+"loading an unsupported module is required (for example, for testing or "
+"debugging purposes, or if your hardware vendor provides a hotfix)."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1677
+#, no-c-format
+msgid ""
+"To override the default, edit <filename>/etc/modprobe.d/10-unsupported-"
+"modules.conf</filename> and change the value of the variable "
+"<varname>allow_unsupported_modules</varname> to <literal>1</literal>. If an "
+"unsupported module is needed in the initrd, do not forget to run "
+"<command>dracut</command> <option>-f</option> to update the initrd."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1685
+#, no-c-format
+msgid ""
+"If you only want to try loading a module once, you can use the <option>--"
+"allow-unsupported-modules</option> option with <command>modprobe</command>. "
+"For more information, see the <command>modprobe</command> man page."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1693
+#, no-c-format
+msgid ""
+"During installation, unsupported modules may be added through driver update "
+"disks, and they will be loaded. To enforce loading of unsupported modules "
+"during boot and afterward, use the Kernel command line option <option>oem-"
+"modules</option>. While installing and initializing the <systemitem class="
+"\"resource\">suse-module-tools</systemitem> package, the Kernel flag "
+"<literal>TAINT_NO_SUPPORT</literal> (<filename>/proc/sys/kernel/tainted</"
+"filename>) will be evaluated. If the Kernel is already tainted, "
+"<literal>allow_unsupported_modules</literal> will be enabled. This will "
+"prevent unsupported modules from failing in the system being installed. If "
+"no unsupported modules are present during installation and the other special "
+"Kernel command line option (<option>oem-modules=1</option>) is not used, the "
+"default still is to disallow unsupported modules."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1710
+#, no-c-format
+msgid ""
+"Remember that loading and running unsupported modules will make the Kernel "
+"and the whole system unsupported by &suse;."
+msgstr ""
+
+#. Tag: title
+#: adm_support.xml:1717
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1723
+#, no-c-format
+msgid ""
+"<command>man supportconfig</command>&mdash;The <command>supportconfig</"
+"command> man page."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1729
+#, no-c-format
+msgid ""
+"<command>man supportconfig.conf</command>&mdash;The man page of the "
+"supportconfig configuration file."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1735
+#, no-c-format
+msgid ""
+"<command>man scatool</command>&mdash;The <command>scatool</command> man page."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1741
+#, no-c-format
+msgid ""
+"<command>man scadb</command>&mdash;The <command>scadb</command> man page."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1746
+#, no-c-format
+msgid ""
+"<command>man setup-sca</command>&mdash;The <command>setup-sca</command> man "
+"page."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1752
+#, no-c-format
+msgid ""
+"<link xlink:href=\"https://mariadb.com/kb/en/\"></link>&mdash;The MariaDB "
+"documentation."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1758
+#, no-c-format
+msgid ""
+"<link xlink:href=\"http://httpd.apache.org/docs/\"></link> and <xref linkend="
+"\"cha.apache2\"/>&mdash;Documentation about the Apache Web server."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1765
+#, no-c-format
+msgid "&mdash;Documentation of how to set up an FTP server."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1771
+#, no-c-format
+msgid ""
+"<link xlink:href=\"http://www.suse.com/communities/conversations/sca-pattern-"
+"development/\"></link>&mdash;Instructions on how to create (and test) your "
+"own SCA patterns."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1777
+#, no-c-format
+msgid ""
+"<link xlink:href=\"http://www.suse.com/communities/conversations/basic-"
+"server-health-check-supportconfig/\"></link>&mdash;A Basic Server Health "
+"Check with Supportconfig."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1783
+#, no-c-format
+msgid ""
+"<link xlink:href=\"https://www.novell.com/communities/coolsolutions/"
+"cool_tools/create-your-own-supportconfig-plugin/\"></link>&mdash;Create Your "
+"Own Supportconfig Plugin."
+msgstr ""
+
+#. Tag: para
+#: adm_support.xml:1789
+#, no-c-format
+msgid ""
+"<link xlink:href=\"http://www.suse.com/communities/conversations/creating-a-"
+"central-supportconfig-repository/\"></link>&mdash;Creating a Central "
+"Supportconfig Repository."
+msgstr ""
+
+#. Tag: remark
+#: adm_support.xml:1794
+#, no-c-format
+msgid ""
+"taroth 2014-04-25: jrecord, should we still refer to the three articles "
+"above?"
+msgstr ""

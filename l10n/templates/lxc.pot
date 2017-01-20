@@ -1,0 +1,482 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: lxc.xml:33
+#, no-c-format
+msgid "Linux Containers"
+msgstr ""
+
+#. Tag: title
+#: lxc.xml:45
+#, no-c-format
+msgid "Setting Up &lxc; Distribution Containers"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:47
+#, no-c-format
+msgid ""
+"A container is a kind of <quote>virtual machine</quote> that can be started, "
+"stopped, frozen, or cloned (to name but a few tasks). To set up an &lxc; "
+"container, you first need to create a root file system containing the guest "
+"distribution:"
+msgstr ""
+
+#. Tag: title
+#: lxc.xml:55
+#, no-c-format
+msgid "Creating a Root File System"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:56
+#, no-c-format
+msgid ""
+"There is currently no GUI to create a root file system. You will thus need "
+"to open a terminal and use <command>virt-create-rootfs</command> as root to "
+"populate the new root file system. In the following steps, the new "
+"&rootuser; file system will be created in <replaceable>/path/to/rootfs</"
+"replaceable>."
+msgstr ""
+
+#. Tag: title
+#: lxc.xml:64
+#, no-c-format
+msgid "Registration Code Needed"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:65
+#, no-c-format
+msgid ""
+"<command>virt-create-rootfs</command> needs a registration code to set up a "
+"&productname; root file system."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:71
+#, no-c-format
+msgid "Run the <command>virt-create-rootfs</command> command:"
+msgstr ""
+
+#. Tag: screen
+#: lxc.xml:74
+#, no-c-format
+msgid ""
+"virt-create-rootfs --root <replaceable>/path/to/rootfs</replaceable> --"
+"distro SLES-12.0 -c <replaceable>registration code</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:77
+#, no-c-format
+msgid ""
+"Change the root path to the root file system with the <command>chroot</"
+"command> command:"
+msgstr ""
+
+#. Tag: screen
+#: lxc.xml:81
+#, no-c-format
+msgid "chroot <replaceable>/path/to/rootfs</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:84
+#, no-c-format
+msgid "Change the password for user &rootuser; with <command>passwd</command>."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:90
+#, no-c-format
+msgid ""
+"Create an <systemitem class=\"username\">operator</systemitem> user without "
+"&rootuser; privileges:"
+msgstr ""
+
+#. Tag: screen
+#: lxc.xml:94
+#, no-c-format
+msgid "useradd -m operator"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:97
+#, no-c-format
+msgid "Change the operator's password:"
+msgstr ""
+
+#. Tag: screen
+#: lxc.xml:100
+#, no-c-format
+msgid "passwd operator"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:103
+#, no-c-format
+msgid "Leave the chroot environment with <command>exit</command>."
+msgstr ""
+
+#. Tag: title
+#: lxc.xml:110
+#, no-c-format
+msgid "Defining the Container"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:112 lxc.xml:188
+#, no-c-format
+msgid "Start &vmm;."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:117 lxc.xml:193
+#, no-c-format
+msgid ""
+"If not already present, add a local LXC connection by clicking "
+"<menuchoice><guimenu>File</guimenu> <guimenu>Add Connection</guimenu></"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:122 lxc.xml:198
+#, no-c-format
+msgid ""
+"Select <guimenu>LXC (Linux Containers)</guimenu> as the hypervisor and click "
+"<guimenu>Connect</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:128 lxc.xml:204
+#, no-c-format
+msgid ""
+"Select the <guimenu>localhost (LXC)</guimenu> connection and click "
+"<guimenu>File</guimenu> <guimenu>New Virtual Machine</guimenu> menu."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:134
+#, no-c-format
+msgid ""
+"Activate <guimenu>Operating system container</guimenu> and click "
+"<guimenu>Forward</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:140
+#, no-c-format
+msgid ""
+"Type the path to the root file system from <xref linkend=\"pro.lxc.create-"
+"rootfs\"/> and click the <guimenu>Forward</guimenu> button."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:147
+#, no-c-format
+msgid ""
+"Choose the maximum amount of memory and CPUs to allocate to the container. "
+"Then click the <guimenu>Forward</guimenu> button."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:153 lxc.xml:227
+#, no-c-format
+msgid ""
+"Type in a name for the container. This name will be used for all "
+"<command>virsh</command> commands on the container."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:157
+#, no-c-format
+msgid ""
+"Click <guimenu>Advanced options</guimenu>. Select the network to connect the "
+"container to and click the <guimenu>Finish</guimenu> button: the container "
+"will then be created and started. A console will also be automatically "
+"opened."
+msgstr ""
+
+#. Tag: title
+#: lxc.xml:167
+#, no-c-format
+msgid "Container Network"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:168
+#, no-c-format
+msgid ""
+"To configure the container network, edit the <filename>/etc/sysconfig/"
+"network/ifcfg-*</filename> files. Make sure not to change the IPv6 setting: "
+"this would lead to errors while starting the network."
+msgstr ""
+
+#. Tag: title
+#: lxc.xml:177
+#, no-c-format
+msgid "Setting Up &lxc; Application Containers"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:179
+#, no-c-format
+msgid ""
+"Libvirt also allows to run single applications instead of full blown Linux "
+"distributions in containers. In this example, <command>bash</command> will "
+"be started in its own container."
+msgstr ""
+
+#. Tag: title
+#: lxc.xml:186
+#, no-c-format
+msgid "Defining an Application Container Using &yast;"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:210
+#, no-c-format
+msgid ""
+"Activate <guimenu>Application container</guimenu> and click "
+"<guimenu>Forward</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:214
+#, no-c-format
+msgid ""
+"Set the path to the application to be launched. As an example, the field is "
+"filled with <command>/bin/sh</command>, which is fine to create a first "
+"container. Click <guimenu>Forward</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:221
+#, no-c-format
+msgid ""
+"Choose the maximum amount of memory and CPUs to allocate to the container. "
+"Click <guimenu>Forward</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:231
+#, no-c-format
+msgid ""
+"Click <guimenu>Advanced options</guimenu>. Select the network to connect the "
+"container to and click <guimenu>Finish</guimenu>. The container will be "
+"created and started. A console will be opened automatically."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:237
+#, no-c-format
+msgid ""
+"Note that the container will be destroyed after the application has finished "
+"running."
+msgstr ""
+
+#. Tag: title
+#: lxc.xml:245
+#, no-c-format
+msgid "Securing a Container Using &aa;"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:247
+#, no-c-format
+msgid ""
+"By default, containers are not secured using &aa; or &selnx;. There is no "
+"graphical user interface to change the security model for a libvirt domain, "
+"but <command>virsh</command> will help."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:255
+#, no-c-format
+msgid "Edit the container XML configuration using virsh:"
+msgstr ""
+
+#. Tag: screen
+#: lxc.xml:258
+#, no-c-format
+msgid "virsh -c lxc:/// edit <replaceable>mycontainer</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:261
+#, no-c-format
+msgid ""
+"Add the following to the XML configuration, save it and exit the editor."
+msgstr ""
+
+#. Tag: screen
+#: lxc.xml:265
+#, no-c-format
+msgid ""
+"&lt;domain&gt;\n"
+"    ...\n"
+"    &lt;seclabel type=\"dynamic\" model=\"apparmor\"/&gt;\n"
+"    ...\n"
+"&lt;/domain&gt;"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:268
+#, no-c-format
+msgid ""
+"With this configuration, an &aa; profile for the container will be created "
+"in the <filename>/etc/apparmor.d/libvirt</filename> directory. The default "
+"profile only allows the minimum applications to run in the container. This "
+"can be changed by modifying the <filename>libvirt-<replaceable>container-"
+"uuid</replaceable></filename> file: this file is not overwritten by libvirt."
+msgstr ""
+
+#. Tag: title
+#: lxc.xml:280
+#, no-c-format
+msgid "Differences Between the libvirt LXC Driver and LXC"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:282
+#, no-c-format
+msgid ""
+"&sls; 11 SP3 was shipping LXC, while &sls; 12 comes with the libvirt LXC "
+"driver, sometimes named libvirt-lxc to avoid confusion. The containers are "
+"not managed or configured in the same way in these tools. Here is a non-"
+"exhaustive list of differences."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:289
+#, no-c-format
+msgid ""
+"The main difference is that domain configuration in libvirt is an XML file, "
+"while LXC configuration is a properties file. Most of the LXC properties can "
+"be mapped to the domain XML. The properties that cannot be migrated are:"
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:297
+#, no-c-format
+msgid ""
+"<emphasis>lxc.network.script.up</emphasis>: this script can be implemented "
+"using the <filename>/etc/libvirt/hooks/network</filename> libvirt hook, "
+"though the script will need to be adapted."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:304
+#, no-c-format
+msgid ""
+"<emphasis>lxc.network.ipv*</emphasis>: libvirt cannot set the container "
+"network configuration from the domain configuration."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:310
+#, no-c-format
+msgid ""
+"<emphasis>lxc.network.name</emphasis>: libvirt cannot set the container "
+"network card name."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:316
+#, no-c-format
+msgid ""
+"<emphasis>lxc.devttydir</emphasis>: libvirt does not allow changing the "
+"location of the console devices."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:322
+#, no-c-format
+msgid ""
+"<emphasis>lxc.console</emphasis>: there is currently no way to log the "
+"output of the console into a file on the host for libvirt LXC containers."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:329
+#, no-c-format
+msgid ""
+"<emphasis>lxc.pivotdir</emphasis>: libvirt does not allow to fine-tune the "
+"directory used for the <command>pivot_root</command>. <filename>/.olroot</"
+"filename> is used."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:336
+#, no-c-format
+msgid ""
+"<emphasis>lxc.rootfs.mount</emphasis>: libvirt does not allow to fine-tune "
+"this."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:343
+#, no-c-format
+msgid ""
+"&lxc; VLAN networks automatically create the VLAN interface on the host and "
+"then move it into the guest namespace. libvirt-lxc configuration can mention "
+"a VLAN tag ID only for &ovs; tap devices or PCI pass-through of SR-IOV VF. "
+"The conversion tool actually needs the user to manually create the VLAN "
+"interface on the host side."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:351
+#, no-c-format
+msgid ""
+"&lxc; rootfs can also be an image file, but LXC brute-forces the mount to "
+"try to detect the proper file system format. libvirt-lxc can mount image "
+"files of several formats, but the 'auto' value for the format parameter is "
+"explicitly not supported. This means that the generated configuration will "
+"need to be tweaked by the user to get a proper match in that case."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:360
+#, no-c-format
+msgid ""
+"&lxc; can support any cgroup configuration, even future ones, while libvirt "
+"domain configuration, needs to map each of them."
+msgstr ""
+
+#. Tag: para
+#: lxc.xml:365
+#, no-c-format
+msgid ""
+"&lxc; can mount block devices in the rootfs, but it cannot mount raw "
+"partition files: the file needs to be manually attached to a loop device. On "
+"the other hand libvirt-lxc can mount block devices, but also partition files "
+"of any format."
+msgstr ""
+
+#. Tag: title
+#: lxc.xml:374
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: term
+#: lxc.xml:378
+#, no-c-format
+msgid "&lxc; Container Driver"
+msgstr ""

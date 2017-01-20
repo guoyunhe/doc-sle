@@ -1,0 +1,291 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: sled_planning.xml:12
+#, no-c-format
+msgid "Planning for &sled;"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: sled_planning.xml:14
+#, no-c-format
+msgid "<dm:bugtracker> </dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:20
+#, no-c-format
+msgid ""
+"This chapter is addressed mainly to corporate system administrators who face "
+"the task of having to deploy &sledreg; at their site. Rolling out &sled; to "
+"an entire site should involve careful planning and consideration of the "
+"following questions:"
+msgstr ""
+
+#. Tag: term
+#: sled_planning.xml:28
+#, no-c-format
+msgid "For which purpose will the &sled; workstations be used?"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:30
+#, no-c-format
+msgid ""
+"Determine the purpose for which &sled; should be used and make sure that "
+"hardware and software with the ability to match these requirements are used. "
+"Consider testing your setup on a single machine before rolling it out to the "
+"entire site."
+msgstr ""
+
+#. Tag: term
+#: sled_planning.xml:39
+#, no-c-format
+msgid "How many workstations should be installed?"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:41
+#, no-c-format
+msgid ""
+"Determine the scope of your deployment of &sled;. Depending on the number of "
+"installations planned, consider different approaches to the installation or "
+"even a mass installation using &sle;s unique &ay; or &kiwi; technology."
+msgstr ""
+
+#. Tag: term
+#: sled_planning.xml:54
+#, no-c-format
+msgid "How do you get software updates for your deployment?"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:56
+#, no-c-format
+msgid ""
+"All patches provided by &suse; for your product are available for download "
+"to registered users at <link xlink:href=\"http://download.suse.com/\"></"
+"link>."
+msgstr ""
+
+#. Tag: term
+#: sled_planning.xml:64
+#, no-c-format
+msgid "Do you need help for your local deployment?"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:66
+#, no-c-format
+msgid ""
+"&suse; provides training, support, and consulting for all topics pertaining "
+"to &sled;. Find more information about this at <link xlink:href=\"http://www."
+"suse.com/products/desktop/\"></link>."
+msgstr ""
+
+#. Tag: title
+#: sled_planning.xml:75
+#, no-c-format
+msgid "Hardware Requirements"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:77
+#, no-c-format
+msgid ""
+"For a standard installation of &sled;, including the desktop environment and "
+"a wealth of applications, the following configuration is recommended:"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:85
+#, no-c-format
+msgid "Intel Pentium IV, 2.4 GHz or higher or any AMD64 or &intel64; processor"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:91
+#, no-c-format
+msgid "1&ndash;2 physical CPUs"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:96
+#, no-c-format
+msgid "512 MB physical RAM or higher"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:101
+#, no-c-format
+msgid "3 GB of available disk space or more"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:106
+#, no-c-format
+msgid "1024 x 768 display resolution (or higher)"
+msgstr ""
+
+#. Tag: title
+#: sled_planning.xml:113
+#, no-c-format
+msgid "Reasons to Use &sled;"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:115
+#, no-c-format
+msgid ""
+"Let the following items guide you in your selection of &sled; and "
+"determining the purpose of the installed systems:"
+msgstr ""
+
+#. Tag: term
+#: sled_planning.xml:122
+#, no-c-format
+msgid "Wealth of Applications"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:124
+#, no-c-format
+msgid ""
+"&sled;'s broad offer of software makes it appeal to both professional users "
+"in a corporate environment and to home users or users in smaller networks."
+msgstr ""
+
+#. Tag: term
+#: sled_planning.xml:132
+#, no-c-format
+msgid "Ease of Use"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:134
+#, no-c-format
+msgid ""
+"&sled; comes with the enterprise-ready desktop environment &gnome;. It "
+"enables users to comfortably adjust to a Linux system while maintaining "
+"their efficiency and productivity. <phrase os=\"sled\">To explore &gnome; in "
+"detail, refer to the <xref linkend=\"book.gnomeuser\"/>.</phrase>"
+msgstr ""
+
+#. Tag: term
+#: sled_planning.xml:144
+#, no-c-format
+msgid "Support for Mobile Users"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:146
+#, no-c-format
+msgid ""
+"With the NetworkManager technology fully integrated into &sled; and its two "
+"desktop environments, mobile users will enjoy the freedom of easily joining "
+"and switching wired and wireless networks."
+msgstr ""
+
+#. Tag: term
+#: sled_planning.xml:154
+#, no-c-format
+msgid "Seamless Integration into Existing Networks"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:156
+#, no-c-format
+msgid ""
+"&sled; was designed to be a versatile network citizen. It cooperates with "
+"various different network types:"
+msgstr ""
+
+#. Tag: title
+#: sled_planning.xml:161
+#, no-c-format
+msgid "Pure Linux Networks"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:162
+#, no-c-format
+msgid ""
+"&sled; is a complete Linux client and supports all the protocols used in "
+"traditional Linux and Unix* environments. It integrates well with networks "
+"consisting of other &suselinux; or &sle; machines. LDAP, NIS, and local "
+"authentication are supported."
+msgstr ""
+
+#. Tag: title
+#: sled_planning.xml:170
+#, no-c-format
+msgid "Windows Networks"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:171
+#, no-c-format
+msgid ""
+"&sled; supports Active Directory as an authentication source. It offers you "
+"all the advantages of a secure and stable Linux operating system plus "
+"convenient interaction with other Windows clients, as well as the means to "
+"manipulate your Windows user data from a Linux client. Explore this feature "
+"in detail in <xref linkend=\"cha.security.ad\"/>."
+msgstr ""
+
+#. Tag: title
+#: sled_planning.xml:181
+#, no-c-format
+msgid "Windows and Novell Networks"
+msgstr ""
+
+#. Tag: remark
+#: sled_planning.xml:185
+#, no-c-format
+msgid "2006-03-31 - jjaeger: not sure about the trademarking. What a mess!"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:186
+#, no-c-format
+msgid ""
+"Being backed by Novell and their networking expertise, &sled; naturally "
+"offers you support for Novell technologies, like GroupWise, Novell Client "
+"for Linux, and iPrint, and it also offers authentication support for Novell "
+"eDirectory services."
+msgstr ""
+
+#. Tag: remark
+#: sled_planning.xml:193
+#, no-c-format
+msgid "taroth 2014-05-09: not sure if this is all still valid..."
+msgstr ""
+
+#. Tag: term
+#: sled_planning.xml:199
+#, no-c-format
+msgid "Application Security with &aa;"
+msgstr ""
+
+#. Tag: para
+#: sled_planning.xml:201
+#, no-c-format
+msgid ""
+"&sled; enables you to secure your applications by enforcing security "
+"profiles tailor-made for your applications. To learn more about &aa;, refer "
+"to <link xlink:href=\"http://www.suse.com/documentation/apparmor/\"></link>."
+msgstr ""

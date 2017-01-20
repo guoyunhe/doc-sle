@@ -1,0 +1,583 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: smt_server.xml:9
+#, no-c-format
+msgid "&smt; Server Configuration"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:11
+#, no-c-format
+msgid ""
+"This chapter introduces the &yast; configuration module for the &smt; "
+"server. You can set and configure mirroring credentials, &smt; database "
+"passwords, and e-mail addresses to send SMT reports to. It also lets you set "
+"the &smt; job schedule, and activate or deactivate the &smt; service."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:18
+#, no-c-format
+msgid "To configure &smt; with &smt; Server Configuration, follow these steps:"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:23
+#, no-c-format
+msgid ""
+"Start the &yast; module <guimenu>SMT Server Configuration</guimenu> from the "
+"&yast; control center or by running <command>yast smt-server</command> on "
+"the command line."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:30
+#, no-c-format
+msgid ""
+"To activate &smt;, check the <guimenu>Enable Subscription Management Tool "
+"Service (SMT)</guimenu> option in the <guimenu>Customer Center Access</"
+"guimenu> tab. If you want to disable &smt;, uncheck this option. For more "
+"information about activating &smt; with &yast;, see <xref linkend=\"smt.yast."
+"activation\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:39
+#, no-c-format
+msgid ""
+"If the firewall is enabled, check <guimenu>Open Port in Firewall</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:45
+#, no-c-format
+msgid ""
+"In the <guimenu>Customer Center Configuration</guimenu> section of the "
+"<guimenu>Customer Center Access</guimenu> tab, you can set the custom server "
+"URLs. Set and test credentials for the SUSE Update service. Correct "
+"credentials are necessary to enable mirroring from the download server and "
+"determine the products that should be mirrored. Also set the e-mail address "
+"used for the registration and the URL of your &smt; server. For more "
+"information, see <xref linkend=\"smt.yast.credentials\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:55
+#, no-c-format
+msgid ""
+"In the <guimenu>Database and Reporting</guimenu> tab, set the password for "
+"the &smt; user in the MySQL database and enter the e-mail addresses where "
+"reports should be sent. For more information, see <xref linkend=\"smt.yast."
+"database\"/> and <xref linkend=\"smt.yast.reports\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:64
+#, no-c-format
+msgid ""
+"In the <guimenu>Scheduled SMT Jobs</guimenu> tab, set a schedule of periodic "
+"&smt; jobs, such as synchronization of updates, &scc; registration, and "
+"&smt; report generation. For more information, see <xref linkend=\"smt.yast."
+"scheduling\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:72
+#, no-c-format
+msgid ""
+"If satisfied with the configuration, click <guimenu>OK</guimenu>. &yast; "
+"adjusts the &smt; configuration and starts or restarts necessary services."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:77
+#, no-c-format
+msgid ""
+"If you want to abort the configuration and cancel any changes, click "
+"<guimenu>Cancel</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:82
+#, no-c-format
+msgid ""
+"When the &smt; Configuration applies configuration changes, it checks for "
+"the existence of the common server certificate. If the certificate does not "
+"exist, you will be asked if the certificate should be created."
+msgstr ""
+
+#. Tag: title
+#: smt_server.xml:91
+#, no-c-format
+msgid "Activating and Deactivating &smt; with &yast;"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:93
+#, no-c-format
+msgid ""
+"&yast; provides an easy way to activate or deactivate the &smt; service. To "
+"activate &smt; with &yast;, follow these steps:"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:100 smt_server.xml:131
+#, no-c-format
+msgid ""
+"Open the <guimenu>Customer Center Access</guimenu> tab of the &smt; "
+"Configuration."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:104
+#, no-c-format
+msgid ""
+"Check the <guimenu>Enable Subscription Management Tool service (SMT)</"
+"guimenu> option."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:109
+#, no-c-format
+msgid ""
+"If not already configured, organization credentials should be configured "
+"before activating &smt;. For more information about how to set organization "
+"credentials with &yast;, see <xref linkend=\"smt.yast.credentials\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:118 smt_server.xml:143
+#, no-c-format
+msgid ""
+"Click <guimenu>Finish</guimenu> to apply the changes and leave the &smt; "
+"Configuration."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:125
+#, no-c-format
+msgid "To deactivate &smt; with &yast;, follow these steps:"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:137
+#, no-c-format
+msgid ""
+"Uncheck the <guimenu>Enable Subscription Management Tool service (SMT)</"
+"guimenu> option."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:150
+#, no-c-format
+msgid ""
+"When activating &smt;, the following important operations are performed by "
+"&yast;:"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:157
+#, no-c-format
+msgid ""
+"The Apache configuration is changed by creating symbolic links in the "
+"<filename>/etc/apache2/conf.d/</filename> directory. Links to the <filename>/"
+"etc/smt.d/nu_server.conf</filename> and <filename>/etc/smt.d/smt_mod_perl."
+"conf</filename> files are created there."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:166
+#, no-c-format
+msgid "The Apache Web server is started (or reloaded if already running)."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:171
+#, no-c-format
+msgid ""
+"The &mariadb; server is started (or reloaded if already running). The smt "
+"user and all necessary tables in the database are created as needed."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:177
+#, no-c-format
+msgid ""
+"The schema of the &smt; database is checked. If the database schema is "
+"outdated, the &smt; database is upgraded to conform to the current schema."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:184
+#, no-c-format
+msgid ""
+"Cron is adjusted by creating a symbolic link in the <filename>/etc/cron.d/</"
+"filename> directory. A link to the <filename>/etc/smt.d/novell.com-smt</"
+"filename> file is created there."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:192
+#, no-c-format
+msgid ""
+"When deactivating &smt;, the following important operations are performed by "
+"&yast;:"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:199
+#, no-c-format
+msgid ""
+"Symbolic links created upon &smt; activation in the <filename>/etc/apache2/"
+"conf.d/</filename> and <filename>/etc/cron.d/</filename> directories are "
+"deleted."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:206
+#, no-c-format
+msgid ""
+"The Cron daemon, the Apache server and the MySQL database daemon are "
+"reloaded. Neither Apache nor MySQL are stopped, because they may be used for "
+"other purposes than the &smt; service."
+msgstr ""
+
+#. Tag: title
+#: smt_server.xml:215 smt_server.xml:223
+#, no-c-format
+msgid "Setting the Update Server Credentials with &yast;"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:217
+#, no-c-format
+msgid ""
+"&yast; provides an interface to set and test the download server credentials "
+"and the URL of the download server service. To do so, follow these steps:"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:236
+#, no-c-format
+msgid ""
+"Open the <guimenu>Customer Center Access</guimenu> tab of the &smt; "
+"Configuration. If the credentials have been already set with &yast; or the "
+"<filename>/etc/smt.conf</filename> configuration file, they appear in the "
+"dialog. Otherwise, the <guimenu>User</guimenu> and <guimenu>Password</"
+"guimenu> fields are blank."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:245
+#, no-c-format
+msgid ""
+"If you do not have your credentials, visit &scc; to obtain them. For more "
+"details, see <xref linkend=\"smt.mirroring.getcredentials\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:251
+#, no-c-format
+msgid ""
+"Enter your user name in <guimenu>User</guimenu> and the corresponding "
+"password in <guimenu>Password</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:257
+#, no-c-format
+msgid ""
+"Click <guimenu>Test</guimenu> to check the credentials. &yast; will try to "
+"download a list of available repositories with the provided credentials. If "
+"the test succeeds, the last line of the test results will read <literal>Test "
+"result: success</literal>. If the test fails, check the provided credentials "
+"and try again."
+msgstr ""
+
+#. Tag: title
+#: smt_server.xml:268
+#, no-c-format
+msgid "Successful Test of the Update Server Credentials"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:280
+#, no-c-format
+msgid ""
+"Enter the <guimenu>SCC E-mail Used for Registration</guimenu>. This should "
+"be the address you used to register to &scc;."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:284
+#, no-c-format
+msgid ""
+"Enter <guimenu>Your SMT Server URL</guimenu> if it has not been detected "
+"automatically."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:290 smt_server.xml:346
+#, no-c-format
+msgid "Click <guimenu>OK</guimenu> or continue with other configurations."
+msgstr ""
+
+#. Tag: title
+#: smt_server.xml:297
+#, no-c-format
+msgid "Setting &smt; Database Password with &yast;"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:299
+#, no-c-format
+msgid ""
+"For security reasons, &smt; uses its own user in the database. &yast; "
+"provides an interface for setting up or changing the &smt; database "
+"password. To set or change the &smt; database password with &yast;, follow "
+"these steps:"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:308
+#, no-c-format
+msgid ""
+"Open the <guimenu>Database and Reporting</guimenu> tab of the &smt; "
+"Configuration module."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:315
+#, no-c-format
+msgid ""
+"Enter the <guimenu>Database Password for &smt; User</guimenu>. Confirm the "
+"password by re-entering it and click <guimenu>OK</guimenu>, or continue with "
+"other configurations."
+msgstr ""
+
+#. Tag: title
+#: smt_server.xml:323
+#, no-c-format
+msgid "Setting E-mail Addresses to Receive Reports with &yast;"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:325
+#, no-c-format
+msgid ""
+"&yast; &smt; provides an interface for setting up a list of e-mail addresses "
+"to which &smt; reports will be sent. To edit this list of addresses, follow "
+"these steps:"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:333
+#, no-c-format
+msgid ""
+"Open the <guimenu>Database and Reporting</guimenu> tab of the &smt; "
+"Configuration."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:339
+#, no-c-format
+msgid ""
+"The list of e-mail addresses is shown in the table. You can <guimenu>Add</"
+"guimenu>, <guimenu>Edit</guimenu>, or <guimenu>Delete</guimenu> addresses "
+"with the relevant buttons."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:352
+#, no-c-format
+msgid ""
+"The comma-separated list of addresses for &smt; reports is written to the "
+"<option>reportEmail</option> option of the <filename>/etc/smt.conf</"
+"filename> configuration file."
+msgstr ""
+
+#. Tag: title
+#: smt_server.xml:359
+#, no-c-format
+msgid "Setting the &smt; Job Schedule with &yast;"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:361
+#, no-c-format
+msgid ""
+"The &smt; Configuration module provides an interface to schedule periodic "
+"&smt; jobs. &yast; uses <literal>cron</literal> to schedule configured jobs. "
+"If needed, <literal>cron</literal> can be used directly. Five types of "
+"periodic jobs can be set:"
+msgstr ""
+
+#. Tag: term
+#: smt_server.xml:368
+#, no-c-format
+msgid "Synchronization of Updates"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:370
+#, no-c-format
+msgid ""
+"Synchronizes with &scc;, updates repositories, and downloads new updates."
+msgstr ""
+
+#. Tag: term
+#: smt_server.xml:377
+#, no-c-format
+msgid "Generation of Reports"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:379
+#, no-c-format
+msgid ""
+"Generates and sends &smt; Subscription Reports to addresses defined in <xref "
+"linkend=\"smt.yast.reports\"/>."
+msgstr ""
+
+#. Tag: term
+#: smt_server.xml:386
+#, no-c-format
+msgid "SCC Registration"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:388
+#, no-c-format
+msgid ""
+"Registers all clients to &scc; that are not already registered or that "
+"changed their data since the last registration."
+msgstr ""
+
+#. Tag: term
+#: smt_server.xml:395
+#, no-c-format
+msgid "Job Queue Cleanup"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:397
+#, no-c-format
+msgid ""
+"Cleans up queued jobs. It will remove finished or failed jobs from the job "
+"queue that are older than 8 days and remove job artifacts that remained in "
+"the database as result of an error."
+msgstr ""
+
+#. Tag: title
+#: smt_server.xml:407
+#, no-c-format
+msgid "&smt; Job Schedule Configuration"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:418
+#, no-c-format
+msgid ""
+"To configure the schedule of &smt; jobs with &yast;, follow these steps:"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:424
+#, no-c-format
+msgid ""
+"Open the <guimenu>Scheduled SMT Jobs</guimenu> tab of the &smt; "
+"Configuration. The table contains a list of all scheduled jobs, their type, "
+"frequency, date, and time to run. You can add, delete or edit these "
+"scheduled events."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:432
+#, no-c-format
+msgid ""
+"If you want to add a scheduled &smt; job, click <guimenu>Add</guimenu>. The "
+"<guimenu>Adding New SMT Scheduled Job</guimenu> dialog opens."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:436
+#, no-c-format
+msgid ""
+"Choose the synchronization job to schedule. You can choose between "
+"<guimenu>Synchronization of Updates</guimenu>, <guimenu>Report Generation</"
+"guimenu>, <guimenu>SCC Registration</guimenu>, and <guimenu>Job Queue "
+"Cleanup</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:442
+#, no-c-format
+msgid ""
+"Choose the <guimenu>Frequency</guimenu> of the new scheduled &smt; job. Jobs "
+"can be performed <guimenu>Daily</guimenu>, <guimenu>Weekly</guimenu>, "
+"<guimenu>Monthly</guimenu>, or <guimenu>Periodically</guimenu> (every n-th "
+"hour or every m-th minute)."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:448
+#, no-c-format
+msgid ""
+"Set the <guimenu>Job Start Time</guimenu> by entering <guimenu>Hour</"
+"guimenu> and <guimenu>Minute</guimenu>. In case of periodic frequency, enter "
+"the relevant periods. For weekly and monthly schedules, select <guimenu>Day "
+"of the Week</guimenu> or <guimenu>Day of the Month</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:453
+#, no-c-format
+msgid "Click <guimenu>Add</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:456
+#, no-c-format
+msgid ""
+"If you want to edit a scheduled &smt; job (for example, change its "
+"frequency, time, or date), select the job in the table and click "
+"<guimenu>Edit</guimenu>. Then change the desired parameters and click "
+"<guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: smt_server.xml:463
+#, no-c-format
+msgid "Setting Scheduled Job with &yast;"
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:475
+#, no-c-format
+msgid ""
+"If you want to cancel a scheduled job and delete it from the table, select "
+"the job in the table and click <guimenu>Delete</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: smt_server.xml:481
+#, no-c-format
+msgid ""
+"Click <guimenu>OK</guimenu> to apply the settings and quit the &smt; "
+"Configuration, or continue with other configurations."
+msgstr ""

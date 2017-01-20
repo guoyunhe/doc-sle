@@ -1,0 +1,371 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: apps_pidgin.xml:12
+#, no-c-format
+msgid "Pidgin: Instant Messaging"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: apps_pidgin.xml:14
+#, no-c-format
+msgid "<dm:bugtracker> </dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:20
+#, no-c-format
+msgid ""
+"Pidgin is an instant messaging (IM) client that allows you to connect to "
+"multiple accounts simultaneously. Chat live with your contacts in one tabbed "
+"interface, regardless of which IM system they use."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:26
+#, no-c-format
+msgid ""
+"Pidgin supports the following instant messaging protocols: AOL&ast; Instant "
+"Messenger (AIM), Bonjour, Gadu-Gadu, Google&ast; Talk, GroupWise&reg; "
+"Messenger, ICQ&ast;, IRC, Jabber/XMPP, Microsoft Lync&ast;/Office "
+"Communicator&ast;, MSN&ast; Messenger, MXit, MySpace&ast; IM, <remark>Not "
+"sure if MySpace IM still works: there still is a chat function, but the "
+"Windows app has been discontinued - sknorr, 2015-09-22 </remark> QQ, SIMPLE, "
+"Yahoo!&ast;, and Zephyr&ast;. Pidgin supports many features of the various "
+"networks, such as file transfers, away messages, and typing notifications."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:39
+#, no-c-format
+msgid ""
+"In the following, learn how to set up Pidgin and how to communicate with "
+"your contacts."
+msgstr ""
+
+#. Tag: title
+#: apps_pidgin.xml:45
+#, no-c-format
+msgid "Pidgin May Not Be Installed"
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:46
+#, no-c-format
+msgid ""
+"Before proceeding, make sure that the package <package>pidgin</package> is "
+"installed."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:50
+#, no-c-format
+msgid ""
+"To chat with users of Microsoft Lync and Microsoft Office Communicator, make "
+"sure that the package <package>pidgin-sipe</package> is installed."
+msgstr ""
+
+#. Tag: title
+#: apps_pidgin.xml:57
+#, no-c-format
+msgid "Starting Pidgin"
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:59 apps_pidgin.xml:80
+#, no-c-format
+msgid ""
+"To start Pidgin, select <menuchoice><guimenu>Applications</"
+"guimenu><guimenu>Internet</guimenu> <guimenu>Pidgin</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: apps_pidgin.xml:68
+#, no-c-format
+msgid "Configuring Accounts"
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:70
+#, no-c-format
+msgid ""
+"To use Pidgin, you must already have accounts on the systems you want to "
+"use. For example, to use Pidgin for your AIM account, you must first have an "
+"AIM account. Once you have those accounts, set them up in the Pidgin "
+"<guimenu>Add Account</guimenu> dialog."
+msgstr ""
+
+#. Tag: title
+#: apps_pidgin.xml:78
+#, no-c-format
+msgid "Adding and Editing Accounts"
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:85
+#, no-c-format
+msgid ""
+"If you start Pidgin for the first time, a message appears, prompting you to "
+"configure an account. Otherwise, Pidgin opens the Buddy List window, showing "
+"your contacts."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:92
+#, no-c-format
+msgid ""
+"To add or edit an account from the Buddy List, select <menuchoice> "
+"<guimenu>Accounts</guimenu> <guimenu>Manage Accounts</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:99
+#, no-c-format
+msgid ""
+"In the <guimenu>Accounts</guimenu> dialog, click <guimenu>Add</guimenu> to "
+"add a new account or select an existing account and click <guimenu>Modify</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:106
+#, no-c-format
+msgid ""
+"On the <guimenu>Basic</guimenu> tab, select the protocol. The dialog to add "
+"or modify accounts differs for each protocol, depending on what setup "
+"options are available for that protocol."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:123
+#, no-c-format
+msgid ""
+"Enter the data you received when you registered with the messaging service. "
+"This usually consists of the user name or e-mail address and a password."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:128
+#, no-c-format
+msgid ""
+"Your protocol might also support additional options, such as a buddy icon, "
+"alias, login options, or others."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:134
+#, no-c-format
+msgid ""
+"Often the correct server data is now already set up. However, if you are "
+"configuring a Bonjour, Jabber, Groupwise, IRC, Microsoft Lync/Office "
+"Communicator, SIMPLE, or ZEPHYR account, you will need to add server or "
+"personal data."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:140
+#, no-c-format
+msgid ""
+"On the <guimenu>Advanced</guimenu> tab, enter the data you got from your "
+"<phrase os=\"sled;sles\">system administrator or</phrase> messaging service."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:148
+#, no-c-format
+msgid ""
+"Click <guimenu>Add</guimenu> (new account) or <guimenu>Save</guimenu> "
+"(modified account)."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:154
+#, no-c-format
+msgid ""
+"Repeat this procedure to add accounts for each additional protocol you want "
+"to use."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:161
+#, no-c-format
+msgid ""
+"After an account is added, you can log in to that account by entering your "
+"password in the Pidgin login dialog."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:165
+#, no-c-format
+msgid ""
+"Use the <guimenu>Accounts</guimenu> menu to view and enable or disable "
+"accounts that you have configured."
+msgstr ""
+
+#. Tag: title
+#: apps_pidgin.xml:172
+#, no-c-format
+msgid "Managing Contacts"
+msgstr ""
+
+#. Tag: remark
+#: apps_pidgin.xml:174
+#, no-c-format
+msgid ""
+"Ugh. \"Buddy\" is a horrible word, especially in enterprise documentation. "
+"Luckily, in Empathy, this is called the \"roster\", not the \"buddy list.\" "
+"- sknorr, 2015-09-22"
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:178
+#, no-c-format
+msgid ""
+"Use the Buddy List to manage your contacts, also known as buddies. You can "
+"add and remove buddies from your Buddy List. You can also organize your "
+"buddies in groups, so they are easy to find."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:184
+#, no-c-format
+msgid ""
+"After your accounts are set up, all buddies who are online appear in your "
+"Buddy List. If you want buddies who are not online to appear in the Buddy "
+"List, click <menuchoice> <guimenu>Buddies</guimenu> <guimenu>Show</guimenu> "
+"<guimenu>Offline Buddies</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: apps_pidgin.xml:192
+#, no-c-format
+msgid "Pidgin Buddy List"
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:203
+#, no-c-format
+msgid ""
+"To add a buddy to your Buddy List, click <menuchoice> <guimenu>Buddies</"
+"guimenu> <guimenu>Add Buddy</guimenu> </menuchoice>, then enter the "
+"information about that buddy."
+msgstr ""
+
+#. Tag: title
+#: apps_pidgin.xml:210
+#, no-c-format
+msgid "Adding Contacts for Certain Protocols"
+msgstr ""
+
+#. Tag: remark
+#: apps_pidgin.xml:212
+#, no-c-format
+msgid "Which protocols? - sknorr, 2015-09-23"
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:212
+#, no-c-format
+msgid ""
+"For some protocols, you cannot add a buddy in the Pidgin interface. You must "
+"use the official client for those protocols if you want to add to your buddy "
+"list. After you have added a buddy in the protocol’s client, that buddy "
+"appears in your Buddy List."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:221
+#, no-c-format
+msgid ""
+"To remove a buddy from the list of contacts, right-click the name of that "
+"buddy in the Buddy List and click <guimenu>Remove</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apps_pidgin.xml:227
+#, no-c-format
+msgid "Chatting with Friends"
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:229
+#, no-c-format
+msgid ""
+"To chat with other participants, you need to be connected to the Internet. "
+"After a successful login, you are usually marked as <guimenu>Available</"
+"guimenu> in the Buddy List, and thus visible to others. To change your "
+"status, click the drop-down box at the bottom of the Buddy List and select "
+"another option."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:237
+#, no-c-format
+msgid ""
+"To open a chat session, double-click a buddy name in the Buddy List. The "
+"Chat screen opens. Type your message, then press <keycap function=\"enter"
+"\"></keycap> to send."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:243
+#, no-c-format
+msgid ""
+"If you open more than one chat session, the new session appears as a tab in "
+"the existing Chat window. To see all messages of a session and to be able to "
+"write a reply, click the tab of that session. To see multiple session side "
+"by side, use the mouse to drag a tab out of the window. A second window will "
+"open."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:252
+#, no-c-format
+msgid "To close a chat session, close the tab or window for it."
+msgstr ""
+
+#. Tag: title
+#: apps_pidgin.xml:257
+#, no-c-format
+msgid "Pidgin Chat Session"
+msgstr ""
+
+#. Tag: title
+#: apps_pidgin.xml:269
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:271
+#, no-c-format
+msgid ""
+"This chapter explained the Pidgin options you need to know about to set up "
+"Pidgin and communicate with your contacts. It does not explain all features "
+"and options of Pidgin. For more information, open Pidgin, then click "
+"<menuchoice><guimenu>Help</guimenu><guimenu>Online Help</guimenu> </"
+"menuchoice> or press <keycap>F1</keycap>."
+msgstr ""
+
+#. Tag: para
+#: apps_pidgin.xml:280
+#, no-c-format
+msgid ""
+"For updates about new features and for the latest information, refer to the "
+"home page of the project at <link xlink:href=\"http://www.pidgin.im\"></"
+"link>."
+msgstr ""

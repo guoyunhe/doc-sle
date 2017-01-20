@@ -1,0 +1,887 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: deployment_docupdates.xml:16
+#, no-c-format
+msgid "Documentation Updates"
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:23
+#, no-c-format
+msgid "This chapter lists content changes for this document."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:26
+#, no-c-format
+msgid "This manual was updated on the following dates:"
+msgstr ""
+
+#. Tag: title
+#: deployment_docupdates.xml:62
+#, no-c-format
+msgid "?? 2017 (Maintenance Release of &productname; 12 SP2)"
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:73
+#, no-c-format
+msgid ""
+"Mentioned possibility of using <filename>susehmc.ins</filename> (<link xlink:"
+"href=\"https://bugzilla.suse.com/show_bug.cgi?id=1009081\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:87
+#, no-c-format
+msgid ""
+"Added link to Modules Life Cycles website (<link xlink:href=\"https://"
+"bugzilla.suse.com/show_bug.cgi?id=1014266\"></link>)."
+msgstr ""
+
+#. Tag: term
+#: deployment_docupdates.xml:96 deployment_docupdates.xml:296
+#: deployment_docupdates.xml:557 deployment_docupdates.xml:679
+#: deployment_docupdates.xml:979
+#, no-c-format
+msgid "Bugfixes"
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:100
+#, no-c-format
+msgid ""
+"Explicitly advised not to specify other repositories with the self-update "
+"parameter than the installer self-update one. In addition, specified how to "
+"enable such repository in SMT (<link xlink:href=\"https://bugzilla.suse.com/"
+"show_bug.cgi?id=1015481\"></link>)."
+msgstr ""
+
+#. Tag: title
+#: deployment_docupdates.xml:113
+#, no-c-format
+msgid "November 2016 (Initial Release of &productname; 12 SP2)"
+msgstr ""
+
+#. Tag: term
+#: deployment_docupdates.xml:121
+#, no-c-format
+msgid "General Changes to this Guide"
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:125
+#, no-c-format
+msgid ""
+"The complete guide has been revised, restructured, and flattened (Fate "
+"#319115)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:131
+#, no-c-format
+msgid "has been added (Fate #318444)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:145
+#, no-c-format
+msgid ""
+"Updates and corrections on installation with Kimchi (<link xlink:href="
+"\"https://bugzilla.suse.com/show_bug.cgi?id=979054\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:150 deployment_docupdates.xml:175
+#, no-c-format
+msgid "linuxrc now suggests default values (Fate #318453)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:155 deployment_docupdates.xml:180
+#: deployment_docupdates.xml:306
+#, no-c-format
+msgid ""
+"Added documentation for installing KVM guests on IBM &zseries; (<link xlink:"
+"href=\"https://bugzilla.suse.com/show_bug.cgi?id=958733\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:170
+#, no-c-format
+msgid "linuxrc no longer asks for a portname (Fate #320112)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:195
+#, no-c-format
+msgid ""
+"Added a tip on how to access network storage to <xref linkend=\"sec.i.yast2."
+"network\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:202
+#, no-c-format
+msgid ""
+"Dialog options for creating an encrypted LVM file system (<xref linkend="
+"\"sec.i.yast2.inst_mode.partitioning\"/>) have changed (Fate #320418)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:210
+#, no-c-format
+msgid ""
+"Added a note on <literal>cio_ignore</literal> to <xref linkend=\"sec.s390."
+"inst.reipl\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:217
+#, no-c-format
+msgid ""
+"The <guimenu>Receive System Mail</guimenu> has been removed from the "
+"<guimenu>Add User</guimenu> dialog (Fate #320448)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:223
+#, no-c-format
+msgid "Added <xref linkend=\"sec.i.yast.start.parameters.self_update\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:228
+#, no-c-format
+msgid ""
+"zKVM machines are shut down at the end of the installation (<link xlink:href="
+"\"https://bugzilla.suse.com/show_bug.cgi?id=992081\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:242
+#, no-c-format
+msgid ""
+"Updated list of modules <xref linkend=\"sec.update.nmm.repositories\"/> "
+"(Fate #320579)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:257
+#, no-c-format
+msgid ""
+"Added <xref linkend=\"sec.update.prep.ssl\"/> (<link xlink:href=\"https://"
+"bugzilla.suse.com/show_bug.cgi?id=970153\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:262
+#, no-c-format
+msgid ""
+"Added a conceptual overview and mentioned additional migration strategies "
+"(<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?id=968195\"></"
+"link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:269
+#, no-c-format
+msgid ""
+"Added <xref linkend=\"sec.update.reg.status.after.rollback\"/> (Fate "
+"#319118)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:275
+#, no-c-format
+msgid ""
+"Added <xref linkend=\"sec.update.prep.smt\"/> (<link xlink:href=\"https://"
+"bugzilla.suse.com/show_bug.cgi?id=944342\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:280
+#, no-c-format
+msgid ""
+"Implemented a notice to make sure a service pack migration is not performed "
+"with insufficient disk space (Fate #317784, see <xref linkend=\"sec.update."
+"disk\"/>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:287
+#, no-c-format
+msgid ""
+"Mentioned that during installation, an installation resource is added and "
+"removed afterward (Fate #320494)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:300
+#, no-c-format
+msgid ""
+"Removed link (<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
+"id=972355\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:312
+#, no-c-format
+msgid ""
+"Added note about where to place <filename>/boot</filename> for an LVM root "
+"file system (<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
+"id=1000631\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:319
+#, no-c-format
+msgid ""
+"Added more information about rolling back a service pack (<link xlink:href="
+"\"https://bugzilla.suse.com/show_bug.cgi?id=1001070\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:325
+#, no-c-format
+msgid ""
+"Added recommendations for the case of running an update from within a GNOME "
+"session (<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
+"id=1001684 \"></link>)."
+msgstr ""
+
+#. Tag: title
+#: deployment_docupdates.xml:336
+#, no-c-format
+msgid "March 2016 (Maintenance Release of &productname; 12 SP1)"
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:347
+#, no-c-format
+msgid ""
+"Mentioned requirement for a local X server and instructions for Microsoft "
+"Windows (<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
+"id=956059\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:354
+#, no-c-format
+msgid ""
+"Renamed <command>zpxe.exec</command> to <command>zpxe.rexx</command> and "
+"rephrased sentence regarding correct place (<link xlink:href=\"https://"
+"bugzilla.suse.com/show_bug.cgi?id=867809\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:361
+#, no-c-format
+msgid ""
+"Added note about z/VM 6.3 regarding installation of APAR VM65419 (<link "
+"xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?id=958054\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:375
+#, no-c-format
+msgid ""
+"Distinguished between remote and local repository more clearly (<link xlink:"
+"href=\"https://bugzilla.suse.com/show_bug.cgi?id=956058\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:381
+#, no-c-format
+msgid ""
+"Added note about reformatting partitions with <command>mkswap</command>, "
+"because initrd image cannot boot up when swap partition has changed (<link "
+"xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?id=955822\"></link>)."
+msgstr ""
+
+#. Tag: title
+#: deployment_docupdates.xml:394
+#, no-c-format
+msgid "December 2015 (Initial Release of &productname; 12 SP1)"
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:408
+#, no-c-format
+msgid ""
+"Removed pointers to the <guimenu>Failsafe</guimenu> boot option, which has "
+"been removed (Fate #317016)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:423
+#, no-c-format
+msgid "Added installation instruction for KVM guests (Fate #319264)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:428
+#, no-c-format
+msgid "Added <xref linkend=\"sec.prep.boot_procedure\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:442
+#, no-c-format
+msgid ""
+"Added <xref linkend=\"sec.i.yast2.start.parameters.proxy\"/> (Fate #318488)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:448
+#, no-c-format
+msgid ""
+"Added a warning on using unsigned drivers in secure boot mode to <xref "
+"linkend=\"sec.i.yast2.bootscreen_uefi\"/> (Fate #317593)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:463
+#, no-c-format
+msgid "Added <xref linkend=\"sec.y2.sw.deps.recommends\"/> (Fate #318099)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:477
+#, no-c-format
+msgid ""
+"Updated chapter to reflect the software changes to the former &yast; "
+"<guimenu>&scc; Configuration</guimenu> dialog (now called <guimenu>Product "
+"Registration</guimenu>) and the &yast; <guimenu>Add-On Products</guimenu> "
+"module (Fate #318800)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:494
+#, no-c-format
+msgid ""
+"Mentioned that subvolumes for <filename>/var/lib/mariadb</filename>, "
+"<filename>/var/lib/pgsql</filename>, and <filename>/var/lib/libvirt/images</"
+"filename> are created with the option <literal>no copy on write</literal> by "
+"default to avoid extensive fragmenting with Btrfs."
+msgstr ""
+
+#. Tag: term
+#: deployment_docupdates.xml:506 deployment_docupdates.xml:965
+#, no-c-format
+msgid "Subscription Management"
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:510
+#, no-c-format
+msgid ""
+"The chapter about registering clients at a &smtool; server has been replaced "
+"by <xref linkend=\"smt.client\" xrefstyle=\"select:title\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:525
+#, no-c-format
+msgid ""
+"Split former update chapter into several independent chapters and combined "
+"them under this new part."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:531
+#, no-c-format
+msgid ""
+"Removed &yast; Wagon chapter, as &yast; Wagon is unsupported for "
+"&productname; &productnumber;."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:537
+#, no-c-format
+msgid "Added new chapter: <xref linkend=\"cha.update.spmigration\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:542
+#, no-c-format
+msgid ""
+"Added <xref linkend=\"sec.update.prep.mariadb\"/> and <xref linkend=\"sec."
+"update.prep.postgresql\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:548
+#, no-c-format
+msgid ""
+"Integrated various new features: Fate #315161, Fate #318636, Fate #319128, "
+"Fate #319129, Fate #319138, Fate #319140."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:561
+#, no-c-format
+msgid ""
+"Fixed path to <filename>zpxe.exec</filename> (<link xlink:href=\"https://"
+"bugzilla.suse.com/show_bug.cgi?id=937511\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:567
+#, no-c-format
+msgid ""
+"Added the <literal>https</literal> protocol to <xref linkend=\"sec.appdendix."
+"parm.yast2\"/> (<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
+"id=951421\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:575
+#, no-c-format
+msgid ""
+"Consistent use of <command>yast</command>, <command>yast2.ssh</command>, "
+"<command>yast.ssh</command> for SSH based installation (<link xlink:href="
+"\"https://bugzilla.suse.com/show_bug.cgi?id=956060\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:583
+#, no-c-format
+msgid ""
+"Consistent spelling of boot parameters (<link xlink:href=\"https://bugzilla."
+"suse.com/show_bug.cgi?id=956054\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:589
+#, no-c-format
+msgid ""
+"PowerKVM: virt-install does not know about SLES12 (<link xlink:href="
+"\"https://bugzilla.suse.com/show_bug.cgi?id=880918\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:595
+#, no-c-format
+msgid ""
+"IBM &ppc;: Starting an X-Server after an Upgrade (<link xlink:href=\"https://"
+"bugzilla.suse.com/show_bug.cgi?id=948980\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:601
+#, no-c-format
+msgid ""
+"Added documentation on the boot process for IBM &zseries; (<link xlink:href="
+"\"https://bugzilla.suse.com/show_bug.cgi?id=942772\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:607
+#, no-c-format
+msgid ""
+"Description of encrypted <filename>/</filename> and <filename>/boot</"
+"filename> on Btrfs was missing. Added an important note in <xref linkend="
+"\"sec.i.yast2.inst_mode.partitioning\"/> and <xref linkend=\"yast2.btrfs\"/> "
+"(<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?id=926951\"></"
+"link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:617
+#, no-c-format
+msgid ""
+"Zypper multiversion kernels should be mentioned for SP2 Update (<link xlink:"
+"href=\"https://bugzilla.suse.com/show_bug.cgi?id=753809\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:624
+#, no-c-format
+msgid ""
+"SLES 12 Deployment Guide errors for zPXE installations (<link xlink:href="
+"\"https://bugzilla.suse.com/show_bug.cgi?id=944384\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:630
+#, no-c-format
+msgid ""
+"AutoYaST hangs at \"Configuring Bootloader ... 50%\" with 512RAM (<link "
+"xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?id=927237\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:636
+#, no-c-format
+msgid ""
+"Netsetup Parameters Wrong (<link xlink:href=\"https://bugzilla.suse.com/"
+"show_bug.cgi?id=928792\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:642
+#, no-c-format
+msgid ""
+"Documentation on not creating /usr as separate partition is missing (<link "
+"xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?id=930267\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:648
+#, no-c-format
+msgid ""
+"Document how to enable SELinux during install (<link xlink:href=\"https://"
+"bugzilla.suse.com/show_bug.cgi?id=928158\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:654
+#, no-c-format
+msgid ""
+"YaST boot loader: supported scenarios needs updating clarification (<link "
+"xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?id=939197\"></link>)."
+msgstr ""
+
+#. Tag: title
+#: deployment_docupdates.xml:665
+#, no-c-format
+msgid "February 2015 (Documentation Maintenance Update)"
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:672
+#, no-c-format
+msgid ""
+"With NTP disabled it is recommended to avoid writing system time to the "
+"hardware clock. Thus set <literal>SYSTOHC=no</literal>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:683
+#, no-c-format
+msgid ""
+"Adjustments for SMT because of the switch from &ncc; to &scc; (<link xlink:"
+"href=\"https://bugzilla.suse.com/show_bug.cgi?id=857639\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:689
+#, no-c-format
+msgid ""
+": Password Settings, Expiration Date is expiring user accounts in &yast; "
+"Users module (<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
+"id=743874\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:696
+#, no-c-format
+msgid "Various bugfixes for <xref linkend=\"cha.update.sle\"/>:"
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:701
+#, no-c-format
+msgid ""
+"The named upgrade path does not work, there is no working upgrade path from "
+"SLES 11 SP3 to SLES 12 on Linux for System z (<link xlink:href=\"https://"
+"bugzilla.suse.com/show_bug.cgi?id=907648\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:707
+#, no-c-format
+msgid ""
+"The Atomic Update (<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
+"id=905330\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:713
+#, no-c-format
+msgid ""
+"Upgrading to SLE 12 (<link xlink:href=\"https://bugzilla.suse.com/show_bug."
+"cgi?id=904188\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:719
+#, no-c-format
+msgid ""
+"Intermediate step: Updating SLE 11 SP2 to SLE 11 SP3 (<link xlink:href="
+"\"https://bugzilla.suse.com/show_bug.cgi?id=904186\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:725
+#, no-c-format
+msgid ""
+"Supported Upgrade Paths to SLE (<link xlink:href=\"https://bugzilla.suse.com/"
+"show_bug.cgi?id=904182\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:731
+#, no-c-format
+msgid ""
+"Potentially misleading info around the 6-month overlap in support (<link "
+"xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?id=902463\"></link>)."
+msgstr ""
+
+#. Tag: title
+#: deployment_docupdates.xml:744
+#, no-c-format
+msgid "October 2014 (Initial Release of &productname; 12)"
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:758
+#, no-c-format
+msgid "Updated system requirements."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:772
+#, no-c-format
+msgid "Added POWER8 to the list of supported hardware (Fate #315272)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:777
+#, no-c-format
+msgid ""
+"&sls; 12 for POWER has moved to Little Endian. Updated affected parts of the "
+"documentation."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:792
+#, no-c-format
+msgid ""
+"Updated the list of supported platforms: Removed IBM Series z9 and z10 "
+"machines and added IBM zEnterprise BC12."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:798
+#, no-c-format
+msgid "Updated the memory and disk space requirements."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:803
+#, no-c-format
+msgid ""
+"Removed instructions on how to IPL from tape&mdash;this is no longer "
+"supported."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:809
+#, no-c-format
+msgid ""
+"Rewrote large parts of <xref linkend=\"sec.prep.netcfg\"/> to remove "
+"redundant information and make it more concise."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:815
+#, no-c-format
+msgid ""
+"Removed references to Token Ring, which is no longer supported (Fate "
+"#313154)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:830
+#, no-c-format
+msgid ""
+"Completely rewrote the chapter because of the new installation workflow."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:836
+#, no-c-format
+msgid ""
+"The installation routine now supports setting up multiple network devices "
+"during the installation (Fate #315680): <xref linkend=\"sec.i.yast2.network"
+"\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:843
+#, no-c-format
+msgid ""
+"The installation proposal contains a separate <filename>/home</filename> "
+"partition formatted with XFS (Fate #316637 and Fate #316624): <xref linkend="
+"\"sec.i.yast2.inst_mode.partitioning\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:851
+#, no-c-format
+msgid ""
+"Removed occurrences of the &yast; Repair module which has been dropped (Fate "
+"#308670)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:857
+#, no-c-format
+msgid ""
+"Update repositories are added after having registered with &scc; and can be "
+"used during installation (Fate #312012): <xref linkend=\"sec.i.yast2."
+"inst_mode.addon\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:864
+#, no-c-format
+msgid ""
+"Extensions and modules can be added to the system during the installation "
+"(Fate #316548): <xref linkend=\"sec.i.yast2.conf.manual.cc\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:871
+#, no-c-format
+msgid ""
+"&sled; can be installed as an add-on on top of &sls; (Fate #316436): <xref "
+"linkend=\"sec.i.yast2.inst_mode.addon\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:877
+#, no-c-format
+msgid ""
+"The HW crypto stack for IBM &zseries; can be selected for installation via a "
+"pattern (Fate #316143): <xref linkend=\"sec.i.yast2.proposal.sofware\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:884
+#, no-c-format
+msgid ""
+"Automatically importing SSH keys from a previous installation can be "
+"disabled (Fate #314982)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:899
+#, no-c-format
+msgid "Added new section: <xref linkend=\"sec.update.sle12\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:913
+#, no-c-format
+msgid ""
+"Removed the following sections as the respective &yast; modules are no "
+"longer included: <citetitle>Hardware Information</citetitle>, "
+"<citetitle>Setting Up Graphics Card and Monitor</citetitle>, "
+"<citetitle>Mouse Model</citetitle>, and <citetitle>Setting Up a Scanner</"
+"citetitle>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:922
+#, no-c-format
+msgid ""
+"Removed content about mouse setup and adjusted <xref linkend=\"cha.y2.hw.keym"
+"\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:937
+#, no-c-format
+msgid ""
+"Completely rewrote <xref linkend=\"sec.updater\"/> because of changes in the "
+"&gnome; software updater."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:952
+#, no-c-format
+msgid ""
+"Installing add-on products or software extensions is now also possible "
+"without access to physical media. Added the following new sections: <xref "
+"linkend=\"sec.update.registersystem\"/> and <xref linkend=\"sec.add-ons."
+"extensions\"/>. Modified <xref linkend=\"sec.add-ons.install\"/> accordingly."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:969
+#, no-c-format
+msgid ""
+"For registering clients against an &smt; server, <command>suse_register</"
+"command> has been replaced with <command>SUSEConnect</command> (Fate "
+"#316585)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:983
+#, no-c-format
+msgid ""
+"Updated section <xref linkend=\"sec.updater\"/> according to <link xlink:"
+"href=\"http://bugzilla.suse.com/show_bug.cgi?id=839692\"></link>."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:989
+#, no-c-format
+msgid ""
+"Removed section <citetitle>Using Fingerprint Authentication</citetitle>. "
+"Further minor corrections and additions (<link xlink:href=\"http://bugzilla."
+"suse.com/show_bug.cgi?id=857680\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:996
+#, no-c-format
+msgid ""
+"Removed obsolete parameter <literal>OsaMedium</literal> from parmfile and "
+"Cobbler examples (<link xlink:href=\"http://bugzilla.suse.com/show_bug.cgi?"
+"id=860404\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:1003
+#, no-c-format
+msgid ""
+"Added instructions on how to add secondary languages during installation "
+"(<link xlink:href=\"http://bugzilla.suse.com/show_bug.cgi?id=870482\"></"
+"link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:1010
+#, no-c-format
+msgid ""
+"Multiversion feature (more than one kernel installed) is enabled by default "
+"(<link xlink:href=\"http://bugzilla.suse.com/show_bug.cgi?id=891805\"></"
+"link>)."
+msgstr ""
+
+#. Tag: para
+#: deployment_docupdates.xml:1017
+#, no-c-format
+msgid ""
+"Warn about incompatible Kernel Module Packages (KPMs) (<link xlink:href="
+"\"http://bugzilla.suse.com/show_bug.cgi?id=891805\"></link>)."
+msgstr ""

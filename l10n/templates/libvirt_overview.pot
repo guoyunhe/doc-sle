@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: libvirt_overview.xml:12
+#, no-c-format
+msgid "Starting and Stopping &libvirtd;"
+msgstr ""
+
+#. Tag: para
+#: libvirt_overview.xml:20
+#, no-c-format
+msgid ""
+"The communication between the virtualization solutions (&kvm;, &xen;, &lxc;) "
+"and the libvirt API is managed by the daemon &libvirtd;, which needs to run "
+"on the &vmhost;. libvirt client applications such as virt-manager, possibly "
+"running on a remote machine, communicate with &libvirtd; running on the "
+"&vmhost;, which services the request using native hypervisor APIs. Use the "
+"following commands to start and stop &libvirtd; or check its status:"
+msgstr ""
+
+#. Tag: screen
+#: libvirt_overview.xml:28
+#, no-c-format
+msgid ""
+"&prompt.root;systemctl start libvirtd\n"
+"\n"
+"&prompt.root;systemctl status libvirtd\n"
+"libvirtd.service - Virtualization daemon\n"
+"Loaded: loaded (/usr/lib/systemd/system/libvirtd.service; enabled)\n"
+"Active: active (running) since Mon 2014-05-12 08:49:40 EDT; 2s ago\n"
+"[...]\n"
+"\n"
+"&prompt.root;systemctl stop libvirtd\n"
+"\n"
+"&prompt.root;systemctl status libvirtd\n"
+"[...]\n"
+"Active: inactive (dead) since Mon 2014-05-12 08:51:11 EDT; 4s ago\n"
+"[...]"
+msgstr ""
+
+#. Tag: para
+#: libvirt_overview.xml:29
+#, no-c-format
+msgid ""
+"To automatically start &libvirtd; at boot time, either activate it using the "
+"&yast; <guimenu>&ycc_runlevel;</guimenu> module or by entering the following "
+"command:"
+msgstr ""
+
+#. Tag: screen
+#: libvirt_overview.xml:34
+#, no-c-format
+msgid "&prompt.root;systemctl enable libvirtd"
+msgstr ""

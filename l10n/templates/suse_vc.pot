@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: suse_vc.xml:9
+#, no-c-format
+msgid "Virtual Consoles"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: suse_vc.xml:12
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: suse_vc.xml:18 suse_vc.xml:35
+#, no-c-format
+msgid "consoles"
+msgstr ""
+
+#. Tag: secondary
+#: suse_vc.xml:20
+#, no-c-format
+msgid "switching"
+msgstr ""
+
+#. Tag: para
+#: suse_vc.xml:22
+#, no-c-format
+msgid ""
+"Linux is a multiuser and multitasking system. The advantages of these "
+"features can be appreciated even on a stand-alone PC system. In text mode, "
+"there are six virtual consoles available. Switch between them using "
+"<keycombo> <keycap function=\"alt\"></keycap> <keycap>F1</keycap> </"
+"keycombo> through <keycombo> <keycap function=\"alt\"></keycap> <keycap>F6</"
+"keycap> </keycombo>. The seventh console is reserved for X and the tenth "
+"console shows kernel messages."
+msgstr ""
+
+#. Tag: secondary
+#: suse_vc.xml:37
+#, no-c-format
+msgid "assigning"
+msgstr ""
+
+#. Tag: primary
+#: suse_vc.xml:39
+#, no-c-format
+msgid "configuration files"
+msgstr ""
+
+#. Tag: para
+#: suse_vc.xml:43
+#, no-c-format
+msgid ""
+"To switch to a console from X without shutting it down, use <keycombo> "
+"<keycap function=\"control\"></keycap> <keycap function=\"alt\"></keycap> "
+"<keycap>F1</keycap> </keycombo> to <keycombo> <keycap function=\"control\"></"
+"keycap> <keycap function=\"alt\"></keycap> <keycap>F6</keycap> </keycombo>. "
+"To return to X, press <keycombo> <keycap function=\"alt\"></keycap> "
+"<keycap>F7</keycap> </keycombo>."
+msgstr ""

@@ -1,0 +1,629 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: tuning_perf.xml:16
+#, no-c-format
+msgid "Hardware-Based Performance Monitoring with Perf"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:19
+#, no-c-format
+msgid ""
+"Perf is an interface to access the performance monitoring unit (PMU) of a "
+"processor and to record and display software events such as page faults. It "
+"supports system-wide, per-thread, and &kvm; virtualization guest monitoring."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:30
+#, no-c-format
+msgid ""
+"You can store resulting information in a report. This report contains "
+"information about, for example, instruction pointers or what code a thread "
+"was executing."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:35
+#, no-c-format
+msgid "Perf consists of two parts:"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:40
+#, no-c-format
+msgid ""
+"Code integrated into the Linux kernel that is responsible for instructing "
+"the hardware."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:46
+#, no-c-format
+msgid ""
+"The <command>perf</command> user space utility that allows you to use the "
+"kernel code and helps you analyze gathered data."
+msgstr ""
+
+#. Tag: remark
+#: tuning_perf.xml:52
+#, no-c-format
+msgid ""
+"TODO: An infographic would be a nice touch. We have event sources for perf "
+"here: http://www.brendangregg.com/perf_events/perf_events_map.png Not "
+"exactly sure that that is what we want. - sknorr, 2015-10-16"
+msgstr ""
+
+#. Tag: title
+#: tuning_perf.xml:59
+#, no-c-format
+msgid "Hardware-Based Monitoring"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:61
+#, no-c-format
+msgid ""
+"Performance monitoring means collecting information related to how an "
+"application or system performs. This information can be obtained either "
+"through software-based means or from the CPU or chipset. Perf integrates "
+"both of these methods."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:68
+#, no-c-format
+msgid ""
+"Many modern processors contain a performance monitoring unit (PMU). The "
+"design and functionality of a PMU is CPU-specific. For example, the number "
+"of registers, counters and features supported will vary by CPU "
+"implementation."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:74
+#, no-c-format
+msgid ""
+"Each PMU model consists of a set of registers: the performance monitor "
+"configuration (PMC) and the performance monitor data (PMD). Both can be "
+"read, but only PMCs are writable. These registers store configuration "
+"information and data."
+msgstr ""
+
+#. Tag: title
+#: tuning_perf.xml:83
+#, no-c-format
+msgid "Sampling and Counting"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:84
+#, no-c-format
+msgid "Perf supports several profiling modes:"
+msgstr ""
+
+#. Tag: title
+#: tuning_perf.xml:90
+#, no-c-format
+msgid "Counting"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:91
+#, no-c-format
+msgid "Count the number of occurrences of an event."
+msgstr ""
+
+#. Tag: title
+#: tuning_perf.xml:98
+#, no-c-format
+msgid "Event-Based Sampling"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:99
+#, no-c-format
+msgid ""
+"A less exact way of counting: A sample is recorded whenever a certain "
+"threshold number of events has occurred."
+msgstr ""
+
+#. Tag: title
+#: tuning_perf.xml:107
+#, no-c-format
+msgid "Time-Based Sampling"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:108
+#, no-c-format
+msgid ""
+"A less exact way of counting: A sample is recorded in a defined frequency."
+msgstr ""
+
+#. Tag: title
+#: tuning_perf.xml:116
+#, no-c-format
+msgid "Instruction-Based Sampling (&amd64; only)"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:117
+#, no-c-format
+msgid ""
+"The processor follows instructions appearing in a given interval and samples "
+"which events they produce. This allows following up on individual "
+"instructions and seeing which of them is critical to performance."
+msgstr ""
+
+#. Tag: title
+#: tuning_perf.xml:129
+#, no-c-format
+msgid "Installing Perf"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:131
+#, no-c-format
+msgid ""
+"The Perf kernel code is already included with the default kernel. To be able "
+"to use the user space utility, install the package <package>perf</package>."
+msgstr ""
+
+#. Tag: title
+#: tuning_perf.xml:145
+#, no-c-format
+msgid "Perf Subcommands"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:147
+#, no-c-format
+msgid ""
+"To gather the required information, the <command>perf</command> tool has "
+"several subcommands. This section gives an overview of the most often used "
+"commands."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:152
+#, no-c-format
+msgid ""
+"To see help in the form of a man page for any of the subcommands, use either "
+"<command>perf help</command><replaceable>SUBCOMMAND</replaceable> or "
+"<command>man perf-</command><replaceable>SUBCOMMAND</replaceable>."
+msgstr ""
+
+#. Tag: command
+#: tuning_perf.xml:161
+#, no-c-format
+msgid "perf stat"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:163
+#, no-c-format
+msgid ""
+"Start a program and create a statistical overview that is displayed after "
+"the program quits. <command>perf stat</command> is used to count events."
+msgstr ""
+
+#. Tag: command
+#: tuning_perf.xml:171
+#, no-c-format
+msgid "perf record"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:173
+#, no-c-format
+msgid ""
+"Start a program and create a report with performance counter information. "
+"The report is stored as <filename>perf.data</filename> in the current "
+"directory. <command>perf record</command> is used to sample events."
+msgstr ""
+
+#. Tag: command
+#: tuning_perf.xml:182
+#, no-c-format
+msgid "perf report"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:184
+#, no-c-format
+msgid ""
+"Display a report that was previously created with <command>perf record</"
+"command>."
+msgstr ""
+
+#. Tag: command
+#: tuning_perf.xml:191
+#, no-c-format
+msgid "perf annotate"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:193
+#, no-c-format
+msgid ""
+"Display a report file and an annotated version of the executed code. If "
+"debug symbols are installed, you will also see the source code displayed."
+msgstr ""
+
+#. Tag: command
+#: tuning_perf.xml:202
+#, no-c-format
+msgid "perf list"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:204
+#, no-c-format
+msgid ""
+"List event types that Perf can report with the current kernel and with your "
+"CPU. You can filter event types by category&mdash;for example, to see "
+"hardware events only, use <command>perf list hw</command>."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:210
+#, no-c-format
+msgid ""
+"The man page for <command>perf_event_open</command> has short descriptions "
+"for the most important events. For example, to find a description of the "
+"event <systemitem>branch-misses</systemitem>, search for "
+"<literal>BRANCH_MISSES</literal> (note the spelling differences):"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perf.xml:217
+#, no-c-format
+msgid ""
+"&prompt.user;<command>man</command> perf_event_open | <command>grep</"
+"command> -A5 <replaceable>BRANCH_MISSES</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:218
+#, no-c-format
+msgid ""
+"Sometimes, events may be ambiguous. Note that the lowercase hardware event "
+"names are not the name of raw hardware events but instead the name of "
+"aliases created by Perf. These aliases map to differently named but "
+"similarly defined hardware events on each supported processor."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:225
+#, no-c-format
+msgid ""
+"For example, the <systemitem>cpu-cycles</systemitem> event is mapped to the "
+"hardware event <systemitem>UNHALTED_CORE_CYCLES</systemitem> on Intel "
+"processors. On AMD processors, however, it is mapped to the hardware event "
+"<systemitem>CPU_CLK_UNHALTED</systemitem>."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:232
+#, no-c-format
+msgid ""
+"Perf also allows measuring raw events specific to your hardware. To look up "
+"their descriptions, see the Architecture Software Developer's Manual of your "
+"CPU vendor. The relevant documents for &x86-64; processors are linked to in "
+"<xref linkend=\"sec.perf.more\"/>."
+msgstr ""
+
+#. Tag: command
+#: tuning_perf.xml:242
+#, no-c-format
+msgid "perf top"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:244
+#, no-c-format
+msgid "Display system activity as it happens."
+msgstr ""
+
+#. Tag: command
+#: tuning_perf.xml:250
+#, no-c-format
+msgid "perf trace"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:252
+#, no-c-format
+msgid ""
+"This command behaves similarly to <command>strace</command>. With this "
+"subcommand, you can see which system calls are executed by a particular "
+"thread or process and which signals it receives."
+msgstr ""
+
+#. Tag: title
+#: tuning_perf.xml:263
+#, no-c-format
+msgid "Counting Particular Types of Event"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:264
+#, no-c-format
+msgid ""
+"To count the number of occurrences of an event, such as those displayed by "
+"<command>perf list</command>, use:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perf.xml:268
+#, no-c-format
+msgid ""
+"&prompt.root;<command>perf</command> stat -e <replaceable>EVENT</"
+"replaceable> -a"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:269
+#, no-c-format
+msgid ""
+"To count multiple types of events at once, list them separated by commas. "
+"For example, to count <systemitem>cpu-cycles</systemitem> and "
+"<systemitem>instructions</systemitem>, use:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perf.xml:274
+#, no-c-format
+msgid "&prompt.root;<command>perf</command> stat -e cpu-cycles,instructions -a"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:275
+#, no-c-format
+msgid ""
+"To stop the session, press <keycombo><keycap function=\"control\"></"
+"keycap><keycap>C</keycap></keycombo>."
+msgstr ""
+
+#. Tag: remark
+#: tuning_perf.xml:279
+#, no-c-format
+msgid ""
+"Input from Tony Jones: \"perhaps cover case where #events > #pmus so kernel "
+"time slices (i.e [xx.yy%] in output)\" - sknorr, 2015-10-30"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:283
+#, no-c-format
+msgid ""
+"You can also count the number of occurrences of an event within a particular "
+"time:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perf.xml:287
+#, no-c-format
+msgid ""
+"&prompt.root;<command>perf</command> stat -e <replaceable>EVENT</"
+"replaceable> -a -- sleep <replaceable>TIME</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:288
+#, no-c-format
+msgid "Replace <replaceable>TIME</replaceable> by a value in seconds."
+msgstr ""
+
+#. Tag: title
+#: tuning_perf.xml:294
+#, no-c-format
+msgid "Recording Events Specific to Particular Commands"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:295
+#, no-c-format
+msgid ""
+"There are various ways to sample events specific to a particular command:"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:300
+#, no-c-format
+msgid "To create a report for a newly invoked command, use:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perf.xml:303
+#, no-c-format
+msgid ""
+"&prompt.root;<command>perf</command> record <replaceable>COMMAND</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:304 tuning_perf.xml:315
+#, no-c-format
+msgid ""
+"Then, use the started process normally. When you quit the process, the Perf "
+"session will also stop."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:310
+#, no-c-format
+msgid ""
+"To create a report for the entire system while a newly invoked command is "
+"running, use:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perf.xml:314
+#, no-c-format
+msgid ""
+"&prompt.root;<command>perf</command> record -a <replaceable>COMMAND</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:321
+#, no-c-format
+msgid "To create a report for an already running process, use:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perf.xml:324
+#, no-c-format
+msgid ""
+"&prompt.root;<command>perf</command> record -p <replaceable>PID</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:325
+#, no-c-format
+msgid ""
+"Replace <replaceable>PID</replaceable> with a process ID. To stop the "
+"session, press <keycombo><keycap function=\"control\"></keycap><keycap>C</"
+"keycap></keycombo>."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:332
+#, no-c-format
+msgid ""
+"Now you can view the gathered data (<filename>perf.data</filename>) using:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perf.xml:336
+#, no-c-format
+msgid "&prompt.user;<command>perf</command> report"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:337
+#, no-c-format
+msgid ""
+"This will open a pseudo-graphical interface. To receive help, press "
+"<keycap>H</keycap>. To quit, press <keycap>Q</keycap>."
+msgstr ""
+
+#. Tag: remark
+#: tuning_perf.xml:346
+#, no-c-format
+msgid ""
+"Some more information about interpreting data from this utility might be "
+"helpful... - sknorr, 2015-10-14"
+msgstr ""
+
+#. Tag: remark
+#: tuning_perf.xml:348
+#, no-c-format
+msgid ""
+"Feedback on this from Mel Gorman: \"[D]o not get into this. You could write "
+"a small book on the subject and still not cover all the details.\" - sknorr, "
+"2015-10-16"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:352
+#, no-c-format
+msgid "If you prefer a graphical interface, try the GTK+ interface of Perf:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perf.xml:355
+#, no-c-format
+msgid "&prompt.user;<command>perf</command> report --gtk"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:356
+#, no-c-format
+msgid "However, note that the GTK+ interface is very limited in functionality."
+msgstr ""
+
+#. Tag: remark
+#: tuning_perf.xml:358
+#, no-c-format
+msgid ""
+"It provides a scrollable list and tabs and not much else. - sknorr, "
+"2015-10-30"
+msgstr ""
+
+#. Tag: title
+#: tuning_perf.xml:366
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:368
+#, no-c-format
+msgid ""
+"This chapter only provides a short overview. Refer to the following links "
+"for more information:"
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:378
+#, no-c-format
+msgid ""
+"The project home page. It also features a tutorial on using <command>perf</"
+"command>."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:388
+#, no-c-format
+msgid ""
+"Unofficial page with many one-line examples of how to use <command>perf</"
+"command>."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:398
+#, no-c-format
+msgid ""
+"Unofficial page with several resources, mostly relating to the Linux kernel "
+"code of Perf and its API. This page includes, for example, a CPU "
+"compatibility table and a programming guide."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:410
+#, no-c-format
+msgid ""
+"The <citetitle>Intel Architectures Software Developer's Manual, Volume 3B</"
+"citetitle>."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:420
+#, no-c-format
+msgid ""
+"The <citetitle>AMD Architecture Programmer's Manual, Volume 2</citetitle>."
+msgstr ""
+
+#. Tag: para
+#: tuning_perf.xml:429
+#, no-c-format
+msgid "Consult this chapter for other performance optimizations."
+msgstr ""

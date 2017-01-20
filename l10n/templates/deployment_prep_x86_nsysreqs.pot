@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: deployment_prep_x86_nsysreqs.xml:12
+#, no-c-format
+msgid "System Requirements for Operating Linux"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: deployment_prep_x86_nsysreqs.xml:15
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:21
+#, no-c-format
+msgid ""
+"The &slsreg; operating system can be deployed on a wide range of hardware. "
+"It is impossible to list all the different combinations of hardware &sls; "
+"supports. However, to provide you with a guide to help you during the "
+"planning phase, the minimum requirements are presented here."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:28
+#, no-c-format
+msgid ""
+"If you want to be sure that a given computer configuration will work, find "
+"out which platforms have been certified by &suse;. Find a list at <link "
+"xlink:href=\"https://www.suse.com/yessearch/\"></link>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_x86_nsysreqs.xml:35
+#, no-c-format
+msgid "Hardware for &intel64; and &amd64;"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:36
+#, no-c-format
+msgid ""
+"The &intel64; and &amd64; architectures support the simple migration of "
+"&x86; software to 64 bits. Like the &x86; architecture, they constitute a "
+"value-for-money alternative."
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_x86_nsysreqs.xml:43
+#, no-c-format
+msgid "<term>CPU</term>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:45
+#, no-c-format
+msgid "All CPUs available on the market to date are supported."
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_x86_nsysreqs.xml:51
+#, no-c-format
+msgid "Maximum Number of CPUs"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:53
+#, no-c-format
+msgid ""
+"The maximum number of CPUs supported by software design is 8192 for "
+"&intel64; and &amd64;. If you plan to use such a large system, verify with "
+"our hardware system certification Web page for supported devices, see <link "
+"xlink:href=\"https://www.suse.com/yessearch/\"></link>."
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_x86_nsysreqs.xml:62
+#, no-c-format
+msgid "Memory Requirements"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:64
+#, no-c-format
+msgid ""
+"A minimum of 512 MB of memory is required for a minimal installation. "
+"However, the minimum recommended is 1024 MB or 512 MB per CPU on "
+"multiprocessor computers. Add 150 MB for a remote installation via HTTP or "
+"FTP. Note that these values are only valid for the installation of the "
+"operating system&mdash;the actual memory requirement in production depends "
+"on the system's workload."
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_x86_nsysreqs.xml:77
+#, no-c-format
+msgid "<term>Hard Disk Requirements</term>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:79
+#, no-c-format
+msgid ""
+"The disk requirements depend largely on the installation selected and how "
+"you use your machine. Minimum requirements for different selections are:"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:88
+#, no-c-format
+msgid "System"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:93
+#, no-c-format
+msgid "<para>Hard Disk Requirements</para>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:102
+#, no-c-format
+msgid "Minimal System"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:107
+#, no-c-format
+msgid "800 MB - 1GB"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:114
+#, no-c-format
+msgid "Minimal X Window System"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:119
+#, no-c-format
+msgid "1.4 GB"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:126
+#, no-c-format
+msgid "&gnome; Desktop"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:131
+#, no-c-format
+msgid "3.5 GB"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:138
+#, no-c-format
+msgid "All patterns"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:143
+#, no-c-format
+msgid "8.5 GB"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:150
+#, no-c-format
+msgid "Using snapshots for virtualization"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:155
+#, no-c-format
+msgid "min. 8 GB"
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_x86_nsysreqs.xml:166
+#, no-c-format
+msgid "Boot Methods"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_nsysreqs.xml:168
+#, no-c-format
+msgid ""
+"The computer can be booted from a CD or a network. A special boot server is "
+"required to boot over the network. This can be set up with &sls;."
+msgstr ""

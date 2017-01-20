@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: security_certificatestore.xml:87
+#, no-c-format
+msgid "Certificate Store"
+msgstr ""
+
+#. Tag: para
+#: security_certificatestore.xml:90
+#, no-c-format
+msgid ""
+"Certificates play an important role in the authentication of companies and "
+"individuals. Usually certificates are administered by the application "
+"itself. In some cases, it makes sense to share certificates between "
+"applications. The certificate store is a common ground for Firefox, "
+"Evolution, and NetworkManager. This chapter explains some details."
+msgstr ""
+
+#. Tag: para
+#: security_certificatestore.xml:104
+#, no-c-format
+msgid ""
+"The certificate store is a common database for Firefox, Evolution, and "
+"NetworkManager at the moment. Other applications that use certificates are "
+"not covered but may be in the future. If you have such an application, you "
+"can continue to use its private, separate configuration."
+msgstr ""
+
+#. Tag: title
+#: security_certificatestore.xml:111
+#, no-c-format
+msgid "Activating Certificate Store"
+msgstr ""
+
+#. Tag: para
+#: security_certificatestore.xml:113
+#, no-c-format
+msgid ""
+"The configuration is mostly done in the background. To activate it, proceed "
+"as follows:"
+msgstr ""
+
+#. Tag: para
+#: security_certificatestore.xml:120
+#, no-c-format
+msgid ""
+"Decide if you want to activate the certificate store globally (for every "
+"user on your system) or specifically to a certain user:"
+msgstr ""
+
+#. Tag: title
+#: security_certificatestore.xml:127
+#, no-c-format
+msgid "For every user"
+msgstr ""
+
+#. Tag: para
+#: security_certificatestore.xml:128
+#, no-c-format
+msgid "Use the file <filename>/etc/profile.local</filename>"
+msgstr ""
+
+#. Tag: title
+#: security_certificatestore.xml:135
+#, no-c-format
+msgid "For a specific user"
+msgstr ""
+
+#. Tag: para
+#: security_certificatestore.xml:136
+#, no-c-format
+msgid "Use the file <filename>~/.bashrc</filename>"
+msgstr ""
+
+#. Tag: para
+#: security_certificatestore.xml:144
+#, no-c-format
+msgid "Open the file from the previous step and insert the following line:"
+msgstr ""
+
+#. Tag: screen
+#: security_certificatestore.xml:147
+#, no-c-format
+msgid "export NSS_USE_SHARED_DB=1"
+msgstr ""
+
+#. Tag: para
+#: security_certificatestore.xml:148
+#, no-c-format
+msgid "Save the file"
+msgstr ""
+
+#. Tag: para
+#: security_certificatestore.xml:153
+#, no-c-format
+msgid "Log out of and log in to your desktop."
+msgstr ""
+
+#. Tag: para
+#: security_certificatestore.xml:159
+#, no-c-format
+msgid ""
+"All the certificates are stored under <filename>$HOME/.local/var/pki/nssdb/</"
+"filename>."
+msgstr ""
+
+#. Tag: title
+#: security_certificatestore.xml:165
+#, no-c-format
+msgid "Importing Certificates"
+msgstr ""
+
+#. Tag: para
+#: security_certificatestore.xml:167
+#, no-c-format
+msgid "To import a certificate into the certificate store, do the following:"
+msgstr ""
+
+#. Tag: para
+#: security_certificatestore.xml:175
+#, no-c-format
+msgid "Start Firefox."
+msgstr ""
+
+#. Tag: para
+#: security_certificatestore.xml:180
+#, no-c-format
+msgid ""
+"Open the dialog from <menuchoice> <guimenu>Edit</guimenu> "
+"<guimenu>Preferences</guimenu> </menuchoice>. Change to <menuchoice> "
+"<guimenu>Advanced</guimenu> <guimenu>Encryption</guimenu> </menuchoice> and "
+"click <guimenu>View Certificates</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: security_certificatestore.xml:188
+#, no-c-format
+msgid ""
+"Import your certificate depending on your type: use <guimenu>Servers</"
+"guimenu> to import server certificate, <guimenu>People</guimenu> to identify "
+"other, and <guimenu>Your Certificates</guimenu> to identify yourself."
+msgstr ""

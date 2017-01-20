@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: book_security.xml:20
+#, no-c-format
+msgid "&secguide;"
+msgstr ""
+
+#. Tag: para
+#: book_security.xml:28
+#, no-c-format
+msgid "&abstract_security;"
+msgstr ""
+
+#. Tag: title
+#: book_security.xml:40
+#, no-c-format
+msgid "Authentication"
+msgstr ""
+
+#. Tag: title
+#: book_security.xml:50
+#, no-c-format
+msgid "Local Security"
+msgstr ""
+
+#. Tag: title
+#: book_security.xml:63
+#, no-c-format
+msgid "Network Security"
+msgstr ""
+
+#. Tag: title
+#: book_security.xml:72
+#, no-c-format
+msgid "Confining Privileges with &aa;"
+msgstr ""
+
+#. Tag: title
+#: book_security.xml:88
+#, no-c-format
+msgid "SELinux"
+msgstr ""
+
+#. Tag: title
+#: book_security.xml:94
+#, no-c-format
+msgid "&auditguide;"
+msgstr ""

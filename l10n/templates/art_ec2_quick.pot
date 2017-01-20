@@ -1,0 +1,1124 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: art_ec2_quick.xml:31
+#, no-c-format
+msgid "Amazon EC2 Running &productnamereg;"
+msgstr ""
+
+#. Tag: subtitle
+#: art_ec2_quick.xml:32
+#, no-c-format
+msgid "Startup Guide"
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:40
+#, no-c-format
+msgid "Overview"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:41
+#, no-c-format
+msgid ""
+"Amazon's Elastic Compute Cloud is a web service that provides resizable "
+"compute capacity in the cloud. It enables you to set-up and launch virtual "
+"systems of almost any scale on demand. Amazon EC2 running &slereg; is a "
+"proven platform for your development, test and production workloads. Each "
+"instance of Amazon EC2 running &sle; comes with maintenance that "
+"automatically keeps the operating system up-to-date with &novell;'s most "
+"current security patches, bug fixes and new features to deliver peak "
+"performance."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:51
+#, no-c-format
+msgid ""
+"Amazon Web Services (AWS) provide various methods for easily managing your "
+"computing resources on Amazon EC2. These tools include the AWS Management "
+"Console, a Firefox plug-in called Elasticfox, and the command line interface "
+"that enable to you to scale capacity, both up and down, among other things, "
+"as your computing requirements change."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:58
+#, no-c-format
+msgid ""
+"Setting up and managing &productname; within Amazon EC2 is very similar to "
+"running it on a regular machine, therefore this quick start guide focuses on "
+"specifics to operating &productname; in Amazon EC2. General documentation "
+"for &productname; is available at <link xlink:href=\"http://www.suse.com/"
+"documentation\"></link>. This guide assumes that you are familiar with "
+"Amazon EC2 and it's management tools. Amazon EC2 documentation is available "
+"at <link xlink:href=\"http://aws.amazon.com/documentation/ec2/\"></link>."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:76
+#, no-c-format
+msgid "Definition of Terms"
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:80
+#, no-c-format
+msgid "<term>EC2</term>"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:82
+#, no-c-format
+msgid "Elastic Compute Cloud, Amazon's virtual computing environment."
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:88
+#, no-c-format
+msgid "<term>AWS</term>"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:90
+#, no-c-format
+msgid "<para>Amazon Web Services</para>"
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:96
+#, no-c-format
+msgid "<term>AMI</term>"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:98
+#, no-c-format
+msgid ""
+"Amazon Machine Image, a virtual machine that can be created and customized "
+"by a user. AMIs can be identified by an ID prefixed with <literal>ami-</"
+"literal>."
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:106
+#, no-c-format
+msgid "<term>EBS</term>"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:108
+#, no-c-format
+msgid ""
+"Amazon Elastic Block Store, block level storage volumes for use with Amazon "
+"EC2 instances. One or more storage volumes can be attached to running "
+"instances and persist after the instance has been shut down. It is possible "
+"to boot from an EBS volume."
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:117
+#, no-c-format
+msgid "<term>S3</term>"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:119
+#, no-c-format
+msgid ""
+"Amazon Simple Storage Service, a storage for the Internet that can be used "
+"to store and retrieve data on the web."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:183
+#, no-c-format
+msgid "Management Tools"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:185
+#, no-c-format
+msgid ""
+"To manage your Amazon cloud environment, choose between the web-based AWS "
+"Management Console, the Firefox extension Elasticfox, or the command line "
+"tools. All tools allow you to launch and manage Amazon EC2 instances and to "
+"find, manage, and create AMIs. &novell; recommends using the AWS Management "
+"Console."
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:195 art_ec2_quick.xml:935
+#, no-c-format
+msgid "AWS Management Console"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:197
+#, no-c-format
+msgid ""
+"The AWS Management Console is a web-based interface to manage all AWS "
+"services. It does not require installation of additional software. See <link "
+"xlink:href=\"http://aws.amazon.com/console/\"></link> for more information."
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:206
+#, no-c-format
+msgid "Elasticfox"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:208
+#, no-c-format
+msgid ""
+"Elasticfox is a Firefox extension to manage Amazon's EC2 service. You may "
+"get the extension from <link xlink:href=\"http://s3.amazonaws.com/ec2-"
+"downloads/elasticfox.xpi\"></link>. Documentation for Elasticfox is "
+"available from the following URL: <link xlink:href=\"http://ec2-downloads.s3."
+"amazonaws.com/elasticfox-owners-manual.pdf\"></link>."
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:218
+#, no-c-format
+msgid "Command Line Tools"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:220
+#, no-c-format
+msgid ""
+"The API tools (package <systemitem class=\"resource\">ec2-api-tools</"
+"systemitem>) serve as the client interface to the Amazon EC2 web service and "
+"let you register and launch instances, manipulate security groups, and more. "
+"<systemitem class=\"resource\">ec2-api-tools</systemitem> is available for "
+"&sls; via the update channel. Documentation is available from <link xlink:"
+"href=\"http://awsdocs.s3.amazonaws.com/EC2/latest/ec2-clt.pdf\"></link>."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:234
+#, no-c-format
+msgid "Finding the official &sls; Images"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:236
+#, no-c-format
+msgid ""
+"Currently images for &sls; 10 SP3 and &sls; 11 SP1 are available for the "
+"i386 (32 bit) and the x86_64 (64 bit) architecture and are available in all "
+"regions and availability zones."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:243
+#, no-c-format
+msgid "Available Image Types for &productname;"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:244
+#, no-c-format
+msgid ""
+"Currently (as of ) &novell; only offers Elastic Block Store (EBS)-backed "
+"images. Simple Storage Service (S3)-backed images and a High Performance "
+"Computing (HPC) image will be released in the near future."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:254
+#, no-c-format
+msgid "&sls; (SLES) Image IDs"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:267
+#, no-c-format
+msgid "US East"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:272
+#, no-c-format
+msgid "US West"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:277
+#, no-c-format
+msgid "<para>EU</para>"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:282
+#, no-c-format
+msgid "Asia Pacific"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:291
+#, no-c-format
+msgid "SLES 11 SP1 i386 (sles-11-sp1-v1.00.i386)"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:298
+#, no-c-format
+msgid "ami-e0a35789"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:303
+#, no-c-format
+msgid "ami-d01b4b95"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:308
+#, no-c-format
+msgid "ami-6c576218"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:313
+#, no-c-format
+msgid "ami-76146a24"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:320
+#, no-c-format
+msgid "SLES 11 SP1 x86_64 (sles-11-sp1-v1.00.x86_64)"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:327
+#, no-c-format
+msgid "ami-e4a3578d"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:332
+#, no-c-format
+msgid "ami-dc1b4b99"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:337
+#, no-c-format
+msgid "ami-6e57621a"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:342
+#, no-c-format
+msgid "ami-74146a26"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:349
+#, no-c-format
+msgid "SLES 10 SP3 i386 (sles-10-sp3-v1.00.i386)"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:356
+#, no-c-format
+msgid "ami-16a3577f"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:361
+#, no-c-format
+msgid "ami-d61b4b93"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:366
+#, no-c-format
+msgid "ami-60576214"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:371
+#, no-c-format
+msgid "ami-72146a20"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:378
+#, no-c-format
+msgid "SLES 10 SP3 x86_64 (sles-10-sp3-v1.00.x86_64)"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:385
+#, no-c-format
+msgid "ami-eea35787"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:390
+#, no-c-format
+msgid "ami-d21b4b97"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:395
+#, no-c-format
+msgid "ami-62576216"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:400
+#, no-c-format
+msgid "ami-78146a2a"
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:410
+#, no-c-format
+msgid "Identifying an Image"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:411
+#, no-c-format
+msgid ""
+"Each image contains the file <filename>/etc/SUSE-release</filename> with "
+"information about the product name, architecture and version."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:418
+#, no-c-format
+msgid "Logging in to a Running &sls; Instance"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:420
+#, no-c-format
+msgid ""
+"Once a &sls; instance is running, you can login as user &rootuser; via SSH. "
+"Make sure the security group the instance is launched with, allows "
+"connections via SSH (TCP port 22). You will need the following data:"
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:429
+#, no-c-format
+msgid "Public DNS Name"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:431
+#, no-c-format
+msgid ""
+"Use the management tool with which you have started the instance to "
+"determine the Public DNS Name."
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:438
+#, no-c-format
+msgid "Path to your Key pair"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:440
+#, no-c-format
+msgid ""
+"The key pair you specified when launching the instance is needed to "
+"authenticate. Make sure the key pair file is only accessible by it's owner."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:449
+#, no-c-format
+msgid "Log in with the following command:"
+msgstr ""
+
+#. Tag: screen
+#: art_ec2_quick.xml:453
+#, no-c-format
+msgid ""
+"ssh -i <replaceable>&lt;PATH TO KEY PAIR FILE&gt;</replaceable> "
+"root@<replaceable>&lt;PUBLIC DNS NAME&gt;</replaceable>"
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:456
+#, no-c-format
+msgid "Updating &productname;"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:458
+#, no-c-format
+msgid ""
+"All official &sls; images are automatically preconfigured with an official "
+"update channel. Registering your &sls; instance at &novell; is "
+"<emphasis>not</emphasis> needed. To update your instance, either use the "
+"&yast; ncurses version or the command line tool <command>zypper</command>."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:467 art_ec2_quick.xml:575
+#, no-c-format
+msgid "Making Your Changes Permanent"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:468 art_ec2_quick.xml:576
+#, no-c-format
+msgid ""
+"Once you terminate your instance, all changes you have made will be lost. To "
+"preserve them, create your own image with the <guimenu>Create Image</"
+"guimenu> command in the management tool. The next time you start a &sls; "
+"instance, you will be able to use your own image."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:478
+#, no-c-format
+msgid "Updating Using &yast;"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:481
+#, no-c-format
+msgid "Call the &yast; ncurses Online Update module with the command"
+msgstr ""
+
+#. Tag: screen
+#: art_ec2_quick.xml:484
+#, no-c-format
+msgid "yast online_update"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:487
+#, no-c-format
+msgid ""
+"The list of patches available is displayed. Press <keycombo> <keycap "
+"function=\"alt\"></keycap> <keycap>A</keycap> </keycombo> to install all "
+"patches."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:494
+#, no-c-format
+msgid ""
+"Once all patches are installed, the &yast; Online Update automatically "
+"terminates. In case the patch system itself was updated, re-run the online "
+"update. Certain patches, such as kernel updates, require you to reboot the "
+"machine."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:502
+#, no-c-format
+msgid ""
+"For more information about the &yast; Online Update and the ncurses &yast; "
+"version, refer to the following web pages:"
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:508 art_ec2_quick.xml:628
+#, no-c-format
+msgid "&sls; 10 SP 3"
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:518 art_ec2_quick.xml:638
+#, no-c-format
+msgid "&sls; 11 SP 1"
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:531
+#, no-c-format
+msgid "Updating with <command>zypper</command>"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:534
+#, no-c-format
+msgid ""
+"To get a list of needed patches that apply to your system, but are not yet "
+"installed, run:"
+msgstr ""
+
+#. Tag: screen
+#: art_ec2_quick.xml:538
+#, no-c-format
+msgid ""
+"zypper list-patches   #&sls; 11 only\n"
+"zypper pch            #&sls; 10"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:541
+#, no-c-format
+msgid "To install all needed patches, run:"
+msgstr ""
+
+#. Tag: screen
+#: art_ec2_quick.xml:544
+#, no-c-format
+msgid ""
+"zypper patch             #&sls; 11 only\n"
+"zypper up -y -t patch    #&sls; 10"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:547
+#, no-c-format
+msgid ""
+"In case the patch system itself was updated, re-run <command>zypper patch</"
+"command>. Certain patches, such as kernel updates, require you to reboot the "
+"machine."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:554 art_ec2_quick.xml:666
+#, no-c-format
+msgid ""
+"For more information about <command>zypper</command> refer to it's man page "
+"(<command>man 8 zypper</command>)."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:563
+#, no-c-format
+msgid "Installing Additional Software Packages"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:565
+#, no-c-format
+msgid ""
+"All official &sls; images are automatically preconfigured with the default "
+"repository containing all software packages released for your version of "
+"&sls;. A second repository containing the &sls; Software Development Kit "
+"(SDK) is also available. To install additional packages either use the "
+"&yast; ncurses version or the command line tool <command>zypper</command>."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:586
+#, no-c-format
+msgid "Installing Packages with &yast;"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:589
+#, no-c-format
+msgid "Call the &yast; ncurses Software Management module with the command"
+msgstr ""
+
+#. Tag: screen
+#: art_ec2_quick.xml:592
+#, no-c-format
+msgid "yast sw_single"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:595
+#, no-c-format
+msgid ""
+"Place the cursor in the search box by pressing <keycombo> <keycap function="
+"\"alt\"></keycap> <keycap>P</keycap> </keycombo>. Enter a phrase to search "
+"for packages and press <keycap function=\"enter\"></keycap> to start the "
+"search."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:603
+#, no-c-format
+msgid ""
+"The cursor is automatically placed within the search result list. Use the "
+"<keycap function=\"down\"></keycap> and <keycap function=\"up\"></keycap> "
+"keys to navigate. Packages already installed are marked with <guimenu>i</"
+"guimenu>. To install a package, select it and press <keycap function=\"space"
+"\"></keycap>. It will be marked with <guimenu>+</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:613
+#, no-c-format
+msgid ""
+"Repeat the previous two steps to select more packages for installation. Once "
+"you are finished, press <keycombo> <keycap function=\"alt\"></keycap> "
+"<keycap>A</keycap> </keycombo> to start the installation. In case additional "
+"packages have been selected to resolve dependencies, confirm with <keycap "
+"function=\"enter\"></keycap>."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:622
+#, no-c-format
+msgid ""
+"For more information about the installing software with &yast; and the "
+"ncurses &yast; version, refer to the following web pages:"
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:651
+#, no-c-format
+msgid "Installing Packages with <command>zypper</command>"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:654
+#, no-c-format
+msgid "Search for packages with the command"
+msgstr ""
+
+#. Tag: screen
+#: art_ec2_quick.xml:657
+#, no-c-format
+msgid "zypper se -d <replaceable>SEARCHTERM</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:660
+#, no-c-format
+msgid "To install packages run"
+msgstr ""
+
+#. Tag: screen
+#: art_ec2_quick.xml:663
+#, no-c-format
+msgid "zypper in <replaceable>SPACE SEPARATED LIST OF PACKAGES</replaceable>"
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:675
+#, no-c-format
+msgid "Building and Deploying Appliances for Amazon EC2 in &susestudio;"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:677
+#, no-c-format
+msgid ""
+"&susestudio; supports building &sls; 11 SP1 and &sls; 10 SP3 based "
+"appliances for Amazon EC2. Each appliance built for Amazon EC2 comes with a "
+"script to easily create and deploy the appliance as an EBS backed Amazon "
+"Machine Image."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:685
+#, no-c-format
+msgid "Building Amazon EC2 Images"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:686
+#, no-c-format
+msgid ""
+"Building an Amazon EC2 image works like building any other images in "
+"&susestudio; with the difference that it is necessary to include the Amazon "
+"EC2 software repository:"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:693
+#, no-c-format
+msgid ""
+"Login to &susestudio; and proceed to <guimenu>Create a new appliance...</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:699
+#, no-c-format
+msgid ""
+"Choose a base template from <guimenu>&sls; 11 SP1</guimenu> or "
+"<guimenu>&sls; 10 SP3</guimenu>, select an architecture and provide a name "
+"for your appliance. Proceed with <guimenu>Create appliance.</guimenu>"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:707
+#, no-c-format
+msgid ""
+"Configure your appliance using the tabs <guimenu>Software</guimenu>, "
+"<guimenu>Configuration</guimenu>, <guimenu>Files</guimenu>, and "
+"<guimenu>Share</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:714
+#, no-c-format
+msgid ""
+"Switch to the tab <guimenu>Build</guimenu>. Choose <guimenu>Amazon EC2 "
+"Image</guimenu> as the <guimenu>Default Format</guimenu>. An alert appears "
+"in the left sidebar, telling you to add the Amazon EC2 software repository "
+"before building. Do so by clicking <guimenu>Add the 'Amazon EC2 Updates' "
+"repository</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:723
+#, no-c-format
+msgid ""
+"Click <guimenu>Build</guimenu> to start the image building process. Once "
+"completed, download the tarball containing the image and the build script."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:733
+#, no-c-format
+msgid "Creating and Uploading the AMI"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:734
+#, no-c-format
+msgid ""
+"The Amazon EC2 image tarball you have created with &susestudio; contains the "
+"appliance and the shell script <filename>create_ebs_ami.sh</filename> to "
+"upload the appliance and create an EBS-backed AMI. To work, the script "
+"requires the installation of the Amazon EC2 API tools and a special "
+"environment. In case these requirements are already met, proceed with <xref "
+"linkend=\"sec.ec2.studio.deploy.upload\"/>."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:744
+#, no-c-format
+msgid "Installing the Amazon EC2 API tools"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:745
+#, no-c-format
+msgid ""
+"The Amazon EC2 API tools are available as a zip archive at <link xlink:href="
+"\"http://aws.amazon.com/developertools/351\"></link>. To install the tools, "
+"download and extract the zip archive to a folder of your choice, for example "
+"<filename>~/ec2/</filename>."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:751
+#, no-c-format
+msgid ""
+"The tools will be extracted to a folder <filename>ec2-api-tools-X.Y-nnnnn</"
+"filename> (for example ec2-api-tools-1.3-57419) which contains sub-"
+"directories named <filename>bin/</filename> and <filename>lib/</filename>. "
+"To locate the libraries, the tools rely on the variable <literal>EC2_HOME</"
+"literal>. To easily call the executables, the <filename>bin/</filename> "
+"directory needs to be added to the path. Add the following lines to "
+"<filename>~/.bashrc</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: art_ec2_quick.xml:761
+#, no-c-format
+msgid ""
+"export EC2_HOME=\"$HOME/ec2/ec2-api-tools-1.3-57419/\"\n"
+"export PATH=$PATH:$EC2_HOME/bin/"
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:763
+#, no-c-format
+msgid "Java Required"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:764
+#, no-c-format
+msgid ""
+"The Amazon EC2 API tools require Java. Make sure the package <systemitem "
+"class=\"resource\">java-1_6_0-ibm</systemitem> is installed."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:771
+#, no-c-format
+msgid "Setting up the Environment"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:772
+#, no-c-format
+msgid ""
+"To identify yourself you need to set a few variables that will be evaluated "
+"by the tools. It is recommended to export them in your <filename>~/.bashrc</"
+"filename>, so that you do not need to set them up manually each time. "
+"Replace the values in the following example with your credentials/paths:"
+msgstr ""
+
+#. Tag: screen
+#: art_ec2_quick.xml:779
+#, no-c-format
+msgid ""
+"export AWS_USER_ID=\"123456789012\"                       # AWS Account "
+"Number\n"
+"export AWS_ACCESS_KEY=\"ABCDEFGHIJKLMNOPQRST\"            # AWS Access Key "
+"ID\n"
+"export AWS_SECRET_KEY=\"abcdefghijklmnoprqrtuvwxyz12345\" # AWS Secret "
+"Access Key\n"
+"export EC2_CERT=\"~/.cert-aws.pem\"                       # Path to EC2 "
+"X.509 certificate\n"
+"export EC2_PRIVATE_KEY=\"~/.pk-ec2.pem\"                  # Path to EC2 "
+"private key"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:780
+#, no-c-format
+msgid ""
+"Verify your environment is correctly set up by running the following "
+"command. In case your setup is correct, it lists all available AMIs owned by "
+"Amazon or yourself:"
+msgstr ""
+
+#. Tag: screen
+#: art_ec2_quick.xml:785
+#, no-c-format
+msgid "ec2-describe-images -o amazon -o self"
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:787
+#, no-c-format
+msgid "Getting the Credentials and Certificates"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:788
+#, no-c-format
+msgid ""
+"Get the needed data and the certificates by browsing to <link xlink:href="
+"\"http://aws.amazon.com/account/\"></link> and clicking on <guimenu>Security "
+"Credentials</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:795
+#, no-c-format
+msgid "Generating a Key Pair"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:796
+#, no-c-format
+msgid ""
+"The final step in setting up the environment is to generate an Amazon EC2 "
+"key pair which is used every time you launch an instance to make sure only "
+"you have access to the instance. In the following example a key pair named "
+"<quote>my_aws_ec2_key</quote> is generated for the region us-east-1. The "
+"private key is saved to <filename>~/.ssh/my_aws_ec2_key.pem</filename>. Make "
+"sure to remember the name of the key pair&mdash;you need to provide it with "
+"most EC2 API commands."
+msgstr ""
+
+#. Tag: screen
+#: art_ec2_quick.xml:806
+#, no-c-format
+msgid ""
+"ec2addkey --region us-east-1 my_aws_ec2_key &gt; ~/.ssh/my_aws_ec2_key.pem\n"
+"chmod 600 ~/.ssh/my_aws_ec2_key.pem"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:807
+#, no-c-format
+msgid ""
+"Make sure to restrict the file permissions on the private key file as shown "
+"above, otherwise you will not be able to use it. Also keep in mind that a "
+"key is generated for one region only - if you are going to work in different "
+"regions, you need to create key pairs for each region."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:815
+#, no-c-format
+msgid "Using an Existing SSH key"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:816
+#, no-c-format
+msgid ""
+"As an alternative to generating an Amazon EC2 key pair you can upload an "
+"existing public ssh key. The following example assumes that public key is "
+"located in <filename>~/.ssh/id_rsa.pub</filename>. As in the example above "
+"<quote>my_aws_ec2_key</quote> is used as a name. You may upload this same "
+"key for other regions, too."
+msgstr ""
+
+#. Tag: screen
+#: art_ec2_quick.xml:823
+#, no-c-format
+msgid ""
+"ec2ikey --region us-east-1 --public-key-file \"~/.ssh/id_rsa.pub\" "
+"my_aws_ec2_key"
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:828
+#, no-c-format
+msgid "Creating the AMI"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:829
+#, no-c-format
+msgid ""
+"Once the Amazon EC2 API tools are installed and the environment is set up, "
+"you are ready to create an AMI from you appliance. Extract the tarball you "
+"have downloaded from &susestudio; and change into the resulting directory. "
+"Run the <filename>create_ebs_ami.sh</filename> script:"
+msgstr ""
+
+#. Tag: screen
+#: art_ec2_quick.xml:836
+#, no-c-format
+msgid ""
+"./create_ebs_ami.sh --region us-west-1<co xml:id=\"co.ec2.studio.deploy."
+"region\"/> --name \"my_ec2_appliance\"<co xml:id=\"co.ec2.studio.deploy.name"
+"\"/> \\\n"
+"--description \"My first EC2 appliance\"<co xml:id=\"co.ec2.studio.deploy."
+"description\"/> --ssh_key_name \"my_aws_ec2_key\"<co xml:id=\"co.ec2.studio."
+"deploy.keyname\"/> \\\n"
+"--ssh_private_key \" ~/.ssh/my_aws_ec2_key.pem\"<co xml:id=\"co.ec2.studio."
+"deploy.keypath\"/> \\\n"
+"--tarball \"/tmp/EC2_TEST_SLE_11_SP1.i686-0.0.1.ec2.tar.gz\"<co xml:id=\"co."
+"ec2.studio.deploy.tarball\"/>"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:839
+#, no-c-format
+msgid "The region. Optional, default is <quote>us-east-1</quote>."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:844
+#, no-c-format
+msgid ""
+"The AMI name. Must be unique. Optional, default is a random alphanumeric "
+"string followed by the the appliance's name."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:850
+#, no-c-format
+msgid ""
+"A description for the AMI. Optional, default is <quote>Built by SUSE Studio</"
+"quote>."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:856
+#, no-c-format
+msgid ""
+"The name of the key pair. Mandatory unless the environment variable "
+"<literal>SSH_KEY_NAME</literal> is set."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:862
+#, no-c-format
+msgid ""
+"Path to the private key file. Mandatory unless the environment variable "
+"<literal>SSH_PRIVATE_KEY</literal> is set."
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:868
+#, no-c-format
+msgid ""
+"Path to the tarball downloaded from &susestudio;. Optional, default is "
+"<filename>../<replaceable>TARBALL.tar.gz</replaceable></filename>."
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:879
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: art_ec2_quick.xml:881
+#, no-c-format
+msgid "Please refer to the following resources for more information:"
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:886
+#, no-c-format
+msgid "&suse;"
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:889
+#, no-c-format
+msgid "&suse;: &sls; 11 SP1 Documentation"
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:897
+#, no-c-format
+msgid "&suse;: &sls; 10 SP3 Documentation"
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:905
+#, no-c-format
+msgid "&suse;: Make Cloud Computing Work for You"
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:913
+#, no-c-format
+msgid "Novell: &susestudio;"
+msgstr ""
+
+#. Tag: title
+#: art_ec2_quick.xml:924
+#, no-c-format
+msgid "<title>Amazon Web Services</title>"
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:927
+#, no-c-format
+msgid "AWS Documentation Portal"
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:943
+#, no-c-format
+msgid "Elasticfox Getting Started Guide"
+msgstr ""
+
+#. Tag: term
+#: art_ec2_quick.xml:951
+#, no-c-format
+msgid "ec2-api-tools Documentation"
+msgstr ""

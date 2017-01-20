@@ -1,0 +1,2960 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: xm_vs_xl.xml:16
+#, no-c-format
+msgid ""
+"Differences Between the <command>xm</command> and <command>xl</command> "
+"Applications"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:24
+#, no-c-format
+msgid ""
+"The purpose of this chapter is to list all differences between <command>xm</"
+"command> and <command>xl</command> applications. Generally, <command>xl</"
+"command> is designed to be compatible with <command>xm</command>. Replacing "
+"<command>xm</command> with <command>xl</command> in custom scripts or tools "
+"is usually sufficient."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:32
+#, no-c-format
+msgid ""
+"You can also use the &libvirt; framework using the <command>virsh</command> "
+"command. In this documentation only the first <replaceable>OPTION</"
+"replaceable> for <command>virsh</command> will be shown. To get more help on "
+"this option do a:"
+msgstr ""
+
+#. Tag: screen
+#: xm_vs_xl.xml:39
+#, no-c-format
+msgid ""
+"<command>virsh</command> <option>help</option> <replaceable>OPTION</"
+"replaceable>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:42 xm_vs_xl.xml:49
+#, no-c-format
+msgid "Notation Conventions"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:43
+#, no-c-format
+msgid ""
+"To easily understand the difference between <command>xl</command> and "
+"<command>xm</command> commands, the following notation is used in this "
+"section:"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:56
+#, no-c-format
+msgid "Notation"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:61
+#, no-c-format
+msgid "Meaning"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:70
+#, no-c-format
+msgid "(-) minus"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:75
+#, no-c-format
+msgid ""
+"Option exists in <command>xm</command>, but <command>xl</command> does not "
+"include it."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:83
+#, no-c-format
+msgid "(+) plus"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:88
+#, no-c-format
+msgid ""
+"Option exists in <command>xl</command>, but <command>xm</command> does not "
+"include it."
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:100 xm_vs_xl.xml:103
+#, no-c-format
+msgid "New Global Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:110 xm_vs_xl.xml:181 xm_vs_xl.xml:689 xm_vs_xl.xml:913
+#: xm_vs_xl.xml:1046 xm_vs_xl.xml:1116 xm_vs_xl.xml:3360
+#, no-c-format
+msgid "<para>Options</para>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:115 xm_vs_xl.xml:186 xm_vs_xl.xml:694 xm_vs_xl.xml:918
+#: xm_vs_xl.xml:1051 xm_vs_xl.xml:1121 xm_vs_xl.xml:3365
+#, no-c-format
+msgid "<para>Task</para>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:124
+#, no-c-format
+msgid "(+) <option>-v</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:129
+#, no-c-format
+msgid "Verbose, increase the verbosity of the output"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:136
+#, no-c-format
+msgid "(+) <option>-N</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:141
+#, no-c-format
+msgid "Dry run, do not actually execute the command"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:148 xm_vs_xl.xml:3134
+#, no-c-format
+msgid "(+) <option>-f</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:153
+#, no-c-format
+msgid ""
+"Force execution. <command>xl</command> will refuse to run some commands if "
+"it detects that <command>xend</command> is also running, this option will "
+"force the execution of those commands, even though it is unsafe"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:167
+#, no-c-format
+msgid "Unchanged Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:168
+#, no-c-format
+msgid ""
+"List of common options of <command>xl</command> and <command>xm</command>, "
+"and their &libvirt; equivalents."
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:173
+#, no-c-format
+msgid "Common Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:191 xm_vs_xl.xml:3203 xm_vs_xl.xml:3256
+#, no-c-format
+msgid "&libvirt; equivalent"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:200
+#, no-c-format
+msgid "destroy <replaceable>DOMAIN</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:205
+#, no-c-format
+msgid "Immediately terminate the domain."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:210
+#, no-c-format
+msgid "<command>virsh</command> <option>destroy</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:217
+#, no-c-format
+msgid "domid <replaceable>DOMAIN_NAME</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:222
+#, no-c-format
+msgid "Convert a domain name to a <replaceable>DOMAIN_ID</replaceable>."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:227
+#, no-c-format
+msgid "<command>virsh</command> <option>domid</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:234
+#, no-c-format
+msgid "domname <replaceable>DOMAIN_ID</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:239
+#, no-c-format
+msgid ""
+"Convert a <replaceable>DOMAIN_ID</replaceable> to a "
+"<replaceable>DOMAIN_NAME</replaceable>."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:245
+#, no-c-format
+msgid "<command>virsh</command> <option>domname</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:252
+#, no-c-format
+msgid "help"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:257
+#, no-c-format
+msgid "Display the short help message (that is, common commands)."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:262
+#, no-c-format
+msgid "<command>virsh</command> <option>help</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:269
+#, no-c-format
+msgid "pause <replaceable>DOMAIN_ID</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:274
+#, no-c-format
+msgid ""
+"Pause a domain. When in a paused state, the domain will still consume "
+"allocated resources such as memory, but will not be eligible for scheduling "
+"by the &xen; hypervisor."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:281 xm_vs_xl.xml:881
+#, no-c-format
+msgid "<command>virsh</command> <option>suspend</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:288
+#, no-c-format
+msgid "unpause <replaceable>DOMAIN_ID</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:293
+#, no-c-format
+msgid ""
+"Move a domain out of the paused state. This will allow a previously paused "
+"domain to be eligible for scheduling by the &xen; hypervisor."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:300 xm_vs_xl.xml:858
+#, no-c-format
+msgid "<command>virsh</command> <option>resume</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:307
+#, no-c-format
+msgid ""
+"rename <replaceable>DOMAIN_ID</replaceable> <replaceable>NEW_DOMAIN_NAME</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:313
+#, no-c-format
+msgid ""
+"Change the domain name of <replaceable>DOMAIN_ID</replaceable> to "
+"<replaceable>NEW_DOMAIN_NAME</replaceable>."
+msgstr ""
+
+#. Tag: screen
+#: xm_vs_xl.xml:321
+#, no-c-format
+msgid ""
+"virsh dumpxml <replaceable>DOMAINNAME</replaceable> &gt;\n"
+"          <replaceable>DOMXML</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:324
+#, no-c-format
+msgid "modify the domain's name in <replaceable>DOMXML</replaceable>"
+msgstr ""
+
+#. Tag: screen
+#: xm_vs_xl.xml:329
+#, no-c-format
+msgid "virsh undefine <replaceable>DOMAINNAME</replaceable>"
+msgstr ""
+
+#. Tag: screen
+#: xm_vs_xl.xml:332
+#, no-c-format
+msgid "virsh define <replaceable>DOMAINNAME</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:339
+#, no-c-format
+msgid "sysrq <replaceable>DOMAIN</replaceable> &lt;letter&gt;"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:344
+#, no-c-format
+msgid ""
+"Send a Magic System Request to the domain, each type of request is "
+"represented by a different letter. It can be used to send SysRq requests to "
+"Linux guests, see <filename>sysrq.txt</filename> in your Linux Kernel "
+"sources for more information. It requires PV drivers to be installed in your "
+"guest OS."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:353
+#, no-c-format
+msgid ""
+"<command>virsh</command> <option>send-keys</option> can send Magic Sys Req "
+"only for &kvm;"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:361
+#, no-c-format
+msgid ""
+"vncviewer <replaceable>OPTIONS</replaceable> <replaceable>DOMAIN</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:367
+#, no-c-format
+msgid "Attach to domain's VNC server, forking a vncviewer process."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:372
+#, no-c-format
+msgid "<command>virt-view</command> <replaceable>DOMAIN_ID</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:375
+#, no-c-format
+msgid "<command>virsh</command> <replaceable>vncdisplay</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:382
+#, no-c-format
+msgid "vcpu-set <replaceable>DOMAIN_ID</replaceable> &lt;vCPUs&gt;"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:387
+#, no-c-format
+msgid ""
+"Enable the vcpu-count virtual CPUs for the domain in question. Like "
+"<option>mem-set</option>, this command can only allocate up to the maximum "
+"virtual CPU count configured at boot for the domain."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:394
+#, no-c-format
+msgid "<command>virsh</command> <option>setvcpus</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:401
+#, no-c-format
+msgid "vcpu-list <replaceable>DOMAIN_ID</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:406
+#, no-c-format
+msgid ""
+"List VCPU information for a specific domain. If no domain is specified, VCPU "
+"information for all domains will be provided."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:412
+#, no-c-format
+msgid "<command>virsh</command> <option>vcpuinfo</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:419
+#, no-c-format
+msgid ""
+"vcpu-pin <replaceable>DOMAIN_ID</replaceable> &lt;VCPU|all&gt; &lt;CPUs|"
+"all&gt;"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:425
+#, no-c-format
+msgid ""
+"Pin the VCPU to only run on the specific CPUs. The keyword all can be used "
+"to apply the CPU list to all VCPUs in the domain."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:431
+#, no-c-format
+msgid "<command>virsh</command> <option>vcpupin</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:438
+#, no-c-format
+msgid "dmesg [-c]"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:443
+#, no-c-format
+msgid ""
+"Read the Xen message buffer, similar to dmesg on a Linux system. The buffer "
+"contains informational, warning, and error messages created during Xen's "
+"boot process."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:455
+#, no-c-format
+msgid "<para>top</para>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:460
+#, no-c-format
+msgid ""
+"Execute the <command>xentop</command> command, which provides real time "
+"monitoring of domains. <command>xentop</command> is a curses interface."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:467
+#, no-c-format
+msgid "<command>virsh</command> <option>nodecpustats</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:470
+#, no-c-format
+msgid "<command>virsh</command> <option>nodememstats</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:477
+#, no-c-format
+msgid "uptime [-s] <replaceable>DOMAIN</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:482
+#, no-c-format
+msgid ""
+"Print the current uptime of the domains running. With the <command>xl</"
+"command> command, the <replaceable>DOMAIN</replaceable> argument is "
+"mandatory."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:494
+#, no-c-format
+msgid "debug-keys <replaceable>KEYS</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:499
+#, no-c-format
+msgid ""
+"Send debug keys to &xen;. It is the same as pressing the Xen "
+"<emphasis>conswitch</emphasis> (Ctrl-A by default) three times and then "
+"pressing \"keys\"."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:511
+#, no-c-format
+msgid ""
+"cpupool-migrate <replaceable>DOMAIN</replaceable> <replaceable>CPU_POOL</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:517
+#, no-c-format
+msgid ""
+"Move a domain specified by <replaceable>DOMAIN_ID</replaceable> or "
+"<replaceable>DOMAIN</replaceable> into a <replaceable>CPU_POOL</replaceable>."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:529
+#, no-c-format
+msgid "cpupool-destroy <replaceable>CPU_POOL</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:534
+#, no-c-format
+msgid ""
+"Deactivate a cpu pool. This is possible only if no domain is active in the "
+"cpu-pool."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:545
+#, no-c-format
+msgid ""
+"block-detach <replaceable>DOMAIN_ID</replaceable> <replaceable>DevId</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:551
+#, no-c-format
+msgid ""
+"Detach a domain's virtual block device. <emphasis>devid</emphasis> may be "
+"the symbolic name or the numeric device id given to the device by &dom0;. "
+"You will need to run <command>xl</command> <option>block-list</option> to "
+"determine that number."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:559
+#, no-c-format
+msgid "<command>virsh</command> <option>detach-disk</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:566
+#, no-c-format
+msgid ""
+"network-attach <replaceable>DOMAIN_ID</replaceable> "
+"<replaceable>NETWORK_DEVICE</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:572
+#, no-c-format
+msgid ""
+"Create a new network device in the domain specified by "
+"<replaceable>DOMAIN_ID</replaceable>. network-device describes the device to "
+"attach, using the same format as the vif string in the domain configuration "
+"file"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:580
+#, no-c-format
+msgid "<command>virsh</command> <option>attach-interface</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:583 xm_vs_xl.xml:603
+#, no-c-format
+msgid "<command>virsh</command> <option>attach-device</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:590
+#, no-c-format
+msgid "pci-attach <replaceable>DOMAIN</replaceable> &lt;BDF&gt; [Virtual Slot]"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:596
+#, no-c-format
+msgid ""
+"Hotplug a new pass-through PCI device to the specified domain. <xref linkend="
+"\"gloss.xmtoxl.vt.bdf\"/> is the PCI Bus/Device/Function of the physical "
+"device to be passed through."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:610
+#, no-c-format
+msgid "pci-list <replaceable>DOMAIN_ID</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:615
+#, no-c-format
+msgid "List pass-through PCI devices for a domain"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:625
+#, no-c-format
+msgid "getenforce"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:630
+#, no-c-format
+msgid ""
+"Determine if the <xref linkend=\"gloss.xmtoxl.vt.flask\"/> security module "
+"is loaded and enforcing its policy."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:641
+#, no-c-format
+msgid "setenforce <option>&lt;1|0|Enforcing|Permissive&gt;</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:646
+#, no-c-format
+msgid ""
+"Enable or disable enforcing of the <xref linkend=\"gloss.xmtoxl.vt.flask\"/> "
+"access controls. The default is permissive and can be changed using the "
+"flask_enforcing option on the hypervisor's command line."
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:663
+#, no-c-format
+msgid "<title>Removed Options</title>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:664
+#, no-c-format
+msgid ""
+"List of <command>xm</command> <option>options</option> which are no more "
+"available with the XL tool stack and a replacement solution if available."
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:669 xm_vs_xl.xml:2058
+#, no-c-format
+msgid "Domain Management"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:670
+#, no-c-format
+msgid "The list of Domain management removed command and their replacement."
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:674
+#, no-c-format
+msgid "<title>Domain Management Removed Options</title>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:682
+#, no-c-format
+msgid "<para>Domain Management Removed Options</para>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:699
+#, no-c-format
+msgid "Equivalent"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:708
+#, no-c-format
+msgid "(-) <option>log</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:713
+#, no-c-format
+msgid "Print out the Xend log."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:718
+#, no-c-format
+msgid "This log file can be found in <filename>/var/log/xend.log</filename>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:726
+#, no-c-format
+msgid "(-) <option>delete</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:731
+#, no-c-format
+msgid ""
+"Remove a domain from Xend domain management. The <option>list</option> "
+"option shows the domain names"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:737
+#, no-c-format
+msgid "<command>virsh</command> <option>undefine</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:744
+#, no-c-format
+msgid "(-) <option>new</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:749
+#, no-c-format
+msgid "Adds a domain to Xend domain management"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:754
+#, no-c-format
+msgid "<command>virsh</command> <option>define</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:761
+#, no-c-format
+msgid "(-) <option>start</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:766
+#, no-c-format
+msgid ""
+"Start a Xend managed domain that was added using the <command>xm</command> "
+"<option>new</option> command"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:772
+#, no-c-format
+msgid "<command>virsh</command> <option>start</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:779
+#, no-c-format
+msgid "(-) <option>dryrun</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:784
+#, no-c-format
+msgid ""
+"Dry run - prints the resulting configuration in <xref linkend=\"gloss.xmtoxl."
+"vt.sxp\"/> but does not create the domain"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:791
+#, no-c-format
+msgid "<command>xl</command> <option>-N</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:798
+#, no-c-format
+msgid "(-) <option>reset</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:803
+#, no-c-format
+msgid "Reset a domain"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:808
+#, no-c-format
+msgid "<command>virsh</command> <option>reset</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:815
+#, no-c-format
+msgid "(-) <option>domstate</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:820
+#, no-c-format
+msgid "Show domain state"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:825
+#, no-c-format
+msgid "<command>virsh</command> <option>domstate</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:832
+#, no-c-format
+msgid "(-) <option>serve</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:837
+#, no-c-format
+msgid "Proxy Xend XMLRPC over stdio"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:847
+#, no-c-format
+msgid ""
+"(-) <option>resume</option> <replaceable>DOMAIN</replaceable> "
+"<replaceable>OPTIONS</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:853
+#, no-c-format
+msgid "Moves a domain out of the suspended state and back into memory"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:865
+#, no-c-format
+msgid "(-) <option>suspend</option> <replaceable>DOMAIN</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:870
+#, no-c-format
+msgid ""
+"Suspend a domain to a state file so that it can be later resumed using the "
+"<option>resume</option> subcommand. Similar to the <option>save</option> "
+"subcommand although the state file may not be specified"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:878
+#, no-c-format
+msgid "<command>virsh</command> <option>managedsave</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:891
+#, no-c-format
+msgid "USB Devices"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:892
+#, no-c-format
+msgid ""
+"USB <option>options</option> are not available with xl/libxl tool stack. "
+"<command>virsh</command> has the <option> attach-device</option> and "
+"<option>detach-device</option> options but it does not work yet with "
+"<option>USB</option>."
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:899
+#, no-c-format
+msgid "<title>USB Devices Management Removed Options</title>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:906
+#, no-c-format
+msgid "<para>USB Devices Management Removed Options</para>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:927
+#, no-c-format
+msgid "(-) <option>usb-add</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:932
+#, no-c-format
+msgid "Add a new USB physical bus to a domain"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:939
+#, no-c-format
+msgid "(-) <option>usb-del</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:944
+#, no-c-format
+msgid "Delete a USB physical bus from a domain"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:951
+#, no-c-format
+msgid "(-) <option>usb-attach</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:956
+#, no-c-format
+msgid "Attach a new USB physical bus to domain's virtual port"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:963
+#, no-c-format
+msgid "(-) <option>usb-detach</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:968
+#, no-c-format
+msgid "Detach a USB physical bus from domain's virtual port"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:975
+#, no-c-format
+msgid "(-) <option>usb-list</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:980
+#, no-c-format
+msgid "List domain's attachment state of all virtual port"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:987
+#, no-c-format
+msgid "(-) <option>usb-list-assignable-devices</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:992
+#, no-c-format
+msgid "List all the assignable USB devices"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:999
+#, no-c-format
+msgid "(-) <option>usb-hc-create</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1004
+#, no-c-format
+msgid "Create a domain's new virtual USB host controller"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1011
+#, no-c-format
+msgid "(-) <option>usb-hc-destroy</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1016
+#, no-c-format
+msgid "Destroy a domain's virtual USB host controller"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1026
+#, no-c-format
+msgid "CPU Management"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1027
+#, no-c-format
+msgid ""
+"CPU management options has changed. New options are available, see: <xref "
+"linkend=\"sec.xmvsxl.changed.cpu\"/>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1032
+#, no-c-format
+msgid "CPU Management Removed options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1039
+#, no-c-format
+msgid "CPU Management Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1060
+#, no-c-format
+msgid "(-) <option>cpupool-new</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1065
+#, no-c-format
+msgid "Adds a CPU pool to Xend CPU pool management"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1072
+#, no-c-format
+msgid "(-) <option>cpupool-start</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1077
+#, no-c-format
+msgid "Starts a Xend CPU pool"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1084
+#, no-c-format
+msgid "(-) <option>cpupool-delete</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1089
+#, no-c-format
+msgid "Removes a CPU pool from Xend management"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1099 xm_vs_xl.xml:1102 xm_vs_xl.xml:3191
+#, no-c-format
+msgid "Other Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1109
+#, no-c-format
+msgid "Other Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1130
+#, no-c-format
+msgid "(-) <option>shell</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1135
+#, no-c-format
+msgid "Launch an interactive shell"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1142
+#, no-c-format
+msgid "(-) <option>change-vnc-passwd</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1147
+#, no-c-format
+msgid "Change vnc password"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1154
+#, no-c-format
+msgid "(-) <option>vtpm-list</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1159
+#, no-c-format
+msgid "List virtual TPM devices"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1166
+#, no-c-format
+msgid "(-) <option>block-configure</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1171
+#, no-c-format
+msgid "Change block device configuration"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1183
+#, no-c-format
+msgid "Changed Options"
+msgstr ""
+
+#. Tag: option
+#: xm_vs_xl.xml:1186
+#, no-c-format
+msgid "create"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1187
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>create</option> <replaceable>CONFIG_FILE</"
+"replaceable> <replaceable>OPTIONS </replaceable> <replaceable>VARS</"
+"replaceable>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1193
+#, no-c-format
+msgid "&libvirt; Equivalent:"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1194
+#, no-c-format
+msgid "<command>virsh</command> <option>create</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1199
+#, no-c-format
+msgid "<command>xl</command> <option>create</option> Changed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1206
+#, no-c-format
+msgid "<option>create</option> Changed Options"
+msgstr ""
+
+#. Tag: emphasis
+#: xm_vs_xl.xml:1214 xm_vs_xl.xml:1257 xm_vs_xl.xml:1400 xm_vs_xl.xml:1517
+#: xm_vs_xl.xml:1584 xm_vs_xl.xml:1663 xm_vs_xl.xml:1718 xm_vs_xl.xml:1785
+#: xm_vs_xl.xml:1859 xm_vs_xl.xml:2003 xm_vs_xl.xml:2085 xm_vs_xl.xml:2249
+#: xm_vs_xl.xml:2350 xm_vs_xl.xml:2525 xm_vs_xl.xml:2597 xm_vs_xl.xml:2690
+#: xm_vs_xl.xml:2793 xm_vs_xl.xml:2890 xm_vs_xl.xml:3010
+#, no-c-format
+msgid "<emphasis>Options</emphasis>"
+msgstr ""
+
+#. Tag: emphasis
+#: xm_vs_xl.xml:1219 xm_vs_xl.xml:1262 xm_vs_xl.xml:1405 xm_vs_xl.xml:1472
+#: xm_vs_xl.xml:1522 xm_vs_xl.xml:1589 xm_vs_xl.xml:1668 xm_vs_xl.xml:1723
+#: xm_vs_xl.xml:1790 xm_vs_xl.xml:1864 xm_vs_xl.xml:2008 xm_vs_xl.xml:2090
+#: xm_vs_xl.xml:2146 xm_vs_xl.xml:2200 xm_vs_xl.xml:2254 xm_vs_xl.xml:2355
+#: xm_vs_xl.xml:2429 xm_vs_xl.xml:2472 xm_vs_xl.xml:2530 xm_vs_xl.xml:2602
+#: xm_vs_xl.xml:2695 xm_vs_xl.xml:2751 xm_vs_xl.xml:2798 xm_vs_xl.xml:2895
+#: xm_vs_xl.xml:2963 xm_vs_xl.xml:3015 xm_vs_xl.xml:3126 xm_vs_xl.xml:3169
+#: xm_vs_xl.xml:3327
+#, no-c-format
+msgid "<emphasis>Task</emphasis>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1227
+#, no-c-format
+msgid ""
+"(*) -f=<replaceable>FILE</replaceable>, --defconfig=<replaceable>FILE</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1233
+#, no-c-format
+msgid "Use the given configuration file"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1242
+#, no-c-format
+msgid "<command>xm</command> <option>create</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1249
+#, no-c-format
+msgid "<option>create</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1270
+#, no-c-format
+msgid "(-) <option>-s</option>, <option>--skipdtd</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1275
+#, no-c-format
+msgid "Skip DTD checking - skips checks on XML before creating"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1282
+#, no-c-format
+msgid "(-) <option>-x</option>, <option>--xmldryrun</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1287
+#, no-c-format
+msgid "XML dry run"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1294
+#, no-c-format
+msgid ""
+"(-) <option>-F=<replaceable>FILE</replaceable>, --config=<replaceable>FILE</"
+"replaceable></option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1300
+#, no-c-format
+msgid ""
+"Use the given <xref linkend=\"gloss.xmtoxl.vt.sxp\"/> formatted "
+"configuration script"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1308
+#, no-c-format
+msgid "(-) <option>--path</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1313
+#, no-c-format
+msgid "Search path for configuration scripts"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1320 xm_vs_xl.xml:3051
+#, no-c-format
+msgid "(-) <option>--help_config</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1325 xm_vs_xl.xml:3056
+#, no-c-format
+msgid ""
+"Print the available configuration variables (vars) for the configuration "
+"script"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1333 xm_vs_xl.xml:3037
+#, no-c-format
+msgid "(-) <option>-n</option>, <option>--dryrun</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1338
+#, no-c-format
+msgid ""
+"Dry run — prints the configuration in <xref linkend=\"gloss.xmtoxl.vt.sxp\"/"
+"> but does not create the domain"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1347
+#, no-c-format
+msgid "(-) <option>-c</option>, <option>--console_autoconnect</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1352
+#, no-c-format
+msgid "Connect to the console after the domain is created"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1359
+#, no-c-format
+msgid "(-) <option>-q</option>, <option>--quiet</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1364
+#, no-c-format
+msgid "Quiet mode"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1371
+#, no-c-format
+msgid "(-) <option>-p</option>, <option>--paused</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1376
+#, no-c-format
+msgid "Leave the domain paused after it is created"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1385
+#, no-c-format
+msgid "<command>xl</command> <option>create</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1392
+#, no-c-format
+msgid "<option>create</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1413 xm_vs_xl.xml:2299
+#, no-c-format
+msgid "(+) <option>-V</option>, <option>--vncviewer</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1418 xm_vs_xl.xml:2304
+#, no-c-format
+msgid "Attach to domain's VNC server, forking a vncviewer process"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1425 xm_vs_xl.xml:2311
+#, no-c-format
+msgid "(+) <option>-A</option>, <option>--vncviewer-autopass</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1430 xm_vs_xl.xml:2316
+#, no-c-format
+msgid "Pass VNC password to vncviewer via stdin"
+msgstr ""
+
+#. Tag: option
+#: xm_vs_xl.xml:1440
+#, no-c-format
+msgid "console"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1441
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>console</option> <replaceable>OPTIONS</"
+"replaceable> <replaceable>DOMAIN</replaceable>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1446 xm_vs_xl.xml:1563 xm_vs_xl.xml:1642 xm_vs_xl.xml:1761
+#: xm_vs_xl.xml:1837 xm_vs_xl.xml:2064 xm_vs_xl.xml:2174 xm_vs_xl.xml:2228
+#: xm_vs_xl.xml:2329 xm_vs_xl.xml:2504 xm_vs_xl.xml:3100
+#, no-c-format
+msgid "&libvirt; Equivalent"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1447
+#, no-c-format
+msgid "<command>virsh</command> <option>console</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1452
+#, no-c-format
+msgid "<command>xl</command> <option>console</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1459
+#, no-c-format
+msgid "<option>console</option> Added Option"
+msgstr ""
+
+#. Tag: emphasis
+#: xm_vs_xl.xml:1467 xm_vs_xl.xml:2141 xm_vs_xl.xml:2195 xm_vs_xl.xml:2424
+#: xm_vs_xl.xml:2467 xm_vs_xl.xml:2746 xm_vs_xl.xml:2958 xm_vs_xl.xml:3121
+#: xm_vs_xl.xml:3164 xm_vs_xl.xml:3322
+#, no-c-format
+msgid "<emphasis>Option</emphasis>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1480
+#, no-c-format
+msgid "(+) <option>-t</option> [pv|serial]"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1485
+#, no-c-format
+msgid ""
+"Connect to a PV console or connect to an emulated serial console. PV "
+"consoles are the only consoles available for PV domains while HVM domains "
+"can have both"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1497
+#, no-c-format
+msgid "info"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1498
+#, no-c-format
+msgid "<command>xl</command> <option>info</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1502
+#, no-c-format
+msgid "<command>xm</command> <option>info</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1509
+#, no-c-format
+msgid "<option>info</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1530
+#, no-c-format
+msgid "(-) <option>-n</option>, <option>--numa</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1535
+#, no-c-format
+msgid "Numa info"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1542
+#, no-c-format
+msgid "(-) <option>-c</option>, <option>--config</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1547
+#, no-c-format
+msgid "List Xend configuration parameters"
+msgstr ""
+
+#. Tag: option
+#: xm_vs_xl.xml:1557
+#, no-c-format
+msgid "dump-core"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1558
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>dump-core</option> <replaceable>DOMAIN</"
+"replaceable> <replaceable>FILENAME</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1564
+#, no-c-format
+msgid "<command>virsh</command> <option>dump</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1569
+#, no-c-format
+msgid "<command>xm</command> <option>dump-core</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1576
+#, no-c-format
+msgid "<option>dump-core</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1597
+#, no-c-format
+msgid "(-) <option>-L</option>, <option>--live</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1602
+#, no-c-format
+msgid "Dump core without pausing the domain"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1609
+#, no-c-format
+msgid "(-) <option>-C</option>, <option>--crash</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1614
+#, no-c-format
+msgid "Crash domain after dumping core"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1621
+#, no-c-format
+msgid "(-) <option>-R</option>, <option>--reset</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1626
+#, no-c-format
+msgid "Reset domain after dumping core"
+msgstr ""
+
+#. Tag: option
+#: xm_vs_xl.xml:1636
+#, no-c-format
+msgid "list"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1637
+#, no-c-format
+msgid ""
+"<command>xl list</command> <option>options</option> <replaceable>DOMAIN</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1643
+#, no-c-format
+msgid "<command>virsh</command> <option>list --all</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1648
+#, no-c-format
+msgid "<command>xm</command> <option>list</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1655
+#, no-c-format
+msgid "<option>list</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1676 xm_vs_xl.xml:2971 xm_vs_xl.xml:3177 xm_vs_xl.xml:3335
+#, no-c-format
+msgid "(-) <option>-l</option>, <option>--long</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1681
+#, no-c-format
+msgid ""
+"The output for <command>xm</command> <option>list</option> presents the data "
+"in <xref linkend=\"gloss.xmtoxl.vt.sxp\"/> format"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1689
+#, no-c-format
+msgid "(-) <option>--state==<replaceable>STATE</replaceable></option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1694
+#, no-c-format
+msgid "Output information for VMs in the specified state"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1703
+#, no-c-format
+msgid "<command>xl</command> <option>list</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1710
+#, no-c-format
+msgid "<option>list</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1731
+#, no-c-format
+msgid "(+) <option>-Z</option>, <option>--context</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1736
+#, no-c-format
+msgid "Also prints the security labels"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1743
+#, no-c-format
+msgid "(+) <option>-v</option>, <option>--verbose</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1748
+#, no-c-format
+msgid "Also prints the domain UUIDs, the shutdown reason and security labels"
+msgstr ""
+
+#. Tag: option
+#: xm_vs_xl.xml:1759
+#, no-c-format
+msgid "mem-*"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1762
+#, no-c-format
+msgid "<command>virsh</command> <option>setmem</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1765
+#, no-c-format
+msgid "<command>virsh</command> <option>setmaxmem</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1770
+#, no-c-format
+msgid "<command>xl</command> <option>mem-*</option> Changed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1777
+#, no-c-format
+msgid "<option>mem-*</option> Changed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1798
+#, no-c-format
+msgid ""
+"<option>mem-max</option> <replaceable>DOMAIN_ID</replaceable> "
+"<replaceable>MEM</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1804
+#, no-c-format
+msgid ""
+"Appending <option>t</option> for terabytes, <option>g</option> for "
+"gigabytes, <option>m</option> for megabytes,<option>k</option> for kilobytes "
+"and <option>b</option> for bytes. Specify the maximum amount of memory the "
+"domain can use."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1814
+#, no-c-format
+msgid ""
+"<option>mem-set</option> <replaceable>DOMAIN_ID</replaceable> "
+"<replaceable>MEM</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1820
+#, no-c-format
+msgid "Set the domain's used memory using the balloon driver"
+msgstr ""
+
+#. Tag: option
+#: xm_vs_xl.xml:1830
+#, no-c-format
+msgid "migrate"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1831
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>migrate</option> <replaceable>OPTIONS</"
+"replaceable> <replaceable>DOMAIN</replaceable> <replaceable>HOST</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1838
+#, no-c-format
+msgid ""
+"<command>virsh migrate --live hvm-sles11-qcow2 xen+</command> "
+"<replaceable>CONNECTOR</replaceable>://<replaceable>USER</"
+"replaceable>@<replaceable>IP_ADDRESS</replaceable>/"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1844
+#, no-c-format
+msgid "<command>xm</command> <option>migrate</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1851
+#, no-c-format
+msgid "<option>migrate</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1872
+#, no-c-format
+msgid "(-) <option>-l</option>, <option>--live</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1877
+#, no-c-format
+msgid ""
+"Use live migration. This will migrate the domain between hosts without "
+"shutting down the domain"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1885
+#, no-c-format
+msgid ""
+"(-) <option>-r</option>, <option>--resource</option> <replaceable>Mbs</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1891
+#, no-c-format
+msgid "Set maximum Mbs allowed for migrating the domain"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1898
+#, no-c-format
+msgid "(-) <option>-c</option>, <option>--change_home_server</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1903
+#, no-c-format
+msgid "Change home server for managed domains"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1910
+#, no-c-format
+msgid "(-) <option>--max_iters=</option><replaceable>MAX_ITERS</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1916
+#, no-c-format
+msgid "Number of iterations before final suspend (default:30)"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1923
+#, no-c-format
+msgid "(-) <option>--max_factor=</option><replaceable>MAX_FACTOR</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1929
+#, no-c-format
+msgid "Max amount of memory to transfer before final suspend (default: 3*RAM)."
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1937
+#, no-c-format
+msgid ""
+"(-) <option>--min_remaining=</option><replaceable>MIN_REMAINING</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1943
+#, no-c-format
+msgid "Number of dirty pages before final suspend (default:50)"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1950
+#, no-c-format
+msgid "(-) <option>--abort_if_busy</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1955
+#, no-c-format
+msgid "Abort migration instead of doing final suspend"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1962
+#, no-c-format
+msgid "(-) <option>--log_progress</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1967
+#, no-c-format
+msgid "Log progress of migration to <filename>xend.log</filename>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1974
+#, no-c-format
+msgid "(-) <option>-s</option>, <option>--ssl</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1979
+#, no-c-format
+msgid "Use ssl connection for migration"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:1988
+#, no-c-format
+msgid "<command>xl</command> <option>migrate</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:1995
+#, no-c-format
+msgid "<option>migrate</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2016
+#, no-c-format
+msgid "(+) <option>-s</option> <replaceable>SSHCOMMAND</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2021
+#, no-c-format
+msgid "Use &lt;sshcommand&gt; instead of <command>ssh</command>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2028 xm_vs_xl.xml:2274
+#, no-c-format
+msgid "(+) <option>-e</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2033
+#, no-c-format
+msgid ""
+"On the new host, do not wait in the background (on &lt;host&gt;) for the "
+"death of the domain"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2041
+#, no-c-format
+msgid "(+) <option>-C</option> <replaceable>config</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2046
+#, no-c-format
+msgid "Send &lt;config&gt; instead of a configuration file from creation"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2059
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>reboot</option> <replaceable>OPTIONS</"
+"replaceable> <replaceable>DOMAIN</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2065
+#, no-c-format
+msgid "<command>virsh</command> <option>reboot</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2070
+#, no-c-format
+msgid "<command>xm</command> <option>reboot</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2077
+#, no-c-format
+msgid "<option>reboot</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2098
+#, no-c-format
+msgid "(-) <option>-a</option>, <option>--all</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2103
+#, no-c-format
+msgid "Reboot all domains"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2110 xm_vs_xl.xml:2363
+#, no-c-format
+msgid "(-) <option>-w</option>, <option>--wait</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2115
+#, no-c-format
+msgid ""
+"Wait for reboot to complete before returning. This may take a while, as all "
+"services in the domain need to be shut down cleanly"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2126
+#, no-c-format
+msgid "<command>xl</command> <option>reboot</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2133
+#, no-c-format
+msgid "<option>reboot</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2154 xm_vs_xl.xml:2437
+#, no-c-format
+msgid "(+) <option>-F</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2159
+#, no-c-format
+msgid "Fallback to ACPI reset event for HVM guests with no PV drivers"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2167
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>save</option> <replaceable>OPTIONS</"
+"replaceable> <replaceable>DOMAIN</replaceable> "
+"<replaceable>CHECK_POINT_FILE</replaceable> <replaceable>CONFIG_FILE</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2175
+#, no-c-format
+msgid "<command>virsh</command> <option>save</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2180
+#, no-c-format
+msgid "<command>xl</command> <option>save</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2187
+#, no-c-format
+msgid "<option>save</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2208
+#, no-c-format
+msgid "(+) <option>-c</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2213
+#, no-c-format
+msgid "Leave domain running after creating the snapshot"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2221
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>restore</option> <replaceable>OPTIONS</"
+"replaceable> <replaceable>CONFIG_FILE</replaceable> "
+"<replaceable>CHECK_POINT_FILE</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2229
+#, no-c-format
+msgid "<command>virsh</command> <option>restore</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2234
+#, no-c-format
+msgid "<command>xl</command> <option>restore</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2241
+#, no-c-format
+msgid "<option>restore</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2262
+#, no-c-format
+msgid "(+) <option>-p</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2267
+#, no-c-format
+msgid "Do not unpause domain after restoring it"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2279
+#, no-c-format
+msgid ""
+"Do not wait in the background for the death of the domain on the new host"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2287
+#, no-c-format
+msgid "(+) <option>-d</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2292
+#, no-c-format
+msgid "Enable debug messages"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2324
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>shutdown</option> <replaceable>OPTIONS</"
+"replaceable> <replaceable>DOMAIN</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2330
+#, no-c-format
+msgid "<command>virsh</command> <option>shutdown</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2335
+#, no-c-format
+msgid "<command>xm</command> <option>shutdown</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2342
+#, no-c-format
+msgid "<option>shutdown</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2368
+#, no-c-format
+msgid "Wait for the domain to complete shutdown before returning"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2375
+#, no-c-format
+msgid "(-) <option>-a</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2380
+#, no-c-format
+msgid "Shutdown all guest domains"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2387
+#, no-c-format
+msgid "(-) <option>-R</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2397
+#, no-c-format
+msgid "(-) <option>-H</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2409
+#, no-c-format
+msgid "<command>xl</command> <option>shutdown</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2416
+#, no-c-format
+msgid "<option>shutdown</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2442
+#, no-c-format
+msgid ""
+"If the guest does not support PV shutdown control then fallback to sending "
+"an ACPI power event"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2452
+#, no-c-format
+msgid "<command>xl</command> <option>trigger</option> Changed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2459
+#, no-c-format
+msgid "<option>trigger</option> Changed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2480
+#, no-c-format
+msgid ""
+"<command></command> <option>trigger</option> <replaceable>DOMAIN</"
+"replaceable> &lt;nmi|reset|init|power|sleep|s3resume&gt; <replaceable>VCPU</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2488
+#, no-c-format
+msgid "Send a trigger to a domain. Only available for HVM domains"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2498
+#, no-c-format
+msgid "<command>xl</command> <option>sched-*</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2499
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>sched-credit</option> <replaceable>OPTIONS</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2505
+#, no-c-format
+msgid "<command>virsh</command> <option>schedinfo</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2510
+#, no-c-format
+msgid "<command>xm</command> <option>sched-credit</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2517
+#, no-c-format
+msgid "<option>sched-credit</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2538 xm_vs_xl.xml:2703
+#, no-c-format
+msgid ""
+"<option>-d</option> <replaceable>DOMAIN</replaceable>, <option>--domain=</"
+"option><replaceable>DOMAIN</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2544 xm_vs_xl.xml:2709 xm_vs_xl.xml:2922
+#, no-c-format
+msgid "Domain"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2551 xm_vs_xl.xml:2716 xm_vs_xl.xml:2860
+#, no-c-format
+msgid ""
+"<option>-w</option> <replaceable>WEIGHT</replaceable>, <option>--weight=</"
+"option><replaceable>WEIGHT</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2557
+#, no-c-format
+msgid ""
+"A domain with a weight of 512 will get twice as much CPU as a domain with a "
+"weight of 256 on a contended host. Legal weights range from 1 to 65535 and "
+"the default is 256"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2566
+#, no-c-format
+msgid ""
+"<option>-c</option> <replaceable>CAP</replaceable>, <option>--cap=</"
+"option><replaceable>CAP</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2572
+#, no-c-format
+msgid "The CAP optionally fixes the maximum amount of CPU a domain can consume"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2582
+#, no-c-format
+msgid "<command>xl</command> <option>sched-credit</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2589
+#, no-c-format
+msgid "<option>sched-credit</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2610 xm_vs_xl.xml:2759
+#, no-c-format
+msgid ""
+"(+) <option>-p</option> <replaceable>CPUPOOL</replaceable>, <option>--"
+"cpupool=</option><replaceable>CPUPOOL</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2616 xm_vs_xl.xml:2765 xm_vs_xl.xml:2909
+#, no-c-format
+msgid "Restrict output to domains in the specified cpupool"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2623
+#, no-c-format
+msgid "(+) <option>-s</option>, <option>--schedparam</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2628
+#, no-c-format
+msgid "Specify to list or set pool-wide scheduler parameters"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2635
+#, no-c-format
+msgid ""
+"(+) <option>-t</option> <replaceable>TSLICE</replaceable>, <option>--"
+"tslice_ms=</option><replaceable>TSLICE</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2641
+#, no-c-format
+msgid ""
+"Timeslice tells the scheduler how long to allow VMs to run before pre-empting"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2649
+#, no-c-format
+msgid ""
+"(+) <option>-r</option> <replaceable>RLIMIT</replaceable>, <option>--"
+"ratelimit_us=</option><replaceable>RLIMIT</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2655
+#, no-c-format
+msgid "Ratelimit attempts to limit the number of schedules per second"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2663
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>sched-credit2</option> <replaceable>OPTIONS</"
+"replaceable>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2668
+#, no-c-format
+msgid "&libvirt; Status"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2669
+#, no-c-format
+msgid ""
+"<command>virsh</command> only supports credit scheduler, not credit2 "
+"scheduler"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2675
+#, no-c-format
+msgid "<command>xm</command> <option>sched-credit2</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2682
+#, no-c-format
+msgid "<option>sched-credit2</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2722
+#, no-c-format
+msgid "Legal weights range from 1 to 65535 and the default is 256"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2731
+#, no-c-format
+msgid "<command>xl</command> <option>sched-credit2</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2738
+#, no-c-format
+msgid "<option>sched-credit2</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2773
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>sched-sedf</option> <replaceable>OPTIONS</"
+"replaceable>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2778
+#, no-c-format
+msgid "<command>xm</command> <option>sched-sedf</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2785
+#, no-c-format
+msgid "<option>sched-sedf</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2806
+#, no-c-format
+msgid ""
+"<option>-p</option> <replaceable>PERIOD</replaceable>, <option>--period=</"
+"option><replaceable>PERIOD</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2812 xm_vs_xl.xml:2826
+#, no-c-format
+msgid ""
+"The normal <xref linkend=\"gloss.xmtoxl.vt.edf\"/> scheduling usage in "
+"milliseconds"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2820
+#, no-c-format
+msgid ""
+"<option>-s</option> <replaceable>SLICE</replaceable>, <option>--slice=</"
+"option><replaceable>SLICE</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2834
+#, no-c-format
+msgid ""
+"<option>-l</option> <replaceable>LATENCY</replaceable>, <option>--latency=</"
+"option><replaceable>LATENCY</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2840
+#, no-c-format
+msgid "Scaled period if domain is doing heavy I/O"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2847
+#, no-c-format
+msgid ""
+"<option>-e</option> <replaceable>EXTRA</replaceable>, <option>--extra=</"
+"option><replaceable>EXTRA</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2853
+#, no-c-format
+msgid "Flag for allowing domain to run in extra time (0 or 1)"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2866
+#, no-c-format
+msgid "Another way of setting CPU slice"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2875
+#, no-c-format
+msgid "<command>xl</command> <option>sched-sedf</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2882
+#, no-c-format
+msgid "<option>sched-sedf</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2903
+#, no-c-format
+msgid ""
+"(+) <option>-c</option> <replaceable>CPUPOOL</replaceable>, <option>--"
+"cpupool=</option><replaceable>CPUPOOL</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2916
+#, no-c-format
+msgid ""
+"(+) <option>-d</option> <replaceable>DOMAIN</replaceable>, <option>--"
+"domain=</option><replaceable>DOMAIN</replaceable>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2932
+#, no-c-format
+msgid "<command>xl</command> <option>cpupool-*</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2933
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>cpupool-cpu-remove</option> "
+"<replaceable>CPU_POOL</replaceable> &lt;CPU nr&gt;|node:&lt;node nr&gt;"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2938
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>cpupool-list</option> [-c|--cpus] "
+"<replaceable>CPU_POOL</replaceable>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2943
+#, no-c-format
+msgid "<command>xm</command> <option>cpupool-list</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2950
+#, no-c-format
+msgid "<option>cpupool-*</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2976
+#, no-c-format
+msgid ""
+"Output all CPU pool details in <xref linkend=\"gloss.xmtoxl.vt.sxp\"/> format"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2985
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>cpupool-cpu-add</option> "
+"<replaceable>CPU_POOL</replaceable> cpu-nr|node:node-nr"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:2989
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>cpupool-create</option> <replaceable>OPTIONS</"
+"replaceable> <replaceable>CONFIG_FILE</replaceable> [Variable=Value ...]"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:2995
+#, no-c-format
+msgid "<command>xm</command> <option>cpupool-create</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3002
+#, no-c-format
+msgid "<option>cpupool-create</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3023
+#, no-c-format
+msgid ""
+"(-) <option>-f</option> <replaceable>FILE</replaceable>, --"
+"defconfig=<replaceable>FILE</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3029
+#, no-c-format
+msgid ""
+"Use the given Python configuration script. The configuration script is "
+"loaded after arguments have been processed"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3042
+#, no-c-format
+msgid ""
+"Dry run - prints the resulting configuration in <xref linkend=\"gloss.xmtoxl."
+"vt.sxp\"/> but does not create the CPU pool"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3064
+#, no-c-format
+msgid "(-) <option>--path=</option><replaceable>PATH</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3069
+#, no-c-format
+msgid ""
+"Search path for configuration scripts. The value of PATH is a colon-"
+"separated directory list"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3077
+#, no-c-format
+msgid ""
+"(-) <option>-F=</option><replaceable>FILE</replaceable>, --"
+"config=<replaceable>FILE</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3083
+#, no-c-format
+msgid "CPU pool configuration to use (<xref linkend=\"gloss.xmtoxl.vt.sxp\"/>)"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:3094
+#, no-c-format
+msgid "PCI and Block Devices"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3095
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>pci-detach</option> [-f] "
+"<replaceable>DOMAIN_ID</replaceable> &lt;BDF&gt;"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3101
+#, no-c-format
+msgid "<command>virsh</command> <option>detach-device</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:3106
+#, no-c-format
+msgid "<command>xl</command> <option>pci-detach</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3113
+#, no-c-format
+msgid "<option>pci-detach</option> Added Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3139
+#, no-c-format
+msgid ""
+"If <option>-f</option> is specified, <command>xl</command> is going to "
+"forcefully remove the device even without guest's collaboration"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:3149
+#, no-c-format
+msgid "<command>xm</command> <option>block-list</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3156
+#, no-c-format
+msgid "<option>block-list</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3182
+#, no-c-format
+msgid "List virtual block devices for a domain"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3198 xm_vs_xl.xml:3251
+#, no-c-format
+msgid "<para>Option</para>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3212
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>block-attach</option> <replaceable>DOMAIN</"
+"replaceable> &lt;disk-spec-component(s)&gt;"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3219
+#, no-c-format
+msgid "<command>virsh</command> <option>attach-disk/attach-device</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3226
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>block-list</option> <replaceable>DOMAIN_ID</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3232
+#, no-c-format
+msgid "<command>virsh</command> <option>domblklist</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:3242
+#, no-c-format
+msgid "Network"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:3244
+#, no-c-format
+msgid "Network Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3265
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>network-list</option> <replaceable>DOMAIN(s)</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3271
+#, no-c-format
+msgid "<command>virsh</command> <option>domiflist</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3278
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>network-detach</option> "
+"<replaceable>DOMAIN_ID</replaceable> devid|mac"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3284
+#, no-c-format
+msgid "<command>virsh</command> <option>detach-interface</option>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3291
+#, no-c-format
+msgid ""
+"<command>xl</command> <option>network-attach</option> "
+"<replaceable>DOMAIN(s)</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3297
+#, no-c-format
+msgid ""
+"<command>virsh</command> <option>attach-interface/attach-device</option>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:3307
+#, no-c-format
+msgid "<command>xl</command> <option>network-attach</option> Removed Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3314
+#, no-c-format
+msgid "<para>Removed Options</para>"
+msgstr ""
+
+#. Tag: title
+#: xm_vs_xl.xml:3350 xm_vs_xl.xml:3353
+#, no-c-format
+msgid "New Options"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3374
+#, no-c-format
+msgid ""
+"<option>config-update</option> <replaceable>DOMAIN</replaceable> "
+"<replaceable>CONFIG_FILE</replaceable> <replaceable>OPTIONS</replaceable> "
+"<replaceable>VARS</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3381
+#, no-c-format
+msgid ""
+"Update the saved configuration for a running domain. This has no immediate "
+"effect but will be applied when the guest is next restarted. This command is "
+"useful to ensure that runtime modifications made to the guest will be "
+"preserved when the guest is restarted"
+msgstr ""
+
+#. Tag: option
+#: xm_vs_xl.xml:3393
+#, no-c-format
+msgid "migrate-receive"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3402
+#, no-c-format
+msgid "<option>sharing</option> <replaceable>DOMAIN</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3407
+#, no-c-format
+msgid ""
+"List count of shared pages.List specifically for that domain. Otherwise, "
+"list for all domains"
+msgstr ""
+
+#. Tag: option
+#: xm_vs_xl.xml:3416
+#, no-c-format
+msgid "vm-list"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3420
+#, no-c-format
+msgid ""
+"Prints information about guests. This list excludes information about "
+"service or auxiliary domains such as &dom0; and stubdoms"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3428
+#, no-c-format
+msgid ""
+"<option>cpupool-rename</option> <replaceable>CPU_POOL</replaceable> "
+"<replaceable>NEWNAME</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3434
+#, no-c-format
+msgid "Renames a cpu-pool to newname"
+msgstr ""
+
+#. Tag: option
+#: xm_vs_xl.xml:3442
+#, no-c-format
+msgid "cpupool-numa-split"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3446
+#, no-c-format
+msgid "Splits up the machine into one cpu-pool per numa node"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3453
+#, no-c-format
+msgid ""
+"cd-insert <replaceable>DOMAIN</replaceable> &lt;VirtualDevice&gt; &lt;type:"
+"path&gt;"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3459
+#, no-c-format
+msgid ""
+"Insert a CD-ROM into a guest domain's existing virtual CD drive. The virtual "
+"drive must already exist but can be current empty"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3467
+#, no-c-format
+msgid ""
+"<option>cd-eject</option> <replaceable>DOMAIN</replaceable> &lt;"
+"VirtualDevice&gt;"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3473
+#, no-c-format
+msgid ""
+"Eject a CD-ROM from a guest's virtual CD drive. Only works with HVM domains"
+msgstr ""
+
+#. Tag: option
+#: xm_vs_xl.xml:3482
+#, no-c-format
+msgid "pci-assignable-list"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3486
+#, no-c-format
+msgid ""
+"List all the assignable PCI devices. These are devices in the system which "
+"are configured to be available for pass-through and are bound to a suitable "
+"PCI back-end driver in &dom0; rather than a real driver"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3496
+#, no-c-format
+msgid "<option>pci-assignable-add</option> &lt;BDF&gt;"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3501
+#, no-c-format
+msgid ""
+"Make the device at PCI Bus/Device/Function <xref linkend=\"gloss.xmtoxl.vt."
+"bdf\"/> assignable to guests.This will bind the device to the pciback driver"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3510
+#, no-c-format
+msgid ""
+"<option>pci-assignable-remove</option> <replaceable>OPTIONS</replaceable> "
+"&lt;BDF&gt;"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3516
+#, no-c-format
+msgid ""
+"Make the device at PCI Bus/Device/Function <xref linkend=\"gloss.xmtoxl.vt."
+"bdf\"/> assignable to guests. This will at least unbind the device from "
+"pciback"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3525
+#, no-c-format
+msgid "<option>loadpolicy</option> <replaceable>POLICY_FILE</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: xm_vs_xl.xml:3530
+#, no-c-format
+msgid ""
+"Load <xref linkend=\"gloss.xmtoxl.vt.flask\"/> policy from the given policy "
+"file. The initial policy is provided to the hypervisor as a multiboot "
+"module; this command allows runtime updates to the policy. Loading new "
+"security policy will reset runtime changes to device labels"
+msgstr ""

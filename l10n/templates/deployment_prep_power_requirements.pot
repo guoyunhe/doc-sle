@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: deployment_prep_power_requirements.xml:12
+#, no-c-format
+msgid "Requirements"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: deployment_prep_power_requirements.xml:15
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_requirements.xml:21
+#, no-c-format
+msgid ""
+"A standard installation requires at least 512 MB of RAM. The installation of "
+"a standard system with the &gnome; desktop requires at least 3.5 GB of free "
+"hard disk space; a complete installation requires approximately 8.5 GB."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_power_requirements.xml:28
+#, no-c-format
+msgid "Hardware Requirements"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_requirements.xml:29
+#, no-c-format
+msgid ""
+"The &slsreg; operating system can be operated on IBM &power;8 servers. To "
+"provide you with a guide to help you during the planning phase, the minimum "
+"requirements are presented here."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_requirements.xml:34
+#, no-c-format
+msgid ""
+"If you want to be sure that a given computer configuration will work, check "
+"the database of hardware certified by &suse;. Find a list of certified "
+"hardware at <link xlink:href=\"http://www.suse.com/yessearch/Search.jsp\"></"
+"link>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_requirements.xml:39
+#, no-c-format
+msgid ""
+"&productname; may support additional IBM &power; systems not listed below. "
+"For the latest information, see the IBM Information Center for Linux at "
+"<link xlink:href=\"http://www.ibm.com/support/knowledgecenter/linuxonibm/"
+"liaam/liaamdistros.htm\"></link>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_requirements.xml:44
+#, no-c-format
+msgid ""
+"Find up-to-date firmware at IBM FixCentral (<link xlink:href=\"http://www."
+"ibm.com/support/fixcentral/\"></link>). Select your system from the Product "
+"Group list. Additional software is available from the IBM &powerlinux; Tools "
+"Repository. The IBM Tools Repository is also called the Yum Repository. For "
+"more information about using the IBM &powerlinux; Tools Repository, see "
+"<link xlink:href=\"https://ibm.biz/Bdxn3N\"></link>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_power_requirements.xml:53
+#, no-c-format
+msgid "IBM POWER8 Processor-Based Servers"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_requirements.xml:54
+#, no-c-format
+msgid "All POWER8 servers are supported that are PowerKVM-capable."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_requirements.xml:59
+#, no-c-format
+msgid "8247-21L (IBM Power® System S120L)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_requirements.xml:64
+#, no-c-format
+msgid "8247-22L (IBM Power System S220L)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_requirements.xml:69
+#, no-c-format
+msgid "8284-22A (IBM Power System S2200)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_requirements.xml:74
+#, no-c-format
+msgid "8286-41A (IBM Power System S1400)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_requirements.xml:79
+#, no-c-format
+msgid "8286-42A (IBM Power System S2400)"
+msgstr ""

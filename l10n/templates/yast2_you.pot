@@ -1,0 +1,523 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: yast2_you.xml:9 yast2_you.xml:98
+#, no-c-format
+msgid "&yast; Online Update"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: yast2_you.xml:11
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: yast2_you.xml:16
+#, no-c-format
+msgid "updating"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_you.xml:17
+#, no-c-format
+msgid "online"
+msgstr ""
+
+#. Tag: primary
+#: yast2_you.xml:18
+#, no-c-format
+msgid "&yast;"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_you.xml:19
+#, no-c-format
+msgid "online update"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:20
+#, no-c-format
+msgid ""
+"&suse; offers a continuous stream of software security updates for your "
+"product. By default, the update applet is used to keep your system up-to-"
+"date. Refer to <xref linkend=\"sec.updater\"/> for further information on "
+"the update applet. This chapter covers the alternative tool for updating "
+"software packages: &yast; Online Update."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:27
+#, no-c-format
+msgid ""
+"The current patches for &productnamereg; are available from an update "
+"software repository<phrase os=\"osuse\">, which is automatically configured "
+"during the installation</phrase>. If you have registered your product during "
+"the installation, an update repository is already configured. If you have "
+"not registered &productname;, you can do so by starting the <guimenu>Product "
+"Registration</guimenu> in &yast;. Alternatively, you can manually add an "
+"update repository from a source you trust. To add or remove repositories, "
+"start the Repository Manager with <menuchoice> <guimenu>Software</guimenu> "
+"<guimenu>Software Repositories</guimenu> </menuchoice> in &yast;. Learn more "
+"about the Repository Manager in <xref linkend=\"sec.y2.sw.instsource\"/>."
+msgstr ""
+
+#. Tag: title
+#: yast2_you.xml:40
+#, no-c-format
+msgid "Error on Accessing the Update Catalog"
+msgstr ""
+
+#. Tag: remark
+#: yast2_you.xml:42
+#, no-c-format
+msgid "2008-02-29 - fs: Fate #303284"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:42
+#, no-c-format
+msgid ""
+"If you are not able to access the update catalog, this might be because of "
+"an expired subscription. Normally, &productname; comes with a one-year or "
+"three-year subscription, during which you have access to the update catalog. "
+"This access will be denied after the subscription ends."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:48
+#, no-c-format
+msgid ""
+"In case of an access denial to the update catalog you will see a warning "
+"message with a recommendation to visit the &ncc; and check your "
+"subscription. The &ncc; is available at <link xlink:href=\"&sccurl;/\"></"
+"link>."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:54
+#, no-c-format
+msgid "&suse; provides updates with different relevance levels:"
+msgstr ""
+
+#. Tag: term
+#: yast2_you.xml:59
+#, no-c-format
+msgid "Security Updates"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:61
+#, no-c-format
+msgid "Fix severe security hazards and should always be installed."
+msgstr ""
+
+#. Tag: term
+#: yast2_you.xml:67
+#, no-c-format
+msgid "Recommended Updates"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:69
+#, no-c-format
+msgid "Fix issues that could compromise your computer."
+msgstr ""
+
+#. Tag: term
+#: yast2_you.xml:75
+#, no-c-format
+msgid "Optional Updates"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:77
+#, no-c-format
+msgid "Fix non-security relevant issues or provide enhancements."
+msgstr ""
+
+#. Tag: title
+#: yast2_you.xml:84
+#, no-c-format
+msgid "The Online Update Dialog"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:86
+#, no-c-format
+msgid ""
+"To open the &yast; <guimenu>Online Update</guimenu> dialog, start &yast; and "
+"select <menuchoice> <guimenu>Software </guimenu> <guimenu>Online Update</"
+"guimenu> </menuchoice>. Alternatively, start it from the command line with "
+"<command>yast2 online_update</command>."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:93
+#, no-c-format
+msgid "The <guimenu>Online Update</guimenu> window consists of four sections."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:109
+#, no-c-format
+msgid ""
+"The <guimenu>Summary</guimenu> section on the left lists the available "
+"patches for &productname;. The patches are sorted by security relevance: "
+"<literal>security</literal>, <literal>recommended</literal>, and "
+"<literal>optional</literal>. You can change the view of the "
+"<guimenu>Summary</guimenu> section by selecting one of the following options "
+"from <guimenu>Show Patch Category</guimenu>:"
+msgstr ""
+
+#. Tag: term
+#: yast2_you.xml:120
+#, no-c-format
+msgid "<guimenu>Needed Patches</guimenu> (default view)"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:122
+#, no-c-format
+msgid "Non-installed patches that apply to packages installed on your system."
+msgstr ""
+
+#. Tag: guimenu
+#: yast2_you.xml:128
+#, no-c-format
+msgid "Unneeded Patches"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:131
+#, no-c-format
+msgid ""
+"Patches that either apply to packages not installed on your system, or "
+"patches that have requirements which have already have been fulfilled "
+"(because the relevant packages have already been updated from another "
+"source)."
+msgstr ""
+
+#. Tag: guimenu
+#: yast2_you.xml:140
+#, no-c-format
+msgid "All Patches"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:143
+#, no-c-format
+msgid "All patches available for &productname;."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:150
+#, no-c-format
+msgid ""
+"Each list entry in the <guimenu>Summary</guimenu> section consists of a "
+"symbol and the patch name. For an overview of the possible symbols and their "
+"meaning, press <keycombo> <keycap function=\"shift\"></keycap> <keycap>F1</"
+"keycap> </keycombo>. Actions required by <literal>Security</literal> and "
+"<literal>Recommended</literal> patches are automatically preset. These "
+"actions are <guimenu>Autoinstall</guimenu>, <guimenu>Autoupdate</guimenu> "
+"and <guimenu>Autodelete</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:160
+#, no-c-format
+msgid ""
+"If you install an up-to-date package from a repository other than the update "
+"repository, the requirements of a patch for this package may be fulfilled "
+"with this installation. In this case a check mark is displayed in front of "
+"the patch summary. The patch will be visible in the list until you mark it "
+"for installation. This will in fact not install the patch (because the "
+"package already is up-to-date), but mark the patch as having been installed."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:169
+#, no-c-format
+msgid ""
+"Select an entry in the <guimenu>Summary</guimenu> section to view a short "
+"<guimenu>Patch Description</guimenu> at the bottom left corner of the "
+"dialog. The upper right section lists the packages included in the selected "
+"patch (a patch can consist of several packages). Click an entry in the upper "
+"right section to view details about the respective package that is included "
+"in the patch."
+msgstr ""
+
+#. Tag: title
+#: yast2_you.xml:179
+#, no-c-format
+msgid "Installing Patches"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:181
+#, no-c-format
+msgid ""
+"The &yast; Online Update dialog allows you to either install all available "
+"patches at once or to manually select the patches that you want to apply to "
+"your system. You may also revert patches that have been applied to the "
+"system."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:188
+#, no-c-format
+msgid ""
+"By default, all new patches (except <literal>optional</literal> ones) that "
+"are currently available for your system are already marked for installation. "
+"They will be applied automatically once you click <guimenu>Accept</guimenu> "
+"or <guimenu>Apply</guimenu>. If one or multiple patches require a system "
+"reboot, you will be notified about this before the patch installation "
+"starts. You can then either decide to continue with the installation of the "
+"selected patches, skip the installation of all patches that need rebooting "
+"and install the rest, or go back to the manual patch selection."
+msgstr ""
+
+#. Tag: title
+#: yast2_you.xml:202
+#, no-c-format
+msgid "Applying Patches with &yast; Online Update"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:204
+#, no-c-format
+msgid ""
+"Start &yast; and select <menuchoice> <guimenu>Software</guimenu> "
+"<guimenu>Online Update</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:210
+#, no-c-format
+msgid ""
+"To automatically apply all new patches (except <literal>optional</literal> "
+"ones) that are currently available for your system, proceed with "
+"<guimenu>Apply</guimenu> or <guimenu>Accept</guimenu> to start the "
+"installation of the preselected patches."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:218
+#, no-c-format
+msgid "First modify the selection of patches that you want to apply:"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:223
+#, no-c-format
+msgid ""
+"Use the respective filters and views that the interface provides. For "
+"details, refer to <xref linkend=\"sec.onlineupdate.you.overview\"/>."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:229
+#, no-c-format
+msgid ""
+"Select or deselect patches according to your needs and wishes by right-"
+"clicking the patch and choosing the respective action from the context menu."
+msgstr ""
+
+#. Tag: title
+#: yast2_you.xml:235
+#, no-c-format
+msgid "Always Apply Security Updates"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:236
+#, no-c-format
+msgid ""
+"Do not deselect any <literal>security</literal>-related patches without a "
+"very good reason. These patches fix severe security hazards and prevent your "
+"system from being exploited."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:244
+#, no-c-format
+msgid ""
+"Most patches include updates for several packages. If you want to change "
+"actions for single packages, right-click a package in the package view and "
+"choose an action."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:251
+#, no-c-format
+msgid ""
+"To confirm your selection and apply the selected patches, proceed with "
+"<guimenu>Apply</guimenu> or <guimenu>Accept</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:259
+#, no-c-format
+msgid ""
+"After the installation is complete, click <guimenu>Finish</guimenu> to leave "
+"the &yast; <guimenu>Online Update</guimenu>. Your system is now up-to-date."
+msgstr ""
+
+#. Tag: title
+#: yast2_you.xml:268
+#, no-c-format
+msgid "Automatic Online Update"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:270
+#, no-c-format
+msgid ""
+"&yast; also offers the possibility to set up an automatic update with daily, "
+"weekly or monthly schedule. To use the respective module, you need to "
+"install the <systemitem class=\"resource\">yast2-online-update-"
+"configuration</systemitem> package first."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:278
+#, no-c-format
+msgid ""
+"By default, updates are downloaded as delta RPMs. Since rebuilding RPM "
+"packages from delta RPMs is a memory- and processor-consuming task, certain "
+"setups or hardware configurations might require you to disable the use of "
+"delta RPMs for the sake of performance."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:285
+#, no-c-format
+msgid ""
+"Some patches, such as kernel updates or packages requiring license "
+"agreements, require user interaction, which would cause the automatic update "
+"procedure to stop. You can configure to skip patches that require user "
+"interaction."
+msgstr ""
+
+#. Tag: title
+#: yast2_you.xml:293
+#, no-c-format
+msgid "Configuring the Automatic Online Update"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:295
+#, no-c-format
+msgid ""
+"After installation, start &yast; and select <menuchoice> <guimenu>Software</"
+"guimenu> <guimenu>Online Update Configuration</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:300
+#, no-c-format
+msgid ""
+"Alternatively, start the module with <command>yast2&nbsp;"
+"online_update_configuration</command> from the command line."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:307
+#, no-c-format
+msgid "Activate <guimenu>Automatic Online Update</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:312
+#, no-c-format
+msgid ""
+"Choose the update interval: <guimenu>Daily</guimenu>, <guimenu>Weekly</"
+"guimenu>, or <guimenu>Monthly</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:318
+#, no-c-format
+msgid ""
+"To automatically accept any license agreements, activate <guimenu>Agree with "
+"Licenses</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:324
+#, no-c-format
+msgid ""
+"Select if you want to <guimenu>Skip Interactive Patches</guimenu> in case "
+"you want the update procedure to proceed fully automatically."
+msgstr ""
+
+#. Tag: title
+#: yast2_you.xml:329
+#, no-c-format
+msgid "Skipping Patches"
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:330
+#, no-c-format
+msgid ""
+"If you select to skip any packages that require interaction, run a manual "
+"<guimenu>Online Update</guimenu> occasionally to install those patches, too. "
+"Otherwise you might miss important patches."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:338
+#, no-c-format
+msgid ""
+"To automatically install all packages recommended by updated packages, "
+"activate <guimenu>Include Recommended Packages</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:345
+#, no-c-format
+msgid ""
+"To disable the use of delta RPMs (for performance reasons), deactivate "
+"<guimenu>Use Delta RPMs</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:351
+#, no-c-format
+msgid ""
+"To filter the patches by category (such as security or recommended), "
+"activate <guimenu>Filter by Category</guimenu> and add the appropriate patch "
+"categories from the list. Only patches of the selected categories will be "
+"installed. Others will be skipped."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:359
+#, no-c-format
+msgid "Confirm your configuration with <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_you.xml:365
+#, no-c-format
+msgid ""
+"The automatic online update does not automatically restart the system "
+"afterward. If there are package updates that require a system reboot, you "
+"need to do this manually."
+msgstr ""

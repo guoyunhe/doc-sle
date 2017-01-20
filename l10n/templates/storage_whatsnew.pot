@@ -1,0 +1,1431 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: storage_whatsnew.xml:9
+#, no-c-format
+msgid "What’s New for Storage in SLES 11"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:16
+#, no-c-format
+msgid ""
+"The features and behavior changes noted in this section were made for "
+"&productname; 11."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:43
+#, no-c-format
+msgid "What’s New in SLES 11 SP3"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:45
+#, no-c-format
+msgid ""
+"In addition to bug fixes, the features and behavior changes in this section "
+"were made for the &productname; 11 SP3 release:"
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:79
+#, no-c-format
+msgid "Btrfs Quotas"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:80
+#, no-c-format
+msgid ""
+"Btrfs quota support for subvolumes on the &rootuser; file system has been "
+"added in the <command>btrfs(8)</command> command."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:87
+#, no-c-format
+msgid "iSCSI LIO Target Server"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:88
+#, no-c-format
+msgid ""
+"&yast; supports the iSCSI LIO Target Server software. For information, see "
+"<xref linkend=\"cha_iscsi_lio\" xrefstyle=\"ChapTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:96
+#, no-c-format
+msgid "Linux Software RAIDs"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:97
+#, no-c-format
+msgid "The following enhancements were added for Linux software RAIDs:"
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:118
+#, no-c-format
+msgid "Support for Intel RSTe+"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:119
+#, no-c-format
+msgid ""
+"The software RAID provides improved support on the Intel RSTe+ (Rapid "
+"Storage Technology Enterprise) platform to support RAID level 0, 1, 4, 5, 6, "
+"and 10."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:126
+#, no-c-format
+msgid "LEDMON Utility"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:127
+#, no-c-format
+msgid ""
+"The LEDMON utility supports PCIe-SSD enclosure LEDs for MD software RAIDs. "
+"For information, see <xref linkend=\"cha_raids_lee\" xrefstyle="
+"\"ChapTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:134
+#, no-c-format
+msgid "Device Order in the Software RAID"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:135
+#, no-c-format
+msgid ""
+"In the <guimenu>Add RAID</guimenu> wizard in the &yast; Partitioner, the "
+"<guimenu>Classify</guimenu> option allows you to specify the order in which "
+"the selected devices in a Linux software RAID will be used to ensure that "
+"one half of the array resides on one disk subsystem and the other half of "
+"the array resides on a different disk subsystem. For example, if one disk "
+"subsystem fails, the system keeps running from the second disk subsystem. "
+"For information, see <xref linkend=\"b14dtk77\" xrefstyle=\"StepXRef\"/> in "
+"<xref linkend=\"b14drcbo\" xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:150
+#, no-c-format
+msgid "LVM2"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:151
+#, no-c-format
+msgid "The following enhancements were added for LVM2:"
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:167
+#, no-c-format
+msgid "Thin Pool and Thin Volumes"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:168
+#, no-c-format
+msgid ""
+"LVM logical volumes can be thinly provisioned. For information, see <xref "
+"linkend=\"bgchx8c\" xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:175
+#, no-c-format
+msgid "Thin pool:"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:176
+#, no-c-format
+msgid ""
+"The logical volume is a pool of space that is reserved for use with thin "
+"volumes. The thin volumes can allocate their needed space from it on demand."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:185
+#, no-c-format
+msgid "Thin volume:"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:186
+#, no-c-format
+msgid ""
+"The volume is created as a sparse volume. The volume allocates needed space "
+"on demand from a thin pool."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:195
+#, no-c-format
+msgid "Thin Snapshots"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:196
+#, no-c-format
+msgid ""
+"LVM logical volume snapshots can be thinly provisioned. Thin provisioning is "
+"assumed if you to create a snapshot without a specified size. For "
+"information, see <xref linkend=\"bi7uttc\" xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:206
+#, no-c-format
+msgid "Multipath I/O"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:207
+#, no-c-format
+msgid "The following changes and enhancements were made for multipath I/O:"
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:228
+#, no-c-format
+msgid "mpathpersist(8)"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:229
+#, no-c-format
+msgid ""
+"The <command>mpathpersist(8)</command> utility is new. It can be used to "
+"manage SCSI persistent reservations on Device Mapper Multipath devices. For "
+"information, see <xref linkend=\"b15jw320\" xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:237
+#, no-c-format
+msgid "multipath(8)"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:238
+#, no-c-format
+msgid ""
+"The following enhancement was added to the <command>multipath(8)</command> "
+"command:"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:244
+#, no-c-format
+msgid ""
+"The <literal>-r</literal> option allows you to force a device map reload."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:252
+#, no-c-format
+msgid "/etc/multipath.conf"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:253
+#, no-c-format
+msgid ""
+"The Device Mapper - Multipath tool added the following enhancements for the "
+"<filename>/etc/multipath.conf</filename> file:"
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:260
+#, no-c-format
+msgid "udev_dir"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:263
+#, no-c-format
+msgid ""
+"The <literal>udev_dir</literal> attribute is deprecated. After you upgrade "
+"to SLES 11 SP3, you can remove the following line from the "
+"<literal>defaults</literal> section of your <filename>/etc/multipath.conf</"
+"filename> file:"
+msgstr ""
+
+#. Tag: screen
+#: storage_whatsnew.xml:269
+#, no-c-format
+msgid "udev_dir /dev"
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:273
+#, no-c-format
+msgid "getuid_callout"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:276
+#, no-c-format
+msgid ""
+"In the <literal>defaults</literal> section of the <filename>/etc/multipath."
+"conf</filename> file, the <literal>getuid_callout </literal>attribute is "
+"deprecated and replaced by the <literal>uid_attribute</literal> parameter. "
+"This parameter is a udev attribute that provides a unique path identifier. "
+"The default value is <literal>ID_SERIAL</literal>."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:284
+#, no-c-format
+msgid ""
+"After you upgrade to SLES 11 SP3, you can modify the attributes in the "
+"<literal>defaults</literal> section of your <filename>/etc/multipath.conf</"
+"filename> file:"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:291
+#, no-c-format
+msgid "Remove the following line from the <literal>defaults</literal> section:"
+msgstr ""
+
+#. Tag: screen
+#: storage_whatsnew.xml:295 storage_whatsnew.xml:474
+#, no-c-format
+msgid "getuid_callout \"/lib/udev/scsi_id --whitelisted --device=/dev/%n\""
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:298
+#, no-c-format
+msgid "Add the following line to the <literal>defaults</literal> section:"
+msgstr ""
+
+#. Tag: screen
+#: storage_whatsnew.xml:301
+#, no-c-format
+msgid "uid_attribute \"ID_SERIAL\""
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:307
+#, no-c-format
+msgid "path_selector"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:310
+#, no-c-format
+msgid ""
+"In the <literal>defaults</literal> section of the <filename>/etc/multipath."
+"conf</filename> file, the default value for the <literal>path_selector </"
+"literal>attribute was changed from <literal>\"round-robin 0\"</literal> to "
+"<literal>\"service-time 0\"</literal>. The <literal>service-time</literal> "
+"option chooses the path for the next bunch of I/O based on the amount of "
+"outstanding I/O to the path and its relative throughput."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:319
+#, no-c-format
+msgid ""
+"After you upgrade to SLES 11 SP3, you can modify the attribute value in the "
+"<literal>defaults</literal> section of your <filename>/etc/multipath.conf</"
+"filename> file to use the recommended default:"
+msgstr ""
+
+#. Tag: screen
+#: storage_whatsnew.xml:325
+#, no-c-format
+msgid "path_selector \"service-time 0\""
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:329
+#, no-c-format
+msgid "user_friendly_names"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:332
+#, no-c-format
+msgid ""
+"The <literal>user_friendly_names</literal> attribute can be configured in "
+"the <literal>devices</literal> section and in the <literal>multipaths</"
+"literal> section."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:340
+#, no-c-format
+msgid "max_fds"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:343
+#, no-c-format
+msgid ""
+"The default setting for the <literal>max_fds</literal> attribute was changed "
+"to <literal>max</literal>. This allows the multipath daemon to open as many "
+"file descriptors as the system allows when it is monitoring paths."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:349
+#, no-c-format
+msgid ""
+"After you upgrade to SLES 11 SP3, you can modify the attribute value in your "
+"<filename>/etc/multipath.conf</filename> file:"
+msgstr ""
+
+#. Tag: screen
+#: storage_whatsnew.xml:353
+#, no-c-format
+msgid "max_fds \"max\""
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:357
+#, no-c-format
+msgid "reservation_key"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:360
+#, no-c-format
+msgid ""
+"In the <literal>defaults</literal> section or <literal>multipaths</literal> "
+"section of the <filename>/etc/multipath.conf</filename> file, the "
+"<literal>reservation_key</literal> attribute can be used to assign a Service "
+"Action Reservation Key that is used with the <command>mpathpersist(8)</"
+"command> utility to manage persistent reservations for Device Mapper "
+"Multipath devices. The attribute is not used by default. If it is not set, "
+"the <command>multipathd</command> daemon does not check for persistent "
+"reservation for newly discovered paths or reinstated paths."
+msgstr ""
+
+#. Tag: screen
+#: storage_whatsnew.xml:372
+#, no-c-format
+msgid "reservation_key &lt;<replaceable>reservation key</replaceable>&gt;"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:373
+#, no-c-format
+msgid "For example:"
+msgstr ""
+
+#. Tag: screen
+#: storage_whatsnew.xml:376
+#, no-c-format
+msgid ""
+"multipaths {\n"
+"        multipath {\n"
+"                          wwid   XXXXXXXXXXXXXXXX\n"
+"                         alias      yellow\n"
+"                         reservation_key  0x123abc\n"
+"      }\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:377
+#, no-c-format
+msgid ""
+"For information about setting persistent reservations, see <xref linkend="
+"\"b15jw320\" xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:384
+#, no-c-format
+msgid "hardware_handler"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:387
+#, no-c-format
+msgid ""
+"Four SCSI hardware handlers were added in the SCSI layer that can be used "
+"with DM-Multipath:"
+msgstr ""
+
+#. Tag: filename
+#: storage_whatsnew.xml:392
+#, no-c-format
+msgid "scsi_dh_alua"
+msgstr ""
+
+#. Tag: filename
+#: storage_whatsnew.xml:394
+#, no-c-format
+msgid "scsi_dh_rdac"
+msgstr ""
+
+#. Tag: literal
+#: storage_whatsnew.xml:396
+#, no-c-format
+msgid "scsi_dh_hp_sw"
+msgstr ""
+
+#. Tag: literal
+#: storage_whatsnew.xml:398
+#, no-c-format
+msgid "scsi_dh_emc"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:401
+#, no-c-format
+msgid ""
+"These handlers are modules created under the SCSI directory in the Linux "
+"kernel. Previously, the hardware handler in the Device Mapper layer was used."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:406
+#, no-c-format
+msgid ""
+"Add the modules to the <filename>initrd</filename> image, then specify them "
+"in the <filename>/etc/multipath.conf</filename> file as hardware handler "
+"types <literal>alua</literal>, <literal>rdac</literal>, <literal>hp_sw</"
+"literal>, and <literal>emc</literal>. For information about adding the "
+"device drivers to the <filename>initrd</filename> image, see <xref linkend="
+"\"mpiosysconfsvr\" xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:421
+#, no-c-format
+msgid "What’s New in SLES 11 SP2"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:423
+#, no-c-format
+msgid ""
+"In addition to bug fixes, the features and behavior changes in this section "
+"were made for the &productname; 11 SP2 release:"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:430
+#, no-c-format
+msgid ""
+"Btrfs File System. See <xref linkend=\"sec.filesystems.major.btrfs\" "
+"xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:436
+#, no-c-format
+msgid ""
+"Open Fibre Channel over Ethernet. See <xref linkend=\"cha_fcoe\" xrefstyle="
+"\"ChapTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:442
+#, no-c-format
+msgid ""
+"Tagging for LVM storage objects. See <xref linkend=\"sec.lvm.tagging\" "
+"xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:448
+#, no-c-format
+msgid ""
+"NFSv4 ACLs tools. See <xref linkend=\"nfsv4acls\" xrefstyle=\"ChapTitleOnPage"
+"\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:454
+#, no-c-format
+msgid ""
+"<command>--assume-clean</command> option for <command>mdadm resize</command> "
+"command. See <xref linkend=\"resizeincrraid\" xrefstyle=\"SectTitleOnPage\"/"
+">."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:461
+#, no-c-format
+msgid ""
+"In the <literal>defaults</literal> section of the <filename>/etc/multipath."
+"conf</filename> file, the <literal>default_getuid</literal> parameter was "
+"obsoleted and replaced by the <literal>getuid_callout </literal>parameter:"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:467
+#, no-c-format
+msgid "The line changed from this:"
+msgstr ""
+
+#. Tag: screen
+#: storage_whatsnew.xml:470
+#, no-c-format
+msgid "default_getuid \"/sbin/scsi_id -g -u -s /block/%n\""
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:471
+#, no-c-format
+msgid "to this:"
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:479
+#, no-c-format
+msgid "What’s New in SLES 11 SP1"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:481
+#, no-c-format
+msgid ""
+"In addition to bug fixes, the features and behavior changes noted in this "
+"section were made for the &productname; 11 SP1 release."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:545
+#, no-c-format
+msgid "Saving iSCSI Target Information"
+msgstr ""
+
+#. Tag: remark
+#: storage_whatsnew.xml:546
+#, no-c-format
+msgid "#301932: Export credentials for target of iSCSI target"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:547
+#, no-c-format
+msgid ""
+"In the <link linkend=\"sec_inst_system_iscsi_target_yast\"><guimenu>&yast;</"
+"guimenu><guimenu>Network Services</guimenu><guimenu>iSCSI Target</guimenu></"
+"link> function, a <guimenu>Save</guimenu> option was added that allows you "
+"to export the iSCSI target information. This makes it easier to provide "
+"information to consumers of the resources."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:558
+#, no-c-format
+msgid "Modifying Authentication Parameters in the iSCSI Initiator"
+msgstr ""
+
+#. Tag: remark
+#: storage_whatsnew.xml:559
+#, no-c-format
+msgid ""
+"#305306: [YaST2] allow modification of authentication in iSCSI initiator"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:560
+#, no-c-format
+msgid ""
+"In the <link linkend=\"sec_inst_system_iscsi_target_yast\"><guimenu>YaST</"
+"guimenu><guimenu>Network Services</guimenu><guimenu>iSCSI Initiator</"
+"guimenu></link> function, you can modify the authentication parameters for "
+"connecting to a target devices. Previously, you needed to delete the entry "
+"and re-create it in order to change the authentication information."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:571
+#, no-c-format
+msgid "Allowing Persistent Reservations for MPIO Devices"
+msgstr ""
+
+#. Tag: remark
+#: storage_whatsnew.xml:572
+#, no-c-format
+msgid "#301980: SCSI persistent reservations on MPIO devices"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:573
+#, no-c-format
+msgid ""
+"A SCSI initiator can issue SCSI reservations for a shared storage device, "
+"which locks out SCSI initiators on other servers from accessing the device. "
+"These reservations persist across SCSI resets that might happen as part of "
+"the SCSI exception handling process."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:579
+#, no-c-format
+msgid ""
+"The following are possible scenarios where SCSI reservations would be useful:"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:585
+#, no-c-format
+msgid ""
+"In a simple SAN environment, persistent SCSI reservations help protect "
+"against administrator errors where a LUN is attempted to be added to one "
+"server but it is already in use by another server, which might result in "
+"data corruption. SAN zoning is typically used to prevent this type of error."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:594
+#, no-c-format
+msgid ""
+"In a high-availability environment with failover set up, persistent SCSI "
+"reservations help protect against errant servers connecting to SCSI devices "
+"that are reserved by other servers."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:604
+#, no-c-format
+msgid "MDADM 3.0.2"
+msgstr ""
+
+#. Tag: remark
+#: storage_whatsnew.xml:605
+#, no-c-format
+msgid "#307159: MDADM update to most recent version"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:606
+#, no-c-format
+msgid ""
+"Use the latest version of the Multiple Devices Administration (MDADM, "
+"<command>mdadm</command>) utility to take advantage of bug fixes and "
+"improvements."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:614
+#, no-c-format
+msgid "Boot Loader Support for MDRAID External Metadata"
+msgstr ""
+
+#. Tag: remark
+#: storage_whatsnew.xml:615
+#, no-c-format
+msgid "#307447: Boot support for MDRAID External Metadata (ISW)"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:616
+#, no-c-format
+msgid ""
+"Support was added to use the external metadata capabilities of the MDADM "
+"utility version 3.0 to install and run the operating system from RAID "
+"volumes defined by the Intel Matrix Storage Technology metadata format. This "
+"moves the functionality from the Device Mapper RAID (DMRAID) infrastructure "
+"to the Multiple Devices RAID (MDRAID) infrastructure, which offers the more "
+"mature RAID 5 implementation and offers a wider feature set of the MD kernel "
+"infrastructure. It allows a common RAID driver to be used across all "
+"metadata formats, including Intel, DDF (common RAID disk data format), and "
+"native MD metadata."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:630
+#, no-c-format
+msgid "&yast; Install and Boot Support for MDRAID External Metadata"
+msgstr ""
+
+#. Tag: remark
+#: storage_whatsnew.xml:631
+#, no-c-format
+msgid "#305883: Install and boot support for MDRAID External Metadata (ISW)"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:632
+#, no-c-format
+msgid ""
+"The &yast; installer tool added support for MDRAID External Metadata for "
+"RAID 0, 1, 10, 5, and 6. The installer can detect RAID arrays and whether "
+"the platform RAID capabilities are enabled. If multipath RAID is enabled in "
+"the platform BIOS for Intel Matrix Storage Manager, it offers options for "
+"DMRAID, MDRAID (recommended), or none. The <filename>initrd</filename> was "
+"also modified to support assembling BIOS-based RAID arrays."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:644
+#, no-c-format
+msgid "Improved Shutdown for MDRAID Arrays that Contain the Root File System"
+msgstr ""
+
+#. Tag: remark
+#: storage_whatsnew.xml:645
+#, no-c-format
+msgid ""
+"#305885: Handle the metadata \"dirty\" bit when an ISW array contains the "
+"root file system"
+msgstr ""
+
+#. Tag: remark
+#: storage_whatsnew.xml:646
+#, no-c-format
+msgid ""
+"#306823: Handle the metadata \"dirty\" bit when an ISW array contains the "
+"root filesystem"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:647
+#, no-c-format
+msgid ""
+"Shutdown scripts were modified to wait until all of the MDRAID arrays are "
+"marked clean. The operating system shutdown process now waits for a dirty-"
+"bit to be cleared until all MDRAID volumes have finished write operations."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:653
+#, no-c-format
+msgid ""
+"Changes were made to the startup script, shutdown script, and the "
+"<command>initrd</command> to consider whether the root (<filename>/</"
+"filename>) file system (the system volume that contains the operating system "
+"and application files) resides on a software RAID array. The metadata "
+"handler for the array is started early in the shutdown process to monitor "
+"the final root file system environment during the shutdown. The handler is "
+"excluded from the general <command>killall</command> events. The process "
+"also allows for writes to be quiesced and for the array’s metadata dirty-bit "
+"(which indicates whether an array needs to be resynchronized) to be cleared "
+"at the end of the shutdown."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:669
+#, no-c-format
+msgid "MD over iSCSI Devices"
+msgstr ""
+
+#. Tag: remark
+#: storage_whatsnew.xml:670
+#, no-c-format
+msgid "#307478: md over iscsi devices"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:671
+#, no-c-format
+msgid "The &yast; installer now allows MD to be configured over iSCSI devices."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:675
+#, no-c-format
+msgid ""
+"If RAID arrays are needed on boot, the iSCSI initiator software is loaded "
+"before <filename>boot.md</filename> so that the iSCSI targets are available "
+"to be auto-configured for the RAID."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:680
+#, no-c-format
+msgid ""
+"For a new install, Libstorage creates an <filename>/etc/mdadm.conf</"
+"filename> file and adds the line <literal>AUTO -all</literal>. During an "
+"update, the line is not added. If <filename>/etc/mdadm.conf</filename> "
+"contains the line"
+msgstr ""
+
+#. Tag: screen
+#: storage_whatsnew.xml:686
+#, no-c-format
+msgid "AUTO -all"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:687
+#, no-c-format
+msgid ""
+"then no RAID arrays are auto-assembled unless they are explicitly listed in "
+"<filename>/etc/mdadm.conf</filename>."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:694
+#, no-c-format
+msgid "MD-SGPIO"
+msgstr ""
+
+#. Tag: remark
+#: storage_whatsnew.xml:695
+#, no-c-format
+msgid "#305886: SGPIO support for MD"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:696
+#, no-c-format
+msgid ""
+"The MD-SGPIO utility is a standalone application that monitors RAID arrays "
+"via <command>sysfs(2)</command>. Events trigger an LED change request that "
+"controls blinking for LED lights that are associated with each slot in an "
+"enclosure or a drive bay of a storage subsystem. It supports two types of "
+"LED systems:"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:705
+#, no-c-format
+msgid "2-LED systems (Activity LED, Status LED)"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:710
+#, no-c-format
+msgid "3-LED systems (Activity LED, Locate LED, Fail LED)"
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:718
+#, no-c-format
+msgid "Resizing LVM 2 Mirrors"
+msgstr ""
+
+#. Tag: remark
+#: storage_whatsnew.xml:719
+#, no-c-format
+msgid "#306518: LVM mirror resize"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:720
+#, no-c-format
+msgid ""
+"The <command>lvresize</command>, <command>lvextend</command>, and "
+"<command>lvreduce</command> commands that are used to resize logical volumes "
+"were modified to allow the resizing of LVM 2 mirrors. Previously, these "
+"commands reported errors if the logical volume was a mirror."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:730
+#, no-c-format
+msgid "Updating Storage Drivers for Adapters on IBM Servers"
+msgstr ""
+
+#. Tag: remark
+#: storage_whatsnew.xml:731
+#, no-c-format
+msgid "#307414: Storage driver updates"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:732
+#, no-c-format
+msgid ""
+"Update the following storage drivers to use the latest available versions to "
+"support storage adapters on IBM servers:"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:738
+#, no-c-format
+msgid "Adaptec: <filename>aacraid</filename>, <filename>aic94xx</filename>"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:743
+#, no-c-format
+msgid "Emulex: <filename>lpfc</filename>"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:748
+#, no-c-format
+msgid "LSI: <filename>mptas</filename>, <filename>megaraid_sas</filename>"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:751
+#, no-c-format
+msgid ""
+"The <filename>mptsas</filename> driver now supports native EEH (Enhanced "
+"Error Handler) recovery, which is a key feature for all of the IO devices "
+"for Power platform customers."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:758
+#, no-c-format
+msgid ""
+"qLogic: <filename>qla2xxx</filename>, <filename>qla3xxx</filename>, "
+"<filename>qla4xxx</filename>"
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:767
+#, no-c-format
+msgid "What’s New in SLES 11"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:769
+#, no-c-format
+msgid ""
+"The features and behavior changes noted in this section were made for the "
+"&productname; 11 release."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:843
+#, no-c-format
+msgid "EVMS2 Is Deprecated"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:844
+#, no-c-format
+msgid ""
+"The Enterprise Volume Management Systems (EVMS2) storage management solution "
+"is deprecated. All EVMS management modules have been removed from the "
+"&productname; 11 packages. Your non-system EVMS-managed devices should be "
+"automatically recognized and managed by Linux Volume Manager 2 (LVM2) when "
+"you upgrade your system."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:858
+#, no-c-format
+msgid ""
+"If you have EVMS managing the system device (any device that contains the "
+"root (<filename>/</filename>), <filename>/boot</filename>, or "
+"<filename>swap</filename>), try these things to prepare the SLES 10 server "
+"before you reboot the server to upgrade:"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:866
+#, no-c-format
+msgid ""
+"In the /etc/fstab file, modify the boot and swap disks to the default "
+"<filename>/dev/system/sys_lx</filename> directory:"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:872
+#, no-c-format
+msgid ""
+"Remove <filename>/evms/lvm2</filename> from the path for the <filename>swap</"
+"filename> and root (<filename>/</filename>) partitions."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:879
+#, no-c-format
+msgid ""
+"Remove <filename>/evms</filename> from the path for <filename>/boot</"
+"filename> partition."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:887
+#, no-c-format
+msgid ""
+"In the <filename>/boot/grub/menu.lst</filename> file, remove <filename>/evms/"
+"lvm2</filename> from the path."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:893
+#, no-c-format
+msgid ""
+"In the <filename>/etc/sysconfig/bootloader</filename> file, verify that the "
+"path for the boot device is the <filename>/dev</filename> directory."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:900
+#, no-c-format
+msgid ""
+"Ensure that <filename>boot.lvm</filename> and <filename>boot.md</filename> "
+"are enabled:"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:906
+#, no-c-format
+msgid ""
+"In &yast;, click <guimenu>System</guimenu><guimenu>Runlevel Editor</"
+"guimenu><guimenu>Expert Mode</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:915
+#, no-c-format
+msgid "Select <filename>boot.lvm</filename>."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:920 storage_whatsnew.xml:931
+#, no-c-format
+msgid ""
+"Click <guimenu>Set/Reset</guimenu><guimenu>Enable the Service</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:926
+#, no-c-format
+msgid "Select <filename>boot.md</filename>."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:937
+#, no-c-format
+msgid "Click <guimenu>Finish</guimenu>, then click <guimenu>Yes</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:944
+#, no-c-format
+msgid "Reboot and start the upgrade."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:949
+#, no-c-format
+msgid ""
+"For information about managing storage with EVMS2 on SUSE Linux Enterprise "
+"Server 10, see the <link xlink:href=\"http://www.suse.com/documentation/"
+"sles10/stor_admin/data/bookinfo.html\"><citetitle>SUSE Linux Enterprise "
+"Server 10 SP3: Storage Administration Guide</citetitle></link>."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:959
+#, no-c-format
+msgid "Ext3 as the Default File System"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:960
+#, no-c-format
+msgid ""
+"The Ext3 file system has replaced ReiserFS as the default file system "
+"recommended by the &yast; tools at installation time and when you create "
+"file systems. ReiserFS is still supported. For more information, see <link "
+"xlink:href=\"http://www.suse.com/products/server/technical-information/?"
+"tab=2\"><citetitle>File System Support</citetitle></link> on the "
+"<citetitle>SUSE Linux Enterprise 11 Tech Specs</citetitle> Web page."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:972
+#, no-c-format
+msgid "Default Inode Size Increased for Ext3"
+msgstr ""
+
+#. Tag: remark
+#: storage_whatsnew.xml:974
+#, no-c-format
+msgid "Bug 708669"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:974
+#, no-c-format
+msgid ""
+"To allow space for extended attributes and ACLs for a file on Ext3 file "
+"systems, the default inode size for Ext3 was increased from 128 bytes on "
+"SLES 10 to 256 bytes on SLES11. For information, see <xref linkend=\"sec."
+"filesystems.major.ext3.inodesize\" xrefstyle=\"HeadingOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:983
+#, no-c-format
+msgid "JFS File System Is Deprecated"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:984
+#, no-c-format
+msgid ""
+"The JFS file system is no longer supported. The JFS utilities were removed "
+"from the distribution."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:991
+#, no-c-format
+msgid "OCFS2 File System Is in the High Availability Release"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:992
+#, no-c-format
+msgid "The OCFS2 file system is fully supported as part of the &sle; &hasi;."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:999
+#, no-c-format
+msgid "/dev/disk/by-name Is Deprecated"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1000
+#, no-c-format
+msgid ""
+"The <filename>/dev/disk/by-name</filename> path is deprecated in SUSE Linux "
+"Enterprise Server 11 packages."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:1007
+#, no-c-format
+msgid "Device Name Persistence in the /dev/disk/by-id Directory"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1008
+#, no-c-format
+msgid ""
+"In &productname; 11, the default multipath setup relies on <command>udev</"
+"command> to overwrite the existing symbolic links in the <filename>/dev/disk/"
+"by-id</filename> directory when multipathing is started. Before you start "
+"multipathing, the link points to the SCSI device by using its <filename>scsi-"
+"xxx</filename> name. When multipathing is running, the symbolic link points "
+"to the device by using its <filename>dm-uuid-xxx</filename> name. This "
+"ensures that the symbolic links in the <filename>/dev/disk/by-id</filename> "
+"path persistently point to the same device regardless of whether "
+"multipathing is started or not. The configuration files (such as "
+"<filename>lvm.conf</filename> and <filename>md.conf</filename>) do not need "
+"to be modified because they automatically point to the correct device."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1023
+#, no-c-format
+msgid ""
+"See the following sections for more information about how this behavior "
+"change affects other features:"
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:1042
+#, no-c-format
+msgid "Filters for Multipathed Devices"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1043
+#, no-c-format
+msgid ""
+"The deprecation of the <filename>/dev/disk/by-name</filename> directory (as "
+"described in <xref linkend=\"bin8klb\" xrefstyle=\"SectTitleOnPage\"/>) "
+"affects how you set up filters for multipathed devices in the configuration "
+"files. If you used the <filename>/dev/disk/by-name</filename> device name "
+"path for the multipath device filters in the <filename>/etc/lvm/lvm.conf</"
+"filename> file, you need to modify the file to use the <filename>/dev/disk/"
+"by-id</filename> path. Consider the following when setting up filters that "
+"use the <filename>by-id</filename> path:"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1056
+#, no-c-format
+msgid ""
+"The <filename>/dev/disk/by-id/scsi-*</filename> device names are persistent "
+"and created for exactly this purpose."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1062
+#, no-c-format
+msgid ""
+"Do not use the <filename>/dev/disk/by-id/dm-*</filename> name in the "
+"filters. These are symbolic links to the Device-Mapper devices, and result "
+"in reporting duplicate PVs in response to a <filename>pvscan</filename> "
+"command. The names appear to change from <filename>LVM-pvuuid</filename> to "
+"<filename>dm-uuid</filename> and back to <filename>LVM-pvuuid</filename>."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1072
+#, no-c-format
+msgid ""
+"For information about setting up filters, see <xref linkend=\"mpiousinglvm\" "
+"xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:1079
+#, no-c-format
+msgid "User-Friendly Names for Multipathed Devices"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1080
+#, no-c-format
+msgid ""
+"A change in how multipathed device names are handled in the <filename>/dev/"
+"disk/by-id</filename> directory (as described in <xref linkend=\"binagtl\" "
+"xrefstyle=\"SectTitleOnPage\"/>) affects your setup for user-friendly names "
+"because the two names for the device differ. You must modify the "
+"configuration files to scan only the device mapper names after multipathing "
+"is configured."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1088
+#, no-c-format
+msgid ""
+"For example, you need to modify the <filename>lvm.conf</filename> file to "
+"scan using the multipathed device names by specifying the <filename>/dev/"
+"disk/by-id/dm-uuid-.*-mpath-.*</filename> path instead of <filename>/dev/"
+"disk/by-id</filename>."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:1097
+#, no-c-format
+msgid "Advanced I/O Load-Balancing Options for Multipath"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1098
+#, no-c-format
+msgid ""
+"The following advanced I/O load-balancing options are available for Device "
+"Mapper Multipath, in addition to round-robin:"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1104
+#, no-c-format
+msgid "Least-pending"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1109
+#, no-c-format
+msgid "Length-load-balancing"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1114
+#, no-c-format
+msgid "Service-time"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1119
+#, no-c-format
+msgid ""
+"For information, see <xref linkend=\"b122sbgu\" xrefstyle=\"RefNoPage\"/> in "
+"<xref linkend=\"beg263n\" xrefstyle=\"HeadingOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:1126
+#, no-c-format
+msgid "Location Change for Multipath Tool Callouts"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1127
+#, no-c-format
+msgid ""
+"The <filename>mpath_*</filename> prio_callouts for the Device Mapper "
+"Multipath tool have been moved to shared libraries in<filename>/lib/"
+"libmultipath/lib*</filename>. By using shared libraries, the callouts are "
+"loaded into memory on daemon startup. This helps avoid a system deadlock on "
+"an all-paths-down scenario where the programs need to be loaded from the "
+"disk, which might not be available at this point."
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:1139
+#, no-c-format
+msgid "Change from mpath to multipath for the mkinitrd -f Option"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1140
+#, no-c-format
+msgid ""
+"The option for adding Device Mapper Multipath services to the "
+"<filename>initrd</filename> has changed from <literal>-f mpath</literal> to "
+"<literal>-f multipath</literal>."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1145
+#, no-c-format
+msgid "To make a new <filename>initrd</filename>, the command is now:"
+msgstr ""
+
+#. Tag: screen
+#: storage_whatsnew.xml:1148
+#, no-c-format
+msgid "mkinitrd -f multipath"
+msgstr ""
+
+#. Tag: title
+#: storage_whatsnew.xml:1152
+#, no-c-format
+msgid ""
+"Change from Multibus to Failover as the Default Setting for the MPIO Path "
+"Grouping Policy"
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1153
+#, no-c-format
+msgid ""
+"The default setting for the <literal>path_grouping_policy</literal> in the "
+"<filename>/etc/multipath.conf </filename>file has changed from "
+"<literal>multibus</literal> to <literal>failover</literal>."
+msgstr ""
+
+#. Tag: para
+#: storage_whatsnew.xml:1158
+#, no-c-format
+msgid ""
+"For information about configuring the path_grouping_policy, see <xref "
+"linkend=\"bbi89rh\" xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""

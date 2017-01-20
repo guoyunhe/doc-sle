@@ -1,0 +1,602 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: storage_fs-resizing.xml:9
+#, no-c-format
+msgid "Resizing File Systems"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: storage_fs-resizing.xml:11
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:16
+#, no-c-format
+msgid ""
+"Resizing file systems&mdash;not to be confused with resizing partitions or "
+"volumes&mdash;can be used to make space available on physical volumes or to "
+"use additional space available on a physical volume."
+msgstr ""
+
+#. Tag: title
+#: storage_fs-resizing.xml:22
+#, no-c-format
+msgid "Use Cases"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:24
+#, no-c-format
+msgid ""
+"It is strongly recommended to use the &yast; Partitioner to resize "
+"partitions or logical volumes. When doing so, the file system will "
+"automatically be adjusted to the new size of the partition or volume. "
+"However, there are some cases where you need to resize the file system "
+"manually, because they are not supported by &yast;:"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:34
+#, no-c-format
+msgid "After having resized a virtual disk of a &vmguest;."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:39
+#, no-c-format
+msgid "After having resized a volume from a network-attached storage."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:44
+#, no-c-format
+msgid ""
+"After having manually resized partitions (for example by using "
+"<command>fdisk</command> or <command>parted</command>) or logical volumes "
+"(for example by using <command>lvresize</command>)."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:51
+#, no-c-format
+msgid ""
+"When wanting to shrink Btrfs file systems (as of &productname; 12, &yast; "
+"only supports growing Btrfs file systems)."
+msgstr ""
+
+#. Tag: title
+#: storage_fs-resizing.xml:59
+#, no-c-format
+msgid "Guidelines for Resizing"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:61
+#, no-c-format
+msgid ""
+"Resizing any file system involves some risks that can potentially result in "
+"losing data."
+msgstr ""
+
+#. Tag: title
+#: storage_fs-resizing.xml:67
+#, no-c-format
+msgid "Back Up your Data"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:68
+#, no-c-format
+msgid ""
+"To avoid data loss, ensure that you back up your data before you begin any "
+"resizing task."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:74
+#, no-c-format
+msgid ""
+"Consider the following guidelines when planning to resize a file system."
+msgstr ""
+
+#. Tag: title
+#: storage_fs-resizing.xml:79
+#, no-c-format
+msgid "File Systems that Support Resizing"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:80
+#, no-c-format
+msgid ""
+"The file system must support resizing to take advantage of increases in "
+"available space for the volume. In &productname;, file system resizing "
+"utilities are available for file systems Ext2, Ext3, Ext4, and ReiserFS. The "
+"utilities support increasing and decreasing the size as follows:"
+msgstr ""
+
+#. Tag: title
+#: storage_fs-resizing.xml:87
+#, no-c-format
+msgid "File System Support for Resizing"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:96
+#, no-c-format
+msgid "File System"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:101
+#, no-c-format
+msgid "Utility"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:106
+#, no-c-format
+msgid "Increase Size (Grow)"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:111
+#, no-c-format
+msgid "Decrease Size (Shrink)"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:120
+#, no-c-format
+msgid "Btrfs"
+msgstr ""
+
+#. Tag: command
+#: storage_fs-resizing.xml:126
+#, no-c-format
+msgid "btrfs filesystem resize"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:130 storage_fs-resizing.xml:135
+#: storage_fs-resizing.xml:152
+#, no-c-format
+msgid "Online"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:142
+#, no-c-format
+msgid "<para>XFS</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:157
+#, no-c-format
+msgid "Not supported"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:164
+#, no-c-format
+msgid "Ext2"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:174 storage_fs-resizing.xml:196
+#: storage_fs-resizing.xml:218 storage_fs-resizing.xml:240
+#, no-c-format
+msgid "Online or offline"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:179 storage_fs-resizing.xml:201
+#: storage_fs-resizing.xml:223 storage_fs-resizing.xml:245
+#, no-c-format
+msgid "Offline only"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:186
+#, no-c-format
+msgid "Ext3"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:208
+#, no-c-format
+msgid "Ext4"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:230
+#, no-c-format
+msgid "ReiserFS"
+msgstr ""
+
+#. Tag: title
+#: storage_fs-resizing.xml:256
+#, no-c-format
+msgid "Increasing the Size of a File System"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:257
+#, no-c-format
+msgid ""
+"You can grow a file system to the maximum space available on the device, or "
+"specify an exact size. Ensure that you grow the size of the device or "
+"logical volume before you attempt to increase the size of the file system."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:262
+#, no-c-format
+msgid ""
+"When specifying an exact size for the file system, ensure that the new size "
+"satisfies the following conditions:"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:268 storage_fs-resizing.xml:290
+#, no-c-format
+msgid ""
+"The new size must be greater than the size of the existing data; otherwise, "
+"data loss occurs."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:274 storage_fs-resizing.xml:296
+#, no-c-format
+msgid ""
+"The new size must be equal to or less than the current device size because "
+"the file system size cannot extend beyond the space available."
+msgstr ""
+
+#. Tag: title
+#: storage_fs-resizing.xml:283
+#, no-c-format
+msgid "Decreasing the Size of a File System"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:284
+#, no-c-format
+msgid ""
+"When decreasing the size of the file system on a device, ensure that the new "
+"size satisfies the following conditions:"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:302
+#, no-c-format
+msgid ""
+"If you plan to also decrease the size of the logical volume that holds the "
+"file system, ensure that you decrease the size of the file system before you "
+"attempt to decrease the size of the device or logical volume."
+msgstr ""
+
+#. Tag: title
+#: storage_fs-resizing.xml:308
+#, no-c-format
+msgid "<title>XFS</title>"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:309
+#, no-c-format
+msgid ""
+"Decreasing the size of a file system formatted with XFS is not possible, "
+"since such a feature is not supported by XFS."
+msgstr ""
+
+#. Tag: title
+#: storage_fs-resizing.xml:317
+#, no-c-format
+msgid "Changing the Size of a Btrfs File System"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:319
+#, no-c-format
+msgid ""
+"The size of a Btrfs file system can be changed by using the <command>btrfs "
+"filesystem resize</command> command when the file system is mounted. "
+"Increasing and decreasing the size are both supported while the file system "
+"is mounted."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:328 storage_fs-resizing.xml:392
+#: storage_fs-resizing.xml:436 storage_fs-resizing.xml:510
+#, no-c-format
+msgid "Open a terminal console."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:333 storage_fs-resizing.xml:397
+#, no-c-format
+msgid "Make sure the file system you want to change is mounted."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:338
+#, no-c-format
+msgid ""
+"Change the size of the file system using the <command>btrfs filesystem "
+"resize</command> command with one of the following methods:"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:344 storage_fs-resizing.xml:527
+#, no-c-format
+msgid ""
+"To extend the file system size to the maximum available size of the device, "
+"enter"
+msgstr ""
+
+#. Tag: screen
+#: storage_fs-resizing.xml:348
+#, no-c-format
+msgid "sudo btrfs filesystem resize max /mnt"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:351 storage_fs-resizing.xml:538
+#, no-c-format
+msgid "To extend the file system to a specific size, enter"
+msgstr ""
+
+#. Tag: screen
+#: storage_fs-resizing.xml:354
+#, no-c-format
+msgid "sudo btrfs filesystem resize <replaceable>size</replaceable> /mnt"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:355
+#, no-c-format
+msgid ""
+"Replace <replaceable>size</replaceable> with the desired size in bytes. You "
+"can also specify units on the value, such as 50000K (kilobytes), 250M "
+"(megabytes), or 2G (gigabytes). Alternatively, you can specify an increase "
+"or decrease to the current size by prefixing the value with a plus (<literal>"
+"+</literal>) or a minus (<literal>-</literal>) sign, respectively:"
+msgstr ""
+
+#. Tag: screen
+#: storage_fs-resizing.xml:363
+#, no-c-format
+msgid ""
+"sudo btrfs filesystem resize +<replaceable>size</replaceable> /mnt\n"
+"sudo btrfs filesystem resize -<replaceable>size</replaceable> /mnt"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:368 storage_fs-resizing.xml:411
+#: storage_fs-resizing.xml:487 storage_fs-resizing.xml:563
+#, no-c-format
+msgid "Check the effect of the resize on the mounted file system by entering"
+msgstr ""
+
+#. Tag: screen
+#: storage_fs-resizing.xml:371 storage_fs-resizing.xml:414
+#: storage_fs-resizing.xml:490 storage_fs-resizing.xml:566
+#, no-c-format
+msgid "df -h"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:372 storage_fs-resizing.xml:415
+#: storage_fs-resizing.xml:491 storage_fs-resizing.xml:567
+#, no-c-format
+msgid ""
+"The Disk Free (<command>df</command>) command shows the total size of the "
+"disk, the number of blocks used, and the number of blocks available on the "
+"file system. The -h option prints sizes in human-readable format, such as "
+"1K, 234M, or 2G."
+msgstr ""
+
+#. Tag: title
+#: storage_fs-resizing.xml:382
+#, no-c-format
+msgid "Changing the Size of an XFS File System"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:384
+#, no-c-format
+msgid ""
+"The size of an XFS file system can be increased by using the "
+"<command>xfs_growfs</command> command when the file system is mounted. "
+"Reducing the size of an XFS file system is not possible."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:402
+#, no-c-format
+msgid ""
+"Increase the size of the file system using the <command>xfs_growfs</command> "
+"command. The following example expands the size of the file system to the "
+"maximum value available. See <command>man 8 xfs_growfs</command> for more "
+"options."
+msgstr ""
+
+#. Tag: screen
+#: storage_fs-resizing.xml:408
+#, no-c-format
+msgid "sudo xfs_growfs -d /mnt"
+msgstr ""
+
+#. Tag: title
+#: storage_fs-resizing.xml:425
+#, no-c-format
+msgid "Changing the Size of an Ext2, Ext3, or Ext4 File System"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:427
+#, no-c-format
+msgid ""
+"The size of Ext2, Ext3, and Ext4 file systems can be increased by using the "
+"<command>resize2fs</command> command, regardless of whether the respective "
+"partition is mounted or not. To decrease the size of an Ext file system it "
+"needs to be unmounted."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:441
+#, no-c-format
+msgid "If the file system size should be decreased, unmount it."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:446
+#, no-c-format
+msgid "Change the size of the file system using one of the following methods:"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:451
+#, no-c-format
+msgid ""
+"To extend the file system size to the maximum available size of the device "
+"called <filename>/dev/sda1</filename>, enter"
+msgstr ""
+
+#. Tag: screen
+#: storage_fs-resizing.xml:455
+#, no-c-format
+msgid "sudo resize2fs /dev/sda1"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:456
+#, no-c-format
+msgid ""
+"If a size parameter is not specified, the size defaults to the size of the "
+"partition."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:462
+#, no-c-format
+msgid "To change the file system to a specific size, enter"
+msgstr ""
+
+#. Tag: screen
+#: storage_fs-resizing.xml:465
+#, no-c-format
+msgid "sudo resize2fs /dev/sda1 <replaceable>size</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:466
+#, no-c-format
+msgid ""
+"The <replaceable>size</replaceable> parameter specifies the requested new "
+"size of the file system. If no units are specified, the unit of the size "
+"parameter is the block size of the file system. Optionally, the size "
+"parameter can be suffixed by one of the following unit designators: "
+"<literal>s</literal> for 512 byte sectors; <literal>K</literal> for "
+"kilobytes (1 kilobyte is 1024 bytes); <literal>M</literal> for megabytes; or "
+"<literal>G</literal> for gigabytes."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:477 storage_fs-resizing.xml:553
+#, no-c-format
+msgid "Wait until the resizing is completed before continuing."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:482 storage_fs-resizing.xml:558
+#, no-c-format
+msgid "If the file system is not mounted, mount it now."
+msgstr ""
+
+#. Tag: title
+#: storage_fs-resizing.xml:501
+#, no-c-format
+msgid "Changing the Size of a Reiser File System"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:503
+#, no-c-format
+msgid ""
+"A ReiserFS file system can be increased in size while mounted or unmounted. "
+"To decrease its size it needs to be unmounted."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:515
+#, no-c-format
+msgid ""
+"If you want to decrease the size of the file system, unmount it in case it "
+"is mounted."
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:521
+#, no-c-format
+msgid ""
+"Change the size of the file system on the device called <filename>/dev/sda2</"
+"filename>, using one of the following methods:"
+msgstr ""
+
+#. Tag: screen
+#: storage_fs-resizing.xml:531
+#, no-c-format
+msgid "sudo resize_reiserfs /dev/sda2"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:532
+#, no-c-format
+msgid ""
+"When no size is specified, this increases the volume to the full size of the "
+"partition."
+msgstr ""
+
+#. Tag: screen
+#: storage_fs-resizing.xml:541
+#, no-c-format
+msgid "sudo resize_reiserfs -s <replaceable>size</replaceable> /dev/sda2"
+msgstr ""
+
+#. Tag: para
+#: storage_fs-resizing.xml:542
+#, no-c-format
+msgid ""
+"Replace <replaceable>size</replaceable> with the desired size in bytes. You "
+"can also specify units on the value, such as 50000K (kilobytes), 250M "
+"(megabytes), or 2G (gigabytes). Alternatively, you can specify an increase "
+"or decrease to the current size by prefixing the value with a plus (<literal>"
+"+</literal>) or minus (<literal>-</literal>) sign, respectively:"
+msgstr ""
+
+#. Tag: screen
+#: storage_fs-resizing.xml:550
+#, no-c-format
+msgid ""
+"sudo resize_reiserfs -s +<replaceable>size</replaceable> /dev/sda2\n"
+"sudo resize_reiserfs -s -<replaceable>size</replaceable> /dev/sda2"
+msgstr ""

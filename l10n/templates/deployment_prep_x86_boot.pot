@@ -1,0 +1,202 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: deployment_prep_x86_boot.xml:12
+#, no-c-format
+msgid "Controlling the Installation"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: deployment_prep_x86_boot.xml:15
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_boot.xml:21
+#, no-c-format
+msgid ""
+"Control the installation in one of several ways. The method most frequently "
+"used is to install &productnamereg; from the computer console. Other options "
+"are available for different situations."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_x86_boot.xml:32
+#, no-c-format
+msgid "Installation on the Computer Console"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_boot.xml:33
+#, no-c-format
+msgid ""
+"The simplest way to install &productname; is using the computer console. "
+"With this method, a graphical installation program guides you through the "
+"installation. This installation method is discussed in detail in <xref "
+"linkend=\"cha.inst\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_boot.xml:39
+#, no-c-format
+msgid ""
+"You can still perform the installation on the console without a working "
+"graphics mode. The text-based installation program offers the same "
+"functionality as the graphical version. Find some hints about navigation in "
+"this mode in <xref linkend=\"sec.yast.navi.ncurses_modul\"/>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_x86_boot.xml:48
+#, no-c-format
+msgid "Installation Using a Serial Console"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_boot.xml:49
+#, no-c-format
+msgid ""
+"For this installation method, you need a second computer that is connected "
+"by a <emphasis>null modem</emphasis> cable to the computer on which to "
+"install &productname;. Depending on the hardware, even the firmware or BIOS "
+"of the computer may already be accessible to the serial console. If this is "
+"possible, you can carry out the entire installation using this method. To "
+"activate the serial console installation, additionally specify the parameter "
+"<option>console=ttyS0</option> at the boot prompt after the boot process has "
+"completed and before the installation system starts."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_boot.xml:59
+#, no-c-format
+msgid ""
+"On most computers, there are two serial interfaces, <emphasis>ttyS0</"
+"emphasis> and <emphasis>ttyS1</emphasis>. For the installation, you need a "
+"terminal program like minicom or screen. To initiate the serial connection, "
+"launch the screen program in a local console by entering the following "
+"command:"
+msgstr ""
+
+#. Tag: screen
+#: deployment_prep_x86_boot.xml:66
+#, no-c-format
+msgid "screen /dev/ttyS0 9600"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_boot.xml:67
+#, no-c-format
+msgid ""
+"This means that screen listens to the first serial port with a baud rate of "
+"9600. From this point on, the installation proceeds similarly to the text-"
+"based installation over this terminal."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_x86_boot.xml:75
+#, no-c-format
+msgid "Installation with SSH"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_boot.xml:76
+#, no-c-format
+msgid ""
+"If you do not have direct access to the computer hardware and, for example, "
+"the installation should be launched from a management console, control the "
+"entire installation process over the network. To do this, enter the "
+"parameters <option>ssh=1</option> and <option>ssh."
+"password=<replaceable>SECRET</replaceable></option> at the boot prompt. An "
+"SSH daemon is then launched in the system and you can log in as user "
+"&rootuser; with the password <replaceable>SECRET</replaceable>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_boot.xml:85
+#, no-c-format
+msgid ""
+"To connect, use <command>ssh -X</command>. X-Forwarding over SSH is "
+"supported, if you have a local X server available. Otherwise, &yast; "
+"provides a text interface over ncurses. &yast; then guides you through the "
+"installation. This procedure is described in detail in <xref linkend=\"sec."
+"deployment.remoteinst.scenario.sshdyn\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_boot.xml:93
+#, no-c-format
+msgid ""
+"If you do not have a DHCP server available in your local network, manually "
+"assign an IP address to the installation system. Do this by entering the "
+"option <option>HostIP=<replaceable>IPADDR</replaceable></option> at the boot "
+"prompt."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_x86_boot.xml:102
+#, no-c-format
+msgid "Installation over VNC"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_boot.xml:103
+#, no-c-format
+msgid ""
+"If you do not have direct access to the system, but want a graphical "
+"installation, install &productname; over VNC. This method is described in "
+"detail in <xref linkend=\"sec.deployment.remoteinst.monitor.vnc\"/>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_boot.xml:108
+#, no-c-format
+msgid ""
+"As suitable VNC clients are also available for other operating systems, such "
+"as Microsoft Windows and macOS, the installation can also be controlled from "
+"computers running those operating systems."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_x86_boot.xml:116
+#, no-c-format
+msgid "Installation with &ay;"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_boot.xml:117
+#, no-c-format
+msgid ""
+"If you need to install &productname; on several computers with similar "
+"hardware, it is recommended you perform the installations with the aid of "
+"&ay;. In this case, start by installing one &productname; and use this to "
+"create the necessary &ay; configuration files."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_boot.xml:123
+#, no-c-format
+msgid "&ay; is extensively documented in <xref linkend=\"book.autoyast\"/> ."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_x86_boot.xml:126
+#, no-c-format
+msgid ""
+"&ay; is extensively documented at <link xlink:href=\"https://www.suse.com/"
+"documentation/sles-12/book_autoyast/data/book_autoyast.html\"></link> ."
+msgstr ""

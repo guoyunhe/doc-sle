@@ -1,0 +1,703 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: tuning_logfiles.xml:21
+#, no-c-format
+msgid "Analyzing and Managing System Log Files"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:28
+#, no-c-format
+msgid ""
+"System log file analysis is one of the most important tasks when analyzing "
+"the system. In fact, looking at the system log files should be the first "
+"thing to do when maintaining or troubleshooting a system. &productname; "
+"automatically logs almost everything that happens on the system in detail. "
+"Since the move to &systemd;, kernel messages and messages of system services "
+"registered with &systemd; are logged in &systemd; journal (see <xref linkend="
+"\"cha.journalctl\"/>). Other log files (mainly those of system applications) "
+"are written in plain text and can be easily read using an editor or pager. "
+"It is also possible to parse them using scripts. This allows you to filter "
+"their content."
+msgstr ""
+
+#. Tag: title
+#: tuning_logfiles.xml:41
+#, no-c-format
+msgid "System Log Files in <filename>/var/log/</filename>"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:43
+#, no-c-format
+msgid ""
+"System log files are always located under the <filename>/var/log</filename> "
+"directory. The following list presents an overview of all system log files "
+"from &productname; present after a default installation. Depending on your "
+"installation scope, <filename>/var/log</filename> also contains log files "
+"from other services and applications not listed here. Some files and "
+"directories described below are <quote>placeholders</quote> and are only "
+"used, when the corresponding application is installed. Most log files are "
+"only visible for the user &rootuser;."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:76
+#, no-c-format
+msgid "apparmor/"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:79
+#, no-c-format
+msgid ""
+"&naa; log files. See <xref linkend=\"part.apparmor\"/> for details of &aa;."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:86
+#, no-c-format
+msgid "audit/"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:89
+#, no-c-format
+msgid ""
+"Logs from the audit framework. See <xref linkend=\"part.audit\"/> for "
+"details."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:123
+#, no-c-format
+msgid "ConsoleKit/"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:126
+#, no-c-format
+msgid ""
+"Logs of the <systemitem class=\"daemon\">ConsoleKit</systemitem> daemon "
+"(daemon for tracking what users are logged in and how they interact with the "
+"computer)."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:134
+#, no-c-format
+msgid "cups/"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:137
+#, no-c-format
+msgid ""
+"Access and error logs of the Common Unix Printing System (<systemitem class="
+"\"daemon\">cups</systemitem>)."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:144
+#, no-c-format
+msgid "faillog"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:147
+#, no-c-format
+msgid "Database file that contains all login failures."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:153
+#, no-c-format
+msgid "firewall"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:156
+#, no-c-format
+msgid "Firewall logs."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:162
+#, no-c-format
+msgid "gdm/"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:165
+#, no-c-format
+msgid "Log files from the &gnome; display manager."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:171
+#, no-c-format
+msgid "krb5/"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:174
+#, no-c-format
+msgid "Log files from the Kerberos network authentication system."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:180
+#, no-c-format
+msgid "lastlog"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:183
+#, no-c-format
+msgid ""
+"A database containing information on the last login of each user. Use the "
+"command <command>lastlog</command> to view. See <command>man 8 lastlog</"
+"command> for more information."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:191
+#, no-c-format
+msgid "localmessages"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:194
+#, no-c-format
+msgid ""
+"Log messages of some boot scripts, for example the log of the DHCP client."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:201
+#, no-c-format
+msgid "mail*"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:204
+#, no-c-format
+msgid ""
+"Mail server (<systemitem class=\"service\">postfix</systemitem>, <systemitem "
+"class=\"service\">sendmail</systemitem>) logs."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:211
+#, no-c-format
+msgid "messages"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:214
+#, no-c-format
+msgid ""
+"This is the default place where all Kernel and system log messages go and "
+"should be the first place (along with <filename>/var/log/warn</filename>) to "
+"look at in case of problems."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:222
+#, no-c-format
+msgid "NetworkManager"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:225
+#, no-c-format
+msgid "NetworkManager log files."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:231
+#, no-c-format
+msgid "news/"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:234
+#, no-c-format
+msgid "Log messages from a news server."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:240
+#, no-c-format
+msgid "<filename>ntp</filename>"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:243
+#, no-c-format
+msgid ""
+"Logs from the Network Time Protocol daemon (<systemitem class=\"daemon"
+"\">ntpd</systemitem>)."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:250
+#, no-c-format
+msgid "pk_backend_zypp*"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:253
+#, no-c-format
+msgid ""
+"PackageKit (with <systemitem class=\"library\">libzypp</systemitem> back-"
+"end) log files."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:260
+#, no-c-format
+msgid "puppet/"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:263
+#, no-c-format
+msgid "Log files from the data center automation tool puppet."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:269
+#, no-c-format
+msgid "samba/"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:272
+#, no-c-format
+msgid "Log files from Samba, the Windows SMB/CIFS file server."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:278
+#, no-c-format
+msgid "warn"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:281
+#, no-c-format
+msgid ""
+"Log of all system warnings and errors. This should be the first place (along "
+"with the output of the &systemd; journal) to look in case of problems."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:289
+#, no-c-format
+msgid "wtmp"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:292
+#, no-c-format
+msgid ""
+"Database of all login/logout activities, <remark>sknorr, 2014-08-21: why was "
+"\"runlevel changes\" commented out here? Is this a systemd-related change? "
+"Should this then be removed entirely?</remark> and remote connections. Use "
+"the command <command>last</command> to view. See <command>man 1 last</"
+"command> for more information."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:302
+#, no-c-format
+msgid "xinetd.log"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:305
+#, no-c-format
+msgid ""
+"Log files from the extended Internet services daemon (<systemitem class="
+"\"daemon\">xinetd</systemitem>)."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:312
+#, no-c-format
+msgid "Xorg.0.log"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:315
+#, no-c-format
+msgid ""
+"&xvendor; start-up log file. Refer to this in case you have problems "
+"starting &xvendor;. Copies from previous &xvendor; starts are numbered Xorg."
+"<replaceable>?</replaceable>.log."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:323
+#, no-c-format
+msgid "YaST2/"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:326
+#, no-c-format
+msgid "All &yast; log files."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:332
+#, no-c-format
+msgid "zypp/"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:335
+#, no-c-format
+msgid ""
+"<systemitem class=\"library\">libzypp</systemitem> log files. Refer to these "
+"files for the package installation history."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:342
+#, no-c-format
+msgid "zypper.log"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:345
+#, no-c-format
+msgid "Logs from the command line installer <command>zypper</command>."
+msgstr ""
+
+#. Tag: title
+#: tuning_logfiles.xml:353
+#, no-c-format
+msgid "Viewing and Parsing Log Files"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:355
+#, no-c-format
+msgid ""
+"To view log files, you can use any text editor. There is also a simple "
+"&yast; module for viewing the system log available in the &yast; control "
+"center under <menuchoice> <guimenu>Miscellaneous</guimenu> <guimenu>System "
+"Log</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:362
+#, no-c-format
+msgid ""
+"For viewing log files in a text console, use the commands <command>less</"
+"command> or <command>more</command>. Use <command>head</command> and "
+"<command>tail</command> to view the beginning or end of a log file. To view "
+"entries appended to a log file in real-time use <command>tail</command> "
+"<option>-f</option>. For information about how to use these tools, see their "
+"man pages."
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:371
+#, no-c-format
+msgid ""
+"To search for strings or regular expressions in log files use <command>grep</"
+"command>. <command>awk</command> is useful for parsing and rewriting log "
+"files."
+msgstr ""
+
+#. Tag: title
+#: tuning_logfiles.xml:378
+#, no-c-format
+msgid "Managing Log Files with <command>logrotate</command>"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:380
+#, no-c-format
+msgid ""
+"Log files under <filename>/var/log</filename> grow on a daily basis and "
+"quickly become very large. <command>logrotate</command> is a tool that helps "
+"you manage log files and their growth. It allows automatic rotation, "
+"removal, compression, and mailing of log files. Log files can be handled "
+"periodically (daily, weekly, or monthly) or when exceeding a particular size."
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:389
+#, no-c-format
+msgid ""
+"<command>logrotate</command> is usually run as a daily &crond; job, and thus "
+"usually modifies log files only once a day. However, exceptions occur when a "
+"log file is modified because of its size, if <command>logrotate</command> is "
+"run multiple times a day, or if <option>--force</option> is enabled."
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:397
+#, no-c-format
+msgid ""
+"The main configuration file of <command>logrotate</command> is <filename>/"
+"etc/logrotate.conf</filename>. System packages and programs that produce log "
+"files (for example, <systemitem class=\"resource\">apache2</systemitem>) put "
+"their own configuration files in the <filename>/etc/logrotate.d/</filename> "
+"directory. The content of <filename>/etc/logrotate.d/</filename> is included "
+"via <filename>/etc/logrotate.conf</filename>."
+msgstr ""
+
+#. Tag: title
+#: tuning_logfiles.xml:408
+#, no-c-format
+msgid "Example for <filename>/etc/logrotate.conf</filename>"
+msgstr ""
+
+#. Tag: screen
+#: tuning_logfiles.xml:409
+#, no-c-format
+msgid ""
+"# see \"man logrotate\" for details\n"
+"# rotate log files weekly\n"
+"weekly\n"
+"\n"
+"# keep 4 weeks worth of backlogs\n"
+"rotate 4\n"
+"\n"
+"# create new (empty) log files after rotating old ones\n"
+"create\n"
+"\n"
+"# use date as a suffix of the rotated file\n"
+"dateext\n"
+"\n"
+"# uncomment this if you want your log files compressed\n"
+"#compress\n"
+"\n"
+"# comment these to switch compression to use gzip or another\n"
+"# compression scheme\n"
+"compresscmd /usr/bin/bzip2\n"
+"uncompresscmd /usr/bin/bunzip2\n"
+"\n"
+"# RPM packages drop log rotation information into this directory\n"
+"include /etc/logrotate.d"
+msgstr ""
+
+#. Tag: title
+#: tuning_logfiles.xml:413
+#, no-c-format
+msgid "Avoid Permission Conflicts"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:414
+#, no-c-format
+msgid ""
+"The <systemitem>create</systemitem> option pays heed to the modes and "
+"ownerships of files specified in <filename>/etc/permissions*</filename>. If "
+"you modify these settings, make sure no conflicts arise."
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:421
+#, no-c-format
+msgid ""
+"<command>logrotate </command>is controlled through &crond; and is called "
+"daily by <filename>/etc/cron.daily/logrotate</filename>. Use <filename>/var/"
+"lib/logrotate.status</filename> to find out when a particular file has been "
+"rotated lastly."
+msgstr ""
+
+#. Tag: title
+#: tuning_logfiles.xml:817
+#, no-c-format
+msgid "Monitoring Log Files with <command>logwatch</command>"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:819
+#, no-c-format
+msgid ""
+"<command>logwatch</command> is a customizable, pluggable log-monitoring "
+"script. It parses system logs, extracts the important information and "
+"presents them in a human readable manner. To use <command>logwatch</"
+"command>, install the <systemitem>logwatch</systemitem> package."
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:827
+#, no-c-format
+msgid ""
+"<command>logwatch</command> can either be used at the command line to "
+"generate on-the-fly reports, or via &crond; to regularly create custom "
+"reports. Reports can either be printed on the screen, saved to a file, or be "
+"mailed to a specified address. The latter is especially useful when "
+"automatically generating reports via &crond;."
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:835
+#, no-c-format
+msgid ""
+"On the command line, you can tell <command>logwatch</command> for which "
+"service and time span to generate a report and how much detail should be "
+"included:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_logfiles.xml:841
+#, no-c-format
+msgid ""
+"<?dbsuse-fo font-size=\"7pt\"?># Detailed report on all kernel messages from "
+"yesterday\n"
+"logwatch --service kernel --detail High --range Yesterday --print\n"
+"\n"
+"# Low detail report on all sshd events recorded (incl. archived logs)\n"
+"logwatch --service sshd --detail Low --range All --archives --print\n"
+"\n"
+"# Mail a report on all smartd messages from May 5th to May 7th to "
+"root@localhost\n"
+"logwatch --service smartd --range 'between 5/5/2005 and 5/7/2005' \\\n"
+"--mailto root@localhost --print"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:843
+#, no-c-format
+msgid ""
+"The <option>--range</option> option has got a complex syntax&mdash;see "
+"<command>logwatch</command> <option>--range help</option> for details. A "
+"list of all services that can be queried is available with the following "
+"command:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_logfiles.xml:850
+#, no-c-format
+msgid "ls /usr/share/logwatch/default.conf/services/ | sed 's/\\.conf//g'"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:852
+#, no-c-format
+msgid ""
+"<command>logwatch</command> can be customized to great detail. However, the "
+"default configuration should usually be sufficient. The default "
+"configuration files are located under <filename>/usr/share/logwatch/default."
+"conf/</filename>. Never change them because they would get overwritten again "
+"with the next update. Rather place custom configuration in <filename>/etc/"
+"logwatch/conf/</filename> (you may use the default configuration file as a "
+"template, though). A detailed HOWTO on customizing <command>logwatch</"
+"command> is available at <filename>/usr/share/doc/packages/logwatch/HOWTO-"
+"Customize-LogWatch</filename>. The following configuration files exist:"
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:867
+#, no-c-format
+msgid "logwatch.conf"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:870
+#, no-c-format
+msgid ""
+"The main configuration file. The default version is extensively commented. "
+"Each configuration option can be overwritten on the command line."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:878
+#, no-c-format
+msgid "ignore.conf"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:881
+#, no-c-format
+msgid ""
+"Filter for all lines that should globally be ignored by <command>logwatch</"
+"command>."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:888
+#, no-c-format
+msgid "services/*.conf"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:891
+#, no-c-format
+msgid ""
+"The service directory holds configuration files for each service you can "
+"generate a report for."
+msgstr ""
+
+#. Tag: filename
+#: tuning_logfiles.xml:898
+#, no-c-format
+msgid "logfiles/*.conf"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:901
+#, no-c-format
+msgid "Specifications on which log files should be parsed for each service."
+msgstr ""
+
+#. Tag: title
+#: tuning_logfiles.xml:909
+#, no-c-format
+msgid "Using <command>logger</command> to Make System Log Entries"
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:911
+#, no-c-format
+msgid ""
+"<command>logger</command> is a tool for making entries in the system log. It "
+"provides a shell command interface to the rsyslogd system log module. For "
+"example, the following line outputs its message in <filename>/var/log/"
+"messages</filename> or directly in the journal (if no logging facility is "
+"running):"
+msgstr ""
+
+#. Tag: screen
+#: tuning_logfiles.xml:919
+#, no-c-format
+msgid "logger -t Test \"This messages comes from $USER\""
+msgstr ""
+
+#. Tag: para
+#: tuning_logfiles.xml:921
+#, no-c-format
+msgid ""
+"Depending on the current user and host name, the log contains a line similar "
+"to this:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_logfiles.xml:926
+#, no-c-format
+msgid "Sep 28 13:09:31 &wsII; Test: This messages comes from tux"
+msgstr ""

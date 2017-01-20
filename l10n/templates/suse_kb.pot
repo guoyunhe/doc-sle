@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: suse_kb.xml:9
+#, no-c-format
+msgid "Keyboard Mapping"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: suse_kb.xml:12
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: suse_kb.xml:18 suse_kb.xml:22 suse_kb.xml:48 suse_kb.xml:54 suse_kb.xml:65
+#: suse_kb.xml:69
+#, no-c-format
+msgid "keyboard"
+msgstr ""
+
+#. Tag: secondary
+#: suse_kb.xml:20
+#, no-c-format
+msgid "layout"
+msgstr ""
+
+#. Tag: secondary
+#: suse_kb.xml:24 suse_kb.xml:50 suse_kb.xml:56
+#, no-c-format
+msgid "mapping"
+msgstr ""
+
+#. Tag: para
+#: suse_kb.xml:26
+#, no-c-format
+msgid ""
+"To standardize the keyboard mapping of programs, changes were made to the "
+"following files:"
+msgstr ""
+
+#. Tag: screen
+#: suse_kb.xml:31
+#, no-c-format
+msgid ""
+"/etc/inputrc\n"
+"/etc/X11/Xmodmap\n"
+"/etc/skel/.emacs\n"
+"/etc/skel/.gnu-emacs\n"
+"/etc/skel/.vimrc\n"
+"/etc/csh.cshrc\n"
+"/etc/termcap\n"
+"/usr/share/terminfo/x/xterm\n"
+"/usr/share/X11/app-defaults/XTerm\n"
+"/usr/share/emacs/<replaceable>VERSION</replaceable>/site-lisp/term/*.el"
+msgstr ""
+
+#. Tag: primary
+#: suse_kb.xml:33 suse_kb.xml:37
+#, no-c-format
+msgid "configuration files"
+msgstr ""
+
+#. Tag: secondary
+#: suse_kb.xml:35
+#, no-c-format
+msgid "termcap"
+msgstr ""
+
+#. Tag: secondary
+#: suse_kb.xml:39
+#, no-c-format
+msgid "inputrc"
+msgstr ""
+
+#. Tag: para
+#: suse_kb.xml:41
+#, no-c-format
+msgid ""
+"These changes only affect applications that use <command>terminfo</command> "
+"entries or whose configuration files are changed directly (<command>vi</"
+"command>, <command>emacs</command>, etc.). Applications not shipped with the "
+"system should be adapted to these defaults."
+msgstr ""
+
+#. Tag: tertiary
+#: suse_kb.xml:52
+#, no-c-format
+msgid "compose"
+msgstr ""
+
+#. Tag: tertiary
+#: suse_kb.xml:58
+#, no-c-format
+msgid "multikey"
+msgstr ""
+
+#. Tag: para
+#: suse_kb.xml:60
+#, no-c-format
+msgid ""
+"Under X, the compose key (multikey) can be enabled as explained in "
+"<filename>/etc/X11/Xmodmap</filename>."
+msgstr ""
+
+#. Tag: secondary
+#: suse_kb.xml:67
+#, no-c-format
+msgid "<secondary>X Keyboard Extension</secondary>"
+msgstr ""
+
+#. Tag: secondary
+#: suse_kb.xml:71
+#, no-c-format
+msgid "<secondary>XKB</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: suse_kb.xml:73
+#, no-c-format
+msgid "<primary>X Keyboard Extension</primary>"
+msgstr ""
+
+#. Tag: see
+#: suse_kb.xml:75 suse_kb.xml:79
+#, no-c-format
+msgid "keyboard, XKB"
+msgstr ""
+
+#. Tag: primary
+#: suse_kb.xml:77
+#, no-c-format
+msgid "<primary>XKB</primary>"
+msgstr ""
+
+#. Tag: para
+#: suse_kb.xml:81
+#, no-c-format
+msgid ""
+"Further settings are possible using the X Keyboard Extension (XKB). This "
+"extension is also used by the desktop environment &gnome; (gswitchit)."
+msgstr ""
+
+#. Tag: title
+#: suse_kb.xml:87
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: suse_kb.xml:88
+#, no-c-format
+msgid ""
+"Information about XKB is available in the documents listed in <filename>/usr/"
+"share/doc/packages/xkeyboard-config</filename> (part of the "
+"<systemitem>xkeyboard-config</systemitem> package)."
+msgstr ""

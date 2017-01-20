@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: deployment_prep_power_info.xml:11
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: deployment_prep_power_info.xml:14
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_info.xml:20
+#, no-c-format
+msgid "More information on IBM &powerlinux; is available from &suse; and IBM:"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_info.xml:26
+#, no-c-format
+msgid ""
+"The SUSE Support Knowledge Base at <link xlink:href=\"https://www.suse.com/"
+"support/kb/\"></link> is an effective help tool for assisting customers in "
+"solving problems. Search the knowledge base on &productname; using keywords "
+"like POWER or PowerKVM."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_info.xml:33
+#, no-c-format
+msgid ""
+"Find security alerts at <link xlink:href=\"https://www.suse.com/support/"
+"security/\"></link>. &suse; also maintains two security-related mailing "
+"lists to which anyone may subscribe."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_info.xml:40
+#, no-c-format
+msgid ""
+"<literal>suse-security</literal> &mdash; General discussion of security "
+"regarding Linux and &suse;. All security alerts for &sls; are sent to this "
+"list."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_info.xml:47
+#, no-c-format
+msgid ""
+"<literal>suse-security-announce</literal> &mdash; The &suse; mailing list "
+"exclusively for security alerts."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_info.xml:55
+#, no-c-format
+msgid ""
+"In case of hardware errors, check the control panel for any codes that might "
+"be displayed. You can look up any codes that are displayed at the IBM Power "
+"Systems Hardware Information Center at <link xlink:href=\"https://ibm.biz/"
+"Bdxn3T\"></link>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_info.xml:62
+#, no-c-format
+msgid ""
+"For troubleshooting tips, see the IBM &powerlinux; FAQ topic in the "
+"Information center at <link xlink:href=\"https://ibm.biz/Bdxn35\"></link>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_power_info.xml:68
+#, no-c-format
+msgid ""
+"To participate in the linuxppc-dev mailing list, register using the forms at "
+"<link xlink:href=\"http://lists.ozlabs.org/listinfo/linuxppc-dev/\"></link>."
+msgstr ""

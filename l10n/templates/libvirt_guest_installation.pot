@@ -1,0 +1,646 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: libvirt_guest_installation.xml:9
+#, no-c-format
+msgid "Guest Installation"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:16
+#, no-c-format
+msgid ""
+"A &vmguest; consists of an image containing an operating system and data "
+"files and a configuration file describing the &vmguest;'s virtual hardware "
+"resources. &vmguest;s are hosted on and controlled by the &vmhost;. This "
+"section provides generalized instructions for installing a &vmguest;."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:23
+#, no-c-format
+msgid ""
+"Virtual machines have few if any requirements above those required to run "
+"the operating system. If the operating system has not been optimized for the "
+"virtual machine host environment, it can only run on <xref linkend=\"gloss."
+"vt.hwassisted\"/> virtualization computer hardware, in full virtualization "
+"mode, and requires specific device drivers to be loaded. The hardware that "
+"is presented to the &vmguest; depends on the configuration of the host."
+msgstr ""
+
+#. Tag: title
+#: libvirt_guest_installation.xml:33
+#, no-c-format
+msgid "Virtual Machine Architectures"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:34
+#, no-c-format
+msgid ""
+"The virtual machine host runs only on &amd64; and &intel64;. Additionally, "
+"&kvm; for &zseries; is included on &sls; as a technology preview. It does "
+"not run on other system architectures such as &ppc;. A 64-bit virtual "
+"machine host can, however, run both 32-bit and 64-bit &vmguest;s."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:42
+#, no-c-format
+msgid ""
+"You should be aware of any licensing issues related to running a single "
+"licensed copy of an operating system on multiple virtual machines. Consult "
+"the operating system license agreement for more information."
+msgstr ""
+
+#. Tag: title
+#: libvirt_guest_installation.xml:48
+#, no-c-format
+msgid "GUI-Based Guest Installation"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:50
+#, no-c-format
+msgid ""
+"The <guimenu>New VM</guimenu> wizard helps you through the steps required to "
+"create a virtual machine and install its operating system. There are two "
+"ways to start it: Within &vmm;, either click <guimenu>Create New Virtual "
+"Machine</guimenu> or choose <menuchoice> <guimenu>File</guimenu> "
+"<guimenu>New Virtual Machine</guimenu> </menuchoice>. Alternatively, start "
+"&yast; and choose <menuchoice><guimenu>Virtualization</guimenu> "
+"<guimenu>Create Virtual Machines for Xen and KVM</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:63
+#, no-c-format
+msgid "Start the <guimenu>New VM</guimenu> wizard either from &yast; or &vmm;."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:69
+#, no-c-format
+msgid ""
+"Choose an installation source&mdash;either a locally available media or a "
+"network installation source. If you want to set up your &vmguest; from an "
+"existing image, choose <guimenu>import existing disk image</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:75
+#, no-c-format
+msgid ""
+"On a &vmhost; running the &xen; hypervisor, you can choose whether to "
+"install a paravirtualized or a fully virtualized guest. The respective "
+"option is available under <guimenu>Architecture Options</guimenu>. Depending "
+"on this choice, not all installation options may be available."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:84
+#, no-c-format
+msgid ""
+"Depending on your choice in the previous step, you need to provide the "
+"following data:"
+msgstr ""
+
+#. Tag: guimenu
+#: libvirt_guest_installation.xml:90
+#, no-c-format
+msgid "Local Installation Media (ISO image or CDROM)"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:93
+#, no-c-format
+msgid ""
+"Specify the path on the &vmhost; to an iso image containing the installation "
+"data. If it is available as a volume in a libvirt storage pool, you can also "
+"select it using <guimenu>Browse</guimenu>. For more information, see <xref "
+"linkend=\"cha.libvirt.storage\"/>."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:100
+#, no-c-format
+msgid ""
+"Alternatively, choose a physical CD-ROM or DVD inserted in the optical drive "
+"of the &vmhost;."
+msgstr ""
+
+#. Tag: guimenu
+#: libvirt_guest_installation.xml:107
+#, no-c-format
+msgid "Network Installation (HTTP, FTP, or NFS)"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:110
+#, no-c-format
+msgid ""
+"Provide the <guimenu>URL</guimenu> pointing to the installation source. "
+"Valid URL prefixes are, for example, <literal>ftp://</literal>, "
+"<literal>http://</literal>, <literal>https://</literal>, and <literal>nfs://"
+"</literal>."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:116
+#, no-c-format
+msgid ""
+"Under <guimenu>URL Options</guimenu>, provide a path to an auto-installation "
+"file (&ay; or Kickstart, for example) and Kernel parameters. Having provided "
+"a URL, the operating system should be automatically detected correctly. If "
+"this is not the case, deselect <guimenu>Automatically Detect Operating "
+"System Based on Install-Media</guimenu> and manually select the <guimenu>OS "
+"Type</guimenu> and <guimenu>Version</guimenu>."
+msgstr ""
+
+#. Tag: guimenu
+#: libvirt_guest_installation.xml:128
+#, no-c-format
+msgid "Network Boot (PXE)"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:131
+#, no-c-format
+msgid ""
+"When booting via PXE, you only need to provide the <guimenu>OS Type</"
+"guimenu> and the <guimenu>Version</guimenu>."
+msgstr ""
+
+#. Tag: guimenu
+#: libvirt_guest_installation.xml:138
+#, no-c-format
+msgid "Import Existing Disk Image"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:141
+#, no-c-format
+msgid ""
+"To set up the &vmguest; from an existing image, you need to specify the path "
+"on the &vmhost; to the image. If it is available as a volume in a libvirt "
+"storage pool, you can also select it using <guimenu>Browse</guimenu>. For "
+"more information, see <xref linkend=\"cha.libvirt.storage\"/>."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:153
+#, no-c-format
+msgid "Choose the memory size and number of CPUs for the new virtual machine."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:158
+#, no-c-format
+msgid ""
+"This step is omitted when <guimenu>Import an Existing Image</guimenu> is "
+"chosen in the first step."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:162
+#, no-c-format
+msgid ""
+"Set up a virtual hard disk for the &vmguest;. Either create a new disk image "
+"or choose an existing one from a storage pool (for more information, see "
+"<xref linkend=\"cha.libvirt.storage\"/>). If you choose to create a disk, a "
+"<literal>qcow2</literal> image will be created. By default, it is stored "
+"under <filename>/var/lib/libvirt/images</filename>."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:170
+#, no-c-format
+msgid ""
+"Setting up a disk is optional. If you are running a live system directly "
+"from CD or DVD, for example, you can omit this step by deactivating "
+"<guimenu>Enable Storage for this Virtual Machine</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:177
+#, no-c-format
+msgid ""
+"On the last screen of the wizard, specify the name for the virtual machine. "
+"To be offered the possibility to review and make changes to the virtualized "
+"hardware selection, activate <guimenu>Customize configuration before "
+"install</guimenu>. Find options to specify the network device under "
+"<guimenu>Network Selection</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:184
+#, no-c-format
+msgid "Click <guimenu>Finish</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:189
+#, no-c-format
+msgid ""
+"If you kept the defaults in the previous step, the installation will now "
+"start. If you selected <guimenu>Customize configuration before install</"
+"guimenu>, a &vmguest; configuration dialog opens. For more information about "
+"configuring &vmguest;s, see <xref linkend=\"cha.libvirt.config\"/>."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:196
+#, no-c-format
+msgid ""
+"When you are done configuring, click <guimenu>Begin Installation</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: libvirt_guest_installation.xml:203
+#, no-c-format
+msgid "Passing Key Combinations to Virtual Machines"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:204
+#, no-c-format
+msgid ""
+"The installation starts in a &vmm; console window. Some key combinations, "
+"such as <keycombo> <keycap function=\"control\"></keycap> <keycap function="
+"\"alt\"></keycap> <keycap>F1</keycap> </keycombo>, are recognized by the "
+"&vmhost; but are not passed to the virtual machine. To bypass the &vmhost;, "
+"&vmm; provides the <quote>sticky key</quote> functionality. Pressing <keycap "
+"function=\"control\"></keycap>, <keycap function=\"alt\"></keycap>, or "
+"<keycap function=\"shift\"></keycap> three times makes the key sticky, then "
+"you can press the remaining keys to pass the combination to the virtual "
+"machine."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:215
+#, no-c-format
+msgid ""
+"For example, to pass <keycombo> <keycap function=\"control\"></keycap> "
+"<keycap function=\"alt\"></keycap> <keycap>F2</keycap> </keycombo> to a "
+"Linux virtual machine, press <keycap function=\"control\"></keycap> three "
+"times, then press <keycombo> <keycap function=\"alt\"></keycap> <keycap>F2</"
+"keycap> </keycombo>. You can also press <keycap function=\"alt\"></keycap> "
+"three times, then press <keycombo> <keycap function=\"control\"></keycap> "
+"<keycap>F2</keycap> </keycombo>."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:224
+#, no-c-format
+msgid ""
+"The sticky key functionality is available in the &vmm; during and after "
+"installing a &vmguest;."
+msgstr ""
+
+#. Tag: title
+#: libvirt_guest_installation.xml:633
+#, no-c-format
+msgid "Installing from the Command Line with <command>virt-install</command>"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:635
+#, no-c-format
+msgid ""
+"<command>virt-install</command> is a command line tool that helps you create "
+"new virtual machines using the &libvirt; library. It is useful if you cannot "
+"use the graphical user interface, or need to automatize the process of "
+"creating virtual machines."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:642
+#, no-c-format
+msgid ""
+"<command>virt-install</command> is a complex script with a lot of command "
+"line switches. The following are required. For more information, see the man "
+"page of <command>virt-install</command> (1)."
+msgstr ""
+
+#. Tag: term
+#: libvirt_guest_installation.xml:650
+#, no-c-format
+msgid "General Options"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:654
+#, no-c-format
+msgid ""
+"<option>--name <replaceable>vm_guest_name</replaceable></option>: Specify "
+"the name of the new virtual machine. The name must be unique across all "
+"guests known to the hypervisor on the same connection. It is used to create "
+"and name the guest’s configuration file and you can access the guest with "
+"this name from <command>virsh</command>. Alphanumeric and <literal>_-.:+</"
+"literal> characters are allowed."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:665
+#, no-c-format
+msgid ""
+"<option>--memory <replaceable>required_memory</replaceable></option>: "
+"Specify the amount of memory to allocate for the new virtual machine in "
+"megabytes."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:673
+#, no-c-format
+msgid ""
+"<option>--vcpus <replaceable>number_of_cpus</replaceable></option>: Specify "
+"the number of virtual CPUs. For best performance, the number of virtual "
+"processors should be less than or equal to the number of physical processors."
+msgstr ""
+
+#. Tag: term
+#: libvirt_guest_installation.xml:684
+#, no-c-format
+msgid "Virtualization Type"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:688
+#, no-c-format
+msgid ""
+"<option>--paravirt</option>: Set up a paravirtualized guest. This is the "
+"default if the &vmhost; supports paravirtualization and full virtualization."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:695
+#, no-c-format
+msgid "<option>--hvm</option>: Set up a fully virtualized guest."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:700
+#, no-c-format
+msgid ""
+"<option>--virt-type <replaceable>hypervisor</replaceable></option>: Specify "
+"the hypervisor. Supported values are <literal>kvm</literal>, <literal>xen</"
+"literal>, or <literal>lxc</literal>."
+msgstr ""
+
+#. Tag: term
+#: libvirt_guest_installation.xml:710
+#, no-c-format
+msgid "Guest Storage"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:712
+#, no-c-format
+msgid ""
+"Specify one of <option>--disk</option>, <option>--filesystem</option> or "
+"<option>--nodisks</option> the type of the storage for the new virtual "
+"machine. For example, <option>--disk size=10</option> creates 10 GB disk in "
+"the default image location for the hypervisor and uses it for the &vmguest;. "
+"<option>--filesystem <replaceable>/export/path/on/vmhost</replaceable></"
+"option> specifies the directory on the &vmhost; to be exported to the guest. "
+"And <option>--nodisks</option> sets up a &vmguest; without a local storage "
+"(good for Live CDs)."
+msgstr ""
+
+#. Tag: term
+#: libvirt_guest_installation.xml:726
+#, no-c-format
+msgid "Installation Method"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:728
+#, no-c-format
+msgid ""
+"Specify the installation method using one of <option>--location</option>, "
+"<option>--cdrom</option>, <option>--pxe</option>, <option>--import</option>, "
+"or <option>--boot </option>."
+msgstr ""
+
+#. Tag: term
+#: libvirt_guest_installation.xml:737
+#, no-c-format
+msgid "Accessing the Installation"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:739
+#, no-c-format
+msgid ""
+"Use the <option>--graphics <replaceable>value</replaceable></option> option "
+"to specify how to access the installation. &productname; supports the values "
+"<literal>vnc</literal> or <literal>none</literal>."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:744
+#, no-c-format
+msgid ""
+"If using vnc <command>virt-install</command> tries to launch <command>virt-"
+"viewer</command>. If it is not installed or cannot be run, connect to the "
+"&vmguest; manually with you preferred viewer. To explicitly prevent "
+"<command>virt-install</command> from launching the viewer use <option>--"
+"noautoconsole</option>. To define a password for accessing the VNC session, "
+"use the following syntax: <option>--graphics vnc,"
+"password=<replaceable>PASSWORD</replaceable></option>."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:754
+#, no-c-format
+msgid ""
+"In case you are using <option>--graphics none</option>, you can access the "
+"&vmguest; through operating system supported services, such as SSH or VNC. "
+"Refer to the operating system installation manual on how to set up these "
+"services in the installation system."
+msgstr ""
+
+#. Tag: title
+#: libvirt_guest_installation.xml:765
+#, no-c-format
+msgid "Example of a <command>virt-install</command> command line"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:766
+#, no-c-format
+msgid ""
+"The following command line example creates a new &sled; 12 virtual machine "
+"with a virtio accelerated disk and network card. It creates a new 10 GB "
+"qcow2 disk image as a storage, the source installation media being the host "
+"CD-ROM drive. It will use VNC graphics, and it will auto-launch the "
+"graphical client."
+msgstr ""
+
+#. Tag: term
+#: libvirt_guest_installation.xml:775
+#, no-c-format
+msgid "<term>KVM</term>"
+msgstr ""
+
+#. Tag: screen
+#: libvirt_guest_installation.xml:777
+#, no-c-format
+msgid ""
+"virt-install --connect qemu:///system --virt-type kvm  --name sled12 \\\n"
+"--memory 1024 --disk size=10 --cdrom /dev/cdrom --graphics vnc \\\n"
+"--os-variant sled12"
+msgstr ""
+
+#. Tag: term
+#: libvirt_guest_installation.xml:781
+#, no-c-format
+msgid "&xen;"
+msgstr ""
+
+#. Tag: screen
+#: libvirt_guest_installation.xml:783
+#, no-c-format
+msgid ""
+"virt-install --connect xen:// --virt-type xen  --name sled12 \\\n"
+"--memory 1024 --disk size=10 --cdrom /dev/cdrom --graphics vnc \\\n"
+"--os-variant sled12"
+msgstr ""
+
+#. Tag: title
+#: libvirt_guest_installation.xml:790
+#, no-c-format
+msgid "Advanced Guest Installation Scenarios"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:792
+#, no-c-format
+msgid ""
+"This section provides instructions for operations exceeding the scope of a "
+"normal installation, such as including modules and extensions packages."
+msgstr ""
+
+#. Tag: title
+#: libvirt_guest_installation.xml:798
+#, no-c-format
+msgid "Memory Ballooning with Windows Guests"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:799
+#, no-c-format
+msgid ""
+"Memory ballooning is a method to change the amount of memory used by "
+"&vmguest; at runtime. Both the &kvm; and &xen; hypervisors provide this "
+"method, but it needs to be supported by the guest as well."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:804
+#, no-c-format
+msgid ""
+"While openSUSE and SLE-based guests support memory ballooning, Windows "
+"guests need the <link xlink:href=\"http://www.suse.com/products/vmdriverpack/"
+"\">Virtual Machine Driver Pack (VMDP)</link> to provide ballooning. To set "
+"the maximum memory greater than the initial memory configured for Windows "
+"guests, follow these steps:"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:814
+#, no-c-format
+msgid ""
+"Install the Windows guest with the maximum memory equal or less than the "
+"initial value."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:820
+#, no-c-format
+msgid ""
+"Install the Virtual Machine Driver Pack in the Windows guest to provide "
+"required drivers."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:826
+#, no-c-format
+msgid "Shut down the Windows guest."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:831
+#, no-c-format
+msgid "Reset the maximum memory of the Windows guest to the required value."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:836
+#, no-c-format
+msgid "Start the Windows guest again."
+msgstr ""
+
+#. Tag: title
+#: libvirt_guest_installation.xml:844
+#, no-c-format
+msgid "Including Add-On Products in the Installation"
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:845
+#, no-c-format
+msgid ""
+"Some operating systems such as &sls; offer to include add-on products in the "
+"installation process. In case the add-on product installation source is "
+"provided via network, no special &vmguest; configuration is needed. If it is "
+"provided via CD/DVD or ISO image, it is necessary to provide the &vmguest; "
+"installation system with both, the standard installation medium and an image "
+"for the add-on product."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:853
+#, no-c-format
+msgid ""
+"In case you are using the GUI-based installation, select <guimenu>Customize "
+"Configuration Before Install</guimenu> in the last step of the wizard and "
+"add the add-on product ISO image via <menuchoice><guimenu>Add Hardware</"
+"guimenu> <guimenu>Storage</guimenu></menuchoice>. Specify the path to the "
+"image and set the <guimenu>Device Type</guimenu> to <guimenu>CD-ROM</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: libvirt_guest_installation.xml:861
+#, no-c-format
+msgid ""
+"If installing from the command line, you need to set up the virtual CD/DVD "
+"drives with the <option>--disk</option> parameter rather than with <option>--"
+"cdrom</option>. The device that is specified first is used for booting. The "
+"following example will install &sls; 12 plus SDK:"
+msgstr ""
+
+#. Tag: screen
+#: libvirt_guest_installation.xml:868
+#, no-c-format
+msgid ""
+"virt-install --name sles12+sdk --memory 1024 --disk size=10 \\\n"
+"--disk /virt/iso/SLES12.iso,device=cdrom \\\n"
+"--disk /virt/iso/SLES12_SDK.iso,device=cdrom \\\n"
+"--graphics vnc --os-variant sles12"
+msgstr ""

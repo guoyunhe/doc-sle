@@ -1,0 +1,2055 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: sle_update_upgrading.xml:20
+#, no-c-format
+msgid "Upgrading &sle;"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:23
+#, no-c-format
+msgid ""
+"&slereg; (&slea;) allows to update an existing system to the new version, "
+"for example, going from &slea; 11 SP4 to &slea; 12. No new installation is "
+"needed. Existing data, such as home and data directories and system "
+"configuration, is kept intact. You can update from a local CD or DVD drive "
+"or from a central network installation source."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:31
+#, no-c-format
+msgid ""
+"This chapter explains how to manually upgrade your &sle; system, be it by "
+"DVD, network, an automated process, or &susemgr;."
+msgstr ""
+
+#. Tag: dm:translation
+#: sle_update_upgrading.xml:37
+#, no-c-format
+msgid "<dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:41
+#, no-c-format
+msgid "General Preparations"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:43
+#, no-c-format
+msgid ""
+"Before starting the update procedure, make sure your system is properly "
+"prepared. Among others, preparation involves backing up data and checking "
+"the release notes."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:50
+#, no-c-format
+msgid "Temporarily Disable Kernel Multiversion Support"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:51
+#, no-c-format
+msgid ""
+"&productname; allows to install multiple Kernel versions by enabling the "
+"respective settings in <filename>/etc/zypp/zypp.conf</filename>. Support for "
+"this feature needs to be temporarily disabled for updating to a service "
+"pack. When the update has successfully finished; multiversion support can be "
+"re-enabled again. To disable multiversion support, comment the respective "
+"lines in <filename>/etc/zypp/zypp.conf</filename>. The result should look "
+"like this:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:60
+#, no-c-format
+msgid ""
+"#multiversion = provides:multiversion(kernel)\n"
+"#multiversion.kernels = latest,running"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:61
+#, no-c-format
+msgid ""
+"To re-activate this feature after a successful update, remove the comment "
+"signs. For more information about multiversion support, refer to <xref "
+"linkend=\"cha.tuning.multikernel.enable\"/>."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:69
+#, no-c-format
+msgid "Check the Release Notes"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:70
+#, no-c-format
+msgid ""
+"In the release notes you can find additional information on what has changed "
+"since the previous release of &sle;. Verify there if your specific hardware "
+"or setup needs special considerations, which of your favorite specific "
+"software packages have changed significantly, and which precautions you "
+"should take in addition to the general recommendations of this section. The "
+"release notes also provide last-minute information and known issues that "
+"could not make it to the manual on time."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:79
+#, no-c-format
+msgid ""
+"The current version of the release notes document containing the latest "
+"information on &productname; can be read online at <link xlink:href=\"http://"
+"www.suse.com/documentation/\"></link>."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:87
+#, no-c-format
+msgid "Make a Backup"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:88
+#, no-c-format
+msgid ""
+"Before updating, copy existing configuration files to a separate medium "
+"(such as tape device, removable hard disk, etc.) to back up the data. This "
+"primarily applies to files stored in <filename>/etc</filename> and some "
+"directories and files in <filename>/var</filename> and <filename>/opt</"
+"filename>. You may also want to write the user data in <filename>/home</"
+"filename> (the <envar>HOME</envar> directories) to a backup medium. Back up "
+"this data as &rootuser;. Only &rootuser; has read permissions for all local "
+"files."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:98
+#, no-c-format
+msgid ""
+"If you have selected <guimenu>Update an Existing System</guimenu> as the "
+"installation mode in &yast;, you can choose to do a (system) backup at a "
+"later point in time. You can choose to include all modified files and files "
+"from the <filename>/etc/sysconfig</filename> directory. However, this is not "
+"a complete backup, as all the other important directories mentioned above "
+"are missing. Find the backup in the <filename>/var/adm/backup</filename> "
+"directory."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:110
+#, no-c-format
+msgid "Migrate your MySQL Database"
+msgstr ""
+
+#. Tag: remark
+#: sle_update_upgrading.xml:111
+#, no-c-format
+msgid "toms 2015-09-03: already reviewed by Ondrej and Kristýna."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:112
+#, no-c-format
+msgid ""
+"As of &sle; 12, &suse; switched from MySQL to MariaDB. Before you start any "
+"upgrade, it is highly recommended to back up your database."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:119 sle_update_upgrading.xml:224
+#, no-c-format
+msgid "To perform the database migration, do the following:"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:124
+#, no-c-format
+msgid "Log in to your &sle; 11 machine."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:129
+#, no-c-format
+msgid "Create a dump file:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:132
+#, no-c-format
+msgid ""
+"&prompt.root;<command>mysqldump</command> -u root -p --all-databases > "
+"mysql_backup.sql"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:133
+#, no-c-format
+msgid ""
+"By default, <command>mysqldump</command> does not dump the "
+"<literal>INFORMATION_SCHEMA</literal> or <literal>performance_schema</"
+"literal> database. For more details refer to <link xlink:href=\"https://dev."
+"mysql.com/doc/refman/5.5/en/mysqldump.html\"></link>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:141
+#, no-c-format
+msgid ""
+"Store your dump file, the configuration file <filename>/etc/my.cnf</"
+"filename>, and the directory <filename>/etc/mysql/</filename> for later "
+"investigation (<emphasis>NOT</emphasis> installation!) in a safe place."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:149
+#, no-c-format
+msgid ""
+"Perform your upgrade. After the upgrade, your former configuration file "
+"<filename>/etc/my.cnf</filename> is still intact. You can find the new "
+"configuration in the file <filename>/etc/my.cnf.rpmnew</filename>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:156
+#, no-c-format
+msgid ""
+"Configure your MariaDB database to your needs. Do <emphasis>NOT</emphasis> "
+"use the former configuration file and directory, but use it as a reminder "
+"and adapt it."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:163
+#, no-c-format
+msgid "Make sure you start the MariaDB server:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:166
+#, no-c-format
+msgid "&prompt.root;<command>systemctl</command> start mysql"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:167
+#, no-c-format
+msgid ""
+"If you want to start the MariaDB server on every boot, enable the service:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:171
+#, no-c-format
+msgid "&prompt.root;<command>systemctl</command> enable mysql"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:176
+#, no-c-format
+msgid "Verify that MariaDB is running properly by connecting to the database:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:179
+#, no-c-format
+msgid "&prompt.root;<command>mysql</command> -u root -p"
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:185
+#, no-c-format
+msgid "Migrate your &postgresql; Database"
+msgstr ""
+
+#. Tag: remark
+#: sle_update_upgrading.xml:186
+#, no-c-format
+msgid "toms 2015-09-09: FATE#319049"
+msgstr ""
+
+#. Tag: remark
+#: sle_update_upgrading.xml:187
+#, no-c-format
+msgid "Already reviewd by Reinhard"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:188
+#, no-c-format
+msgid ""
+"&slea;11 SP3 and &slea;12 GA get a newer version of the &postgresql; "
+"database as a maintenance update. Because of the required migration work of "
+"the database, there is no automatic upgrade process. As such, the switch "
+"from one version to another needs to be done manually."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:194
+#, no-c-format
+msgid ""
+"The migration process is conducted by the <command>pg_upgrade</command> "
+"command which is an alternative method of the classic dump and reload. In "
+"comparison with the <quote>dump &amp; reload</quote> method, "
+"<command>pg_upgrade</command> makes the migration less time-consuming."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:200
+#, no-c-format
+msgid ""
+"Each &postgresql; version stores its files in different, version-dependent "
+"directories. After the update the directories will change to:"
+msgstr ""
+
+#. Tag: term
+#: sle_update_upgrading.xml:206
+#, no-c-format
+msgid "&slea;11 SP3/SP4"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:208
+#, no-c-format
+msgid ""
+"<filename>/usr/lib/postgresql91/</filename> to <filename>/usr/lib/"
+"postgresql94/</filename>"
+msgstr ""
+
+#. Tag: term
+#: sle_update_upgrading.xml:215
+#, no-c-format
+msgid "&slea;12 GA"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:217
+#, no-c-format
+msgid ""
+"<filename>/usr/lib/postgresql93/</filename> to <filename>/usr/lib/"
+"postgresql94/</filename>"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:229
+#, no-c-format
+msgid "Make sure the following preconditions are fulfilled:"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:234
+#, no-c-format
+msgid ""
+"If not already done, upgrade any package of the old &postgresql; version to "
+"the latest release through a maintenance update."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:240
+#, no-c-format
+msgid "Create a backup of your existing database."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:245
+#, no-c-format
+msgid ""
+"Install the packages of the new &postgresql; major version. For &slea;12 "
+"this means to install <package>postgresql94-server</package> and all the "
+"packages it depends on."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:253
+#, no-c-format
+msgid ""
+"Install the package <package>postgresql94-contrib</package> which contains "
+"the command <command>pg_upgrade</command>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:260
+#, no-c-format
+msgid ""
+"Make sure you have enough free space in your &postgresql; data area, which "
+"is <filename>/var/lib/pgsql/data</filename> by default. If space is tight, "
+"try to reduce size with the following SQL command on each database (can take "
+"very long!):"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:266
+#, no-c-format
+msgid "VACUUM FULL"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:271
+#, no-c-format
+msgid "Stop the &postgresql; server:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:274
+#, no-c-format
+msgid "&prompt.root;<command>/usr/sbin/rcpostgresql</command> stop"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:277
+#, no-c-format
+msgid "Rename your old data directory:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:280
+#, no-c-format
+msgid ""
+"&prompt.root;<command>mv</command> /var/lib/pgsql/data /var/lib/pgsql/data."
+"old"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:283
+#, no-c-format
+msgid "Create a new data directory:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:286
+#, no-c-format
+msgid "&prompt.root;<command>mkdir</command> -p /var/lib/pgsql/data"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:289
+#, no-c-format
+msgid ""
+"If you have changed your configuration files in the old version, copy the "
+"files <filename>postgresql.conf</filename> <filename>pg_hba.conf</filename> "
+"to your new <filename>data</filename> directory:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:295
+#, no-c-format
+msgid ""
+"&prompt.root;<command>cp</command> /var/lib/pgsql/data.old/*.conf \\\n"
+"     /var/lib/pgsql/data"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:298
+#, no-c-format
+msgid ""
+"Initialize your new database instance either manually with <command>initdb</"
+"command> or by starting and stopping &postgresql;, which will do it "
+"automatically:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:303
+#, no-c-format
+msgid ""
+"&prompt.root;<command>/usr/sbin/rcpostgresql</command> start\n"
+"&prompt.root;<command>/usr/sbin/rcpostgresql</command> stop"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:306
+#, no-c-format
+msgid ""
+"Start the migration process and replace the <replaceable>OLD</replaceable> "
+"placeholder with the older version:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:310
+#, no-c-format
+msgid ""
+"&prompt.root;<command>pg_upgrade</command> \\\n"
+"   --old-datadir \"/var/lib/pgsql/data.old\" \\\n"
+"   --new-datadir \"/var/lib/pgsql/data\" \\\n"
+"   --old-bindir \"/usr/lib/postgresql<replaceable>OLD</replaceable>/bin/\" "
+"\\\n"
+"   --new-bindir \"/usr/lib/postgresql94/bin/\""
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:313
+#, no-c-format
+msgid "Start your new database instance:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:316
+#, no-c-format
+msgid "&prompt.root;<command>/usr/sbin/rcpostgresql</command> start"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:319
+#, no-c-format
+msgid ""
+"Check if the migration was successful. There is no general tool to automate "
+"this step. It depends on your use case how much and what you want to test."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:326
+#, no-c-format
+msgid "Remove any old &postgresql; packages and your old data directory:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:329
+#, no-c-format
+msgid ""
+"&prompt.root;<command>zypper</command> search -s postgresql<replaceable>OLD</"
+"replaceable> | xargs zypper rm -u\n"
+"&prompt.root;<command>rm</command> -rf /var/lib/pgsql/data.old"
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:335
+#, no-c-format
+msgid "Create Non-MD5 Server Certificates for Java Applications"
+msgstr ""
+
+#. Tag: remark
+#: sle_update_upgrading.xml:336
+#, no-c-format
+msgid "toms 2016-07-27: from bsc#970153, c#24"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:337
+#, no-c-format
+msgid ""
+"During the update from SP1 to SP2, MD5-based certificates were disabled as "
+"part of a security fix. If you have certificates created as MD5, recreate "
+"your certificates with the following steps:"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:345
+#, no-c-format
+msgid "Open a terminal and log in as &rootuser;."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:350
+#, no-c-format
+msgid "Create a private key:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:353
+#, no-c-format
+msgid "&prompt.root;<command>openssl</command> genrsa -out server.key 1024"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:354
+#, no-c-format
+msgid ""
+"If you want a stronger key, exchange <literal>1024</literal> with a higher "
+"number, for example, <literal>4096</literal>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:360
+#, no-c-format
+msgid "Create a certificate signing request (CSR):"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:363
+#, no-c-format
+msgid ""
+"&prompt.root;<command>openssl</command> req -new -key server.key -out server."
+"csr"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:366
+#, no-c-format
+msgid "Self-sign the certificate:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:369
+#, no-c-format
+msgid ""
+"&prompt.root;<command>openssl</command> x509 -req -days 365 -in <!--\n"
+"     -->server.csr -signkey server.key -out server.crt"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:372
+#, no-c-format
+msgid "Create the PEM file:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:375
+#, no-c-format
+msgid "&prompt.root;<command>cat</command> server.key server.crt > server.pem"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:378
+#, no-c-format
+msgid ""
+"Place the files <filename>server.crt</filename>, <filename>server.csr</"
+"filename>, <filename>server.key</filename>, and <filename>server.pem</"
+"filename> in the respective directories where the keys can be found. For "
+"Tomcat, for example, this directory is <filename>/etc/tomcat/ssl/</filename>."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:389
+#, no-c-format
+msgid "Shut Down Virtual Machine Guests"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:390
+#, no-c-format
+msgid ""
+"If your machine serves as a &vmhost; for &kvm; or &xen;, make sure to "
+"properly shut down all running &vmguest;s prior to the update. Otherwise you "
+"may not be able to access the guests after the update."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:398
+#, no-c-format
+msgid "Check the <command>clientSetup4SMT.sh</command> script on SMT clients"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:399
+#, no-c-format
+msgid ""
+"If you are migrating your client OS that is registered against an &smt; "
+"server, you need to check if the version of the <command>clientSetup4SMT.sh</"
+"command> script on your host is up to date. <command>clientSetup4SMT.sh</"
+"command> from older versions of &smt; cannot manage &smt; 12 clients. If you "
+"apply software patches regularly on your SMT server, you can always find the "
+"latest version of <command>clientSetup4SMT.sh</command> at <filename>&lt;"
+"SMT_HOSTNAME&gt;/repo/tools/clientSetup4SMT.sh</filename>."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:409
+#, no-c-format
+msgid "Disk Space"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:411
+#, no-c-format
+msgid ""
+"Software tends to <quote>grow</quote> from version to version. Therefore, "
+"take a look at the available partition space before updating. If you suspect "
+"you are running short of disk space, secure your data before increasing the "
+"available space by resizing partitions, for example. There is no general "
+"rule regarding how much space each partition should have. Space requirements "
+"depend on your particular partitioning profile and the software selected."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:421
+#, no-c-format
+msgid "Automatic Check for Enough Space in &yast;"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:422
+#, no-c-format
+msgid ""
+"During the update procedure, &yast; will check the free disk space and "
+"display a warning to the user if the installation may exceed the available "
+"amount. In that case, performing the update may lead to an "
+"<emphasis>unusable system</emphasis>! Only if you know exactly what you are "
+"doing (by testing beforehand), you can skip the warning and continue the "
+"update."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:433
+#, no-c-format
+msgid "Checking Disk Space on Non-Btrfs File Systems"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:434
+#, no-c-format
+msgid ""
+"Use the <command>df</command> command to list available disk space. For "
+"example, in <xref linkend=\"aus.update.df\"/>, the root partition is "
+"<filename>/dev/sda3</filename> (mounted as <filename>/</filename>)."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:440
+#, no-c-format
+msgid "List with <command>df -h</command>"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:441
+#, no-c-format
+msgid ""
+"Filesystem     Size  Used Avail Use% Mounted on\n"
+"/dev/sda3       74G   22G   53G  29% /\n"
+"tmpfs          506M     0  506M   0% /dev/shm\n"
+"/dev/sda5      116G  5.8G  111G   5% /home\n"
+"/dev/sda1       39G  1.6G   37G   4% /windows/C\n"
+"/dev/sda2      4.6G  2.6G  2.1G  57% /windows/D"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:442
+#, no-c-format
+msgid ""
+"Filesystem     Size  Used Avail Use% Mounted on\n"
+"/dev/sda3       74G   22G   53G  29% /\n"
+"tmpfs          506M     0  506M   0% /dev/shm\n"
+"/dev/sda5      116G  5.8G  111G   5% /home\n"
+"/dev/sda1       44G    4G   40G   9% /data"
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:447
+#, no-c-format
+msgid "Checking Disk Space on Btrfs Root File Systems"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:448
+#, no-c-format
+msgid ""
+"If you use Btrfs as root file systems on your machine, make sure there is "
+"enough free space. Getting disk space can be done with these two commands:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:452
+#, no-c-format
+msgid ""
+"&prompt.root;<command>btrfs</command> filesystem df /\n"
+"&prompt.root;<command>df</command> /"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:453
+#, no-c-format
+msgid ""
+"The results of the two commands show similar numbers of how much disk space "
+"is used. However, the problem with Btrfs and free space is that you do not "
+"know what is referenced in a snapshot and what is not; you cannot calculate "
+"how much disk space a change would need."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:459
+#, no-c-format
+msgid ""
+"In the worst case, an upgrade needs as much disk space as the current root "
+"file system (without <filename>/.snapshot</filename>). Besides any Btrfs "
+"file systems, check for free space on other file systems as well. The "
+"following recommendation has been proven:"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:467
+#, no-c-format
+msgid ""
+"For all file systems including Btrfs you need enough free disk space to "
+"download and install big RPMs. The space of old RPMs are only freed after "
+"new RPMs are installed."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:474
+#, no-c-format
+msgid ""
+"For Btrfs with snapshots, you need at minimum as much free space as your "
+"current installation takes. It is recommended to have twice as much free "
+"space as the current installation."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:479
+#, no-c-format
+msgid ""
+"If you do not have enough free space, you can try to delete old snapshots "
+"with <command>snapper</command> like this:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:483
+#, no-c-format
+msgid ""
+"&prompt.root;<command>snapper</command> list\n"
+"&prompt.root;<command>snapper</command> delete NUMBER"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:484
+#, no-c-format
+msgid ""
+"However, this may not help in all cases. Before migration, most snapshots "
+"occupy only little space."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:493
+#, no-c-format
+msgid "Supported Upgrade Paths for &slea;"
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:496
+#, no-c-format
+msgid "Cross-architecture Upgrades Are Not Supported"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:497
+#, no-c-format
+msgid ""
+"Cross-architecture upgrades, such as upgrading from a 32-bit version of "
+"&productname; to the 64-bit version, or upgrading from big endian to little "
+"endian are <emphasis>not</emphasis> supported!"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:502
+#, no-c-format
+msgid ""
+"Specifically, &slea; 11 on &ppc; (big endian) to &slea; 12 SP2 on &ppc; "
+"(new: little endian!), is <emphasis>not</emphasis> supported."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:506
+#, no-c-format
+msgid ""
+"Also, since &sle; 12 is 64-bit only, upgrades from any 32-bit &sle; 11 "
+"systems to &sle; 12 and later are <emphasis>not</emphasis> supported."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:512
+#, no-c-format
+msgid ""
+"Before you perform any migration, read <xref linkend=\"sec.update.prep\"/>."
+msgstr ""
+
+#. Tag: term
+#: sle_update_upgrading.xml:518
+#, no-c-format
+msgid "Upgrading from &sle; 10 (any Service Pack)"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:520
+#, no-c-format
+msgid ""
+"There is no supported direct migration path to &sle; 12. A fresh "
+"installation is recommended instead."
+msgstr ""
+
+#. Tag: term
+#: sle_update_upgrading.xml:527
+#, no-c-format
+msgid "Upgrading from &sle; 11 GA, SP1 or SP2"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:529
+#, no-c-format
+msgid ""
+"There is no supported direct migration path to &sle; 12. You need at least "
+"&slea; 11 SP3 before you can proceed to &slea; 12."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:533
+#, no-c-format
+msgid ""
+"If you cannot do a fresh install, you need to first update from &slea; 11 GA "
+"to SP1, then from &slea; 11 SP1 to SP2, and then from &slea; 11 SP2 to SP3. "
+"These steps are described in the <link xlink:href=\"https://www.suse.com/"
+"documentation/sles11/\">&sle; 11 Deployment Guide</link>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:540
+#, no-c-format
+msgid "Then proceed with <xref linkend=\"sec.update.sle12\"/>."
+msgstr ""
+
+#. Tag: term
+#: sle_update_upgrading.xml:546
+#, no-c-format
+msgid "Upgrading from &sle; 11 SP3 or SP4"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:548
+#, no-c-format
+msgid "Refer to <xref linkend=\"sec.update.sle12\"/> for details."
+msgstr ""
+
+#. Tag: term
+#: sle_update_upgrading.xml:554
+#, no-c-format
+msgid "Upgrading from &sle; 12 or &sle; 12 SP1 to SP2"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:556
+#, no-c-format
+msgid "Refer to <xref linkend=\"cha.update.spmigration\"/> for details."
+msgstr ""
+
+#. Tag: term
+#: sle_update_upgrading.xml:562
+#, no-c-format
+msgid "Overview of Upgrade Paths"
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:579
+#, no-c-format
+msgid "Supported Methods for Upgrading &sle;"
+msgstr ""
+
+#. Tag: remark
+#: sle_update_upgrading.xml:581
+#, no-c-format
+msgid "toms 2014-02-11: See FATEs #315969 and #313189"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:583
+#, no-c-format
+msgid ""
+"Upgrading from &sle;&nbsp;11 SP3 to &sle;&nbsp;12, &sle;&nbsp;11 SP3 to &sle;"
+"&nbsp;12 SP1, or &sle;&nbsp;11 SP4 to &sle;&nbsp;12 SP1 is supported using "
+"one of the following methods:"
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:603
+#, no-c-format
+msgid "Upgrading on IBM &zseries;"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:604
+#, no-c-format
+msgid ""
+"Upgrading a &sle; installation on &zseries; requires the <command>Upgrade=1</"
+"command> kernel parameter, for example via the parmfile. See <xref linkend="
+"\"sec.appdendix.parm\" xrefstyle=\"HeadingOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:610
+#, no-c-format
+msgid ""
+"Upgrading Manually from &slea;&nbsp;11 SP3 or SP4 to &slea; 12 SP2, Using an "
+"Installation Source"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:612
+#, no-c-format
+msgid ""
+"Before you upgrade your system, read <xref linkend=\"sec.update.prep\"/> "
+"first."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:617
+#, no-c-format
+msgid ""
+"To upgrade your system this way, you need to boot from an installation "
+"source, like you would do for a fresh installation. However, when the boot "
+"screen appears, you need to select <guimenu>Upgrade</guimenu> (instead of "
+"<guimenu>Installation</guimenu>). The installation source to boot from can "
+"be one of the following:"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:627
+#, no-c-format
+msgid ""
+"A local installation medium (like a DVD, or an ISO image on a USB mass "
+"storage device). For detailed instructions, see <xref linkend=\"sec.update."
+"sle12.manual.dvd\"/>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:634
+#, no-c-format
+msgid ""
+"A network installation source. You can either boot from the local medium and "
+"then select the respective network installation type, or boot via PXE. For "
+"detailed instructions, see <xref linkend=\"sec.update.sle12.manual.network\"/"
+">."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:644
+#, no-c-format
+msgid "Upgrading from an Installation Medium"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:645
+#, no-c-format
+msgid ""
+"The procedure below describes booting from a DVD as an example, but you can "
+"also use another local installation medium like an ISO image on a USB mass "
+"storage device. The way to select the boot method and to start up the system "
+"from the medium depends on the system architecture and on whether the "
+"machine has a traditional BIOS or UEFI. For details, see the links below."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:654
+#, no-c-format
+msgid ""
+"Manually Upgrading from &slea;&nbsp;11 SP3 or SP4 to &slea;&nbsp;12 SP2, "
+"Using a DVD"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:656
+#, no-c-format
+msgid ""
+"Insert DVD 1 of the &sle; 12 SP2 installation medium and boot your machine. "
+"A <guimenu>Welcome</guimenu> screen is displayed, followed by the boot "
+"screen."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:663
+#, no-c-format
+msgid ""
+"Select the respective boot method to start the system from the medium (see "
+"<xref linkend=\"sec.i.yast2.method\"/>)."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:669
+#, no-c-format
+msgid ""
+"Start up the system from the medium (see <xref linkend=\"sec.i.yast2.startup"
+"\"/>)."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:675 sle_update_upgrading.xml:762
+#: sle_update_upgrading.xml:801
+#, no-c-format
+msgid ""
+"Proceed with the upgrade process as described in <xref linkend=\"sec.update."
+"sle12.start.upgr.after.boot\"/>."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:684
+#, no-c-format
+msgid "Upgrading from a Network Installation Source"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:685
+#, no-c-format
+msgid ""
+"If you want to start an upgrade from a network installation source, make "
+"sure that the following requirements are met:"
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:690
+#, no-c-format
+msgid "Requirements for Upgrading from a Network Installation Source"
+msgstr ""
+
+#. Tag: term
+#: sle_update_upgrading.xml:692
+#, no-c-format
+msgid "Network Installation Source"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:694
+#, no-c-format
+msgid ""
+"A network installation source is set up according to <xref linkend=\"cha."
+"deployment.instserver\"/>."
+msgstr ""
+
+#. Tag: term
+#: sle_update_upgrading.xml:701
+#, no-c-format
+msgid "Network Connection and Network Services"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:703
+#, no-c-format
+msgid ""
+"Both the installation server and the target machine have a functioning "
+"network connection. The network must provide the following services: a name "
+"service, DHCP (optional, but needed for booting via PXE), and OpenSLP "
+"(optional)."
+msgstr ""
+
+#. Tag: term
+#: sle_update_upgrading.xml:712
+#, no-c-format
+msgid "Installation Media"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:714
+#, no-c-format
+msgid ""
+"You have a &sle; DVD 1 (or a local ISO image) at hand to boot the target "
+"system <emphasis>or</emphasis> a target system that is set up for booting "
+"via PXE according to <xref linkend=\"sec.deployment.prep_boot.pxeprep\" "
+"xrefstyle=\"HeadingOnPage\"/>. Refer to <xref linkend=\"cha.deployment."
+"remoteinst\"/> for in-depth information on starting the upgrade from a "
+"remote server."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:725
+#, no-c-format
+msgid ""
+"When upgrading from network installation source, you can either boot from "
+"the local medium and then select the respective network installation type, "
+"or boot via PXE. Select the method of your choice and proceed as described "
+"in <xref linkend=\"pro.update.sle12.manual.network.boot-from-dvd\" xrefstyle="
+"\"select:label\"/> or <xref linkend=\"pro.update.sle12.manual.network.pxe-"
+"boot\" xrefstyle=\"select:label\"/>."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:735
+#, no-c-format
+msgid ""
+"Manually Upgrading from &slea;&nbsp;11 SP3 or SP4 to &slea;&nbsp;12 SP2 via "
+"Network Installation Source&mdash;Booting from DVD"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:736
+#, no-c-format
+msgid ""
+"This procedure describes booting from a DVD as an example, but you can also "
+"use another local installation medium like an ISO image on a USB mass "
+"storage device. The way to select the boot method and to start up the system "
+"from the medium depends on the system architecture and on whether the "
+"machine has a traditional BIOS or UEFI. For details, see the links below."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:745
+#, no-c-format
+msgid ""
+"Insert DVD 1 of the &sle; 12 SP2 installation media and boot your machine. A "
+"<guimenu>Welcome</guimenu> screen is displayed, followed by the boot screen."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:752
+#, no-c-format
+msgid ""
+"Select the type of network installation source you want to use (FTP, HTTP, "
+"NFS, SMB, or SLP). Usually you get this choice by pressing <keycap>F4</"
+"keycap>, but in case your machine is equipped with UEFI instead of a "
+"traditional BIOS, you may need to manually adjust boot parameters. For "
+"details, see <xref linkend=\"sec.i.yast2.source.net\"/> in <xref linkend="
+"\"cha.inst\"/>."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:769
+#, no-c-format
+msgid ""
+"Manually Upgrading from &slea;&nbsp;11 SP3 or SP4 to &slea;&nbsp;12 SP2 via "
+"Network Installation Source&mdash;Booting via PXE"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:770
+#, no-c-format
+msgid ""
+"To perform an upgrade from a network installation source using PXE Boot, "
+"proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:775
+#, no-c-format
+msgid ""
+"Adjust the setup of your DHCP server to provide the address information "
+"needed for booting via PXE. For details, see <xref linkend=\"sec.deployment."
+"prep_boot.pxeprep\"/>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:782
+#, no-c-format
+msgid ""
+"Set up a TFTP server to hold the boot image needed for booting via PXE. Use "
+"DVD 1 of your &sle; 12 SP2 installation media for this or follow the "
+"instructions in <xref linkend=\"sec.deployment.prep_boot.tftp\"/>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:789
+#, no-c-format
+msgid "Prepare PXE Boot and Wake-on-LAN on the target machine."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:794
+#, no-c-format
+msgid ""
+"Initiate the boot of the target system and use VNC to remotely connect to "
+"the installation routine running on this machine. For more information, see "
+"<xref linkend=\"sec.deployment.remoteinst.monitor.vnc\"/>."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:810
+#, no-c-format
+msgid "Migrating Automatically from &slea; 11 SP3 or SP4 to &slea; 12 SP2"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:812
+#, no-c-format
+msgid ""
+"Before you upgrade your system, read <xref linkend=\"sec.update.prep\"/> "
+"first. To perform an automated migration, proceed as follows:"
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:818
+#, no-c-format
+msgid "Automated Migration from &sle; 11 SP3 or SP4 to &sle; 12 SP2"
+msgstr ""
+
+#. Tag: remark
+#: sle_update_upgrading.xml:819
+#, no-c-format
+msgid "toms 2014-03-19: See FATE#315037"
+msgstr ""
+
+#. Tag: remark
+#: sle_update_upgrading.xml:820
+#, no-c-format
+msgid ""
+"toms 2014-03-20: From SLE12 SP1 on, we should probably base this example on "
+"GRUB2, but not for GA."
+msgstr ""
+
+#. Tag: remark
+#: sle_update_upgrading.xml:822
+#, no-c-format
+msgid ""
+"jsrain 2015-09-02: This is still the old system; at some point of time we "
+"should switch to GRUB2, but as long as amjority of customers still runs "
+"SLE11, I would stay with legacy GRUB. Anyway, we could include both "
+"op6tions, that would be probably best solution"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:827
+#, no-c-format
+msgid ""
+"Copy the installation Kernel <filename>linux</filename> and the file "
+"<filename>initrd</filename> from <filename>/boot/x86_64/loader/</filename> "
+"from your first installation DVD to your system's <filename>/boot</filename> "
+"directory:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:833
+#, no-c-format
+msgid ""
+"<command>cp</command> -vi <replaceable>DVDROOT</replaceable>/boot/x86_64/"
+"loader/linux /boot/linux.upgrade\n"
+"<command>cp</command> -vi <replaceable>DVDROOT</replaceable>/boot/x86_64/"
+"loader/initrd /boot/initrd.upgrade"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:834
+#, no-c-format
+msgid ""
+"<replaceable>DVDROOT</replaceable> denotes the path where your system mounts "
+"the DVD, usually <filename>/run/media/$USER/$DVDNAME</filename>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:840
+#, no-c-format
+msgid ""
+"Open the GRUB legacy configuration file <filename>/boot/grub/menu.lst</"
+"filename> and add another section. For other boot loaders, edit the "
+"respective configuration file(s). Adjust device names and the "
+"<parameter>root</parameter> parameter accordingly. For example:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:847
+#, no-c-format
+msgid ""
+"title Linux Upgrade Kernel\n"
+"kernel (hd0,0)/boot/linux.upgrade root=/dev/sda1 upgrade=1 "
+"<replaceable>OPTIONAL_PARAMETERS</replaceable>\n"
+"initrd (hd0,0)/boot/initrd.upgrade"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:848
+#, no-c-format
+msgid ""
+"<replaceable>OPTIONAL_PARAMETERS</replaceable> denote additional boot "
+"parameters which you might need to boot your system and perform the upgrade. "
+"These may be kernel parameters needed for your system&mdash;check if you "
+"need to review and copy those from an existing GRUB entry. They also may be "
+"&suse; <link xlink:href=\"http://en.opensuse.org/Linuxrc\">linuxrc "
+"parameters, documented online</link>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:859
+#, no-c-format
+msgid ""
+"If the upgrade should be done automated, add the <option>autoupgrade=1</"
+"option> to the end of the <literal>kernel</literal> line in your GRUB "
+"configuration."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:871
+#, no-c-format
+msgid ""
+"Reboot your machine and select the newly added section from the boot menu "
+"(here: <emphasis>Linux Upgrade Kernel</emphasis>). You can use "
+"<command>grubonce</command> to preselect the newly created GRUB entry for an "
+"unattended automatic reboot into the newly created entry. You can also use "
+"<command>reboot</command> to initiate the reboot from the command line."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:881
+#, no-c-format
+msgid ""
+"Proceed with the usual upgrade process as described in <xref linkend=\"sec."
+"update.sle12.start.upgr.after.boot\"/>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:887
+#, no-c-format
+msgid ""
+"After the upgrade process was finished successfully, remove the installation "
+"Kernel and initrd files (<filename>/boot/linux.upgrade</filename> and "
+"<filename>/boot/initrd.upgrade</filename>). They are not needed anymore."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:897
+#, no-c-format
+msgid "Starting the Upgrade Process After Booting"
+msgstr ""
+
+#. Tag: remark
+#: sle_update_upgrading.xml:900
+#, no-c-format
+msgid ""
+"taroth 2014-11-13: argh, the following is terminology hell regarding the "
+"software strings: \"upgrade\"/\"update\" are used intermittently and without "
+"clear differentiation..."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:907
+#, no-c-format
+msgid ""
+"After you have booted (either from an installation medium or the network), "
+"select the <guimenu>Upgrade</guimenu> entry on the boot screen."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:912
+#, no-c-format
+msgid "Wrong Choice May Lead to Data Loss"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:913
+#, no-c-format
+msgid ""
+"If you select <guimenu>Installation</guimenu> instead of <guimenu>Upgrade</"
+"guimenu>, data may be lost later. You need to be extra careful to not "
+"destroy your data partitions by doing a fresh installation, for example by "
+"repartitioning the disks (which can destroy the existing partitions) or by "
+"reformatting the data partitions (which erases all data on them)."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:921
+#, no-c-format
+msgid "Make sure to select <guimenu>Upgrade</guimenu> here."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:925
+#, no-c-format
+msgid "&yast; starts the installation system."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:930
+#, no-c-format
+msgid ""
+"On the <guimenu>Welcome</guimenu> screen choose <guimenu>Language</guimenu> "
+"and <guimenu>Keyboard</guimenu> and accept the license agreement. Proceed "
+"with <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:935
+#, no-c-format
+msgid "&yast; checks your partitions for already installed &sle; systems."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:940
+#, no-c-format
+msgid ""
+"On the <guimenu>Select for Upgrade</guimenu> screen, select the partition to "
+"upgrade and click <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:944
+#, no-c-format
+msgid ""
+"&yast; mounts the selected partition and displays all repositories that have "
+"been found on the partition that you want to upgrade."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:950
+#, no-c-format
+msgid ""
+"On the <guimenu>Previously Used Repositories</guimenu> screen, adjust the "
+"status of the repositories: enable those you want to include in the upgrade "
+"process and disable any repositories that are no longer needed. Proceed with "
+"<guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:958
+#, no-c-format
+msgid ""
+"On the <guimenu>Registration</guimenu> screen, select whether to register "
+"the upgraded system now (by entering your registration data and clicking "
+"<guimenu>Next</guimenu>) or if to <guimenu>Skip Registration</guimenu>. For "
+"details on registering your system, see <xref linkend=\"sec.update."
+"registersystem\"/>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:967
+#, no-c-format
+msgid ""
+"Review the <guimenu>Installation Settings</guimenu> for the upgrade, "
+"especially the <guimenu>Update Options</guimenu>. Choose between the "
+"following options:"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:974
+#, no-c-format
+msgid ""
+"<guimenu>Only Update Installed Packages</guimenu>, in which case you might "
+"miss new features shipped with the latest &sle; version."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:980
+#, no-c-format
+msgid ""
+"<guimenu>Update with Installation of New Software and Features</guimenu>. "
+"Click <guimenu>Select Patterns</guimenu> if you want to enable or disable "
+"patterns and packages according to your wishes."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:989
+#, no-c-format
+msgid "Choice of Desktop"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:990
+#, no-c-format
+msgid ""
+"If you used KDE before upgrading to &sle; 12 (<varname>DEFAULT_WM</varname> "
+"in <filename>/etc/sysconfig/windowmanager</filename> was set to "
+"<literal>kde*</literal>), your desktop environment will automatically be "
+"replaced with &gnome; after the upgrade. By default, the KDM display manager "
+"will be replaced with GDM."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:998
+#, no-c-format
+msgid ""
+"To change the choice of desktop environment or window manager, adjust the "
+"software selection by clicking <guimenu>Select Patterns</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1005
+#, no-c-format
+msgid ""
+"If all settings are according to your wishes, start the installation and "
+"removal procedure by clicking <guimenu>Update</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1011
+#, no-c-format
+msgid ""
+"After the upgrade process was finished successfully, check for any "
+"<quote>orphaned packages</quote>. Orphaned packages are packages which "
+"belong to no active repository anymore. The following command gives you a "
+"list of these:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:1017
+#, no-c-format
+msgid "zypper packages --orphaned"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1018
+#, no-c-format
+msgid ""
+"With this list, you can decide if a package is still needed or can be "
+"uninstalled safely."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:1026
+#, no-c-format
+msgid "Updating via &susemgr;"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1028
+#, no-c-format
+msgid ""
+"&susemgr; is a server solution for providing updates, patches, and security "
+"fixes for &sle; clients. It comes with a set of tools and a Web-based user "
+"interface for management tasks. See <link xlink:href=\"https://www.suse.com/"
+"products/suse-manager/\"></link> for details."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:1037
+#, no-c-format
+msgid "Updating Registration Status After Rollback"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1039
+#, no-c-format
+msgid ""
+"When performing a service pack migration, it is necessary to change the "
+"configuration on the registration server to provide access to the new "
+"repositories. If the migration process is interrupted or reverted (via "
+"restoring from a backup or snapshot), the information on the registration "
+"server is inconsistent with the status of the system. This may lead to you "
+"being prevented from accessing update repositories or to wrong repositories "
+"being used on the client."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1049
+#, no-c-format
+msgid ""
+"When a rollback is done via Snapper, the system will notify the registration "
+"server to ensure access to the correct repositories is set up during the "
+"boot process. If the system was restored any other way or the communication "
+"with the registration server failed for any reason (for example, because the "
+"server was not accessible because of network issues), trigger the rollback "
+"on the client manually by calling:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:1058
+#, no-c-format
+msgid "<command>snapper</command> rollback"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1060
+#, no-c-format
+msgid ""
+"We suggest always checking that the correct repositories are set up on the "
+"system, especially after refreshing the service using"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:1065
+#, no-c-format
+msgid "<command>zypper</command> ref -s"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1067
+#, no-c-format
+msgid ""
+"This functionality is available in the <package>rollback-helper</package> "
+"package."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:1076
+#, no-c-format
+msgid "Registering Your System"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1078
+#, no-c-format
+msgid ""
+"If you skipped the registration step during the installation, you can "
+"register your system at any time using the <guimenu>Product Registration</"
+"guimenu> module in &yast;."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1084
+#, no-c-format
+msgid "Registering your systems has these advantages:"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1090
+#, no-c-format
+msgid "Getting support"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1095
+#, no-c-format
+msgid "Getting security updates and bug fixes"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1100
+#, no-c-format
+msgid "Access to &scc;"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1108
+#, no-c-format
+msgid ""
+"Start &yast; and select <menuchoice> <guimenu>Software</guimenu> "
+"<guimenu>Product Registration</guimenu> </menuchoice> to open the "
+"<guimenu>Registration</guimenu> dialog."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1115
+#, no-c-format
+msgid ""
+"Provide the <guimenu>E-mail</guimenu> address associated with the &suse; "
+"account you or your organization uses to manage subscriptions. In case you "
+"do not have a SUSE account yet, go to the &scc; home page (<link xlink:show="
+"\"new\" xlink:href=\"&sccurl;\"></link>) to create one."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1123
+#, no-c-format
+msgid ""
+"Enter the <guimenu>Registration Code</guimenu> you received with your copy "
+"of &productname;."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1129
+#, no-c-format
+msgid ""
+"Proceed with <guimenu>Next</guimenu> to start the registration process. If "
+"one or more local registration servers are available on your network, you "
+"can choose one of them from a list. Alternatively, choose <guimenu>Cancel</"
+"guimenu> to ignore the local registration servers and register with the "
+"default &suse; registration server."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1136
+#, no-c-format
+msgid ""
+"During the registration, the online update repositories will be added to "
+"your upgrade setup. When finished, you can choose whether to install the "
+"latest available package versions from the update repositories. This "
+"provides a clean upgrade path for all packages and ensures that "
+"&productname; is upgraded with the latest security updates available. If you "
+"choose <guimenu>No</guimenu>, all packages will be installed from the "
+"installation media. Proceed with <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1145
+#, no-c-format
+msgid ""
+"After successful registration, &yast; lists extensions, add-ons, and modules "
+"that are available for your system. To select and install them, proceed with "
+"<xref linkend=\"sec.add-ons.extensions\"/>."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:1154
+#, no-c-format
+msgid "Retaining Kernel Packages"
+msgstr ""
+
+#. Tag: remark
+#: sle_update_upgrading.xml:1156
+#, no-c-format
+msgid "toms 2015-08-26: bsc#753809"
+msgstr ""
+
+#. Tag: remark
+#: sle_update_upgrading.xml:1158
+#, no-c-format
+msgid ""
+"toms 2015-08-26: some parts are taken (\"stolen\") from the wiki at https://"
+"en.opensuse.org/SDB:Keep_multiple_kernel_versions and adapted"
+msgstr ""
+
+#. Tag: primary
+#: sle_update_upgrading.xml:1163
+#, no-c-format
+msgid "multiversion kernels"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1165
+#, no-c-format
+msgid ""
+"When installing a new kernel with &yast; or Zypper, &sle; preserves the last "
+"two kernels and the running one. Usually this is sufficient."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1170
+#, no-c-format
+msgid ""
+"However, there may be situations where you need to preserve more kernel "
+"versions, for example, for testing purposes. To enable this, &sle; supports "
+"the <emphasis>multiversion kernel feature</emphasis>. By enabling and "
+"configuring this feature the default behavior can be changed and configured "
+"to:"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1180
+#, no-c-format
+msgid ""
+"delete an old kernel only after the system has been rebooted successfully "
+"with the new kernel"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1186
+#, no-c-format
+msgid "keep a specified number of older kernels as fallback"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1191
+#, no-c-format
+msgid "keep a specific kernel version"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1197
+#, no-c-format
+msgid ""
+"After the successful reboot, a script will compare the list of installed "
+"kernels with the settings in <filename>/etc/zypp/zypp.conf</filename> and "
+"delete those kernels that are no longer needed."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:1204
+#, no-c-format
+msgid "Enabling the Multiversion Kernel Feature"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1205
+#, no-c-format
+msgid ""
+"The default behavior is defined in the configuration file <filename>/etc/"
+"zypp/zypp.conf</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:1209
+#, no-c-format
+msgid ""
+"&prompt.root;<command>grep</command> ^multiversion /etc/zypp/zypp.conf\n"
+"multiversion = provides:multiversion(kernel)\n"
+"multiversion.kernels = latest,latest-1,running"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1210
+#, no-c-format
+msgid ""
+"Remove any hash mark (#) before the line <literal>multiversion</literal> "
+"above to enable this feature (which should already be the case). The second "
+"line is used to configure <emphasis>which</emphasis> kernels need to be "
+"preserved. You need to enable both, otherwise the system will keep "
+"<emphasis>all</emphasis> kernels and it will fill up your hard disk."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1217
+#, no-c-format
+msgid ""
+"The <literal>multiversion.kernels</literal> line can contain several "
+"keywords in different combinations and order:"
+msgstr ""
+
+#. Tag: option
+#: sle_update_upgrading.xml:1223
+#, no-c-format
+msgid "latest"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1226
+#, no-c-format
+msgid "Keep kernel with the highest version number"
+msgstr ""
+
+#. Tag: option
+#: sle_update_upgrading.xml:1232
+#, no-c-format
+msgid "latest-<replaceable>N</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1235
+#, no-c-format
+msgid ""
+"Keep kernel with the <replaceable>N</replaceable>th highest version number; "
+"<replaceable>N</replaceable> is a number starting from 1"
+msgstr ""
+
+#. Tag: option
+#: sle_update_upgrading.xml:1242
+#, no-c-format
+msgid "running"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1245
+#, no-c-format
+msgid "Keep the current running kernel"
+msgstr ""
+
+#. Tag: option
+#: sle_update_upgrading.xml:1251
+#, no-c-format
+msgid "oldest"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1254
+#, no-c-format
+msgid ""
+"Keep kernel with the lowest version number (the kernel on the released "
+"product)"
+msgstr ""
+
+#. Tag: option
+#: sle_update_upgrading.xml:1261
+#, no-c-format
+msgid "oldest-<replaceable>N</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1264
+#, no-c-format
+msgid ""
+"Keep kernel with the <replaceable>N</replaceable>th lowest version number"
+msgstr ""
+
+#. Tag: option
+#: sle_update_upgrading.xml:1271
+#, no-c-format
+msgid "3.12.28-4.6"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1274
+#, no-c-format
+msgid "Keep this exact kernel version"
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:1283
+#, no-c-format
+msgid "Use Case: Deleting an Old Kernel After Reboot Only"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1284
+#, no-c-format
+msgid ""
+"You want to make sure that an old kernel will only be deleted after the "
+"system has rebooted successfully of the new kernel."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1288 sle_update_upgrading.xml:1309
+#: sle_update_upgrading.xml:1329
+#, no-c-format
+msgid "Change the following line in <filename>/etc/zypp/zypp.conf</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:1291
+#, no-c-format
+msgid "multiversion.kernels = latest,running"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1292
+#, no-c-format
+msgid ""
+"The previous parameters tell the system to keep the latest kernel and the "
+"running one only if they differ."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:1299
+#, no-c-format
+msgid "Use Case: Keeping Older Kernels as Fallback"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1300
+#, no-c-format
+msgid ""
+"You want to keep one or more kernel versions to have one or more "
+"<quote>spare</quote> kernels."
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1304
+#, no-c-format
+msgid ""
+"This use case can be useful if you need kernels for testing reasons. In case "
+"something goes wrong, for example, your machine does not boot, you still can "
+"use one or more kernel versions which are known to be good."
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:1312
+#, no-c-format
+msgid "multiversion.kernels = latest,latest-1,latest-2,running"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1313
+#, no-c-format
+msgid ""
+"When you reboot your system after the installation of a new kernel, the "
+"system will keep three kernels: the new and running kernel (configured as "
+"<literal>latest,running</literal>), the previous kernel version of the new "
+"kernel (configured as <literal>latest-1</literal>), and the predecessor of "
+"the previous kernel version (configured as <literal>latest-2</literal>)."
+msgstr ""
+
+#. Tag: title
+#: sle_update_upgrading.xml:1323
+#, no-c-format
+msgid "Use Case: Keep a Specific Kernel Version"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1324
+#, no-c-format
+msgid ""
+"You make regular system updates and install new kernel versions. However, "
+"you are also compiling your own kernel version for various reasons and want "
+"to make sure that the system will keep it."
+msgstr ""
+
+#. Tag: screen
+#: sle_update_upgrading.xml:1332
+#, no-c-format
+msgid "multiversion.kernels = latest,3.12.28-4.20,running"
+msgstr ""
+
+#. Tag: para
+#: sle_update_upgrading.xml:1333
+#, no-c-format
+msgid ""
+"When you reboot your system after the installation of a new kernel, the "
+"system will keep two kernels: the new and running kernel (configured as "
+"<literal>latest,running</literal>) and your self-compiled kernel (configured "
+"as <literal>3.12.28-4.20</literal>)."
+msgstr ""

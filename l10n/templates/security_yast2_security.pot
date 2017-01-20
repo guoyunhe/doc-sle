@@ -1,0 +1,433 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: security_yast2_security.xml:9
+#, no-c-format
+msgid "Configuring Security Settings with &yast;"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:16
+#, no-c-format
+msgid ""
+"The &yast; module <guimenu>Security Center and Hardening</guimenu> offers a "
+"central clearinghouse to configure security-related settings for "
+"&productname;. Use it to configure security aspects such as settings for the "
+"login procedure and for password creation, for boot permissions, user "
+"creation or for default file permissions. Launch it from the &yast; control "
+"center by <menuchoice> <guimenu>Security and Users</guimenu> "
+"<guimenu>Security Center and Hardening</guimenu> </menuchoice>. The "
+"<guimenu>Security Center</guimenu> dialog always starts with the "
+"<guimenu>Security Overview</guimenu>, and other configuration dialogs are "
+"available from the right pane."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:32
+#, no-c-format
+msgid "Security Overview"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:34
+#, no-c-format
+msgid ""
+"The <guimenu>Security Overview</guimenu> displays a comprehensive list of "
+"the most important security settings for your system. The security status of "
+"each entry in the list is clearly visible. A green check mark indicates a "
+"secure setting while a red cross indicates an entry as being insecure. Click "
+"<guimenu>Help</guimenu> to open an overview of the setting and information "
+"on how to make it secure. To change a setting, click the corresponding link "
+"in the Status column. Depending on the setting, the following entries are "
+"available:"
+msgstr ""
+
+#. Tag: term
+#: security_yast2_security.xml:47
+#, no-c-format
+msgid "<guimenu>Enabled</guimenu>/<guimenu>Disabled</guimenu>"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:50
+#, no-c-format
+msgid ""
+"Click this entry to toggle the status of the setting to either enabled or "
+"disabled."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:57
+#, no-c-format
+msgid "Configure"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:60
+#, no-c-format
+msgid ""
+"Click this entry to launch another &yast; module for configuration. You will "
+"return to the Security Overview when leaving the module."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:67
+#, no-c-format
+msgid "Unknown"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:70
+#, no-c-format
+msgid ""
+"A setting's status is set to unknown when the associated service is not "
+"installed. Such a setting does not represent a potential security risk."
+msgstr ""
+
+#. Tag: title
+#: security_yast2_security.xml:80
+#, no-c-format
+msgid "&yast; Security Center and Hardening: Security Overview"
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:92
+#, no-c-format
+msgid "Predefined Security Configurations"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:94
+#, no-c-format
+msgid ""
+"&productname; comes with three <guimenu>Predefined Security Configurations</"
+"guimenu>. These configurations affect all the settings available in the "
+"<guimenu>Security Center</guimenu> module. Each configuration can be "
+"modified to your needs using the dialogs available from the right pane "
+"changing its state to <guimenu>Custom Settings</guimenu>:"
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:105
+#, no-c-format
+msgid "Workstation"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:108
+#, no-c-format
+msgid ""
+"A configuration for a workstation with any kind of network connection "
+"(including a connection to the Internet)."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:115
+#, no-c-format
+msgid "Roaming Device"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:118
+#, no-c-format
+msgid ""
+"This setting is designed for a laptop or tablet that connects to different "
+"networks."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:125
+#, no-c-format
+msgid "Network Server"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:128
+#, no-c-format
+msgid ""
+"Security settings designed for a machine providing network services such as "
+"a Web server, file server, name server, etc. This set provides the most "
+"secure configuration of the predefined settings."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:136
+#, no-c-format
+msgid "Custom Settings"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:139
+#, no-c-format
+msgid ""
+"A pre-selected <guimenu>Custom Settings</guimenu> (when opening the "
+"<guimenu>Predefined Security Configurations</guimenu> dialog) indicates that "
+"one of the predefined sets has been modified. Actively choosing this option "
+"does not change the current configuration&mdash;you will need to change it "
+"using the <guimenu>Security Overview</guimenu>."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:152
+#, no-c-format
+msgid "Password Settings"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:154
+#, no-c-format
+msgid ""
+"Passwords that are easy to guess are a major security issue. The "
+"<guimenu>Password Settings</guimenu> dialog provides the means to ensure "
+"that only secure passwords can be used."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:162
+#, no-c-format
+msgid "Check New Passwords"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:165
+#, no-c-format
+msgid ""
+"By activating this option, a warning will be issued if new passwords appear "
+"in a dictionary, or if they are proper names (proper nouns)."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:172
+#, no-c-format
+msgid "Minimum Acceptable Password Length"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:175
+#, no-c-format
+msgid ""
+"If the user chooses a password with a length shorter than specified here, a "
+"warning will be issued."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:196
+#, no-c-format
+msgid "Number of Passwords to Remember"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:199
+#, no-c-format
+msgid ""
+"When password expiration is activated (via <guimenu>Password Age</guimenu>), "
+"this setting stores the given number of a user's previous passwords, "
+"preventing their reuse."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:207
+#, no-c-format
+msgid "Password Encryption Method"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:210
+#, no-c-format
+msgid ""
+"Choose a password encryption algorithm. Normally there is no need to change "
+"the default (Blowfish)."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:217
+#, no-c-format
+msgid "Password Age"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:220
+#, no-c-format
+msgid ""
+"Activate password expiration by specifying a minimum and a maximum time "
+"limit (in days). By setting the minimum age to a value greater than "
+"<literal>0</literal> days, you can prevent users from immediately changing "
+"their passwords again (and in doing so circumventing the password "
+"expiration). Use the values <literal>0</literal> and <literal>99999</"
+"literal> to deactivate password expiration."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:231
+#, no-c-format
+msgid "Days Before Password Expires Warning"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:234
+#, no-c-format
+msgid ""
+"When a password expires, the user receives a warning in advance. Specify the "
+"number of days prior to the expiration date that the warning should be "
+"issued."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:244
+#, no-c-format
+msgid "Boot Settings"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:246
+#, no-c-format
+msgid ""
+"Configure which users can shut down the machine via the graphical login "
+"manager in this dialog. You can also specify how <keycombo> <keycap function="
+"\"control\"></keycap> <keycap function=\"alt\"></keycap> <keycap function="
+"\"delete\"></keycap> </keycombo> will be interpreted and who can hibernate "
+"the system."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:256
+#, no-c-format
+msgid "Login Settings"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:258
+#, no-c-format
+msgid "This dialog lets you configure security-related login settings:"
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:264
+#, no-c-format
+msgid "Delay after Incorrect Login Attempt"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:267
+#, no-c-format
+msgid ""
+"To make it difficult to guess a user's password by repeatedly logging in, it "
+"is recommended to delay the display of the login prompt that follows an "
+"incorrect login. Specify the value in seconds. Make sure that users who have "
+"mistyped their passwords do not need to wait too long."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:299
+#, no-c-format
+msgid "Allow Remote Graphical Login"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:302
+#, no-c-format
+msgid ""
+"When checked, the graphical login manager (GDM) can be accessed from the "
+"network. This is a potential security risk."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:311
+#, no-c-format
+msgid "User Addition"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:313
+#, no-c-format
+msgid ""
+"Set minimum and maximum values for user and group IDs. These default "
+"settings would rarely need to be changed."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:319
+#, no-c-format
+msgid "Miscellaneous Settings"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:321
+#, no-c-format
+msgid ""
+"Other security settings that do not fit the above-mentioned categories are "
+"listed here:"
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:328
+#, no-c-format
+msgid "File Permissions"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:331
+#, no-c-format
+msgid ""
+"&productname; comes with three predefined sets of file permissions for "
+"system files. These permission sets define whether a regular user may read "
+"log files or start certain programs. <guimenu>Easy</guimenu> file "
+"permissions are suitable for stand-alone machines. These settings allow "
+"regular users to, for example, read most system files. See the file "
+"<filename>/etc/permissions.easy</filename> for the complete configuration. "
+"The <guimenu>Secure</guimenu> file permissions are designed for multiuser "
+"machines with network access. A thorough explanation of these settings can "
+"be found in <filename>/etc/permissions.secure</filename>. The "
+"<guimenu>Paranoid</guimenu> settings are the most restrictive ones and "
+"should be used with care. See <filename>/etc/permissions.paranoid</filename> "
+"for more information."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:349
+#, no-c-format
+msgid "User Launching updatedb"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:352
+#, no-c-format
+msgid ""
+"The program <command>updatedb</command> scans the system and creates a "
+"database of all file locations which can be queried with the command "
+"<command>locate</command>. When <command>updatedb</command> is run as user "
+"nobody, only world-readable files will be added to the database. When run as "
+"user &rootuser;, almost all files (except the ones root is not allowed to "
+"read) will be added."
+msgstr ""
+
+#. Tag: guimenu
+#: security_yast2_security.xml:386
+#, no-c-format
+msgid "Enable Magic SysRq Keys"
+msgstr ""
+
+#. Tag: para
+#: security_yast2_security.xml:389
+#, no-c-format
+msgid ""
+"The magic SysRq key is a key combination that enables you to have some "
+"control over the system even when it has crashed. The complete documentation "
+"can be found at <filename>/usr/src/linux/Documentation/sysrq.txt</filename> "
+"(requires installation of the <systemitem>kernel-source</systemitem> "
+"package)."
+msgstr ""

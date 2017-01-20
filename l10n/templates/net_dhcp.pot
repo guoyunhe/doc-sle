@@ -1,0 +1,925 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: net_dhcp.xml:10
+#, no-c-format
+msgid "<title>DHCP</title>"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:13
+#, no-c-format
+msgid ""
+"The purpose of the <emphasis>Dynamic Host Configuration Protocol</emphasis> "
+"(DHCP) is to assign network settings centrally (from a server) rather than "
+"configuring them locally on every workstation. A host configured to use DHCP "
+"does not have control over its own static address. It is enabled to "
+"configure itself completely and automatically according to directions from "
+"the server. If you use the &nm; on the client side, you do not need to "
+"configure the client. This is useful if you have changing environments and "
+"only one interface active at a time. Never use &nm; on a machine that runs a "
+"DHCP server."
+msgstr ""
+
+#. Tag: dm:docmanager
+#: net_dhcp.xml:25
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: net_dhcp.xml:31 net_dhcp.xml:91 net_dhcp.xml:441 net_dhcp.xml:480
+#: net_dhcp.xml:484 net_dhcp.xml:603
+#, no-c-format
+msgid "<primary>DHCP</primary>"
+msgstr ""
+
+#. Tag: primary
+#: net_dhcp.xml:32
+#, no-c-format
+msgid "networks"
+msgstr ""
+
+#. Tag: secondary
+#: net_dhcp.xml:33 net_dhcp.xml:89
+#, no-c-format
+msgid "<secondary>DHCP</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: net_dhcp.xml:34
+#, no-c-format
+msgid "IP addresses"
+msgstr ""
+
+#. Tag: secondary
+#: net_dhcp.xml:35
+#, no-c-format
+msgid "dynamic assignment"
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:37
+#, no-c-format
+msgid "IBM &zseries;: DHCP Support"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:38
+#, no-c-format
+msgid ""
+"On IBM &zseries; platforms, DHCP only works on interfaces using the OSA and "
+"OSA Express network cards. These cards are the only ones with a MAC, which "
+"is required for the DHCP autoconfiguration features."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:44
+#, no-c-format
+msgid ""
+"One way to configure a DHCP server is to identify each client using the "
+"hardware address of its network card (which should be fixed in most cases), "
+"then supply that client with identical settings each time it connects to the "
+"server. DHCP can also be configured to assign addresses to each relevant "
+"client dynamically from an address pool set up for this purpose. In the "
+"latter case, the DHCP server tries to assign the same address to the client "
+"each time it receives a request, even over extended periods. This works only "
+"if the network does not have more clients than addresses."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:54
+#, no-c-format
+msgid ""
+"DHCP makes life easier for system administrators. Any changes, even bigger "
+"ones, related to addresses and the network configuration in general can be "
+"implemented centrally by editing the server's configuration file. This is "
+"much more convenient than reconfiguring numerous workstations. It is also "
+"much easier to integrate machines, particularly new machines, into the "
+"network, because they can be given an IP address from the pool. Retrieving "
+"the appropriate network settings from a DHCP server is especially useful in "
+"case of laptops regularly used in different networks."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:64
+#, no-c-format
+msgid ""
+"In this chapter, the DHCP server will run in the same subnet as the "
+"workstations, <systemitem class=\"ipaddress\">&subnetIImask;</systemitem> "
+"with <systemitem class=\"ipaddress\">&routerintipII;</systemitem> as "
+"gateway. It has the fixed IP address <systemitem class=\"ipaddress\">&dhcpip;"
+"</systemitem> and serves two address ranges, <systemitem class=\"ipaddress"
+"\">&subnetII;.10</systemitem> to <systemitem class=\"ipaddress"
+"\">&subnetII;.20</systemitem> and <systemitem class=\"ipaddress"
+"\">&subnetII;.100</systemitem> to <systemitem class=\"ipaddress"
+"\">&subnetII;.200</systemitem>."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:75
+#, no-c-format
+msgid ""
+"A DHCP server supplies not only the IP address and the netmask, but also the "
+"host name, domain name, gateway, and name server addresses for the client to "
+"use. In addition to that, DHCP allows several other parameters to be "
+"configured in a centralized way, for example, a time server from which "
+"clients may poll the current time or even a print server."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:83
+#, no-c-format
+msgid "Configuring a DHCP Server with &yast;"
+msgstr ""
+
+#. Tag: primary
+#: net_dhcp.xml:87
+#, no-c-format
+msgid "&yast;"
+msgstr ""
+
+#. Tag: secondary
+#: net_dhcp.xml:93
+#, no-c-format
+msgid "configuring with &yast;"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:95
+#, no-c-format
+msgid ""
+"To install a DHCP server, start &yast; and select "
+"<menuchoice><guimenu>Software</guimenu> <guimenu>Software Management</"
+"guimenu></menuchoice>. Choose <menuchoice><guimenu>Filter</guimenu> "
+"<guimenu>Patterns</guimenu></menuchoice> and select <guimenu>DHCP and DNS "
+"Server</guimenu>. Confirm the installation of the dependent packages to "
+"finish the installation process."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:106
+#, no-c-format
+msgid "LDAP Support"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:107
+#, no-c-format
+msgid ""
+"The &yast; DHCP module can be set up to store the server configuration "
+"locally (on the host that runs the DHCP server) or to have its configuration "
+"data managed by an LDAP server. If you want to use LDAP, set up your LDAP "
+"environment before configuring the DHCP server."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:113
+#, no-c-format
+msgid ""
+"For more information about LDAP, see <xref linkend=\"cha.security.ldap\"/>."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:118
+#, no-c-format
+msgid ""
+"The &yast; DHCP module (<systemitem>yast2-dhcp-server</systemitem>) allows "
+"you to set up your own DHCP server for the local network. The module can run "
+"in wizard mode or expert configuration mode."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:125
+#, no-c-format
+msgid "Initial Configuration (Wizard)"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:126
+#, no-c-format
+msgid ""
+"When the module is started for the first time, a wizard starts, prompting "
+"you to make a few basic decisions concerning server administration. "
+"Completing this initial setup produces a very basic server configuration "
+"that should function in its essential aspects. The expert mode can be used "
+"to deal with more advanced configuration tasks. Proceed as follows:"
+msgstr ""
+
+#. Tag: remark
+#: net_dhcp.xml:133
+#, no-c-format
+msgid ""
+"It has changed in the meantime. DHCP Server Configuration (\"expert mode\") "
+"now allows more detailed configuration. 2010-06-22, ke."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:139
+#, no-c-format
+msgid ""
+"Select the interface from the list to which the DHCP server should listen "
+"and click <guimenu>Select</guimenu>. After this, select <guimenu>Open "
+"Firewall for Selected Interfaces</guimenu> to open the firewall for this "
+"interface, and click <guimenu>Next</guimenu>. See <xref linkend=\"fig.yast2."
+"dhcp.wiz1\"/>."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:147
+#, no-c-format
+msgid "DHCP Server: Card Selection"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:159
+#, no-c-format
+msgid ""
+"Use the check box to determine whether your DHCP settings should be "
+"automatically stored by an LDAP server. In the text boxes, provide the "
+"network specifics for all clients the DHCP server should manage. These "
+"specifics are the domain name, address of a time server, addresses of the "
+"primary and secondary name server, addresses of a print and a WINS server "
+"(for a mixed network with both Windows and Linux clients), gateway address, "
+"and lease time. See <xref linkend=\"fig.yast2.dhcp.wiz2\"/>."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:169
+#, no-c-format
+msgid "DHCP Server: Global Settings"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:181
+#, no-c-format
+msgid ""
+"Configure how dynamic IP addresses should be assigned to clients. To do so, "
+"specify an IP range from which the server can assign addresses to DHCP "
+"clients. All these addresses must be covered by the same netmask. Also "
+"specify the lease time during which a client may keep its IP address without "
+"needing to request an extension of the lease. Optionally, specify the "
+"maximum lease time&mdash;the period during which the server reserves an IP "
+"address for a particular client. See <xref linkend=\"fig.yast2.dhcp.wiz3\"/>."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:192
+#, no-c-format
+msgid "DHCP Server: Dynamic DHCP"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:204
+#, no-c-format
+msgid ""
+"Define how the DHCP server should be started. Specify whether to start the "
+"DHCP server automatically when the system is booted or manually when needed "
+"(for example, for testing purposes). Click <guimenu>Finish</guimenu> to "
+"complete the configuration of the server. See <xref linkend=\"fig.yast2.dhcp."
+"start\"/>."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:216
+#, no-c-format
+msgid "DHCP Server: Start-Up"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:228
+#, no-c-format
+msgid ""
+"Instead of using dynamic DHCP in the way described in the preceding steps, "
+"you can also configure the server to assign addresses in quasi-static "
+"fashion. Use the text boxes provided in the lower part to specify a list of "
+"the clients to manage in this way. Specifically, provide the <guimenu>Name</"
+"guimenu> and the <guimenu>IP Address</guimenu> to give to such a client, the "
+"<guimenu>Hardware Address</guimenu>, and the <guimenu>Network Type</guimenu> "
+"(token ring or Ethernet). Modify the list of clients, which is shown in the "
+"upper part with <guimenu>Add</guimenu>, <guimenu>Edit</guimenu>, and "
+"<guimenu>Delete from List</guimenu>. See <xref linkend=\"fig.yast2.dhcp."
+"statdhcp\"/>."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:241
+#, no-c-format
+msgid "DHCP Server: Host Management"
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:256
+#, no-c-format
+msgid "DHCP Server Configuration (Expert)"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:257
+#, no-c-format
+msgid ""
+"In addition to the configuration method discussed earlier, there is also an "
+"expert configuration mode that allows you to change the DHCP server setup in "
+"every detail. Start the expert configuration by clicking <guimenu>DHCP "
+"Server Expert Configuration</guimenu> in the <guimenu>Start-Up</guimenu> "
+"dialog (see <xref linkend=\"fig.yast2.dhcp.start\"/>)."
+msgstr ""
+
+#. Tag: term
+#: net_dhcp.xml:266
+#, no-c-format
+msgid "Chroot Environment and Declarations"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:268
+#, no-c-format
+msgid ""
+"In this first dialog, make the existing configuration editable by selecting "
+"<guimenu>Start DHCP Server</guimenu>. An important feature of the behavior "
+"of the DHCP server is its ability to run in a chroot environment or chroot "
+"jail, to secure the server host. If the DHCP server should ever be "
+"compromised by an outside attack, the attacker will still be behind bars in "
+"the chroot jail, which prevents him from touching the rest of the system. "
+"The lower part of the dialog displays a tree view with the declarations that "
+"have already been defined. Modify these with <guimenu>Add</guimenu>, "
+"<guimenu>Delete</guimenu>, and <guimenu>Edit</guimenu>. Selecting "
+"<guimenu>Advanced</guimenu> takes you to additional expert dialogs. See "
+"<xref linkend=\"fig.yast2.dhcp.chroot\"/>. After selecting <guimenu>Add</"
+"guimenu>, define the type of declaration to add. With <guimenu>Advanced</"
+"guimenu>, view the log file of the server, configure TSIG key management, "
+"and adjust the configuration of the firewall according to the setup of the "
+"DHCP server."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:287
+#, no-c-format
+msgid "DHCP Server: Chroot Jail and Declarations"
+msgstr ""
+
+#. Tag: term
+#: net_dhcp.xml:300
+#, no-c-format
+msgid "Selecting the Declaration Type"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:302
+#, no-c-format
+msgid ""
+"The <guimenu>Global Options</guimenu> of the DHCP server are made up of "
+"several declarations. This dialog lets you set the declaration types "
+"<guimenu>Subnet</guimenu>, <guimenu>Host</guimenu>, <guimenu>Shared Network</"
+"guimenu>, <guimenu>Group</guimenu>, <guimenu>Pool of Addresses</guimenu>, "
+"and <guimenu>Class</guimenu>. This example shows the selection of a new "
+"subnet (see <xref linkend=\"fig.yast2.dhcp.newdec\"/>)."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:312
+#, no-c-format
+msgid "DHCP Server: Selecting a Declaration Type"
+msgstr ""
+
+#. Tag: term
+#: net_dhcp.xml:325
+#, no-c-format
+msgid "Subnet Configuration"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:327
+#, no-c-format
+msgid ""
+"This dialog allows you specify a new subnet with its IP address and netmask. "
+"In the middle part of the dialog, modify the DHCP server start options for "
+"the selected subnet using <guimenu>Add</guimenu>, <guimenu>Edit</guimenu>, "
+"and <guimenu>Delete</guimenu>. To set up dynamic DNS for the subnet, select "
+"<guimenu>Dynamic DNS</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:335
+#, no-c-format
+msgid "DHCP Server: Configuring Subnets"
+msgstr ""
+
+#. Tag: term
+#: net_dhcp.xml:348
+#, no-c-format
+msgid "TSIG Key Management"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:350
+#, no-c-format
+msgid ""
+"If you chose to configure dynamic DNS in the previous dialog, you can now "
+"configure the key management for a secure zone transfer. Selecting "
+"<guimenu>OK</guimenu> takes you to another dialog in which to configure the "
+"interface for dynamic DNS (see <xref linkend=\"fig.yast2.dhcp.dyndns\"/>)."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:358
+#, no-c-format
+msgid "DHCP Server: TSIG Configuration"
+msgstr ""
+
+#. Tag: term
+#: net_dhcp.xml:371
+#, no-c-format
+msgid "Dynamic DNS: Interface Configuration"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:373
+#, no-c-format
+msgid ""
+"You can now activate dynamic DNS for the subnet by selecting <guimenu>Enable "
+"Dynamic DNS for This Subnet</guimenu>. After doing so, use the drop-down box "
+"to activate the TSIG keys for forward and reverse zones, making sure that "
+"the keys are the same for the DNS and the DHCP server. With <guimenu>Update "
+"Global Dynamic DNS Settings</guimenu>, enable the automatic update and "
+"adjustment of the global DHCP server settings according to the dynamic DNS "
+"environment. Finally, define which forward and reverse zones should be "
+"updated per dynamic DNS, specifying the name of the primary name server for "
+"each of the two zones. Selecting <guimenu>OK</guimenu> returns to the subnet "
+"configuration dialog (see <xref linkend=\"fig.yast2.dhcp.sub\"/>). Selecting "
+"<guimenu>OK</guimenu> again returns to the original expert configuration "
+"dialog."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:388
+#, no-c-format
+msgid "DHCP Server: Interface Configuration for Dynamic DNS"
+msgstr ""
+
+#. Tag: term
+#: net_dhcp.xml:401
+#, no-c-format
+msgid "Network Interface Configuration"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:403
+#, no-c-format
+msgid ""
+"To define the interfaces the DHCP server should listen to and to adjust the "
+"firewall configuration, select <menuchoice> <guimenu>Advanced</guimenu> "
+"<guimenu>Interface Configuration</guimenu> </menuchoice> from the expert "
+"configuration dialog. From the list of interfaces displayed, select one or "
+"more that should be attended by the DHCP server. If clients in all subnets "
+"need to be able to communicate with the server and the server host also runs "
+"a firewall, adjust the firewall accordingly. To do so, select <guimenu>Adapt "
+"Firewall Settings</guimenu>. &yast; then adjusts the rules of &susefirewall; "
+"to the new conditions (see <xref linkend=\"fig.yast2.dhcp.fire\"/>), after "
+"which you can return to the original dialog by selecting <guimenu>OK</"
+"guimenu>."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:418
+#, no-c-format
+msgid "DHCP Server: Network Interface and Firewall"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:431
+#, no-c-format
+msgid ""
+"After completing all configuration steps, close the dialog with <guimenu>OK</"
+"guimenu>. The server is now started with its new configuration."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:439
+#, no-c-format
+msgid "DHCP Software Packages"
+msgstr ""
+
+#. Tag: secondary
+#: net_dhcp.xml:443
+#, no-c-format
+msgid "packages"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:445
+#, no-c-format
+msgid ""
+"Both the DHCP server and the DHCP clients are available for &sls;. The DHCP "
+"server available is <systemitem class=\"daemon\">dhcpd</systemitem> "
+"(published by the Internet Systems Consortium). On the client side, there is "
+"<systemitem>dhcp-client</systemitem> (also from ISC) and tools coming with "
+"the <systemitem>wicked</systemitem> package."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:454
+#, no-c-format
+msgid ""
+"By default, the <systemitem>wicked</systemitem> tools are installed with the "
+"services <systemitem>wickedd-dhcp4</systemitem> and <systemitem>wickedd-"
+"dhcp6</systemitem>. Both are launched automatically on each system boot to "
+"watch for a DHCP server. They do not need a configuration file to do their "
+"job and work out of the box in most standard setups. For more complex "
+"situations, use the ISC <systemitem>dhcp-client</systemitem>, which is "
+"controlled by means of the configuration files <filename>/etc/dhclient.conf</"
+"filename> and <filename>/etc/dhclient6.conf</filename>."
+msgstr ""
+
+#. Tag: primary
+#: net_dhcp.xml:466 net_dhcp.xml:476
+#, no-c-format
+msgid "configuration files"
+msgstr ""
+
+#. Tag: secondary
+#: net_dhcp.xml:467
+#, no-c-format
+msgid "dhclient.conf"
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:472
+#, no-c-format
+msgid "The DHCP Server dhcpd"
+msgstr ""
+
+#. Tag: secondary
+#: net_dhcp.xml:478
+#, no-c-format
+msgid "dhcpd.conf"
+msgstr ""
+
+#. Tag: secondary
+#: net_dhcp.xml:482
+#, no-c-format
+msgid "server"
+msgstr ""
+
+#. Tag: secondary
+#: net_dhcp.xml:486
+#, no-c-format
+msgid "dhcpd"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:488
+#, no-c-format
+msgid ""
+"The core of any DHCP system is the dynamic host configuration protocol "
+"daemon. This server <emphasis>leases</emphasis> addresses and watches how "
+"they are used, according to the settings defined in the configuration file "
+"<filename>/etc/dhcpd.conf</filename>. By changing the parameters and values "
+"in this file, a system administrator can influence the program's behavior in "
+"numerous ways. Look at the basic sample <filename>/etc/dhcpd.conf</filename> "
+"file in <xref linkend=\"dat.dhcp.conf\"/>."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:499
+#, no-c-format
+msgid "The Configuration File /etc/dhcpd.conf"
+msgstr ""
+
+#. Tag: screen
+#: net_dhcp.xml:500
+#, no-c-format
+msgid ""
+"<!--adjust to standard network example-->\n"
+"default-lease-time 600;         # 10 minutes\n"
+"max-lease-time 7200;            # 2  hours\n"
+"\n"
+"option domain-name \"&exampledomain;\";\n"
+"option domain-name-servers &dnsip;;\n"
+"option broadcast-address &subnetIIbc;;\n"
+"option routers &routerintipII;;\n"
+"option subnet-mask &subnetmask;;\n"
+"\n"
+"subnet &subnetII;.0 netmask &subnetmask;\n"
+" {\n"
+"  range &subnetII;.10 &subnetII;.20;\n"
+"  range &subnetII;.100 &subnetII;.200;\n"
+" }"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:503
+#, no-c-format
+msgid ""
+"This simple configuration file should be sufficient to get the DHCP server "
+"to assign IP addresses in the network. Make sure that a semicolon is "
+"inserted at the end of each line, because otherwise dhcpd is not started."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:509
+#, no-c-format
+msgid ""
+"The sample file can be divided into three sections. The first one defines "
+"how many seconds an IP address is leased to a requesting client by default "
+"(<literal>default-lease-time</literal>) before it should apply for renewal. "
+"This section also includes a statement of the maximum period for which a "
+"machine may keep an IP address assigned by the DHCP server without applying "
+"for renewal (<literal>max-lease-time</literal>)."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:518
+#, no-c-format
+msgid ""
+"In the second part, some basic network parameters are defined on a global "
+"level:"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:525
+#, no-c-format
+msgid ""
+"The line <literal>option domain-name</literal> defines the default domain of "
+"your network."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:531
+#, no-c-format
+msgid ""
+"With the entry <literal>option domain-name-servers</literal>, specify up to "
+"three values for the DNS servers used to resolve IP addresses into host "
+"names and vice versa. Ideally, configure a name server on your machine or "
+"somewhere else in your network before setting up DHCP. That name server "
+"should also define a host name for each dynamic address and vice versa. To "
+"learn how to configure your own name server, read <xref linkend=\"cha.dns\"/"
+">."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:542
+#, no-c-format
+msgid ""
+"The line <literal>option broadcast-address</literal> defines the broadcast "
+"address the requesting client should use."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:548
+#, no-c-format
+msgid ""
+"With <literal>option routers</literal>, set where the server should send "
+"data packets that cannot be delivered to a host on the local network "
+"(according to the source and target host address and the subnet mask "
+"provided). Usually, especially in smaller networks, this router is identical "
+"to the Internet gateway."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:557
+#, no-c-format
+msgid ""
+"With <literal>option subnet-mask</literal>, specify the netmask assigned to "
+"clients."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:564
+#, no-c-format
+msgid ""
+"The last section of the file defines a network, including a subnet mask. To "
+"finish, specify the address range that the DHCP daemon should use to assign "
+"IP addresses to interested clients. In <xref linkend=\"dat.dhcp.conf\"/>, "
+"clients may be given any address between <literal>&subnetII;.10</literal> "
+"and <literal>&subnetII;.20</literal> or <literal>&subnetII;.100</literal> "
+"and <literal>&subnetII;.200</literal>."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:573
+#, no-c-format
+msgid ""
+"After editing these few lines, you should be able to activate the DHCP "
+"daemon with the command <command>systemctl start dhcpd</command>. It will be "
+"ready for use immediately. Use the command <command>rcdhcpd</command>&nbsp;"
+"<option>check-syntax</option> to perform a brief syntax check. If you "
+"encounter any unexpected problems with your configuration (the server aborts "
+"with an error or does not return <literal>done</literal> on start), you "
+"should be able to find out what has gone wrong by looking for information "
+"either in the main system log that can be queried with the command "
+"<command>journalctl</command> (see <xref linkend=\"cha.journalctl\"/> for "
+"more information)."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:593
+#, no-c-format
+msgid ""
+"On a default &productname; system, the DHCP daemon is started in a chroot "
+"environment for security reasons. The configuration files must be copied to "
+"the chroot environment so the daemon can find them. Normally, there is no "
+"need to worry about this because the command <command>systemctl start dhcpd "
+"</command> automatically copies the files."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:602
+#, no-c-format
+msgid "Clients with Fixed IP Addresses"
+msgstr ""
+
+#. Tag: secondary
+#: net_dhcp.xml:604
+#, no-c-format
+msgid "static address assignment"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:605
+#, no-c-format
+msgid ""
+"DHCP can also be used to assign a predefined, static address to a specific "
+"client. Addresses assigned explicitly always take priority over dynamic "
+"addresses from the pool. A static address never expires in the way a dynamic "
+"address would, for example, if there were not enough addresses available and "
+"the server needed to redistribute them among clients."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:612
+#, no-c-format
+msgid ""
+"To identify a client configured with a static address, dhcpd uses the "
+"hardware address (which is a globally unique, fixed numerical code "
+"consisting of six octet pairs) for the identification of all network devices "
+"(for example, <literal>&wsImac;</literal>). If the respective lines, like "
+"the ones in <xref linkend=\"dat.dhcp.conf.add\"/>, are added to the "
+"configuration file of <xref linkend=\"dat.dhcp.conf\"/>, the DHCP daemon "
+"always assigns the same set of data to the corresponding client."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:622
+#, no-c-format
+msgid "Additions to the Configuration File"
+msgstr ""
+
+#. Tag: screen
+#: net_dhcp.xml:623
+#, no-c-format
+msgid ""
+"host &wsI; {\n"
+"hardware ethernet &wsImac;;\n"
+"fixed-address &wsIip;;\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:625
+#, no-c-format
+msgid ""
+"The name of the respective client (<literal>host</literal> <replaceable>host "
+"name</replaceable>, here <systemitem>&wsI;</systemitem>) is entered in the "
+"first line and the MAC address in the second line. On Linux hosts, find the "
+"MAC address with the command <command>ip</command> <option>link show</"
+"option> followed by the network device (for example, <literal>eth0</"
+"literal>). The output should contain something like"
+msgstr ""
+
+#. Tag: screen
+#: net_dhcp.xml:633
+#, no-c-format
+msgid "link/ether &wsImac;"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:634
+#, no-c-format
+msgid ""
+"In the preceding example, a client with a network card having the MAC "
+"address <literal>&wsImac;</literal> is assigned the IP address <systemitem "
+"class=\"ipaddress\">&wsIip;</systemitem> and the host name <literal>&wsI;</"
+"literal> automatically. The type of hardware to enter is <literal>ethernet</"
+"literal> in nearly all cases, although <literal>token-ring</literal>, which "
+"is often found on IBM systems, is also supported."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:646
+#, no-c-format
+msgid "The &productname; Version"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:647
+#, no-c-format
+msgid ""
+"To improve security, the &productname; version of the ISC's DHCP server "
+"comes with the non-root/chroot patch by Ari Edelkind applied. This enables "
+"dhcpd to run with the user ID <systemitem class=\"username\">nobody</"
+"systemitem> and run in a chroot environment (<filename>/var/lib/dhcp</"
+"filename>). To make this possible, the configuration file <filename>dhcpd."
+"conf</filename> must be located in <filename>/var/lib/dhcp/etc</filename>. "
+"The init script automatically copies the file to this directory when "
+"starting."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:657
+#, no-c-format
+msgid ""
+"Control the server's behavior regarding this feature by means of entries in "
+"the file <filename>/etc/sysconfig/dhcpd</filename>. To run dhcpd without the "
+"chroot environment, set the variable <systemitem>DHCPD_RUN_CHROOTED</"
+"systemitem> in <filename>/etc/sysconfig/dhcpd</filename> to <quote>no</"
+"quote>."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:664
+#, no-c-format
+msgid ""
+"To enable dhcpd to resolve host names even from within the chroot "
+"environment, some other configuration files must be copied as well:"
+msgstr ""
+
+#. Tag: filename
+#: net_dhcp.xml:671
+#, no-c-format
+msgid "/etc/localtime"
+msgstr ""
+
+#. Tag: filename
+#: net_dhcp.xml:676
+#, no-c-format
+msgid "/etc/host.conf"
+msgstr ""
+
+#. Tag: filename
+#: net_dhcp.xml:681
+#, no-c-format
+msgid "/etc/hosts"
+msgstr ""
+
+#. Tag: filename
+#: net_dhcp.xml:686
+#, no-c-format
+msgid "/etc/resolv.conf"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:690
+#, no-c-format
+msgid ""
+"These files are copied to <filename>/var/lib/dhcp/etc/</filename> when "
+"starting the init script. Take these copies into account for any changes "
+"that they require if they are dynamically modified by scripts like "
+"<filename>/etc/ppp/ip-up</filename>. However, there should be no need to "
+"worry about this if the configuration file only specifies IP addresses "
+"(instead of host names)."
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:698
+#, no-c-format
+msgid ""
+"If your configuration includes additional files that should be copied into "
+"the chroot environment, set these under the variable "
+"<systemitem>DHCPD_CONF_INCLUDE_FILES</systemitem> in the file <filename>/etc/"
+"sysconfig/dhcpd</filename>. To ensure that the DHCP logging facility keeps "
+"working even after a restart of the syslog daemon, there is an additional "
+"entry <systemitem>SYSLOGD_ADDITIONAL_SOCKET_DHCP</systemitem> in the file "
+"<filename>/etc/sysconfig/syslog</filename>."
+msgstr ""
+
+#. Tag: title
+#: net_dhcp.xml:710
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: net_dhcp.xml:712
+#, no-c-format
+msgid ""
+"More information about DHCP is available at the Web site of the "
+"<emphasis>Internet Systems Consortium</emphasis> (<link xlink:href=\"http://"
+"www.isc.org/products/DHCP/\"></link>). Information is also available in the "
+"<option>dhcpd</option>, <option>dhcpd.conf</option>, <option>dhcpd.leases</"
+"option>, and <option>dhcp-options</option> man pages."
+msgstr ""

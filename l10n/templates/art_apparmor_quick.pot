@@ -1,0 +1,1449 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: art_apparmor_quick.xml:14
+#, no-c-format
+msgid "&aa; (2.8) Quick Start"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:19
+#, no-c-format
+msgid ""
+"This document helps you understand the main concepts behind &aareg;&mdash;"
+"the content of &aa; profiles. Learn how to create or modify &aa; profiles. "
+"You can create and manage &aa; profiles in three different ways. The most "
+"convenient interface to basic &aa; management is provided by means of the "
+"&aa; &yast; modules, which can be used either in graphical or ncurses mode. "
+"Complete functionality is provided by the &aa; command line tools, or by "
+"editing the profiles in a text editor."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:37
+#, no-c-format
+msgid "&aa; Modes"
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:41
+#, no-c-format
+msgid "complain/learning"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:43
+#, no-c-format
+msgid ""
+"In complain or learning mode, violations of &aa; profile rules, such as the "
+"profiled program accessing files not permitted by the profile, are detected. "
+"The violations are permitted, but also logged. This mode is convenient for "
+"developing profiles and is used by the &aa; tools for generating profiles."
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:53
+#, no-c-format
+msgid "enforce"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:55
+#, no-c-format
+msgid ""
+"Loading a profile in enforcement mode enforces the policy defined in the "
+"profile. Policy violation attempts are reported to rsyslogd."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:64
+#, no-c-format
+msgid "Starting and Stopping &aa;"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:66
+#, no-c-format
+msgid ""
+"Use the <command>systemctl</command> command with one of the following "
+"parameters:"
+msgstr ""
+
+#. Tag: option
+#: art_apparmor_quick.xml:73
+#, no-c-format
+msgid "systemctl start apparmor"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:76
+#, no-c-format
+msgid ""
+"Load the kernel module, mount securityfs, parse and load profiles. Profiles "
+"and confinement are applied to any application started after this command "
+"was executed. Processes already running at the time &aa; is started continue "
+"to run unconfined."
+msgstr ""
+
+#. Tag: option
+#: art_apparmor_quick.xml:85
+#, no-c-format
+msgid "systemctl stop apparmor"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:88
+#, no-c-format
+msgid ""
+"Unmount securityfs, invalidate profiles, and makes running processes "
+"unconfined."
+msgstr ""
+
+#. Tag: option
+#: art_apparmor_quick.xml:95
+#, no-c-format
+msgid "systemctl reload apparmor"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:98
+#, no-c-format
+msgid "Reload profiles."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:106
+#, no-c-format
+msgid "&aa; Command Line Tools"
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:110
+#, no-c-format
+msgid "aa-autodep"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:112
+#, no-c-format
+msgid ""
+"Guess basic &aa; profile requirements. <command>aa-autodep</command> creates "
+"a stub profile for the program or application examined. The resulting "
+"profile is called <quote>approximate</quote> because it does not necessarily "
+"contain all of the profile entries that the program needs to be confined "
+"properly."
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:123
+#, no-c-format
+msgid "aa-complain"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:125
+#, no-c-format
+msgid "Set an &aa; profile to complain mode."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:128
+#, no-c-format
+msgid ""
+"Manually activating complain mode (using the command line) adds a flag to "
+"the top of the profile, so that <command>/bin/foo</command> becomes "
+"<command>/bin/foo flags=(complain)</command>."
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:136
+#, no-c-format
+msgid "aa-enforce"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:138
+#, no-c-format
+msgid "Set an &aa; profile to enforce mode from complain mode."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:141
+#, no-c-format
+msgid ""
+"Manually activating enforce mode (using the command line) removes mode flags "
+"from the top of the profile, so that <command>/bin/foo flags=(complain)</"
+"command> becomes <command>/bin/foo</command>."
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:149
+#, no-c-format
+msgid "aa-genprof"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:151
+#, no-c-format
+msgid ""
+"Generate or update a profile. When running, you must specify a program to "
+"profile. If the specified program is not an absolute path, <command>aa-"
+"genprof</command> searches the <envar>$PATH</envar> variable. If a profile "
+"does not exist, <command>aa-genprof</command> creates one using <command>aa-"
+"autodep</command>."
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:161
+#, no-c-format
+msgid "aa-logprof"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:163
+#, no-c-format
+msgid ""
+"Manage &aa; profiles. <command>aa-logprof</command> is an interactive tool "
+"used to review the learning or complain mode output found in the &aa; syslog "
+"entries and to generate new entries in &aa; profiles."
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:172
+#, no-c-format
+msgid "aa-unconfined"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:174
+#, no-c-format
+msgid ""
+"Output a list of processes with open TCP or UDP ports that do not have &aa; "
+"profiles loaded."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:183
+#, no-c-format
+msgid "Methods of Profiling"
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:187
+#, no-c-format
+msgid "Stand-Alone Profiling"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:189
+#, no-c-format
+msgid ""
+"Using <command>aa-genprof</command>. Suitable for profiling small "
+"applications."
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:196
+#, no-c-format
+msgid "Systemic Profiling"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:198
+#, no-c-format
+msgid ""
+"Suitable for profiling large numbers of programs at once and for profiling "
+"applications that may run <quote>forever.</quote>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:202
+#, no-c-format
+msgid "To apply systemic profiling, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:207
+#, no-c-format
+msgid ""
+"Create profiles for the individual programs that make up your application "
+"(<command>aa-autodep</command>)."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:213
+#, no-c-format
+msgid "Put relevant profiles into complain mode."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:218
+#, no-c-format
+msgid "Exercise your application."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:223
+#, no-c-format
+msgid "Analyze the log (logprof)."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:228
+#, no-c-format
+msgid "Repeat Steps 3-4."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:233
+#, no-c-format
+msgid "Edit the profiles."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:238
+#, no-c-format
+msgid "Return to enforce mode."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:243
+#, no-c-format
+msgid "Reload all profiles (<command>systemctl reload apparmor</command>)."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:253
+#, no-c-format
+msgid "Learning Mode"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:255
+#, no-c-format
+msgid ""
+"When using <command>aa-genprof</command>, <command>aa-logprof</command>, you "
+"get several options for how to proceed:"
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:262
+#, no-c-format
+msgid "Allow"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:264
+#, no-c-format
+msgid "Grant access."
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:270
+#, no-c-format
+msgid "Deny"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:272
+#, no-c-format
+msgid "Prevent access."
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:278
+#, no-c-format
+msgid "<term>Glob</term>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:280
+#, no-c-format
+msgid ""
+"Modify the directory path to include all files in the suggested directory."
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:287
+#, no-c-format
+msgid "Glob w/Ext"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:289
+#, no-c-format
+msgid ""
+"Modify the original directory path while retaining the filename extension. "
+"This allows the program to access all files in the suggested directories "
+"that end with the specified extension."
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:297
+#, no-c-format
+msgid "Edit"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:299
+#, no-c-format
+msgid ""
+"Enable editing of the slected line. The new (edited) line appears at the "
+"bottom of the list. This option is called <guimenu>New</guimenu> in the "
+"<command>aa-logprof</command> and <command>aa-genprof</command> command line "
+"tools."
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:308
+#, no-c-format
+msgid "Abort"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:310
+#, no-c-format
+msgid ""
+"Abort <command>aa-logprof</command>, losing all rule changes entered so far "
+"and leaving all profiles unmodified."
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:317
+#, no-c-format
+msgid "Finish"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:319
+#, no-c-format
+msgid ""
+"Close <command>aa-logprof</command>, saving all rule changes entered so far "
+"and modifying all profiles."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:328
+#, no-c-format
+msgid "Example Profile"
+msgstr ""
+
+#. Tag: screen
+#: art_apparmor_quick.xml:330
+#, no-c-format
+msgid ""
+"<?dbfo font-size=\"6pt\"?>#include&lt;tunables/global&gt;\n"
+"\n"
+"@{HOME} = /home/*/ /root/ # variable\n"
+"\n"
+"/usr/bin/foo {\n"
+"   #include &lt;abstractions/base&gt;\n"
+"   network inet tcp,\n"
+"   capability setgid,\n"
+"\n"
+"   /bin/mount          Ux,\n"
+"   /dev/{,u}random     r,\n"
+"   /etc/ld.so.cache    r,\n"
+"   /etc/foo/*          r,\n"
+"   /lib/ld-*.so*       mr,\n"
+"   /lib/lib*.so*       mr,\n"
+"   /proc/[0-9]**       r,\n"
+"   /usr/lib/**         mr,\n"
+"   /tmp/               r,\n"
+"   /tmp/foo.pid        rw,\n"
+"   /tmp/foo.*          rwl,\n"
+"   /@{HOME}/.foo_file  rw,\n"
+"   /@{HOME}/.foo_lock  kw,\n"
+"\n"
+"   link /etc/sysconfig/foo -&gt; /etc/foo.conf,\n"
+"   deny /etc/shadow    w,\n"
+"   owner /home/*/**    rw,\n"
+"\n"
+"   /usr/bin/foobar     Cx,\n"
+"   /bin/**             Px -&gt; bin_generic\n"
+"\n"
+"  # comment on foo's local profile, foobar.\n"
+"   foobar {\n"
+"    /bin/bash        rmix,\n"
+"    /bin/cat         rmix,\n"
+"    /bin/more        rmix,\n"
+"    /var/log/foobar* rwl,\n"
+"    /etc/foobar      r,\n"
+"   }\n"
+"}"
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:333
+#, no-c-format
+msgid "Structure of a Profile"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:335
+#, no-c-format
+msgid ""
+"Profiles are simple text files in the <filename>/etc/apparmor.d</filename> "
+"directory. They consist of several parts: #include, capability entries, "
+"rules, and <quote>hats.</quote>"
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:342
+#, no-c-format
+msgid "#include"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:343
+#, no-c-format
+msgid ""
+"This is the section of an &aa; profile that refers to an include file, which "
+"mediates access permissions for programs. By using an include, you can give "
+"the program access to directory paths or files that are also required by "
+"other programs. Using includes can reduce the size of a profile. It is good "
+"practice to select includes when suggested."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:351
+#, no-c-format
+msgid ""
+"To assist you in profiling your applications, &aa; provides three classes of "
+"<filename>#includes</filename>: abstractions, program chunks, and tunables."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:356
+#, no-c-format
+msgid ""
+"Abstractions are <filename>#includes</filename> that are grouped by common "
+"application tasks. These tasks include access to authentication mechanisms, "
+"access to name service routines, common graphics requirements, and system "
+"accounting (for example, base, consoles, kerberosclient, perl, user-mail, "
+"user-tmp, authentication, bash, nameservice)."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:364
+#, no-c-format
+msgid ""
+"Program chunks are access controls for specific programs that a system "
+"administrator might want to control based on local site policy. Each chunk "
+"is used by a single program."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:369
+#, no-c-format
+msgid ""
+"Tunables are global variable definitions. When used in a profile, these "
+"variables expand to a value that can be changed without changing the entire "
+"profile. Therefore your profiles become portable to different environments."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:378
+#, no-c-format
+msgid "Local Variables"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:379
+#, no-c-format
+msgid ""
+"Local variables are defined at the head of a profile. Use local variables to "
+"create shortcuts for paths, for example to provide the base for a chrooted "
+"path:"
+msgstr ""
+
+#. Tag: screen
+#: art_apparmor_quick.xml:384
+#, no-c-format
+msgid ""
+"@{CHROOT_BASE}=/tmp/foo\n"
+"/sbin/rsyslogd {\n"
+"  [...]\n"
+"  # chrooted applications\n"
+"  @{CHROOT_BASE}/dev/log w,\n"
+"  @{CHROOT_BASE}/var/log/** w,\n"
+"  [...]\n"
+"}"
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:388
+#, no-c-format
+msgid "Aliases"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:389
+#, no-c-format
+msgid ""
+"Alias rules provide an alternative form of path rewriting to using "
+"variables, and are done post variable resolution:"
+msgstr ""
+
+#. Tag: screen
+#: art_apparmor_quick.xml:393
+#, no-c-format
+msgid "alias /home/ -&gt; /mnt/users/"
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:397
+#, no-c-format
+msgid "Network Access Control"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:398
+#, no-c-format
+msgid ""
+"&aa; provides network access mediation based on network domain and type:"
+msgstr ""
+
+#. Tag: screen
+#: art_apparmor_quick.xml:402
+#, no-c-format
+msgid ""
+"/bin/ping {\n"
+"  network inet dgram,\n"
+"  network inet raw,\n"
+"  [...]\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:403
+#, no-c-format
+msgid ""
+"The example would allow IPv4 network access of the datagram and raw type for "
+"the ping command. For details on the network rule syntax, refer to the <xref "
+"linkend=\"part.apparmor\"/>."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:411
+#, no-c-format
+msgid "Capability Entries (POSIX.1e)"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:412
+#, no-c-format
+msgid ""
+"Capabilities statements are simply the word <quote>capability</quote> "
+"followed by the name of the POSIX.1e capability as defined in the "
+"<command>capabilities(7)</command> man page."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:420
+#, no-c-format
+msgid "Rules: General Options for Files and Directories"
+msgstr ""
+
+#. Tag: emphasis
+#: art_apparmor_quick.xml:427 art_apparmor_quick.xml:561
+#, no-c-format
+msgid "Option"
+msgstr ""
+
+#. Tag: emphasis
+#: art_apparmor_quick.xml:432 art_apparmor_quick.xml:566
+#, no-c-format
+msgid "File"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:440
+#, no-c-format
+msgid "read"
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:446
+#, no-c-format
+msgid "<literal>r</literal>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:452
+#, no-c-format
+msgid "write"
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:458
+#, no-c-format
+msgid "<literal>w</literal>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:464
+#, no-c-format
+msgid "link"
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:470
+#, no-c-format
+msgid "<literal>l</literal>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:476
+#, no-c-format
+msgid "file locking"
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:482
+#, no-c-format
+msgid "<literal>k</literal>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:488
+#, no-c-format
+msgid "file append (mutually exclusive to <literal>w</literal>)"
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:494
+#, no-c-format
+msgid "<literal>a</literal>"
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:504
+#, no-c-format
+msgid "Rules: Link Pair"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:505
+#, no-c-format
+msgid ""
+"The link mode grants permission to create links to arbitrary files, provided "
+"the link has a subset of the permissions granted by the target (subset "
+"permission test). By specifying origin and destination, the link pair rule "
+"provides greater control over how hard links are created. Link pair rules "
+"by, default, do not enforce the link subset permission test that the "
+"standard rules link permission requires. To force the rule to require the "
+"test the subset keyword is used. The following rules are equivalent:"
+msgstr ""
+
+#. Tag: screen
+#: art_apparmor_quick.xml:515
+#, no-c-format
+msgid ""
+"/link      l,\n"
+"link subset /link -&gt; /**,"
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:519
+#, no-c-format
+msgid "Rules: Denying rules"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:520
+#, no-c-format
+msgid ""
+"&aa; provides <literal>deny</literal> rules which are standard rules but "
+"with the keyword <literal>deny</literal> put in front. They are used to "
+"remember known rejects, and quiet them so the reject messages do not fill up "
+"the log files. For more information see <xref linkend=\"part.apparmor\"/>."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:530
+#, no-c-format
+msgid "Rules: Owner Conditional Rules"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:531
+#, no-c-format
+msgid ""
+"The file rules can be extended so that they can be conditional upon the the "
+"user being the owner of the file, by putting the keyword <literal>owner</"
+"literal> in front of the rule. Owner conditional rules accumulate just as "
+"regular file rules and are considered a subset of regular file rules. If a "
+"regular file rule overlaps with an owner conditional file rule, the "
+"resulting permissions will be that of the regular file rule."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:541
+#, no-c-format
+msgid ""
+"For specifying rules valid for non-owners of the relevant file, use the "
+"<literal>other</literal> keyword instead."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:549
+#, no-c-format
+msgid "Rules: Defining Execute Permissions"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:550
+#, no-c-format
+msgid ""
+"For executables that may be called from the confined programs, the profile "
+"creating tools ask you for an appropriate mode, which is also reflected "
+"directly in the profile itself:"
+msgstr ""
+
+#. Tag: emphasis
+#: art_apparmor_quick.xml:571 art_apparmor_quick.xml:763
+#, no-c-format
+msgid "Description"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:579
+#, no-c-format
+msgid "Inherit"
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:585
+#, no-c-format
+msgid "<literal>ix</literal>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:589
+#, no-c-format
+msgid "Stay in the same (parent's) profile."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:596
+#, no-c-format
+msgid "Profile"
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:602
+#, no-c-format
+msgid "<literal>Px</literal>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:606
+#, no-c-format
+msgid ""
+"Requires that a separate profile exists for the executed program. Use "
+"<literal>px</literal> to avoid environment scrubbingi (less secure)."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:615
+#, no-c-format
+msgid "Child profile"
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:621
+#, no-c-format
+msgid "<literal>Cx</literal>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:625
+#, no-c-format
+msgid ""
+"Requires that a local profile exists for the executed program. Use "
+"<literal>cx</literal> to avoid environment scrubbing (less secure)."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:633
+#, no-c-format
+msgid "Unconfined"
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:639
+#, no-c-format
+msgid "<literal>Ux</literal>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:643
+#, no-c-format
+msgid ""
+"Executes the program without a profile. Avoid running programs in unconfined "
+"mode for security reasons. Use <literal>ux</literal> to avoid environment "
+"scrubbing (less secure)."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:652
+#, no-c-format
+msgid "Allow Executable Mapping"
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:658
+#, no-c-format
+msgid "<literal>m</literal>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:662
+#, no-c-format
+msgid "allow <envar>PROT_EXEC</envar> with <command>mmap(2)</command> calls"
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:672
+#, no-c-format
+msgid "Running in ux Mode"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:673
+#, no-c-format
+msgid ""
+"Avoid running programs in ux mode as much as possible. A program running in "
+"ux mode is not only totally unprotected by &aa;, but child processes inherit "
+"certain environment variables from the parent that might influence the "
+"child's execution behavior and create possible security risks."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:681
+#, no-c-format
+msgid ""
+"For more information about the different file execute modes, refer to the "
+"<command>apparmor.d(5)</command> man page. For more information about setgid "
+"and setuid environment scrubbing, refer to the <command>ld.so(8)</command> "
+"man page."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:690
+#, no-c-format
+msgid "Rules: Paths and Globbing"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:691
+#, no-c-format
+msgid ""
+"&aa; supports explicit handling of directories. Use a trailing <literal>/</"
+"literal> for any directory path that needs to be explicitly distinguished:"
+msgstr ""
+
+#. Tag: filename
+#: art_apparmor_quick.xml:698
+#, no-c-format
+msgid "/some/random/example/* r"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:701
+#, no-c-format
+msgid ""
+"Allow read access to files in the <filename>/some/random/example</filename> "
+"directory."
+msgstr ""
+
+#. Tag: filename
+#: art_apparmor_quick.xml:708
+#, no-c-format
+msgid "/some/random/example/ r"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:711
+#, no-c-format
+msgid "Allow read access to the directory only."
+msgstr ""
+
+#. Tag: filename
+#: art_apparmor_quick.xml:717
+#, no-c-format
+msgid "/some/**/ r"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:720
+#, no-c-format
+msgid ""
+"Give read access to any directories (but not to any file) below <filename>/"
+"some</filename>."
+msgstr ""
+
+#. Tag: filename
+#: art_apparmor_quick.xml:727
+#, no-c-format
+msgid "/some/random/example/** r"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:730
+#, no-c-format
+msgid ""
+"Give read access to files and directories under <filename>/some/random/"
+"example</filename>."
+msgstr ""
+
+#. Tag: filename
+#: art_apparmor_quick.xml:737
+#, no-c-format
+msgid "/some/random/example/**[^/] r"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:740
+#, no-c-format
+msgid ""
+"Give read access to files under <filename>/some/random/example</filename>. "
+"Explicitly exclude directories (<literal>[^/]</literal>)."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:748
+#, no-c-format
+msgid ""
+"To spare users from specifying similar paths all over again, &aa; supports "
+"basic globbing:"
+msgstr ""
+
+#. Tag: emphasis
+#: art_apparmor_quick.xml:758
+#, no-c-format
+msgid "<emphasis>Glob</emphasis>"
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:772
+#, no-c-format
+msgid "<literal>*</literal>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:776
+#, no-c-format
+msgid "Substitutes for any number of characters, except <literal>/</literal>."
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:785
+#, no-c-format
+msgid "<literal>**</literal>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:789
+#, no-c-format
+msgid ""
+"Substitutes for any number of characters, including <literal>/</literal>."
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:798
+#, no-c-format
+msgid "<literal>?</literal>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:802
+#, no-c-format
+msgid "Substitutes for any single character, except <literal>/</literal>."
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:810
+#, no-c-format
+msgid "[abc]"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:814 art_apparmor_quick.xml:827
+#, no-c-format
+msgid ""
+"Substitutes for the single character <literal>a</literal>, <literal>b</"
+"literal>, or <literal>c</literal>."
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:823
+#, no-c-format
+msgid "[a-c]"
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:836
+#, no-c-format
+msgid "{ab,cd}"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:840
+#, no-c-format
+msgid ""
+"Expand to one rule to match <literal>ab</literal> and another to match "
+"<literal>cd</literal>."
+msgstr ""
+
+#. Tag: literal
+#: art_apparmor_quick.xml:849
+#, no-c-format
+msgid "[^a]"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:853
+#, no-c-format
+msgid "Substitutes for any character except <literal>a</literal>."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:864
+#, no-c-format
+msgid "Rules: Auditing rules"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:865
+#, no-c-format
+msgid ""
+"&aa; provides the user with the ability to audit given rules so that when "
+"they are matched, an audit message will appear in the audit log. To enable "
+"audit messages for a given rule the audit keyword is put in front of the "
+"rule:"
+msgstr ""
+
+#. Tag: screen
+#: art_apparmor_quick.xml:871
+#, no-c-format
+msgid ""
+"audit /path/to/file1  w,  # allow write to /path/to/file1, with logging\n"
+"audit deny /path/to/file2 r,  # deny read to /path/to/file2, with logging"
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:875
+#, no-c-format
+msgid "Hats"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:876
+#, no-c-format
+msgid ""
+"An &aa; profile represents a security policy for an individual program "
+"instance or process. It applies to an executable program, but if a portion "
+"of the program needs different access permissions than other portions, the "
+"program can <quote>change hats</quote> to use a different security context, "
+"distinctive from the access of the main program. This is known as a hat or "
+"subprofile."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:884
+#, no-c-format
+msgid ""
+"A profile can have an arbitrary number of hats, but there are only two "
+"levels: a hat cannot have further hats."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:888
+#, no-c-format
+msgid ""
+"The &aa; ChangeHat feature can be used by applications to access hats during "
+"execution. Currently the package <systemitem class=\"resource\">apache2-"
+"mod_apparmor</systemitem> uses ChangeHat to provide sub-process confinement "
+"for the Apache Web server container."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:898
+#, no-c-format
+msgid "Confining Users with pam_apparmor"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:900
+#, no-c-format
+msgid ""
+"The pam_apparmor PAM module allows applications to confine authenticated "
+"users into subprofiles based on group names, user names, or default profile. "
+"To accomplish this, pam_apparmor needs to be registered as a PAM session "
+"module."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:907
+#, no-c-format
+msgid ""
+"Details about how to set up and configure pam_apparmor can be found in "
+"<filename>/usr/share/doc/packages/pam_apparmor/README</filename>. A HOWTO on "
+"setting up role-based access control (RBAC) with pam_apparmor is available "
+"at <link xlink:href=\"http://wiki.apparmor.net\"></link>."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:915
+#, no-c-format
+msgid "Syntax Highlighting in vim"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:917
+#, no-c-format
+msgid ""
+"&aa; comes with its own syntax highlighting mode for the vim editor, defined "
+"in the <filename>apparmor.vim</filename> file. This can be useful when "
+"manually searching for syntax errors inside &aa; profile files. The "
+"highlighted colors represent the following:"
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:926
+#, no-c-format
+msgid "Blue"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:928
+#, no-c-format
+msgid "Comments that begin with <literal>#</literal> (but not #include's)"
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:934
+#, no-c-format
+msgid "White"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:936
+#, no-c-format
+msgid "Ordinary read access lines"
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:942
+#, no-c-format
+msgid "Brown"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:944
+#, no-c-format
+msgid "Capability statements and complain flags"
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:950
+#, no-c-format
+msgid "Yellow"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:952
+#, no-c-format
+msgid "Lines that grant write access"
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:958
+#, no-c-format
+msgid "Green"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:960
+#, no-c-format
+msgid "Lines that grant execute permission (ix, Px, or px)"
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:966
+#, no-c-format
+msgid "<term>Red</term>"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:968
+#, no-c-format
+msgid "Lines that grant unconfined access (Ux, or ux)"
+msgstr ""
+
+#. Tag: term
+#: art_apparmor_quick.xml:974
+#, no-c-format
+msgid "Red Background"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:976
+#, no-c-format
+msgid "Syntax errors that are not loading properly into the &aa; modules"
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:984
+#, no-c-format
+msgid "Logging and Auditing"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:986
+#, no-c-format
+msgid ""
+"All &aa; events are logged using the system's audit interface (the auditd "
+"logging to <filename>/var/log/audit/audit.log</filename>). On top of this "
+"infrastructure, event notification can be configured."
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:992
+#, no-c-format
+msgid ""
+"If auditd is not running, &aa; logs to the system log located under "
+"<filename>/var/log/messages</filename> using the <envar>LOG_KERN</envar> "
+"facility, or <command>journalctl</command> if no system logger is running."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:1000
+#, no-c-format
+msgid "Directories and Files"
+msgstr ""
+
+#. Tag: filename
+#: art_apparmor_quick.xml:1004
+#, no-c-format
+msgid "/sys/kernel/security/apparmor/profiles"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:1007
+#, no-c-format
+msgid "Virtualized file representing the currently loaded set of profiles."
+msgstr ""
+
+#. Tag: filename
+#: art_apparmor_quick.xml:1013
+#, no-c-format
+msgid "/etc/apparmor/"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:1016
+#, no-c-format
+msgid "Location of &aa; configuration files."
+msgstr ""
+
+#. Tag: filename
+#: art_apparmor_quick.xml:1022
+#, no-c-format
+msgid "/etc/apparmor/profiles/extras/"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:1025
+#, no-c-format
+msgid ""
+"A local repository of profiles shipped with &aa;, but not enabled by default."
+msgstr ""
+
+#. Tag: filename
+#: art_apparmor_quick.xml:1032
+#, no-c-format
+msgid "/etc/apparmor.d/"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:1035
+#, no-c-format
+msgid ""
+"Location of profiles, named with the convention of replacing the <literal>/</"
+"literal> in path names with <literal>.</literal> (not for the root <literal>/"
+"</literal>) so profiles are easier to manage. For example, the profile for "
+"the program <filename>/usr/sbin/ntpd</filename> is named <filename>usr.sbin."
+"ntpd</filename>."
+msgstr ""
+
+#. Tag: filename
+#: art_apparmor_quick.xml:1046
+#, no-c-format
+msgid "/etc/apparmor.d/abstractions/"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:1049
+#, no-c-format
+msgid "Location of abstractions."
+msgstr ""
+
+#. Tag: filename
+#: art_apparmor_quick.xml:1055
+#, no-c-format
+msgid "/etc/apparmor.d/program-chunks/"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:1058
+#, no-c-format
+msgid "Location of program chunks."
+msgstr ""
+
+#. Tag: filename
+#: art_apparmor_quick.xml:1064
+#, no-c-format
+msgid "/proc/*/attr/current"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:1067
+#, no-c-format
+msgid ""
+"Review the confinement status of a process and the profile that is used to "
+"confine the process. The <command>ps</command> <option>auxZ</option> command "
+"retrieves this information automatically."
+msgstr ""
+
+#. Tag: title
+#: art_apparmor_quick.xml:1078
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: art_apparmor_quick.xml:1080
+#, no-c-format
+msgid ""
+"To learn more about the &aa; project, check out the project's home page "
+"under <link xlink:href=\"http://wiki.apparmor.net/\"></link>. Find more "
+"information on the concept and the configuration of &aa; in <xref linkend="
+"\"part.apparmor\"/>."
+msgstr ""

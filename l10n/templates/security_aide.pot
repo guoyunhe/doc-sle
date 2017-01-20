@@ -1,0 +1,669 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: security_aide.xml:9
+#, no-c-format
+msgid "Intrusion Detection with &aide;"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:12
+#, no-c-format
+msgid ""
+"Securing your systems is a mandatory task for any mission-critical system "
+"administrator. Because it is impossible to always guarantee that the system "
+"is not compromised, it is very important to do extra checks regularly (for "
+"example with <systemitem class=\"daemon\">cron</systemitem>) to ensure that "
+"the system is still under your control. This is where &aide;, the "
+"<emphasis>Advanced Intrusion Detection Environment</emphasis>, comes into "
+"play."
+msgstr ""
+
+#. Tag: title
+#: security_aide.xml:29
+#, no-c-format
+msgid "Why Using &aide;?"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:31
+#, no-c-format
+msgid ""
+"An easy check that often can reveal unwanted changes can be done by means of "
+"RPM. The package manager has a built-in verify function that checks all the "
+"managed files in the system for changes. To verify of all files, run the "
+"command <command>rpm -Va</command>. However, this command will also display "
+"changes in configuration files and you will need to do some filtering to "
+"detect important changes."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:40
+#, no-c-format
+msgid ""
+"An additional problem to the method with RPM is that an intelligent attacker "
+"will modify <command>rpm</command> itself to hide any changes that might "
+"have been done by some kind of root-kit which allows the attacker to mask "
+"its intrusion and gain root privilege. To solve this, you should implement a "
+"secondary check that can also be run completely independent of the installed "
+"system."
+msgstr ""
+
+#. Tag: title
+#: security_aide.xml:50
+#, no-c-format
+msgid "Setting Up an &aide; Database"
+msgstr ""
+
+#. Tag: title
+#: security_aide.xml:53
+#, no-c-format
+msgid "Initialize &aide; Database After Installation"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:54
+#, no-c-format
+msgid ""
+"Before you install your system, verify the checksum of your medium (see "
+"<xref linkend=\"sec.trouble.checkingMedia\"/>) to make sure you do not use a "
+"compromised source. After you have installed the system, initialize the "
+"&aide; database. To be really sure that all went well during and after the "
+"installation, do an installation directly on the console, without any "
+"network attached to the computer. Do not leave the computer unattended or "
+"connected to any network before &aide; creates its database."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:66
+#, no-c-format
+msgid ""
+"AIDE is not installed by default on &productname;. To install it, either use "
+"<menuchoice><guimenu>Computer</guimenu> <guimenu>Install Software</guimenu></"
+"menuchoice>, or enter <literal>zypper install aide</literal> on the command "
+"line as &rootuser;."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:73
+#, no-c-format
+msgid ""
+"To tell &aide; which attributes of which files should be checked, use the "
+"<filename>/etc/aide.conf</filename> configuration file. It must be modified "
+"to become the actual configuration. The first section handles general "
+"parameters like the location of the &aide; database file. More relevant for "
+"local configurations are the <systemitem>Custom Rules</systemitem> and the "
+"<systemitem>Directories and Files</systemitem> sections. A typical rule "
+"looks like the following:"
+msgstr ""
+
+#. Tag: screen
+#: security_aide.xml:83
+#, no-c-format
+msgid "Binlib     = p+i+n+u+g+s+b+m+c+md5+sha1"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:85
+#, no-c-format
+msgid ""
+"After defining the variable <literal>Binlib</literal>, the respective check "
+"boxes are used in the files section. Important options include the following:"
+msgstr ""
+
+#. Tag: title
+#: security_aide.xml:92
+#, no-c-format
+msgid "Important &aide; Check Boxes"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:97
+#, no-c-format
+msgid "Option"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:102
+#, no-c-format
+msgid "Description"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:111
+#, no-c-format
+msgid "<para>p</para>"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:116
+#, no-c-format
+msgid "Check for the file permissions of the selected files or directories."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:123
+#, no-c-format
+msgid "<para>i</para>"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:128
+#, no-c-format
+msgid ""
+"Check for the inode number. Every file name has a unique inode number that "
+"should not change."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:136
+#, no-c-format
+msgid "<para>n</para>"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:141
+#, no-c-format
+msgid "Check for the number of links pointing to the relevant file."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:148
+#, no-c-format
+msgid "<para>u</para>"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:153
+#, no-c-format
+msgid "Check if the owner of the file has changed."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:160
+#, no-c-format
+msgid "<para>g</para>"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:165
+#, no-c-format
+msgid "Check if the group of the file has changed."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:172
+#, no-c-format
+msgid "<para>s</para>"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:177
+#, no-c-format
+msgid "Check if the file size has changed."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:184
+#, no-c-format
+msgid "<para>b</para>"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:189
+#, no-c-format
+msgid "Check if the block count used by the file has changed."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:196
+#, no-c-format
+msgid "<para>m</para>"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:201
+#, no-c-format
+msgid "Check if the modification time of the file has changed."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:208
+#, no-c-format
+msgid "<para>c</para>"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:213
+#, no-c-format
+msgid "Check if the files access time has changed."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:220
+#, no-c-format
+msgid "<para>md5</para>"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:225
+#, no-c-format
+msgid "Check if the md5 checksum of the file has changed."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:232
+#, no-c-format
+msgid "sha1"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:237
+#, no-c-format
+msgid "Check if the sha1 (160 Bit) checksum of the file has changed."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:246
+#, no-c-format
+msgid ""
+"This is a configuration that checks for all files in <filename>/sbin</"
+"filename> with the options defined in <literal>Binlib</literal> but omits "
+"the <filename>/sbin/conf.d/</filename> directory:"
+msgstr ""
+
+#. Tag: screen
+#: security_aide.xml:253
+#, no-c-format
+msgid ""
+"/sbin  Binlib\n"
+"!/sbin/conf.d"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:255
+#, no-c-format
+msgid "To create the &aide; database, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:261
+#, no-c-format
+msgid "Open <filename>/etc/aide.conf</filename>."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:266
+#, no-c-format
+msgid ""
+"Define which files should be checked with which check boxes. For a complete "
+"list of available check boxes, see <filename>/usr/share/doc/packages/aide/"
+"manual.html</filename>. The definition of the file selection needs some "
+"knowledge about regular expressions. Save your modifications."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:275
+#, no-c-format
+msgid "To check whether the configuration file is valid, run:"
+msgstr ""
+
+#. Tag: screen
+#: security_aide.xml:278
+#, no-c-format
+msgid "aide --config-check"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:279
+#, no-c-format
+msgid ""
+"Any output of this command is a hint that the configuration is not valid. "
+"For example, if you get the following output:"
+msgstr ""
+
+#. Tag: screen
+#: security_aide.xml:283
+#, no-c-format
+msgid ""
+"aide --config-check\n"
+"35:syntax error:!\n"
+"35:Error while reading configuration:!\n"
+"Configuration error"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:284
+#, no-c-format
+msgid ""
+"The error is to be expected in line 36 of <filename>/etc/aide.conf</"
+"filename>. Note that the error message contains the last successfully read "
+"line of the configuration file."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:291
+#, no-c-format
+msgid "Initialize the &aide; database. Run the command:"
+msgstr ""
+
+#. Tag: screen
+#: security_aide.xml:294
+#, no-c-format
+msgid "aide -i"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:297
+#, no-c-format
+msgid ""
+"Copy the generated database to a save location like a CD-R or DVD-R, a "
+"remote server or a flash disk for later use."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:303
+#, no-c-format
+msgid ""
+"This step is essential as it avoids compromising your database. It is "
+"recommended to use a medium which can be written only once to prevent the "
+"database being modified. <emphasis>Never</emphasis> leave the database on "
+"the computer which you want to monitor."
+msgstr ""
+
+#. Tag: title
+#: security_aide.xml:314
+#, no-c-format
+msgid "Local &aide; Checks"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:316
+#, no-c-format
+msgid "To perform a file system check, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:322
+#, no-c-format
+msgid "Rename the database:"
+msgstr ""
+
+#. Tag: screen
+#: security_aide.xml:325
+#, no-c-format
+msgid "mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:328
+#, no-c-format
+msgid ""
+"After any configuration change, you always need to re-initialize the &aide; "
+"database and subsequently move the newly generated database. It is also a "
+"good idea to make a backup of this database. See <xref linkend=\"sec.aide."
+"setup\"/> for more information."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:336
+#, no-c-format
+msgid "Perform the check with the following command:"
+msgstr ""
+
+#. Tag: screen
+#: security_aide.xml:339
+#, no-c-format
+msgid "aide --check"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:343
+#, no-c-format
+msgid ""
+"If the output is empty, everything is fine. If &aide; found changes, it "
+"displays a summary of changes, for example:"
+msgstr ""
+
+#. Tag: screen
+#: security_aide.xml:348
+#, no-c-format
+msgid ""
+"aide --check\n"
+"AIDE found differences between database and filesystem!!\n"
+"\n"
+"Summary:\n"
+"  Total number of files:        1992\n"
+"  Added files:                  0\n"
+"  Removed files:                0\n"
+"  Changed files:                1"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:350
+#, no-c-format
+msgid ""
+"To learn about the actual changes, increase the verbose level of the check "
+"with the parameter <literal>-V</literal>. For the previous example, this "
+"could look like the following:"
+msgstr ""
+
+#. Tag: screen
+#: security_aide.xml:356
+#, no-c-format
+msgid ""
+"aide --check -V\n"
+"AIDE found differences between database and filesystem!!\n"
+"Start timestamp: 2009-02-18 15:14:10\n"
+"\n"
+"Summary:\n"
+"  Total number of files:        1992\n"
+"  Added files:                  0\n"
+"  Removed files:                0\n"
+"  Changed files:                1\n"
+"\n"
+"\n"
+"---------------------------------------------------\n"
+"Changed files:\n"
+"---------------------------------------------------\n"
+"\n"
+"changed: /etc/passwd\n"
+"\n"
+"--------------------------------------------------\n"
+"Detailed information about changes:\n"
+"---------------------------------------------------\n"
+"\n"
+"\n"
+"File: /etc/passwd\n"
+"  Mtime    : 2009-02-18 15:11:02              , 2009-02-18 15:11:47\n"
+"  Ctime    : 2009-02-18 15:11:02              , 2009-02-18 15:11:47"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:358
+#, no-c-format
+msgid ""
+"In this example, the file <filename>/etc/passwd</filename> was touched to "
+"demonstrate the effect."
+msgstr ""
+
+#. Tag: title
+#: security_aide.xml:364
+#, no-c-format
+msgid "System Independent Checking"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:366
+#, no-c-format
+msgid ""
+"To avoid risk, it is advisable to also run the &aide; binary from a trusted "
+"source. This excludes the risk that some attacker also modified the aide "
+"binary to hide its traces."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:372
+#, no-c-format
+msgid ""
+"To accomplish this task, &aide; must be run from a rescue system that is "
+"independent of the installed system. With &productname; it is relatively "
+"easy to extend the rescue system with arbitrary programs, and thus add the "
+"needed functionality."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:379
+#, no-c-format
+msgid ""
+"Before you can start using the rescue system, you need to provide two "
+"packages to the system. These are included with the same syntax as you would "
+"add a driver update disk to the system. For a detailed description about the "
+"possibilities of linuxrc that are used for this purpose, see <link xlink:"
+"href=\"http://en.opensuse.org/SDB:Linuxrc\"></link>. In the following, one "
+"possible way to accomplish this task is discussed."
+msgstr ""
+
+#. Tag: title
+#: security_aide.xml:389
+#, no-c-format
+msgid "Starting a Rescue System with &aide;"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:391
+#, no-c-format
+msgid "Provide an FTP server as a second machine."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:396
+#, no-c-format
+msgid ""
+"Copy the packages <systemitem>aide</systemitem> and <systemitem>mhash</"
+"systemitem> to the FTP server directory, in our case <filename>/srv/ftp/</"
+"filename>. Replace the placeholders <replaceable>ARCH</replaceable> and "
+"<replaceable>VERSION</replaceable> with the corresponding values:"
+msgstr ""
+
+#. Tag: screen
+#: security_aide.xml:403
+#, no-c-format
+msgid ""
+"cp DVD1/suse/<replaceable>ARCH</replaceable>/aide<replaceable>VERSION</"
+"replaceable>.<replaceable>ARCH</replaceable>.rpm /srv/ftp\n"
+"cp DVD1/suse/<replaceable>ARCH</replaceable>/mhash<replaceable>VERSION</"
+"replaceable>.<replaceable>ARCH</replaceable>.rpm /srv/ftp"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:406
+#, no-c-format
+msgid ""
+"Create an info file <filename>/srv/ftp/info.txt</filename> that provides the "
+"needed boot parameters for the rescue system:"
+msgstr ""
+
+#. Tag: screen
+#: security_aide.xml:410
+#, no-c-format
+msgid ""
+"dud:ftp://&ftpname;/aide<replaceable>VERSION</replaceable>."
+"<replaceable>ARCH</replaceable>.rpm\n"
+"dud:ftp://&ftpname;/mhash<replaceable>VERSION</replaceable>."
+"<replaceable>ARCH</replaceable>.rpm"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:411
+#, no-c-format
+msgid ""
+"Replace your FTP domain name, <replaceable>VERSION</replaceable> and "
+"<replaceable>ARCH</replaceable> with the values used on your system."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:417
+#, no-c-format
+msgid ""
+"Restart the server that needs to go through an &aide; check with the Rescue "
+"system from your DVD. Add the following string to the boot parameters:"
+msgstr ""
+
+#. Tag: screen
+#: security_aide.xml:422
+#, no-c-format
+msgid "info=ftp://&ftpname;/info.txt"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:423
+#, no-c-format
+msgid ""
+"This parameter tells <command>linuxrc</command> to also read in all "
+"information from the <filename>info.txt</filename> file."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:430
+#, no-c-format
+msgid ""
+"After the rescue system has booted, the &aide; program is ready for use."
+msgstr ""
+
+#. Tag: title
+#: security_aide.xml:436
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:438
+#, no-c-format
+msgid "Information about &aide; is available at the following places:"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:444
+#, no-c-format
+msgid ""
+"The home page of &aide;: <link xlink:href=\"http://aide.sourceforge.net\"></"
+"link>"
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:450
+#, no-c-format
+msgid ""
+"In the documented template configuration <filename>/etc/aide.conf</filename>."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:456
+#, no-c-format
+msgid ""
+"In several files below <filename>/usr/share/doc/packages/aide</filename> "
+"after installing the <systemitem>aide</systemitem> package."
+msgstr ""
+
+#. Tag: para
+#: security_aide.xml:463
+#, no-c-format
+msgid ""
+"On the &aide; user mailing list at <link xlink:href=\"https://mailman.cs.tut."
+"fi/mailman/listinfo/aide\"></link>."
+msgstr ""

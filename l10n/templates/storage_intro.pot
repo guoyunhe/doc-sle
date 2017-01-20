@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: storage_intro.xml:12
+#, no-c-format
+msgid "About This Guide"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: storage_intro.xml:14
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: storage_intro.xml:19
+#, no-c-format
+msgid ""
+"This guide provides information about how to manage storage devices on "
+"&productname; &productnumber;. For information about partitioning and "
+"managing devices, see <xref linkend=\"cha.advdisk\"/>. This guide is "
+"intended for system administrators."
+msgstr ""
+
+#. Tag: para
+#: storage_intro.xml:25
+#, no-c-format
+msgid ""
+"Many chapters in this manual contain links to additional documentation "
+"resources. This includes additional documentation that is available on the "
+"system and documentation available on the Internet."
+msgstr ""
+
+#. Tag: para
+#: storage_intro.xml:30
+#, no-c-format
+msgid ""
+"For an overview of the documentation available for your product and the "
+"latest documentation updates, refer to <link xlink:href=\"http://www.suse."
+"com/doc\"></link>."
+msgstr ""

@@ -1,0 +1,846 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: tuning_cgroups.xml:23
+#, no-c-format
+msgid "Kernel Control Groups"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:26
+#, no-c-format
+msgid ""
+"Kernel Control Groups (abbreviated known as <quote>cgroups</quote>) are a "
+"kernel feature that allows aggregating or partitioning tasks (processes) and "
+"all their children into hierarchical organized groups. These hierarchical "
+"groups can be configured to show a specialized behavior that helps with "
+"tuning the system to make best use of available hardware and network "
+"resources."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:34
+#, no-c-format
+msgid ""
+"In the following sections, we often reference kernel documentation such as "
+"<filename>/usr/src/linux/Documentation/cgroups/</filename>. These files are "
+"part of the <systemitem>kernel-source</systemitem> package."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:40
+#, no-c-format
+msgid ""
+"This chapter is an overview. To use cgroups properly and to avoid "
+"performance implications, you must study the provided references."
+msgstr ""
+
+#. Tag: title
+#: tuning_cgroups.xml:63
+#, no-c-format
+msgid "Technical Overview and Definitions"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:65
+#, no-c-format
+msgid "The following terms are used in this chapter:"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:71
+#, no-c-format
+msgid "<quote>cgroup</quote> is another name for Control Groups."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:76
+#, no-c-format
+msgid ""
+"In a cgroup there is a set of tasks (processes) associated with a set of "
+"subsystems that act as parameters constituting an environment for the tasks."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:83
+#, no-c-format
+msgid ""
+"Subsystems provide the parameters that can be assigned and define CPU sets, "
+"freezer, or&mdash;more general&mdash;<quote>resource controllers</quote> for "
+"memory, disk I/O, network traffic, etc."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:90
+#, no-c-format
+msgid ""
+"cgroups are organized in a tree-structured hierarchy. There can be more than "
+"one hierarchy in the system. You use a different or alternate hierarchy to "
+"cope with specific situations."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:98
+#, no-c-format
+msgid ""
+"Every task running in the system is in exactly one of the cgroups in the "
+"hierarchy."
+msgstr ""
+
+#. Tag: title
+#: tuning_cgroups.xml:113
+#, no-c-format
+msgid "Scenario"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:115
+#, no-c-format
+msgid ""
+"See the following resource planning scenario for a better understanding "
+"(source: <filename>/usr/src/linux/Documentation/cgroups/cgroups.txt</"
+"filename>):"
+msgstr ""
+
+#. Tag: title
+#: tuning_cgroups.xml:122
+#, no-c-format
+msgid "Resource Planning"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:133
+#, no-c-format
+msgid ""
+"Web browsers such as Firefox will be part of the Web network class, while "
+"the NFS daemons such as (k)nfsd will be part of the NFS network class. On "
+"the other side, Firefox will share appropriate CPU and memory classes "
+"depending on whether a professor or student started it."
+msgstr ""
+
+#. Tag: title
+#: tuning_cgroups.xml:143
+#, no-c-format
+msgid "Control Group Subsystems"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:145
+#, no-c-format
+msgid ""
+"The following subsystems are available: <literal>cpuset</literal>, "
+"<literal>cpu</literal>, <literal>cpuacct</literal>, <literal>memory</"
+"literal>, <literal>devices</literal>, <literal>freezer</literal>, "
+"<literal>net_cls</literal>, <literal>net_prio</literal>, <literal>blkio</"
+"literal>, <literal>perf_event</literal>, and <literal>hugetlbt</literal>."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:182
+#, no-c-format
+msgid "Either mount each subsystem separately, for example:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_cgroups.xml:186
+#, no-c-format
+msgid ""
+"mkdir /cpuset /cpu\n"
+"mount -t cgroup -o cpuset      none /cpuset\n"
+"mount -t cgroup -o cpu,cpuacct none /cpu"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:188
+#, no-c-format
+msgid ""
+"or all subsystems in one go; you can use an arbitrary device name (for "
+"example <literal>none</literal>), which will appear in <filename>/proc/"
+"mounts</filename>, for example:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_cgroups.xml:194
+#, no-c-format
+msgid "mount -t cgroup none /sys/fs/cgroup"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:196
+#, no-c-format
+msgid "Some additional information on available subsystems:"
+msgstr ""
+
+#. Tag: term
+#: tuning_cgroups.xml:205
+#, no-c-format
+msgid "<literal>net_cls</literal> (Identification)"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:207
+#, no-c-format
+msgid ""
+"The Network classifier cgroup helps with providing identification for "
+"controlling processes such as Traffic Controller (tc) or Netfilter "
+"(iptables). These controller tools can act on tagged network packets."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:213
+#, no-c-format
+msgid ""
+"For more information, see <filename>/usr/src/linux/Documentation/cgroups/"
+"net_cls.txt</filename>."
+msgstr ""
+
+#. Tag: term
+#: tuning_cgroups.xml:250
+#, no-c-format
+msgid "<literal>net_prio</literal> (Identification)"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:252
+#, no-c-format
+msgid ""
+"The Network priority cgroup helps with setting the priority of network "
+"packets."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:256
+#, no-c-format
+msgid ""
+"For more information, see <filename>/usr/src/linux/Documentation/cgroups/"
+"net_prio.txt</filename>."
+msgstr ""
+
+#. Tag: term
+#: tuning_cgroups.xml:264
+#, no-c-format
+msgid "<literal>devices</literal> (Isolation)"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:266
+#, no-c-format
+msgid ""
+"A system administrator can provide a list of devices that can be accessed by "
+"processes under cgroups."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:274
+#, no-c-format
+msgid ""
+"It limits access to a device or a file system on a device to only tasks that "
+"belong to the specified cgroup. For more information, see <filename>/usr/src/"
+"linux/Documentation/cgroups/devices.txt</filename>."
+msgstr ""
+
+#. Tag: term
+#: tuning_cgroups.xml:283
+#, no-c-format
+msgid "<literal>freezer</literal> (Control)"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:285
+#, no-c-format
+msgid ""
+"The <literal>freezer</literal> subsystem is useful for high-performance "
+"computing clusters (HPC clusters). Use it to freeze (stop) all tasks in a "
+"group or to stop tasks, if they reach a defined checkpoint. For more "
+"information, see <filename>/usr/src/linux/Documentation/cgroups/freezer-"
+"subsystem.txt</filename>."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:292
+#, no-c-format
+msgid "Here are basic commands to use the freezer subsystem:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_cgroups.xml:295
+#, no-c-format
+msgid ""
+"mount -t cgroup -o freezer freezer /freezer\n"
+"# Create a child cgroup:\n"
+"mkdir /freezer/0\n"
+"# Put a task into this cgroup:\n"
+"echo $task_pid &gt; /freezer/0/tasks\n"
+"# Freeze it:\n"
+"echo FROZEN &gt; /freezer/0/freezer.state\n"
+"# Unfreeze (thaw) it:\n"
+"echo THAWED &gt; /freezer/0/freezer.state"
+msgstr ""
+
+#. Tag: term
+#: tuning_cgroups.xml:300
+#, no-c-format
+msgid "<literal>perf_event</literal> (Control)"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:302
+#, no-c-format
+msgid "<literal>perf_event</literal> collects performance data."
+msgstr ""
+
+#. Tag: term
+#: tuning_cgroups.xml:309
+#, no-c-format
+msgid "<literal>cpuset</literal> (Isolation)"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:311
+#, no-c-format
+msgid ""
+"Use <literal>cpuset</literal> to tie processes to system subsets of CPUs and "
+"memory (<quote>memory nodes</quote>). For an example, see <xref linkend="
+"\"sec.tuning.cgroups.usage.ex.cpusets\"/>."
+msgstr ""
+
+#. Tag: term
+#: tuning_cgroups.xml:320
+#, no-c-format
+msgid "<literal>cpuacct</literal> (Accounting)"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:322
+#, no-c-format
+msgid ""
+"The CPU accounting controller groups tasks using cgroups and accounts the "
+"CPU usage of these groups. For more information, see <filename>/usr/src/"
+"linux/Documentation/cgroups/cpuacct.txt</filename>."
+msgstr ""
+
+#. Tag: term
+#: tuning_cgroups.xml:331
+#, no-c-format
+msgid "<literal>memory</literal> (Resource Control)"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:335
+#, no-c-format
+msgid "Tracking or limiting memory usage of user space processes."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:341
+#, no-c-format
+msgid ""
+"Control swap usage by setting <literal>swapaccount=1</literal> as a kernel "
+"boot parameter."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:347
+#, no-c-format
+msgid "Limit LRU (Least Recently Used) pages."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:352
+#, no-c-format
+msgid "Anonymous and file cache."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:357
+#, no-c-format
+msgid "No limits for kernel memory."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:362
+#, no-c-format
+msgid "Maybe in another subsystem if needed."
+msgstr ""
+
+#. Tag: title
+#: tuning_cgroups.xml:369
+#, no-c-format
+msgid "Protection from Memory Pressure"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:370
+#, no-c-format
+msgid ""
+"Memory cgroup now offers a mechanism allowing easier workload opt-in "
+"isolation. Memory cgroup can define its so called low limit (<literal>memory."
+"low_limit_in_bytes</literal>), which works as a protection from memory "
+"pressure. For workloads that need to be isolated from outside memory "
+"management activity, the value should be set to the expected Resident Set "
+"Size (RSS) plus some head room. If a memory pressure condition triggers on "
+"the system and the particular group is still under its low limit, its memory "
+"is protected from reclaim. As a result, workloads outside of the cgroup do "
+"not need the aforementioned capping."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:384
+#, no-c-format
+msgid ""
+"For more information, see <filename>/usr/src/linux/Documentation/cgroups/"
+"memory.txt</filename>."
+msgstr ""
+
+#. Tag: term
+#: tuning_cgroups.xml:392
+#, no-c-format
+msgid "<literal>hugetlb</literal> (Resource Control)"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:394
+#, no-c-format
+msgid "The HugeTLB controller manages the memory allocated to huge pages."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:398
+#, no-c-format
+msgid ""
+"For more information, see <filename>/usr/src/linux/Documentation/cgroups/"
+"hugetlb.txt</filename>."
+msgstr ""
+
+#. Tag: term
+#: tuning_cgroups.xml:407
+#, no-c-format
+msgid "<literal>cpu</literal> (Control)"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:409
+#, no-c-format
+msgid ""
+"Share CPU bandwidth between groups with the group scheduling function of CFS "
+"(the scheduler). Mechanically complicated."
+msgstr ""
+
+#. Tag: term
+#: tuning_cgroups.xml:418
+#, no-c-format
+msgid "Blkio (Resource Control)"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:420
+#, no-c-format
+msgid ""
+"The Block IO controller is available as a disk I/O controller. With the "
+"blkio controller you can currently set policies for proportional bandwidth "
+"and for throttling."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:425
+#, no-c-format
+msgid ""
+"These are the basic commands to configure proportional weight division of "
+"bandwidth by setting weight values in <filename>blkio.weight</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_cgroups.xml:430
+#, no-c-format
+msgid ""
+"# Setup in /sys/fs/cgroup\n"
+"mkdir /sys/fs/cgroup/blkio\n"
+"mount -t cgroup -o blkio none /sys/fs/cgroup/blkio\n"
+"# Start two cgroups\n"
+"mkdir -p /sys/fs/cgroup/blkio/group1 /sys/fs/cgroup/blkio/group2\n"
+"# Set weights\n"
+"echo 1000 &gt; /sys/fs/cgroup/blkio/group1/blkio.weight\n"
+"echo  500 &gt; /sys/fs/cgroup/blkio/group2/blkio.weight\n"
+"# Write the PIDs of the processes to be controlled to the\n"
+"# appropriate groups\n"
+"<replaceable>command1</replaceable> &amp;\n"
+"echo $! &gt; /sys/fs/cgroup/blkio/group1/tasks\n"
+"\n"
+"<replaceable>command2</replaceable> &amp;\n"
+"echo $! &gt; /sys/fs/cgroup/blkio/group2/tasks"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:431
+#, no-c-format
+msgid ""
+"These are the basic commands to configure throttling or upper limit policy "
+"by setting values in <literal>blkio.throttle.read_bps_device</literal> for "
+"reads and <literal>blkio.throttle.write_bps_device</literal> for writes:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_cgroups.xml:437
+#, no-c-format
+msgid ""
+"# Setup in /sys/fs/cgroup\n"
+"mkdir /sys/fs/cgroup/blkio\n"
+"mount -t cgroup -o blkio none /sys/fs/cgroup/blkio\n"
+"# Bandwidth rate of a device for the root group; format:\n"
+"# &lt;major&gt;:&lt;minor&gt;  &lt;byes_per_second&gt;\n"
+"echo \"8:16  1048576\" &gt; /sys/fs/cgroup/blkio/blkio.throttle."
+"read_bps_device"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:438
+#, no-c-format
+msgid ""
+"For more information about caveats, usage scenarios, and additional "
+"parameters, see <filename>/usr/src/linux/Documentation/cgroups/blkio-"
+"controller.txt</filename>."
+msgstr ""
+
+#. Tag: title
+#: tuning_cgroups.xml:454
+#, no-c-format
+msgid "Using Controller Groups"
+msgstr ""
+
+#. Tag: title
+#: tuning_cgroups.xml:461
+#, no-c-format
+msgid "Prerequisites"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:462
+#, no-c-format
+msgid "To conveniently use cgroups, install the following additional packages:"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:467
+#, no-c-format
+msgid ""
+"<systemitem>libcgroup-tools</systemitem> &mdash; basic user space tools to "
+"simplify resource management"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:473
+#, no-c-format
+msgid ""
+"<systemitem>libcgroup1</systemitem> &mdash; control groups management library"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:479
+#, no-c-format
+msgid ""
+"<systemitem>cpuset</systemitem> &mdash; contains the <command>cset</command> "
+"to manipulate cpusets"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:485
+#, no-c-format
+msgid "<systemitem>libcpuset1</systemitem> &mdash; C API to cpusets"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:490
+#, no-c-format
+msgid ""
+"<systemitem>kernel-source</systemitem> &mdash; only needed for documentation "
+"purposes"
+msgstr ""
+
+#. Tag: title
+#: tuning_cgroups.xml:500
+#, no-c-format
+msgid "Example: Cpusets"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:501
+#, no-c-format
+msgid "With the command line proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:506
+#, no-c-format
+msgid ""
+"To determine the number of CPUs and memory nodes see <filename>/proc/"
+"cpuinfo</filename> and <filename>/proc/zoneinfo</filename>."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:513
+#, no-c-format
+msgid ""
+"Create the cpuset hierarchy as a virtual file system (source: <filename>/usr/"
+"src/linux/Documentation/cgroups/cpusets.txt</filename>):"
+msgstr ""
+
+#. Tag: screen
+#: tuning_cgroups.xml:517
+#, no-c-format
+msgid ""
+"mount -t cgroup -ocpuset cpuset /sys/fs/cgroup/cpuset\n"
+"cd /sys/fs/cgroup/cpuset\n"
+"mkdir Charlie\n"
+"cd Charlie\n"
+"# List of CPUs in this cpuset:\n"
+"echo 2-3 &gt; cpuset.cpus\n"
+"# List of memory nodes in this cpuset:\n"
+"echo 1 &gt; cpuset.mems\n"
+"echo $$ &gt; tasks\n"
+"# The subshell 'sh' is now running in cpuset Charlie\n"
+"# The next line should display '/Charlie'\n"
+"cat /proc/self/cpuset"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:520
+#, no-c-format
+msgid "Remove the cpuset using shell commands:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_cgroups.xml:523
+#, no-c-format
+msgid "rmdir /sys/fs/cgroup/cpuset/Charlie"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:524
+#, no-c-format
+msgid ""
+"This fails as long as this cpuset is in use. First, you must remove the "
+"inside cpusets or tasks (processes) that belong to it. Check it with:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_cgroups.xml:529
+#, no-c-format
+msgid "cat /sys/fs/cgroup/cpuset/Charlie/tasks"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:532
+#, no-c-format
+msgid ""
+"For background information and additional configuration flags, see "
+"<filename>/usr/src/linux/Documentation/cgroups/cpusets.txt</filename>."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:536
+#, no-c-format
+msgid "With the <command>cset</command> tool, proceed as follows:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_cgroups.xml:539
+#, no-c-format
+msgid ""
+"# Determine the number of CPUs and memory nodes\n"
+"cset set --list\n"
+"# Creating the cpuset hierarchy\n"
+"cset set --cpu=2-3 --mem=1 --set=Charlie\n"
+"# Starting processes in a cpuset\n"
+"cset proc --set Charlie --exec -- stress -c 1 &amp;\n"
+"# Moving existing processes to a cpuset\n"
+"cset proc --move --pid <replaceable>PID</replaceable> --toset=Charlie\n"
+"# List task in a cpuset\n"
+"cset proc --list --set Charlie\n"
+"# Removing a cpuset\n"
+"cset set --destroy Charlie"
+msgstr ""
+
+#. Tag: title
+#: tuning_cgroups.xml:543
+#, no-c-format
+msgid "Example: cgroups"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:544
+#, no-c-format
+msgid "Using shell commands, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:549
+#, no-c-format
+msgid "Create the cgroups hierarchy:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_cgroups.xml:552
+#, no-c-format
+msgid ""
+"mount -t cgroup cgroup /sys/fs/cgroup\n"
+"cd /sys/fs/cgroup/cpuset/cgroup\n"
+"mkdir priority\n"
+"cd priority\n"
+"cat cpu.shares"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:555
+#, no-c-format
+msgid "Understanding cpu.shares:"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:560
+#, no-c-format
+msgid ""
+"1024 is the default (for more information, see <filename>/Documentation/"
+"scheduler/sched-design-CFS.txt</filename>) = 50% usage"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:567
+#, no-c-format
+msgid "1524 = 60% usage"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:572
+#, no-c-format
+msgid "2048 = 67% usage"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:577
+#, no-c-format
+msgid "512 = 40% usage"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:584
+#, no-c-format
+msgid "Changing cpu.shares"
+msgstr ""
+
+#. Tag: screen
+#: tuning_cgroups.xml:587
+#, no-c-format
+msgid "echo 1024 &gt; cpu.shares"
+msgstr ""
+
+#. Tag: title
+#: tuning_cgroups.xml:595
+#, no-c-format
+msgid "Setting Directory and File Permissions"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:596
+#, no-c-format
+msgid ""
+"This is a simple example. Use the following in <filename>/etc/cgconfig.conf</"
+"filename>:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_cgroups.xml:600
+#, no-c-format
+msgid ""
+"group foo {\n"
+"        perm {\n"
+"                task {\n"
+"                        uid = root;\n"
+"                        gid = users;\n"
+"                        fperm = 660;\n"
+"                }\n"
+"                admin {\n"
+"                        uid = root;\n"
+"                        gid = root;\n"
+"                        fperm = 600;\n"
+"                        dperm = 750;\n"
+"                }\n"
+"        }\n"
+"}\n"
+"\n"
+"mount {\n"
+"        cpu = /mnt/cgroups/cpu;\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:601
+#, no-c-format
+msgid ""
+"Then start the cgconfig service and <command>stat /mnt/cgroups/cpu/foo/"
+"tasks</command> which should show the permissions mask <literal>660</"
+"literal> with <literal>root</literal> as an owner and <literal>users</"
+"literal> as a group. <command>stat /mnt/cgroups/cpu/foo/</command> should be "
+"<literal>750</literal> and all files (but <filename>tasks</filename>) should "
+"have the mask <literal>600</literal>. Note that <literal>fperm</literal> is "
+"applied on top of existing file permissions as a mask."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:611
+#, no-c-format
+msgid ""
+"For more information, see the <systemitem>cgconfig.conf</systemitem> man "
+"page."
+msgstr ""
+
+#. Tag: title
+#: tuning_cgroups.xml:636
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:640
+#, no-c-format
+msgid ""
+"Kernel documentation (package <systemitem>kernel-source</systemitem>): files "
+"in <filename>/usr/src/linux/Documentation/cgroups</filename>."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:646
+#, no-c-format
+msgid ""
+"<link xlink:href=\"http://lwn.net/Articles/604609/\"></link>&mdash;Brown, "
+"Neil: Control Groups Series (2014, 7 parts)."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:652
+#, no-c-format
+msgid ""
+"<link xlink:href=\"http://lwn.net/Articles/243795/\"></link>&mdash;Corbet, "
+"Jonathan: Controlling memory use in containers (2007)."
+msgstr ""
+
+#. Tag: para
+#: tuning_cgroups.xml:658
+#, no-c-format
+msgid ""
+"<link xlink:href=\"http://lwn.net/Articles/236038/\"></link>&mdash;Corbet, "
+"Jonathan: Process containers (2007)."
+msgstr ""

@@ -1,0 +1,295 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: vt_clocksettings.xml:9
+#, no-c-format
+msgid "&vmguest; Clock Settings"
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:12
+#, no-c-format
+msgid ""
+"Keeping the correct time in a &vmguest; is one of the more difficult aspects "
+"of virtualization. Keeping the correct time is especially important for "
+"network applications and is also a prerequisite to do a live migration of a "
+"&vmguest;."
+msgstr ""
+
+#. Tag: title
+#: vt_clocksettings.xml:25
+#, no-c-format
+msgid "Timekeeping on the &vmhost;"
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:26
+#, no-c-format
+msgid ""
+"It is strongly recommended to ensure the &vmhost; keeps the correct time as "
+"well, for example, by using NTP (see <xref linkend=\"cha.netz.xntp\"/> for "
+"more information)."
+msgstr ""
+
+#. Tag: title
+#: vt_clocksettings.xml:33
+#, no-c-format
+msgid "&kvm;: Using <systemitem>kvm_clock</systemitem>"
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:35
+#, no-c-format
+msgid ""
+"&kvm; provides a paravirtualized clock which is currently supported by &sls; "
+"10 SP3 and newer and RedHat Enterprise Linux 5.4 and newer via the "
+"<systemitem>kvm_clock</systemitem> driver. It is strongly recommended to use "
+"<systemitem>kvm_clock</systemitem> when available."
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:42
+#, no-c-format
+msgid ""
+"Use the following command inside a &vmguest; running Linux to check whether "
+"the driver <systemitem>kvm_clock</systemitem> has been loaded:"
+msgstr ""
+
+#. Tag: screen
+#: vt_clocksettings.xml:47
+#, no-c-format
+msgid ""
+"&prompt.user;sudo dmesg | grep kvm-clock\n"
+"[    0.000000] kvm-clock: cpu 0, msr 0:7d3a81, boot clock\n"
+"[    0.000000] kvm-clock: cpu 0, msr 0:1206a81, primary cpu clock\n"
+"[    0.012000] kvm-clock: cpu 1, msr 0:1306a81, secondary cpu clock\n"
+"[    0.160082] Switching to clocksource kvm-clock"
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:49
+#, no-c-format
+msgid ""
+"To check which clock source is currently used, run the following command in "
+"the &vmguest;. It should output <literal>kvm-clock</literal>:"
+msgstr ""
+
+#. Tag: screen
+#: vt_clocksettings.xml:54
+#, no-c-format
+msgid "cat /sys/devices/system/clocksource/clocksource0/current_clocksource"
+msgstr ""
+
+#. Tag: title
+#: vt_clocksettings.xml:57
+#, no-c-format
+msgid "<literal>kvm-clock</literal> and NTP"
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:59
+#, no-c-format
+msgid ""
+"When using <literal>kvm-clock</literal>, it is recommended to use NTP in the "
+"&vmguest;, as well. Using NTP on the &vmhost; is also recommended."
+msgstr ""
+
+#. Tag: title
+#: vt_clocksettings.xml:67
+#, no-c-format
+msgid "Other Timekeeping Methods"
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:68
+#, no-c-format
+msgid ""
+"The paravirtualized <literal>kvm-clock</literal> is currently not for "
+"Windows* operating systems. For Windows*, use the <literal>Windows Time "
+"Service Tools</literal> for time synchronization (see <link xlink:href="
+"\"http://technet.microsoft.com/en-us/library/cc773263%28WS.10%29.aspx\"></"
+"link> for more information)."
+msgstr ""
+
+#. Tag: title
+#: vt_clocksettings.xml:90
+#, no-c-format
+msgid "&xen; Virtual Machine Clock Settings"
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:92
+#, no-c-format
+msgid ""
+"When booting, virtual machines get their initial clock time from their host. "
+"After getting their initial clock time, fully virtual machines manage their "
+"time independently from the host. Paravirtual machines manage clock time "
+"according to their independent wallclock setting. If the independent "
+"wallclock is enabled, the virtual machine manages its time independently and "
+"does not synchronize with the host. If the independent wallclock is "
+"disabled, the virtual machine periodically synchronizes its time with the "
+"host clock."
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:104
+#, no-c-format
+msgid ""
+"OES 2 NetWare virtual machines manage clock time independently after "
+"booting. They do not synchronize with the host clock time."
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:110
+#, no-c-format
+msgid ""
+"If a guest operating system is configured for NTP and the virtual machine's "
+"independent wallclock setting is disabled, it will still periodically "
+"synchronize its time with the host time. This dual type of configuration can "
+"result in time drift between virtual machines that need to be synchronized. "
+"To effectively use an external time source, such as NTP, for time "
+"synchronization on a virtual machine, the virtual machine's independent "
+"wallclock setting must be enabled (set to <command>1</command>). Otherwise, "
+"it will continue to synchronize its time with its host."
+msgstr ""
+
+#. Tag: title
+#: vt_clocksettings.xml:123
+#, no-c-format
+msgid "Viewing the Independent Wallclock Setting"
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:125
+#, no-c-format
+msgid ""
+"Log in to the virtual machine’s operating system as <systemitem>root</"
+"systemitem>."
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:131
+#, no-c-format
+msgid "In the virtual machine environment, enter"
+msgstr ""
+
+#. Tag: screen
+#: vt_clocksettings.xml:134
+#, no-c-format
+msgid "<command>cat /proc/sys/xen/independent_wallclock</command>"
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:137
+#, no-c-format
+msgid ""
+"<command>0</command> means that the virtual machine is getting its time from "
+"the host and is not using independent wallclock."
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:143
+#, no-c-format
+msgid ""
+"<command>1</command> means that the virtual machine is using independent "
+"wallclock and managing its time independently from the host."
+msgstr ""
+
+#. Tag: title
+#: vt_clocksettings.xml:154
+#, no-c-format
+msgid "Permanently Changing the Independent Wallclock Setting"
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:156 vt_clocksettings.xml:193
+#, no-c-format
+msgid ""
+"Log in to the virtual machine environment as <systemitem>root</systemitem>."
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:162
+#, no-c-format
+msgid "Edit the virtual machine’s <filename>/etc/sysctl.conf</filename> file."
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:168 vt_clocksettings.xml:209
+#, no-c-format
+msgid "Add or change the following entry:"
+msgstr ""
+
+#. Tag: screen
+#: vt_clocksettings.xml:171 vt_clocksettings.xml:212
+#, no-c-format
+msgid "xen.independent_wallclock=1"
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:172 vt_clocksettings.xml:203 vt_clocksettings.xml:213
+#, no-c-format
+msgid ""
+"Enter <command>1</command> to enable or <command>0</command> to disable the "
+"wallclock setting."
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:178
+#, no-c-format
+msgid "Save the file and reboot the virtual machine operating system."
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:181
+#, no-c-format
+msgid ""
+"While booting, a virtual machine gets its initial clock time from the host. "
+"Then, if the wallclock setting is set to 1 in the <filename>sysctl.conf</"
+"filename> file, it manages its clock time independently and does not "
+"synchronize with the host clock time."
+msgstr ""
+
+#. Tag: title
+#: vt_clocksettings.xml:191
+#, no-c-format
+msgid "Temporarily Changing the Independent Wallclock Setting"
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:199
+#, no-c-format
+msgid "Enter the following command:"
+msgstr ""
+
+#. Tag: screen
+#: vt_clocksettings.xml:202
+#, no-c-format
+msgid "echo \"1\" &gt; /proc/sys/xen/independent_wallclock"
+msgstr ""
+
+#. Tag: para
+#: vt_clocksettings.xml:217
+#, no-c-format
+msgid ""
+"Although the current status of the independent wallclock changes "
+"immediately, its clock time might not be immediately synchronized. The "
+"setting persists until the virtual machine reboots. Then, it gets its "
+"initial clock time from the host and uses the independent wallclock "
+"according to the setting specified in the <filename>sysctl.conf</filename> "
+"file."
+msgstr ""

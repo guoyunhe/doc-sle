@@ -1,0 +1,542 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: storage_docupdates.xml:10
+#, no-c-format
+msgid "Documentation Updates"
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:17
+#, no-c-format
+msgid "This chapter lists content changes for this document."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:20
+#, no-c-format
+msgid "This manual was updated on the following dates:"
+msgstr ""
+
+#. Tag: title
+#: storage_docupdates.xml:47
+#, no-c-format
+msgid "November 2016 (Initial Release of &productname; 12 SP2)"
+msgstr ""
+
+#. Tag: term
+#: storage_docupdates.xml:55
+#, no-c-format
+msgid "General Changes to this Guide"
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:59
+#, no-c-format
+msgid "Added <xref linkend=\"cha.multitiercache\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:73
+#, no-c-format
+msgid ""
+"Added a warning about the support status of root file system conversions to "
+"<xref linkend=\"sec.filesystems.major.btrfs.migrate\"/> (Fate #320870)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:80
+#, no-c-format
+msgid ""
+"Fixed values for nullifying a quota in <xref linkend=\"sec.filesystems.major."
+"btrfs.quota\"/> (Doc Comment #30027)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:88
+#, no-c-format
+msgid ""
+"Added <xref linkend=\"sec.filesystems.major.btrfs.s-r\"/> (Fate #313516)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:102 storage_docupdates.xml:158
+#, no-c-format
+msgid ""
+"Added <xref linkend=\"sec.lvm.cli.lvmcache\"/> (<link xlink:href=\"https://"
+"bugzilla.suse.com/show_bug.cgi?id=948193\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:117
+#, no-c-format
+msgid ""
+"Replaced 'client' with 'initiator' to match the updated GUI in <xref linkend="
+"\"sec.iscsi.initiator\"/> (Fate #319293)."
+msgstr ""
+
+#. Tag: term
+#: storage_docupdates.xml:126 storage_docupdates.xml:291
+#: storage_docupdates.xml:603
+#, no-c-format
+msgid "Bugfixes"
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:130
+#, no-c-format
+msgid ""
+"Revised statement on software RAID for cluster file systems, which can now "
+"be set up using Cluster MD ((<link xlink:href=\"https://bugzilla.suse.com/"
+"show_bug.cgi?id=990820\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:136
+#, no-c-format
+msgid ""
+"Removed references to <filename>multipath.conf</filename> templates which "
+"are no longer shipped with the <package>multipath-tools</package> package "
+"(<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?id=989206\"></"
+"link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:143
+#, no-c-format
+msgid ""
+"Replaced wrong title 'iSCSI LIO Target' with 'iSCSI Initiator' in <xref "
+"linkend=\"sec.iscsi.initiator.yast.configuration\"/> (<link xlink:href="
+"\"https://bugzilla.suse.com/show_bug.cgi?id=968898\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:150
+#, no-c-format
+msgid ""
+"Added a sentence about the need for different passwords for incoming and "
+"outgoing authentication in <xref linkend=\"sec.iscsi.target.authenticate\"/> "
+"(<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?id=977173\"></"
+"link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:164
+#, no-c-format
+msgid ""
+"Fixed statements about Ext file systems online/offline resizing capabilities "
+"(<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?id=983991\"></"
+"link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:171
+#, no-c-format
+msgid ""
+"Added note about where to place <filename>/boot</filename> for an LVM root "
+"file system (<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
+"id=1000631\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:178
+#, no-c-format
+msgid ""
+"Added missing entry for NFSv4 (<link xlink:href=\"https://bugzilla.suse.com/"
+"show_bug.cgi?id=998772\"></link>)."
+msgstr ""
+
+#. Tag: title
+#: storage_docupdates.xml:188
+#, no-c-format
+msgid "December 2015 (Initial Release of &productname; 12 SP1)"
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:202
+#, no-c-format
+msgid ""
+"Mentioned that subvolumes with the option <literal>no copy on write</"
+"literal> for <filename>/var/lib/mariadb</filename>, <filename>/var/lib/"
+"pgsql</filename>, and <filename>/var/lib/libvirt/images</filename> are "
+"created by default to avoid extensive fragmenting with Btrfs."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:211
+#, no-c-format
+msgid ""
+"Mentioned compression with Btrfs and its implications, see <xref linkend="
+"\"sec.filesystems.major.btrfs.compress\"/> (Fate #316463)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:219 storage_docupdates.xml:295
+#, no-c-format
+msgid ""
+"Added <xref linkend=\"sect.filesystems.trouble.trim\"/> (<link xlink:href="
+"\"https://bugzilla.suse.com/show_bug.cgi?id=951783\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:234
+#, no-c-format
+msgid ""
+"Added a tip on the option <option>--resizefs</option> for the commands "
+"<command>lvextend</command>, <command>lvresize</command>, and "
+"<command>lvreduce</command> to <xref linkend=\"sec.lvm.cli.resize\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:250
+#, no-c-format
+msgid "Added <xref linkend=\"sec.raid.trouble.autorecovery\"/> (Fate #316381)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:264
+#, no-c-format
+msgid ""
+"Updated commands to restart iSCSI service and target in <xref linkend=\"sec."
+"isns.domains.iscsi_nodes\"/> (Fate #317929)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:280
+#, no-c-format
+msgid ""
+"Fixed a wrong command in <xref linkend=\"sec.multipath.best_practice.scanpart"
+"\"/> (Doc Comment #27121)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:301
+#, no-c-format
+msgid ""
+"<filename>/var/lib/open-iscsi</filename> moved to <filename>to /etc/iscsi.</"
+"filename> (<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
+"id=952469\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:307
+#, no-c-format
+msgid ""
+"KIWI build fails because of noudevsync (<link xlink:href=\"https://bugzilla."
+"suse.com/show_bug.cgi?id=943298\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:313
+#, no-c-format
+msgid ""
+"VM <literal>volume_list</literal> description error (<link xlink:href="
+"\"https://bugzilla.suse.com/show_bug.cgi?id=951321\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:318
+#, no-c-format
+msgid ""
+"Removed hint on restriction of 256 logical volumes (only applies to lvm1) "
+"(<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?id=947941\"></"
+"link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:325
+#, no-c-format
+msgid ""
+"Replaced <quote>memory space</quote> with <quote>storage space</quote> "
+"(<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?id=948174\"></"
+"link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:331
+#, no-c-format
+msgid ""
+"Added a tip on the option <option>--resizefs</option> for LVM resizing "
+"commands (<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
+"id=947952\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:338
+#, no-c-format
+msgid ""
+"<systemitem class=\"daemon\">lvmetad</systemitem> is Enabled by Default on "
+"SLE 12 SP1 (<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
+"id=948178\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:345
+#, no-c-format
+msgid ""
+"Corrected LVM introduction (<link xlink:href=\"https://bugzilla.suse.com/"
+"show_bug.cgi?id=947949\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:351
+#, no-c-format
+msgid ""
+"Removed a duplicated paragraph on thinly provisioned LVM (<link xlink:href="
+"\"https://bugzilla.suse.com/show_bug.cgi?id=947484\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:357
+#, no-c-format
+msgid ""
+"<filename>/boot</filename> may reside on RAID 1 in <xref linkend=\"cha."
+"raidroot\"/> (<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
+"id=939197\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:365
+#, no-c-format
+msgid ""
+"Replaced <guimenu>Login</guimenu> with <guimenu>Connect</guimenu> in <xref "
+"linkend=\"sec.iscsi.initiator.yast.discovered\"/> (<link xlink:href="
+"\"https://bugzilla.suse.com/show_bug.cgi?id=939529\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:372
+#, no-c-format
+msgid ""
+"<literal>use_lvmetad</literal>, Change Does not Describe Required Target "
+"Value (<link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
+"id=939519\"></link>)."
+msgstr ""
+
+#. Tag: title
+#: storage_docupdates.xml:384
+#, no-c-format
+msgid "February 2015 (Documentation Maintenance Update)"
+msgstr ""
+
+#. Tag: term
+#: storage_docupdates.xml:388
+#, no-c-format
+msgid "General"
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:392
+#, no-c-format
+msgid "Completely restructured the manual by introducing parts."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:397
+#, no-c-format
+msgid "Completely revised the complete guide."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:402
+#, no-c-format
+msgid "Shortened the majority of procedures."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:407
+#, no-c-format
+msgid ""
+"The <systemitem>cciss</systemitem> driver has been replaced with the "
+"<systemitem>hpsa</systemitem> driver. Changed all affected paragraphs "
+"accordingly (Fate #316683)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:422
+#, no-c-format
+msgid "Added <xref linkend=\"sec.filesystems.major.btrfs.suse\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:427
+#, no-c-format
+msgid ""
+"Added <xref linkend=\"sec.filesystems.major.btrfs.quota\"/> (Fate #315690)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:433
+#, no-c-format
+msgid ""
+"Added <xref linkend=\"sec.filesystems.major.btrfs.deduplication\"/> (Fate "
+"#316317)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:439
+#, no-c-format
+msgid ""
+"Added ReiserFs to the list of file systems that can be converted to Btrfs "
+"(Fate #313096)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:445
+#, no-c-format
+msgid ""
+"Added a note on the new XFS on-disk format to <xref linkend=\"sec."
+"filesystems.major.prealloc\"/> (Fate #317042)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:451
+#, no-c-format
+msgid "Added <xref linkend=\"sec.filesystems.major.ext4\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:456
+#, no-c-format
+msgid ""
+"Added a note about the support status of ReiserFs to <xref linkend=\"sec."
+"filesystems.major.reiser\"/> (Fate #313799)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:470
+#, no-c-format
+msgid "Added <xref linkend=\"sec.resize_fs.usecases\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:475
+#, no-c-format
+msgid "Added <xref linkend=\"sec.resize_fs.btrfs\"/> (Fate #310777)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:480
+#, no-c-format
+msgid "Added <xref linkend=\"sec.resize_fs.xfs\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:493 storage_docupdates.xml:518
+#, no-c-format
+msgid ""
+"Updated all parts dealing with the &yast; Partitioner, because of a new "
+"design and workflow."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:499
+#, no-c-format
+msgid ""
+"Added instructions on how to list physical volumes used by logical volumes "
+"to <xref linkend=\"sec.lvm.vg_resize\"/> (Fate #316074)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:505
+#, no-c-format
+msgid "Added <xref linkend=\"sec.lvm.cli.lvmetad\"/> (Fate #314556)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:524
+#, no-c-format
+msgid "Added <xref linkend=\"sec.raid.yast.names\"/> (Fate #315590)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:537
+#, no-c-format
+msgid ""
+"Removed RAID&nbsp;6 from this chapter, since setting up RAID&nbsp;6 arrays "
+"is now supported by the &yast; Partitioner."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:543
+#, no-c-format
+msgid "Added <xref linkend=\"sec.raid10.complex\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:556
+#, no-c-format
+msgid ""
+"Removed all discovery domain set content, since this is no longer supported "
+"by open-isns."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:570
+#, no-c-format
+msgid "Replaced iSCSI Target with iSCSI LIO Target."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:583
+#, no-c-format
+msgid "Restructured the whole chapter."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:588
+#, no-c-format
+msgid ""
+"Removed <literal>prio_callout</literal> from <xref linkend=\"sec.multipath."
+"policies_failover.prio\"/>, since it is no longer supported."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:595
+#, no-c-format
+msgid "Added <xref linkend=\"sec.multipath.best_practice\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:607
+#, no-c-format
+msgid ""
+"Replace ReiserFS by Ext3 for Shrinking LV (<link xlink:href=\"https://"
+"bugzilla.suse.com/show_bug.cgi?id=884287\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:613
+#, no-c-format
+msgid ""
+"System Drops Into Emergency Shell After Enabling Multipath (<link xlink:href="
+"\"https://bugzilla.suse.com/show_bug.cgi?id=889317/\"></link>)."
+msgstr ""
+
+#. Tag: para
+#: storage_docupdates.xml:619
+#, no-c-format
+msgid ""
+"There is no iSCSI Target in the Package List (<link xlink:href=\"https://"
+"bugzilla.suse.com/show_bug.cgi?id=905239\"></link>)."
+msgstr ""
+
+#. Tag: title
+#: storage_docupdates.xml:630
+#, no-c-format
+msgid "October 2014 (Initial Release of &productname; 12)"
+msgstr ""

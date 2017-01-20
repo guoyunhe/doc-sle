@@ -1,0 +1,1102 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: tuning_perfmon.xml:23
+#, no-c-format
+msgid "Perfmon2&mdash;Hardware-Based Performance Monitoring"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:26
+#, no-c-format
+msgid ""
+"Perfmon2 is a standardized, generic interface to access the performance "
+"monitoring unit (PMU) of a processor. It is portable across all PMU models "
+"and architectures, supports system-wide and per-thread monitoring, counting "
+"and sampling."
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:39
+#, no-c-format
+msgid "Conceptual Overview"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:41
+#, no-c-format
+msgid "The following subsections give you a brief overview about Perfmon."
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:46
+#, no-c-format
+msgid "Perfmon2 Structure"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:47
+#, no-c-format
+msgid ""
+"Performance monitoring is <quote>the action of collecting information "
+"related to how an application or system performs</quote>. The information "
+"can be obtained from the code or the CPU/chipset."
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:52
+#, no-c-format
+msgid ""
+"Modern processors contain a performance monitoring unit (PMU). The design "
+"and functionality of a PMU is CPU specific: for example, the number of "
+"registers, counters and features supported will vary by CPU implementation."
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:58
+#, no-c-format
+msgid ""
+"The Perfmon interface is designed to be generic, flexible and extensible. It "
+"can monitor at the program (thread) or system levels. In either mode, it is "
+"possible to count or sample your profile information. This uniformity makes "
+"it easier to write portable tools. <xref linkend=\"fig.tuning.perfmon2.arch"
+"\"/> gives an overview."
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:66
+#, no-c-format
+msgid "Architecture of perfmon2"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:76
+#, no-c-format
+msgid ""
+"Each PMU model consists of a set of registers: the performance monitor "
+"configuration (PMC) and the performance monitor data (PMD). Only PMCs are "
+"writeable, but both can be read. These registers store configuration "
+"information and data."
+msgstr ""
+
+#. Tag: remark
+#: tuning_perfmon.xml:82
+#, no-c-format
+msgid "TODO FUTURE (2010-04-27): Discuss libpfm"
+msgstr ""
+
+#. Tag: remark
+#: tuning_perfmon.xml:83
+#, no-c-format
+msgid "toms 2010-04-15: Mention here /sys/kernel/perfmon/*?"
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:87
+#, no-c-format
+msgid "Sampling and Counting"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:88
+#, no-c-format
+msgid ""
+"Perfmon2 supports two modes where you can run your profiling: sampling or "
+"counting."
+msgstr ""
+
+#. Tag: remark
+#: tuning_perfmon.xml:92
+#, no-c-format
+msgid ""
+"2010-04-27: From TonyJ: Except perfmon doesn'r really support time based "
+"sampling, you can emulate it by using an event that has a correlation to "
+"time: http://www.mail-archive.com/perfmon2-devel@lists.sourceforge.net/"
+"msg01067.html"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:97
+#, no-c-format
+msgid ""
+"<emphasis>Sampling</emphasis> is usually expressed by an interval of time "
+"(time-based) or an occurance of a definied number of events (event-based). "
+"Perfmon indirectly supports time-based sampling by using an event-based "
+"sample with constant correlation to time (for example, "
+"<literal>unhalted_reference_cycles</literal>.)"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:104
+#, no-c-format
+msgid ""
+"In contrast, <emphasis>Counting</emphasis> is expressed in terms of a number "
+"of occurances of an event."
+msgstr ""
+
+#. Tag: remark
+#: tuning_perfmon.xml:107
+#, no-c-format
+msgid "Is counting the same than Event-Based Sampling (EBS)?"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:110
+#, no-c-format
+msgid ""
+"Both methods store their information into a <emphasis>sample</emphasis>. "
+"This sample contains information about, for example, where a thread was or "
+"instruction pointers."
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:115
+#, no-c-format
+msgid ""
+"The following example demonstrates the counting of the "
+"<literal>CPU_OP_CYCLES</literal> event and the sampling of this event, "
+"generating a sample per 100000 occurances of the event:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:120
+#, no-c-format
+msgid ""
+"pfmon --no-cmd-output -e CPU_OP_CYCLES_ALL /bin/ls\n"
+"1306604 CPU_OP_CYCLES_ALL"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:121
+#, no-c-format
+msgid ""
+"The following command gives the count of a specific function and the "
+"procentual amount of the total cycles:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:125
+#, no-c-format
+msgid ""
+"pfmon --no-cmd-output --short-smpl-periods=100000   -e CPU_OP_CYCLES_ALL /"
+"bin/ls\n"
+"# results for [28119:28119&lt;-[28102]] (/bin/ls)\n"
+"# total samples          : 12\n"
+"# total buffer overflows : 0\n"
+"#\n"
+"#                   event00\n"
+"#     counts   %self    %cum          code addr\n"
+"           1   8.33%   8.33% 0x2000000000007180\n"
+"           1   8.33%  16.67% 0x20000000000195a0\n"
+"           1   8.33%  25.00% 0x2000000000019260\n"
+"           1   8.33%  33.33% 0x2000000000014e60\n"
+"           1   8.33%  41.67% 0x20000000001f38c0\n"
+"           1   8.33%  50.00% 0x20000000001ea481\n"
+"           1   8.33%  58.33% 0x200000000020b260\n"
+"           1   8.33%  66.67% 0x2000000000203490\n"
+"           1   8.33%  75.00% 0x2000000000203360\n"
+"           1   8.33%  83.33% 0x2000000000203440\n"
+"           1   8.33%  91.67% 0x4000000000002690\n"
+"           1   8.33% 100.00% 0x20000000001cfdf1"
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:129
+#, no-c-format
+msgid "Installation"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:131
+#, no-c-format
+msgid "To use Perfmon2, first check the following preconditions:"
+msgstr ""
+
+#. Tag: term
+#: tuning_perfmon.xml:137
+#, no-c-format
+msgid "&sle; 11"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:139
+#, no-c-format
+msgid ""
+"Supported architectures are IA64, x86_64. The package <systemitem class="
+"\"resource\">perf</systemitem> (Performance Counters for Linux) is the "
+"supported tool for x86 and PPC64"
+msgstr ""
+
+#. Tag: term
+#: tuning_perfmon.xml:147
+#, no-c-format
+msgid "&sle; 11 SP1"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:149
+#, no-c-format
+msgid "Supported architecture is IA64 only"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:156
+#, no-c-format
+msgid ""
+"The <command>pfmon</command> on &sle; 11 supports the following processors "
+"(taken from <filename>/usr/share/doc/packages/pfmon/README</filename>):"
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:163
+#, no-c-format
+msgid "Supported Processors"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:168
+#, no-c-format
+msgid "Model"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:173
+#, no-c-format
+msgid "Processor"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:182
+#, no-c-format
+msgid "Intel IA-64"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:187
+#, no-c-format
+msgid ""
+"Itanium (Merced), Itanium 2 (McKinley, Madison, Deerfield), Itanium 2 "
+"9000/9100 (Montecito, Montvale) and Generic"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:195
+#, no-c-format
+msgid "AMD X86"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:200
+#, no-c-format
+msgid "Opteron (K8, fam 10h)"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:207
+#, no-c-format
+msgid "Intel X86"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:212
+#, no-c-format
+msgid ""
+"Intel P6 (Pentium II, Pentium Pro, Pentium III, Pentium M); Yonah (Core Duo, "
+"Core Solo); Netburst (Pentium 4, Xeon); Core (Merom, Penryn, Dunnington) "
+"Core 2 and Quad; Atom; Nehalem; architectural perfmon v1, v2, v3"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:224
+#, no-c-format
+msgid "Install the following packages depending on your architecture:"
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:229
+#, no-c-format
+msgid "Needed Packages"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:234
+#, no-c-format
+msgid "Architecture"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:239
+#, no-c-format
+msgid "Packages"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:248
+#, no-c-format
+msgid "ia64"
+msgstr ""
+
+#. Tag: systemitem
+#: tuning_perfmon.xml:254
+#, no-c-format
+msgid "pfmon"
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:263
+#, no-c-format
+msgid "Using Perfmon"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:265
+#, no-c-format
+msgid ""
+"To use Perfmon, use the command line tool <command>pfmon</command> to get "
+"all your information."
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:271
+#, no-c-format
+msgid "Mutual Exclusion of Perfmon and &oprof; Sessions"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:272
+#, no-c-format
+msgid ""
+"On x86 architectures it is not possible to start a Perfmon session and an "
+"&oprof; session. Only one can be run at the same time."
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:279
+#, no-c-format
+msgid "Getting Event Information"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:280
+#, no-c-format
+msgid ""
+"To get a list of supported events, use the option <option>-l</option> from "
+"<command>pfmon</command> to list them. Keep in mind, this list depends on "
+"the host PMU:"
+msgstr ""
+
+#. Tag: remark
+#: tuning_perfmon.xml:285
+#, no-c-format
+msgid ""
+"toms 2010-04-15: What does all the entries mean? Is there any link/document "
+"available which describes these in detail?"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:287
+#, no-c-format
+msgid ""
+"pfmon -l\n"
+"ALAT_CAPACITY_MISS_ALL\n"
+"ALAT_CAPACITY_MISS_FP\n"
+"ALAT_CAPACITY_MISS_INT\n"
+"BACK_END_BUBBLE_ALL\n"
+"BACK_END_BUBBLE_FE\n"
+"BACK_END_BUBBLE_L1D_FPU_RSE\n"
+"...\n"
+"CPU_CPL_CHANGES_ALL\n"
+"CPU_CPL_CHANGES_LVL0\n"
+"CPU_CPL_CHANGES_LVL1\n"
+"CPU_CPL_CHANGES_LVL2\n"
+"CPU_CPL_CHANGES_LVL3\n"
+"CPU_OP_CYCLES_ALL\n"
+"CPU_OP_CYCLES_QUAL\n"
+"CPU_OP_CYCLES_HALTED\n"
+"DATA_DEBUG_REGISTER_FAULT\n"
+"DATA_DEBUG_REGISTER_MATCHES\n"
+"DATA_EAR_ALAT\n"
+"..."
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:288
+#, no-c-format
+msgid ""
+"Get an explanation of these entries with the option <option>-i</option> and "
+"the event name:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:292
+#, no-c-format
+msgid ""
+"pfmon -i CPU_OP_CYCLES_ALL\n"
+"Name     : CPU_OP_CYCLES_ALL\n"
+"Code     : 0x12\n"
+"Counters : [ 4 5 6 7 8 9 10 11 12 13 14 15 ]\n"
+"Desc     : CPU Operating Cycles -- All CPU cycles counted\n"
+"Umask    : 0x0\n"
+"EAR      : None\n"
+"ETB      : No\n"
+"MaxIncr  : 1  (Threshold 0)\n"
+"Qual     : None\n"
+"Type     : Causal\n"
+"Set      : None"
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:299
+#, no-c-format
+msgid "Enabling System-Wide Sessions"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:300
+#, no-c-format
+msgid ""
+"Use the <option>--system-wide</option> option to enable monitoring all "
+"processes that execute on a specific CPU or sets of CPUs. You do not need to "
+"be &rootuser; to do so; per default, user level is turned on for all events "
+"(option <option>-u</option>)."
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:306
+#, no-c-format
+msgid ""
+"It is possible that one system-wide session can run concurrently with other "
+"system-wide sessions as long as they do not monitor the same set of CPUs. "
+"However, you cannot run a system-wide session together with any per-thread "
+"session."
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:312
+#, no-c-format
+msgid ""
+"The following examples are taken from an Itanium IA64 Montecito processor. "
+"To execute a system-wide session, perform the following procedure:"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:319
+#, no-c-format
+msgid "Detect your CPU set:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:322
+#, no-c-format
+msgid ""
+"pfmon -v --system-wide\n"
+"...\n"
+"selected CPUs (2 CPU in set, 2 CPUs online): CPU0 CPU1"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:325
+#, no-c-format
+msgid ""
+"Delimit your session. The following list describes options which are used in "
+"the examples below (refer to the man page for more details):"
+msgstr ""
+
+#. Tag: term
+#: tuning_perfmon.xml:331
+#, no-c-format
+msgid "<option>-e</option>/<option>--events</option>"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:334
+#, no-c-format
+msgid ""
+"Profile only selected events. See <xref linkend=\"sec.tuning.perfmon2."
+"geteventinfo\"/> for how to get a list."
+msgstr ""
+
+#. Tag: option
+#: tuning_perfmon.xml:342
+#, no-c-format
+msgid "--cpu-list"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:345
+#, no-c-format
+msgid ""
+"Specifies the list of processors to monitor. Without this option, all "
+"available processors are monitored."
+msgstr ""
+
+#. Tag: term
+#: tuning_perfmon.xml:352
+#, no-c-format
+msgid "<option>-t</option>/<option>--session-timeout</option>"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:355
+#, no-c-format
+msgid "Specifies the duration of the monitor session expressed in seconds."
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:361
+#, no-c-format
+msgid "Use one of the three methods to start your profile session."
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:366
+#, no-c-format
+msgid "Use the default events:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:369
+#, no-c-format
+msgid ""
+"pfmon --cpu-list=0-2 --system-wide -k -e CPU_OP_CYCLES_ALL,"
+"IA64_INST_RETIRED\n"
+"&lt;press ENTER to stop session&gt;\n"
+"CPU0                       7670609 CPU_OP_CYCLES_ALL\n"
+"CPU0                       4380453 IA64_INST_RETIRED\n"
+"CPU1                       7061159 CPU_OP_CYCLES_ALL\n"
+"CPU1                       4143020 IA64_INST_RETIRED\n"
+"CPU2                       7194110 CPU_OP_CYCLES_ALL\n"
+"CPU2                       4168239 IA64_INST_RETIRED"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:373
+#, no-c-format
+msgid "Use a timeout expressed in seconds:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:376
+#, no-c-format
+msgid ""
+"pfmon --cpu-list=0-2 --system-wide --session-timeout=10 -k -e "
+"CPU_OP_CYCLES_ALL,IA64_INST_RETIRED\n"
+"&lt;session to end in 10 seconds&gt;\n"
+"CPU0                      69263547 CPU_OP_CYCLES_ALL\n"
+"CPU0                      38682141 IA64_INST_RETIRED\n"
+"CPU1                      87189093 CPU_OP_CYCLES_ALL\n"
+"CPU1                      54684852 IA64_INST_RETIRED\n"
+"CPU2                      64441287 CPU_OP_CYCLES_ALL\n"
+"CPU2                      37883915 IA64_INST_RETIRED"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:379
+#, no-c-format
+msgid ""
+"Execute a command. The session is automatically started when the program "
+"starts and automatically stopped when the program is finished:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:384
+#, no-c-format
+msgid ""
+"pfmon --cpu-list=0-1 --system-wide -u -e CPU_OP_CYCLES_ALL,IA64_INST_RETIRED "
+"-- ls -l /dev/null\n"
+"crw-rw-rw- 1 root root 1, 3 27. Mär 03:30 /dev/null\n"
+"CPU0                         38925 CPU_OP_CYCLES_ALL\n"
+"CPU0                          7510 IA64_INST_RETIRED\n"
+"CPU1                          9825 CPU_OP_CYCLES_ALL\n"
+"CPU1                          1676 IA64_INST_RETIRED"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:389
+#, no-c-format
+msgid "Press the <keycap function=\"enter\"></keycap> key to stop a session:"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:394
+#, no-c-format
+msgid ""
+"If you want to aggregate counts, use the <option>-aggr</option> option after "
+"the previous command:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:398
+#, no-c-format
+msgid ""
+"pfmon --cpu-list=0-1 --system-wide -u -e CPU_OP_CYCLES_ALL,IA64_INST_RETIRED "
+"--aggr\n"
+"&lt;press ENTER to stop session&gt;\n"
+"\n"
+"                     52655 CPU_OP_CYCLES_ALL\n"
+"                     53164 IA64_INST_RETIRED"
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:404
+#, no-c-format
+msgid "Monitoring Running Tasks"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:405
+#, no-c-format
+msgid ""
+"Perfmon can also monitor an existing thread. This is useful for monitoring "
+"system daemons or programs which take a long time to start. First determine "
+"the process ID you want to monitor:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:410
+#, no-c-format
+msgid ""
+"ps ax | grep foo\n"
+"<emphasis role=\"strong\">10027</emphasis>  pts/1    R     2:23  foo"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:411
+#, no-c-format
+msgid ""
+"Use the found PID for the <option>--attach-task</option> option of "
+"<command>pfmon</command>:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:415
+#, no-c-format
+msgid ""
+"pfmon --attach-task=10027\n"
+"3682190 CPU_OP_CYCLES_ALL"
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:420
+#, no-c-format
+msgid "Retrieving Metrics From DebugFS"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:422
+#, no-c-format
+msgid ""
+"Perfmon can collect statistics which are exported through the debug "
+"interface. The metrics consists of mostly aggregated counts and durations."
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:428
+#, no-c-format
+msgid ""
+"Access the data through mounting the debug file system as &rootuser; under "
+"<filename>/sys/kernel/debug</filename>"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:433
+#, no-c-format
+msgid ""
+"The data is located under <filename>/sys/kernel/debug/perfmon/</filename> "
+"and organized per CPU. Each CPU contains a set of metrics, accessible as "
+"ASCII file. The following data is taken from the <filename>/usr/src/linux/"
+"Documentation/perfmon2-debugfs.txt</filename>:"
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:441
+#, no-c-format
+msgid "Read-Only Files in <filename>/sys/kernel/debug/perfmon/cpu*/</filename>"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:446
+#, no-c-format
+msgid "File"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:451
+#, no-c-format
+msgid "Description"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:461
+#, no-c-format
+msgid "ctxswin_count"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:465
+#, no-c-format
+msgid "Number of PMU context switch in"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:473
+#, no-c-format
+msgid "ctxswin_ns"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:477
+#, no-c-format
+msgid "Number of nanoseconds spent in the PMU context switch in routine"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:480
+#, no-c-format
+msgid ""
+"Average cost of the PMU context switch in =\n"
+"  ctxswin_ns / ctxswin_count"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:486
+#, no-c-format
+msgid "ctxswout_count"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:490
+#, no-c-format
+msgid "Number of PMU context switch out"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:498
+#, no-c-format
+msgid "ctxswout_ns"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:502
+#, no-c-format
+msgid "Number of nanoseconds spend in the PMU context switch out routine"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:505
+#, no-c-format
+msgid ""
+"Average cost of the PMU context switch out =\n"
+"  ctxswout_ns / ctxswout_count"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:511
+#, no-c-format
+msgid "fmt_handler_calls"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:515
+#, no-c-format
+msgid ""
+"Number of calls to the sampling format routine that handles PMU interrupts "
+"(typically the routine that recors a sample)"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:524
+#, no-c-format
+msgid "fmt_handler_ns"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:528
+#, no-c-format
+msgid ""
+"Number of nanoseconds spent in the routine that handle PMU interrupt in the "
+"sampling format"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:532
+#, no-c-format
+msgid ""
+"Average time spent in this routine =\n"
+"  fmt_handler_ns / fmt_handler_calls"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:538
+#, no-c-format
+msgid "handle_timeout_count"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:542
+#, no-c-format
+msgid ""
+"Number of times the <literal>pfm_handle_timeout()</literal> routine is "
+"called (used for timeout-based set switching)"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:551
+#, no-c-format
+msgid "handle_work_count"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:555
+#, no-c-format
+msgid "Number of times <literal>pfm_handle_work()</literal> routine is called"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:564
+#, no-c-format
+msgid "ovl_intr_all_count"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:568
+#, no-c-format
+msgid "Number of PMU interrupts received by the kernel"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:576
+#, no-c-format
+msgid "ovfl_intr_nmi_count"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:580
+#, no-c-format
+msgid ""
+"Number of non maskeable interrupts (NMI) received by the kernel from perfmon "
+"(only for X86 hardware)"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:589
+#, no-c-format
+msgid "ovfl_intr_ns"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:593
+#, no-c-format
+msgid ""
+"Number of nanoseconds spent in the perfmon2 PMU interrupt handler routine."
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:597
+#, no-c-format
+msgid ""
+"Average time to handle one PMU interrupt =\n"
+"  ovfl_intr_ns / ovfl_intr_all_count"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:603
+#, no-c-format
+msgid "ovfl_intr_regular_count"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:607
+#, no-c-format
+msgid ""
+"Number of PMU interrupts which are actually processed by the perfmon "
+"interrupt handler"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:616
+#, no-c-format
+msgid "ovfl_intr_replay_count"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:620
+#, no-c-format
+msgid ""
+"Number of PMU interrupts which were replayed on the context switch in or on "
+"event set switching"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:628
+#, no-c-format
+msgid ""
+"<filename>perfom_intr_spurious_count</filename>, "
+"<filename>ovfl_intr_spurious_count</filename>"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:634
+#, no-c-format
+msgid ""
+"Number of PMU interrupts which were dropped because there was no active "
+"context"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:643
+#, no-c-format
+msgid "pfm_restart_count"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:647
+#, no-c-format
+msgid "Number of times <literal>pfm_restart()</literal> is called"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:655
+#, no-c-format
+msgid "reset_pmds_count"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:659
+#, no-c-format
+msgid "Number of times <literal>pfm_reset_pmds()</literal> is called"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:667
+#, no-c-format
+msgid "set_switch_count"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:671
+#, no-c-format
+msgid "Number of event set switches"
+msgstr ""
+
+#. Tag: filename
+#: tuning_perfmon.xml:679
+#, no-c-format
+msgid "set_switch_ns"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:683
+#, no-c-format
+msgid "Number of nanoseconds spent in the set switching rountine"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:686
+#, no-c-format
+msgid ""
+"Average cost of switching sets =\n"
+"  set_switch_ns / set_switch_count"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:693
+#, no-c-format
+msgid ""
+"This might be useful to compare your metrics before and after the perfmon "
+"run. For example, collect your data first:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:698
+#, no-c-format
+msgid ""
+"for i in /sys/kernel/debug/perfmon/cpu0/*; do\n"
+"   echo \"$i:\"; cat $i\n"
+"done &gt;&gt; pfmon-before.txt"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:700
+#, no-c-format
+msgid "Run your performance monitoring, maybe restrict it to a specific CPU:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:704
+#, no-c-format
+msgid "pfmon --cpu-list=0 ..."
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:706
+#, no-c-format
+msgid "Collect your data again:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:710
+#, no-c-format
+msgid ""
+"for i in /sys/kernel/debug//perfmon/cpu0/*; do\n"
+"   echo \"$i:\"; cat $i\n"
+"done &gt;&gt; pfmon-after.txt"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:712
+#, no-c-format
+msgid "Compare these two files:"
+msgstr ""
+
+#. Tag: screen
+#: tuning_perfmon.xml:716
+#, no-c-format
+msgid "diff -u pfmon-before.txt pfmon-after.txt"
+msgstr ""
+
+#. Tag: title
+#: tuning_perfmon.xml:719
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:721
+#, no-c-format
+msgid ""
+"This chapter only provides a short overview. Refer to the following links "
+"for more information:"
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:731
+#, no-c-format
+msgid "The project home page."
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:740
+#, no-c-format
+msgid "A good overview as PDF."
+msgstr ""
+
+#. Tag: para
+#: tuning_perfmon.xml:749
+#, no-c-format
+msgid "Consult this chapter for other performance optimizations."
+msgstr ""

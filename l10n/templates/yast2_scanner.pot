@@ -1,0 +1,282 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: yast2_scanner.xml:12
+#, no-c-format
+msgid "Setting Up a Scanner"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: yast2_scanner.xml:14
+#, no-c-format
+msgid "<dm:bugtracker> </dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: yast2_scanner.xml:21 yast2_scanner.xml:89 yast2_scanner.xml:142
+#: yast2_scanner.xml:181
+#, no-c-format
+msgid "scanning"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_scanner.xml:23 yast2_scanner.xml:90 yast2_scanner.xml:143
+#: yast2_scanner.xml:182
+#, no-c-format
+msgid "<secondary>configuring</secondary>"
+msgstr ""
+
+#. Tag: primary
+#: yast2_scanner.xml:25 yast2_scanner.xml:92 yast2_scanner.xml:145
+#: yast2_scanner.xml:184
+#, no-c-format
+msgid "&yast;"
+msgstr ""
+
+#. Tag: secondary
+#: yast2_scanner.xml:27 yast2_scanner.xml:31 yast2_scanner.xml:93
+#: yast2_scanner.xml:96 yast2_scanner.xml:146 yast2_scanner.xml:149
+#: yast2_scanner.xml:185 yast2_scanner.xml:188
+#, no-c-format
+msgid "scanner"
+msgstr ""
+
+#. Tag: primary
+#: yast2_scanner.xml:29 yast2_scanner.xml:95 yast2_scanner.xml:148
+#: yast2_scanner.xml:187
+#, no-c-format
+msgid "<primary>configuring</primary>"
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:33
+#, no-c-format
+msgid ""
+"You can configure a USB or SCSI scanner with &yast;. The <systemitem class="
+"\"resource\">sane-backends</systemitem> package contains hardware drivers "
+"and other essentials needed to use a scanner. If you own an HP All-In-One "
+"device, see <xref linkend=\"sec.y2.hw.scan.hp_allinone\"/>, instructions on "
+"how to configure a network scanner are available at <xref linkend=\"sec.y2."
+"hw.scan.network_client\"/>."
+msgstr ""
+
+#. Tag: title
+#: yast2_scanner.xml:43
+#, no-c-format
+msgid "Configuring a USB or SCSI Scanner"
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:45
+#, no-c-format
+msgid "Connect your USB or SCSI scanner to your computer and turn it on."
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:50
+#, no-c-format
+msgid ""
+"Start &yast; and select <menuchoice> <guimenu>Hardware</guimenu> "
+"<guimenu>Scanner</guimenu> </menuchoice>. &yast; builds the scanner database "
+"and tries to detect your scanner model automatically."
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:55
+#, no-c-format
+msgid ""
+"If a USB or SCSI scanner is not properly detected, try <menuchoice> "
+"<guimenu>Other</guimenu><guimenu>Restart Detection</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:62
+#, no-c-format
+msgid ""
+"To activate the scanner select it from the list of detected scanners and "
+"click <guimenu>Edit</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:68
+#, no-c-format
+msgid ""
+"Choose your model form the list and click <guimenu>Next</guimenu> and "
+"<guimenu>Finish</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:74
+#, no-c-format
+msgid ""
+"Use <menuchoice><guimenu>Other</guimenu><guimenu>Test</guimenu></menuchoice> "
+"to make sure you have chosen the correct driver."
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:81 yast2_scanner.xml:133
+#, no-c-format
+msgid "Leave the configuration screen with <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: yast2_scanner.xml:88
+#, no-c-format
+msgid "Configuring an HP All-In-One Device"
+msgstr ""
+
+#. Tag: tertiary
+#: yast2_scanner.xml:91 yast2_scanner.xml:94 yast2_scanner.xml:97
+#, no-c-format
+msgid "HP All-In-One"
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:98
+#, no-c-format
+msgid ""
+"An HP All-In-One device can be configured with &yast; even if it is made "
+"available via the network. If you own a USB HP All-In-One device, start "
+"configuring as described in <xref linkend=\"proc.y2.hw.scan.usb\"/>. If it "
+"is detected properly and the <guimenu>Test</guimenu> succeeds, it is ready "
+"to use."
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:105
+#, no-c-format
+msgid ""
+"If your USB device is not properly detected, or your HP All-In-One device is "
+"connected to the network, run the HP Device Manager:"
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:111
+#, no-c-format
+msgid ""
+"Start &yast; and select <menuchoice> <guimenu>Hardware</guimenu> "
+"<guimenu>Scanner</guimenu> </menuchoice>. &yast; loads the scanner database."
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:118
+#, no-c-format
+msgid ""
+"Start the HP Device Manager with <menuchoice> <guimenu>Other</guimenu> "
+"<guimenu>Run hp-setup</guimenu> </menuchoice> and follow the on-screen "
+"instructions. After having finished the HP Device Manager, the &yast; "
+"scanner module automatically restarts the auto detection."
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:126
+#, no-c-format
+msgid ""
+"Test it by choosing <menuchoice><guimenu>Other</guimenu><guimenu>Test</"
+"guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: yast2_scanner.xml:141
+#, no-c-format
+msgid "Sharing a Scanner over the Network"
+msgstr ""
+
+#. Tag: tertiary
+#: yast2_scanner.xml:144 yast2_scanner.xml:147 yast2_scanner.xml:150
+#: yast2_scanner.xml:183 yast2_scanner.xml:186 yast2_scanner.xml:189
+#, no-c-format
+msgid "network"
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:151
+#, no-c-format
+msgid ""
+"&productname; allows the sharing of a scanner over the network. To do so, "
+"configure your scanner as follows:"
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:157
+#, no-c-format
+msgid ""
+"Configure the scanner as described in <xref linkend=\"sec.y2.hw.scan\"/>."
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:162
+#, no-c-format
+msgid ""
+"Choose <menuchoice> <guimenu>Other</guimenu> <guimenu>Scanning via Network</"
+"guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:168
+#, no-c-format
+msgid ""
+"Enter the host names of the clients (separated by a comma) that should be "
+"allowed to use the scanner under <menuchoice> <guimenu>Server Settings</"
+"guimenu> <guimenu>Permitted Clients for saned</guimenu> </menuchoice> and "
+"leave the configuration dialog with <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: yast2_scanner.xml:180
+#, no-c-format
+msgid "Scanning over the Network"
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:190
+#, no-c-format
+msgid "To use a scanner that is shared over the network, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:195
+#, no-c-format
+msgid ""
+"Start &yast; and select <menuchoice> <guimenu>Hardware</guimenu> "
+"<guimenu>Scanner</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:201
+#, no-c-format
+msgid ""
+"Open the network scanner configuration menu by <menuchoice> <guimenu>Other</"
+"guimenu> <guimenu>Scanning via Network</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:208
+#, no-c-format
+msgid ""
+"Enter the host name of the machine the scanner is connected to under "
+"<menuchoice> <guimenu>Client Settings</guimenu> <guimenu>Servers Used for "
+"the net Metadriver</guimenu></menuchoice>"
+msgstr ""
+
+#. Tag: para
+#: yast2_scanner.xml:215
+#, no-c-format
+msgid ""
+"Leave with <guimenu>OK</guimenu>. The network scanner is now listed in the "
+"Scanner Configuration window and is ready to use."
+msgstr ""

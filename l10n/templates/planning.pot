@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: planning.xml:12
+#, no-c-format
+msgid "Planning for &productname;"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: planning.xml:14
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: title
+#: planning.xml:20
+#, no-c-format
+msgid "Considerations for Deployment of a &sls;"
+msgstr ""
+
+#. Tag: para
+#: planning.xml:22
+#, no-c-format
+msgid ""
+"The implementation of an operating system either in an existing IT "
+"environment or as a completely new rollout must be carefully prepared. At "
+"the beginning of the planning process, you should try to define the project "
+"goals and necessary features. This must always be done individually for each "
+"project, but the questions to answer should include the following:"
+msgstr ""
+
+#. Tag: para
+#: planning.xml:32
+#, no-c-format
+msgid ""
+"How many installations should be done? Depending on this, the best "
+"deployment methods differ."
+msgstr ""
+
+#. Tag: para
+#: planning.xml:41
+#, no-c-format
+msgid "Will the system run as physical host or as a virtual machine?"
+msgstr ""
+
+#. Tag: para
+#: planning.xml:46
+#, no-c-format
+msgid ""
+"Will the system be in a hostile environment? Have a look at <xref linkend="
+"\"cha.security\"/> to get an overview of consequences."
+msgstr ""
+
+#. Tag: para
+#: planning.xml:52
+#, no-c-format
+msgid ""
+"How will you get regular updates? All patches are provided online for "
+"registered users. Find the registration and patch support database at <link "
+"xlink:href=\"http://download.suse.com/\"></link>."
+msgstr ""
+
+#. Tag: para
+#: planning.xml:59
+#, no-c-format
+msgid ""
+"Do you need help for your local installation? &suse; provides training, "
+"support, and consulting for all topics pertaining to &sls;. Find more "
+"information about this at <link xlink:href=\"https://www.suse.com/products/"
+"server/\"></link>."
+msgstr ""
+
+#. Tag: para
+#: planning.xml:67
+#, no-c-format
+msgid ""
+"Do you need third-party products? Make sure that the required product is "
+"also supported on the desired platform. &suse; can provide help to support "
+"software on different platforms when needed."
+msgstr ""
+
+#. Tag: title
+#: planning.xml:76
+#, no-c-format
+msgid "Deployment of &sls;"
+msgstr ""
+
+#. Tag: para
+#: planning.xml:78
+#, no-c-format
+msgid ""
+"To make sure that your system will run flawlessly, always try to use "
+"certified hardware. The hardware certification process is an ongoing process "
+"and the database of certified hardware is updated regularly. Find the search "
+"form for certified hardware at <link xlink:href=\"http://www.suse.com/"
+"yessearch/Search.jsp\"></link>."
+msgstr ""
+
+#. Tag: para
+#: planning.xml:86
+#, no-c-format
+msgid ""
+"Depending on the number of desired installations, it is beneficial to use "
+"installation servers or even completely automatic installations. When using "
+"&xen; or &kvm; virtualization technologies, network root file systems or "
+"network storage solutions like iSCSI should be considered."
+msgstr ""
+
+#. Tag: para
+#: planning.xml:98
+#, no-c-format
+msgid ""
+"&sls; provides you with a broad variety of services. Find an overview of the "
+"documentation in this book in <xref linkend=\"pre.sle\"/>. Most of the "
+"needed configurations can be made with &yast;, the &suse; configuration "
+"utility. In addition, many manual configurations are described in the "
+"corresponding chapters."
+msgstr ""
+
+#. Tag: para
+#: planning.xml:106
+#, no-c-format
+msgid ""
+"In addition to the plain software installation, you should consider training "
+"the end users of the systems and help desk staff."
+msgstr ""
+
+#. Tag: title
+#: planning.xml:112
+#, no-c-format
+msgid "Running &sls;"
+msgstr ""
+
+#. Tag: para
+#: planning.xml:114
+#, no-c-format
+msgid ""
+"The &sls; operating system is a well-tested and stable system. "
+"Unfortunately, this does not prevent hardware failures or other causes for "
+"downtime or data loss. For any serious computing task where data loss could "
+"occur, a regular backup should be done."
+msgstr ""
+
+#. Tag: para
+#: planning.xml:121
+#, no-c-format
+msgid ""
+"For optimal security and data safety, you should make regular updates of all "
+"the operated machines. If you have a mission critical server, you should run "
+"a second identical (pre-production) machine where you can apply all changes "
+"for testing purposes before doing so in production. This also gives you the "
+"possibility of switching machines in the case of hardware failure."
+msgstr ""

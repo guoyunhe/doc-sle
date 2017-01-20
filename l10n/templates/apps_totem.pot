@@ -1,0 +1,754 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: apps_totem.xml:8
+#, no-c-format
+msgid "&gnome; Videos"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: apps_totem.xml:10
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:17
+#, no-c-format
+msgid ""
+"&gnome; Videos is the default movie player. &gnome; Videos provides the "
+"following multimedia features:"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:23
+#, no-c-format
+msgid "Support for a variety of video and audio files"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:28
+#, no-c-format
+msgid "A variety of zoom levels and aspect ratios, and a full screen view"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:33
+#, no-c-format
+msgid "Seek and volume controls"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:38
+#, no-c-format
+msgid "Playlists"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:43
+#, no-c-format
+msgid "Complete keyboard navigation"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:61
+#, no-c-format
+msgid ""
+"To start &gnome; Videos, click <menuchoice> <guimenu>Applications</guimenu> "
+"<guimenu>Sound &amp; Video</guimenu> <guimenu>Videos</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:66
+#, no-c-format
+msgid "Using &gnome; Videos"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:68
+#, no-c-format
+msgid "When you start &gnome; Videos, the following window is displayed."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:73
+#, no-c-format
+msgid "&gnome; Videos Start-Up Window"
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:85
+#, no-c-format
+msgid "Opening a Video or Audio File"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:88
+#, no-c-format
+msgid ""
+"Click <menuchoice><guimenu>Videos</guimenu><guimenu>Open</guimenu></"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:94
+#, no-c-format
+msgid "Select the files you want to open, then click <guimenu>Add</guimenu>"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:99
+#, no-c-format
+msgid ""
+"You can also drag a file from another application (such as a file manager) "
+"to the &gnome; Videos window. &gnome; Videos opens the file and plays the "
+"movie or song. &gnome; Videos displays the title of the movie or song "
+"beneath the display area and in the titlebar of the window."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:106
+#, no-c-format
+msgid "Unrecognized File Format"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:107
+#, no-c-format
+msgid ""
+"If you try to open a file format that &gnome; Videos does not recognize, the "
+"application displays an error message and recommends a suitable codec."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:112
+#, no-c-format
+msgid ""
+"You can double-click a video or audio file in &nautilus; to open it in the "
+"&gnome; Videos window by default."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:119
+#, no-c-format
+msgid "Opening a Video or Audio File By URI Location"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:122
+#, no-c-format
+msgid ""
+"Click <menuchoice><guimenu>Videos</guimenu><guimenu>Open Location</guimenu> "
+"</menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:128
+#, no-c-format
+msgid ""
+"Specify the URI location of the file you want to open, then click "
+"<guimenu>Open</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:137
+#, no-c-format
+msgid "Playing a DVD, VCD, or CD"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:138
+#, no-c-format
+msgid ""
+"To play a DVD, VCD, or CD, insert the disc in the optical device of your "
+"computer, then click <menuchoice> <guimenu>Movie</guimenu> <guimenu>Play "
+"Disc</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:143
+#, no-c-format
+msgid ""
+"To eject a DVD, VCD, or CD, click <menuchoice> <guimenu>Movie</guimenu> "
+"<guimenu>Eject</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:147
+#, no-c-format
+msgid ""
+"To pause a movie or song that is playing, click the <inlinemediaobject> "
+"<textobject role=\"description\"><phrase>&gnome; Videos Pause</phrase> </"
+"textobject> <imageobject role=\"fo\"> <imagedata fileref="
+"\"totem_pause_button.svg\" width=\"0.8em\" format=\"svg\"/> </imageobject> "
+"<imageobject role=\"html\"> <imagedata fileref=\"totem_pause_button-fallback."
+"png\" width=\"1em\" format=\"png\"/> </imageobject> </inlinemediaobject> "
+"button, or click <menuchoice> <guimenu>Movie</guimenu> <guimenu>Play/Pause</"
+"guimenu> </menuchoice>. When you pause a movie or song, the statusbar "
+"displays <guimenu>Paused</guimenu> and the time elapsed on the current movie "
+"or song."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:162
+#, no-c-format
+msgid ""
+"To resume playing a movie or song, click the <inlinemediaobject> <textobject "
+"role=\"description\"><phrase>&gnome; Videos Play</phrase> </textobject> "
+"<imageobject role=\"fo\"> <imagedata fileref=\"totem_play_button.svg\" width="
+"\"0.8em\" format=\"svg\"/> </imageobject> <imageobject role=\"html\"> "
+"<imagedata fileref=\"totem_play_button-fallback.png\" width=\"1em\" format="
+"\"png\"/> </imageobject> </inlinemediaobject> button, or click <menuchoice> "
+"<guimenu>Movie</guimenu> <guimenu>Play/Pause</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:175
+#, no-c-format
+msgid "To play or pause a movie, you can also press <keycap>P</keycap>."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:178
+#, no-c-format
+msgid ""
+"To view properties of a movie or song, click <menuchoice> <guimenu>View</"
+"guimenu> <guimenu>Sidebar</guimenu> </menuchoice> to make the sidebar "
+"appear. The dialog contains the title, artist, year, and duration of movie "
+"or song, video dimensions, codec, frame rate, and the audio bit rate."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:188
+#, no-c-format
+msgid "Seeking Through Movies or Songs"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:189
+#, no-c-format
+msgid "To seek through movies or songs, use any of the following methods:"
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:194
+#, no-c-format
+msgid "To skip forward"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:196
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Go</guimenu> <guimenu>Skip Forward</guimenu> </"
+"menuchoice>. Alternatively, use <keycap function=\"left\"></keycap>."
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:203
+#, no-c-format
+msgid "To skip backward"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:205
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Go</guimenu> <guimenu>Skip Backward</guimenu> </"
+"menuchoice>. Alternatively, use <keycap function=\"right\"></keycap>."
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:213
+#, no-c-format
+msgid "To move to next movie or song"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:215
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Go</guimenu> <guimenu>Next Chapter/Movie</"
+"guimenu> </menuchoice>, or click the <inlinemediaobject> <textobject role="
+"\"description\"><phrase>&gnome; Videos Next</phrase> </textobject> "
+"<imageobject role=\"fo\"> <imagedata fileref=\"totem_next_button.svg\" width="
+"\"0.8em\" format=\"svg\"/> </imageobject> <imageobject role=\"html\"> "
+"<imagedata fileref=\"totem_next_button-fallback.png\" width=\"1em\" format="
+"\"png\"/> </imageobject> </inlinemediaobject> button."
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:231
+#, no-c-format
+msgid "To move to previous movie or song"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:233
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>Go</guimenu> <guimenu>Previous Chapter/Movie</"
+"guimenu> </menuchoice>, or click the <inlinemediaobject> <textobject role="
+"\"description\"><phrase>&gnome; Videos Previous</phrase> </textobject> "
+"<imageobject role=\"fo\"> <imagedata fileref=\"totem_previous_button.svg\" "
+"width=\"0.8em\" format=\"svg\"/> </imageobject> <imageobject role=\"html\"> "
+"<imagedata fileref=\"totem_previous_button-fallback.png\" width=\"1em\" "
+"format=\"png\"/> </imageobject> </inlinemediaobject> button."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:252
+#, no-c-format
+msgid "Changing the Zoom Factor"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:253
+#, no-c-format
+msgid ""
+"To change the zoom factor of the display area, use any of the following "
+"methods:"
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:259
+#, no-c-format
+msgid "To zoom to full screen mode"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:261
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>View</guimenu> <guimenu>Fullscreen</guimenu> </"
+"menuchoice>. Alternatively, press <keycap>F</keycap>."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:265
+#, no-c-format
+msgid ""
+"To exit fullscreen mode, click <guimenu>Leave Fullscreen</guimenu> or press "
+"<keycap function=\"escape\"></keycap>."
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:272
+#, no-c-format
+msgid "To zoom to half size (50%) of the original movie or visualization"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:274
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>View</guimenu> <guimenu>Fit Window to Movie</"
+"guimenu> <guimenu>Resize 1:2</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:281
+#, no-c-format
+msgid "To zoom to size (100%) of the original movie or visualization"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:283
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>View</guimenu> <guimenu>Fit Window to Movie</"
+"guimenu> <guimenu>Resize 1:1</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:290
+#, no-c-format
+msgid "To zoom to double size (200%) of the original movie or visualization"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:292
+#, no-c-format
+msgid ""
+"Click <menuchoice> <guimenu>View</guimenu> <guimenu>Fit Window to Movie </"
+"guimenu> <guimenu>Resize 2:1</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:299
+#, no-c-format
+msgid ""
+"To switch between different aspect ratios, click <menuchoice> <guimenu>View</"
+"guimenu> <guimenu>Aspect Ratio</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:303
+#, no-c-format
+msgid "The default aspect ratio is <guimenu>Auto</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:309
+#, no-c-format
+msgid "Showing or Hiding Controls"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:310
+#, no-c-format
+msgid ""
+"To hide the window controls of &gnome; Videos, click <menuchoice> "
+"<guimenu>View</guimenu> <guimenu>Show Controls</guimenu> </menuchoice> and "
+"deselect the option. To show the controls on the &gnome; Videos window, "
+"right-click the window, then select <guimenu>Show Controls</guimenu>. If the "
+"Show Controls option is selected, &gnome; Videos shows the menubar, time "
+"elapsed slider, seek control buttons, volume slider, and statusbar on the "
+"window. If the Show Controls option is not selected, the application hides "
+"these controls and shows only the display area."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:323
+#, no-c-format
+msgid "Managing Playlists"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:326
+#, no-c-format
+msgid ""
+"To show the playlist, click <menuchoice> <guimenu>View</guimenu> "
+"<guimenu>Sidebar</guimenu> </menuchoice>. The Playlist sidebar is displayed."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:331
+#, no-c-format
+msgid "You can use the Playlist dialog to do the following:"
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:337
+#, no-c-format
+msgid "To add a track or movie:"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:338
+#, no-c-format
+msgid ""
+"Click the <guimenu>Add</guimenu> button. Select the file you want to add to "
+"the playlist, then click <guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:348
+#, no-c-format
+msgid "To remove a track or movie:"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:349
+#, no-c-format
+msgid ""
+"Select the file names from the file name list box, then click "
+"<guimenu>Remove</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:358
+#, no-c-format
+msgid "To save a playlist to file:"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:359
+#, no-c-format
+msgid ""
+"Click the <guimenu>Save Playlist</guimenu> button, then specify a file name."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:368
+#, no-c-format
+msgid "To move a track or movie up the playlist:"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:369
+#, no-c-format
+msgid ""
+"Select the file name from the file name list box, then click the "
+"<guimenu>Move Up</guimenu> button."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:378
+#, no-c-format
+msgid "To move a track or movie down the playlist:"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:379
+#, no-c-format
+msgid ""
+"Select the file name from the file name list box, then click the "
+"<guimenu>Move Down</guimenu> button."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:387
+#, no-c-format
+msgid ""
+"To hide the playlist, click <menuchoice> <guimenu>View</guimenu> "
+"<guimenu>Sidebar</guimenu> </menuchoice>, or click the <guimenu>Sidebar</"
+"guimenu> button."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:393
+#, no-c-format
+msgid ""
+"To enable or disable repeat mode, click <menuchoice> <guimenu>Edit</guimenu> "
+"<guimenu>Repeat Mode</guimenu> </menuchoice>. To enable or disable shuffle "
+"mode, click <menuchoice> <guimenu>Edit</guimenu> <guimenu>Shuffle Mode</"
+"guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:402
+#, no-c-format
+msgid "Choosing Subtitles"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:403
+#, no-c-format
+msgid ""
+"To choose the language of the subtitles, click <menuchoice> <guimenu>View</"
+"guimenu> <guimenu>Subtitles</guimenu> <guimenu>Select Text Subtitles</"
+"guimenu> </menuchoice>, then select the subtitles language (DVD) or subtitle "
+"file (AVI etc.) you want to display."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:409
+#, no-c-format
+msgid ""
+"To disable the display of subtitles, click <menuchoice> <guimenu>View</"
+"guimenu> <guimenu>Subtitles</guimenu> <guimenu>None</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:414
+#, no-c-format
+msgid ""
+"By default, &gnome; Videos chooses the same language for the subtitles that "
+"you use on your computer."
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:418
+#, no-c-format
+msgid ""
+"&gnome; Videos automatically loads and displays subtitles if the file that "
+"contains them has the same name as the video file. It supports the following "
+"subtitle file extensions: <filename>srt</filename>, <filename>asc</"
+"filename>, <filename>txt</filename>, <filename>sub</filename>, "
+"<filename>smi</filename>, or <filename>ssa</filename>."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:429
+#, no-c-format
+msgid "Modifying &gnome; Videos Preferences"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:431
+#, no-c-format
+msgid ""
+"To modify &gnome; Videos preferences, click <menuchoice> <guimenu>Videos</"
+"guimenu><guimenu>Preferences</guimenu></menuchoice>."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:437
+#, no-c-format
+msgid "General Preferences"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:438
+#, no-c-format
+msgid ""
+"The General Preferences let you select a network connection speed, specify "
+"if media files should be played from the last used position, and change the "
+"font and encoding used to display subtitles."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:444
+#, no-c-format
+msgid "&gnome; Videos General Preferences"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:454
+#, no-c-format
+msgid "General Preferences include the following:"
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:459
+#, no-c-format
+msgid "Playback"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:461
+#, no-c-format
+msgid ""
+"Lets you specify whether to start playing the movie from the last position."
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:468
+#, no-c-format
+msgid "Networking"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:470
+#, no-c-format
+msgid ""
+"Select network connection speed from the Connection speed drop-down box."
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:476
+#, no-c-format
+msgid "Text Subtitles"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:478
+#, no-c-format
+msgid ""
+"Lets you specify whether to load the subtitles automatically, and change the "
+"font and encoding used to display the subtitles."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:488
+#, no-c-format
+msgid "Display Preferences"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:489
+#, no-c-format
+msgid ""
+"The Display Preferences let you choose to automatically resize the window "
+"when a new video is loaded, change the color balance, and configure visual "
+"effects when an audio file is played."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:495
+#, no-c-format
+msgid "&gnome; Videos Display Preferences"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:505
+#, no-c-format
+msgid "Display Preferences include the following:"
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:510
+#, no-c-format
+msgid "Automatically resize the window when a new video is loaded"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:512
+#, no-c-format
+msgid ""
+"Select this option if you want &gnome; Videos to automatically resize the "
+"window when a new video is loaded."
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:519
+#, no-c-format
+msgid "Disable the screen saver when playing video or audio"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:521
+#, no-c-format
+msgid ""
+"Select this option if you want &gnome; Videos to automatically disable the "
+"desktop screen saver while an audio file is playing."
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:528
+#, no-c-format
+msgid "Visual Effects"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:530
+#, no-c-format
+msgid ""
+"You can choose to show visual effects when an audio file is playing, select "
+"the type of visualization you want to show, and the visualization size."
+msgstr ""
+
+#. Tag: term
+#: apps_totem.xml:538
+#, no-c-format
+msgid "Color Balance"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:540
+#, no-c-format
+msgid "Specify the level of color brightness, contrast, saturation, and hue."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:549
+#, no-c-format
+msgid "Audio Preferences"
+msgstr ""
+
+#. Tag: para
+#: apps_totem.xml:550
+#, no-c-format
+msgid "The Audio Preferences dialog lets you select the audio output type."
+msgstr ""
+
+#. Tag: title
+#: apps_totem.xml:554
+#, no-c-format
+msgid "&gnome; Videos Audio Preferences"
+msgstr ""

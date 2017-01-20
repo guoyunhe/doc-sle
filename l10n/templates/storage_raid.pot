@@ -1,0 +1,754 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: storage_raid.xml:9
+#, no-c-format
+msgid "Software RAID Configuration"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: storage_raid.xml:11
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:16
+#, no-c-format
+msgid ""
+"The purpose of RAID (redundant array of independent disks) is to combine "
+"several hard disk partitions into one large virtual hard disk to optimize "
+"performance, data security, or both. Most RAID controllers use the SCSI "
+"protocol because it can address a larger number of hard disks in a more "
+"effective way than the IDE protocol and is more suitable for parallel "
+"processing of commands. There are some RAID controllers that support IDE or "
+"SATA hard disks. Software RAID provides the advantages of RAID systems "
+"without the additional cost of hardware RAID controllers. However, this "
+"requires some CPU time and has memory requirements that make it unsuitable "
+"for real high performance computers."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:29
+#, no-c-format
+msgid "RAID on Cluster File Systems"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:30
+#, no-c-format
+msgid ""
+"Software RAID underneath clustered file systems needs to be set up using a "
+"cluster multi-device (Cluster MD). Refer to the &hasi; documentation at "
+"<link xlink:href=\"https://www.suse.com/documentation/sle-ha-12/book_sleha/"
+"data/cha_ha_cluster-md.html\"></link>."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:36
+#, no-c-format
+msgid ""
+"&sle; offers the option of combining several hard disks into one soft RAID "
+"system. RAID implies several strategies for combining several hard disks in "
+"a RAID system, each with different goals, advantages, and characteristics. "
+"These variations are commonly known as <emphasis>RAID levels</emphasis>."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:43
+#, no-c-format
+msgid "Understanding RAID Levels"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:45
+#, no-c-format
+msgid ""
+"This section describes common RAID levels 0, 1, 2, 3, 4, 5, and nested RAID "
+"levels."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:51
+#, no-c-format
+msgid "RAID&nbsp;0"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:52
+#, no-c-format
+msgid ""
+"This level improves the performance of your data access by spreading out "
+"blocks of each file across multiple disks. Actually, this is not really a "
+"RAID, because it does not provide data backup, but the name "
+"<emphasis>RAID&nbsp;0</emphasis> for this type of system has become the "
+"norm. With RAID&nbsp;0, two or more hard disks are pooled together. The "
+"performance is very good, but the RAID system is destroyed and your data "
+"lost if even one hard disk fails."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:64
+#, no-c-format
+msgid "RAID&nbsp;1"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:65
+#, no-c-format
+msgid ""
+"This level provides adequate security for your data, because the data is "
+"copied to another hard disk 1:1. This is known as <emphasis>hard disk "
+"mirroring</emphasis>. If a disk is destroyed, a copy of its contents is "
+"available on another mirrored disk. All disks except one could be damaged "
+"without endangering your data. However, if damage is not detected, damaged "
+"data might be mirrored to the correct disk and the data is corrupted that "
+"way. The writing performance suffers a little in the copying process "
+"compared to when using single disk access (10 to 20 percent slower), but "
+"read access is significantly faster in comparison to any one of the normal "
+"physical hard disks, because the data is duplicated so can be scanned in "
+"parallel. RAID 1 generally provides nearly twice the read transaction rate "
+"of single disks and almost the same write transaction rate as single disks."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:82
+#, no-c-format
+msgid "RAID&nbsp;2 and RAID&nbsp;3"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:83
+#, no-c-format
+msgid ""
+"These are not typical RAID implementations. Level&nbsp;2 stripes data at the "
+"bit level rather than the block level. Level&nbsp;3 provides byte-level "
+"striping with a dedicated parity disk and cannot service simultaneous "
+"multiple requests. Both levels are rarely used."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:92
+#, no-c-format
+msgid "RAID&nbsp;4"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:93
+#, no-c-format
+msgid ""
+"Level&nbsp;4 provides block-level striping like Level&nbsp;0 combined with a "
+"dedicated parity disk. If a data disk fails, the parity data is used to "
+"create a replacement disk. However, the parity disk might create a "
+"bottleneck for write access. Nevertheless, Level&nbsp;4 is sometimes used."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:102
+#, no-c-format
+msgid "RAID&nbsp;5"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:103
+#, no-c-format
+msgid ""
+"RAID&nbsp;5 is an optimized compromise between Level&nbsp;0 and Level&nbsp;1 "
+"in terms of performance and redundancy. The hard disk space equals the "
+"number of disks used minus one. The data is distributed over the hard disks "
+"as with RAID&nbsp;0. <emphasis>Parity blocks</emphasis>, created on one of "
+"the partitions, are there for security reasons. They are linked to each "
+"other with XOR, enabling the contents to be reconstructed by the "
+"corresponding parity block in case of system failure. With RAID&nbsp;5, no "
+"more than one hard disk can fail at the same time. If one hard disk fails, "
+"it must be replaced when possible to avoid the risk of losing data."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:117
+#, no-c-format
+msgid "RAID&nbsp;6"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:118
+#, no-c-format
+msgid ""
+"RAID&nbsp;6 is essentially an extension of RAID&nbsp;5 that allows for "
+"additional fault tolerance by using a second independent distributed parity "
+"scheme (dual parity). Even if two of the hard disks fail during the data "
+"recovery process, the system continues to be operational, with no data loss."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:125
+#, no-c-format
+msgid ""
+"RAID&nbsp;6 provides for extremely high data fault tolerance by sustaining "
+"multiple simultaneous drive failures. It handles the loss of any two devices "
+"without data loss. Accordingly, it requires N+2 drives to store N drives "
+"worth of data. It requires a minimum of four devices."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:131
+#, no-c-format
+msgid ""
+"The performance for RAID&nbsp;6 is slightly lower but comparable to "
+"RAID&nbsp;5 in normal mode and single disk failure mode. It is very slow in "
+"dual disk failure mode. A RAID&nbsp;6 configuration needs a considerable "
+"amount of CPU time and memory for write operations."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:138
+#, no-c-format
+msgid "Comparison of RAID 5 and RAID 6"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:146
+#, no-c-format
+msgid "Feature"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:151
+#, no-c-format
+msgid "RAID 5"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:156
+#, no-c-format
+msgid "RAID 6"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:165
+#, no-c-format
+msgid "Number of devices"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:170
+#, no-c-format
+msgid "N+1, minimum of 3"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:175
+#, no-c-format
+msgid "N+2, minimum of 4"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:182
+#, no-c-format
+msgid "Parity"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:187
+#, no-c-format
+msgid "Distributed, single"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:192
+#, no-c-format
+msgid "Distributed, dual"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:199
+#, no-c-format
+msgid "Performance"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:204
+#, no-c-format
+msgid "Medium impact on write and rebuild"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:209
+#, no-c-format
+msgid "More impact on sequential write than RAID 5"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:216
+#, no-c-format
+msgid "Fault-tolerance"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:221
+#, no-c-format
+msgid "Failure of one component device"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:226
+#, no-c-format
+msgid "Failure of two component devices"
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:237
+#, no-c-format
+msgid "Nested and Complex RAID Levels"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:238
+#, no-c-format
+msgid ""
+"Several other RAID levels have been developed, such as RAIDn, RAID&nbsp;10, "
+"RAID&nbsp;0+1, RAID&nbsp;30, and RAID&nbsp;50. Some are proprietary "
+"implementations created by hardware vendors. Examples for creating "
+"RAID&nbsp;10 configurations can be found in <xref linkend=\"cha.raid10\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:247
+#, no-c-format
+msgid "Soft RAID Configuration with &yast;"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:249
+#, no-c-format
+msgid ""
+"The &yast; soft RAID configuration can be reached from the &yast; Expert "
+"Partitioner. This partitioning tool also enables you to edit and delete "
+"existing partitions and create new ones that should be used with soft RAID. "
+"These instructions apply on setting up RAID levels 0, 1, 5, and 6. Setting "
+"up RAID&nbsp;10 configurations is explained in <xref linkend=\"cha.raid10\"/"
+">."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:259
+#, no-c-format
+msgid "Launch &yast; and open the <guimenu>Partitioner</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:264
+#, no-c-format
+msgid ""
+"If necessary, create partitions that should be used with your RAID "
+"configuration. Do not format them and set the partition type to "
+"<guimenu>0xFD Linux RAID</guimenu>. When using existing partitions it is not "
+"necessary to change their partition type&mdash;&yast; will automatically do "
+"so. Refer to <xref linkend=\"sec.yast2.i_y2_part_expert\"/> for details."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:272
+#, no-c-format
+msgid ""
+"It is strongly recommended to use partitions stored on different hard disks "
+"to decrease the risk of losing data if one is defective (RAID&nbsp;1 and 5) "
+"and to optimize the performance of RAID&nbsp;0."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:277
+#, no-c-format
+msgid ""
+"For RAID&nbsp;0 at least two partitions are needed. RAID 1 requires exactly "
+"two partitions, while at least three partitions are required for "
+"RAID&nbsp;5. A RAID&nbsp;6 setup requires at least four partitions. It is "
+"recommended to use only partitions of the same size because each segment can "
+"contribute only the same amount of space as the smallest sized partition."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:287
+#, no-c-format
+msgid "In the left panel, select <guimenu>RAID</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:290
+#, no-c-format
+msgid "A list of existing RAID configurations opens in the right panel."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:295
+#, no-c-format
+msgid "At the lower left of the RAID page, click <guimenu>Add RAID</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:310
+#, no-c-format
+msgid ""
+"Select a <guimenu>RAID Type</guimenu> and <guimenu>Add</guimenu> an "
+"appropriate number of partitions from the <guimenu>Available Devices</"
+"guimenu> dialog."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:315
+#, no-c-format
+msgid ""
+"You can optionally assign a <guimenu>RAID Name</guimenu> to your RAID. It "
+"will make it available as <filename>/dev/md/<replaceable>name</replaceable></"
+"filename>. See <xref linkend=\"sec.raid.yast.names\"/> for more information."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:322
+#, no-c-format
+msgid "Example RAID 5 Configuration"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:332
+#, no-c-format
+msgid "Proceed with <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:337
+#, no-c-format
+msgid ""
+"Select the <guimenu>Chunk Size</guimenu> and, if applicable, the "
+"<guimenu>Parity Algorithm</guimenu>. The optimal chunk size depends on the "
+"type of data and the type of RAID. See <link xlink:href=\"https://raid.wiki."
+"kernel.org/index.php/RAID_setup#Chunk_sizes\"></link> for more information. "
+"More information on parity algorithms can be found with <command>man 8 "
+"mdadm</command> when searching for the <option>--layout</option> option. If "
+"unsure, stick with the defaults."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:348
+#, no-c-format
+msgid ""
+"Choose a <guimenu>Role</guimenu> for the volume. Your choice here only "
+"affects the default values for the upcoming dialog. They can be changed in "
+"the next step. If in doubt, choose <guimenu>Raw Volume (Unformatted)</"
+"guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:356
+#, no-c-format
+msgid ""
+"Under <guimenu>Formatting Options</guimenu>, select <guimenu>Format "
+"Partition</guimenu>, then select the <guimenu>File system</guimenu>. The "
+"content of the <guimenu>Options</guimenu> menu depends on the file system. "
+"Usually there is no need to change the defaults."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:362
+#, no-c-format
+msgid ""
+"Under <guimenu>Mounting Options</guimenu>, select <guimenu>Mount partition</"
+"guimenu>, then select the mount point. Click <guimenu>Fstab Options</"
+"guimenu> to add special mounting options for the volume."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:369
+#, no-c-format
+msgid "Click <guimenu>Finish</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:374
+#, no-c-format
+msgid ""
+"Click <guimenu>Next</guimenu>, verify that the changes are listed, then "
+"click <guimenu>Finish</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:382
+#, no-c-format
+msgid "RAID Names"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:383
+#, no-c-format
+msgid ""
+"By default, software RAID devices have numeric names following the pattern "
+"<literal>mdN</literal>, where <literal>N</literal> is a number. As such they "
+"can be accessed as, for example, <filename>/dev/md127</filename> and are "
+"listed as <literal>md127</literal> in <filename>/proc/mdstat</filename> and "
+"<filename>/proc/partitions</filename>. Working with these names can be "
+"clumsy. &productname; offers two ways to work around this problem:"
+msgstr ""
+
+#. Tag: term
+#: storage_raid.xml:393
+#, no-c-format
+msgid "Providing a Named Link to the Device"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:395
+#, no-c-format
+msgid ""
+"You can optionally specify a name for the RAID device when creating it with "
+"&yast; or on the command line with <command>mdadm --create '/dev/md/</"
+"command> <replaceable>name</replaceable>'. The device name will still be "
+"<literal>mdN</literal>, but a link <filename>/dev/md/<replaceable>name</"
+"replaceable></filename> will be created:"
+msgstr ""
+
+#. Tag: screen
+#: storage_raid.xml:403
+#, no-c-format
+msgid ""
+"&prompt.user;ls -og /dev/md\n"
+"total 0\n"
+"lrwxrwxrwx 1 8 Dec  9 15:11 myRAID -&gt; ../md127"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:404
+#, no-c-format
+msgid ""
+"The device will still be listed as <literal>md127</literal> under <filename>/"
+"proc</filename>."
+msgstr ""
+
+#. Tag: term
+#: storage_raid.xml:411
+#, no-c-format
+msgid "Providing a Named Device"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:413
+#, no-c-format
+msgid ""
+"In case a named link to the device is not sufficient for your setup, add the "
+"line CREATE names=yes to <filename>/etc/mdadm.conf</filename> by running the "
+"following command:"
+msgstr ""
+
+#. Tag: screen
+#: storage_raid.xml:418
+#, no-c-format
+msgid "sudo echo \"CREATE names=yes\" &gt;&gt; /etc/mdadm.conf"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:419
+#, no-c-format
+msgid ""
+"It will cause names like <literal>myRAID</literal> to be used as a "
+"<quote>real</quote> device name. The device will not only be accessible at "
+"<filename>/dev/myRAID</filename>, but also be listed as <literal>myRAID</"
+"literal> under <filename>/proc</filename>. Note that this will only apply to "
+"RAIDs configured after the change to the configuration file. Active RAIDS "
+"will continue to use the <literal>mdN</literal> names until they get stopped "
+"and re-assembled."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:429
+#, no-c-format
+msgid "Incompatible Tools"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:430
+#, no-c-format
+msgid ""
+"Not all tools may support named RAID devices. In case a tool expects a RAID "
+"device to be named <literal>mdN</literal>, it will fail to identify the "
+"devices."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:442
+#, no-c-format
+msgid "Troubleshooting Software RAIDs"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:444
+#, no-c-format
+msgid ""
+"Check the <filename>/proc/mdstat</filename> file to find out whether a RAID "
+"partition has been damaged. If a disk fails, shut down your Linux system and "
+"replace the defective hard disk with a new one partitioned the same way. "
+"Then restart your system and enter the command <command>mdadm /dev/mdX --"
+"add /dev/sdX</command>. Replace <literal>X</literal> with your particular "
+"device identifiers. This integrates the hard disk automatically into the "
+"RAID system and fully reconstructs it (for all RAID levels except for "
+"RAID&nbsp;0)."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:455
+#, no-c-format
+msgid ""
+"Although you can access all data during the rebuild, you might encounter "
+"some performance issues until the RAID has been fully rebuilt."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:461
+#, no-c-format
+msgid "Recovery after Failing Disk is Back Again"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:462
+#, no-c-format
+msgid ""
+"There are several reasons a disk included in a RAID array may fail. Here is "
+"a list of the most common ones:"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:468
+#, no-c-format
+msgid "Problems with the disk media."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:473
+#, no-c-format
+msgid "Disk drive controller failure."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:478
+#, no-c-format
+msgid "Broken connection to the disk."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:483
+#, no-c-format
+msgid ""
+"In the case of the disk media or controller failure, the device needs to be "
+"replaced or repaired. If a hot-spare was not configured within the RAID, "
+"then manual intervention is required."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:488
+#, no-c-format
+msgid ""
+"In the last case, the failed device can be automatically re-added by the "
+"<command>mdadm</command> command after the connection is repaired (which "
+"might be automatic)."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:493
+#, no-c-format
+msgid ""
+"Because <command>md</command>/<command>mdadm</command> cannot reliably "
+"determine what caused the disk failure, it assumes a serious disk error and "
+"treats any failed device as faulty until it is explicitly told that the "
+"device is reliable."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:499
+#, no-c-format
+msgid ""
+"Under some circumstances&mdash;such as storage devices with the internal "
+"RAID array&mdash; the connection problems are very often the cause of the "
+"device failure. In such case, you can tell <command>mdadm</command> that it "
+"is safe to automatically <option>--re-add</option> the device after it "
+"appears. You can do this by adding the following line to <filename>/etc/"
+"mdadm.conf</filename>:"
+msgstr ""
+
+#. Tag: screen
+#: storage_raid.xml:507
+#, no-c-format
+msgid "POLICY action=re-add"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:508
+#, no-c-format
+msgid ""
+"Note that the device will be automatically re-added after re-appearing only "
+"if the <systemitem>udev</systemitem> rules cause <command>mdadm -I "
+"<replaceable>disk_device_name</replaceable></command> to be run on any "
+"device that spontaneously appears (default behavior), and if write-intent "
+"bitmaps are configured (they are by default)."
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:515
+#, no-c-format
+msgid ""
+"If you want this policy to only apply to some devices and not to the others, "
+"then the <literal>path=</literal> option can be added to the "
+"<literal>POLICY</literal> line in <filename>/etc/mdadm.conf</filename> to "
+"restrict the non-default action to only selected devices. Wild cards can be "
+"used to identify groups of devices. See <command>man 5 mdadm.conf</command> "
+"for more information."
+msgstr ""
+
+#. Tag: title
+#: storage_raid.xml:526
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:528
+#, no-c-format
+msgid ""
+"Configuration instructions and more details for soft RAID can be found in "
+"the HOWTOs at:"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:535
+#, no-c-format
+msgid ""
+"<citetitle>The Linux RAID wiki</citetitle>: <link xlink:href=\"https://raid."
+"wiki.kernel.org/index.php/Linux_Raid\"></link>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:541
+#, no-c-format
+msgid ""
+"<citetitle>The Software RAID HOWTO</citetitle> in the <filename>/usr/share/"
+"doc/packages/mdadm/Software-RAID.HOWTO.html</filename> file"
+msgstr ""
+
+#. Tag: para
+#: storage_raid.xml:549
+#, no-c-format
+msgid ""
+"Linux RAID mailing lists are also available, such as <citetitle>linux-raid</"
+"citetitle> at <link xlink:href=\"http://marc.info/?l=linux-raid\"></link>."
+msgstr ""

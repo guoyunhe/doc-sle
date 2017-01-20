@@ -1,0 +1,726 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:21
+#, no-c-format
+msgid "General Information and Requirements"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: deployment_prep_zseries_info_i.xml:24
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:30
+#, no-c-format
+msgid ""
+"This section gives basic information about the system requirements (like "
+"supported hardware), level of MicroCode, and software. It also covers the "
+"different installation types and how to do an IPL for the first "
+"installation. For detailed technical information about IBM &zseries; on "
+"&productname; refer to <link xlink:href=\"http://www.ibm.com/developerworks/"
+"linux/linux390/documentation_suse.html\"></link>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:40
+#, no-c-format
+msgid "System Requirements"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:41
+#, no-c-format
+msgid ""
+"This section provides a list of hardware for IBM &zseries; supported by "
+"&productname;. Next, the level of the MicroCode (MCL) used in your IBM "
+"&zseries; system, which is very important for the installation, is covered. "
+"Additional software to install and use for installation is mentioned at the "
+"end of this section."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:49
+#, no-c-format
+msgid "Hardware"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:50
+#, no-c-format
+msgid "&productname; has run successfully on the following platforms:"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:55
+#, no-c-format
+msgid "IBM zEnterprise System z196 (2817)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:60
+#, no-c-format
+msgid "IBM zEnterprise System z114 (2818)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:65
+#, no-c-format
+msgid "IBM zEnterprise EC12 (zEC12) (2827)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:70
+#, no-c-format
+msgid "IBM zEnterprise BC12 (zBC12) (2828)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:75
+#, no-c-format
+msgid "IBM z Systems z13 (2964)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:80
+#, no-c-format
+msgid "IBM z Systems z13s (2965)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:85
+#, no-c-format
+msgid "IBM LinuxONE Emperor (2964)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:90
+#, no-c-format
+msgid "IBM LinuxONE Rockhopper (2965)"
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:96
+#, no-c-format
+msgid "Memory Requirements"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:97
+#, no-c-format
+msgid ""
+"Different installation methods have different memory requirements during "
+"installation. After installation is completed, the system administrator may "
+"reduce memory to the desired size. &suse; recommends using:"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:107
+#: deployment_prep_zseries_info_i.xml:119
+#: deployment_prep_zseries_info_i.xml:131
+#, no-c-format
+msgid "1 GB"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:112
+#, no-c-format
+msgid "For installation under z/VM."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:124
+#, no-c-format
+msgid "For installation under LPAR."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:136
+#, no-c-format
+msgid "For installation under KVM."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:145
+#, no-c-format
+msgid "Memory Requirements with Remote Installation Sources"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:146
+#, no-c-format
+msgid ""
+"For installation from NFS, FTP, or SMB installation sources or whenever VNC "
+"is used, 512MB of memory is required as a minimum. Otherwise, the "
+"installation attempt is likely to fail. Further note that the number of "
+"devices visible to the z/VM guest or LPAR image affects memory requirements. "
+"Installation with literally hundreds of accessible devices (even if unused "
+"for the installation) may require more memory."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:157
+#, no-c-format
+msgid "Disk Space Requirements"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:158
+#, no-c-format
+msgid ""
+"The disk requirements depend largely on the installation. Commonly, you need "
+"more space than the installation software itself needs to have a system that "
+"works properly. Minimal requirements for different selections are:"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:169
+#, no-c-format
+msgid "800 MB"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:174
+#, no-c-format
+msgid "Minimal Installation"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:181
+#, no-c-format
+msgid "1.4 GB"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:186
+#, no-c-format
+msgid "Minimal Installation + Base System"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:193
+#, no-c-format
+msgid "2.6 GB"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:198
+#, no-c-format
+msgid "Default Installation"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:205
+#, no-c-format
+msgid "3.6 GB+"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:210
+#, no-c-format
+msgid ""
+"Recommended (this is with graphical desktop, development packages and Java)."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:221
+#, no-c-format
+msgid "Network Connection"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:222
+#, no-c-format
+msgid ""
+"A network connection is needed to communicate with your &productname; "
+"system. This can be one or more of the following connections or network "
+"cards:"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:229
+#, no-c-format
+msgid "OSA Express Ethernet (including Fast and Gigabit Ethernet)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:234
+#, no-c-format
+msgid "HiperSockets or Guest LAN"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:239
+#, no-c-format
+msgid "10 GBE, VSWITCH"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:244
+#, no-c-format
+msgid "RoCE (RDMA over Converged Ethernet)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:249
+#, no-c-format
+msgid "The following interfaces are still included, but no longer supported:"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:254
+#, no-c-format
+msgid "CTC (or virtual CTC)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:259
+#, no-c-format
+msgid "ESCON"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:264
+#, no-c-format
+msgid "IP network interface for IUCV"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:269
+#, no-c-format
+msgid ""
+"For installations under KVM make sure the following requirements are met to "
+"enable the &vmguest; to access the network transparently:"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:275
+#, no-c-format
+msgid "The virtual network interface is connected to a host network interface."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:280
+#, no-c-format
+msgid ""
+"The host network interface is connected to a network in which the virtual "
+"server will participate."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:286
+#, no-c-format
+msgid ""
+"If the host is set up to have a redundant network connection by grouping two "
+"independent OSA network ports into a bonded network interface, the "
+"identifier for the bonded network interface is <literal>bond0</literal> (or, "
+"if more than one bonded interface exists, <literal>bond1</literal>, "
+"<literal>bond2</literal>, ...). See <link xlink:href=\"http://www.ibm.com/"
+"support/knowledgecenter/SSNW54_1.1.0/com.ibm.kvm.v110.admin/toc.htm\"></"
+"link> for further information about how to configure network bonding."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:298
+#, no-c-format
+msgid ""
+"If the host network connection has <emphasis>not</emphasis> been set up "
+"redundantly, the identifier of the single network interface needs to be "
+"used. It has the form enccw0.0.<replaceable>nnnn</replaceable>, where "
+"<replaceable>nnnn</replaceable> is the device number of the desired network "
+"interface."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:310
+#, no-c-format
+msgid "MicroCode Level, APARs, and Fixes"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:311
+#, no-c-format
+msgid ""
+"Documentation about restrictions and requirements for this release of SUSE "
+"Linux Enterprise Server can be found on IBM developerWorks at <link xlink:"
+"href=\"http://www.ibm.com/developerworks/linux/linux390/documentation_suse."
+"html\"></link>. It is recommended always to use the highest service level "
+"available. Contact your IBM support for minimum requirements."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:319
+#: deployment_prep_zseries_info_i.xml:456
+#, no-c-format
+msgid "<title>z/VM</title>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:322
+#, no-c-format
+msgid "z/VM 5.4"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:327
+#, no-c-format
+msgid "z/VM 6.2"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:332
+#, no-c-format
+msgid ""
+"z/VM 6.3, we strongly suggest installing the APAR VM65419 (or higher) to "
+"improve the output of qclib."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:338
+#, no-c-format
+msgid ""
+"Negotiate the order of installation with your IBM support, because it might "
+"be necessary to activate the VM APARs before installing the new MicroCode "
+"levels."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:346
+#, no-c-format
+msgid "Software"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:347
+#, no-c-format
+msgid ""
+"When installing &productname; via non-Linux&ndash;based NFS or FTP, you "
+"might experience problems with NFS or FTP server software. The "
+"Windows&thrdmrk; standard FTP server can cause errors, so installing via SMB "
+"on these machines is generally recommended."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:353
+#, no-c-format
+msgid ""
+"To connect to the &productname; installation system, one of the following "
+"methods is required (SSH or VNC are recommended):"
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_zseries_info_i.xml:359
+#, no-c-format
+msgid "SSH with Terminal Emulation (xterm compatible)"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:361
+#, no-c-format
+msgid ""
+"SSH is a standard Unix tool that should be present on any Unix or Linux "
+"system. For Windows, there is an SSH client called Putty. It is free to use "
+"and is available from <link xlink:href=\"http://www.chiark.greenend.org.uk/"
+"~sgtatham/putty/\"></link>."
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_zseries_info_i.xml:370
+#, no-c-format
+msgid "VNC Client"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:372
+#, no-c-format
+msgid ""
+"For Linux, a VNC client called vncviewer is included in &productname; as "
+"part of the <systemitem class=\"resource\">tightvnc</systemitem> package. "
+"For Windows, TightVNC is also available. Download it from <link xlink:href="
+"\"http://www.tightvnc.com/\"></link>. Alternatively, use the VNC Java client "
+"and a Java-enabled Web browser."
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_zseries_info_i.xml:382
+#, no-c-format
+msgid "X Server"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:384
+#, no-c-format
+msgid ""
+"Find a suitable X server implementation on any Linux or Unix workstation. "
+"There are many commercial X Window System environments for Windows and "
+"macOS&thrdmrk;. Some can be downloaded as free trial versions. A trial "
+"version of the Mocha X Server from MochaSoft can be obtained at <link xlink:"
+"href=\"http://www.mochasoft.dk/freeware/x11.htm\"></link>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:396
+#, no-c-format
+msgid "Additional Information"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:397
+#, no-c-format
+msgid ""
+"Consult the <filename>README</filename> located in the root directory of "
+"DVD&nbsp;1 of your &productname; before installing &productname; on IBM "
+"&zseries;. This file completes the documentation presented in this book."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:407
+#, no-c-format
+msgid "Installation Types"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:408
+#, no-c-format
+msgid ""
+"This section gives an overview of the different types of installation "
+"possible with &productname; for IBM &zseries;:"
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_zseries_info_i.xml:414
+#, no-c-format
+msgid "<term>LPAR</term>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:416
+#, no-c-format
+msgid "Installation of &productname; using a logical partition (LPAR)."
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_zseries_info_i.xml:422
+#, no-c-format
+msgid "<term>z/VM</term>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:424
+#, no-c-format
+msgid "Installation of &productname; as a guest operating system within z/VM."
+msgstr ""
+
+#. Tag: term
+#: deployment_prep_zseries_info_i.xml:430
+#, no-c-format
+msgid "<term>KVM</term>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:432
+#, no-c-format
+msgid "Installation of &productname; as a guest operating system within KVM."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:438
+#, no-c-format
+msgid ""
+"Depending on the mode of installation (LPAR or z/VM), there are different "
+"possibilities for starting the installation process and IPLing the installed "
+"system."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:444
+#, no-c-format
+msgid "<title>LPAR</title>"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:445
+#, no-c-format
+msgid ""
+"If you install &productname; for IBM &zseries; into a logical partition "
+"(LPAR), assign memory and processors to the instance. Installing into LPAR "
+"is recommended for highly loaded production machines. Running in LPAR also "
+"makes higher security standards available. Networking between LPARs is "
+"possible over external interfaces or Hipersockets. In case you plan to use "
+"your installation for virtualization with KVM, installing into LPAR is "
+"highly recommended."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:457
+#, no-c-format
+msgid ""
+"Running &productname; for IBM &zseries; in z/VM means that &productname; is "
+"a guest system within z/VM. An advantage of this mode is that you have full "
+"control over &productname; from z/VM. This is very helpful for kernel "
+"development or kernel-based debugging. It is also very easy to add or remove "
+"hardware to and from Linux guests. Creating additional &productname; guests "
+"is simple and you can run hundreds of Linux instances simultaneously."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:468
+#, no-c-format
+msgid "KVM Guest"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:469
+#, no-c-format
+msgid ""
+"Being able to install &productname; for IBM &zseries; as a KVM guest "
+"requires a KVM host server instance installed into LPAR. For details on the "
+"guest installation, refer to <xref linkend=\"pro.prep.inst_types.kvm\"/>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:482
+#, no-c-format
+msgid "IPL Options"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:483
+#, no-c-format
+msgid ""
+"This section provides the information needed to do an IPL for the first "
+"installation. Depending on the type of installation, different options need "
+"to be used. The VM reader, load from CD-ROM or server and load from an SCSI-"
+"attached DVD-ROM options are discussed. Installing the software packages, "
+"which is done over the network, does not require the IPL medium."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:491
+#, no-c-format
+msgid "VM Reader"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:492
+#, no-c-format
+msgid ""
+"To IPL from a VM reader, transfer the necessary files into the reader first. "
+"For convenience of administration, it is recommended to create a user "
+"<literal>linuxmnt</literal> that owns a minidisk with the files and scripts "
+"needed for IPL. This minidisk is then accessed read-only by the Linux guests."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:501
+#, no-c-format
+msgid "Load from Removable Media or Server"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:502
+#, no-c-format
+msgid ""
+"For IPLing into an LPAR, it is possible to either load the kernel image "
+"directly from the SE's or the HMC's CD/DVD-ROM device or from any remote "
+"system accessible through FTP. This function can be performed from the HMC. "
+"The installation process requires a file with a mapping of the location of "
+"the installation data in the file system and the memory locations where the "
+"data is to be copied."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:510
+#, no-c-format
+msgid ""
+"For &productname;, there are two such files. Both are located in the root "
+"directory of the file system of DVD 1:"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:516
+#, no-c-format
+msgid ""
+"<filename>suse.ins</filename>, for which to work you need to set up network "
+"access in Linuxrc before starting the installation."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:522
+#, no-c-format
+msgid ""
+"<filename>susehmc.ins</filename> which allows installing without network "
+"access."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:528
+#, no-c-format
+msgid ""
+"In the left navigation pane of the HMC expand <menuchoice><guimenu>Systems "
+"Management</guimenu><guimenu>Systems</guimenu></menuchoice> and select the "
+"mainframe system you want to work with. Choose the LPAR where you want to "
+"boot &productname; from the table of LPARs and select <guimenu>Load from "
+"Removable Media or Server</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:535
+#, no-c-format
+msgid ""
+"Now either choose <guimenu> Hardware Management Console CD-ROM/DVD </"
+"guimenu> or <guimenu>FTP Source</guimenu>. If having chosen the latter "
+"option, provide the servers address or name and your credentials. If the "
+"appropriate <filename>.ins</filename> file is not located in the root "
+"directory of the server, provide the path to this file. Continue to the "
+"<guimenu>Select the software to load</guimenu> menu and select the "
+"appropriate <filename>.ins</filename> entry. Start the installation with "
+"<guimenu>OK</guimenu>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:547
+#, no-c-format
+msgid "Load from SCSI-Attached DVD"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:548
+#, no-c-format
+msgid ""
+"To IPL from an SCSI DVD, you need access to an FCP adapter connected to a "
+"DVD drive. You need the values for WWPN and LUN from the SCSI drive. For "
+"details, see <xref linkend=\"sec.prep.ipling.lpar.dvd\"/>."
+msgstr ""
+
+#. Tag: title
+#: deployment_prep_zseries_info_i.xml:555
+#, no-c-format
+msgid "Load from the Network with zPXE"
+msgstr ""
+
+#. Tag: para
+#: deployment_prep_zseries_info_i.xml:556
+#, no-c-format
+msgid ""
+"IPLing from the Network with zPXE requires a Cobbler server providing the "
+"kernel, RAM disk and a parmfile. It is initiated by running the ZPXE EXEC "
+"script. See <xref linkend=\"sec.prep.makeavail.zpxe_cobbler\"/> for details. "
+"zPXE is only available on z/VM."
+msgstr ""

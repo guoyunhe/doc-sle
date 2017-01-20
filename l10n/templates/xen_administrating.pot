@@ -1,0 +1,780 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: xen_administrating.xml:9
+#, no-c-format
+msgid "Administrative Tasks"
+msgstr ""
+
+#. Tag: title
+#: xen_administrating.xml:18
+#, no-c-format
+msgid "The Boot Loader Program"
+msgstr ""
+
+#. Tag: remark
+#: xen_administrating.xml:20
+#, no-c-format
+msgid "2014-02-10 - fs: FIXME: These entries needs to be adjusted to GRUB 2."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:24
+#, no-c-format
+msgid ""
+"The boot loader controls how the virtualization software boots and runs. You "
+"can modify the boot loader properties by using &yast;, or by directly "
+"editing the boot loader configuration file."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:30
+#, no-c-format
+msgid ""
+"The &yast; boot loader program is located at <menuchoice> <guimenu>&yast;</"
+"guimenu> <guimenu>System</guimenu> <guimenu>Boot Loader</guimenu> </"
+"menuchoice>. Click the <guimenu>Bootloader Options</guimenu> tab and select "
+"the line containing the &xen; kernel as the <guimenu>Default Boot Section</"
+"guimenu>."
+msgstr ""
+
+#. Tag: title
+#: xen_administrating.xml:39
+#, no-c-format
+msgid "Boot Loader Settings"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:50
+#, no-c-format
+msgid ""
+"Confirm with <guimenu>OK</guimenu>. Next time you boot the host, it will be "
+"ready to provide the &xen; virtualization environment."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:55
+#, no-c-format
+msgid "You can use the Boot Loader program to specify functionality, such as:"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:61
+#, no-c-format
+msgid "Pass kernel command line parameters."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:66
+#, no-c-format
+msgid "Specify the kernel image and initial RAM disk."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:71
+#, no-c-format
+msgid "Select a specific hypervisor."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:76
+#, no-c-format
+msgid ""
+"Pass additional parameters to the hypervisor. See <link xlink:href=\"http://"
+"xenbits.xen.org/docs/unstable/misc/xen-command-line.html\"></link> for their "
+"complete list."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:84
+#, no-c-format
+msgid ""
+"You can customize your virtualization environment by editing the <filename>/"
+"etc/default/grub</filename> file. Add the following line to this file: "
+"<literal>GRUB_CMDLINE_XEN=\"&lt;boot_parameters&gt;\"</literal>. Do not "
+"forget to run <command>grub2-mkconfig -o /boot/grub2/grub.cfg</command> "
+"after editing the file."
+msgstr ""
+
+#. Tag: title
+#: xen_administrating.xml:94
+#, no-c-format
+msgid "Sparse Image Files and Disk Space"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:96
+#, no-c-format
+msgid ""
+"If the host’s physical disk reaches a state where it has no available space, "
+"a virtual machine using a virtual disk based on a sparse image file cannot "
+"write to its disk. Consequently, it reports I/O errors."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:102
+#, no-c-format
+msgid ""
+"If this situation occurs, you should free up available space on the physical "
+"disk, remount the virtual machine’s file system, and set the file system "
+"back to read-write."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:109
+#, no-c-format
+msgid ""
+"To check the actual disk requirements of a sparse image file, use the "
+"command <command>du -h &lt;image file&gt;</command>."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:114
+#, no-c-format
+msgid ""
+"To increase the available space of a sparse image file, first increase the "
+"file size and then the file system."
+msgstr ""
+
+#. Tag: title
+#: xen_administrating.xml:120
+#, no-c-format
+msgid "Back Up Before Resizing"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:121
+#, no-c-format
+msgid ""
+"Touching the sizes of partitions or sparse files always bears the risk of "
+"data failure. Do not work without a backup."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:127
+#, no-c-format
+msgid ""
+"The resizing of the image file can be done online, while the &vmguest; is "
+"running. Increase the size of a sparse image file with:"
+msgstr ""
+
+#. Tag: screen
+#: xen_administrating.xml:132
+#, no-c-format
+msgid ""
+"dd if=/dev/zero of=&lt;image file&gt; count=0 bs=1M seek=&lt;new size in "
+"MB&gt;"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:134
+#, no-c-format
+msgid ""
+"For example, to increase the file <filename>/var/lib/xen/images/sles/disk0</"
+"filename> to a size of 16GB, use the command:"
+msgstr ""
+
+#. Tag: screen
+#: xen_administrating.xml:140
+#, no-c-format
+msgid ""
+"dd if=/dev/zero of=/var/lib/xen/images/sles/disk0 count=0 bs=1M seek=16000"
+msgstr ""
+
+#. Tag: title
+#: xen_administrating.xml:143
+#, no-c-format
+msgid "Increasing Non-Sparse Images"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:144
+#, no-c-format
+msgid ""
+"It is also possible to increase the image files of devices that are not "
+"sparse files. However, you must know exactly where the previous image ends. "
+"Use the seek parameter to point to the end of the image file and use a "
+"command similar to the following:"
+msgstr ""
+
+#. Tag: screen
+#: xen_administrating.xml:150
+#, no-c-format
+msgid ""
+"dd if=/dev/zero of=/var/lib/xen/images/sles/disk0 seek=8000 bs=1M count=2000"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:153
+#, no-c-format
+msgid "Be sure to use the right seek, else data loss may happen."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:157
+#, no-c-format
+msgid ""
+"If the &vmguest; is running during the resize operation, also resize the "
+"loop device that provides the image file to the &vmguest;. First detect the "
+"correct loop device with the command:"
+msgstr ""
+
+#. Tag: screen
+#: xen_administrating.xml:163
+#, no-c-format
+msgid "losetup -j /var/lib/xen/images/sles/disk0"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:165
+#, no-c-format
+msgid ""
+"Then resize the loop device, for example <filename>/dev/loop0</filename>, "
+"with the following command:"
+msgstr ""
+
+#. Tag: screen
+#: xen_administrating.xml:170
+#, no-c-format
+msgid "losetup -c /dev/loop0"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:172
+#, no-c-format
+msgid ""
+"Finally check the size of the block device inside the guest system with the "
+"command <command>fdisk -l /dev/xvdb</command>. The device name depends on "
+"the actually increased device."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:178
+#, no-c-format
+msgid ""
+"The resizing of the file system inside the sparse file involves tools that "
+"are depending on the actual file system. <phrase os=\"sles\">This is "
+"described in detail in the <xref linkend=\"stor_admin\"/>.</phrase>"
+msgstr ""
+
+#. Tag: title
+#: xen_administrating.xml:185
+#, no-c-format
+msgid "Migrating &xen; &vmguest; Systems"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:187
+#, no-c-format
+msgid ""
+"With &xen; it is possible to migrate a &vmguest; system from one &vmhost; to "
+"another with almost no service interruption. This could be used for example "
+"to move a busy &vmguest; to a &vmhost; that has stronger hardware or is not "
+"yet loaded. Or, if a service of a &vmhost; is required, all &vmguest; "
+"systems running on this machine can be migrated to other machines to avoid "
+"interruption of service. These are only two examples&mdash;many more reasons "
+"may apply to your personal situation."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:198
+#, no-c-format
+msgid ""
+"Before starting, some preliminary considerations regarding the &vmhost; "
+"should be taken into account:"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:205
+#, no-c-format
+msgid ""
+"All &vmhost; systems should use a similar CPU. The frequency is not so "
+"important, but they should be using the same CPU family. To get more "
+"information about the used CPU, see <command>cat /proc/cpuinfo</command>."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:213
+#, no-c-format
+msgid ""
+"All resources that are used by a specific guest system must be available on "
+"all involved &vmhost; systems&mdash;for example all used block devices must "
+"exist on both &vmhost; systems."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:220
+#, no-c-format
+msgid ""
+"If the hosts included in the migration process run in different subnets, "
+"make sure that either DHCP relay is available to the guests, or for guests "
+"with static network configuration, set up the network manually."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:227
+#, no-c-format
+msgid ""
+"Using special features like <literal>&pciback;</literal> may be problematic. "
+"Do not implement these when deploying for an environment that should migrate "
+"&vmguest; systems between different &vmhost; systems."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:235
+#, no-c-format
+msgid ""
+"For fast migrations, a fast network is mandatory. If possible, use GB "
+"Ethernet and fast switches. Deploying VLAN might also help avoid collisions."
+msgstr ""
+
+#. Tag: title
+#: xen_administrating.xml:244
+#, no-c-format
+msgid "Preparing Block Devices for Migrations"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:245
+#, no-c-format
+msgid ""
+"The block devices needed by the &vmguest; system must be available on all "
+"involved &vmhost; systems. This is done by implementing some kind of shared "
+"storage that serves as container for the root file system of the migrated "
+"&vmguest; system. Common possibilities include:"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:253
+#, no-c-format
+msgid ""
+"<literal>iSCSI</literal> can be set up to give access to the same block "
+"devices from different systems at the same time. <phrase os=\"sles\">For "
+"more information about iSCSI, see <xref linkend=\"cha.iscsi\"/>.</phrase>"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:260
+#, no-c-format
+msgid ""
+"<literal>NFS</literal> is a widely used root file system that can easily be "
+"accessed from different locations. For more information, see <xref linkend="
+"\"cha.nfs\"/>."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:267
+#, no-c-format
+msgid ""
+"<literal>DRBD</literal> can be used if only two &vmhost; systems are "
+"involved. This gives some extra data security, because the used data is "
+"mirrored over the network. <phrase os=\"sles;sled\">For more information, "
+"see the <citetitle>SUSE Linux Enterprise High Availability Extension "
+"&productnumber;</citetitle> documentation at <link xlink:href=\"http://www."
+"suse.com/doc/\"></link></phrase>."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:277
+#, no-c-format
+msgid ""
+"<literal>SCSI</literal> can also be used if the available hardware permits "
+"shared access to the same disks."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:283
+#, no-c-format
+msgid ""
+"<literal>NPIV</literal> is a special mode to use Fibre channel disks. "
+"However, in this case all migration hosts must be attached to the same Fibre "
+"channel switch. For more information about NPIV, see <xref linkend=\"sec.xen."
+"config.disk\"/>. Commonly, this works if the Fibre channel environment "
+"supports 4 Gbit or faster connections."
+msgstr ""
+
+#. Tag: title
+#: xen_administrating.xml:295
+#, no-c-format
+msgid "Migrating &vmguest; Systems"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:296
+#, no-c-format
+msgid "The actual migration of the &vmguest; system is done with the command:"
+msgstr ""
+
+#. Tag: screen
+#: xen_administrating.xml:300
+#, no-c-format
+msgid "xl migrate &lt;domain_name&gt; &lt;host&gt;"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:301
+#, no-c-format
+msgid ""
+"The speed of the migration depends on how fast the memory print can be saved "
+"to disk, sent to the new &vmhost; and loaded there. This means that small "
+"&vmguest; systems can be migrated faster than big systems with a lot of "
+"memory."
+msgstr ""
+
+#. Tag: title
+#: xen_administrating.xml:310
+#, no-c-format
+msgid "Monitoring &xen;"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:312
+#, no-c-format
+msgid ""
+"For a regular operation of many virtual guests, having a possibility to "
+"check the sanity of all the different &vmguest; systems is indispensable. "
+"&xen; offers several tools besides the system tools to gather information "
+"about the system."
+msgstr ""
+
+#. Tag: title
+#: xen_administrating.xml:320
+#, no-c-format
+msgid "Monitoring the &vmhost;"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:321
+#, no-c-format
+msgid ""
+"Basic monitoring of the &vmhost; (I/O and CPU) is available via the &vmm;. "
+"Refer to <xref linkend=\"cha.libvirt.admin.monitor.virt-manager\"/> for "
+"details."
+msgstr ""
+
+#. Tag: title
+#: xen_administrating.xml:329
+#, no-c-format
+msgid "Monitor &xen; with <command>xentop</command>"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:330
+#, no-c-format
+msgid ""
+"The preferred terminal application to gather information about &xen; virtual "
+"environment is <command>xentop</command>. Unfortunately, this tool needs a "
+"rather broad terminal, else it inserts line breaks into the display."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:336
+#, no-c-format
+msgid ""
+"<command>xentop</command> has several command keys that can give you more "
+"information about the system that is monitored. Some of the more important "
+"are:"
+msgstr ""
+
+#. Tag: term
+#: xen_administrating.xml:343
+#, no-c-format
+msgid "<term>D</term>"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:345
+#, no-c-format
+msgid "Change the delay between the refreshes of the screen."
+msgstr ""
+
+#. Tag: term
+#: xen_administrating.xml:351
+#, no-c-format
+msgid "<term>N</term>"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:353
+#, no-c-format
+msgid ""
+"Also display network statistics. Note, that only standard configurations "
+"will be displayed. If you use a special configuration like a routed network, "
+"no network will be displayed."
+msgstr ""
+
+#. Tag: term
+#: xen_administrating.xml:361
+#, no-c-format
+msgid "<term>B</term>"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:363
+#, no-c-format
+msgid "Display the respective block devices and their cumulated usage count."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:369
+#, no-c-format
+msgid ""
+"For more information about <command>xentop</command> see the manual page "
+"<command>man 1 xentop</command>."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:376
+#, no-c-format
+msgid ""
+"libvirt offers the hypervisor-agnostic tool <command>virt-top</command>, "
+"which is recommended for monitoring &vmguest;s. See <xref linkend=\"cha."
+"libvirt.admin.monitor.virt-top\"/> for details."
+msgstr ""
+
+#. Tag: title
+#: xen_administrating.xml:386
+#, no-c-format
+msgid "Additional Tools"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:387
+#, no-c-format
+msgid ""
+"There are many system tools that also help monitoring or debugging a running "
+"&sle; system. Many of these are covered in the official &sle; documentation. "
+"Especially useful for monitoring a virtualization environment are the "
+"following tools:"
+msgstr ""
+
+#. Tag: term
+#: xen_administrating.xml:395
+#, no-c-format
+msgid "<term>ip</term>"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:397
+#, no-c-format
+msgid ""
+"The command line utility <command>ip</command> may be used to monitor "
+"arbitrary network interfaces. This is especially useful if you have set up a "
+"network that is routed or applied a masqueraded network. To monitor a "
+"network interface with the name <literal>&xenguest;.0</literal>, run the "
+"following command:"
+msgstr ""
+
+#. Tag: screen
+#: xen_administrating.xml:404
+#, no-c-format
+msgid "watch ip -s link show &xenguest;.0"
+msgstr ""
+
+#. Tag: term
+#: xen_administrating.xml:408
+#, no-c-format
+msgid "brctl"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:410
+#, no-c-format
+msgid ""
+"In a standard setup, all the &xen; &vmguest; systems are attached to a "
+"virtual network bridge. <command>brctl</command> allows you to determine the "
+"connection between the bridge and the virtual network adapter in the "
+"&vmguest; system. For example, the output of <command>brctl show</command> "
+"may look like the following:"
+msgstr ""
+
+#. Tag: screen
+#: xen_administrating.xml:417
+#, no-c-format
+msgid ""
+"bridge name     bridge id               STP enabled     interfaces\n"
+"br0             8000.000476f060cc       no              eth0\n"
+"                                                        vif1.0\n"
+"br1             8000.00001cb5a9e7       no              vlan22"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:418
+#, no-c-format
+msgid ""
+"This shows that there are two virtual bridges defined on the system. One is "
+"connected to the physical Ethernet device <literal>eth0</literal>, the other "
+"one is connected to a VLAN interface <literal>vlan22</literal>."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:424
+#, no-c-format
+msgid ""
+"There is only one guest interface active in this setup, <literal>vif1.0</"
+"literal>. This means that the guest with ID 1 has an Ethernet interface "
+"<literal>eth0</literal> assigned, that is connected to <literal>br0</"
+"literal> in the &vmhost;."
+msgstr ""
+
+#. Tag: term
+#: xen_administrating.xml:433
+#, no-c-format
+msgid "iptables-save"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:435
+#, no-c-format
+msgid ""
+"Especially when using masquerade networks, or if several Ethernet interfaces "
+"are set up together with a firewall setup, it may be helpful to check the "
+"current firewall rules."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:440
+#, no-c-format
+msgid ""
+"The command <command>iptables</command> may be used to check all the "
+"different firewall settings. To list all the rules of a chain, or even of "
+"the complete setup, you may use the commands <command>iptables-save</"
+"command> or <command>iptables -S</command>."
+msgstr ""
+
+#. Tag: title
+#: xen_administrating.xml:452
+#, no-c-format
+msgid "Providing Host Information for &vmguest; Systems"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:454
+#, no-c-format
+msgid ""
+"In a standard &xen; environment, the &vmguest; systems have only very "
+"limited information about the &vmhost; system they are running on. If a "
+"guest should know more about the &vmhost; it runs on, <systemitem>vhostmd</"
+"systemitem> can provide more information to selected guests. To set up your "
+"system to run <systemitem>vhostmd</systemitem>, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:465
+#, no-c-format
+msgid "Install the package vhostmd on the &vmhost;."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:470
+#, no-c-format
+msgid ""
+"To add or remove <literal>metric</literal> sections from the configuration, "
+"edit the file <filename>/etc/vhostmd/vhostmd.conf</filename>. However, the "
+"default works well."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:478
+#, no-c-format
+msgid ""
+"Check the validity of the <filename>vhostmd.conf</filename> configuration "
+"file with the command:"
+msgstr ""
+
+#. Tag: screen
+#: xen_administrating.xml:482
+#, no-c-format
+msgid ""
+"cd /etc/vhostmd\n"
+"xmllint --postvalid --noout vhostmd.conf"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:485
+#, no-c-format
+msgid ""
+"Start the vhostmd daemon with the command <command>sudo systemctl start "
+"vhostmd</command>."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:489
+#, no-c-format
+msgid ""
+"If vhostmd should be started automatically during start-up of the system, "
+"run the command:"
+msgstr ""
+
+#. Tag: screen
+#: xen_administrating.xml:493
+#, no-c-format
+msgid "sudo systemctl enable vhostmd"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:496
+#, no-c-format
+msgid ""
+"Attach the image file <filename>/dev/shm/vhostmd0</filename> to the "
+"&vmguest; system named &xenguest; with the command:"
+msgstr ""
+
+#. Tag: screen
+#: xen_administrating.xml:500
+#, no-c-format
+msgid "xl block-attach opensuse /dev/shm/vhostmd0,,xvdb,ro"
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:503
+#, no-c-format
+msgid "Log on the &vmguest; system."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:508
+#, no-c-format
+msgid "Install the client package <systemitem>vm-dump-metrics</systemitem>."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:513
+#, no-c-format
+msgid ""
+"Run the command <command>vm-dump-metrics</command>. To save the result to a "
+"file, use the option <systemitem>-d &lt;filename&gt;</systemitem>."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:520
+#, no-c-format
+msgid ""
+"The result of the <systemitem>vm-dump-metrics</systemitem> is an XML output. "
+"The respective metric entries follow the DTD <filename>/etc/vhostmd/metric."
+"dtd</filename>."
+msgstr ""
+
+#. Tag: para
+#: xen_administrating.xml:526
+#, no-c-format
+msgid ""
+"For more information, see the manual pages <command>man 8 vhostmd</command> "
+"and <filename>/usr/share/doc/vhostmd/README</filename> on the &vmhost; "
+"system. On the guest, see the manual page <command>man 1 vm-dump-metrics</"
+"command>."
+msgstr ""

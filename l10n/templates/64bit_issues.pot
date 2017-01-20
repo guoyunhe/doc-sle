@@ -1,0 +1,471 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: 64bit_issues.xml:12
+#, no-c-format
+msgid "32-Bit and 64-Bit Applications in a 64-Bit System Environment"
+msgstr ""
+
+#. Tag: dm:docmanager
+#: 64bit_issues.xml:14
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: 64bit_issues.xml:19 64bit_issues.xml:48 64bit_issues.xml:104
+#: 64bit_issues.xml:278
+#, no-c-format
+msgid "64-bit Linux"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:20
+#, no-c-format
+msgid ""
+"&productnamereg; is available for <phrase os=\"sles\">several</phrase> 64-"
+"bit platforms. This does not necessarily mean that all the applications "
+"included have already been ported to 64-bit platforms. &productname; "
+"supports the use of 32-bit applications in a 64-bit system environment. This "
+"chapter offers a brief overview of how this support is implemented on 64-bit "
+"&productname; platforms. It explains how 32-bit applications are executed "
+"(runtime support) and how 32-bit applications should be compiled to enable "
+"them to run both in 32-bit and 64-bit system environments. Additionally, "
+"find information about the kernel API and an explanation of how 32-bit "
+"applications can run under a 64-bit kernel."
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:32
+#, no-c-format
+msgid ""
+"<phrase os=\"sles\">&productname; for the 64-bit platforms &ppc;, &zseries; "
+"and &amd64;/&intel64;</phrase><phrase os=\"sled;osuse\">&productname; for "
+"the 64-bit platforms amd64 and &intel64;</phrase> is designed so that "
+"existing 32-bit applications run in the 64-bit environment <quote>out-of-the-"
+"box.</quote> <phrase os=\"sles\">The corresponding 32-bit platforms are ppc "
+"for &power;, and x86 for &amd64;/&intel64;.</phrase> This support means that "
+"you can continue to use your preferred 32-bit applications without waiting "
+"for a corresponding 64-bit port to become available.<phrase os=\"sles\"> The "
+"current &power; system runs most applications in 32-bit mode, but you can "
+"run 64-bit applications.</phrase>"
+msgstr ""
+
+#. Tag: title
+#: 64bit_issues.xml:46
+#, no-c-format
+msgid "Runtime Support"
+msgstr ""
+
+#. Tag: secondary
+#: 64bit_issues.xml:50
+#, no-c-format
+msgid "runtime support"
+msgstr ""
+
+#. Tag: title
+#: 64bit_issues.xml:53
+#, no-c-format
+msgid "Conflicts Between Application Versions"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:54
+#, no-c-format
+msgid ""
+"If an application is available both for 32-bit and 64-bit environments, "
+"parallel installation of both versions is bound to lead to problems. In such "
+"cases, decide on one of the two versions and install and use this."
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:59
+#, no-c-format
+msgid ""
+"An exception to this rule is PAM (pluggable authentication modules). "
+"&productname; uses PAM in the authentication process as a layer that "
+"mediates between user and application. On a 64-bit operating system that "
+"also runs 32-bit applications it is necessary to always install both "
+"versions of a PAM module."
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:68
+#, no-c-format
+msgid ""
+"To be executed correctly, every application requires a range of libraries. "
+"Unfortunately, the names for the 32-bit and 64-bit versions of these "
+"libraries are identical. They must be differentiated from each other in "
+"another way."
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:75
+#, no-c-format
+msgid ""
+"To retain compatibility with the 32-bit version, the libraries are stored at "
+"the same place in the system as in the 32-bit environment. The 32-bit "
+"version of <filename>libc.so.6</filename> is located under <filename>/lib/"
+"libc.so.6</filename> in both the 32-bit and 64-bit environments."
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:83
+#, no-c-format
+msgid ""
+"All 64-bit libraries and object files are located in directories called "
+"<filename>lib64</filename>. The 64-bit object files that you would normally "
+"expect to find under <filename>/lib</filename> and <filename>/usr/lib</"
+"filename> are now found under <filename>/lib64</filename> and <filename>/usr/"
+"lib64</filename>. This means that there is space for the 32-bit libraries "
+"under <filename>/lib</filename> and <filename>/usr/lib</filename>, so the "
+"file name for both versions can remain unchanged."
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:94
+#, no-c-format
+msgid ""
+"Subdirectories of 32-bit <filename>/lib</filename> directories which contain "
+"data content that does not depend on the word size are not moved. This "
+"scheme conforms to LSB (Linux Standards Base) and FHS (File System Hierarchy "
+"Standard)."
+msgstr ""
+
+#. Tag: title
+#: 64bit_issues.xml:102
+#, no-c-format
+msgid "Software Development"
+msgstr ""
+
+#. Tag: secondary
+#: 64bit_issues.xml:106
+#, no-c-format
+msgid "software development"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:108
+#, no-c-format
+msgid ""
+"All 64-bit architectures support the development of 64-bit objects. The "
+"level of support for 32-bit compiling depends on the architecture. These are "
+"the various implementation options for the toolchain from GCC (GNU Compiler "
+"Collection) and binutils, which include the assembler <command>as</command> "
+"and the linker <command>ld</command>:"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:116
+#, no-c-format
+msgid ""
+"Both 32-bit and 64-bit objects can be generated with a biarch development "
+"toolchain. A biarch development toolchain allows generation of 32-bit and 64-"
+"bit objects. The compilation of 64-bit objects is the default on almost all "
+"platforms. 32-bit objects can be generated if special flags are used. This "
+"special flag is <option>-m32</option> for GCC. The flags for the binutils "
+"are architecture-dependent, but GCC transfers the correct flags to linkers "
+"and assemblers. A biarch development toolchain currently exists for amd64 "
+"(supports development for x86 and amd64 instructions), for &zseries; and for "
+"&power;. 32-bit objects are normally created on the &power; platform. The "
+"<literal>-m64</literal> flag must be used to generate 64-bit objects."
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:130
+#, no-c-format
+msgid ""
+"A biarch development toolchain allows generation of 32-bit and 64-bit "
+"objects. The default is to compile 64-bit objects. It is possible to "
+"generate 32-bit objects by using special flags. For GCC, this special flag "
+"is <option>-m32</option>."
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:137
+#, no-c-format
+msgid ""
+"All header files must be written in an architecture-independent form. The "
+"installed 32-bit and 64-bit libraries must have an API (application "
+"programming interface) that matches the installed header files. The normal "
+"&productname; environment is designed according to this principle. In the "
+"case of manually updated libraries, resolve these issues yourself."
+msgstr ""
+
+#. Tag: title
+#: 64bit_issues.xml:146
+#, no-c-format
+msgid "Software Compilation on Biarch Platforms"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:148
+#, no-c-format
+msgid ""
+"To develop binaries for the other architecture on a biarch architecture, the "
+"respective libraries for the second architecture must additionally be "
+"installed. These packages are called <systemitem class=\"resource"
+"\">rpmname-32bit</systemitem><phrase os=\"sles\"> or <systemitem class="
+"\"resource\">rpmname-x86</systemitem> if the second architecture is a 32-bit "
+"architecture or <systemitem class=\"resource\">rpmname-64bit</systemitem> if "
+"the second architecture is a 64-bit architecture</phrase>. You also need the "
+"respective headers and libraries from the <systemitem class=\"resource"
+"\">rpmname-devel</systemitem> packages and the development libraries for the "
+"second architecture from <systemitem class=\"resource\">rpmname-devel-32bit</"
+"systemitem><phrase os=\"sles\"> or <systemitem class=\"resource\">rpmname-"
+"devel-64bit</systemitem></phrase>."
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:164
+#, no-c-format
+msgid ""
+"For example, to compile a program that uses <command>libaio</command> on a "
+"system whose second architecture is a 32-bit architecture (x86_64<phrase os="
+"\"sles\"> or &zseries;</phrase>), you need the following RPMs:"
+msgstr ""
+
+#. Tag: term
+#: 64bit_issues.xml:174
+#, no-c-format
+msgid "libaio-32bit"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:176
+#, no-c-format
+msgid "32-bit runtime package"
+msgstr ""
+
+#. Tag: term
+#: 64bit_issues.xml:182
+#, no-c-format
+msgid "libaio-devel-32bit"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:184
+#, no-c-format
+msgid "Headers and libraries for 32-bit development"
+msgstr ""
+
+#. Tag: term
+#: 64bit_issues.xml:190
+#, no-c-format
+msgid "libaio"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:192
+#, no-c-format
+msgid "64-bit runtime package"
+msgstr ""
+
+#. Tag: term
+#: 64bit_issues.xml:198
+#, no-c-format
+msgid "libaio-devel"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:200
+#, no-c-format
+msgid "64-bit development headers and libraries"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:207
+#, no-c-format
+msgid ""
+"Most open source programs use an <command>autoconf</command>-based program "
+"configuration. To use <command>autoconf</command> for configuring a program "
+"for the second architecture, overwrite the normal compiler and linker "
+"settings of <command>autoconf</command> by running the <command>configure</"
+"command> script with additional environment variables."
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:215
+#, no-c-format
+msgid ""
+"The following example refers to an x86_64 system with &x86; as the second "
+"architecture. <phrase os=\"sles\">Examples for &power; with ppc as the "
+"second architecture would be similar.</phrase>"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:223
+#, no-c-format
+msgid "Use the 32-bit compiler:"
+msgstr ""
+
+#. Tag: screen
+#: 64bit_issues.xml:226
+#, no-c-format
+msgid "CC=\"gcc -m32\""
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:229
+#, no-c-format
+msgid ""
+"Instruct the linker to process 32-bit objects (always use <command>gcc</"
+"command> as the linker front-end):"
+msgstr ""
+
+#. Tag: screen
+#: 64bit_issues.xml:233
+#, no-c-format
+msgid "LD=\"gcc -m32\""
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:236
+#, no-c-format
+msgid "Set the assembler to generate 32-bit objects:"
+msgstr ""
+
+#. Tag: screen
+#: 64bit_issues.xml:239
+#, no-c-format
+msgid "AS=\"gcc -c -m32\""
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:242
+#, no-c-format
+msgid ""
+"Specify linker flags, such as the location of 32-bit libraries, for example:"
+msgstr ""
+
+#. Tag: screen
+#: 64bit_issues.xml:246
+#, no-c-format
+msgid "LDFLAGS=\"-L/usr/lib\""
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:249
+#, no-c-format
+msgid "Specify the location for the 32-bit object code libraries:"
+msgstr ""
+
+#. Tag: screen
+#: 64bit_issues.xml:252
+#, no-c-format
+msgid "--libdir=/usr/lib"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:255
+#, no-c-format
+msgid "Specify the location for the 32-bit X libraries:"
+msgstr ""
+
+#. Tag: screen
+#: 64bit_issues.xml:258
+#, no-c-format
+msgid "--x-libraries=/usr/lib"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:262
+#, no-c-format
+msgid ""
+"Not all of these variables are needed for every program. Adapt them to the "
+"respective program."
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:267
+#, no-c-format
+msgid ""
+"An example <command>configure</command> call to compile a native 32-bit "
+"application on x86_64<phrase os=\"sles\">, &power; or &zseries;</phrase> "
+"could appear as follows:"
+msgstr ""
+
+#. Tag: screen
+#: 64bit_issues.xml:273
+#, no-c-format
+msgid ""
+"CC=\"gcc -m32\"\n"
+"LDFLAGS=\"-L/usr/lib;\"\n"
+"./configure --prefix=/usr --libdir=/usr/lib --x-libraries=/usr/lib\n"
+"make\n"
+"make install"
+msgstr ""
+
+#. Tag: title
+#: 64bit_issues.xml:276
+#, no-c-format
+msgid "Kernel Specifications"
+msgstr ""
+
+#. Tag: secondary
+#: 64bit_issues.xml:280
+#, no-c-format
+msgid "kernel specifications"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:282
+#, no-c-format
+msgid ""
+"The 64-bit kernels for &amd64;/&intel64;<phrase os=\"sles\">, &power; and "
+"&zseries;</phrase> offer both a 64-bit and a 32-bit kernel ABI (application "
+"binary interface). The latter is identical with the ABI for the "
+"corresponding 32-bit kernel. This means that the 32-bit application can "
+"communicate with the 64-bit kernel in the same way as with the 32-bit kernel."
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:291
+#, no-c-format
+msgid ""
+"The 32-bit emulation of system calls for a 64-bit kernel does not support "
+"all the APIs used by system programs. This depends on the platform. For this "
+"reason, few applications, like <command>lspci</command>, must be "
+"compiled<phrase os=\"sles\"> on non-&power; platforms as 64-bit programs to "
+"function properly. On IBM &zseries;, not all ioctls are available in the 32-"
+"bit kernel ABI</phrase>."
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:300
+#, no-c-format
+msgid ""
+"A 64-bit kernel can only load 64-bit kernel modules that have been specially "
+"compiled for this kernel. It is not possible to use 32-bit kernel modules."
+msgstr ""
+
+#. Tag: title
+#: 64bit_issues.xml:306
+#, no-c-format
+msgid "Kernel-loadable Modules"
+msgstr ""
+
+#. Tag: para
+#: 64bit_issues.xml:307
+#, no-c-format
+msgid ""
+"Some applications require separate kernel-loadable modules. If you intend to "
+"use such a 32-bit application in a 64-bit system environment, contact the "
+"provider of this application and &suse; to make sure that the 64-bit version "
+"of the kernel-loadable module and the 32-bit compiled version of the kernel "
+"API are available for this module."
+msgstr ""

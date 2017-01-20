@@ -1,0 +1,290 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: gnome_accessibility.xml:8
+#, no-c-format
+msgid "Assistive Technologies"
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:11
+#, no-c-format
+msgid ""
+"The &gnome; desktop includes assistive technologies to support users with "
+"various impairments and special needs, and to interact with common assistive "
+"devices. This chapter describes several assistive technology applications "
+"designed to meet the needs of users with physical disabilities like low "
+"vision or impaired motor skills."
+msgstr ""
+
+#. Tag: dm:docmanager
+#: gnome_accessibility.xml:19
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: title
+#: gnome_accessibility.xml:25
+#, no-c-format
+msgid "Enabling Assistive Technologies"
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:27
+#, no-c-format
+msgid ""
+"To configure accessibility features, open the &gnome; Settings dialog (for "
+"example using <menuchoice> <guimenu>Applications</guimenu> <guimenu>System "
+"Tools</guimenu> <guimenu>Settings</guimenu></menuchoice>) and click "
+"<guimenu>Universal Access</guimenu>. Each assistive feature can be enabled "
+"separately using this dialog."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:35
+#, no-c-format
+msgid ""
+"If you need a more direct access to individual assistive features, turn on "
+"<guimenu>Always Show Universal Access Menu</guimenu> in the "
+"<guimenu>Universal Access</guimenu> dialog. A new menu will appear on the "
+"bottom panel."
+msgstr ""
+
+#. Tag: title
+#: gnome_accessibility.xml:43
+#, no-c-format
+msgid "Visual Impairments"
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:45
+#, no-c-format
+msgid ""
+"In the <guimenu>Seeing</guimenu> section of the <guimenu>Universal Access</"
+"guimenu> dialog, you can enable features that help people with impaired "
+"vision."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:53
+#, no-c-format
+msgid ""
+"Turning on <guimenu>High Contrast</guimenu> enables high contrast black and "
+"white icons in the &gnome; desktop."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:59
+#, no-c-format
+msgid ""
+"Turning on <guimenu>Large Text</guimenu> enlarges the font used in the user "
+"interface."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:65
+#, no-c-format
+msgid ""
+"Turning on <guimenu>Zoom</guimenu> enables a screen magnifier. You can set "
+"the desired magnification and magnifier behavior, including color effects."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:71
+#, no-c-format
+msgid ""
+"If the <guimenu>Screen Reader</guimenu> is turned on, any UI element or text "
+"that receives keyboard focus is read aloud."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:77
+#, no-c-format
+msgid ""
+"If the <guimenu>Sound Keys</guimenu> are turned on, a sound is played "
+"whenever <keycap>Num Lock</keycap> or <keycap>Caps Lock</keycap> are turned "
+"on."
+msgstr ""
+
+#. Tag: title
+#: gnome_accessibility.xml:86
+#, no-c-format
+msgid "Hearing Impairments"
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:88
+#, no-c-format
+msgid ""
+"In the <guimenu>Hearing</guimenu> section of the <guimenu>Universal Access</"
+"guimenu> dialog, you can enable features helping people with impaired "
+"hearing."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:94
+#, no-c-format
+msgid ""
+"If the <guimenu>Visual Alerts</guimenu> are turned on, a window title or the "
+"entire screen is flashed when an alert sound occurs."
+msgstr ""
+
+#. Tag: title
+#: gnome_accessibility.xml:100
+#, no-c-format
+msgid "Mobility Impairments"
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:102
+#, no-c-format
+msgid ""
+"In the <guimenu>Typing</guimenu> and <guimenu>Pointing and Clicking</"
+"guimenu> sections of the <guimenu>Universal Access</guimenu> dialog, you can "
+"enable features that help people with mobility impairments."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:110
+#, no-c-format
+msgid ""
+"If the <guimenu>Screen Keyboard</guimenu> is turned on, a virtual keyboard "
+"appears whenever you need to enter text. You can use the screen keyboard by "
+"clicking the virtual keys."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:117
+#, no-c-format
+msgid ""
+"Click <guimenu>Typing Assist (AccessX)</guimenu> to open a dialog where you "
+"can enable various features that make typing easier."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:123
+#, no-c-format
+msgid ""
+"With <guimenu>Enable by Keyboard</guimenu>, you can turn accessibility "
+"features on or off by using the keyboard."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:129
+#, no-c-format
+msgid ""
+"<guimenu>Sticky Keys</guimenu> allows you to type key combinations one key "
+"at a time rather than having to hold down all of the keys at once. For "
+"example, the <keycombo> <keycap function=\"alt\"></keycap><keycap function="
+"\"tab\"></keycap></keycombo> shortcut switches between windows."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:136
+#, no-c-format
+msgid ""
+"With sticky keys turned off, you need to hold down both keys at the same "
+"time. With sticky keys turned on, press <keycap function=\"alt\"></keycap> "
+"and then <keycap function=\"tab\"></keycap> to do the same."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:143
+#, no-c-format
+msgid ""
+"Turn on <guimenu>Slow Keys</guimenu> if you want a delay between pressing a "
+"key and the letter being displayed on the screen. This means that you need "
+"to hold down each key you want to type for a little while before it appears. "
+"Use slow keys if you accidentally press several keys at a time when you "
+"type, or if you find it difficult to press the right key on the keyboard "
+"first time."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:153
+#, no-c-format
+msgid ""
+"Turn on <guimenu>Bounce Keys</guimenu> to ignore key presses that are "
+"rapidly repeated. This can help, for example, if you have hand tremors which "
+"cause you to press a key multiple times when you only want to press it once."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:163
+#, no-c-format
+msgid ""
+"Turn on <guimenu>Mouse Keys</guimenu> to control the mouse pointer using the "
+"numeric keypad on your keyboard."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:169
+#, no-c-format
+msgid ""
+"Click <guimenu>Click Assist</guimenu> to open a dialog where you can enable "
+"various features that make clicking easier: simulated secondary click and "
+"hover click."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:176
+#, no-c-format
+msgid ""
+"Turn on <guimenu>Simulated Secondary Click</guimenu> to activate the "
+"secondary click (usually the right mouse button) by holding down the primary "
+"button for a predefined <guimenu>Acceptance delay</guimenu>. This is useful "
+"if you find it difficult to move your fingers individually on one hand, or "
+"if your pointing device only has a single button."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:186
+#, no-c-format
+msgid ""
+"Turn on <guimenu>Hover Click</guimenu> to trigger a click by hovering your "
+"mouse pointer over an object on the screen. This is useful if you find it "
+"difficult to move the mouse and click at the same time. If this feature is "
+"turned on, a small Hover Click window opens and stays above all of your "
+"other windows. You can use this to choose what sort of click should happen "
+"when you hover. When you hover your mouse pointer over a button and do not "
+"move it, the pointer gradually changes color. When it has fully changed "
+"color, the button will be clicked."
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:200
+#, no-c-format
+msgid ""
+"Use the slider to adjust the <guimenu>Double-Click Delay</guimenu> according "
+"to your needs."
+msgstr ""
+
+#. Tag: title
+#: gnome_accessibility.xml:208
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: gnome_accessibility.xml:210
+#, no-c-format
+msgid ""
+"You can find further information in the &gnome; help, which is also "
+"available online at <link xlink:href=\"https://help.gnome.org/users/gnome-"
+"help/3.20/a11y.html.en\">https://help.gnome.org/users/gnome-help/3.20/a11y."
+"html.en</link>."
+msgstr ""

@@ -1,0 +1,758 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: storage_mdadm-resize.xml:9
+#, no-c-format
+msgid "Resizing Software RAID Arrays with mdadm"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:12
+#, no-c-format
+msgid ""
+"This section describes how to increase or reduce the size of a software RAID "
+"1, 4, 5, or 6 device with the Multiple Device Administration "
+"(<command>mdadm(8)</command>) tool."
+msgstr ""
+
+#. Tag: dm:docmanager
+#: storage_mdadm-resize.xml:18
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:23
+#, no-c-format
+msgid ""
+"Resizing an existing software RAID device involves increasing or decreasing "
+"the space contributed by each component partition. The file system that "
+"resides on the RAID must also be able to be resized to take advantage of the "
+"changes in available space on the device. In &productname;, file system "
+"resizing utilities are available for file systems Btrfs, Ext2, Ext3, Ext4, "
+"ReiserFS, and XFS (increase size only). Refer to <xref linkend=\"cha."
+"resize_fs\"/> for more information."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:32
+#, no-c-format
+msgid ""
+"The <command>mdadm</command> tool supports resizing only for software RAID "
+"levels 1, 4, 5, and 6. These RAID levels provide disk fault tolerance so "
+"that one component partition can be removed at a time for resizing. In "
+"principle, it is possible to perform a hot resize for RAID partitions, but "
+"you must take extra care for your data when doing so."
+msgstr ""
+
+#. Tag: title
+#: storage_mdadm-resize.xml:40
+#, no-c-format
+msgid "Back Up your Data Before Resizing"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:41
+#, no-c-format
+msgid ""
+"Resizing any partition or file system involves some risks that can "
+"potentially result in losing data. To avoid data loss, ensure that you back "
+"up your data before you begin any resizing task."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:47
+#, no-c-format
+msgid ""
+"Resizing the RAID involves the following tasks. The order in which these "
+"tasks are performed depends on whether you are increasing or decreasing its "
+"size."
+msgstr ""
+
+#. Tag: title
+#: storage_mdadm-resize.xml:53
+#, no-c-format
+msgid "Tasks Involved in Resizing a RAID"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:62
+#, no-c-format
+msgid "Tasks"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:67
+#, no-c-format
+msgid "Description"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:72
+#, no-c-format
+msgid "Order If Increasing Size"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:77
+#, no-c-format
+msgid "Order If Decreasing Size"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:86
+#, no-c-format
+msgid "Resize each of the component partitions."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:92
+#, no-c-format
+msgid ""
+"Increase or decrease the active size of each component partition. You remove "
+"only one component partition at a time, modify its size, then return it to "
+"the RAID."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:99 storage_mdadm-resize.xml:151
+#, no-c-format
+msgid "<para>1</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:104 storage_mdadm-resize.xml:123
+#, no-c-format
+msgid "<para>2</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:111
+#, no-c-format
+msgid "Resize the software RAID itself."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:116
+#, no-c-format
+msgid ""
+"The RAID does not automatically know about the increases or decreases you "
+"make to the underlying component partitions. You must inform it about the "
+"new size."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:128 storage_mdadm-resize.xml:146
+#, no-c-format
+msgid "<para>3</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:135
+#, no-c-format
+msgid "Resize the file system."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:140
+#, no-c-format
+msgid ""
+"You must resize the file system that resides on the RAID. This is possible "
+"only for file systems that provide tools for resizing."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:159
+#, no-c-format
+msgid ""
+"The procedures in the following sections use the device names shown in the "
+"following table. Ensure that you modify the names to use the names of your "
+"own devices."
+msgstr ""
+
+#. Tag: title
+#: storage_mdadm-resize.xml:165
+#, no-c-format
+msgid "Scenario for Increasing the Size of Component Partitions"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:172
+#, no-c-format
+msgid "RAID Device"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:177
+#, no-c-format
+msgid "Component Partitions"
+msgstr ""
+
+#. Tag: filename
+#: storage_mdadm-resize.xml:187
+#, no-c-format
+msgid "/dev/md0"
+msgstr ""
+
+#. Tag: filename
+#: storage_mdadm-resize.xml:192
+#, no-c-format
+msgid "/dev/sda1"
+msgstr ""
+
+#. Tag: filename
+#: storage_mdadm-resize.xml:195
+#, no-c-format
+msgid "/dev/sdb1"
+msgstr ""
+
+#. Tag: filename
+#: storage_mdadm-resize.xml:198
+#, no-c-format
+msgid "/dev/sdc1"
+msgstr ""
+
+#. Tag: title
+#: storage_mdadm-resize.xml:206
+#, no-c-format
+msgid "Increasing the Size of a Software RAID"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:208
+#, no-c-format
+msgid ""
+"Increasing the size of a software RAID involves the following tasks in the "
+"given order: increase the size of all partitions the RAID consists of, "
+"increase the size of the RAID itself and, finally, increase the size of the "
+"file system."
+msgstr ""
+
+#. Tag: title
+#: storage_mdadm-resize.xml:216 storage_mdadm-resize.xml:471
+#, no-c-format
+msgid "Potential Data Loss"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:217 storage_mdadm-resize.xml:472
+#, no-c-format
+msgid ""
+"If a RAID does not have disk fault tolerance, or it is simply not "
+"consistent, data loss results if you remove any of its partitions. Be very "
+"careful when removing partitions, and ensure that you have a backup of your "
+"data available."
+msgstr ""
+
+#. Tag: title
+#: storage_mdadm-resize.xml:226
+#, no-c-format
+msgid "Increasing the Size of Component Partitions"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:227
+#, no-c-format
+msgid ""
+"Apply the procedure in this section to increase the size of a RAID 1, 4, 5, "
+"or 6. For each component partition in the RAID, remove the partition from "
+"the RAID, modify its size, return it to the RAID, then wait until the RAID "
+"stabilizes to continue. While a partition is removed, the RAID operates in "
+"degraded mode and has no or reduced disk fault tolerance. Even for RAIDs "
+"that can tolerate multiple concurrent disk failures, do not remove more than "
+"one component partition at a time. To increase the size of the component "
+"partitions for the RAID, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:239 storage_mdadm-resize.xml:340
+#: storage_mdadm-resize.xml:534 storage_mdadm-resize.xml:617
+#, no-c-format
+msgid "Open a terminal console."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:244 storage_mdadm-resize.xml:345
+#: storage_mdadm-resize.xml:622
+#, no-c-format
+msgid "Ensure that the RAID array is consistent and synchronized by entering"
+msgstr ""
+
+#. Tag: screen
+#: storage_mdadm-resize.xml:247 storage_mdadm-resize.xml:348
+#: storage_mdadm-resize.xml:625
+#, no-c-format
+msgid "cat /proc/mdstat"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:248 storage_mdadm-resize.xml:349
+#: storage_mdadm-resize.xml:626
+#, no-c-format
+msgid ""
+"If your RAID array is still synchronizing according to the output of this "
+"command, you must wait until synchronization is complete before continuing."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:255 storage_mdadm-resize.xml:633
+#, no-c-format
+msgid ""
+"Remove one of the component partitions from the RAID array. For example, to "
+"remove <filename>/dev/sda1</filename>, enter"
+msgstr ""
+
+#. Tag: screen
+#: storage_mdadm-resize.xml:259 storage_mdadm-resize.xml:637
+#, no-c-format
+msgid "sudo mdadm /dev/md0 --fail /dev/sda1 --remove /dev/sda1"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:260 storage_mdadm-resize.xml:638
+#, no-c-format
+msgid "To succeed, both the fail and remove actions must be specified."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:265
+#, no-c-format
+msgid ""
+"Increase the size of the partition that you removed in the previous step by "
+"doing one of the following:"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:271
+#, no-c-format
+msgid ""
+"Increase the size of the partition, using a disk partitioner such as the "
+"&yast; Partitioner or the command line tool parted. This option is the usual "
+"choice."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:278
+#, no-c-format
+msgid ""
+"Replace the disk on which the partition resides with a higher-capacity "
+"device. This option is possible only if no other file systems on the "
+"original disk are accessed by the system. When the replacement device is "
+"added back into the RAID, it takes much longer to synchronize the data "
+"because all of the data that was on the original device must be rebuilt."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:290 storage_mdadm-resize.xml:653
+#, no-c-format
+msgid ""
+"Re-add the partition to the RAID array. For example, to add <filename>/dev/"
+"sda1</filename>, enter"
+msgstr ""
+
+#. Tag: screen
+#: storage_mdadm-resize.xml:294 storage_mdadm-resize.xml:657
+#, no-c-format
+msgid "sudo mdadm -a /dev/md0 /dev/sda1"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:295 storage_mdadm-resize.xml:658
+#, no-c-format
+msgid ""
+"Wait until the RAID is synchronized and consistent before continuing with "
+"the next partition."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:301 storage_mdadm-resize.xml:664
+#, no-c-format
+msgid ""
+"Repeat these steps for each of the remaining component devices in the array. "
+"Ensure that you modify the commands for the correct component partition."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:308
+#, no-c-format
+msgid ""
+"If you get a message that tells you that the kernel could not re-read the "
+"partition table for the RAID, you must reboot the computer after all "
+"partitions have been resized to force an update of the partition table."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:315
+#, no-c-format
+msgid ""
+"Continue with <xref linkend=\"sec.raid_resize.incr.raid\" xrefstyle="
+"\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_mdadm-resize.xml:324
+#, no-c-format
+msgid "Increasing the Size of the RAID Array"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:325
+#, no-c-format
+msgid ""
+"After you have resized each of the component partitions in the RAID (see "
+"<xref linkend=\"sec.raid_resize.incr.partitions\" xrefstyle=\"SectTitleOnPage"
+"\"/>), the RAID array configuration continues to use the original array size "
+"until you force it to be aware of the newly available space. You can specify "
+"a size for the RAID or use the maximum available space."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:333
+#, no-c-format
+msgid ""
+"The procedure in this section uses the device name <filename>/dev/md0</"
+"filename> for the RAID device. Ensure that you modify the name to use the "
+"name of your own device."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:356 storage_mdadm-resize.xml:539
+#, no-c-format
+msgid ""
+"Check the size of the array and the device size known to the array by "
+"entering"
+msgstr ""
+
+#. Tag: screen
+#: storage_mdadm-resize.xml:360 storage_mdadm-resize.xml:405
+#: storage_mdadm-resize.xml:543
+#, no-c-format
+msgid "sudo mdadm -D /dev/md0 | grep -e \"Array Size\" -e \"Dev Size\""
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:363 storage_mdadm-resize.xml:408
+#: storage_mdadm-resize.xml:569
+#, no-c-format
+msgid "Do one of the following:"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:368 storage_mdadm-resize.xml:375
+#, no-c-format
+msgid ""
+"Increase the size of the array to the maximum available size by entering"
+msgstr ""
+
+#. Tag: screen
+#: storage_mdadm-resize.xml:372
+#, no-c-format
+msgid "sudo mdadm --grow /dev/md0 -z max"
+msgstr ""
+
+#. Tag: screen
+#: storage_mdadm-resize.xml:379
+#, no-c-format
+msgid "sudo mdadm --grow /dev/md0 -z max --assume-clean"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:380
+#, no-c-format
+msgid ""
+"The array uses any space that has been added to the devices, but this space "
+"will not be synchronized. This is recommended for RAID&nbsp;1 because the "
+"synchronization is not needed. It can be useful for other RAID levels if the "
+"space that was added to the member devices was pre-zeroed."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:389
+#, no-c-format
+msgid "Increase the size of the array to a specified value by entering"
+msgstr ""
+
+#. Tag: screen
+#: storage_mdadm-resize.xml:392 storage_mdadm-resize.xml:549
+#, no-c-format
+msgid "sudo mdadm --grow /dev/md0 -z <replaceable>size</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:393
+#, no-c-format
+msgid ""
+"Replace <replaceable>size</replaceable> with an integer value in kilobytes "
+"(a kilobyte is 1024 bytes) for the desired size."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:401 storage_mdadm-resize.xml:562
+#, no-c-format
+msgid ""
+"Recheck the size of your array and the device size known to the array by "
+"entering"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:413
+#, no-c-format
+msgid ""
+"If your array was successfully resized, continue with <xref linkend=\"sec."
+"raid_resize.incr.fs\" xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:419 storage_mdadm-resize.xml:580
+#, no-c-format
+msgid ""
+"If your array was not resized as you expected, you must reboot, then try "
+"this procedure again."
+msgstr ""
+
+#. Tag: title
+#: storage_mdadm-resize.xml:430
+#, no-c-format
+msgid "Increasing the Size of the File System"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:431
+#, no-c-format
+msgid ""
+"After you increase the size of the array (see <xref linkend=\"sec."
+"raid_resize.incr.raid\" xrefstyle=\"SectTitleOnPage\"/>), you are ready to "
+"resize the file system."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:436
+#, no-c-format
+msgid ""
+"You can increase the size of the file system to the maximum space available "
+"or specify an exact size. When specifying an exact size for the file system, "
+"ensure that the new size satisfies the following conditions:"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:443 storage_mdadm-resize.xml:497
+#, no-c-format
+msgid ""
+"The new size must be greater than the size of the existing data; otherwise, "
+"data loss occurs."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:449 storage_mdadm-resize.xml:503
+#, no-c-format
+msgid ""
+"The new size must be equal to or less than the current RAID size because the "
+"file system size cannot extend beyond the space available."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:455 storage_mdadm-resize.xml:509
+#, no-c-format
+msgid "Refer to <xref linkend=\"cha.resize_fs\"/> for detailed instructions."
+msgstr ""
+
+#. Tag: title
+#: storage_mdadm-resize.xml:461
+#, no-c-format
+msgid "Decreasing the Size of a Software RAID"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:463
+#, no-c-format
+msgid ""
+"Decreasing the Size of a Software RAID involves the following tasks in the "
+"given order: decrease the size of the file system, decrease the size of all "
+"partitions the RAID consists of, and finally decrease the size of the RAID "
+"itself."
+msgstr ""
+
+#. Tag: title
+#: storage_mdadm-resize.xml:481
+#, no-c-format
+msgid "<title>XFS</title>"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:482
+#, no-c-format
+msgid ""
+"Decreasing the size of a file system formatted with XFS is not possible, "
+"since such a feature is not supported by XFS. As a consequence, the size of "
+"a RAID that uses the XFS file system cannot be decreased."
+msgstr ""
+
+#. Tag: title
+#: storage_mdadm-resize.xml:490
+#, no-c-format
+msgid "Decreasing the Size of the File System"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:491
+#, no-c-format
+msgid ""
+"When decreasing the size of the file system on a RAID device, ensure that "
+"the new size satisfies the following conditions:"
+msgstr ""
+
+#. Tag: title
+#: storage_mdadm-resize.xml:515
+#, no-c-format
+msgid "Decreasing the Size of the RAID Array"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:516
+#, no-c-format
+msgid ""
+"After you have resized the file system (see <xref linkend=\"sec.raid_resize."
+"decr.fs\" xrefstyle=\"SectTitleOnPage\"/>), the RAID array configuration "
+"continues to use the original array size until you force it to reduce the "
+"available space. Use the <command>mdadm --grow</command> mode to force the "
+"RAID to use a smaller segment size. To do this, you must use the -z option "
+"to specify the amount of space in kilobytes to use from each device in the "
+"RAID. This size must be a multiple of the chunk size, and it must leave "
+"about 128 KB of space for the RAID superblock to be written to the device."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:527
+#, no-c-format
+msgid ""
+"The procedure in this section uses the device name <filename>/dev/md0</"
+"filename> for the RAID device. Ensure that you modify commands to use the "
+"name of your own device."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:546
+#, no-c-format
+msgid "Decrease the array’s device size to a specified value by entering"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:550
+#, no-c-format
+msgid ""
+"Replace <replaceable>size</replaceable> with an integer value in kilobytes "
+"for the desired size. (A kilobyte is 1024 bytes.)"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:554
+#, no-c-format
+msgid ""
+"For example, the following command sets the segment size for each RAID "
+"device to about 40 GB where the chunk size is 64 KB. It includes 128 KB for "
+"the RAID superblock."
+msgstr ""
+
+#. Tag: screen
+#: storage_mdadm-resize.xml:559
+#, no-c-format
+msgid "sudo mdadm --grow /dev/md2 -z 41943168"
+msgstr ""
+
+#. Tag: screen
+#: storage_mdadm-resize.xml:566
+#, no-c-format
+msgid "sudo mdadm -D /dev/md0 | grep -e \"Array Size\" -e \"Device Size\""
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:574
+#, no-c-format
+msgid ""
+"If your array was successfully resized, continue with <xref linkend=\"sec."
+"raid_resize.decr.partitions\" xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: storage_mdadm-resize.xml:591
+#, no-c-format
+msgid "Decreasing the Size of Component Partitions"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:592
+#, no-c-format
+msgid ""
+"After you decrease the segment size that is used on each device in the RAID "
+"(see <xref linkend=\"sec.raid_resize.decr.raid\" xrefstyle=\"SectTitleOnPage"
+"\"/>), the remaining space in each component partition is not used by the "
+"RAID. You can leave partitions at their current size to allow for the RAID "
+"to grow at a future time, or you can reclaim this now unused space."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:600
+#, no-c-format
+msgid ""
+"To reclaim the space, you decrease the component partitions one at a time. "
+"For each component partition, you remove it from the RAID, reduce its "
+"partition size, return the partition to the RAID, then wait until the RAID "
+"stabilizes. To allow for metadata, you should specify a slightly larger size "
+"than the size you specified for the RAID in <xref linkend=\"sec.raid_resize."
+"decr.raid\" xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:608
+#, no-c-format
+msgid ""
+"While a partition is removed, the RAID operates in degraded mode and has no "
+"or reduced disk fault tolerance. Even for RAIDs that can tolerate multiple "
+"concurrent disk failures, you should never remove more than one component "
+"partition at a time. To decrease the size of the component partitions for "
+"the RAID, proceed as follows:"
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:643
+#, no-c-format
+msgid ""
+"Decrease the size of the partition that you removed in the previous step to "
+"a size that is slightly larger than the size you set for the segment size. "
+"The size should be a multiple of the chunk size and allow 128 KB for the "
+"RAID superblock. Use a disk partitioner such as the &yast; partitioner or "
+"the command line tool parted to decrease the size of the partition."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:671
+#, no-c-format
+msgid ""
+"If you get a message that tells you that the kernel could not re-read the "
+"partition table for the RAID, you must reboot the computer after resizing "
+"all of its component partitions."
+msgstr ""
+
+#. Tag: para
+#: storage_mdadm-resize.xml:678
+#, no-c-format
+msgid ""
+"(Optional) Expand the size of the RAID and file system to use the maximum "
+"amount of space in the now smaller component partitions and increase the "
+"size of the file system afterward. Refer to <xref linkend=\"sec.raid_resize."
+"incr.raid\"/> for instructions."
+msgstr ""

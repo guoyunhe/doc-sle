@@ -1,0 +1,1458 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: vt_docker_quick.xml:13
+#, no-c-format
+msgid "Docker Quick Start"
+msgstr ""
+
+#. Tag: subtitle
+#: vt_docker_quick.xml:14
+#, no-c-format
+msgid "&productname; &productnumber;"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:19
+#, no-c-format
+msgid ""
+"This guide introduces Docker, a lightweight virtualization solution to run "
+"virtual units simultaneously on a single control host."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:29
+#, no-c-format
+msgid ""
+"Docker is a lightweight virtualization solution to run multiple virtual "
+"units (containers) simultaneously on a single control host. Containers are "
+"isolated with Kernel Control Groups (<xref linkend=\"vle.docker.cgroup\"/>) "
+"and <xref linkend=\"vle.docker.namespace\"/>."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:35
+#, no-c-format
+msgid ""
+"Full virtualization solutions such as &xen;, &kvm;, or &libvirt; are based "
+"on the processor simulating a complete hardware environment and controlling "
+"the virtual machines. However, Docker only provides operating system-level "
+"virtualization where the Linux kernel controls isolated containers."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:43
+#, no-c-format
+msgid "Terminology"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:45
+#, no-c-format
+msgid ""
+"The following list contains important terminology and introduces you to "
+"certain fundamental concepts of Docker."
+msgstr ""
+
+#. Tag: remark
+#: vt_docker_quick.xml:48
+#, no-c-format
+msgid ""
+"taroth 2014-10-30: aginies, perhaps sort the terms alphabetically? like in a "
+"glossary?"
+msgstr ""
+
+#. Tag: term
+#: vt_docker_quick.xml:54
+#, no-c-format
+msgid "cgroups"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:56
+#, no-c-format
+msgid ""
+"Control Groups is a Linux kernel feature that allows aggregating or "
+"partitioning tasks (processes) and all their children into hierarchically "
+"organized groups to isolate resources."
+msgstr ""
+
+#. Tag: term
+#: vt_docker_quick.xml:64
+#, no-c-format
+msgid "Image"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:66
+#, no-c-format
+msgid ""
+"A <emphasis>virtual machine</emphasis> on the host server that can run any "
+"Linux system, for example &sls;, &sled;, or &opensuse;. A Docker image is "
+"made by a series of layers built one over the other. Each layer corresponds "
+"to a permanent change committed from a container to the image. For more "
+"details, see the official Docker documentation at <link xlink:href=\"http://"
+"docs.docker.com/engine/reference/glossary#image\"></link>."
+msgstr ""
+
+#. Tag: term
+#: vt_docker_quick.xml:76
+#, no-c-format
+msgid "Image Name"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:78
+#, no-c-format
+msgid ""
+"A name that refers to an image. The name is used by the Docker commands."
+msgstr ""
+
+#. Tag: term
+#: vt_docker_quick.xml:85
+#, no-c-format
+msgid "Container"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:87
+#, no-c-format
+msgid "A running Docker image."
+msgstr ""
+
+#. Tag: term
+#: vt_docker_quick.xml:93
+#, no-c-format
+msgid "Container ID"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:95
+#, no-c-format
+msgid ""
+"An ID that refers to a particular container. The ID is used by the Docker "
+"commands."
+msgstr ""
+
+#. Tag: term
+#: vt_docker_quick.xml:102
+#, no-c-format
+msgid "<term>Tag</term>"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:104
+#, no-c-format
+msgid ""
+"A string associated with an image. It is commonly used to identify a "
+"specific version of an image (similar to tags in version control systems). "
+"It is also possible to refer to the same image with different tags."
+msgstr ""
+
+#. Tag: term
+#: vt_docker_quick.xml:111
+#, no-c-format
+msgid "Kernel Namespaces"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:113
+#, no-c-format
+msgid ""
+"Namespaces are a kernel feature to isolate some resources like network, "
+"users, and others for a group of processes."
+msgstr ""
+
+#. Tag: term
+#: vt_docker_quick.xml:120
+#, no-c-format
+msgid "Docker Host Server"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:122
+#, no-c-format
+msgid ""
+"The system that runs the Docker daemon, and provides images and management "
+"control capabilities through <xref linkend=\"vle.docker.cgroup\"/>."
+msgstr ""
+
+#. Tag: term
+#: vt_docker_quick.xml:130
+#, no-c-format
+msgid "Registry"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:132
+#, no-c-format
+msgid "A remote storage for Docker images."
+msgstr ""
+
+#. Tag: term
+#: vt_docker_quick.xml:138
+#, no-c-format
+msgid "Repository"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:140
+#, no-c-format
+msgid "Place where all the versions of a Docker image are kept."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:146
+#, no-c-format
+msgid "Overview"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:148
+#, no-c-format
+msgid ""
+"Docker is a platform that allows developers and system administrators to "
+"manage the complete life cycle of images. Docker makes it easy to build, "
+"ship and run images containing applications."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:155
+#, no-c-format
+msgid "Benefits of Docker"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:157
+#, no-c-format
+msgid "Isolation of applications and operating systems through containers."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:162
+#, no-c-format
+msgid ""
+"Near native performance, as Docker manages allocation of resources in real "
+"time."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:166
+#, no-c-format
+msgid ""
+"Controls network interfaces and resources available inside containers "
+"through cgroups."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:172
+#, no-c-format
+msgid "Versioning of images."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:177
+#, no-c-format
+msgid "Allows building new images based on existing ones."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:182
+#, no-c-format
+msgid ""
+"Docker Hub allows sharing and storing of images in public or private "
+"repositories:"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:188
+#, no-c-format
+msgid ""
+"For more information about public repositories, see <link xlink:href="
+"\"http://docs.docker.com/docker-hub/\"></link>."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:194
+#, no-c-format
+msgid ""
+"For more information about private repositories, see <link xlink:href="
+"\"http://docs.docker.com/userguide/dockerrepos/#private-repositories\"></"
+"link>."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:204
+#, no-c-format
+msgid "Limitations of Docker"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:206
+#, no-c-format
+msgid ""
+"Containers run inside the host system's kernel and cannot use a different "
+"kernel."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:212
+#, no-c-format
+msgid "Only allows Linux <emphasis>guest</emphasis> operating systems."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:217
+#, no-c-format
+msgid ""
+"Docker is not a full virtualization stack like &xen;, &kvm;, or &libvirt;."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:223
+#, no-c-format
+msgid ""
+"Security depends on the host system. Refer to the <link xlink:href=\"http://"
+"docs.docker.com/articles/security/\">official security documentation</link> "
+"for more details."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:232
+#, no-c-format
+msgid "Container Drivers"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:233
+#, no-c-format
+msgid ""
+"Docker uses <link xlink:href=\"https://github.com/docker/libcontainer"
+"\">libcontainer</link> as the back-end driver to handle containers."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:239
+#, no-c-format
+msgid "Storage Drivers"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:240
+#, no-c-format
+msgid "Docker supports different storage drivers:"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:245
+#, no-c-format
+msgid ""
+"<systemitem class=\"resource\">vfs</systemitem>: this driver is "
+"automatically used when the Docker host file system does not support copy-on-"
+"write. This is a simple driver which does not offer some advantages of "
+"Docker (like sharing layers, more on that in the next sections). It is "
+"highly reliable but also slow."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:254
+#, no-c-format
+msgid ""
+"<systemitem class=\"resource\">devicemapper</systemitem>: this driver relies "
+"on the device-mapper thin provisioning module. It supports copy-on-write, "
+"hence it offers all the advantages of Docker."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:261
+#, no-c-format
+msgid ""
+"<systemitem class=\"resource\">btrfs</systemitem>: this driver relies on "
+"Btrfs to provide all the features required by Docker. To use this driver the "
+"<filename>/var/lib/docker</filename> directory must be on a Btrfs file "
+"system."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:269
+#, no-c-format
+msgid ""
+"<systemitem class=\"resource\">AUFS</systemitem>: this driver relies on the "
+"AUFS union file system. Neither the upstream kernel nor the SUSE one "
+"supports this file system. Hence the AUFS driver is not built into the SUSE "
+"Docker package."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:276
+#, no-c-format
+msgid ""
+"&slea;&nbsp;12 uses the Btrfs file system by default, which leads Docker to "
+"use the <systemitem class=\"resource\">btrfs</systemitem> driver."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:280
+#, no-c-format
+msgid ""
+"It is possible to specify which driver to use by changing the value of the "
+"<envar>DOCKER_OPTS</envar> variable defined inside of the <filename>/etc/"
+"sysconfig/docker</filename> file. This can be done either manually or using "
+"&yast; by browsing to <menuchoice> <guimenu>System</guimenu> <guimenu>/etc/"
+"sysconfig Editor</guimenu> <guimenu>System</guimenu> <guimenu>Management</"
+"guimenu> <guimenu>DOCKER_OPTS</guimenu> </menuchoice> menu and entering the "
+"<systemitem class=\"library\">-s storage_driver</systemitem> string."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:290
+#, no-c-format
+msgid ""
+"For example, to force the usage of the <systemitem class=\"resource"
+"\">devicemapper</systemitem> driver enter the following text:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:295
+#, no-c-format
+msgid "DOCKER_OPTS=\"-s devicemapper\""
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:297
+#, no-c-format
+msgid "Mounting <filename>/var/lib/docker</filename>"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:298
+#, no-c-format
+msgid ""
+"It is recommended to have <filename>/var/lib/docker</filename> mounted on a "
+"different file system to not affect the Docker host operating system in case "
+"of a file system corruption."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:307
+#, no-c-format
+msgid "Setting Up a Docker Host"
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:312
+#, no-c-format
+msgid "General Preparation"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:313
+#, no-c-format
+msgid ""
+"Prepare the host as described below. Before installing any Docker-related "
+"packages, you need to enable the container module:"
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:319
+#, no-c-format
+msgid "Enabling the Container Module Using &yast;"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:321
+#, no-c-format
+msgid ""
+"Start &yast;, and select <menuchoice> <guimenu>Software</guimenu> <guimenu> "
+"Software Repositories</guimenu> </menuchoice>."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:327
+#, no-c-format
+msgid "Click <guimenu>Add</guimenu> to open the add-on dialog."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:332
+#, no-c-format
+msgid ""
+"Select <guimenu>Extensions and Modules from Registration Server</guimenu> "
+"and click <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:338
+#, no-c-format
+msgid ""
+"From the list of available extensions and modules, select <guimenu>Container "
+"Module 12 x86_64</guimenu> and click <guimenu>Next</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:343
+#, no-c-format
+msgid ""
+"The containers module and its repositories will be added to your system."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:349
+#, no-c-format
+msgid ""
+"If you use &smtool;, update the list of repositories on the &smt; server."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:354
+#, no-c-format
+msgid "Enabling the Container Module Using SUSEConnect"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:356
+#, no-c-format
+msgid "The Container Module can be added also with the following command:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:359
+#, no-c-format
+msgid "$ sudo SUSEConnect -p sle-module-containers/12/x86_64 -r ''"
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:361
+#, no-c-format
+msgid "Note about the SUSEConnect syntax"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:362
+#, no-c-format
+msgid ""
+"The <option>-r ''</option> flag is required to avoid a known limitation of "
+"SUSEConnect."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:370
+#, no-c-format
+msgid "Installing and Setting Up Docker"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:372
+#, no-c-format
+msgid "Install the <systemitem>docker</systemitem> package:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:375
+#, no-c-format
+msgid "sudo zypper install docker"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:378
+#, no-c-format
+msgid "To automatically start the Docker service at boot time:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:381
+#, no-c-format
+msgid "sudo systemctl enable docker.service"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:382
+#, no-c-format
+msgid "This will automatically enable docker.socket in consequence."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:387
+#, no-c-format
+msgid "Start the Docker service:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:390
+#, no-c-format
+msgid "sudo systemctl start docker.service"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:391
+#, no-c-format
+msgid "This will automatically start docker.socket in consequence."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:396
+#, no-c-format
+msgid ""
+"The Docker daemon listens on a local socket which is accessible only by the "
+"<systemitem class=\"username\">root</systemitem> user and by the members of "
+"the <systemitem class=\"groupname\">docker</systemitem> group. The "
+"<systemitem class=\"groupname\">docker</systemitem> group is automatically "
+"created at package installation time. To allow a certain user to connect to "
+"the local Docker daemon, use the following command:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:404
+#, no-c-format
+msgid "sudo /usr/sbin/usermod -aG docker <replaceable>USERNAME</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:405
+#, no-c-format
+msgid ""
+"The user can communicate with the local Docker daemon upon his next login."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:412
+#, no-c-format
+msgid "Networking"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:413
+#, no-c-format
+msgid ""
+"If you want your containers to be able to access the external network, you "
+"must enable the <option>ipv4 ip_forward</option> rule. This can be done "
+"using &yast; by browsing to <menuchoice> <guimenu>System</guimenu> "
+"<guimenu>Network Settings</guimenu> <guimenu>Routing</guimenu> </menuchoice> "
+"menu and ensuring <option>Enable IPv4 Forwarding</option> is checked."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:421
+#, no-c-format
+msgid ""
+"This option cannot be changed when networking is handled by the Network "
+"Manager. In such cases the <filename>/etc/sysconfig/SuSEfirewall2</filename> "
+"file needs to be edited manually to ensure the <option>FW_ROUTE</option> "
+"flag is set to <option>yes</option>:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:427
+#, no-c-format
+msgid "FW_ROUTE=\"yes\""
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:430
+#, no-c-format
+msgid "Networking Limitations on Power Architecture"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:431
+#, no-c-format
+msgid ""
+"Currently Docker networking has two limitations on the Power architecture."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:434
+#, no-c-format
+msgid ""
+"The first limitation is about iptables. &slea;&nbsp;12 machines cannot run "
+"Docker with the iptables support enabled. An update of the kernel is going "
+"to solve this issue. In the meantime the Docker package for Power has "
+"iptables support disabled via a dedicated directive inside of <filename>/etc/"
+"sysconfig/docker</filename>."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:441
+#, no-c-format
+msgid ""
+"As a result of this limitation Docker containers are not going to have "
+"access to the outer network. A possible workaround is to share the same "
+"network namespace between and host and the containers. This however reduces "
+"the isolation of the containers."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:447
+#, no-c-format
+msgid ""
+"The network namespace of the host can be shared on a per-container basis by "
+"supplying the <option>--net=host</option> to the <option>docker run</option> "
+"command."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:453
+#, no-c-format
+msgid "iptables support on &slea;&nbsp;12 SP1"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:454
+#, no-c-format
+msgid ""
+"&slea;&nbsp;12 SP1 hosts are not affected by this limitation but, given they "
+"use the same &slea;&nbsp;12 package, they are going to have iptables support "
+"disabled. This can be changed by removing the <option>-iptables=false</"
+"option> setting inside of <filename>/etc/sysconfig/docker</filename>."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:462
+#, no-c-format
+msgid ""
+"The second limitation is about network isolation between the containers and "
+"the host. Currently it is not possible to prevent containers from probing or "
+"accessing arbitrary ports of each other."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:471
+#, no-c-format
+msgid "Basic Docker Operations"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:473
+#, no-c-format
+msgid ""
+"Images can be pulled from Docker's central index at <link xlink:href="
+"\"http://index.docker.io\"></link> using the following command:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:478
+#, no-c-format
+msgid "docker pull <replaceable>IMAGE_NAME</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:480
+#, no-c-format
+msgid ""
+"Containers can be started using the <command>docker run</command> command. "
+"Refer to the official documentation of Docker at <link xlink:href=\"http://"
+"docs.docker.com/\"></link> for more details."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:487
+#, no-c-format
+msgid "Building Docker Images"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:489
+#, no-c-format
+msgid ""
+"Starting with version 5.06.8, &kiwi; can be used to build Docker images. "
+"Also see the official &kiwi; documentation, in particular <link xlink:href="
+"\"https://doc.opensuse.org/projects/kiwi/doc/#chap.lxc\"></link>. The "
+"official <systemitem>kiwi-doc</systemitem> package contains examples of "
+"Docker images."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:497
+#, no-c-format
+msgid ""
+"Docker has an <link xlink:href=\"http://docs.docker.com/reference/builder/"
+"\">internal build system</link> which can be used to create new images based "
+"on existing ones."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:504
+#, no-c-format
+msgid ""
+"Some users might be confused about which build system to use for what task. "
+"The recommended approach is to customize the official &slea; images for "
+"Docker using the Docker build system. This approach has two advantages:"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:513
+#, no-c-format
+msgid ""
+"You can use Docker-specific directives (like <literal>ENTRYPOINT</literal>, "
+"<literal>EXPOSE</literal>, etc)."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:518
+#, no-c-format
+msgid "You can re-use existing layers."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:524
+#, no-c-format
+msgid ""
+"Sharing the common layers between different images makes it possible to:"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:530
+#, no-c-format
+msgid ""
+"Use less disk space on the Docker hosts and on the remote registry service."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:536
+#, no-c-format
+msgid ""
+"Deploy faster: only the requested layers are sent over the network (this is "
+"similar to upgrading installed packages using delta RPMs)."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:542
+#, no-c-format
+msgid ""
+"Take full advantage of caching while building Docker images: this will "
+"result in faster executions of the <command>docker build</command> command."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:550
+#, no-c-format
+msgid ""
+"&suse; creates the official <link xlink:href=\"http://docs.docker.com/"
+"reference/glossary/#base-image\">base images</link> using &kiwi; and "
+"publishes them to allow customers to use those as foundation blocks inside "
+"of the Docker build system. Only the Docker images built on top of our "
+"official ones via the Docker build system are going to be supported."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:560
+#, no-c-format
+msgid "&sle; Images for Docker"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:562
+#, no-c-format
+msgid ""
+"Currently we cannot distribute &slea; images for Docker because there is no "
+"way to associate an End-User License Agreement (EULA) to a Docker image. "
+"However, we provide official pre-built Docker images for &slea; and a "
+"convenience tool called <link xlink:href=\"https://github.com/SUSE/sle2docker"
+"\">sle2docker</link> that can be used to activate these images locally."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:571
+#, no-c-format
+msgid ""
+"Pre-built images do not have repositories configured. But when the Docker "
+"host has an SLE subscription that provides access to the product used in the "
+"image, Zypper will automatically have access to the right repositories. For "
+"more details see <xref linkend=\"sec.docker.sle_images.customizing_the_images"
+"\"/>."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:578
+#, no-c-format
+msgid "Installing sle2docker"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:579
+#, no-c-format
+msgid ""
+"The <command>sle2docker</command> tool is part of the official container "
+"module. It can be installed using the following command:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:583
+#, no-c-format
+msgid "sudo zypper install sle2docker"
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:585
+#, no-c-format
+msgid "The Docker Daemon Needs to Be Running"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:586
+#, no-c-format
+msgid ""
+"<command>sle2docker</command> requires the Docker daemon to be running on "
+"the system."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:594
+#, no-c-format
+msgid "Activating the Pre-built Docker Images"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:595
+#, no-c-format
+msgid ""
+"The official pre-built Docker images for &slea; are shipped as RPM packages "
+"inside of the <literal>containers</literal> module. They can be installed "
+"using Zypper:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:600
+#, no-c-format
+msgid "sudo zypper in sles11sp3-docker-image sles12-docker-image"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:601
+#, no-c-format
+msgid ""
+"<command>sle2docker</command> can list the available pre-built images with "
+"the following command:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:605
+#, no-c-format
+msgid "sle2docker list"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:606
+#, no-c-format
+msgid "To activate a pre-built image, use the following command:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:609
+#, no-c-format
+msgid "sle2docker activate <replaceable>PRE-BUILT_IMAGE_NAME</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:610
+#, no-c-format
+msgid ""
+"At the end of the activation, <command>sle2docker</command> will print the "
+"name of the Docker image that has been created."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:617
+#, no-c-format
+msgid "Customizing the Images"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:618
+#, no-c-format
+msgid ""
+"To create custom Docker images based on the official ones use <link xlink:"
+"href=\"http://docs.docker.com/reference/builder/\"> Docker's integrated "
+"build system </link>."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:623
+#, no-c-format
+msgid ""
+"The pre-built images do not have any repository configured. They contain a "
+"<link xlink:href=\"https://github.com/SUSE/container-suseconnect\"> zypper "
+"service</link> that contacts either the &scc; (SCC) or your Subscription "
+"Management Tool (&smt;) server, according to the configuration of the &slea; "
+"host that runs the Docker container. The service obtains the list of "
+"repositories available for the product used by the Docker image."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:632
+#, no-c-format
+msgid ""
+"You do not need to add any credentials to the Docker image because the "
+"machine credentials are automatically injected into the container by the "
+"docker daemon. They are injected inside of the <filename>/run/secrets</"
+"filename> directory. The same applies to the <filename>/etc/SUSEConnect</"
+"filename> file of the host system, which is automatically injected into the "
+"<filename>/run/secrets</filename> file."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:641
+#, no-c-format
+msgid "Credentials and Security"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:642
+#, no-c-format
+msgid ""
+"The contents of the <filename>/run/secrets</filename> directory are never "
+"committed to a Docker image, hence there is no risk of your credentials "
+"leaking."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:648
+#, no-c-format
+msgid "To obtain the list of repositories use the following command:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:651
+#, no-c-format
+msgid "zypper ref -s"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:652
+#, no-c-format
+msgid ""
+"It will automatically add all the repositories to your container. For each "
+"repository added to the system a new file is going to be created under "
+"<command>/etc/zypp/repos.d</command>. The URLs of these repositories include "
+"an access token that automatically expires after 12 hours. To renew the "
+"token call the <command>zypper ref -s</command> command. It is secure to "
+"commit these files to a Docker image."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:660
+#, no-c-format
+msgid ""
+"If you want to use a different set of credentials, place a custom <filename>/"
+"etc/zypp/credentials.d/SCCcredentials</filename> file inside of the Docker "
+"image. It contains the machine credentials that have the subscription you "
+"want to use. The same applies to the <filename>SUSEConnect</filename> file: "
+"to override the file available on the host system that is running the Docker "
+"container, add a custom <filename>/etc/SUSEConnect</filename> file inside of "
+"the Docker image."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:670
+#, no-c-format
+msgid "Creating a Custom &slea;&nbsp;12 Image"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:671
+#, no-c-format
+msgid ""
+"The following Docker file creates a simple Docker image based on &slea;"
+"&nbsp;12:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:675
+#, no-c-format
+msgid ""
+"FROM suse/sles12:latest\n"
+"\n"
+"RUN zypper --gpg-auto-import-keys ref -s\n"
+"RUN zypper -n in vim"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:676 vt_docker_quick.xml:689
+#, no-c-format
+msgid ""
+"When the Docker host machine is registered against an internal &smt; server, "
+"the Docker image requires the SSL certificate used by &smt;:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:680
+#, no-c-format
+msgid ""
+"FROM suse/sles12:latest\n"
+"\n"
+"# Import the crt file of our private SMT server\n"
+"ADD http://smt.test.lan/smt.crt /etc/pki/trust/anchors/smt.crt\n"
+"RUN update-ca-certificates\n"
+"\n"
+"RUN zypper --gpg-auto-import-keys ref -s\n"
+"RUN zypper -n in vim"
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:683
+#, no-c-format
+msgid "Creating a Custom &slea;&nbsp;11 SP3 Image"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:684
+#, no-c-format
+msgid ""
+"The following Docker file creates a simple Docker image based on &slea;"
+"&nbsp;11 SP3:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:688
+#, no-c-format
+msgid ""
+"FROM suse/sles11sp3:latest\n"
+"\n"
+"RUN zypper --gpg-auto-import-keys ref -s\n"
+"RUN zypper -n in vim"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:693
+#, no-c-format
+msgid ""
+"FROM suse/sles11sp3:latest\n"
+"\n"
+"# Import the crt file of our private SMT server\n"
+"ADD http://smt.test.lan/smt.crt /etc/ssl/certs/smt.pem\n"
+"RUN c_rehash /etc/ssl/certs\n"
+"\n"
+"RUN zypper --gpg-auto-import-keys ref -s\n"
+"RUN zypper -n in vim"
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:698
+#, no-c-format
+msgid "Hosting Docker Images On-premise"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:700
+#, no-c-format
+msgid ""
+"This section addresses some common questions like: what can be done with the "
+"custom Docker images I created? How can they be shared within my "
+"organization?"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:706
+#, no-c-format
+msgid ""
+"The easiest solution would be to push these images to the Docker Hub. "
+"However, there are a couple of important matters to keep in mind: By "
+"default, all the images pushed to the Docker Hub are public. To keep them "
+"private you need to pay a subscription-based fee. Moreover you do not have "
+"control over the servers where your data is stored. This may not comply with "
+"your organization's or company's policies to have full control over their "
+"intellectual property. The solution to this problem is simple: To avoid the "
+"use of Docker Hub, you can run an on-site Docker registry where to store all "
+"the Docker images used by your organization or company."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:720
+#, no-c-format
+msgid "What is a Docker Registry?"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:721
+#, no-c-format
+msgid ""
+"The Docker registry is an open source project created by Docker Inc. It "
+"allows the storage and retrieval of Docker images. By running a local "
+"instance of the Docker registry it is possible to completely avoid usage of "
+"the Docker Hub."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:725
+#, no-c-format
+msgid ""
+"The Docker registry is also used by the Docker Hub. However, the Docker Hub, "
+"as seen from the user perspective, is made of the following parts at least:"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:732
+#, no-c-format
+msgid ""
+"The user interface (UI): The part that is accessed by users with their "
+"browser. The UI provides a nice and intuitive way to browse the contents of "
+"the Docker Hub either manually or by using a search feature. It also allows "
+"to create organizations made by different users."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:739 vt_docker_quick.xml:747
+#, no-c-format
+msgid "This component is closed source."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:744
+#, no-c-format
+msgid ""
+"The authentication component: This is used to protect the images stored "
+"inside of the Docker Hub. It validates all push, pull and search requests."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:752
+#, no-c-format
+msgid ""
+"The storage back-end: This is where the Docker images are sent and "
+"downloaded from. It is provided by the Docker registry."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:756
+#, no-c-format
+msgid "This component is open source."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:764
+#, no-c-format
+msgid "Installing and Setting Up Docker Registry"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:767
+#, no-c-format
+msgid ""
+"Install the <systemitem>docker-distribution-registry</systemitem> package:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:771
+#, no-c-format
+msgid "sudo zypper install docker-distribution-registry"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:774
+#, no-c-format
+msgid "To automatically start the Docker registry at boot time:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:777
+#, no-c-format
+msgid "sudo systemctl enable registry"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:780
+#, no-c-format
+msgid "Start the Docker registry:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:783
+#, no-c-format
+msgid "sudo systemctl start registry"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:786
+#, no-c-format
+msgid ""
+"The Docker registry configuration is defined inside of <filename>/etc/"
+"registry/config.yml</filename>."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:790
+#, no-c-format
+msgid ""
+"With the default configuration the registry listens on ports <literal>5000</"
+"literal> and stores the Docker images under <filename>/var/lib/docker-"
+"registry</filename>."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:796
+#, no-c-format
+msgid "Incompatible Versions of Docker and Docker Registry"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:797
+#, no-c-format
+msgid ""
+"Docker registry version 2.3 is not compatible with Docker versions older "
+"than 1.10, because v2 manifests were only introduced with Docker 1.10. As "
+"Docker and Docker registry can be installed on different boxes, the versions "
+"might be incompatible. If you experience communication errors between Docker "
+"and Docker registry, update both to the latest versions."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:809
+#, no-c-format
+msgid ""
+"For more details about Docker registry and its configuration, see the "
+"official documentation at: <link xlink:href=\"https://docs.docker.com/"
+"registry/\"></link>."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:817
+#, no-c-format
+msgid "Limitations"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:818
+#, no-c-format
+msgid "The Docker registry has two major limitations:"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:823
+#, no-c-format
+msgid ""
+"It lacks any form of authentication. That means everybody with access to the "
+"Docker registry can push and pull images to it. That also includes the "
+"possibility to overwrite already existing images."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:830
+#, no-c-format
+msgid ""
+"There is no way to see which images have been pushed to the Docker registry. "
+"You can <remark>taroth 2015-07-09: maybe replace \"can\" with \"need to\"?</"
+"remark> manually take notes of what is being stored inside of it. There is "
+"also no search functionality, which makes collaboration harder."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:840
+#, no-c-format
+msgid ""
+"The next section is going to introduce Portus, the solution to all of the "
+"problems above."
+msgstr ""
+
+#. Tag: title
+#: vt_docker_quick.xml:847
+#, no-c-format
+msgid "Portus"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:849
+#, no-c-format
+msgid ""
+"Portus is an authentication service and user interface for the Docker "
+"registry. It is an open source project created by &suse; to address all the "
+"limitations faced by the local instances of Docker registry."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:855
+#, no-c-format
+msgid ""
+"By combining Portus and Docker registry, it is possible to have a secure and "
+"enterprise ready on-premise version of the Docker Hub."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:860
+#, no-c-format
+msgid ""
+"Portus is accessible for &slea;&nbsp;12 customers through the Containers "
+"module. To install Portus, use the following command:"
+msgstr ""
+
+#. Tag: screen
+#: vt_docker_quick.xml:865
+#, no-c-format
+msgid "sudo zypper in Portus"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:867
+#, no-c-format
+msgid "In order to configure Portus properly, follow these steps:"
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:873
+#, no-c-format
+msgid ""
+"First of all, you should install Portus' dependencies if you haven't "
+"already. This is thoroughly documented here: <link xlink:href=\"http://port."
+"us.org/docs/setups/1_rpm_packages.html#portus-dependencies\"></link>. This "
+"document will help you to get through the installation process, and it will "
+"also warn you about some of the common pitfalls."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:883
+#, no-c-format
+msgid ""
+"After installing Portus and its dependencies, you need to configure your "
+"instance. The initial setup of Portus is explained here: <link xlink:href="
+"\"http://port.us.org/docs/setups/1_rpm_packages.html#initial-setup\"></"
+"link>. When you are done with portusctl, you should modify some configurable "
+"values before using Portus. This is thoroughly explained in this "
+"documentation page: <link xlink:href=\"http://port.us.org/docs/Configuring-"
+"Portus.html\"></link>."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:895
+#, no-c-format
+msgid ""
+"To apply the configuration changes, restart Apache (this is required after "
+"each configuration change)."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:902
+#, no-c-format
+msgid ""
+"Finally, when entering Portus for the first time, you will be required to "
+"enter some information about your installed registry. For details, see: "
+"<link xlink:href=\"http://port.us.org/docs/setups/1_rpm_packages#the-default-"
+"installation.html\"></link>."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:910
+#, no-c-format
+msgid "The Portus setup is now complete and you can start using Portus."
+msgstr ""
+
+#. Tag: para
+#: vt_docker_quick.xml:916
+#, no-c-format
+msgid ""
+"Currently, Portus is part of &suse;'s Docker offer as a technology preview. "
+"For more information and documentation about Portus, see: <link xlink:href="
+"\"http://port.us.org/\"></link>."
+msgstr ""

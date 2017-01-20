@@ -1,0 +1,246 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: smt_reporting.xml:9
+#, no-c-format
+msgid "&smt; Reports"
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:11
+#, no-c-format
+msgid ""
+"This chapter introduces reports generated based on the SMT and SUSE Customer "
+"Center data. The reports generated contain statistics of all the registered "
+"machines, products used and all active, expiring or missing subscriptions."
+msgstr ""
+
+#. Tag: title
+#: smt_reporting.xml:18
+#, no-c-format
+msgid "Assignment of Reports"
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:19
+#, no-c-format
+msgid ""
+"If you are using more than one &smt; server in your environment, generated "
+"reports may not represent all of the &smt; servers or machines in your "
+"environment. For the complete statistics of all your registered machines, "
+"refer to the information in the &scc;."
+msgstr ""
+
+#. Tag: title
+#: smt_reporting.xml:27
+#, no-c-format
+msgid "Report Schedule and Recipients"
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:29
+#, no-c-format
+msgid ""
+"Generated &smt; reports can be sent to a defined list of e-mail addresses "
+"periodically. To create or edit this list, and to set the frequency of the "
+"reports, use the &yast; &smt; Configuration module. How to configure this "
+"list is described in <xref linkend=\"smt.yast.reports\"/>. Configuration of "
+"the report schedule is described in <xref linkend=\"smt.yast.scheduling\"/>."
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:38
+#, no-c-format
+msgid ""
+"The list can also be edited manually in the <option>reportEmail</option> "
+"option of the <filename>/etc/smt.conf</filename> configuration file. For "
+"more information about editing the list of addresses directly, see <xref "
+"linkend=\"smt.config.smtconf.report\"/>. To set the frequency of reports "
+"manually, you can directly edit the <filename>smt-gen-report</filename> "
+"lines of the crontab in <filename>/etc/cron.d/novell.com-smt</filename>. For "
+"more information about the crontab format, see <command>man 5 crontab</"
+"command>."
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:49
+#, no-c-format
+msgid ""
+"Reports, including those created as a scheduled &smt; job, are created by "
+"the <command>smt-report</command> command. This command has various "
+"parameters. To edit parameters used with scheduled commands, edit the "
+"<filename>/etc/smt.d/smt-cron.conf</filename> configuration file. For more "
+"information, see <xref linkend=\"smt.config.cronconf\"/>."
+msgstr ""
+
+#. Tag: title
+#: smt_reporting.xml:58
+#, no-c-format
+msgid "Report Output Formats and Targets"
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:60
+#, no-c-format
+msgid ""
+"&smt; reports can be printed to the standard output, exported to one or "
+"multiple files (in CSV format) and mailed to the defined list of e-mail "
+"addresses. Use the following options for the <command>smt-report</command> "
+"command:"
+msgstr ""
+
+#. Tag: term
+#: smt_reporting.xml:69
+#, no-c-format
+msgid "<option>--quiet</option> or <option>-q</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:72
+#, no-c-format
+msgid ""
+"Suppress output to STDOUT and run <command>smt-report</command> in quiet "
+"mode."
+msgstr ""
+
+#. Tag: term
+#: smt_reporting.xml:79
+#, no-c-format
+msgid "<option>--file</option> or <option>-F</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:82
+#, no-c-format
+msgid ""
+"Export report to one or several files. By default, the report will be "
+"written to a single file, rendered as tables. Optionally, the file name or "
+"whole path may be specified after the parameter: <option>--file "
+"<replaceable>filename</replaceable></option>. If no file name is specified, "
+"a default file name containing a time stamp is used. However, &smt; will not "
+"check if the file or files already exist."
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:90
+#, no-c-format
+msgid ""
+"In CSV (Comma-Separated Value) mode the report will be written to multiple "
+"files, therefore the specified file name will expand to "
+"<filename><replaceable>[path/]filename</replaceable>-"
+"<replaceable>reportname</replaceable>.<replaceable>extension</replaceable></"
+"filename> for every report."
+msgstr ""
+
+#. Tag: term
+#: smt_reporting.xml:99
+#, no-c-format
+msgid "<option>--csv</option> or <option>-c</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:102
+#, no-c-format
+msgid ""
+"The report will be exported to multiple files in CSV format. The first line "
+"of each *.csv file consists of the column names, then the data starts on "
+"line two. It is recommended to use the <option>--csv</option> parameter "
+"together with the <option>--file</option> parameter. If the specified file "
+"name contains a <literal>.csv</literal> extension, the report format will be "
+"CSV (as if the <option>--csv</option> parameter was used)."
+msgstr ""
+
+#. Tag: term
+#: smt_reporting.xml:113
+#, no-c-format
+msgid "<option>--mail</option> or <option>-m</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:116
+#, no-c-format
+msgid ""
+"Activate mailing of the report to the addresses configured with the &yast; "
+"&smt; Configuration module and written in <filename>/etc/smt.conf</"
+"filename>. The report will be rendered as tables."
+msgstr ""
+
+#. Tag: term
+#: smt_reporting.xml:125
+#, no-c-format
+msgid "<option>--attach</option> or <option>-a</option>"
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:128
+#, no-c-format
+msgid ""
+"Attach the report to the mails in CSV format. This option should only be "
+"used together with the <option>--mail</option> option."
+msgstr ""
+
+#. Tag: option
+#: smt_reporting.xml:135
+#, no-c-format
+msgid "--pdf"
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:138
+#, no-c-format
+msgid "The report will be exported to multiple files in pdf format."
+msgstr ""
+
+#. Tag: option
+#: smt_reporting.xml:144
+#, no-c-format
+msgid "--xml"
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:147
+#, no-c-format
+msgid "The report will be exported to multiple files in xml format."
+msgstr ""
+
+#. Tag: title
+#: smt_reporting.xml:155
+#, no-c-format
+msgid "Disabling Sending Attachments"
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:156
+#, no-c-format
+msgid ""
+"If you want to disable sending CSV attachments with report mails, edit the "
+"<filename>/etc/smt.d/smt-cron.conf</filename> configuration file as follows: "
+"remove the <option>--attach</option> option from the <literal>REPORT_PARAMS</"
+"literal> value. The default line reads: <literal>REPORT_PARAMS=\"--mail --"
+"attach -L /var/log/smt-report.log\"</literal>. To disable CSV attachments, "
+"change it to: <literal>REPORT_PARAMS=\"--mail -L /var/log/smt-report.log\"</"
+"literal>."
+msgstr ""
+
+#. Tag: para
+#: smt_reporting.xml:166
+#, no-c-format
+msgid ""
+"If you have disabled CSV attachments but need them occasionally, you can "
+"send them manually with the <command>smt-report --mail --attach -L /var/log/"
+"smt-report.log</command> command."
+msgstr ""

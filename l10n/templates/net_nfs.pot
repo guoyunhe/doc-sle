@@ -1,0 +1,1215 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: net_nfs.xml:26
+#, no-c-format
+msgid "Sharing File Systems with NFS"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:29
+#, no-c-format
+msgid ""
+"Distributing and sharing file systems over a network is a common task in "
+"corporate environments. The well-proven network file system (<emphasis>NFS</"
+"emphasis>) works with <emphasis>NIS</emphasis>, the yellow pages protocol. "
+"For a more secure protocol that works with <emphasis>LDAP</emphasis> and "
+"Kerberos, check <emphasis>NFSv4</emphasis> (default). Combined with pNFS, "
+"you can eliminate performance bottlenecks."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:38
+#, no-c-format
+msgid ""
+"NFS with NIS makes a network transparent to the user. With NFS, it is "
+"possible to distribute arbitrary file systems over the network. With an "
+"appropriate setup, users always find themselves in the same environment "
+"regardless of the terminal they currently use."
+msgstr ""
+
+#. Tag: dm:docmanager
+#: net_nfs.xml:45
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: primary
+#: net_nfs.xml:51 net_nfs.xml:186 net_nfs.xml:489 net_nfs.xml:692
+#: net_nfs.xml:788 net_nfs.xml:790
+#, no-c-format
+msgid "<primary>NFS</primary>"
+msgstr ""
+
+#. Tag: primary
+#: net_nfs.xml:52
+#, no-c-format
+msgid "Network File System"
+msgstr ""
+
+#. Tag: see
+#: net_nfs.xml:53
+#, no-c-format
+msgid "<see>NFS</see>"
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:55
+#, no-c-format
+msgid "Need for DNS"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:56
+#, no-c-format
+msgid ""
+"In principle, all exports can be made using IP addresses only. To avoid time-"
+"outs, you need a working DNS system. DNS is necessary at least for logging "
+"purposes, because the mountd daemon does reverse lookups."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:63
+#, no-c-format
+msgid "Terminology"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:65
+#, no-c-format
+msgid "The following are terms used in the &yast; module."
+msgstr ""
+
+#. Tag: term
+#: net_nfs.xml:73
+#, no-c-format
+msgid "Exports"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:75
+#, no-c-format
+msgid ""
+"A directory <emphasis>exported</emphasis> by an NFS server, which clients "
+"can integrate it into their system."
+msgstr ""
+
+#. Tag: term
+#: net_nfs.xml:82
+#, no-c-format
+msgid "NFS Client"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:84
+#, no-c-format
+msgid ""
+"The NFS client is a system that uses NFS services from an NFS server over "
+"the Network File System protocol. The TCP/IP protocol is already integrated "
+"into the Linux kernel; there is no need to install any additional software."
+msgstr ""
+
+#. Tag: term
+#: net_nfs.xml:93
+#, no-c-format
+msgid "NFS Server"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:95
+#, no-c-format
+msgid ""
+"The NFS server provides NFS services to clients. A running server depends on "
+"the following daemons: <systemitem class=\"daemon\">nfsd</systemitem> "
+"(worker), <systemitem class=\"daemon\">idmapd</systemitem> (user and group "
+"name mappings to IDs and vice versa), <systemitem class=\"daemon\">statd</"
+"systemitem> (file locking), and <systemitem class=\"daemon\">mountd</"
+"systemitem> (mount requests)."
+msgstr ""
+
+#. Tag: term
+#: net_nfs.xml:106
+#, no-c-format
+msgid "NFSv3"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:108
+#, no-c-format
+msgid ""
+"NFSv3 is the version 3 implementation, the <quote>old</quote> stateless NFS "
+"that supports client authentication."
+msgstr ""
+
+#. Tag: term
+#: net_nfs.xml:115
+#, no-c-format
+msgid "<term>NFSv4</term>"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:117
+#, no-c-format
+msgid ""
+"NFSv4 is the new version 4 implementation that supports secure user "
+"authentication via kerberos. NFSv4 requires one single port only and thus is "
+"better suited for environments behind a firewall than NFSv3."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:122
+#, no-c-format
+msgid ""
+"The protocol is specified as <link xlink:href=\"http://tools.ietf.org/html/"
+"rfc3530\"></link>."
+msgstr ""
+
+#. Tag: term
+#: net_nfs.xml:129
+#, no-c-format
+msgid "pNFS"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:131
+#, no-c-format
+msgid ""
+"Parallel NFS, a protocol extension of NFSv4. Any pNFS clients can directly "
+"access the data on an NFS server."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:143 net_nfs.xml:151
+#, no-c-format
+msgid "Installing NFS Server"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:145
+#, no-c-format
+msgid ""
+"For installing and configuring an NFS server, see the &sls; documentation."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:153
+#, no-c-format
+msgid ""
+"The NFS server is not part of the default installation. To install the NFS "
+"Server using &yast;, choose <guimenu>Software</guimenu> <guimenu>Software "
+"Management</guimenu>, select <guimenu>Patterns</guimenu>, and enable "
+"<guimenu>File Server</guimenu> option in the <guimenu>Server Fuctions</"
+"guimenu> section. Press <guimenu>Accept</guimenu> to install the required "
+"packages."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:161
+#, no-c-format
+msgid ""
+"Like NIS, NFS is a client/server system. However, a machine can be "
+"both&mdash;it can supply file systems over the network (export) and mount "
+"file systems from other hosts (import)."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:169
+#, no-c-format
+msgid "Mounting NFS Volumes Locally on the Exporting Server"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:170
+#, no-c-format
+msgid ""
+"Mounting NFS volumes locally on the exporting server is not supported on "
+"&sle; systems, as is the case on all Enterprise-class Linux systems."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:177
+#, no-c-format
+msgid "Configuring NFS Server"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:179
+#, no-c-format
+msgid ""
+"Configuring an NFS server can be done either through &yast; or manually. For "
+"authentication, NFS can also be combined with Kerberos."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:185
+#, no-c-format
+msgid "Exporting File Systems with &yast;"
+msgstr ""
+
+#. Tag: secondary
+#: net_nfs.xml:187
+#, no-c-format
+msgid "servers"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:188
+#, no-c-format
+msgid ""
+"With &yast;, turn a host in your network into an NFS server&mdash;a server "
+"that exports directories and files to all hosts granted access to it or to "
+"all members of a group. Thus, the server can also provide applications "
+"without installing the applications locally on every host."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:194
+#, no-c-format
+msgid "To set up such a server, proceed as follows:"
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:198
+#, no-c-format
+msgid "Setting Up an NFS Server"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:200
+#, no-c-format
+msgid ""
+"Start &yast; and select <menuchoice> <guimenu>Network Services</guimenu> "
+"<guimenu>NFS Server</guimenu> </menuchoice>; see <xref linkend=\"fig.inst."
+"nfsserver1\"/>. You may be prompted to install additional software."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:208
+#, no-c-format
+msgid "NFS Server Configuration Tool"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:227
+#, no-c-format
+msgid "Activate the <guimenu>Start</guimenu> radio button."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:232
+#, no-c-format
+msgid ""
+"If a firewall is active on your system (&susefirewall;), check <guimenu>Open "
+"Ports in Firewall</guimenu>. &yast; adapts its configuration for the NFS "
+"server by enabling the <systemitem class=\"service\">nfs</systemitem> "
+"service."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:240
+#, no-c-format
+msgid ""
+"Check whether you want to <guimenu>Enable NFSv4</guimenu>. If you deactivate "
+"NFSv4, &yast; will only support NFSv3. For information about enabling NFSv2, "
+"see <xref linkend=\"sec.nfs.export.manual.nsfv2\"/>."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:248
+#, no-c-format
+msgid ""
+"If NFSv4 is selected, additionally enter the appropriate NFSv4 domain name."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:252
+#, no-c-format
+msgid ""
+"Make sure the name is the same as the one in the <filename>/etc/idmapd.conf</"
+"filename> file of any NFSv4 client that accesses this particular server. "
+"This parameter is for the <systemitem class=\"daemon\">idmapd</systemitem> "
+"daemon that is required for NFSv4 support (on both server and client). Leave "
+"it as <literal>localdomain</literal> (the default) if you do not have any "
+"special requirements."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:265
+#, no-c-format
+msgid ""
+"Click <guimenu>Enable GSS Security</guimenu> if you need secure access to "
+"the server. A prerequisite for this is to have Kerberos installed on your "
+"domain and to have both the server and the clients kerberized. <remark>emap "
+"2011-0824: A reference to a Kerberos chapter would be good.</remark> Click "
+"<guimenu>Next</guimenu> to proceed with the next configuration dialog."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:276
+#, no-c-format
+msgid ""
+"Click <guimenu>Add Directory</guimenu> in the upper half of the dialog to "
+"export your directory."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:282
+#, no-c-format
+msgid ""
+"If you have not configured the allowed hosts already, another dialog for "
+"entering the client information and options pops up automatically. Enter the "
+"host wild card (usually you can leave the default settings as they are)."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:294
+#, no-c-format
+msgid ""
+"There are four possible types of host wild cards that can be set for each "
+"host: a single host (name or IP address), netgroups, wild cards (such as "
+"<literal>*</literal> indicating all machines can access the server), and IP "
+"networks."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:300
+#, no-c-format
+msgid ""
+"For more information about these options, see the <literal>exports</literal> "
+"man page."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:306
+#, no-c-format
+msgid "Click <guimenu>Finish</guimenu> to complete the configuration."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:488
+#, no-c-format
+msgid "Exporting File Systems Manually"
+msgstr ""
+
+#. Tag: secondary
+#: net_nfs.xml:490
+#, no-c-format
+msgid "exporting"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:491
+#, no-c-format
+msgid ""
+"The configuration files for the NFS export service are <filename>/etc/"
+"exports</filename> and <filename>/etc/sysconfig/nfs</filename>. In addition "
+"to these files, <filename>/etc/idmapd.conf</filename> is needed for the "
+"NFSv4 server configuration. To start or restart the services, run the "
+"command <command>systemctl restart nfsserver</command>. This also starts the "
+"<literal>rpc.idmapd</literal> if NFSv4 is configured in <filename>/etc/"
+"sysconfig/nfs</filename>. The NFS server depends on a running RPC "
+"portmapper. Therefore, it also starts or restarts the portmapper service."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:507
+#, no-c-format
+msgid "<title>NFSv4</title>"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:508
+#, no-c-format
+msgid ""
+"NFSv4 is the latest version of NFS protocol available on &productname;. "
+"Configuring directories for export with NFSv4 is now the same as with NFSv3."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:513
+#, no-c-format
+msgid ""
+"On the previous &sls; 11 version, the bind mount in <filename>/etc/exports</"
+"filename> was mandatory. It is still supported, but now deprecated."
+msgstr ""
+
+#. Tag: term
+#: net_nfs.xml:521
+#, no-c-format
+msgid "/etc/exports"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:523
+#, no-c-format
+msgid ""
+"The <filename>/etc/exports</filename> file contains a list of entries. Each "
+"entry indicates a directory that is shared and how it is shared. A typical "
+"entry in <filename>/etc/exports</filename> consists of:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:528
+#, no-c-format
+msgid ""
+"/<replaceable>shared</replaceable>/<replaceable>directory</replaceable>   "
+"<replaceable>host</replaceable>(<replaceable>option_list</replaceable>)"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:529
+#, no-c-format
+msgid "For example:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:532
+#, no-c-format
+msgid "/export/data   192.168.1.2(rw,sync)"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:533
+#, no-c-format
+msgid ""
+"Here the IP address <literal>192.168.1.2</literal> is used to identify the "
+"allowed client. You can also use the name of the host, a wild card "
+"indicating a set of hosts (<literal>*.abc.com</literal>, <literal>*</"
+"literal>, etc.), or netgroups (<literal>@my-hosts</literal>)."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:540
+#, no-c-format
+msgid ""
+"For a detailed explanation of all options and their meaning, refer to the "
+"man page of <command>exports</command> (<command>man exports</command>)."
+msgstr ""
+
+#. Tag: term
+#: net_nfs.xml:557
+#, no-c-format
+msgid "/etc/sysconfig/nfs"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:559
+#, no-c-format
+msgid ""
+"The <filename>/etc/sysconfig/nfs</filename> file contains a few parameters "
+"that determine NFSv4 server daemon behavior. It is important to set the "
+"parameter <systemitem>NFS4_SUPPORT</systemitem> to <literal>yes</literal> "
+"(default). <systemitem>NFS4_SUPPORT</systemitem> determines whether the NFS "
+"server supports NFSv4 exports and clients."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:567
+#, no-c-format
+msgid "Mount Options"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:568
+#, no-c-format
+msgid ""
+"On &sle; prior to version 12, the <option>--bind</option> mount in "
+"<filename>/etc/exports</filename> was mandatory. It is still supported, but "
+"now deprecated. Configuring directories for export with NFSv4 is now the "
+"same as with NFSv3."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:577
+#, no-c-format
+msgid "NFSv2"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:578
+#, no-c-format
+msgid ""
+"If NFS clients still depend on NFSv2, enable it on the server in <filename>/"
+"etc/sysconfig/nfs</filename> by setting:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:582
+#, no-c-format
+msgid ""
+"NFSD_OPTIONS=\"-V2\"\n"
+"MOUNTD_OPTIONS=\"-V2\""
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:583
+#, no-c-format
+msgid ""
+"After restarting the service, check whether version 2 is available with the "
+"command:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:587
+#, no-c-format
+msgid ""
+"&prompt.user;cat /proc/fs/nfsd/versions\n"
+"+2 +3 +4 +4.1 -4.2"
+msgstr ""
+
+#. Tag: term
+#: net_nfs.xml:592
+#, no-c-format
+msgid "/etc/idmapd.conf"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:594
+#, no-c-format
+msgid ""
+"Every user on a Linux machine has a name and an ID. idmapd does the name-to-"
+"ID mapping for NFSv4 requests to the server and replies to the client. It "
+"must be running on both server and client for NFSv4, because NFSv4 uses only "
+"names for its communication."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:600
+#, no-c-format
+msgid ""
+"Make sure that there is a uniform way in which user names and IDs (uid) are "
+"assigned to users across machines that might probably be sharing file "
+"systems using NFS. This can be achieved by using NIS, LDAP, or any uniform "
+"domain authentication mechanism in your domain."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:606
+#, no-c-format
+msgid ""
+"The parameter <literal>Domain</literal> must be set the same for both, "
+"client and server in the <filename>/etc/idmapd.conf</filename> file. If you "
+"are not sure, leave the domain as <literal>localdomain</literal> in the "
+"server and client files. A sample configuration file looks like the "
+"following:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:613
+#, no-c-format
+msgid ""
+"[General]\n"
+"Verbosity = 0\n"
+"Pipefs-Directory = /var/lib/nfs/rpc_pipefs\n"
+"Domain = localdomain\n"
+"\n"
+"[Mapping]\n"
+"Nobody-User = nobody\n"
+"Nobody-Group = nobody"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:614
+#, no-c-format
+msgid ""
+"For more information, see the man pages of <literal>idmapd</literal> and "
+"<literal>idmapd.conf</literal> (<literal>man idmapd</literal> and "
+"<literal>man idmapd.conf</literal>)."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:622
+#, no-c-format
+msgid ""
+"After changing <filename>/etc/exports</filename> or <filename>/etc/sysconfig/"
+"nfs</filename>, start or restart the NFS server service:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:627
+#, no-c-format
+msgid "systemctl restart nfsserver"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:628
+#, no-c-format
+msgid ""
+"After changing <filename>/etc/idmapd.conf</filename>, reload the "
+"configuration file:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:632
+#, no-c-format
+msgid "killall -HUP rpc.idmapd"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:633
+#, no-c-format
+msgid "If the NFS service needs to start at boot time, run:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:636
+#, no-c-format
+msgid "systemctl enable nfsserver"
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:642
+#, no-c-format
+msgid "NFS with Kerberos"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:643
+#, no-c-format
+msgid ""
+"To use Kerberos authentication for NFS, GSS security must be enabled. Select "
+"<guimenu>Enable GSS Security</guimenu> in the initial &yast; NFS Server "
+"dialog. You must have a working Kerberos server to use this feature. &yast; "
+"does not set up the server but only uses the provided functionality. If you "
+"want to use Kerberos authentication in addition to the &yast; configuration, "
+"complete at least the following steps before running the NFS configuration:"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:654
+#, no-c-format
+msgid ""
+"Make sure that both the server and the client are in the same Kerberos "
+"domain. They must access the same KDC (Key Distribution Center) server and "
+"share their <filename>krb5.keytab</filename> file (the default location on "
+"any machine is <filename>/etc/krb5.keytab</filename>). For more information "
+"about Kerberos, see <xref linkend=\"cha.security.kerberos\"/>."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:664
+#, no-c-format
+msgid ""
+"Start the gssd service on the client with <command>systemctl start rpc-gssd."
+"service</command>."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:670
+#, no-c-format
+msgid ""
+"Start the svcgssd service on the server with <command>systemctl start rpc-"
+"svcgssd.service</command>."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:676
+#, no-c-format
+msgid ""
+"For more information about configuring kerberized NFS, refer to the links in "
+"<xref linkend=\"sec.nfs.info\" xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:683
+#, no-c-format
+msgid "Configuring Clients"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:685
+#, no-c-format
+msgid ""
+"To configure your host as an NFS client, you do not need to install "
+"additional software. All needed packages are installed by default."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:691
+#, no-c-format
+msgid "Importing File Systems with &yast;"
+msgstr ""
+
+#. Tag: secondary
+#: net_nfs.xml:693
+#, no-c-format
+msgid "clients"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:694
+#, no-c-format
+msgid ""
+"Authorized users can mount NFS directories from an NFS server into the local "
+"file tree using the &yast; NFS client module. Proceed as follows:"
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:699
+#, no-c-format
+msgid "Importing NFS Directories"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:701
+#, no-c-format
+msgid "Start the &yast; NFS client module."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:707
+#, no-c-format
+msgid ""
+"Click <guimenu>Add</guimenu> in the <guimenu>NFS Shares</guimenu> tab. Enter "
+"the host name of the NFS server, the directory to import, and the mount "
+"point at which to mount this directory locally."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:716
+#, no-c-format
+msgid ""
+"When using NFSv4, select <guimenu>Enable NFSv4</guimenu> in the <guimenu>NFS "
+"Settings</guimenu> tab. Additionally, the <guimenu>NFSv4 Domain Name</"
+"guimenu> must contain the same value as used by the NFSv4 server. The "
+"default domain is <literal>localdomain</literal>."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:724
+#, no-c-format
+msgid ""
+"To use Kerberos authentication for NFS, GSS security must be enabled. Select "
+"<guimenu>Enable GSS Security</guimenu>."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:730
+#, no-c-format
+msgid ""
+"Enable <guimenu>Open Port in Firewall</guimenu> in the <guimenu>NFS "
+"Settings</guimenu> tab if you use a Firewall and want to allow access to the "
+"service from remote computers. The firewall status is displayed next to the "
+"check box."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:739
+#, no-c-format
+msgid "Click <guimenu>OK</guimenu> to save your changes."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:744
+#, no-c-format
+msgid ""
+"The configuration is written to <filename>/etc/fstab</filename> and the "
+"specified file systems are mounted. When you start the &yast; configuration "
+"client at a later time, it also reads the existing configuration from this "
+"file."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:751
+#, no-c-format
+msgid "NFS as a Root File System"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:752
+#, no-c-format
+msgid ""
+"On (diskless) systems where the root partition is mounted via network as an "
+"NFS share, you need to be careful when configuring the network device with "
+"which the NFS share is accessible."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:757
+#, no-c-format
+msgid ""
+"When shutting down or rebooting the system, the default processing order is "
+"to turn off network connections, then unmount the root partition. With NFS "
+"root, this order causes problems as the root partition cannot be cleanly "
+"unmounted as the network connection to the NFS share is already not "
+"activated. To prevent the system from deactivating the relevant network "
+"device, open the network device configuration tab as described in <xref "
+"linkend=\"sec.basicnet.yast.change.start\"/>, and choose <guimenu>On "
+"NFSroot</guimenu> in the <guimenu>Device Activation</guimenu> pane."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:786
+#, no-c-format
+msgid "Importing File Systems Manually"
+msgstr ""
+
+#. Tag: secondary
+#: net_nfs.xml:789
+#, no-c-format
+msgid "importing"
+msgstr ""
+
+#. Tag: secondary
+#: net_nfs.xml:791
+#, no-c-format
+msgid "mounting"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:793
+#, no-c-format
+msgid ""
+"The prerequisite for importing file systems manually from an NFS server is a "
+"running RPC port mapper. The <option>nfs</option> service takes care to "
+"start it properly; thus, start it by entering <command>systemctl start nfs</"
+"command> as <systemitem class=\"username\">root</systemitem>. Then remote "
+"file systems can be mounted in the file system like local partitions using "
+"<command>mount</command>:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:801
+#, no-c-format
+msgid ""
+"mount <replaceable>host</replaceable>:<replaceable>remote-path</"
+"replaceable><replaceable>local-path</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:802
+#, no-c-format
+msgid ""
+"To import user directories from the <systemitem>&nfsname;</systemitem> "
+"machine, for example, use:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:806
+#, no-c-format
+msgid "mount &nfsname;:/home /home"
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:808
+#, no-c-format
+msgid "Using the Automount Service"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:809
+#, no-c-format
+msgid ""
+"The autofs daemon can be used to mount remote file systems automatically. "
+"Add the following entry to the <filename>/etc/auto.master</filename> file:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:813
+#, no-c-format
+msgid "/nfsmounts /etc/auto.nfs"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:814
+#, no-c-format
+msgid ""
+"Now the <filename>/nfsmounts</filename> directory acts as the root for all "
+"the NFS mounts on the client if the <filename>auto.nfs</filename> file is "
+"filled appropriately. The name <filename>auto.nfs</filename> is chosen for "
+"the sake of convenience&mdash;you can choose any name. In <filename>auto."
+"nfs</filename> add entries for all the NFS mounts as follows:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:822
+#, no-c-format
+msgid ""
+"localdata -fstype=nfs server1:/data\n"
+"nfs4mount -fstype=nfs4 server2:/"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:823
+#, no-c-format
+msgid ""
+"Activate the settings with <command>systemctl start autofs</command> as "
+"&rootuser;. In this example, <filename>/nfsmounts/localdata</filename>, the "
+"<filename>/data</filename> directory of <systemitem>server1</systemitem>, is "
+"mounted with NFS and <filename>/nfsmounts/nfs4mount</filename> from "
+"<systemitem>server2</systemitem> is mounted with NFSv4."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:831
+#, no-c-format
+msgid ""
+"If the <filename>/etc/auto.master</filename> file is edited while the "
+"service autofs is running, the automounter must be restarted for the changes "
+"to take effect with <command>systemctl restart autofs</command>."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:838
+#, no-c-format
+msgid "Manually Editing <filename>/etc/fstab</filename>"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:839
+#, no-c-format
+msgid ""
+"A typical NFSv3 mount entry in <filename>/etc/fstab</filename> looks like "
+"this:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:843
+#, no-c-format
+msgid "&nfsname;:/data /local/path nfs rw,noauto 0 0"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:844
+#, no-c-format
+msgid ""
+"For NFSv4 mounts, use <literal>nfs4</literal> instead of <literal>nfs</"
+"literal> in the third column:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:848
+#, no-c-format
+msgid "&nfsname;:/data /local/pathv4 nfs4 rw,noauto 0 0"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:849
+#, no-c-format
+msgid ""
+"The <literal>noauto</literal> option prevents the file system from being "
+"mounted automatically at start-up. If you want to mount the respective file "
+"system manually, it is possible to shorten the mount command specifying the "
+"mount point only:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:855
+#, no-c-format
+msgid "mount /local/path"
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:857
+#, no-c-format
+msgid "Mounting at Start-Up"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:858
+#, no-c-format
+msgid ""
+"If you do not enter the <literal>noauto</literal> option, the init scripts "
+"of the system will handle the mount of those file systems at start-up."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:868
+#, no-c-format
+msgid "Parallel NFS (pNFS)"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:869
+#, no-c-format
+msgid ""
+"NFS is one of the oldest protocols, developed in the '80s. As such, NFS is "
+"usually sufficient if you want to share small files. However, when you want "
+"to transfer big files or large numbers of clients want to access data, an "
+"NFS server becomes a bottleneck and significantly impacts on the system "
+"performance. This is because of files quickly getting bigger, whereas the "
+"relative speed of your Ethernet has not fully kept up."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:877
+#, no-c-format
+msgid ""
+"When you request a file from a <quote>normal</quote> NFS server, the server "
+"looks up the file metadata, collects all the data and transfers it over the "
+"network to your client. However, the performance bottleneck becomes apparent "
+"no matter how small or big the files are:"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:885
+#, no-c-format
+msgid "With small files most of the time is spent collecting the metadata."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:890
+#, no-c-format
+msgid ""
+"With big files most of the time is spent on transferring the data from "
+"server to client."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:896
+#, no-c-format
+msgid ""
+"pNFS, or parallel NFS, overcomes this limitation as it separates the file "
+"system metadata from the location of the data. As such, pNFS requires two "
+"types of servers:"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:903
+#, no-c-format
+msgid ""
+"A <emphasis>metadata</emphasis> or <emphasis>control server</emphasis> that "
+"handles all the non-data traffic"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:909
+#, no-c-format
+msgid ""
+"One or more <emphasis>storage server(s)</emphasis> that hold(s) the data"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:914
+#, no-c-format
+msgid ""
+"The metadata and the storage servers form a single, logical NFS server. When "
+"a client wants to read or write, the metadata server tells the NFSv4 client "
+"which storage server to use to access the file chunks. The client can access "
+"the data directly on the server."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:920
+#, no-c-format
+msgid "&sle; supports pNFS on the client side only."
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:924
+#, no-c-format
+msgid "Configuring pNFS Client With &yast;"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:925
+#, no-c-format
+msgid ""
+"Proceed as described in <xref linkend=\"pro.nfs.import-yast2\"/>, but click "
+"the <guimenu>pNFS (v4.1)</guimenu> check box and optionally <guimenu>NFSv4 "
+"share</guimenu>. &yast; will do all the necessary steps and will write all "
+"the required options in the file <filename>/etc/exports</filename>."
+msgstr ""
+
+#. Tag: remark
+#: net_nfs.xml:930
+#, no-c-format
+msgid "toms 2013-02-15: Is that enough? Any other files for pNFS?"
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:935
+#, no-c-format
+msgid "Configuring pNFS Client Manually"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:936
+#, no-c-format
+msgid ""
+"Refer to <xref linkend=\"sec.nfs.import\"/> to start. Most of the "
+"configuration is done by the NFSv4 server. For pNFS, the only difference is "
+"to add the <option>minorversion</option> option and the metadata server "
+"<replaceable>MDS_SERVER</replaceable> to your <command>mount</command> "
+"command:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:943
+#, no-c-format
+msgid ""
+"mount -t nfs4 -o minorversion=1 <replaceable>MDS_SERVER</replaceable> "
+"<replaceable>MOUNTPOINT</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:944
+#, no-c-format
+msgid ""
+"To help with debugging, change the value in the <filename>/proc</filename> "
+"file system:"
+msgstr ""
+
+#. Tag: screen
+#: net_nfs.xml:948
+#, no-c-format
+msgid ""
+"echo 32767 &gt; /proc/sys/sunrpc/nfsd_debug\n"
+"echo 32767 &gt; /proc/sys/sunrpc/nfs_debug"
+msgstr ""
+
+#. Tag: title
+#: net_nfs.xml:953
+#, no-c-format
+msgid "For More Information"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:955
+#, no-c-format
+msgid ""
+"In addition to the man pages of <command>exports</command>, <command>nfs</"
+"command>, and <command>mount</command>, information about configuring an NFS "
+"server and client is available in <filename>/usr/share/doc/packages/nfsidmap/"
+"README</filename>. For further documentation online refer to the following "
+"Web sites:"
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:965
+#, no-c-format
+msgid ""
+"Find the detailed technical documentation online at <link xlink:href="
+"\"http://nfs.sourceforge.net/\">SourceForge</link>."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:971
+#, no-c-format
+msgid ""
+"For instructions for setting up kerberized NFS, refer to <link xlink:href="
+"\"http://www.citi.umich.edu/projects/nfsv4/linux/krb5-setup.html\">NFS "
+"Version 4 Open Source Reference Implementation</link>."
+msgstr ""
+
+#. Tag: para
+#: net_nfs.xml:978
+#, no-c-format
+msgid ""
+"If you have questions on NFSv4, refer to the <link xlink:href=\"http://www."
+"citi.umich.edu/projects/nfsv4/linux/faq/\">Linux NFSv4 FAQ</link>."
+msgstr ""

@@ -1,0 +1,1095 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-01-20 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: storage_raid-leds.xml:9
+#, no-c-format
+msgid "Storage Enclosure LED Utilities for MD Software RAIDs"
+msgstr ""
+
+#. Tag: remark
+#: storage_raid-leds.xml:13
+#, no-c-format
+msgid "Fate #313626 Update Enclosure LED Utilities"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:13
+#, no-c-format
+msgid ""
+"Storage enclosure LED Monitoring utility (<command>ledmon</command>) and LED "
+"Control (<command>ledctl</command>) utility are Linux user space "
+"applications that use a broad range of interfaces and protocols to control "
+"storage enclosure LEDs. The primary usage is to visualize the status of "
+"Linux MD software RAID devices created with the mdadm utility. The "
+"<systemitem class=\"daemon\">ledmon</systemitem> daemon monitors the status "
+"of the drive array and updates the status of the drive LEDs. The "
+"<command>ledctl</command> utility allows you to set LED patterns for "
+"specified devices."
+msgstr ""
+
+#. Tag: dm:docmanager
+#: storage_raid-leds.xml:25
+#, no-c-format
+msgid "<dm:bugtracker></dm:bugtracker> <dm:translation>yes</dm:translation>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:30
+#, no-c-format
+msgid ""
+"These LED utilities use the SGPIO (Serial General Purpose Input/Output) "
+"specification (Small Form Factor (SFF) 8485) and the SCSI Enclosure Services "
+"(SES) 2 protocol to control LEDs. They implement the International Blinking "
+"Pattern Interpretation (IBPI) patterns of the SFF-8489 specification for "
+"SGPIO. The IBPI defines how the SGPIO standards are interpreted as states "
+"for drives and slots on a backplane and how the backplane should visualize "
+"the states with LEDs."
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:39
+#, no-c-format
+msgid ""
+"Some storage enclosures do not adhere strictly to the SFF-8489 "
+"specification. An enclosure processor might accept an IBPI pattern but not "
+"blink the LEDs according to the SFF-8489 specification, or the processor "
+"might support only a limited number of the IBPI patterns."
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:45
+#, no-c-format
+msgid ""
+"LED management (AHCI) and SAF-TE protocols are not supported by the "
+"<command>ledmon</command> and <command>ledctl</command> utilities."
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:49
+#, no-c-format
+msgid ""
+"The <systemitem class=\"daemon\">ledmon</systemitem> and <command>ledctl</"
+"command> applications have been verified to work with Intel storage "
+"controllers such as the Intel AHCI controller and Intel SAS controller. They "
+"also support PCIe-SSD (solid-state drive) enclosure LEDs to control the "
+"storage enclosure status (OK, Fail, Rebuilding) LEDs of PCIe-SSD devices "
+"that are part of an MD software RAID volume. The applications might also "
+"work with the IBPI-compliant storage controllers of other vendors "
+"(especially SAS/SCSI controllers); however, other vendors’ controllers have "
+"not been tested."
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:60
+#, no-c-format
+msgid ""
+"<systemitem class=\"daemon\">ledmon</systemitem> and <command>ledctl</"
+"command> are part of the <systemitem class=\"resource\">ledmon</systemitem> "
+"package, which is not installed by default. Run <command>sudo zypper in "
+"ledmon</command> to install it."
+msgstr ""
+
+#. Tag: title
+#: storage_raid-leds.xml:67
+#, no-c-format
+msgid "The Storage Enclosure LED Monitor Service"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:69
+#, no-c-format
+msgid ""
+"The <systemitem class=\"daemon\">ledmon</systemitem> application is a daemon "
+"process that constantly monitors the state of MD software RAID devices or "
+"the state of block devices in a storage enclosure or drive bay. Only a "
+"single instance of the daemon should be running at a time. The <systemitem "
+"class=\"daemon\">ledmon</systemitem> daemon is part of Intel Enclosure LED "
+"Utilities."
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:78
+#, no-c-format
+msgid ""
+"The state is visualized on LEDs associated with each slot in a storage array "
+"enclosure or a drive bay. The application monitors all software RAID devices "
+"and visualizes their state. It does not provide a way to monitor only "
+"selected software RAID volumes."
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:85
+#, no-c-format
+msgid ""
+"The <systemitem class=\"daemon\">ledmon</systemitem> daemon supports two "
+"types of LED systems: A two-LED system (Activity LED and Status LED) and a "
+"three-LED system (Activity LED, Locate LED, and Fail LED). This tool has the "
+"highest priority when accessing the LEDs."
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:92
+#, no-c-format
+msgid "To start <systemitem class=\"daemon\">ledmon</systemitem>, enter"
+msgstr ""
+
+#. Tag: screen
+#: storage_raid-leds.xml:96
+#, no-c-format
+msgid "sudo ledmon [options]"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:98 storage_raid-leds.xml:230
+#, no-c-format
+msgid "where [options] is one or more of the following:"
+msgstr ""
+
+#. Tag: title
+#: storage_raid-leds.xml:103
+#, no-c-format
+msgid "Options for <systemitem class=\"daemon\">ledmon</systemitem>"
+msgstr ""
+
+#. Tag: option
+#: storage_raid-leds.xml:105 storage_raid-leds.xml:236
+#, no-c-format
+msgid "-c <replaceable>PATH</replaceable>"
+msgstr ""
+
+#. Tag: option
+#: storage_raid-leds.xml:107 storage_raid-leds.xml:238
+#, no-c-format
+msgid "--confg=<replaceable>PATH</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:110
+#, no-c-format
+msgid ""
+"The configuration is read from <filename>~/.ledctl</filename> or from "
+"<filename>/etc/ledcfg.conf</filename> if existing. Use this option to "
+"specify an alternative configuration file."
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:115
+#, no-c-format
+msgid ""
+"Currently this option has no effect, since support for configuration files "
+"has not been implemented yet. See <command>man 5 ledctl.conf</command> for "
+"details."
+msgstr ""
+
+#. Tag: term
+#: storage_raid-leds.xml:123 storage_raid-leds.xml:248
+#, no-c-format
+msgid "-l <replaceable>PATH</replaceable>"
+msgstr ""
+
+#. Tag: term
+#: storage_raid-leds.xml:125 storage_raid-leds.xml:250
+#, no-c-format
+msgid "--log=<replaceable>PATH</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:128 storage_raid-leds.xml:253
+#, no-c-format
+msgid ""
+"Sets a path to local log file. If this user-defined file is specified, the "
+"global log file <filename>/var/log/ledmon.log</filename> is not used."
+msgstr ""
+
+#. Tag: option
+#: storage_raid-leds.xml:135
+#, no-c-format
+msgid "-t <replaceable>SECONDS</replaceable>"
+msgstr ""
+
+#. Tag: option
+#: storage_raid-leds.xml:137
+#, no-c-format
+msgid "--interval=<replaceable>SECONDS</replaceable>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:140
+#, no-c-format
+msgid ""
+"Sets the time interval between scans of <filename>sysfs</filename>. The "
+"value is given in seconds. The minimum is 5 seconds. The maximum is not "
+"specified."
+msgstr ""
+
+#. Tag: term
+#: storage_raid-leds.xml:148
+#, no-c-format
+msgid ""
+"<option>--quiet</option>, <option>--error</option>, <option>--warning</"
+"option>, <option>--info</option>, <option>--debug</option>, <option>--all</"
+"option>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:153
+#, no-c-format
+msgid ""
+"Specifies the verbosity level. The level options are specified in the order "
+"of no information to the most information. Use the <option>--quiet</option> "
+"option for no logging. Use the <option>--all</option> option to log "
+"everything. If you specify more than one verbose option, the last option in "
+"the command applies."
+msgstr ""
+
+#. Tag: option
+#: storage_raid-leds.xml:163 storage_raid-leds.xml:271
+#, no-c-format
+msgid "<option>-h</option>"
+msgstr ""
+
+#. Tag: option
+#: storage_raid-leds.xml:165 storage_raid-leds.xml:273
+#, no-c-format
+msgid "--help"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:168 storage_raid-leds.xml:276
+#, no-c-format
+msgid "Prints the command information to the console, then exits."
+msgstr ""
+
+#. Tag: option
+#: storage_raid-leds.xml:174 storage_raid-leds.xml:282
+#, no-c-format
+msgid "<option>-v</option>"
+msgstr ""
+
+#. Tag: option
+#: storage_raid-leds.xml:176 storage_raid-leds.xml:284
+#, no-c-format
+msgid "--version"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:179
+#, no-c-format
+msgid ""
+"Displays version of <command>ledmon</command> and information about the "
+"license, then exits."
+msgstr ""
+
+#. Tag: title
+#: storage_raid-leds.xml:188
+#, no-c-format
+msgid "Known Issues"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:189
+#, no-c-format
+msgid ""
+"The <command>ledmon</command> daemon does not recognize the PFA (Predicted "
+"Failure Analysis) state from the SFF-8489 specification. Thus, the PFA "
+"pattern is not visualized."
+msgstr ""
+
+#. Tag: title
+#: storage_raid-leds.xml:197
+#, no-c-format
+msgid "The Storage Enclosure LED Control Application"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:199
+#, no-c-format
+msgid ""
+"The Enclosure LED Application (<command>ledctl</command>) is a user space "
+"application that controls LEDs associated with each slot in a storage "
+"enclosure or a drive bay. The <command>ledctl</command> application is a "
+"part of Intel Enclosure LED Utilities."
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:206
+#, no-c-format
+msgid ""
+"When you issue the command, the LEDs of the specified devices are set to a "
+"specified pattern and all other LEDs are turned off. This application needs "
+"to be run with &rootuser; privileges. Because the <systemitem class=\"daemon"
+"\">ledmon</systemitem> application has the highest priority when accessing "
+"LEDs, some patterns set by <command>ledctl</command> might have no effect if "
+"the <systemitem class=\"daemon\">ledmon</systemitem> daemon is running "
+"(except for the Locate pattern)."
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:218
+#, no-c-format
+msgid ""
+"The <command>ledctl</command> application supports two types of LED systems: "
+"A two-LED system (Activity LED and Status LED) and a three-LED system "
+"(Activity LED, Fail LED, and Locate LED)."
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:224
+#, no-c-format
+msgid "To start <command>ledctl</command>, enter"
+msgstr ""
+
+#. Tag: screen
+#: storage_raid-leds.xml:228
+#, no-c-format
+msgid "sudo [options] <replaceable>pattern_name</replaceable>=list_of_devices"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:241
+#, no-c-format
+msgid ""
+"Sets a path to local configuration file. If this option is specified, the "
+"global configuration file and user configuration file have no effect."
+msgstr ""
+
+#. Tag: option
+#: storage_raid-leds.xml:260
+#, no-c-format
+msgid "--quiet"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:263
+#, no-c-format
+msgid ""
+"Turns off all messages sent to <filename>stdout</filename> or "
+"<filename>stderr</filename> out. The messages are still logged to local file "
+"and the <filename>syslog</filename> facility."
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:287
+#, no-c-format
+msgid ""
+"Displays version of <command>ledctl</command> and information about the "
+"license, then exits."
+msgstr ""
+
+#. Tag: title
+#: storage_raid-leds.xml:296
+#, no-c-format
+msgid "Pattern Names"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:297
+#, no-c-format
+msgid ""
+"The <command>ledctl</command> application accepts the following names for "
+"<guimenu>pattern_name</guimenu> argument, according to the SFF-8489 "
+"specification."
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:304
+#, no-c-format
+msgid "<literal>locate</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:307
+#, no-c-format
+msgid ""
+"Turns on the Locate LED associated with the specified devices or empty "
+"slots. This state is used to identify a slot or drive."
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:314
+#, no-c-format
+msgid "<literal>locate_off</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:317
+#, no-c-format
+msgid ""
+"Turns off the Locate LED associated with the specified devices or empty "
+"slots."
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:324
+#, no-c-format
+msgid "<literal>normal</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:327
+#, no-c-format
+msgid ""
+"Turns off the Status LED, Failure LED, and Locate LED associated with the "
+"specified devices."
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:334
+#, no-c-format
+msgid "<literal>off</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:337
+#, no-c-format
+msgid ""
+"Turns off only the Status LED and Failure LED associated with the specified "
+"devices."
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:344
+#, no-c-format
+msgid "<literal>ica</literal>"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:346
+#, no-c-format
+msgid "<literal>degraded</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:349
+#, no-c-format
+msgid "Visualizes the <literal>In a Critical Array</literal> pattern."
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:355
+#, no-c-format
+msgid "<literal>rebuild</literal>"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:357
+#, no-c-format
+msgid "<literal>rebuild_p</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:360
+#, no-c-format
+msgid ""
+"Visualizes the <literal>Rebuild</literal> pattern. This supports both of the "
+"rebuild states for compatibility and legacy reasons."
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:367
+#, no-c-format
+msgid "<literal>ifa</literal>"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:369
+#, no-c-format
+msgid "<literal>failed_array</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:372
+#, no-c-format
+msgid "Visualizes the <literal>In a Failed Array</literal> pattern."
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:378
+#, no-c-format
+msgid "<literal>hotspare</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:381
+#, no-c-format
+msgid "Visualizes the <literal>Hotspare</literal> pattern."
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:387
+#, no-c-format
+msgid "<literal>pfa</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:390
+#, no-c-format
+msgid "Visualizes the <literal>Predicted Failure Analysis</literal> pattern."
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:396
+#, no-c-format
+msgid "<literal>failure</literal>"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:398
+#, no-c-format
+msgid "<literal>disk_failed</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:401
+#, no-c-format
+msgid "Visualizes the <literal>Failure</literal> pattern."
+msgstr ""
+
+#. Tag: term
+#: storage_raid-leds.xml:407
+#, no-c-format
+msgid "ses_abort"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:409
+#, no-c-format
+msgid "SES-2 R/R ABORT"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:415
+#, no-c-format
+msgid "<literal>ses_rebuild</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:418
+#, no-c-format
+msgid "SES-2 REBUILD/REMAP"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:424
+#, no-c-format
+msgid "<literal>ses_ifa</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:427
+#, no-c-format
+msgid "SES-2 IN FAILED ARRAY"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:433
+#, no-c-format
+msgid "<literal>ses_ica</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:436
+#, no-c-format
+msgid "SES-2 IN CRITICAL ARRAY"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:442
+#, no-c-format
+msgid "ses_cons_check"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:445
+#, no-c-format
+msgid "SES-2 CONS CHECK"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:451
+#, no-c-format
+msgid "<literal>ses_hotspare</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:454
+#, no-c-format
+msgid "SES-2 HOTSPARE"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:460
+#, no-c-format
+msgid "<literal>ses_rsvd_dev</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:463
+#, no-c-format
+msgid "SES-2 RSVD DEVICE"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:469
+#, no-c-format
+msgid "<literal>ses_ok</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:472
+#, no-c-format
+msgid "SES-2 OK"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:478
+#, no-c-format
+msgid "<literal>ses_ident</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:481
+#, no-c-format
+msgid "SES-2 IDENT"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:487
+#, no-c-format
+msgid "ses_rm"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:490
+#, no-c-format
+msgid "SES-2 REMOVE"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:496
+#, no-c-format
+msgid "ses_insert"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:499
+#, no-c-format
+msgid "SES-2 INSERT"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:505
+#, no-c-format
+msgid "ses_missing"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:508
+#, no-c-format
+msgid "SES-2 MISSING"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:514
+#, no-c-format
+msgid "ses_dnr"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:517
+#, no-c-format
+msgid "SES-2 DO NOT REMOVE"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:523
+#, no-c-format
+msgid "ses_active"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:526
+#, no-c-format
+msgid "SES-2 ACTIVE"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:532
+#, no-c-format
+msgid "ses_enable_bb"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:535
+#, no-c-format
+msgid "SES-2 ENABLE BYP B"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:541
+#, no-c-format
+msgid "ses_enable_ba"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:544
+#, no-c-format
+msgid "SES-2 ENABLE BYP A"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:550
+#, no-c-format
+msgid "ses_devoff"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:553
+#, no-c-format
+msgid "SES-2 DEVICE OFF"
+msgstr ""
+
+#. Tag: literal
+#: storage_raid-leds.xml:559
+#, no-c-format
+msgid "<literal>ses_fault</literal>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:562
+#, no-c-format
+msgid "SES-2 FAULT"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:568
+#, no-c-format
+msgid ""
+"When a non-SES-2 pattern is sent to a device in an enclosure, the pattern is "
+"automatically translated to the SCSI Enclosure Services (SES) 2 pattern as "
+"shown above."
+msgstr ""
+
+#. Tag: title
+#: storage_raid-leds.xml:574
+#, no-c-format
+msgid "Translation between Non-SES-2 Patterns and SES-2 Patterns"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:581
+#, no-c-format
+msgid "Non-SES-2 Pattern"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:586
+#, no-c-format
+msgid "SES-2 Pattern"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:595
+#, no-c-format
+msgid "<para>locate</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:600 storage_raid-leds.xml:612
+#, no-c-format
+msgid "<para>ses_ident</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:607
+#, no-c-format
+msgid "<para>locate_off</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:619
+#, no-c-format
+msgid "<para>normal</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:624 storage_raid-leds.xml:636
+#, no-c-format
+msgid "<para>ses_ok</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:631
+#, no-c-format
+msgid "<para>off</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:643
+#, no-c-format
+msgid "<para>ica</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:648 storage_raid-leds.xml:660
+#, no-c-format
+msgid "<para>ses_ica</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:655
+#, no-c-format
+msgid "<para>degraded</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:667
+#, no-c-format
+msgid "<para>rebuild</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:672 storage_raid-leds.xml:684
+#, no-c-format
+msgid "<para>ses_rebuild</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:679
+#, no-c-format
+msgid "<para>rebuild_p</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:691
+#, no-c-format
+msgid "<para>ifa</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:696 storage_raid-leds.xml:708
+#, no-c-format
+msgid "<para>ses_ifa</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:703
+#, no-c-format
+msgid "<para>failed_array</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:715
+#, no-c-format
+msgid "<para>hotspare</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:720
+#, no-c-format
+msgid "<para>ses_hotspare</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:727
+#, no-c-format
+msgid "<para>pfa</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:732
+#, no-c-format
+msgid "<para>ses_rsvd_dev</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:739
+#, no-c-format
+msgid "<para>failure</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:744 storage_raid-leds.xml:756
+#, no-c-format
+msgid "<para>ses_fault</para>"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:751
+#, no-c-format
+msgid "<para>disk_failed</para>"
+msgstr ""
+
+#. Tag: title
+#: storage_raid-leds.xml:767
+#, no-c-format
+msgid "List of Devices"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:768
+#, no-c-format
+msgid ""
+"When you issue the <command>ledctl</command> command, the LEDs of the "
+"specified devices are set to the specified pattern and all other LEDs are "
+"turned off. The list of devices can be provided in one of two formats:"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:775
+#, no-c-format
+msgid "A list of devices separated by a comma and no spaces"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:780
+#, no-c-format
+msgid "A list in curly braces with devices separated by a space"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:785
+#, no-c-format
+msgid ""
+"If you specify multiple patterns in the same command, the device list for "
+"each pattern can use the same or different format. For examples that show "
+"the two list formats, see <xref linkend=\"sec.raid_leds.ledctl.examples\" "
+"xrefstyle=\"SectTitleOnPage\"/>."
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:791
+#, no-c-format
+msgid ""
+"A device is a path to file in the <filename>/dev</filename> directory or in "
+"the <filename>/sys/block</filename> directory. The path can identify a block "
+"device, an MD software RAID device, or a container device. For a software "
+"RAID device or a container device, the reported LED state is set for all of "
+"the associated block devices."
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:798
+#, no-c-format
+msgid ""
+"The LEDs of devices listed in list_of_devices are set to the given pattern "
+"pattern_name and all other LEDs are turned off."
+msgstr ""
+
+#. Tag: title
+#: storage_raid-leds.xml:805
+#, no-c-format
+msgid "Examples"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:806
+#, no-c-format
+msgid "To locate a single block device:"
+msgstr ""
+
+#. Tag: screen
+#: storage_raid-leds.xml:809
+#, no-c-format
+msgid "sudo ledctl locate=/dev/sda"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:810
+#, no-c-format
+msgid "To turn off the Locate LED for a single block device:"
+msgstr ""
+
+#. Tag: screen
+#: storage_raid-leds.xml:813
+#, no-c-format
+msgid "sudo ledctl locate_off=/dev/sda"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:814
+#, no-c-format
+msgid ""
+"To locate disks of an MD software RAID device and to set a rebuild pattern "
+"for two of its block devices at the same time:"
+msgstr ""
+
+#. Tag: screen
+#: storage_raid-leds.xml:818
+#, no-c-format
+msgid "sudo ledctl locate=/dev/md127 rebuild={ /sys/block/sd[a-b] }"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:819
+#, no-c-format
+msgid "To turn off the Status LED and Failure LED for the specified devices:"
+msgstr ""
+
+#. Tag: screen
+#: storage_raid-leds.xml:822
+#, no-c-format
+msgid "sudo ledctl off={ /dev/sda /dev/sdb }"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:823
+#, no-c-format
+msgid ""
+"To locate three block devices run one of the following commends (both are "
+"equivalent):"
+msgstr ""
+
+#. Tag: screen
+#: storage_raid-leds.xml:827
+#, no-c-format
+msgid ""
+"sudo ledctl locate=/dev/sda,/dev/sdb,/dev/sdc\n"
+"sudo ledctl locate={ /dev/sda /dev/sdb /dev/sdc }"
+msgstr ""
+
+#. Tag: title
+#: storage_raid-leds.xml:831
+#, no-c-format
+msgid "Additional Information"
+msgstr ""
+
+#. Tag: para
+#: storage_raid-leds.xml:833
+#, no-c-format
+msgid ""
+"See the following resources for details about the LED patterns and "
+"monitoring tools:"
+msgstr ""
+
+#. Tag: link
+#: storage_raid-leds.xml:841
+#, no-c-format
+msgid "LEDMON open source project on Sourceforge.net"
+msgstr ""
+
+#. Tag: link
+#: storage_raid-leds.xml:847
+#, no-c-format
+msgid "SGPIO specification SFF-8485"
+msgstr ""
+
+#. Tag: link
+#: storage_raid-leds.xml:853
+#, no-c-format
+msgid "IBPI specification SFF-8489"
+msgstr ""
