@@ -1,65 +1,18 @@
 # Source DocBook XML files
-XMLFILES := $(wildcard xml/*.xml)
 # troubleshooting.xml cause xml2pot segmentation fault, skip it for the moment
-XMLFILES := $(filter-out xml/troubleshooting.xml, $(XMLFILES))
+XMLFILES := $(filter-out xml/troubleshooting.xml, $(wildcard xml/*.xml))
 
 # GNU Gettext templates (POT files)
 POTFILES := $(patsubst xml/%.xml,l10n/templates/%.pot,$(XMLFILES))
 
+# Valid GNU Gettext file name patterns, used to filter out old po files
+PONAMES := $(patsubst xml/%.xml, %, $(XMLFILES))
+
+# Language directories
+LANGDIRS := $(filter-out l10n/templates, $(wildcard l10n/*))
+
 # Translated GNU Gettext files (PO files)
-POFILES := $(wildcard l10n/af/*.po) \
-	$(wildcard l10n/ar/*.po) \
-	$(wildcard l10n/be/.po) \
-	$(wildcard l10n/bg/*.po) \
-	$(wildcard l10n/bn/*.po) \
-	$(wildcard l10n/ca/*.po) \
-	$(wildcard l10n/cs/*.po) \
-	$(wildcard l10n/cy/*.po) \
-	$(wildcard l10n/da/*.po) \
-	$(wildcard l10n/de/*.po) \
-	$(wildcard l10n/el/*.po) \
-	$(wildcard l10n/en_GB/*.po) \
-	$(wildcard l10n/es/*.po) \
-	$(wildcard l10n/et/*.po) \
-	$(wildcard l10n/fa/*.po) \
-	$(wildcard l10n/fi/*.po) \
-	$(wildcard l10n/fr/*.po) \
-	$(wildcard l10n/gl/*.po) \
-	$(wildcard l10n/gu/*.po) \
-	$(wildcard l10n/hi/*.po) \
-	$(wildcard l10n/hr/*.po) \
-	$(wildcard l10n/hu/*.po) \
-	$(wildcard l10n/id/*.po) \
-	$(wildcard l10n/it/*.po) \
-	$(wildcard l10n/ja/*.po) \
-	$(wildcard l10n/ka/*.po) \
-	$(wildcard l10n/km/*.po) \
-	$(wildcard l10n/ko/*.po) \
-	$(wildcard l10n/ku/*.po) \
-	$(wildcard l10n/lt/*.po) \
-	$(wildcard l10n/mr/*.po) \
-	$(wildcard l10n/nb/*.po) \
-	$(wildcard l10n/nl/*.po) \
-	$(wildcard l10n/nn/*.po) \
-	$(wildcard l10n/pa/*.po) \
-	$(wildcard l10n/pl/*.po) \
-	$(wildcard l10n/pt/*.po) \
-	$(wildcard l10n/pt_BR/*.po) \
-	$(wildcard l10n/ro/*.po) \
-	$(wildcard l10n/ru/*.po) \
-	$(wildcard l10n/sk/*.po) \
-	$(wildcard l10n/sl/*.po) \
-	$(wildcard l10n/sr/*.po) \
-	$(wildcard l10n/sv/*.po) \
-	$(wildcard l10n/ta/*.po) \
-	$(wildcard l10n/th/*.po) \
-	$(wildcard l10n/tr/*.po) \
-	$(wildcard l10n/uk/*.po) \
-	$(wildcard l10n/wa/*.po) \
-	$(wildcard l10n/xh/*.po) \
-	$(wildcard l10n/zh_CN/*.po) \
-	$(wildcard l10n/zh_TW/*.po) \
-	$(wildcard l10n/zu/*.po)
+POFILES := $(foreach DIR, $(LANGDIRS), $(filter $(foreach PO, $(PONAMES), $(DIR)/$(PO).po), $(wildcard $(DIR)/*.po)))
 
 # Translated DocBook XML files
 L10NXMLFILES := $(patsubst %.po,%.xml,$(POFILES))
