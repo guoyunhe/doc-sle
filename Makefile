@@ -12,7 +12,8 @@ PONAMES := $(patsubst xml/%.xml, %, $(XMLFILES))
 LANGDIRS := $(filter-out l10n/templates, $(wildcard l10n/*))
 
 # Translated GNU Gettext files (PO files)
-POFILES := $(shell ls l10n/*/*.po)
+# Filtered by PONAMES and make sure out-of-sync PO files will be execluded
+POFILES := $(foreach DIR, $(LANGDIRS), $(filter $(foreach PO, $(PONAMES), $(DIR)/$(PO).po), $(wildcard $(DIR)/*.po)))
 
 # Translated DocBook XML files
 L10NXMLFILES := $(foreach DIR, $(LANGDIRS), $(patsubst $(DIR)/%.po,$(DIR)/xml/%.xml,$(POFILES)))
@@ -27,8 +28,7 @@ po2xml : $(L10NXMLFILES)
 l10n/templates/%.pot : xml/%.xml
 	xml2pot $< > $@
 
-$(foreach langdir,$(LANGDIRS),$(shell mkdir -p $(langdir)/xml))
-$(foreach langdir,$(LANGDIRS),$(eval $(langdir)/xml/%.xml : xml/%.xml $(langdir)/%.po; po2xml $$^ > $$@))
+$(foreach DIR, $(LANGDIRS), $(eval $(DIR)/xml/%.xml : xml/%.xml $(DIR)/%.po; mkdir -p $(DIR)/xml ; po2xml $$^ | xmllint --format - > $$@ 2>/dev/null ) )
 
 clean : clean_pot clean_l10nxml
 
@@ -38,4 +38,4 @@ clean_pot :
 
 # Remove translated XML in language folders, generated from PO files
 clean_l10nxml :
-	rm -f l10n/*/*.xml
+	rm -f l10n/*/xml/*.xml
